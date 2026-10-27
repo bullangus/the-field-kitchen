@@ -57,6 +57,8 @@ MAKE_AHEAD_MINUTES = 240  # waiting time (marinating, curing...) that means star
 PASSIVE_WORDS = r"marinat|curing|drying|rising|resting|chilling"
 TITLE = "The Field Kitchen"
 SUBTITLE = "Recipes from our family table"
+AUTHOR = "Angus Field"
+ESTABLISHED = 2026
 THEME_COLOR = "#8a3b24"
 BACKGROUND_COLOR = "#fbf8f3"
 
@@ -475,6 +477,22 @@ def recipe_html(r, root="", anchor=None):
 </article>"""
 
 
+def footer_html(book, root, colophon=False):
+    """The sign-off on every page; in the printed book it becomes the last page."""
+    n = len(all_recipes(book))
+    hat = icon_inline().replace("<svg ", '<svg class="footer-hat" ', 1)
+    css = "site-footer colophon" if colophon else "site-footer"
+    return f"""<footer class="{css}">
+  <div class="inner">
+    {hat}
+    <p class="footer-sign">Collected, cooked and written down by <span>{AUTHOR}</span></p>
+    <p class="footer-story">Every recipe here has been made at our table, tweaked a little and argued over a lot. This book is meant to be cooked from: splattered, scribbled in and handed down, like the recipe tins and dog-eared cards that came before it.</p>
+    <div class="ornament">· · ·</div>
+    <p class="footer-meta"><a href="{root}index.html">{TITLE}</a> · Est. {ESTABLISHED} · {n} recipe{'s' if n != 1 else ''} and counting</p>
+  </div>
+</footer>"""
+
+
 def page(book, depth, page_title, content, current=None, main_class=None):
     root = "../" * depth
     template = (TEMPLATES / "page.html").read_text(encoding="utf-8")
@@ -482,7 +500,8 @@ def page(book, depth, page_title, content, current=None, main_class=None):
                     .replace("{{ROOT}}", root)
                     .replace("{{NAV}}", nav_html(book, root, current))
                     .replace("{{MAIN_CLASS}}", f' class="{main_class}"' if main_class else "")
-                    .replace("{{CONTENT}}", content))
+                    .replace("{{CONTENT}}", content)
+                    .replace("{{FOOTER}}", footer_html(book, root)))
 
 
 def date_added(r):
@@ -884,7 +903,8 @@ def book_html(book):
                     .replace("{{NAV}}", nav_html(book, "", BOOK_PAGE))
                     .replace("{{PRINT_ICON}}", svg_icon("printer"))
                     .replace("{{CONTENTS}}", toc)
-                    .replace("{{BODY}}", "\n".join(body)))
+                    .replace("{{BODY}}", "\n".join(body))
+                    .replace("{{FOOTER}}", footer_html(book, "", colophon=True)))
 
 
 def manifest():
