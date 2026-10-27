@@ -72,4 +72,3 @@ A modern Durban duck curry from Mohammed Khalid Moola of Ladysmith, with a nod t
 - 2026-10-28: The book just says to brown the duck for a few minutes and roast it for 20 minutes, with no oven temperature. We bring the breasts to room temperature, dry and score them, sear them on all sides, roast them at 180°C fan for about 10 minutes, then cook them covered and skin side up in the sauce.
 - 2026-10-28: Made the curry paste a separate first stage. We make it the day before, or at least before starting the duck. The book cooks the duck first.
 - 2026-10-28: The paste is often too thick to blend, so we loosen it with some of the finishing water (usually about 500 ml / 2 cups) and add only what's left at the end. The total water stays at 750 ml.
-- 2026-10-28: Added ½ tsp MSG to the finishing sauce. We add it to most savoury dishes.

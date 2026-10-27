@@ -32,4 +32,3 @@ A simple, fiery Calabrian sauce: tomatoes with 'nduja, the soft, spicy pork spre
 ## Notes
 
 - Look for Calabrian 'nduja, ideally from Spilinga. Fileja (also sold as "filei") is the traditional Calabrian shape.
-- 2026-10-28: Added ½ tsp MSG to the tomato sauce. We add it to most savoury dishes.

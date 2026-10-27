@@ -63,4 +63,3 @@ Sausages baked in a tall, crisp-edged Yorkshire pudding, served with onion gravy
 - The same batter makes 12 Yorkshire puddings: 1 tsp dripping heated in each hole, baked for 17 minutes.
 - For a darker gravy, add ½ tsp dark soy sauce.
 - Leftovers keep for 3 days, though the pudding softens. Re-crisp at 180°C for about 7 minutes.
-- 2026-10-28: Added ½ tsp MSG to the onion gravy. We add it to most savoury dishes.

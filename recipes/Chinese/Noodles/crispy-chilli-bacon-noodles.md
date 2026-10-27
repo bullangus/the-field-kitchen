@@ -47,4 +47,3 @@ Bacon rendered slowly until crisp, chilli crisp bloomed in the fat, and noodles 
 ## Notes
 
 - The original uses fresh lo mein, which is hard to find in Australia; fresh thin egg noodles are the same thing.
-- 2026-10-28: Added ½ tsp MSG with the sauce seasonings. Not in the original; it's how we make it.

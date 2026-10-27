@@ -57,4 +57,3 @@ Restaurant-style, served over an optional nest of crisp fried rice vermicelli.
 - Semi-freezing the steak makes it much easier to slice thinly. Let it thaw fully and drain off any blood before marinating.
 - For a less sweet version, cut the sugar by 1 tbsp (about 12 g).
 - For a saucier version, double the soy sauce and sugar and add 15–30 ml (1–2 tbsp) water.
-- 2026-10-28: Added ½ tsp MSG to the sauce. We add it to most savoury dishes.

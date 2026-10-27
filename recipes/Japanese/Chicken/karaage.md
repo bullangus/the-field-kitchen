@@ -53,4 +53,3 @@ Marinated in ginger, garlic and soy, then fried twice for a light, crisp crust.
 ## Notes
 
 - Once completely cool, keeps in an airtight container in the fridge for up to 3 days, or in the freezer for up to a month.
-- 2026-10-28: Added ½ tsp MSG to the marinade. We add it to most savoury dishes.

@@ -46,4 +46,3 @@ The crunchiest roast potatoes: parboiled, roughed up, then roasted in smoking-ho
 - Goose fat works just as well as duck fat.
 - About half the fat is left in the pan afterwards. Strain out the bits, let it cool and keep it in a jar in the fridge for months; it'll be a little salty.
 - 2026-10-28: We boil the potatoes in chicken stock instead of salted water, and leave out the semolina (2 tbsp, shaken through with the salt in the original).
-- 2026-10-28: Added ½ tsp MSG with the roughing-up salt. We add it to most savoury dishes.

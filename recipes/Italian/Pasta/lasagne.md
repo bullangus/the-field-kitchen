@@ -75,4 +75,3 @@ A slow pork and beef ragu, béchamel and plenty of cheese. Make the ragu the day
 - Dried lasagne sheets also work: use about 250 g, either soaked in warm water for 5 minutes or the no-boil kind, and keep the layers slightly wetter.
 - Make ahead: assemble, cover and refrigerate for up to 24 hours, adding 10–15 minutes to the covered bake time from cold. Freezes well, baked or unbaked; thaw overnight in the fridge first. Keeps in the fridge for up to 3 days; reheat portions covered at 180°C for 15 minutes.
 - 2026-10-28: We usually skip the homemade pasta and use store-bought Latina fresh lasagne sheets, as the packet directs. The spinach pasta stays in as an option.
-- 2026-10-28: Added ½ tsp MSG to the ragu. We add it to most savoury dishes.

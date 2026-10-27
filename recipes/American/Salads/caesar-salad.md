@@ -47,4 +47,3 @@ Our Caesar: crisp cos, bacon, shredded chicken thigh, jammy eggs and garlic-butt
 
 - The eggs are cooked the same way as the Ramen Eggs, just for 7 minutes.
 - 2026-10-28: Written from how we make it. The amounts of bacon, lettuce, chicken, bread, butter, dressing and parmesan, and the chicken cooking time, are our best estimate; adjust them after the next cook.
-- 2026-10-28: Added ½ tsp MSG to the chicken seasoning. We add it to most savoury dishes.

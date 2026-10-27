@@ -43,4 +43,3 @@ A quick, cheap one-pot stew written for one. Multiply it to feed more, or cook a
 - Whole tinned tomatoes are better quality than pre-crushed, but crushed work if that's what you have.
 - When doubling it, use a wider pan so the chicken browns rather than steams.
 - Keeps in an airtight container in the fridge for up to 3 days, or the freezer for up to 3 months. Reheat gently in a pan with a splash of water.
-- 2026-10-28: Added ½ tsp MSG with the spices. Not in the original; it's how we make it.

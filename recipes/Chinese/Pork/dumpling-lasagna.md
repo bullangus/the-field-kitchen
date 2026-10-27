@@ -47,4 +47,3 @@ All the flavour of pork and spring onion dumplings with no folding: wonton wrapp
 
 - Endlessly flexible: thinly sliced cabbage, mushrooms or a little oyster sauce all work in the filling.
 - 2026-10-28: We make these in individual ramekins with 3–4 tbsp stock each. The original layers it in one small baking dish with 1–2 tbsp stock over the top.
-- 2026-10-28: Added ½ tsp MSG to the filling. We add it to most savoury dishes.

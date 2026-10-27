@@ -32,4 +32,3 @@ The Roman way: egg yolks, pecorino, guanciale and black pepper, and nothing else
 
 - Spaghetti holds a thinner, creamier sauce; rigatoni catches the crisp guanciale better. Romans argue about it, so take your pick.
 - The hot pasta cooks the yolks gently. If you're nervous about them, toss the pasta and sauce in a heatproof bowl set over the simmering pasta water, and take it off as soon as the sauce thickens, before the eggs scramble.
-- 2026-10-28: Added ½ tsp MSG to the egg and pecorino mixture. We add it to most savoury dishes.

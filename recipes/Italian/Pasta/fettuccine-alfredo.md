@@ -41,4 +41,3 @@ Butter, cream and Parmigiano, tossed with the pasta so the sauce clings to every
 - No eschallot? Use about 40 g (¼ cup) finely minced brown or white onion instead.
 - Light cream makes a lighter version, though it isn't quite the same.
 - Parmigiano Reggiano has a deeper, nuttier flavour than plain parmesan, which also works. Either way, grate it freshly and finely: pre-grated cheese won't melt into the cream and leaves the sauce grainy.
-- 2026-10-28: Added ½ tsp MSG to the sauce. We add it to most savoury dishes.

@@ -40,4 +40,3 @@ Double-fried wings glazed in a sticky, sweet soy, mirin and ginger sauce and fin
 
 - Leftover sauce keeps in a jar in the fridge for up to a month.
 - Leftover wings keep in an airtight container in the fridge for 3–4 days, or in the freezer for a month.
-- 2026-10-28: Added ½ tsp MSG to the sauce. We add it to most savoury dishes.

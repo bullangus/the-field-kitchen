@@ -47,4 +47,3 @@ A whole snapper stuffed with lemongrass, garlic and makrut lime, coated in sesam
 
 - 2026-10-28: We coat the fish in sesame seeds and cook it standing upright rather than lying flat, so it isn't turned. The original lays it flat and turns it halfway through.
 - 2026-10-28: The servings, times, sesame amount and serving step (step 6) are our best guess, since our copy of the recipe didn't include them. Adjust them after the next cook.
-- 2026-10-28: Added ½ tsp MSG to the dressing. We add it to most savoury dishes.

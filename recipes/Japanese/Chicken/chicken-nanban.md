@@ -54,4 +54,3 @@ Egg-coated fried chicken soaked in a sweet and tangy nanban sauce and topped wit
 ## Notes
 
 - The source uses 1 tbsp = 15 ml and 1 cup = 240 ml.
-- 2026-10-28: Added ½ tsp MSG to the nanban sauce. We add it to most savoury dishes.

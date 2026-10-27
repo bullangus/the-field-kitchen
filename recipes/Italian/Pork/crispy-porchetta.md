@@ -38,4 +38,3 @@ Pork belly rolled around the loin with a herb, garlic and fennel filling. Start 
 
 - If the crackling hasn't puffed everywhere, return it to a 220°C oven for 5–10 minutes, or use a kitchen blowtorch on the stubborn spots.
 - Carve only what you need and keep the rest of the roll whole so it doesn't dry out. Keeps in an airtight container in the fridge for up to 3 days. Reheat slices at 180°C for 10–15 minutes, or eat it cold, thinly sliced in a bread roll.
-- 2026-10-28: Added ½ tsp MSG to the herb marinade. We add it to most savoury dishes.

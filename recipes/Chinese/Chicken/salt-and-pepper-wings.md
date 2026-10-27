@@ -38,7 +38,3 @@ Double-fried for extra crunch and seasoned with three kinds of peppercorn. Using
 5. Dip each wing in the batter and fry in batches for 5–6 minutes, until lightly golden. Drain on a wire rack.
 6. Bring the oil up to high heat, about 180°C (355°F). Fry the wings again in batches for 4–5 minutes, until golden, crunchy and cooked through. Drain on paper towel.
 7. Mix the remaining ground peppercorns with the extra 2 tsp salt and the chilli flakes. Sprinkle over the warm wings and serve with lime wedges and hot sauce for dipping.
-
-## Notes
-
-- 2026-10-28: Added ½ tsp MSG to the curing mix. We add it to most savoury dishes.

@@ -58,4 +58,3 @@ Crisp crumbed chicken on rice with a rich Japanese curry sauce made from Golden 
 ## Notes
 
 - 2026-10-28: Written from how we make it. The chicken weight, crumbing amounts, frying times, simmering time and the potato and carrot quantities are our best estimate; adjust them after the next cook.
-- 2026-10-28: Added ½ tsp MSG to the curry sauce. We add it to most savoury dishes.

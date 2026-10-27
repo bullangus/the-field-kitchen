@@ -31,4 +31,3 @@ A simple, full-flavoured South African tomato relish for the braai: with pap, bo
 
 - The original's olive oil is only mentioned in its method; it's listed here so it isn't missed.
 - 2026-10-28: The original lists the Mrs Ball's chutney but never says when to add it. It goes in with the tomatoes.
-- 2026-10-28: Added ½ tsp MSG to the relish. We add it to most savoury dishes.

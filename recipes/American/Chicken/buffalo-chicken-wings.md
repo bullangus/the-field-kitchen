@@ -34,7 +34,3 @@ Floured, chilled and fried until crisp, then tossed in the classic butter and ho
 4. Meanwhile, for the sauce, put the butter, hot sauce, pepper, garlic powder and MSG in a small saucepan over low heat. Stir until the butter melts and everything is well combined. Take off the heat and set aside.
 5. Fry the wings for 10–15 minutes, until they start to crisp and brown, keeping the oil at temperature. Drain on paper towel or a wire rack.
 6. Drizzle the sauce over the wings on a platter, or toss them together in a bowl until coated.
-
-## Notes
-
-- 2026-10-28: Added ½ tsp MSG to the hot sauce butter. We add it to most savoury dishes.

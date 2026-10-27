@@ -37,4 +37,3 @@ Lemon, garlic and thyme butter pushed under the skin, then trussed and roasted t
 - Pan sauce: after resting, stand the chicken up over the tray so the juices in the cavity drain out. Combine with the pan drippings and deglaze the tray with some shallots, stock and butter. A splash of sherry vinegar and some thyme or rosemary finish it.
 - Vegetables can roast in the same tray: toss halved potatoes, carrots and onions in olive oil and salt and add them about 20 minutes after the chicken goes in.
 - Leftover meat keeps in an airtight container in the fridge for up to 3 days. Simmer the carcass for 2 hours with an onion, carrot, celery stalk and a few peppercorns, covered with water, for stock.
-- 2026-10-28: Added ½ tsp MSG to the compound butter. We add it to most savoury dishes.
