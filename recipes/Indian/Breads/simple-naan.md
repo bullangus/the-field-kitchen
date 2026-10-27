@@ -33,4 +33,4 @@ Two-ingredient dough, cooked in a dry pan. Good with any curry, including Moh's 
 ## Notes
 
 - Garlic naan: crush 1 garlic clove into 30 g (2 tbsp) butter, melt in the microwave and brush over the naan before serving.
-- 2026-10-28: We make these ahead, brush them with the garlic butter, wrap them in foil and reheat them in the oven just before serving.
+- 2026-10-28: We make these ahead, brush them with the garlic butter, wrap them in foil and reheat them in the oven just before serving, at 200°C (180°C fan / 400°F / gas 6) for about 10 minutes, until warmed through.
