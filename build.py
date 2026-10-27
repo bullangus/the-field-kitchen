@@ -133,7 +133,7 @@ def update_readme(book):
         text,
         flags=re.S,
     )
-    README.write_text(new, encoding="utf-8")
+    README.write_text(new, encoding="utf-8", newline="\n")
 
 
 def recipe_html(r, anchor):
@@ -188,7 +188,7 @@ def build_html(book):
 def main():
     book = load()
     update_readme(book)
-    BOOK.write_text(build_html(book), encoding="utf-8")
+    BOOK.write_text(build_html(book), encoding="utf-8", newline="\n")
     count = sum(len(rs) for cats in book.values() for rs in cats.values())
     print(f"Built {count} recipe(s) across {len(book)} cuisine(s).")
 
