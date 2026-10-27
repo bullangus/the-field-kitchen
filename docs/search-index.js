@@ -110,6 +110,26 @@ window.FIELD_KITCHEN_INDEX = [
 "photo": ""
 },
 {
+"title": "Ramen Egg (Ajitsuke Tamago)",
+"cuisine": "Japanese",
+"category": "Eggs",
+"url": "japanese/eggs/ramen-egg.html",
+"text": "4 eggs (about 55 g each), straight from the fridge 60 ml (4 tbsp) soy sauce 60 ml (4 tbsp) mirin 30 ml (2 tbsp) water 12 g (1 tbsp) sugar 15 ml (1 tbsp) cooking sake A small amount of dashi powder (optional)",
+"meta": "Serves 4 eggs · Prep 5 min · Cook 7 min + 8–10 hr marinating",
+"intro": "Soft-boiled eggs with jammy yolks, marinated overnight in a sweet soy sauce. For ramen, rice bowls or on their own.",
+"photo": ""
+},
+{
+"title": "Carne Asada Tacos",
+"cuisine": "Mexican",
+"category": "Beef",
+"url": "mexican/beef/carne-asada-tacos.html",
+"text": "1 kg flank or skirt steak 60 ml (¼ cup) orange juice 60 ml (¼ cup) lime juice (about 2 limes) 60 ml (¼ cup) olive oil 4 cloves garlic, minced 1 jalapeño, finely chopped Small handful coriander, chopped 1 tsp ground cumin 1 tsp chilli powder ½ tsp cayenne pepper ½ tsp MSG 1½ tsp salt ½ tsp black pepper 3 ripe avocados 30 ml (2 tbsp) lime juice (about 1 lime) ½ tsp ground cumin ½ tsp salt 200 g paneer ½ tsp salt 1 white onion, finely diced 30 ml (2 tbsp) lime juice (about 1 lime) ¼ tsp salt Black pepper 12 small corn tortillas Lime wedges",
+"meta": "Serves 4 · Prep 20 min + 2–8 hr marinating · Cook about 1 hr",
+"intro": "Citrus-marinated steak, reverse-seared so the outside chars without burning, sliced thin and piled into charred corn tortillas with cumin guacamole, salted paneer \"queso fresco\" and a quick lime onion. Start the marinade a few hours ahead.",
+"photo": ""
+},
+{
 "title": "Moh's Duck and Tamarind Curry",
 "cuisine": "South African",
 "category": "Duck",

@@ -25,6 +25,10 @@
 
 ### Japanese
 - **Chicken:** [Chicken Nanban (Fried Chicken with Tartar Sauce)](recipes/Japanese/Chicken/chicken-nanban.md), [Karaage (Japanese Fried Chicken)](recipes/Japanese/Chicken/karaage.md)
+- **Eggs:** [Ramen Egg (Ajitsuke Tamago)](recipes/Japanese/Eggs/ramen-egg.md)
+
+### Mexican
+- **Beef:** [Carne Asada Tacos](recipes/Mexican/Beef/carne-asada-tacos.md)
 
 ### South African
 - **Duck:** [Moh's Duck and Tamarind Curry](recipes/South African/Duck/mohs-duck-and-tamarind-curry.md)
@@ -32,7 +36,7 @@
 ### Spanish
 - **Chicken:** [Chicken & White Bean Stew](recipes/Spanish/Chicken/chicken-and-white-bean-stew.md)
 
-_13 recipes._
+_15 recipes._
 <!-- CONTENTS:END -->
 
 ## How it's organised
