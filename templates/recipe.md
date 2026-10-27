@@ -2,6 +2,7 @@
 title: Recipe Title
 cuisine: Italian
 category: Pasta
+tags: Christmas, Vegetarian
 serves: 4
 time: Prep 15 min · Cook 30 min
 source: https://example.com/original-recipe

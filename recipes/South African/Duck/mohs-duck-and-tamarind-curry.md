@@ -2,6 +2,7 @@
 title: Moh's Duck Curry
 cuisine: South African
 category: Duck
+tags: Spicy
 serves: 4
 source: Mohammed Khalid Moola, from a cookbook (p. 43)
 ---

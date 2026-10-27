@@ -2,6 +2,7 @@
 title: Raita
 cuisine: Indian
 category: Sides
+tags: Vegetarian
 serves: 6–8
 time: Prep 10 min
 source: https://www.bbcgoodfood.com/recipes/raita

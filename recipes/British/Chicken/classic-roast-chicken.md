@@ -2,6 +2,7 @@
 title: Roast Chicken
 cuisine: British
 category: Chicken
+tags: Sunday roast
 serves: 4
 time: Prep 20 min · Cook about 1 hr 15 min
 source: https://www.andy-cooks.com/blogs/recipes/classic-roast-chicken

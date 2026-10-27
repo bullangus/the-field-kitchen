@@ -2,6 +2,7 @@
 title: Trifle
 cuisine: British
 category: Desserts
+tags: Christmas
 serves: 12
 source: https://www.express.co.uk/life-style/food/1830491/Jamie-Oliver-recipe-trifle
 ---

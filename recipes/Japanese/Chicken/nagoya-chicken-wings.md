@@ -2,6 +2,7 @@
 title: Tebasaki Wings
 cuisine: Japanese
 category: Chicken
+tags: Party food
 serves: 4
 time: Prep 20 min · Cook 30 min
 source: https://www.justonecookbook.com/nagoya-style-fried-chicken-wings/

@@ -2,6 +2,7 @@
 title: Focaccia
 cuisine: Italian
 category: Breads
+tags: Vegetarian
 serves: 1 half-sheet pan
 time: Prep 3 hr 45 min (mostly rising) · Cook 30 min
 source: https://www.thecookingworld.com/recipes/claire-saffitz-focaccia-recipe

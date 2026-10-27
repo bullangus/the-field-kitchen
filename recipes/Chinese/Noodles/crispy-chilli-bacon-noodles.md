@@ -2,6 +2,7 @@
 title: Chilli Bacon Noodles
 cuisine: Chinese
 category: Noodles
+tags: Spicy
 serves: 2
 time: Cook 15 min
 source: https://www.cheffatty.com/recipes/crispy-chili-bacon-noodles

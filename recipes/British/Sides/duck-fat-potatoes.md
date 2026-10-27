@@ -2,6 +2,7 @@
 title: Duck Fat Potatoes
 cuisine: British
 category: Sides
+tags: Christmas, Sunday roast
 serves: 6–8
 time: Prep 15 min · Cook 1 hr 15 min
 source: https://www.recipetineats.com/duck-fat-potatoes-crispiest-best-roast-potatoes/

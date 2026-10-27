@@ -258,30 +258,44 @@
     var chips = scope.querySelector(".chips");
     if (!chips) return;
     var buttons = [].slice.call(chips.querySelectorAll(".chip"));
+    var select = chips.querySelector(".chip-select");
     var groups = [].slice.call(scope.querySelectorAll(".filter-group"));
     var empty = scope.querySelector(".filter-empty");
     chips.hidden = false;
     scope.classList.add("js-limited");
+    // One filter at a time: a chip clears the style dropdown, and the dropdown clears the chips.
+    if (select) {
+      select.addEventListener("change", function () {
+        if (!select.value) { buttons[0].click(); return; }
+        buttons.forEach(function (x) { x.setAttribute("aria-pressed", "false"); });
+        select.classList.add("active");
+        apply(select.value);
+      });
+    }
     buttons.forEach(function (b) {
       b.addEventListener("click", function () {
         var tag = b.getAttribute("data-filter");
         buttons.forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
-        var shown = 0;
-        groups.forEach(function (group) {
-          // Cards with data-limit (home page) show only their first few matches.
-          var limit = parseInt(group.getAttribute("data-limit"), 10) || Infinity;
-          var visible = 0;
-          group.querySelectorAll("[data-tags]").forEach(function (item) {
-            var match = !tag || item.getAttribute("data-tags").split(" ").indexOf(tag) !== -1;
-            item.hidden = !match || visible >= limit;
-            if (match) visible++;
-          });
-          group.hidden = visible === 0;
-          shown += visible;
-        });
-        empty.hidden = shown > 0;
+        if (select) { select.value = ""; select.classList.remove("active"); }
+        apply(tag);
       });
     });
+    function apply(tag) {
+      var shown = 0;
+      groups.forEach(function (group) {
+        // Cards with data-limit (home page) show only their first few matches.
+        var limit = parseInt(group.getAttribute("data-limit"), 10) || Infinity;
+        var visible = 0;
+        group.querySelectorAll("[data-tags]").forEach(function (item) {
+          var match = !tag || item.getAttribute("data-tags").split(" ").indexOf(tag) !== -1;
+          item.hidden = !match || visible >= limit;
+          if (match) visible++;
+        });
+        group.hidden = visible === 0;
+        shown += visible;
+      });
+      empty.hidden = shown > 0;
+    }
     buttons[0].click();  // apply "All", including any per-card limit
   });
 

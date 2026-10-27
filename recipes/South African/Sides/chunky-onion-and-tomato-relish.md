@@ -2,6 +2,7 @@
 title: Onion & Tomato Relish
 cuisine: South African
 category: Sides
+tags: Barbecue
 serves: 6
 time: Prep 5 min · Cook 20 min
 source: https://www.ozbraai.com.au/recipes/chunky-onion-and-tomato-relish/

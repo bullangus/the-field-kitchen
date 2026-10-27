@@ -391,8 +391,19 @@ main.home { max-width: 72rem; padding-top: 1.5rem; }
 
 /* Filter chips above the cuisine cards */
 .chips {
-  display: flex; gap: 0.45rem; overflow-x: auto; padding: 0.15rem 0.1rem 0.5rem; margin: 0 0 1rem;
-  scrollbar-width: none;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.45rem; padding: 0.15rem 0.1rem 0.5rem; margin: 0 0 1rem;
+}
+.chip-sep { width: 1px; height: 1.6rem; background: var(--rule); margin: 0 0.25rem; }
+.chip-select {
+  font: inherit; font-size: 0.9rem; color: var(--ink); cursor: pointer; margin-left: auto;
+  background: var(--card); border: 1px solid var(--rule); border-radius: 999px; padding: 0.35rem 0.9rem;
+}
+.chip-select:hover { border-color: var(--accent); }
+.chip-select.active { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+/* Phones: one row that scrolls sideways instead of wrapping into a block. */
+@media (max-width: 700px) {
+  .chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+  .chip-select { margin-left: 0; flex: none; }
 }
 .chips::-webkit-scrollbar { display: none; }
 .chip {
@@ -437,6 +448,8 @@ main.home { max-width: 72rem; padding-top: 1.5rem; }
   background: var(--tone-ink); color: var(--paper); font-size: 0.8rem; font-weight: 600; padding: 0 0.45rem;
 }
 .tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.6rem 0 0.9rem; padding-right: 4rem; }
+.kitchen .tags { flex-wrap: nowrap; overflow: hidden; }
+.tag-more { border-style: dashed; }
 .tag {
   font-size: 0.78rem; letter-spacing: 0.04em; color: var(--tone-ink);
   border: 1px solid currentColor; border-radius: 999px; padding: 0.05rem 0.6rem;

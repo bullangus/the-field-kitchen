@@ -2,6 +2,7 @@
 title: Yoghurt Sauce
 cuisine: Greek
 category: Sides
+tags: Vegetarian
 serves: 4
 time: Prep 5 min
 source: Family recipe

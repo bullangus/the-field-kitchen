@@ -2,6 +2,7 @@
 title: Carne Asada Tacos
 cuisine: Mexican
 category: Beef
+tags: Party food
 serves: 4
 time: Prep 20 min + 2–8 hr marinating · Cook about 1 hr
 source: Our own, loosely based on Isabel Eats' carne asada tacos

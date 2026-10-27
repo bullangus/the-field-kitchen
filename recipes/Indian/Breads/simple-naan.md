@@ -2,6 +2,7 @@
 title: Naan
 cuisine: Indian
 category: Breads
+tags: Vegetarian
 serves: 6 naan
 time: Prep 10 min · Cook 10 min
 source: https://cooksimply.co.uk/simple-naan-bread-recipe-no-yeast/

@@ -2,6 +2,7 @@
 title: Salt & Pepper Wings
 cuisine: Chinese
 category: Chicken
+tags: Party food
 serves: 4
 time: Prep 10 min + at least 4 hr curing · Cook about 1 hr
 source: https://www.marionskitchen.com/crispy-salt-and-pepper-wings/

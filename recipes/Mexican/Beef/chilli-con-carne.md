@@ -2,6 +2,7 @@
 title: Chilli Con Carne
 cuisine: Mexican
 category: Beef
+tags: Spicy
 serves: 5–6
 time: Prep 10 min · Cook 30 min
 source: https://www.recipetineats.com/chilli-con-carne/

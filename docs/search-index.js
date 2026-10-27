@@ -4,12 +4,13 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "American",
 "category": "Baking",
 "url": "american/baking/chocolate-chip-cookies.html",
-"text": "200 g (1½ cups plus 1 tbsp) plain flour, spooned and levelled 4 g (¾ tsp) table salt 4 g (¾ tsp) bicarbonate of soda (baking soda) 169 g (¾ cup) unsalted butter, divided: 113 g and 56 g 200 g (1 cup, packed) dark brown sugar 50 g (¼ cup) white sugar 1 large egg 2 large egg yolks 2 tsp vanilla extract 170 g (6 oz) dark chocolate (60–70% cocoa), coarsely chopped, or dark chocolate chips",
+"text": "200 g (1½ cups plus 1 tbsp) plain flour, spooned and levelled 4 g (¾ tsp) table salt 4 g (¾ tsp) bicarbonate of soda (baking soda) 169 g (¾ cup) unsalted butter, divided: 113 g and 56 g 200 g (1 cup, packed) dark brown sugar 50 g (¼ cup) white sugar 1 large egg 2 large egg yolks 2 tsp vanilla extract 170 g (6 oz) dark chocolate (60–70% cocoa), coarsely chopped, or dark chocolate chips Vegetarian",
 "meta": "Serves 16 cookies · Prep 20 min · Cook 20 min",
 "intro": "Bon Appétit's best: brown butter and dark brown sugar for deep toffee flavour, crisp edges and chewy middles, with chopped dark chocolate.",
 "photo": "",
 "tags": [
 "baking",
+"vegetarian",
 "make-ahead"
 ],
 "serves": 16,
@@ -111,12 +112,14 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "American",
 "category": "Chicken",
 "url": "american/chicken/buffalo-chicken-wings.html",
-"text": "65 g (½ cup) plain (all-purpose) flour ¼ tsp ground paprika ¼ tsp cayenne pepper ¼ tsp salt 10 chicken wings About 480 ml (2 cups) vegetable oil, for frying 57 g (¼ cup) butter 60 ml (¼ cup) hot sauce 1 pinch ground black pepper 1 pinch garlic powder ½ tsp MSG",
+"text": "65 g (½ cup) plain (all-purpose) flour ¼ tsp ground paprika ¼ tsp cayenne pepper ¼ tsp salt 10 chicken wings About 480 ml (2 cups) vegetable oil, for frying 57 g (¼ cup) butter 60 ml (¼ cup) hot sauce 1 pinch ground black pepper 1 pinch garlic powder ½ tsp MSG Party food Spicy",
 "meta": "Serves 5 (10 wings) · Prep 10 min + 1–1½ hr chilling · Cook 15 min",
 "intro": "Floured, chilled and fried until crisp, then tossed in the classic butter and hot sauce mix.",
 "photo": "",
 "tags": [
 "chicken",
+"party-food",
+"spicy",
 "quick"
 ],
 "serves": 5,
@@ -361,12 +364,13 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Australian",
 "category": "Pork",
 "url": "australian/pork/maple-orange-glazed-ham.html",
-"text": "1 medium orange, thinly sliced into ¼ cm rings 250 ml (1 cup) maple syrup 125 ml (½ cup) Italian white wine vinegar 125 g (½ cup) Dijon mustard 125 ml (½ cup) fresh orange juice 110 g (½ cup) caster sugar 125 ml (½ cup) Grand Marnier or similar orange liqueur 5 whole cloves ¼ tsp ground allspice 1½ tsp whole coriander seeds ½ tsp whole black peppercorns 1 half leg ham 2 carrots, peeled and cut into large chunks 2 celery stalks, cut into large chunks 1 brown onion, cut into large chunks 1 head garlic, split in half horizontally",
+"text": "1 medium orange, thinly sliced into ¼ cm rings 250 ml (1 cup) maple syrup 125 ml (½ cup) Italian white wine vinegar 125 g (½ cup) Dijon mustard 125 ml (½ cup) fresh orange juice 110 g (½ cup) caster sugar 125 ml (½ cup) Grand Marnier or similar orange liqueur 5 whole cloves ¼ tsp ground allspice 1½ tsp whole coriander seeds ½ tsp whole black peppercorns 1 half leg ham 2 carrots, peeled and cut into large chunks 2 celery stalks, cut into large chunks 1 brown onion, cut into large chunks 1 head garlic, split in half horizontally Christmas",
 "meta": "Serves 8 · Prep 20 min · Cook 3 hr 45 min",
 "intro": "A Christmas ham glazed with maple, orange and Grand Marnier, with candied orange slices pressed over the top and a sauce from the pan juices.",
 "photo": "",
 "tags": [
 "pork",
+"christmas",
 "project"
 ],
 "serves": 8,
@@ -522,12 +526,13 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Australian",
 "category": "Seafood",
 "url": "australian/seafood/barbecued-whole-snapper.html",
-"text": "1.5 kg whole snapper 1 stick lemongrass, trimmed, halved and cut into 5 cm lengths 4 garlic cloves, bruised 6 makrut lime leaves, torn Salt and black pepper, to season 2 tbsp toasted sesame seeds Sliced spring onion (green onion), to serve Fresh coriander sprigs, to serve Steamed jasmine rice, to serve Lime wedges, to serve 125 ml (½ cup) sweet chilli sauce 125 ml (½ cup) lime juice 1 tsp caster sugar 80 ml (⅓ cup) light soy sauce 2 cm piece fresh ginger, peeled and finely grated 1½ tbsp fish sauce 30 ml (2 tbsp) peanut oil 2 tbsp chopped fresh coriander ½ tsp MSG",
+"text": "1.5 kg whole snapper 1 stick lemongrass, trimmed, halved and cut into 5 cm lengths 4 garlic cloves, bruised 6 makrut lime leaves, torn Salt and black pepper, to season 2 tbsp toasted sesame seeds Sliced spring onion (green onion), to serve Fresh coriander sprigs, to serve Steamed jasmine rice, to serve Lime wedges, to serve 125 ml (½ cup) sweet chilli sauce 125 ml (½ cup) lime juice 1 tsp caster sugar 80 ml (⅓ cup) light soy sauce 2 cm piece fresh ginger, peeled and finely grated 1½ tbsp fish sauce 30 ml (2 tbsp) peanut oil 2 tbsp chopped fresh coriander ½ tsp MSG Barbecue",
 "meta": "Serves 4 · Prep 15 min · Cook 35 min",
 "intro": "A whole snapper stuffed with lemongrass, garlic and makrut lime, coated in sesame seeds and cooked standing upright in a foil parcel on the barbecue, then dressed with a sweet chilli, lime and ginger dressing.",
 "photo": "",
 "tags": [
-"seafood"
+"seafood",
+"barbecue"
 ],
 "serves": 4,
 "ingredients": [
@@ -709,12 +714,13 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "British",
 "category": "Chicken",
 "url": "british/chicken/classic-roast-chicken.html",
-"text": "1 whole chicken, about 1.5–1.8 kg (free-range if you can) 150 g (5.3 oz) unsalted butter, at room temperature 1 lemon 3 cloves garlic Salt and freshly ground white pepper (or black pepper) Small bunch thyme, leaves picked and chopped ½ tsp MSG",
+"text": "1 whole chicken, about 1.5–1.8 kg (free-range if you can) 150 g (5.3 oz) unsalted butter, at room temperature 1 lemon 3 cloves garlic Salt and freshly ground white pepper (or black pepper) Small bunch thyme, leaves picked and chopped ½ tsp MSG Sunday roast",
 "meta": "Serves 4 · Prep 20 min · Cook about 1 hr 15 min",
 "intro": "Lemon, garlic and thyme butter pushed under the skin, then trussed and roasted to temperature for crisp skin and juicy breast meat.",
 "photo": "",
 "tags": [
-"chicken"
+"chicken",
+"sunday-roast"
 ],
 "serves": 4,
 "ingredients": [
@@ -788,12 +794,13 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "British",
 "category": "Desserts",
 "url": "british/desserts/classic-trifle.html",
-"text": "Jam rolls (from Coles or Woolworths), sliced, enough to cover the base of the bowl 1 punnet strawberries 1 small wineglass Cointreau 1 packet (85 g) Aeroplane strawberry jelly 1.1 litres (2 UK pints) milk 4 tsp caster sugar 35 g sachet strawberry blancmange 450 g tin mandarin segments 1 packet (85 g) Aeroplane orange jelly Bird's custard powder, enough to make 600 ml custard 300 ml thickened cream (double cream) Flake chocolate, to finish 1 orange",
+"text": "Jam rolls (from Coles or Woolworths), sliced, enough to cover the base of the bowl 1 punnet strawberries 1 small wineglass Cointreau 1 packet (85 g) Aeroplane strawberry jelly 1.1 litres (2 UK pints) milk 4 tsp caster sugar 35 g sachet strawberry blancmange 450 g tin mandarin segments 1 packet (85 g) Aeroplane orange jelly Bird's custard powder, enough to make 600 ml custard 300 ml thickened cream (double cream) Flake chocolate, to finish 1 orange Christmas",
 "meta": "Serves 12",
 "intro": "Our family classic, from Jamie Oliver's retro trifle: jam roll, strawberries and Cointreau under strawberry jelly, blancmange, mandarins, orange jelly, custard and cream. Give each layer time to set before adding the next.",
 "photo": "",
 "tags": [
 "desserts",
+"christmas",
 "make-ahead"
 ],
 "serves": 12,
@@ -1109,12 +1116,14 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "British",
 "category": "Sides",
 "url": "british/sides/duck-fat-potatoes.html",
-"text": "1.75–2 kg (3.5–4 lb) medium to large potatoes, such as Sebago or Dutch cream Chicken stock, enough to cover the potatoes 1 tbsp salt, for the stock 1½ tsp salt, for roughing up ½ tsp MSG 200 g (7 oz) duck fat (or goose fat) 2 tsp rosemary, roughly chopped Sea salt flakes",
+"text": "1.75–2 kg (3.5–4 lb) medium to large potatoes, such as Sebago or Dutch cream Chicken stock, enough to cover the potatoes 1 tbsp salt, for the stock 1½ tsp salt, for roughing up ½ tsp MSG 200 g (7 oz) duck fat (or goose fat) 2 tsp rosemary, roughly chopped Sea salt flakes Christmas Sunday roast",
 "meta": "Serves 6–8 · Prep 15 min · Cook 1 hr 15 min",
 "intro": "The crunchiest roast potatoes: parboiled, roughed up, then roasted in smoking-hot duck fat. Adapted by RecipeTin Eats from Nigella Lawson's goose fat potatoes.",
 "photo": "",
 "tags": [
-"sides"
+"sides",
+"christmas",
+"sunday-roast"
 ],
 "serves": 6,
 "ingredients": [
@@ -1367,12 +1376,13 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Chinese",
 "category": "Chicken",
 "url": "chinese/chicken/salt-and-pepper-wings.html",
-"text": "1 kg (2 lb) chicken wings 1 tsp black peppercorns 1 tsp white peppercorns 1 tsp Sichuan peppercorns 1½ tbsp sea salt, plus 2 tsp extra 3 tsp (1 tbsp) garlic powder ½ tsp MSG Vegetable oil, for deep frying ¼ tsp chilli flakes Coconut sriracha or any hot sauce, to serve Lime wedges, to serve (optional) 130 g (1 cup) cornflour (cornstarch) 65 g (½ cup) plain flour 375 ml (1½ cups) cold water",
+"text": "1 kg (2 lb) chicken wings 1 tsp black peppercorns 1 tsp white peppercorns 1 tsp Sichuan peppercorns 1½ tbsp sea salt, plus 2 tsp extra 3 tsp (1 tbsp) garlic powder ½ tsp MSG Vegetable oil, for deep frying ¼ tsp chilli flakes Coconut sriracha or any hot sauce, to serve Lime wedges, to serve (optional) 130 g (1 cup) cornflour (cornstarch) 65 g (½ cup) plain flour 375 ml (1½ cups) cold water Party food",
 "meta": "Serves 4 · Prep 10 min + at least 4 hr curing · Cook about 1 hr",
 "intro": "Double-fried for extra crunch and seasoned with three kinds of peppercorn. Using just one type of peppercorn works fine too.",
 "photo": "",
 "tags": [
 "chicken",
+"party-food",
 "make-ahead"
 ],
 "serves": 4,
@@ -1510,12 +1520,13 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Chinese",
 "category": "Noodles",
 "url": "chinese/noodles/crispy-chilli-bacon-noodles.html",
-"text": "8 rashers thick-cut streaky bacon, cut into 2.5 cm (1 inch) pieces 1 tsp neutral oil 5 garlic cloves, minced 1–2 tbsp chilli crisp 15 ml (1 tbsp) soy sauce 15 ml (1 tbsp) oyster sauce 15 ml (1 tbsp) dark soy sauce 1 tsp sesame oil ½ tsp sugar ½ tsp MSG 180 ml (¾ cup) chicken stock for fresh egg noodles, or 240–480 ml (1–2 cups) for dried 225 g (8 oz) fresh thin egg noodles (from the fridge section), or dried egg noodles (nests) Spring onions (scallions), thinly sliced Toasted sesame seeds Extra chilli crisp, for drizzling",
+"text": "8 rashers thick-cut streaky bacon, cut into 2.5 cm (1 inch) pieces 1 tsp neutral oil 5 garlic cloves, minced 1–2 tbsp chilli crisp 15 ml (1 tbsp) soy sauce 15 ml (1 tbsp) oyster sauce 15 ml (1 tbsp) dark soy sauce 1 tsp sesame oil ½ tsp sugar ½ tsp MSG 180 ml (¾ cup) chicken stock for fresh egg noodles, or 240–480 ml (1–2 cups) for dried 225 g (8 oz) fresh thin egg noodles (from the fridge section), or dried egg noodles (nests) Spring onions (scallions), thinly sliced Toasted sesame seeds Extra chilli crisp, for drizzling Spicy",
 "meta": "Serves 2 · Cook 15 min",
 "intro": "Bacon rendered slowly until crisp, chilli crisp bloomed in the fat, and noodles tossed through it all.",
 "photo": "",
 "tags": [
 "noodles",
+"spicy",
 "quick"
 ],
 "serves": 2,
@@ -1831,12 +1842,13 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Greek",
 "category": "Sides",
 "url": "greek/sides/greek-yoghurt-sauce.html",
-"text": "250 g (1 cup) Greek yoghurt 15–30 ml (1–2 tbsp) lemon juice (about ½ lemon) ¼ tsp salt A few grinds of black pepper",
+"text": "250 g (1 cup) Greek yoghurt 15–30 ml (1–2 tbsp) lemon juice (about ½ lemon) ¼ tsp salt A few grinds of black pepper Vegetarian",
 "meta": "Serves 4 · Prep 5 min",
 "intro": "Our simple, tangy yoghurt sauce: just yoghurt, lemon, salt and pepper, mixed to taste.",
 "photo": "",
 "tags": [
 "sides",
+"vegetarian",
 "quick"
 ],
 "serves": 4,
@@ -1884,12 +1896,13 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Indian",
 "category": "Breads",
 "url": "indian/breads/simple-naan.html",
-"text": "260 g self-raising flour, plus extra for dusting 200 g Greek yoghurt 1 tsp fine sea salt Butter, for serving Fresh coriander, to sprinkle",
+"text": "260 g self-raising flour, plus extra for dusting 200 g Greek yoghurt 1 tsp fine sea salt Butter, for serving Fresh coriander, to sprinkle Vegetarian",
 "meta": "Serves 6 naan · Prep 10 min · Cook 10 min",
 "intro": "Two-ingredient dough, cooked in a dry pan. Good with any curry, including Moh's Duck Curry.",
 "photo": "",
 "tags": [
 "breads",
+"vegetarian",
 "make-ahead"
 ],
 "serves": 6,
@@ -1946,12 +1959,13 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Indian",
 "category": "Sides",
 "url": "indian/sides/raita.html",
-"text": "250 g (1 cup) Greek yoghurt 1 garlic clove Thumb-sized piece ginger, finely grated ¼ small pack (UK size) mint, leaves chopped Juice of ½ lime ½ tsp garam masala, plus a little extra to serve ¼ cucumber, grated and lightly squeezed",
+"text": "250 g (1 cup) Greek yoghurt 1 garlic clove Thumb-sized piece ginger, finely grated ¼ small pack (UK size) mint, leaves chopped Juice of ½ lime ½ tsp garam masala, plus a little extra to serve ¼ cucumber, grated and lightly squeezed Vegetarian",
 "meta": "Serves 6–8 · Prep 10 min",
 "intro": "A cooling yoghurt and mint side with ginger and garam masala for warmth. We serve it with Moh's Duck Curry.",
 "photo": "",
 "tags": [
 "sides",
+"vegetarian",
 "quick"
 ],
 "serves": 6,
@@ -2026,12 +2040,13 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Italian",
 "category": "Breads",
 "url": "italian/breads/focaccia.html",
-"text": "7 g (1 sachet / ¼ oz) active dry yeast 680 g water (113 g / ½ cup lukewarm, plus 567 g / 2½ cups at room temperature) 780 g (6 cups) bread flour 36 g (2 tbsp) table salt 110 g (½ cup) extra-virgin olive oil, plus more for oiling your hands One topping (see Topping Options) 55 g (¼ cup) extra-virgin olive oil Fresh rosemary leaves Flaky salt 55 g (¼ cup) extra-virgin olive oil 6 cloves garlic, thinly sliced Flaky salt 55 g (¼ cup) extra-virgin olive oil 4 cloves garlic, finely chopped 1–2 tsp chilli flakes Flaky salt 60 ml (¼ cup) olive oil 1½ tbsp Sichuan peppercorns ½ tbsp black peppercorns ½ tbsp white peppercorns 2 large onions, halved and sliced into thin rings 60 ml (4 tbsp) vegetable oil ½ tbsp sugar, more to taste 30 ml (2 tbsp) soy sauce",
+"text": "7 g (1 sachet / ¼ oz) active dry yeast 680 g water (113 g / ½ cup lukewarm, plus 567 g / 2½ cups at room temperature) 780 g (6 cups) bread flour 36 g (2 tbsp) table salt 110 g (½ cup) extra-virgin olive oil, plus more for oiling your hands One topping (see Topping Options) 55 g (¼ cup) extra-virgin olive oil Fresh rosemary leaves Flaky salt 55 g (¼ cup) extra-virgin olive oil 6 cloves garlic, thinly sliced Flaky salt 55 g (¼ cup) extra-virgin olive oil 4 cloves garlic, finely chopped 1–2 tsp chilli flakes Flaky salt 60 ml (¼ cup) olive oil 1½ tbsp Sichuan peppercorns ½ tbsp black peppercorns ½ tbsp white peppercorns 2 large onions, halved and sliced into thin rings 60 ml (4 tbsp) vegetable oil ½ tbsp sugar, more to taste 30 ml (2 tbsp) soy sauce Vegetarian",
 "meta": "Serves 1 half-sheet pan · Prep 3 hr 45 min (mostly rising) · Cook 30 min",
 "intro": "Claire Saffitz's focaccia: a very wet, well-kneaded dough baked in a half-sheet pan for a tall, airy crumb and a crisp, oily base. Pick a topping from the options after the method.",
 "photo": "",
 "tags": [
-"breads"
+"breads",
+"vegetarian"
 ],
 "serves": 1,
 "ingredients": [
@@ -2096,12 +2111,13 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Italian",
 "category": "Pasta",
 "url": "italian/pasta/nduja-pasta.html",
-"text": "Salt 15 ml (1 tbsp) extra-virgin olive oil 1 clove garlic, peeled 400 g (14 oz) tin whole peeled tomatoes 200 g (7 oz) 'nduja, or to taste (more or less to adjust the heat) ½ tsp MSG 340 g (12 oz) fileja pasta (or rigatoni or bucatini) Grated Pecorino Romano, to serve",
+"text": "Salt 15 ml (1 tbsp) extra-virgin olive oil 1 clove garlic, peeled 400 g (14 oz) tin whole peeled tomatoes 200 g (7 oz) 'nduja, or to taste (more or less to adjust the heat) ½ tsp MSG 340 g (12 oz) fileja pasta (or rigatoni or bucatini) Grated Pecorino Romano, to serve Spicy",
 "meta": "Serves 3–4 · Cook 20–30 min",
 "intro": "A simple, fiery Calabrian sauce: tomatoes with 'nduja, the soft, spicy pork spread, melted through at the end.",
 "photo": "",
 "tags": [
 "pasta",
+"spicy",
 "quick"
 ],
 "serves": 3,
@@ -2615,12 +2631,14 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Italian",
 "category": "Pork",
 "url": "italian/pork/crispy-porchetta.html",
-"text": "1 pork belly, bone out, skin on, with the loin still attached (a belly without the loin also works; ask your butcher) 4 large sprigs rosemary 12 cloves garlic Zest of 1 lemon 1 bunch flat-leaf parsley 15 ml (1 tbsp) fennel pollen (or toasted fennel seeds, crushed) 15 ml (1 tbsp) chilli flakes 30 g (about 1 oz) salt ½ tsp MSG",
+"text": "1 pork belly, bone out, skin on, with the loin still attached (a belly without the loin also works; ask your butcher) 4 large sprigs rosemary 12 cloves garlic Zest of 1 lemon 1 bunch flat-leaf parsley 15 ml (1 tbsp) fennel pollen (or toasted fennel seeds, crushed) 15 ml (1 tbsp) chilli flakes 30 g (about 1 oz) salt ½ tsp MSG Christmas Sunday roast",
 "meta": "Serves 12 · Prep the day before (24–48 hr drying in the fridge) · Cook about 4 hr",
 "intro": "Pork belly rolled around the loin with a herb, garlic and fennel filling. Start a day or two ahead: the skin needs to dry out in the fridge to crackle.",
 "photo": "",
 "tags": [
 "pork",
+"christmas",
+"sunday-roast",
 "make-ahead",
 "project"
 ],
@@ -2910,12 +2928,13 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Japanese",
 "category": "Chicken",
 "url": "japanese/chicken/karaage.html",
-"text": "680 g (1½ lb) boneless, skin-on chicken thighs (4–6 pieces) ½ tsp table salt ⅛ tsp freshly ground black pepper ½ tsp grated fresh ginger, with its juice 1 clove garlic ½–1 tbsp soy sauce ½ tbsp sake (or dry sherry or Chinese rice wine, or leave it out) ½ tsp toasted sesame oil ½ tsp MSG 700–950 ml (3–4 cups) neutral oil 2 tbsp potato starch or cornflour (cornstarch), plus more if needed 2 tbsp plain (all-purpose) flour, plus more if needed Lemon wedges Japanese Kewpie mayonnaise Shichimi togarashi (Japanese seven spice)",
+"text": "680 g (1½ lb) boneless, skin-on chicken thighs (4–6 pieces) ½ tsp table salt ⅛ tsp freshly ground black pepper ½ tsp grated fresh ginger, with its juice 1 clove garlic ½–1 tbsp soy sauce ½ tbsp sake (or dry sherry or Chinese rice wine, or leave it out) ½ tsp toasted sesame oil ½ tsp MSG 700–950 ml (3–4 cups) neutral oil 2 tbsp potato starch or cornflour (cornstarch), plus more if needed 2 tbsp plain (all-purpose) flour, plus more if needed Lemon wedges Japanese Kewpie mayonnaise Shichimi togarashi (Japanese seven spice) Party food",
 "meta": "Serves 4 · Prep 15 min + 30 min marinating · Cook 15 min",
 "intro": "Marinated in ginger, garlic and soy, then fried twice for a light, crisp crust.",
 "photo": "",
 "tags": [
-"chicken"
+"chicken",
+"party-food"
 ],
 "serves": 4,
 "ingredients": [
@@ -3203,12 +3222,13 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Japanese",
 "category": "Chicken",
 "url": "japanese/chicken/nagoya-chicken-wings.html",
-"text": "450 g (1 lb) chicken wings, flats and drumettes (this much sauce covers up to 900 g / 2 lb) 35 g (¼ cup) potato starch or cornflour (cornstarch) 700 ml (3 cups) neutral oil, for deep-frying Toasted white sesame seeds 240 ml (1 cup) mirin 120 ml (½ cup) soy sauce 45 ml (3 tbsp) sake 65 g (⅓ cup) sugar ¼ tsp table salt 1 knob fresh ginger (about 1.3 cm / ½ inch), sliced 2 cloves garlic, crushed or minced ½ tsp MSG",
+"text": "450 g (1 lb) chicken wings, flats and drumettes (this much sauce covers up to 900 g / 2 lb) 35 g (¼ cup) potato starch or cornflour (cornstarch) 700 ml (3 cups) neutral oil, for deep-frying Toasted white sesame seeds 240 ml (1 cup) mirin 120 ml (½ cup) soy sauce 45 ml (3 tbsp) sake 65 g (⅓ cup) sugar ¼ tsp table salt 1 knob fresh ginger (about 1.3 cm / ½ inch), sliced 2 cloves garlic, crushed or minced ½ tsp MSG Party food",
 "meta": "Serves 4 · Prep 20 min · Cook 30 min",
 "intro": "Double-fried wings glazed in a sticky, sweet soy, mirin and ginger sauce and finished with sesame seeds. The sauce keeps in the fridge for a month.",
 "photo": "",
 "tags": [
-"chicken"
+"chicken",
+"party-food"
 ],
 "serves": 4,
 "ingredients": [
@@ -3532,12 +3552,13 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Mexican",
 "category": "Beef",
 "url": "mexican/beef/carne-asada-tacos.html",
-"text": "1 kg flank or skirt steak 60 ml (¼ cup) orange juice 60 ml (¼ cup) lime juice (about 2 limes) 60 ml (¼ cup) olive oil 4 cloves garlic, minced 1 jalapeño, finely chopped Small handful coriander, chopped 1 tsp ground cumin 1 tsp chilli powder ½ tsp cayenne pepper ½ tsp MSG 1½ tsp salt ½ tsp black pepper 3 ripe avocados 30 ml (2 tbsp) lime juice (about 1 lime) ½ tsp ground cumin ½ tsp salt 200 g paneer ½ tsp salt 1 white onion, finely diced 30 ml (2 tbsp) lime juice (about 1 lime) ¼ tsp salt Black pepper 12 small corn tortillas Lime wedges",
+"text": "1 kg flank or skirt steak 60 ml (¼ cup) orange juice 60 ml (¼ cup) lime juice (about 2 limes) 60 ml (¼ cup) olive oil 4 cloves garlic, minced 1 jalapeño, finely chopped Small handful coriander, chopped 1 tsp ground cumin 1 tsp chilli powder ½ tsp cayenne pepper ½ tsp MSG 1½ tsp salt ½ tsp black pepper 3 ripe avocados 30 ml (2 tbsp) lime juice (about 1 lime) ½ tsp ground cumin ½ tsp salt 200 g paneer ½ tsp salt 1 white onion, finely diced 30 ml (2 tbsp) lime juice (about 1 lime) ¼ tsp salt Black pepper 12 small corn tortillas Lime wedges Party food",
 "meta": "Serves 4 · Prep 20 min + 2–8 hr marinating · Cook about 1 hr",
 "intro": "Citrus-marinated steak, reverse-seared so the outside chars without burning, sliced thin and piled into charred corn tortillas with cumin guacamole, salted paneer \"queso fresco\" and a quick lime onion. Start the marinade a few hours ahead.",
 "photo": "",
 "tags": [
 "beef",
+"party-food",
 "make-ahead"
 ],
 "serves": 4,
@@ -3774,12 +3795,13 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Mexican",
 "category": "Beef",
 "url": "mexican/beef/chilli-con-carne.html",
-"text": "15 ml (1 tbsp) olive oil 3 garlic cloves, minced 1 onion (brown or white), diced 500 g (1 lb) beef mince 3 tbsp tomato paste 800 g (28 oz) can crushed tomatoes 420 g (14 oz) can red kidney beans, drained (or other beans) 2 beef stock cubes, crumbled 1½ tsp sugar 125–375 ml (½–1½ cups) water 1–2 tsp cayenne pepper, to taste 4 tsp paprika 5 tsp ground cumin 2 tsp garlic powder (or onion powder) 2 tsp onion powder 2 tsp dried oregano 1½ tsp cooking salt ½ tsp MSG Rice, corn chips or tortillas Sour cream, yoghurt, grated cheese and coriander",
+"text": "15 ml (1 tbsp) olive oil 3 garlic cloves, minced 1 onion (brown or white), diced 500 g (1 lb) beef mince 3 tbsp tomato paste 800 g (28 oz) can crushed tomatoes 420 g (14 oz) can red kidney beans, drained (or other beans) 2 beef stock cubes, crumbled 1½ tsp sugar 125–375 ml (½–1½ cups) water 1–2 tsp cayenne pepper, to taste 4 tsp paprika 5 tsp ground cumin 2 tsp garlic powder (or onion powder) 2 tsp onion powder 2 tsp dried oregano 1½ tsp cooking salt ½ tsp MSG Rice, corn chips or tortillas Sour cream, yoghurt, grated cheese and coriander Spicy",
 "meta": "Serves 5–6 · Prep 10 min · Cook 30 min",
 "intro": "A rich, properly spiced beef and bean chilli from RecipeTin Eats. Quick enough for a weeknight, even better slow-cooked or the next day.",
 "photo": "",
 "tags": [
-"beef"
+"beef",
+"spicy"
 ],
 "serves": 5,
 "ingredients": [
@@ -3970,12 +3992,13 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "South African",
 "category": "Duck",
 "url": "south-african/duck/mohs-duck-and-tamarind-curry.html",
-"text": "45 ml (3 tbsp) oil 2 tbsp coriander seeds 2 tbsp cumin seeds 2 tbsp sesame seeds 1 tsp black mustard seeds 2 large onions, chopped Handful of curry leaves 3 tbsp chilli flakes 1 tsp garam masala 85 g (1 cup) desiccated coconut 150 g (1 cup) cashew nuts 1 tsp turmeric 4 duck breasts 45 ml (3 tbsp) sunflower oil 30 g (80 ml / ⅓ cup) gram (chickpea) flour Salt White pepper 750 ml (3 cups) water 250 ml (1 cup) orange juice 1 tbsp brown sugar 45 ml (3 tbsp) tamarind paste ½ tsp MSG Fresh coriander, to garnish",
+"text": "45 ml (3 tbsp) oil 2 tbsp coriander seeds 2 tbsp cumin seeds 2 tbsp sesame seeds 1 tsp black mustard seeds 2 large onions, chopped Handful of curry leaves 3 tbsp chilli flakes 1 tsp garam masala 85 g (1 cup) desiccated coconut 150 g (1 cup) cashew nuts 1 tsp turmeric 4 duck breasts 45 ml (3 tbsp) sunflower oil 30 g (80 ml / ⅓ cup) gram (chickpea) flour Salt White pepper 750 ml (3 cups) water 250 ml (1 cup) orange juice 1 tbsp brown sugar 45 ml (3 tbsp) tamarind paste ½ tsp MSG Fresh coriander, to garnish Spicy",
 "meta": "Serves 4",
 "intro": "A modern Durban duck curry from Mohammed Khalid Moola of Ladysmith, with a nod to France in the orange sauce and his mother's touch of tamarind. Make the curry paste the day before, or at least before you start the duck.",
 "photo": "",
 "tags": [
 "duck",
+"spicy",
 "make-ahead"
 ],
 "serves": 4,
@@ -4194,12 +4217,13 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "South African",
 "category": "Sides",
 "url": "south-african/sides/chunky-onion-and-tomato-relish.html",
-"text": "30 ml (2 tbsp) olive oil 2 onions (or 1 large onion), roughly chopped 2 tins diced tomatoes (or 8 fresh tomatoes, diced) 30 ml (2 tbsp) Mrs Ball's chutney 30 ml (2 tbsp) balsamic vinegar 15 ml (1 tbsp) Worcestershire sauce ½ tsp MSG Salt and pepper 12 g (1 tbsp) sugar (optional), to help the caramelising",
+"text": "30 ml (2 tbsp) olive oil 2 onions (or 1 large onion), roughly chopped 2 tins diced tomatoes (or 8 fresh tomatoes, diced) 30 ml (2 tbsp) Mrs Ball's chutney 30 ml (2 tbsp) balsamic vinegar 15 ml (1 tbsp) Worcestershire sauce ½ tsp MSG Salt and pepper 12 g (1 tbsp) sugar (optional), to help the caramelising Barbecue",
 "meta": "Serves 6 · Prep 5 min · Cook 20 min",
 "intro": "A simple, full-flavoured South African tomato relish for the braai: with pap, boerewors rolls, meatballs or even on pasta.",
 "photo": "",
 "tags": [
 "sides",
+"barbecue",
 "quick"
 ],
 "serves": 6,
@@ -4435,12 +4459,13 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Thai",
 "category": "Beef",
 "url": "thai/beef/thai-beef-salad.html",
-"text": "½ tsp bird's eye or Thai chilli, deseeded and finely minced ¼ tsp finely minced garlic (½ small clove) 2¼ tsp white sugar 30 ml (2 tbsp) fish sauce 45 ml (3 tbsp) lime juice 15 ml (1 tbsp) grapeseed oil (or canola or vegetable oil) 1 small pinch cooking salt ½ tsp MSG 200–250 g (7–8 oz) good-quality beef steak, such as sirloin, at room temperature 15 ml (1 tbsp) vegetable, peanut or canola oil ¼ tsp each salt and pepper 2 heaped cups mixed lettuce leaves 10 cherry tomatoes, halved ¼ small red onion, very finely sliced ½ cucumber (deseeded if you like), halved lengthways and sliced ¼ cup mint leaves, lightly packed 35 g (¼ cup) roasted unsalted peanuts, finely chopped Extra mint leaves, to garnish",
+"text": "½ tsp bird's eye or Thai chilli, deseeded and finely minced ¼ tsp finely minced garlic (½ small clove) 2¼ tsp white sugar 30 ml (2 tbsp) fish sauce 45 ml (3 tbsp) lime juice 15 ml (1 tbsp) grapeseed oil (or canola or vegetable oil) 1 small pinch cooking salt ½ tsp MSG 200–250 g (7–8 oz) good-quality beef steak, such as sirloin, at room temperature 15 ml (1 tbsp) vegetable, peanut or canola oil ¼ tsp each salt and pepper 2 heaped cups mixed lettuce leaves 10 cherry tomatoes, halved ¼ small red onion, very finely sliced ½ cucumber (deseeded if you like), halved lengthways and sliced ¼ cup mint leaves, lightly packed 35 g (¼ cup) roasted unsalted peanuts, finely chopped Extra mint leaves, to garnish Spicy",
 "meta": "Serves 2 · Prep 20 min · Cook 5 min",
 "intro": "Seared steak sliced thin and tossed with crisp salad, mint and peanuts in a hot, sour, salty and sweet dressing. Adapted by RecipeTin Eats from the Spice I Am cookbook.",
 "photo": "",
 "tags": [
 "beef",
+"spicy",
 "quick"
 ],
 "serves": 2,

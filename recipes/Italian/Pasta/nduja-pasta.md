@@ -2,6 +2,7 @@
 title: 'Nduja Pasta
 cuisine: Italian
 category: Pasta
+tags: Spicy
 serves: 3–4
 time: Cook 20–30 min
 source: https://pastagrammar.com/blogs/recipes/pasta-with-nduja-recipe-the-best-spicy-pasta-you-ll-ever-try

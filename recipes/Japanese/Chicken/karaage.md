@@ -2,6 +2,7 @@
 title: Karaage
 cuisine: Japanese
 category: Chicken
+tags: Party food
 serves: 4
 time: Prep 15 min + 30 min marinating · Cook 15 min
 source: https://www.justonecookbook.com/karaage/

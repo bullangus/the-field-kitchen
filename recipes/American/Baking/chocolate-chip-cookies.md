@@ -2,6 +2,7 @@
 title: Chocolate Chip Cookies
 cuisine: American
 category: Baking
+tags: Vegetarian
 serves: 16 cookies
 time: Prep 20 min · Cook 20 min
 source: https://www.bonappetit.com/recipe/bas-best-chocolate-chip-cookies

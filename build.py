@@ -50,6 +50,7 @@ PHOTO_WARN_BYTES = 1_500_000
 RECENT_COUNT = 5
 NOTES_COUNT = 3
 KITCHEN_CARD_RECIPES = 3  # recipes shown on each home page cuisine card; the rest are a click away
+CARD_TAGS = 3  # style tags shown on each home page cuisine card before "+N"
 TONES = 6  # colour tones for cuisine cards and headers, .tone-1 to .tone-6 in style.css
 QUICK_MINUTES = 30
 PROJECT_MINUTES = 150  # hands-on time
@@ -114,6 +115,8 @@ CUISINE_PLACES = {
     "thai": (101, 15, "start"),
 }
 QUICK_CHIPS = (("quick", f"Under {QUICK_MINUTES} min"), ("make-ahead", "Make ahead"), ("project", "Weekend project"))
+# Hand-picked tags (a recipe's `tags:` line), in chip order. Others are allowed and sort after.
+TAG_ORDER = ("Christmas", "Sunday roast", "Barbecue", "Party food", "Vegetarian", "Spicy")
 # docs/ is fully generated, but these must survive a rebuild.
 KEEP_IN_DOCS = {".nojekyll", "CNAME"}
 
@@ -279,8 +282,10 @@ def split_time(r):
 
 
 def recipe_tags(r):
-    """Quick-filter tags for the chips, plus the recipe's style."""
-    tags = [slug(r["category"])]
+    """Filter tags for the chips: the style, the hand-picked `tags:` from the front
+    matter (Christmas, Spicy...), and the time tags worked out from the recipe."""
+    r["labels"] = [t.strip() for t in r.get("tags", "").split(",") if t.strip()]
+    tags = [slug(r["category"])] + [slug(t) for t in r["labels"]]
     times = split_time(r)
     active, passive = times if times else (None, 0)
     text = (r.get("time", "") + " " + r["body"]).lower()
@@ -295,7 +300,7 @@ def recipe_tags(r):
 
 
 def quick_tag_labels(r):
-    return [label for key, label in QUICK_CHIPS if key in r["tags"]]
+    return r["labels"] + [label for key, label in QUICK_CHIPS if key in r["tags"]]
 
 
 def time_facts(r):
@@ -383,7 +388,7 @@ def search_index(book):
         lines = bullets(parts.get("Ingredients")) + bullets(parts.get("Topping Options"))
         serves = re.match(r"\d+", r["serves"])
         entries.append({"title": r["title"], "cuisine": r["cuisine"], "category": r["category"],
-                        "url": r["url"], "text": " ".join(lines),
+                        "url": r["url"], "text": " ".join(lines + r["labels"]),
                         "meta": html.unescape(meta_line(r)), "intro": intro(r),
                         "photo": r.get("photo", ""), "tags": r["tags"],
                         "serves": int(serves.group()) if serves else 1,
@@ -534,22 +539,32 @@ def nice_date(iso):
 
 
 def chips_html(recipes, with_styles=True):
-    """Filter chips: the quick filters that match something here, then (optionally) every style."""
+    """One compact filter row: All, the time chips, the hand-picked occasion & diet
+    chips, and (optionally) a style dropdown. Only filters that match something show."""
     counts = {}
     for r in recipes:
         for t in r["tags"]:
             counts[t] = counts.get(t, 0) + 1
-    chip_list = [(key, label) for key, label in QUICK_CHIPS if counts.get(key)]
-    if with_styles:
-        chip_list += [(slug(s), s) for s in sorted({r["category"] for r in recipes})]
-    if not chip_list:
+    labels = {t for r in recipes for t in r["labels"]}
+    ordered = [t for t in TAG_ORDER if t in labels] + sorted(labels - set(TAG_ORDER))
+    time_chips = [(key, label) for key, label in QUICK_CHIPS if counts.get(key)]
+    tag_chips = [(slug(t), t) for t in ordered]
+    styles = sorted({r["category"] for r in recipes}) if with_styles else []
+    if not (time_chips or tag_chips or styles):
         return ""
-    chips = '<button type="button" class="chip" data-filter="" aria-pressed="true">All</button>' + "".join(
-        f'<button type="button" class="chip" data-filter="{key}" aria-pressed="false">'
-        f'{html.escape(label)}<small>{counts[key]}</small></button>'
-        for key, label in chip_list
-    )
-    return (f'<div class="chips" role="group" aria-label="Filter recipes" hidden>{chips}</div>'
+
+    def chip(key, label):
+        return (f'<button type="button" class="chip" data-filter="{key}" aria-pressed="false">'
+                f'{html.escape(label)}<small>{counts[key]}</small></button>')
+    parts = ['<button type="button" class="chip" data-filter="" aria-pressed="true">All</button>']
+    parts += [chip(k, l) for k, l in time_chips]
+    if time_chips and tag_chips:
+        parts.append('<span class="chip-sep" aria-hidden="true"></span>')
+    parts += [chip(k, l) for k, l in tag_chips]
+    if styles:
+        options = "".join(f'<option value="{slug(s)}">{html.escape(s)} ({counts[slug(s)]})</option>' for s in styles)
+        parts.append(f'<select class="chip-select" aria-label="Filter by style"><option value="">Any style</option>{options}</select>')
+    return (f'<div class="chips" role="group" aria-label="Filter recipes" hidden>{"".join(parts)}</div>'
             '<p class="filter-empty" hidden>Nothing matches that filter yet.</p>')
 
 
@@ -641,7 +656,12 @@ def home_html(book):
     cards = []
     for i, (cuisine, cats) in enumerate(book.items()):
         n = sum(len(rs) for rs in cats.values())
-        tags = "".join(f'<span class="tag">{html.escape(c)}</span>' for c in cats)
+        # At most three style tags, so every card's tags fit on one line.
+        names = list(cats)
+        tags = "".join(f'<span class="tag">{html.escape(c)}</span>' for c in names[:CARD_TAGS])
+        if len(names) > CARD_TAGS:
+            hidden = ", ".join(names[CARD_TAGS:])
+            tags += f'<span class="tag tag-more" title="{html.escape(hidden)}">+{len(names) - CARD_TAGS}</span>'
         items = "".join(
             f'<li data-tags="{" ".join(r["tags"])}">'
             + (f'<img class="thumb" src="{r["photo"]}" alt="" loading="lazy">' if r.get("photo") else "")

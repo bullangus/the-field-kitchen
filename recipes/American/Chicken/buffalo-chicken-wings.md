@@ -2,6 +2,7 @@
 title: Buffalo Wings
 cuisine: American
 category: Chicken
+tags: Party food, Spicy
 serves: 5 (10 wings)
 time: Prep 10 min + 1–1½ hr chilling · Cook 15 min
 source: https://www.allrecipes.com/recipe/24087/restaurant-style-buffalo-chicken-wings/

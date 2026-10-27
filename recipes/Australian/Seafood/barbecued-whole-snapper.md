@@ -2,6 +2,7 @@
 title: Barbecued Snapper
 cuisine: Australian
 category: Seafood
+tags: Barbecue
 serves: 4
 time: Prep 15 min · Cook 35 min
 source: https://www.taste.com.au/recipes/barbecued-whole-snapper-lime-chilli/a6559c91-9215-4ab1-8823-0c54582602ff

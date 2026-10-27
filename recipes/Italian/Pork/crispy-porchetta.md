@@ -2,6 +2,7 @@
 title: Porchetta
 cuisine: Italian
 category: Pork
+tags: Christmas, Sunday roast
 serves: 12
 time: Prep the day before (24–48 hr drying in the fridge) · Cook about 4 hr
 source: https://www.andy-cooks.com/blogs/recipes/crispy-porchetta

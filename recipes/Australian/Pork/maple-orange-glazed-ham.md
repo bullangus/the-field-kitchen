@@ -2,6 +2,7 @@
 title: Maple Orange Glazed Ham
 cuisine: Australian
 category: Pork
+tags: Christmas
 serves: 8
 time: Prep 20 min · Cook 3 hr 45 min
 source: Coles Christmas recipe card

@@ -2,6 +2,7 @@
 title: Thai Beef Salad
 cuisine: Thai
 category: Beef
+tags: Spicy
 serves: 2
 time: Prep 20 min · Cook 5 min
 source: https://www.recipetineats.com/thai-beef-salad-2/
