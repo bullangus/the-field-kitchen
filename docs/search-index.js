@@ -223,6 +223,139 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
+"title": "Caesar Salad",
+"cuisine": "American",
+"category": "Salads",
+"url": "american/salads/caesar-salad.html",
+"text": "200 g streaky bacon 2 heads cos lettuce 4 chicken thighs (about 500 g) 15 ml (1 tbsp) oil Salt and pepper ½ tsp MSG 4 eggs 125 ml (½ cup) Caesar dressing (Beerenberg is our favourite) 40 g parmesan, for grating over 3 slices bread (any kind) 30 g (2 tbsp) butter, melted 1 garlic clove, crushed 1 tsp Italian seasoning",
+"meta": "Serves 4 · Prep 20 min · Cook 20 min",
+"intro": "Our Caesar: crisp cos, bacon, shredded chicken thigh, jammy eggs and garlic-butter croutons, tossed in Beerenberg Caesar dressing and finished with plenty of parmesan.",
+"photo": "",
+"tags": [
+"salads"
+],
+"serves": 4,
+"ingredients": [
+{
+"t": "200 g streaky bacon",
+"n": "Streaky bacon",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bbacon\\b",
+"q": 200.0,
+"u": "g"
+},
+{
+"t": "2 heads cos lettuce",
+"n": "Cos lettuce",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bcos\\b",
+"q": 2.0,
+"u": null
+},
+{
+"t": "4 chicken thighs (about 500 g)",
+"n": "Chicken thighs",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bchicken thighs?\\b|\\bchicken\\b",
+"q": 4.0,
+"u": null
+},
+{
+"t": "15 ml (1 tbsp) oil",
+"n": "Neutral oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\boil\\b",
+"q": 15.0,
+"u": "ml"
+},
+{
+"t": "Salt and pepper",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": null,
+"u": null
+},
+{
+"t": "½ tsp MSG",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
+"t": "4 eggs",
+"n": "Eggs",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\beggs?\\b",
+"q": 4.0,
+"u": null
+},
+{
+"t": "125 ml (½ cup) Caesar dressing (Beerenberg is our favourite)",
+"n": "Caesar dressing",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bcaesar dressing\\b|\\bdressing\\b",
+"q": 125.0,
+"u": "ml"
+},
+{
+"t": "40 g parmesan, for grating over",
+"n": "Parmesan",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bparmesan\\b|\\bparmigiano\\b",
+"q": 40.0,
+"u": "g"
+},
+{
+"t": "3 slices bread (any kind)",
+"n": "Bread",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bbread\\b",
+"q": 3.0,
+"u": null
+},
+{
+"t": "30 g (2 tbsp) butter, melted",
+"n": "Butter",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bbutter\\b",
+"q": 30.0,
+"u": "g"
+},
+{
+"t": "1 garlic clove, crushed",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "1 tsp Italian seasoning",
+"n": "Italian seasoning",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bitalian seasoning\\b|\\bseasoning\\b",
+"q": 1.0,
+"u": "tsp"
+}
+]
+},
+{
 "title": "Maple Orange Glazed Ham",
 "cuisine": "Australian",
 "category": "Pork",

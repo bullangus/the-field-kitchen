@@ -10,6 +10,7 @@
 ### American
 - **Baking:** [Chocolate Chip Cookies](recipes/American/Baking/chocolate-chip-cookies.md)
 - **Chicken:** [Buffalo Wings](recipes/American/Chicken/buffalo-chicken-wings.md)
+- **Salads:** [Caesar Salad](recipes/American/Salads/caesar-salad.md)
 
 ### Australian
 - **Pork:** [Maple Orange Glazed Ham](recipes/Australian/Pork/maple-orange-glazed-ham.md)
@@ -58,7 +59,7 @@
 - **Beef:** [Thai Beef Salad](recipes/Thai/Beef/thai-beef-salad.md)
 - **Chicken:** [Yellow Curry](recipes/Thai/Chicken/yellow-curry.md)
 
-_34 recipes._
+_35 recipes._
 <!-- CONTENTS:END -->
 
 ## How it's organised
