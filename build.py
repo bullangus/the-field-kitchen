@@ -74,6 +74,8 @@ CUISINE_ART = {
                 '<path d="M16 34c2-8 6-8 8 0s6-8 8 0 6-8 8 0 6-8 8 0"/><path d="M47 6v24M43 6v7a4 4 0 0 0 8 0V6"/>'),
     "japanese": ('<path d="M8 32h46a23 18 0 0 1-46 0z"/><path d="M15 32c4-11 28-11 32 0"/>'
                  '<path d="M30 21 58 7M34 24 60 12"/>'),
+    "mexican": ('<path d="M8 46a24 24 0 0 1 48 0z"/><path d="M13 36c3-3 6 1 9-2s6 1 9-2 6 1 9-2 6 1 9 0"/>'
+                '<path d="M20 46a12 12 0 0 1 24 0"/><path d="M46 12c4 0 8 3 8 8"/><path d="M44 10c-2 2-2 5 0 6"/>'),
     "south african": ('<path d="M14 24h36v12a18 16 0 0 1-36 0z"/><path d="M11 24h42"/>'
                       '<path d="M18 24c0-11 28-11 28 0"/><path d="M21 48l-5 9M32 52v7M43 48l5 9"/>'),
     "spanish": ('<ellipse cx="32" cy="38" rx="24" ry="10"/><path d="M8 38H2M56 38h6"/>'
