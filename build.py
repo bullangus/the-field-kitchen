@@ -5,11 +5,13 @@ Reads every recipe in recipes/<Cuisine>/<Style>/*.md and regenerates:
   - the website in docs/ (served by GitHub Pages): a home page with the
     contents, one page per cuisine, one page per recipe
   - docs/book.html, the complete book on one page, for printing
+  - docs/search-index.js, the recipe index the site search reads
 
 Standard library only. Run:  python build.py
 """
 
 import html
+import json
 import re
 import shutil
 import sys
@@ -22,6 +24,9 @@ TEMPLATES = ROOT / "templates"
 DOCS = ROOT / "docs"
 BOOK_PAGE = "book.html"
 STYLESHEET = "style.css"
+ICON = "icon.svg"
+SEARCH_SCRIPT = "search.js"
+SEARCH_INDEX = "search-index.js"
 TITLE = "The Field Kitchen"
 SUBTITLE = "Recipes from our family table"
 
@@ -160,6 +165,24 @@ def meta_line(r):
     return " · ".join(meta)
 
 
+def icon_inline():
+    # Inline copy of the favicon that follows the text colour, for the nav bar.
+    svg = (TEMPLATES / ICON).read_text(encoding="utf-8").strip()
+    return (svg.replace('fill="#fbf8f3" stroke="#8a3b24"', 'fill="none" stroke="currentColor"')
+               .replace("<svg ", '<svg aria-hidden="true" ', 1))
+
+
+def search_index(book):
+    """Title, place in the book and ingredient lines for each recipe."""
+    entries = []
+    for r in all_recipes(book):
+        m = re.search(r"^## Ingredients\n(.*?)(?=^## )", r["body"], re.S | re.M)
+        lines = re.findall(r"^- (.*)", m.group(1), re.M) if m else []
+        entries.append({"title": r["title"], "cuisine": r["cuisine"], "category": r["category"],
+                        "url": r["url"], "text": " ".join(lines)})
+    return "window.FIELD_KITCHEN_INDEX = " + json.dumps(entries, ensure_ascii=False, indent=0) + ";\n"
+
+
 def nav_html(book, root, current=None):
     links = []
     for cuisine in book:
@@ -167,10 +190,14 @@ def nav_html(book, root, current=None):
         links.append(f'<li><a href="{root}{cuisine_url(cuisine)}"{here}>{html.escape(cuisine)}</a></li>')
     here = ' aria-current="page"' if current == BOOK_PAGE else ""
     links.append(f'<li><a href="{root}{BOOK_PAGE}"{here}>Print the book</a></li>')
-    return f"""<nav class="site-nav" aria-label="Site">
+    return f"""<nav class="site-nav" aria-label="Site" data-root="{root}">
   <div class="inner">
-    <a class="home" href="{root}index.html">{TITLE}</a>
+    <a class="home" href="{root}index.html">{icon_inline()}{TITLE}</a>
     <ul>{"".join(links)}</ul>
+    <form class="search" role="search">
+      <input type="search" placeholder="Search recipes or ingredients" aria-label="Search recipes" autocomplete="off">
+      <ul class="search-results" hidden></ul>
+    </form>
   </div>
 </nav>"""
 
@@ -303,7 +330,9 @@ def build_site(book):
             shutil.rmtree(p)
         else:
             p.unlink()
-    write(STYLESHEET, (TEMPLATES / STYLESHEET).read_text(encoding="utf-8"))
+    for asset in (STYLESHEET, ICON, SEARCH_SCRIPT):
+        write(asset, (TEMPLATES / asset).read_text(encoding="utf-8"))
+    write(SEARCH_INDEX, search_index(book))
     write("index.html", home_html(book))
     write(BOOK_PAGE, book_html(book))
     for cuisine in book:

@@ -64,7 +64,35 @@ h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600
   display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 1.25rem;
 }
 .site-nav a { text-decoration: none; }
-.site-nav .home { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.35rem; font-weight: 600; margin-right: auto; }
+.site-nav .home {
+  font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.35rem; font-weight: 600; margin-right: auto;
+  display: inline-flex; align-items: center; gap: 0.4rem;
+}
+.site-nav .home svg { width: 1.5rem; height: 1.5rem; color: var(--accent); flex: none; }
+
+/* Search */
+.search { position: relative; flex-basis: 100%; margin: 0.15rem 0 0.1rem; }
+.search input {
+  width: 100%; font: inherit; font-size: 0.95rem; color: var(--ink);
+  background: #fff; border: 1px solid var(--rule); border-radius: 4px; padding: 0.4rem 0.65rem;
+}
+.search input:focus { outline: 2px solid var(--accent); outline-offset: -1px; border-color: transparent; }
+.search-results {
+  position: absolute; top: calc(100% + 4px); left: 0; right: 0; z-index: 10;
+  list-style: none; margin: 0; padding: 0.25rem 0;
+  background: var(--paper); border: 1px solid var(--rule); border-radius: 4px;
+  box-shadow: 0 6px 18px rgba(42, 38, 34, 0.12);
+}
+/* .site-nav prefix outranks the nav-link rules above, which would otherwise apply here. */
+.site-nav .search-results { display: block; }
+.site-nav .search-results[hidden] { display: none; }
+.site-nav .search-results a {
+  display: block; padding: 0.4rem 0.75rem; text-decoration: none;
+  font-variant: normal; letter-spacing: 0; color: var(--ink);
+}
+.search-results a:hover, .search-results a:focus { background: #f2ebe1; outline: none; }
+.search-results span { display: block; font-variant: small-caps; letter-spacing: 0.05em; color: var(--muted); font-size: 0.85rem; }
+.search-empty { padding: 0.4rem 0.75rem; color: var(--muted); font-style: italic; }
 .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; }
 .site-nav li a { font-variant: small-caps; letter-spacing: 0.06em; color: var(--muted); }
 .site-nav li a:hover, .site-nav li a[aria-current="page"] { color: var(--accent); }
@@ -98,7 +126,7 @@ h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600
 
 @media print {
   @page { margin: 18mm 16mm 20mm; }
-  .site-nav, .pager, .print-link { display: none; }
+  .site-nav, .pager, .print-link, .search { display: none; }
   body { background: #fff; font-size: 10.5pt; }
   main { max-width: none; padding: 0; }
   a { text-decoration: none; }

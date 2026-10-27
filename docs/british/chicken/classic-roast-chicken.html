@@ -9,12 +9,19 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../style.css">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<script src="../../search-index.js" defer></script>
+<script src="../../search.js" defer></script>
 </head>
 <body>
-<nav class="site-nav" aria-label="Site">
+<nav class="site-nav" aria-label="Site" data-root="../../">
   <div class="inner">
-    <a class="home" href="../../index.html">The Field Kitchen</a>
+    <a class="home" href="../../index.html"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z"/><path d="M6 17h12"/></svg>The Field Kitchen</a>
     <ul><li><a href="../../british/index.html" aria-current="page">British</a></li><li><a href="../../chinese/index.html">Chinese</a></li><li><a href="../../indian/index.html">Indian</a></li><li><a href="../../italian/index.html">Italian</a></li><li><a href="../../japanese/index.html">Japanese</a></li><li><a href="../../spanish/index.html">Spanish</a></li><li><a href="../../book.html">Print the book</a></li></ul>
+    <form class="search" role="search">
+      <input type="search" placeholder="Search recipes or ingredients" aria-label="Search recipes" autocomplete="off">
+      <ul class="search-results" hidden></ul>
+    </form>
   </div>
 </nav>
 <main>

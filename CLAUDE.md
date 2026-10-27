@@ -56,6 +56,8 @@ recipes/<Cuisine>/<Style>/*.md   one file per recipe (files starting with _ are 
 templates/recipe.md              the recipe format to copy
 templates/style.css              all styling, screen and print (copied to docs/style.css)
 templates/page.html              shell for website pages (home, cuisine, recipe)
+templates/icon.svg               chef's hat: favicon, and inlined in the nav bar
+templates/search.js              site search (copied to docs/); reads docs/search-index.js
 templates/book.html              shell for the one-page printable book
 build.py                         generates everything in docs/ (standard library only)
 docs/                            GENERATED, wiped and rebuilt each run (.nojekyll kept):
@@ -63,10 +65,11 @@ docs/                            GENERATED, wiped and rebuilt each run (.nojekyl
   <cuisine>/index.html             one page per cuisine, recipes grouped by style
   <cuisine>/<style>/<recipe>.html  one page per recipe, with previous/next links
   book.html                        the whole book on one page, for printing
+  search-index.js                  title, cuisine, style and ingredient lines of every recipe
 README.md                        contents list between the CONTENTS markers is GENERATED
 ```
 
-Every site page has a nav bar (home, each cuisine, "Print the book"). Cuisines, styles and recipes are ordered alphabetically; previous/next follows that same order. In `book.html` each cuisine gets a divider page and in print every recipe starts on a new page; the nav and pager are hidden in print. Never hand-edit anything in `docs/` or the README contents block. Change the recipe files or the templates and rebuild.
+Every site page has a nav bar (home, each cuisine, "Print the book") and a search box that matches every word typed against titles, cuisines, styles and ingredients. Cuisines, styles and recipes are ordered alphabetically; previous/next follows that same order. In `book.html` each cuisine gets a divider page and in print every recipe starts on a new page; the nav and pager are hidden in print. Never hand-edit anything in `docs/` or the README contents block. Change the recipe files or the templates and rebuild.
 
 ---
 
