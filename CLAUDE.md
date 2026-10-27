@@ -54,25 +54,31 @@ Update the recipe itself (quantities, steps, timings). Unless told otherwise, al
 ```
 recipes/<Cuisine>/<Style>/*.md   one file per recipe (files starting with _ are skipped)
 templates/recipe.md              the recipe format to copy
-templates/book.html              page layout and print stylesheet for the book
-build.py                         generates the two files below (standard library only)
-docs/index.html                  GENERATED: the full book (cover, contents, recipes)
+templates/style.css              all styling, screen and print (copied to docs/style.css)
+templates/page.html              shell for website pages (home, cuisine, recipe)
+templates/book.html              shell for the one-page printable book
+build.py                         generates everything in docs/ (standard library only)
+docs/                            GENERATED, wiped and rebuilt each run (.nojekyll kept):
+  index.html                       home: cover + contents linking to each recipe page
+  <cuisine>/index.html             one page per cuisine, recipes grouped by style
+  <cuisine>/<style>/<recipe>.html  one page per recipe, with previous/next links
+  book.html                        the whole book on one page, for printing
 README.md                        contents list between the CONTENTS markers is GENERATED
 ```
 
-The book orders cuisines, styles and recipes alphabetically. Each cuisine gets a divider page listing its styles; in print every recipe starts on a new page. Never hand-edit `docs/index.html` or the README contents block. Change the recipe files or the templates and rebuild.
+Every site page has a nav bar (home, each cuisine, "Print the book"). Cuisines, styles and recipes are ordered alphabetically; previous/next follows that same order. In `book.html` each cuisine gets a divider page and in print every recipe starts on a new page; the nav and pager are hidden in print. Never hand-edit anything in `docs/` or the README contents block. Change the recipe files or the templates and rebuild.
 
 ---
 
 ## Commands
 
 ```bash
-python build.py     # regenerate docs/index.html and the README contents
+python build.py     # regenerate the site in docs/ and the README contents
 ```
 
 There are no tests or CI. `build.py` exits with an error if a recipe has no front matter or is missing title, cuisine, category or serves. That's the only automatic check, so read the built output when you change the template or build script.
 
-To print: open `docs/index.html` in a browser, Print, Save as PDF.
+To print: open `docs/book.html` (or "Print the book" on the site), Print, Save as PDF. A single recipe page also prints cleanly on its own.
 
 ---
 
@@ -92,7 +98,8 @@ To print: open `docs/index.html` in a browser, Print, Save as PDF.
 - **No magic values.** Paths, title and subtitle live as constants at the top of `build.py`.
 - **Escape everything rendered.** Recipe text goes through `html.escape` before it reaches the page. Keep it that way for any new field.
 - **Fail loudly.** A malformed recipe stops the build with the file name and the problem. Never skip it silently.
-- **Presentation values live in one place.** Colours are tokens on `:root` in `templates/book.html`. Print rules live in its `@media print` block.
+- **Presentation values live in one place.** Colours are tokens on `:root` in `templates/style.css`. Print rules live in its `@media print` block.
+- **Relative links only.** The site is served from `/the-field-kitchen/`, so pages link with `../` prefixes, never root-absolute paths.
 
 ---
 

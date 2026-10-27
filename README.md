@@ -2,7 +2,7 @@
 
 *Recipes from our family table.* A family cookbook to be printed one day.
 
-**Read the book:** https://bullangus.github.io/the-field-kitchen/ (GitHub Pages, built from `docs/index.html` on `main`). To print it, open it in a browser and choose Print, then Save as PDF.
+**Read the book:** https://bullangus.github.io/the-field-kitchen/ (GitHub Pages, built from `docs/` on `main`). To print it, follow "Print the book" (`docs/book.html`) and choose Print, then Save as PDF.
 
 ## Contents
 
@@ -33,4 +33,4 @@ recipes/
       <recipe-name>.md
 ```
 
-Each recipe is one Markdown file using [templates/recipe.md](templates/recipe.md). `python build.py` regenerates the contents above and the printable book in `docs/index.html`. Don't edit either of those by hand.
+Each recipe is one Markdown file using [templates/recipe.md](templates/recipe.md). `python build.py` regenerates the contents above and the whole website in `docs/` (one page per cuisine and recipe, plus the printable `book.html`). Don't edit either of those by hand.

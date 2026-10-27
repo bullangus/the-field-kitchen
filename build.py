@@ -2,24 +2,32 @@
 
 Reads every recipe in recipes/<Cuisine>/<Style>/*.md and regenerates:
   - the Contents section of README.md (between the CONTENTS markers)
-  - docs/index.html, the complete print-ready book (served by GitHub Pages)
+  - the website in docs/ (served by GitHub Pages): a home page with the
+    contents, one page per cuisine, one page per recipe
+  - docs/book.html, the complete book on one page, for printing
 
 Standard library only. Run:  python build.py
 """
 
 import html
 import re
+import shutil
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).parent
 RECIPES = ROOT / "recipes"
 README = ROOT / "README.md"
-BOOK = ROOT / "docs" / "index.html"
+TEMPLATES = ROOT / "templates"
+DOCS = ROOT / "docs"
+BOOK_PAGE = "book.html"
+STYLESHEET = "style.css"
 TITLE = "The Field Kitchen"
 SUBTITLE = "Recipes from our family table"
 
 REQUIRED = ("title", "cuisine", "category", "serves")
+# docs/ is fully generated, but these must survive a rebuild.
+KEEP_IN_DOCS = {".nojekyll", "CNAME"}
 
 
 def slug(text):
@@ -41,6 +49,7 @@ def parse(path):
         sys.exit(f"{path}: missing {', '.join(missing)}")
     meta["body"] = m.group(2)
     meta["path"] = path.relative_to(ROOT).as_posix()
+    meta["url"] = f"{slug(meta['cuisine'])}/{slug(meta['category'])}/{path.stem}.html"
     return meta
 
 
@@ -110,6 +119,10 @@ def load():
     return {c: dict(sorted(cats.items())) for c, cats in sorted(book.items())}
 
 
+def all_recipes(book):
+    return [r for cats in book.values() for recipes in cats.values() for r in recipes]
+
+
 def contents_md(book):
     if not book:
         return "_No recipes yet._"
@@ -120,7 +133,7 @@ def contents_md(book):
             links = ", ".join(f"[{r['title']}]({r['path']})" for r in recipes)
             lines.append(f"- **{category}:** {links}")
         lines.append("")
-    count = sum(len(rs) for cats in book.values() for rs in cats.values())
+    count = len(all_recipes(book))
     lines.append(f"_{count} recipe{'s' if count != 1 else ''}._")
     return "\n".join(lines).strip()
 
@@ -136,61 +149,178 @@ def update_readme(book):
     README.write_text(new, encoding="utf-8", newline="\n")
 
 
-def recipe_html(r, anchor):
+def cuisine_url(cuisine):
+    return f"{slug(cuisine)}/index.html"
+
+
+def meta_line(r):
     meta = [f"Serves {html.escape(r['serves'])}"]
     if r.get("time"):
         meta.append(html.escape(r["time"]))
+    return " · ".join(meta)
+
+
+def nav_html(book, root, current=None):
+    links = []
+    for cuisine in book:
+        here = ' aria-current="page"' if cuisine == current else ""
+        links.append(f'<li><a href="{root}{cuisine_url(cuisine)}"{here}>{html.escape(cuisine)}</a></li>')
+    here = ' aria-current="page"' if current == BOOK_PAGE else ""
+    links.append(f'<li><a href="{root}{BOOK_PAGE}"{here}>Print the book</a></li>')
+    return f"""<nav class="site-nav" aria-label="Site">
+  <div class="inner">
+    <a class="home" href="{root}index.html">{TITLE}</a>
+    <ul>{"".join(links)}</ul>
+  </div>
+</nav>"""
+
+
+def toc_html(book, href):
+    """Contents list grouped by cuisine and style; href(r) gives each recipe's link."""
+    if not book:
+        return '<li class="empty">No recipes yet.</li>'
+    toc = []
+    for cuisine, cats in book.items():
+        toc.append(f'<li class="toc-cuisine"><a href="{href(cuisine)}">{html.escape(cuisine)}</a><ul>')
+        for category, recipes in cats.items():
+            toc.append(f'<li class="toc-category"><span>{html.escape(category)}</span><ul>')
+            for r in recipes:
+                toc.append(f'<li><a href="{href(r)}">{html.escape(r["title"])}</a></li>')
+            toc.append("</ul></li>")
+        toc.append("</ul></li>")
+    return "\n".join(toc)
+
+
+def recipe_html(r, anchor=None, kicker=None, css="recipe"):
     source = ""
     if r.get("source"):
         s = r["source"]
         label = html.escape(re.sub(r"^https?://(www\.)?", "", s).split("/")[0])
         s_html = f'<a href="{html.escape(s)}">{label}</a>' if s.startswith("http") else html.escape(s)
         source = f'<p class="source">Source: {s_html}</p>'
+    kicker = kicker or f"{html.escape(r['cuisine'])} · {html.escape(r['category'])}"
+    id_attr = f' id="{anchor}"' if anchor else ""
     return f"""
-<article class="recipe" id="{anchor}">
-  <p class="kicker">{html.escape(r['cuisine'])} · {html.escape(r['category'])}</p>
+<article class="{css}"{id_attr}>
+  <p class="kicker">{kicker}</p>
   <h3>{html.escape(r['title'])}</h3>
-  <p class="meta">{' · '.join(meta)}</p>
+  <p class="meta">{meta_line(r)}</p>
   {render(r['body'])}
   {source}
 </article>"""
 
 
-def build_html(book):
-    toc, body = [], []
+def page(book, depth, page_title, content, current=None):
+    root = "../" * depth
+    template = (TEMPLATES / "page.html").read_text(encoding="utf-8")
+    return (template.replace("{{PAGE_TITLE}}", html.escape(page_title))
+                    .replace("{{ROOT}}", root)
+                    .replace("{{NAV}}", nav_html(book, root, current))
+                    .replace("{{CONTENT}}", content))
+
+
+def home_html(book):
+    toc = toc_html(book, lambda x: cuisine_url(x) if isinstance(x, str) else x["url"])
+    content = f"""  <header class="cover home-cover">
+    <h1>{TITLE}</h1>
+    <div class="ornament">· · ·</div>
+    <p>{SUBTITLE}</p>
+  </header>
+
+  <nav class="contents" aria-label="Contents">
+    <h2>Contents</h2>
+    <ul>
+{toc}
+    </ul>
+  </nav>
+
+  <p class="print-link">Want it on paper? <a href="{BOOK_PAGE}">Open the whole book</a>, then Print and Save as PDF.</p>"""
+    return page(book, 0, TITLE, content)
+
+
+def cuisine_html(book, cuisine):
+    groups = []
+    for category, recipes in book[cuisine].items():
+        items = "\n".join(
+            f'<li><a href="{r["url"].split("/", 1)[1]}">{html.escape(r["title"])}</a>'
+            f'<span class="meta">{meta_line(r)}</span></li>'
+            for r in recipes
+        )
+        groups.append(f'<section class="style-group"><h2>{html.escape(category)}</h2>\n'
+                      f'<ul class="recipe-list">\n{items}\n</ul></section>')
+    content = (f'<header class="page-head"><h1>{html.escape(cuisine)}</h1>'
+               f'<div class="ornament">· · ·</div></header>\n' + "\n".join(groups))
+    return page(book, 1, f"{cuisine} · {TITLE}", content, current=cuisine)
+
+
+def recipe_page_html(book, r, prev, nxt):
+    root = "../../"
+    kicker = (f'<a href="{root}{cuisine_url(r["cuisine"])}">{html.escape(r["cuisine"])}</a>'
+              f' · {html.escape(r["category"])}')
+    pager = []
+    if prev:
+        pager.append(f'<a class="prev" href="{root}{prev["url"]}"><span>Previous</span>{html.escape(prev["title"])}</a>')
+    if nxt:
+        pager.append(f'<a class="next" href="{root}{nxt["url"]}"><span>Next</span>{html.escape(nxt["title"])}</a>')
+    content = (recipe_html(r, kicker=kicker, css="recipe solo")
+               + f'\n<nav class="pager" aria-label="More recipes">{"".join(pager)}</nav>')
+    return page(book, 2, f"{r['title']} · {TITLE}", content, current=r["cuisine"])
+
+
+def book_html(book):
+    body = []
     for cuisine, cats in book.items():
         cid = slug(cuisine)
-        toc.append(f'<li class="toc-cuisine"><a href="#{cid}">{html.escape(cuisine)}</a><ul>')
         body.append(f'<section class="cuisine" id="{cid}"><h2>{html.escape(cuisine)}</h2>')
         for category, recipes in cats.items():
-            kid = f"{cid}-{slug(category)}"
-            toc.append(f'<li class="toc-category"><span>{html.escape(category)}</span><ul>')
-            body.append(f'<p class="category-list" id="{kid}">{html.escape(category)}: '
+            body.append(f'<p class="category-list">{html.escape(category)}: '
                         + ", ".join(html.escape(r["title"]) for r in recipes) + "</p>")
-            for r in recipes:
-                rid = f"{kid}-{slug(r['title'])}"
-                toc.append(f'<li><a href="#{rid}">{html.escape(r["title"])}</a></li>')
-            toc.append("</ul></li>")
-        toc.append("</ul></li>")
         body.append("</section>")
-        for category, recipes in cats.items():
-            kid = f"{cid}-{slug(category)}"
+        for recipes in cats.values():
             for r in recipes:
-                body.append(recipe_html(r, f"{kid}-{slug(r['title'])}"))
-    toc_html = "\n".join(toc) if toc else '<li class="empty">No recipes yet.</li>'
-    template = (ROOT / "templates" / "book.html").read_text(encoding="utf-8")
+                body.append(recipe_html(r, anchor=slug(r["url"][:-5])))
+    toc = toc_html(book, lambda x: f"#{slug(x)}" if isinstance(x, str) else f"#{slug(x['url'][:-5])}")
+    template = (TEMPLATES / "book.html").read_text(encoding="utf-8")
     return (template.replace("{{TITLE}}", TITLE)
                     .replace("{{SUBTITLE}}", SUBTITLE)
-                    .replace("{{CONTENTS}}", toc_html)
+                    .replace("{{NAV}}", nav_html(book, "", BOOK_PAGE))
+                    .replace("{{CONTENTS}}", toc)
                     .replace("{{BODY}}", "\n".join(body)))
+
+
+def write(rel, text):
+    path = DOCS / rel
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(text, encoding="utf-8", newline="\n")
+
+
+def build_site(book):
+    # Clear old output so renamed or moved recipes don't leave stale pages behind.
+    for p in DOCS.iterdir():
+        if p.name in KEEP_IN_DOCS:
+            continue
+        if p.is_dir():
+            shutil.rmtree(p)
+        else:
+            p.unlink()
+    write(STYLESHEET, (TEMPLATES / STYLESHEET).read_text(encoding="utf-8"))
+    write("index.html", home_html(book))
+    write(BOOK_PAGE, book_html(book))
+    for cuisine in book:
+        write(cuisine_url(cuisine), cuisine_html(book, cuisine))
+    recipes = all_recipes(book)
+    for i, r in enumerate(recipes):
+        prev = recipes[i - 1] if i > 0 else None
+        nxt = recipes[i + 1] if i + 1 < len(recipes) else None
+        write(r["url"], recipe_page_html(book, r, prev, nxt))
 
 
 def main():
     book = load()
     update_readme(book)
-    BOOK.write_text(build_html(book), encoding="utf-8", newline="\n")
-    count = sum(len(rs) for cats in book.values() for rs in cats.values())
-    print(f"Built {count} recipe(s) across {len(book)} cuisine(s).")
+    DOCS.mkdir(exist_ok=True)
+    build_site(book)
+    print(f"Built {len(all_recipes(book))} recipe(s) across {len(book)} cuisine(s).")
 
 
 if __name__ == "__main__":
