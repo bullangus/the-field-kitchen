@@ -227,15 +227,61 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "American",
 "category": "Salads",
 "url": "american/salads/caesar-salad.html",
-"text": "200 g streaky bacon 2 heads cos lettuce 4 chicken thighs (about 500 g) 15 ml (1 tbsp) oil Salt and pepper ½ tsp MSG 4 eggs 125 ml (½ cup) Caesar dressing (Beerenberg is our favourite) 40 g parmesan, for grating over 3 slices bread (any kind) 30 g (2 tbsp) butter, melted 1 garlic clove, crushed 1 tsp Italian seasoning",
+"text": "4 eggs, straight from the fridge 3 slices bread (any kind) 30 g (2 tbsp) butter, melted 1 garlic clove, crushed 1 tsp Italian seasoning 200 g streaky bacon 4 chicken thighs (about 500 g) 15 ml (1 tbsp) oil Salt and pepper ½ tsp MSG 2 heads cos lettuce 125 ml (½ cup) Caesar dressing (Beerenberg is our favourite) 40 g parmesan, for grating over",
 "meta": "Serves 4 · Prep 20 min · Cook 20 min",
-"intro": "Our Caesar: crisp cos, bacon, shredded chicken thigh, jammy eggs and garlic-butter croutons, tossed in Beerenberg Caesar dressing and finished with plenty of parmesan.",
+"intro": "Our Caesar: crisp cos, bacon, shredded chicken thigh, jammy eggs and garlic-butter croutons, tossed in Beerenberg Caesar dressing and finished with plenty of parmesan. The eggs and croutons can be made ahead.",
 "photo": "",
 "tags": [
-"salads"
+"salads",
+"make-ahead"
 ],
 "serves": 4,
 "ingredients": [
+{
+"t": "4 eggs, straight from the fridge",
+"n": "Eggs",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\beggs?\\b",
+"q": 4.0,
+"u": null
+},
+{
+"t": "3 slices bread (any kind)",
+"n": "Bread",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bbread\\b",
+"q": 3.0,
+"u": null
+},
+{
+"t": "30 g (2 tbsp) butter, melted",
+"n": "Butter",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bbutter\\b",
+"q": 30.0,
+"u": "g"
+},
+{
+"t": "1 garlic clove, crushed",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "1 tsp Italian seasoning",
+"n": "Italian seasoning",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bitalian seasoning\\b|\\bseasoning\\b",
+"q": 1.0,
+"u": "tsp"
+},
 {
 "t": "200 g streaky bacon",
 "n": "Streaky bacon",
@@ -244,15 +290,6 @@ window.FIELD_KITCHEN_INDEX = [
 "p": "\\bbacon\\b",
 "q": 200.0,
 "u": "g"
-},
-{
-"t": "2 heads cos lettuce",
-"n": "Cos lettuce",
-"a": "Fruit & veg",
-"s": false,
-"p": "\\bcos\\b",
-"q": 2.0,
-"u": null
 },
 {
 "t": "4 chicken thighs (about 500 g)",
@@ -291,12 +328,12 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "tsp"
 },
 {
-"t": "4 eggs",
-"n": "Eggs",
-"a": "Dairy & eggs",
+"t": "2 heads cos lettuce",
+"n": "Cos lettuce",
+"a": "Fruit & veg",
 "s": false,
-"p": "\\beggs?\\b",
-"q": 4.0,
+"p": "\\bcos\\b",
+"q": 2.0,
 "u": null
 },
 {
@@ -316,42 +353,6 @@ window.FIELD_KITCHEN_INDEX = [
 "p": "\\bparmesan\\b|\\bparmigiano\\b",
 "q": 40.0,
 "u": "g"
-},
-{
-"t": "3 slices bread (any kind)",
-"n": "Bread",
-"a": "Bread, pasta & rice",
-"s": false,
-"p": "\\bbread\\b",
-"q": 3.0,
-"u": null
-},
-{
-"t": "30 g (2 tbsp) butter, melted",
-"n": "Butter",
-"a": "Dairy & eggs",
-"s": false,
-"p": "\\bbutter\\b",
-"q": 30.0,
-"u": "g"
-},
-{
-"t": "1 garlic clove, crushed",
-"n": "Garlic",
-"a": "Fruit & veg",
-"s": false,
-"p": "\\bgarlic\\b",
-"q": 1.0,
-"u": null
-},
-{
-"t": "1 tsp Italian seasoning",
-"n": "Italian seasoning",
-"a": "Herbs & spices",
-"s": false,
-"p": "\\bitalian seasoning\\b|\\bseasoning\\b",
-"q": 1.0,
-"u": "tsp"
 }
 ]
 },
