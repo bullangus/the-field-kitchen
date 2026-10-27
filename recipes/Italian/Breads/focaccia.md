@@ -50,6 +50,25 @@ Claire Saffitz's focaccia: a very wet, well-kneaded dough baked in a half-sheet 
 
 1. Before baking: drizzle the dimpled dough with the olive oil and sprinkle generously with flaky salt and rosemary.
 
+### Garlic
+
+- 55 g (¼ cup) extra-virgin olive oil
+- 6 cloves garlic, thinly sliced
+- Flaky salt
+
+1. While the dough rises: warm the oil and garlic in a small saucepan over low heat for 3–4 minutes, until fragrant but not coloured. Let it cool.
+2. Before baking: spoon the oil and garlic over the dimpled dough, pressing the slices into the dimples so they sit under the oil and don't scorch. Sprinkle with flaky salt.
+
+### Chilli garlic
+
+- 55 g (¼ cup) extra-virgin olive oil
+- 4 cloves garlic, finely chopped
+- 1–2 tsp chilli flakes
+- Flaky salt
+
+1. While the dough rises: warm the oil, garlic and chilli flakes in a small saucepan over low heat for 2–3 minutes, until fragrant but not coloured. Let it cool.
+2. Before baking: spoon the chilli garlic oil over the dimpled dough, working it into the dimples, and sprinkle with flaky salt.
+
 ### Sichuan pepper oil and soy caramelised onions
 
 - 60 ml (¼ cup) olive oil
@@ -70,3 +89,4 @@ Claire Saffitz's focaccia: a very wet, well-kneaded dough baked in a half-sheet 
 ## Notes
 
 - 2026-10-28: Toppings are separate options so the base focaccia stays plain. The Sichuan pepper oil and soy caramelised onions are our go-to alternative to garlic, rosemary or chilli garlic.
+- 2026-10-28: Added garlic and chilli garlic options. Their amounts are a starting point we haven't measured yet: adjust after the next bake.
