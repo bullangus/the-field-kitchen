@@ -51,7 +51,11 @@
 ### Spanish
 - **Chicken:** [Chicken & White Bean Stew](recipes/Spanish/Chicken/chicken-and-white-bean-stew.md)
 
-_28 recipes._
+### Thai
+- **Beef:** [Thai Beef Salad](recipes/Thai/Beef/thai-beef-salad.md)
+- **Chicken:** [Thai Yellow Chicken Curry](recipes/Thai/Chicken/yellow-curry.md)
+
+_30 recipes._
 <!-- CONTENTS:END -->
 
 ## How it's organised
