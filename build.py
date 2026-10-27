@@ -445,12 +445,16 @@ def toc_html(book, href):
 
 
 def source_html(r):
+    """'Based on <source>': we change recipes as we cook them, so they aren't copies.
+    Our own recipes ("Family recipe", "Our own, ...") are shown as written."""
     if not r.get("source"):
         return ""
     s = r["source"]
+    if re.match(r"(family recipe|our own)", s, re.I):
+        return f'<p class="source">{html.escape(s)}</p>'
     label = html.escape(re.sub(r"^https?://(www\.)?", "", s).split("/")[0])
     s_html = f'<a href="{html.escape(s)}">{label}</a>' if s.startswith("http") else html.escape(s)
-    return f'<p class="source">Source: {s_html}</p>'
+    return f'<p class="source">Based on {s_html}</p>'
 
 
 def recipe_html(r, root="", anchor=None):
