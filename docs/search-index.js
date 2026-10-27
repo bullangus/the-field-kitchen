@@ -10,6 +10,16 @@ window.FIELD_KITCHEN_INDEX = [
 "photo": ""
 },
 {
+"title": "Barbecued Whole Snapper with Lime & Chilli",
+"cuisine": "Australian",
+"category": "Seafood",
+"url": "australian/seafood/barbecued-whole-snapper.html",
+"text": "1.5 kg whole snapper 1 stick lemongrass, trimmed, halved and cut into 5 cm lengths 4 garlic cloves, bruised 6 makrut lime leaves, torn Salt and black pepper, to season 2 tbsp toasted sesame seeds Sliced spring onion (green onion), to serve Fresh coriander sprigs, to serve Steamed jasmine rice, to serve Lime wedges, to serve 125 ml (½ cup) sweet chilli sauce 125 ml (½ cup) lime juice 1 tsp caster sugar 80 ml (⅓ cup) light soy sauce 2 cm piece fresh ginger, peeled and finely grated 1½ tbsp fish sauce 30 ml (2 tbsp) peanut oil 2 tbsp chopped fresh coriander",
+"meta": "Serves 4 · Prep 15 min · Cook 35 min",
+"intro": "A whole snapper stuffed with lemongrass, garlic and makrut lime, coated in sesame seeds and cooked standing upright in a foil parcel on the barbecue, then dressed with a sweet chilli, lime and ginger dressing.",
+"photo": ""
+},
+{
 "title": "Classic Roast Chicken",
 "cuisine": "British",
 "category": "Chicken",
@@ -80,6 +90,16 @@ window.FIELD_KITCHEN_INDEX = [
 "photo": ""
 },
 {
+"title": "'Nduja Pasta",
+"cuisine": "Italian",
+"category": "Pasta",
+"url": "italian/pasta/nduja-pasta.html",
+"text": "Salt 15 ml (1 tbsp) extra-virgin olive oil 1 clove garlic, peeled 400 g (14 oz) tin whole peeled tomatoes 200 g (7 oz) 'nduja, or to taste (more or less to adjust the heat) 340 g (12 oz) fileja pasta (or rigatoni or bucatini) Grated Pecorino Romano, to serve",
+"meta": "Serves 3–4 · Cook 20–30 min",
+"intro": "A simple, fiery Calabrian sauce: tomatoes with 'nduja, the soft, spicy pork spread, melted through at the end.",
+"photo": ""
+},
+{
 "title": "Fettuccine Alfredo",
 "cuisine": "Italian",
 "category": "Pasta",
@@ -97,6 +117,16 @@ window.FIELD_KITCHEN_INDEX = [
 "text": "2 sticks celery 1 large carrot 1 brown onion 4 cloves garlic 60 ml (¼ cup) olive oil 500 g pork mince 500 g beef mince 250 ml (1 cup) red wine, something bold like a Sangiovese or shiraz 700 g tomato passata 100 ml milk Sea salt, to taste 100 g Parmesan, grated, plus the rind 350 g mozzarella, grated Small bunch basil 250 g baby spinach 3 eggs 320 g Tipo 00 flour, plus extra for dusting 15 ml (1 tbsp) olive oil Or store-bought fresh lasagne sheets instead (we use Latina) 50 g butter 50 g plain flour 600 ml milk Sea salt and cracked white pepper Nutmeg, to taste (or cinnamon)",
 "meta": "Serves 8 · Prep 2 hr · Cook 3 hr 45 min",
 "intro": "A slow pork and beef ragu, béchamel and plenty of cheese. Make the ragu the day before if you can: it deepens overnight and spreads the work out.",
+"photo": ""
+},
+{
+"title": "Spaghetti alla Carbonara",
+"cuisine": "Italian",
+"category": "Pasta",
+"url": "italian/pasta/carbonara.html",
+"text": "Salt 340 g (12 oz) rigatoni or spaghetti 125 g (4½ oz) guanciale (or pancetta or bacon if you must) 4 large eggs 55 g (2 oz) grated pecorino, plus extra to serve Freshly ground black pepper",
+"meta": "Serves 3–4 · Cook 20 min",
+"intro": "The Roman way: egg yolks, pecorino, guanciale and black pepper, and nothing else. No cream.",
 "photo": ""
 },
 {
