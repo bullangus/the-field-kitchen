@@ -41,6 +41,8 @@ INGREDIENTS = [
     (r"\bcannellini\b", "Cannellini beans", PANTRY, False),
     (r"\bstock cubes?\b|\bbouillon\b", "Beef stock cubes", PANTRY, False),
     (r"\btamarind\b", "Tamarind paste", PANTRY, False),
+    (r"\bworcestershire\b", "Worcestershire sauce", PANTRY, False),
+    (r"\bchutney\b", "Mrs Ball's chutney", PANTRY, False),
     (r"\bmaple syrup\b", "Maple syrup", PANTRY, False),
     (r"\bmustard seeds\b", "Black mustard seeds", SPICES, False),
     (r"\bdijon\b|\bmustard\b", "Dijon mustard", PANTRY, False),
@@ -57,6 +59,7 @@ INGREDIENTS = [
     (r"\bpeanut oil\b", "Peanut oil", OILS, True),
     (r"\bsunflower oil\b", "Sunflower oil", OILS, True),
     (r"\boil\b", "Neutral oil", OILS, True),
+    (r"\bbalsamic\b", "Balsamic vinegar", OILS, False),
     (r"\brice vinegar\b", "Rice vinegar", OILS, False),
     (r"\bvinegar\b", "White wine vinegar", OILS, False),
     # Wine and spirits (before orange and rice).

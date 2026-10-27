@@ -3076,6 +3076,95 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
+"title": "Chunky Onion and Tomato Relish",
+"cuisine": "South African",
+"category": "Sides",
+"url": "south-african/sides/chunky-onion-and-tomato-relish.html",
+"text": "30 ml (2 tbsp) olive oil 2 onions (or 1 large onion), roughly chopped 2 tins diced tomatoes (or 8 fresh tomatoes, diced) 30 ml (2 tbsp) Mrs Ball's chutney 30 ml (2 tbsp) balsamic vinegar 15 ml (1 tbsp) Worcestershire sauce Salt and pepper 12 g (1 tbsp) sugar (optional), to help the caramelising",
+"meta": "Serves 6 · Prep 5 min · Cook 20 min",
+"intro": "A simple, full-flavoured South African tomato relish for the braai: with pap, boerewors rolls, meatballs or even on pasta.",
+"photo": "",
+"tags": [
+"sides",
+"quick"
+],
+"serves": 6,
+"ingredients": [
+{
+"t": "30 ml (2 tbsp) olive oil",
+"n": "Olive oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\bolive oil\\b",
+"q": 30.0,
+"u": "ml"
+},
+{
+"t": "2 onions (or 1 large onion), roughly chopped",
+"n": "Brown onions",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bonions?\\b",
+"q": 2.0,
+"u": null
+},
+{
+"t": "2 tins diced tomatoes (or 8 fresh tomatoes, diced)",
+"n": "Tinned tomatoes",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\btomato(es)?\\b",
+"q": 2.0,
+"u": null
+},
+{
+"t": "30 ml (2 tbsp) Mrs Ball's chutney",
+"n": "Mrs Ball's chutney",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bchutney\\b",
+"q": 30.0,
+"u": "ml"
+},
+{
+"t": "30 ml (2 tbsp) balsamic vinegar",
+"n": "Balsamic vinegar",
+"a": "Oils & vinegars",
+"s": false,
+"p": "\\bbalsamic\\b",
+"q": 30.0,
+"u": "ml"
+},
+{
+"t": "15 ml (1 tbsp) Worcestershire sauce",
+"n": "Worcestershire sauce",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bworcestershire\\b",
+"q": 15.0,
+"u": "ml"
+},
+{
+"t": "Salt and pepper",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": null,
+"u": null
+},
+{
+"t": "12 g (1 tbsp) sugar (optional), to help the caramelising",
+"n": "Sugar",
+"a": "Pantry & sauces",
+"s": true,
+"p": "\\bsugar\\b",
+"q": 12.0,
+"u": "g"
+}
+]
+},
+{
 "title": "Chicken & White Bean Stew",
 "cuisine": "Spanish",
 "category": "Chicken",

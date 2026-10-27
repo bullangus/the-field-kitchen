@@ -41,11 +41,12 @@
 
 ### South African
 - **Duck:** [Moh's Duck and Tamarind Curry](recipes/South African/Duck/mohs-duck-and-tamarind-curry.md)
+- **Sides:** [Chunky Onion and Tomato Relish](recipes/South African/Sides/chunky-onion-and-tomato-relish.md)
 
 ### Spanish
 - **Chicken:** [Chicken & White Bean Stew](recipes/Spanish/Chicken/chicken-and-white-bean-stew.md)
 
-_24 recipes._
+_25 recipes._
 <!-- CONTENTS:END -->
 
 ## How it's organised
