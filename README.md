@@ -2,7 +2,7 @@
 
 *Recipes from our family table.* A family cookbook to be printed one day.
 
-**Read the book:** `docs/index.html` (published with GitHub Pages). To print it, open it in a browser and choose Print, then Save as PDF.
+**Read the book:** https://bullangus.github.io/the-field-kitchen/ (GitHub Pages, built from `docs/index.html` on `main`). To print it, open it in a browser and choose Print, then Save as PDF.
 
 ## Contents
 

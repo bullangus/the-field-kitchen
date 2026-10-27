@@ -79,7 +79,7 @@ To print: open `docs/index.html` in a browser, Print, Save as PDF.
 ## Branch and commit rules
 
 - It's a personal repo, so commit straight to `main`. No dev branch or PRs unless the owner asks for them.
-- Push after committing if a remote exists (there's none yet).
+- Always push after committing. The remote is `github.com/bullangus/the-field-kitchen`, and GitHub Pages serves `docs/` from `main` at https://bullangus.github.io/the-field-kitchen/, so a push is what updates the live book (live within a minute or two).
 - One commit per recipe or change, with the rebuilt files included.
 - Message format: `type: short description`, e.g. `recipe: add Crispy Salt & Pepper Wings (Chinese > Chicken)`, `notes: halve the chilli in Mapo Tofu`, `book: tighten print margins`. Earlier commits predate this format; leave them as they are.
 
