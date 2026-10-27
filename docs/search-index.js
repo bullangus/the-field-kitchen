@@ -1,5 +1,112 @@
 window.FIELD_KITCHEN_INDEX = [
 {
+"title": "Chocolate Chip Cookies",
+"cuisine": "American",
+"category": "Baking",
+"url": "american/baking/chocolate-chip-cookies.html",
+"text": "200 g (1½ cups plus 1 tbsp) plain flour, spooned and levelled 4 g (¾ tsp) table salt 4 g (¾ tsp) bicarbonate of soda (baking soda) 169 g (¾ cup) unsalted butter, divided: 113 g and 56 g 200 g (1 cup, packed) dark brown sugar 50 g (¼ cup) white sugar 1 large egg 2 large egg yolks 2 tsp vanilla extract 170 g (6 oz) dark chocolate (60–70% cocoa), coarsely chopped, or dark chocolate chips",
+"meta": "Serves 16 cookies · Prep 20 min · Cook 20 min",
+"intro": "Bon Appétit's best: brown butter and dark brown sugar for deep toffee flavour, crisp edges and chewy middles, with chopped dark chocolate.",
+"photo": "",
+"tags": [
+"baking",
+"make-ahead"
+],
+"serves": 16,
+"ingredients": [
+{
+"t": "200 g (1½ cups plus 1 tbsp) plain flour, spooned and levelled",
+"n": "Plain flour",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bflour\\b",
+"q": 200.0,
+"u": "g"
+},
+{
+"t": "4 g (¾ tsp) table salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": 4.0,
+"u": "g"
+},
+{
+"t": "4 g (¾ tsp) bicarbonate of soda (baking soda)",
+"n": "Bicarbonate of soda",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bbicarbonate\\b|\\bbaking soda\\b|\\bsoda\\b",
+"q": 4.0,
+"u": "g"
+},
+{
+"t": "169 g (¾ cup) unsalted butter, divided: 113 g and 56 g",
+"n": "Butter",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bbutter\\b",
+"q": 169.0,
+"u": "g"
+},
+{
+"t": "200 g (1 cup, packed) dark brown sugar",
+"n": "Sugar",
+"a": "Pantry & sauces",
+"s": true,
+"p": "\\bsugar\\b",
+"q": 200.0,
+"u": "g"
+},
+{
+"t": "50 g (¼ cup) white sugar",
+"n": "Sugar",
+"a": "Pantry & sauces",
+"s": true,
+"p": "\\bsugar\\b",
+"q": 50.0,
+"u": "g"
+},
+{
+"t": "1 large egg",
+"n": "Eggs",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\beggs?\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "2 large egg yolks",
+"n": "Eggs",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\beggs?\\b",
+"q": 2.0,
+"u": null
+},
+{
+"t": "2 tsp vanilla extract",
+"n": "Vanilla extract",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bvanilla\\b",
+"q": 2.0,
+"u": "tsp"
+},
+{
+"t": "170 g (6 oz) dark chocolate (60–70% cocoa), coarsely chopped, or dark chocolate chips",
+"n": "Dark chocolate",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bchocolate\\b",
+"q": 170.0,
+"u": "g"
+}
+]
+},
+{
 "title": "Buffalo Wings",
 "cuisine": "American",
 "category": "Chicken",
@@ -879,10 +986,10 @@ window.FIELD_KITCHEN_INDEX = [
 "ingredients": [
 {
 "t": "1.75–2 kg (3.5–4 lb) medium to large potatoes, such as Sebago or Dutch cream",
-"n": "Thickened cream",
-"a": "Dairy & eggs",
+"n": "Potatoes",
+"a": "Fruit & veg",
 "s": false,
-"p": "\\bcream\\b",
+"p": "\\bpotato(es)?\\b",
 "q": 2000.0,
 "u": "g"
 },
@@ -4180,10 +4287,10 @@ window.FIELD_KITCHEN_INDEX = [
 },
 {
 "t": "3 Dutch cream, Désirée or Warba potatoes, peeled and cubed",
-"n": "Thickened cream",
-"a": "Dairy & eggs",
+"n": "Potatoes",
+"a": "Fruit & veg",
 "s": false,
-"p": "\\bcream\\b",
+"p": "\\bpotato(es)?\\b",
 "q": 3.0,
 "u": null
 },

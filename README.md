@@ -8,6 +8,7 @@
 
 <!-- CONTENTS:START -->
 ### American
+- **Baking:** [Chocolate Chip Cookies](recipes/American/Baking/chocolate-chip-cookies.md)
 - **Chicken:** [Buffalo Wings](recipes/American/Chicken/buffalo-chicken-wings.md)
 
 ### Australian
@@ -56,7 +57,7 @@
 - **Beef:** [Thai Beef Salad](recipes/Thai/Beef/thai-beef-salad.md)
 - **Chicken:** [Yellow Curry](recipes/Thai/Chicken/yellow-curry.md)
 
-_31 recipes._
+_32 recipes._
 <!-- CONTENTS:END -->
 
 ## How it's organised

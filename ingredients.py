@@ -46,6 +46,8 @@ INGREDIENTS = [
     (r"\bcustard\b", "Bird's custard powder", PANTRY, False),
     (r"\bmandarin", "Tinned mandarins", PANTRY, False),
     (r"\bflake\b", "Flake chocolate", PANTRY, False),
+    (r"\bchocolate\b", "Dark chocolate", PANTRY, False),
+    (r"\bvanilla\b", "Vanilla extract", PANTRY, False),
     (r"\bjam rolls?\b", "Jam rolls", GRAINS, False),
     (r"\bsausages?\b", "Pork sausages", MEAT, False),
     (r"\bdripping\b", "Beef dripping", OILS, False),
@@ -118,6 +120,8 @@ INGREDIENTS = [
     # Dairy and eggs.
     (r"\beggs?\b", "Eggs", DAIRY, False),
     (r"\bbutter\b", "Butter", DAIRY, False),
+    # Before cream: "Dutch cream" is a potato.
+    (r"\bpotato(es)?\b", "Potatoes", PRODUCE, False),
     (r"\bsour cream\b", "Sour cream", DAIRY, False),
     (r"\bcream\b", "Thickened cream", DAIRY, False),
     (r"\byoghurt\b", "Greek yoghurt", DAIRY, False),
@@ -165,7 +169,6 @@ INGREDIENTS = [
     (r"\boranges?\b", "Oranges", PRODUCE, False),
     (r"\bavocados?\b", "Avocados", PRODUCE, False),
     (r"\bstrawberries\b", "Strawberries", PRODUCE, False),
-    (r"\bpotato(es)?\b", "Potatoes", PRODUCE, False),
     (r"\bchillies\b|\bchilli\b", "Fresh red chillies", PRODUCE, False),
     (r"\bjalape", "Jalapeño", PRODUCE, False),
     (r"\bcarrots?\b", "Carrots", PRODUCE, False),
