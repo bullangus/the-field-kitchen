@@ -312,8 +312,9 @@ def search_index(book):
     """Title, place in the book, ingredient lines and card details for each recipe."""
     entries = []
     for r in all_recipes(book):
-        m = re.search(r"^## Ingredients\n(.*?)(?=^## )", r["body"], re.S | re.M)
-        lines = re.findall(r"^- (.*)", m.group(1), re.M) if m else []
+        # Ingredients plus any topping options, so searching a topping finds its recipe.
+        sections = re.findall(r"^## (?:Ingredients|Topping Options)\n(.*?)(?=^## |\Z)", r["body"], re.S | re.M)
+        lines = [line for s in sections for line in re.findall(r"^- (.*)", s, re.M)]
         entries.append({"title": r["title"], "cuisine": r["cuisine"], "category": r["category"],
                         "url": r["url"], "text": " ".join(lines),
                         "meta": html.unescape(meta_line(r)), "intro": intro(r),

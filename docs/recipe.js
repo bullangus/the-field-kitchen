@@ -16,7 +16,7 @@
     return out;
   }
   var ingredients = itemsAfter("part-ingredients");
-  var steps = itemsAfter("part-method");
+  var steps = itemsAfter("part-method").concat(itemsAfter("part-topping-options"));
 
   // ---- Serving scaler ----
   var FRACTIONS = { "½": 0.5, "¼": 0.25, "¾": 0.75, "⅓": 1 / 3, "⅔": 2 / 3, "⅛": 0.125 };
