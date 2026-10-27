@@ -49,6 +49,7 @@ INGREDIENTS = [
     (r"\bjam rolls?\b", "Jam rolls", GRAINS, False),
     (r"\bsausages?\b", "Pork sausages", MEAT, False),
     (r"\bdripping\b", "Beef dripping", OILS, False),
+    (r"\bduck fat\b|\bgoose fat\b", "Duck fat", OILS, False),
     (r"\bcointreau\b", "Cointreau", DRINKS, False),
     (r"\bcoconut milk\b|\bcoconut cream\b", "Coconut milk", PANTRY, False),
     (r"\bcurry paste\b", "Yellow curry paste", PANTRY, False),

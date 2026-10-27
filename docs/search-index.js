@@ -864,6 +864,94 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
+"title": "Duck Fat Potatoes",
+"cuisine": "British",
+"category": "Sides",
+"url": "british/sides/duck-fat-potatoes.html",
+"text": "1.75–2 kg (3.5–4 lb) medium to large potatoes, such as Sebago or Dutch cream Chicken stock, enough to cover the potatoes 1 tbsp salt, for the stock 1½ tsp salt, for roughing up ½ tsp MSG 200 g (7 oz) duck fat (or goose fat) 2 tsp rosemary, roughly chopped Sea salt flakes",
+"meta": "Serves 6–8 · Prep 15 min · Cook 1 hr 15 min",
+"intro": "The crunchiest roast potatoes: parboiled, roughed up, then roasted in smoking-hot duck fat. Adapted by RecipeTin Eats from Nigella Lawson's goose fat potatoes.",
+"photo": "",
+"tags": [
+"sides"
+],
+"serves": 6,
+"ingredients": [
+{
+"t": "1.75–2 kg (3.5–4 lb) medium to large potatoes, such as Sebago or Dutch cream",
+"n": "Thickened cream",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bcream\\b",
+"q": 2000.0,
+"u": "g"
+},
+{
+"t": "Chicken stock, enough to cover the potatoes",
+"n": "Chicken stock",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bchicken stock\\b|\\bchicken\\b",
+"q": null,
+"u": null
+},
+{
+"t": "1 tbsp salt, for the stock",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": 3.0,
+"u": "tsp"
+},
+{
+"t": "1½ tsp salt, for roughing up",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": 1.5,
+"u": "tsp"
+},
+{
+"t": "½ tsp MSG",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
+"t": "200 g (7 oz) duck fat (or goose fat)",
+"n": "Duck fat",
+"a": "Oils & vinegars",
+"s": false,
+"p": "\\bduck fat\\b|\\bgoose fat\\b|\\bfat\\b|\\bfat\\b",
+"q": 200.0,
+"u": "g"
+},
+{
+"t": "2 tsp rosemary, roughly chopped",
+"n": "Rosemary",
+"a": "Herbs",
+"s": false,
+"p": "\\brosemary\\b",
+"q": 2.0,
+"u": "tsp"
+},
+{
+"t": "Sea salt flakes",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": null,
+"u": null
+}
+]
+},
+{
 "title": "Mongolian Beef",
 "cuisine": "Chinese",
 "category": "Beef",
