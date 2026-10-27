@@ -19,7 +19,7 @@ Seared steak sliced thin and tossed with crisp salad, mint and peanuts in a hot,
 - 30 ml (2 tbsp) fish sauce
 - 45 ml (3 tbsp) lime juice
 - 15 ml (1 tbsp) grapeseed oil (or canola or vegetable oil)
-- 1 small pinch cooking or kosher salt
+- 1 small pinch cooking salt
 - ½ tsp MSG
 
 ### For the salad

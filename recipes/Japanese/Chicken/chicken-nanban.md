@@ -12,7 +12,7 @@ Egg-coated fried chicken soaked in a sweet and tangy nanban sauce and topped wit
 ## Ingredients
 
 - 400 g (14 oz) boneless, skin-on chicken thighs (or breasts)
-- Kosher salt and black pepper, to season
+- Salt and black pepper, to season
 - 30 g (¼ cup) plain (all-purpose) flour
 - 1 egg
 - High-heat oil for frying, such as grapeseed, avocado or vegetable oil
@@ -36,7 +36,7 @@ Egg-coated fried chicken soaked in a sweet and tangy nanban sauce and topped wit
 - 55 g (4 tbsp) Japanese Kewpie mayonnaise
 - 1 tsp lemon juice
 - ½ tbsp tomato sauce (ketchup)
-- Kosher salt and black pepper, to taste
+- Salt and black pepper, to taste
 
 ## Method
 

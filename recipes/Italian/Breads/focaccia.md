@@ -14,7 +14,7 @@ Claire Saffitz's focaccia: a very wet, well-kneaded dough baked in a half-sheet 
 - 7 g (1 sachet / ¼ oz) active dry yeast
 - 680 g water (113 g / ½ cup lukewarm, plus 567 g / 2½ cups at room temperature)
 - 780 g (6 cups) bread flour
-- 17 g (2 tbsp) Diamond Crystal kosher salt
+- 17 g salt (weigh it: by volume that's about 2¾ tsp fine salt or 1 tbsp sea salt flakes)
 - 110 g (½ cup) extra-virgin olive oil, plus more for oiling your hands
 - One topping (see Topping Options)
 
@@ -23,7 +23,7 @@ Claire Saffitz's focaccia: a very wet, well-kneaded dough baked in a half-sheet 
 ### Dough
 
 1. In a small saucepan, gently warm the 113 g water over low heat, swirling, until lukewarm but not hot, about 40°C (105°F). Pour it into the bowl of a stand mixer and whisk in the yeast. Leave until cloudy and slightly puffed, about 5 minutes.
-2. Fit the dough hook. Add the 567 g room-temperature water, the flour and the kosher salt. Mix on the lowest speed until a very loose dough comes together, about 1 minute, then on medium-high until smooth and wrapping around the hook, about 5 minutes.
+2. Fit the dough hook. Add the 567 g room-temperature water, the flour and the salt. Mix on the lowest speed until a very loose dough comes together, about 1 minute, then on medium-high until smooth and wrapping around the hook, about 5 minutes.
 3. Turn off the mixer, cover the bowl with a damp towel and rest for 10 minutes. Mix again on medium-high until the dough is very smooth, extremely elastic and pulling away from the sides of the bowl, another 10–15 minutes. It will still be very sticky; don't add more flour.
 4. Pour 55 g (¼ cup) of the oil into a large bowl and swirl to coat. Scrape the dough into it and dab some of the pooling oil over the surface. Cover with a damp towel and leave at room temperature until doubled, 1–1½ hours.
 5. Drizzle the other 55 g (¼ cup) oil over a standard half-sheet pan and rub it over the base and sides.
@@ -88,5 +88,6 @@ Claire Saffitz's focaccia: a very wet, well-kneaded dough baked in a half-sheet 
 
 ## Notes
 
+- The original uses Diamond Crystal kosher salt (2 tbsp), which isn't sold in Australia and is about half as salty by volume. Weighing 17 g of any salt gives the same result.
 - 2026-10-28: Toppings are separate options so the base focaccia stays plain. The Sichuan pepper oil and soy caramelised onions are our go-to alternative to garlic, rosemary or chilli garlic.
 - 2026-10-28: Added garlic and chilli garlic options. Their amounts are a starting point we haven't measured yet: adjust after the next bake.

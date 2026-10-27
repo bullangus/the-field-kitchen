@@ -17,7 +17,7 @@ A mild, fragrant coconut curry with chicken, potato and carrot. Serve over steam
 - 1 tsp curry powder
 - 400 ml (14 oz) can full-fat coconut milk
 - A splash of chicken stock or water
-- 3 Yukon gold or Warba potatoes, peeled and cubed
+- 3 Dutch cream, Désirée or Warba potatoes, peeled and cubed
 - 1 brown (yellow) onion, cut into wedges
 - 2 carrots, sliced
 - 30 ml (2 tbsp) fish sauce
@@ -38,5 +38,6 @@ A mild, fragrant coconut curry with chicken, potato and carrot. Serve over steam
 ## Notes
 
 - Homemade yellow curry paste is made from dried chillies, lemongrass, galangal, garlic, shallots, turmeric, cumin, coriander and yellow curry powder.
+- Yukon gold potatoes aren't sold in Australia; Dutch cream or Désirée are the closest, waxy all-rounders.
 - 2026-10-28: Our recipe didn't give servings, times or how many carrots, so serves 4, the prep and cook times and 2 carrots are our best guess. Adjust them after the next cook.
 - 2026-10-28: Added ½ tsp MSG to the curry. We add it to most savoury dishes.

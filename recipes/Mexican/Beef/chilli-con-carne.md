@@ -30,7 +30,7 @@ A rich, properly spiced beef and bean chilli from RecipeTin Eats. Quick enough f
 - 2 tsp garlic powder (or onion powder)
 - 2 tsp onion powder
 - 2 tsp dried oregano
-- 1½ tsp cooking or kosher salt
+- 1½ tsp cooking salt
 - ½ tsp MSG
 
 ### To serve

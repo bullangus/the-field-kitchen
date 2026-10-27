@@ -681,7 +681,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "British",
 "category": "Pork",
 "url": "british/pork/toad-in-the-hole.html",
-"text": "700 g (1.4 lb) pork sausages (8 × 85 g / 3 oz), or other sausages 10 g (2 tsp) beef dripping, or canola or vegetable oil, for browning 50 g (¼ cup) beef dripping, or canola or vegetable oil, for the pan 250 ml (1 cup) eggs, lightly whisked (4–5 large eggs; measure them) 130 g (1 cup) plain flour 185 ml (¾ cup) full-fat milk 60 ml (¼ cup) water 1 tbsp full-fat mayonnaise ½ tsp cooking or kosher salt Pinch of white pepper 30 g (2 tbsp) beef dripping or unsalted butter 2 onions, halved and cut into 7 mm (¼ inch) wedges 1 garlic clove, finely minced 3 tbsp plain flour 500 ml (2 cups) low-sodium beef stock ½ tsp Worcestershire sauce ½ tsp black pepper ¼ tsp cooking or kosher salt ½ tsp MSG",
+"text": "700 g (1.4 lb) pork sausages (8 × 85 g / 3 oz), or other sausages 10 g (2 tsp) beef dripping, or canola or vegetable oil, for browning 50 g (¼ cup) beef dripping, or canola or vegetable oil, for the pan 250 ml (1 cup) eggs, lightly whisked (4–5 large eggs; measure them) 130 g (1 cup) plain flour 185 ml (¾ cup) full-fat milk 60 ml (¼ cup) water 1 tbsp full-fat mayonnaise ½ tsp cooking salt Pinch of white pepper 30 g (2 tbsp) beef dripping or unsalted butter 2 onions, halved and cut into 7 mm (¼ inch) wedges 1 garlic clove, finely minced 3 tbsp plain flour 500 ml (2 cups) low-sodium beef stock ½ tsp Worcestershire sauce ½ tsp black pepper ¼ tsp cooking salt ½ tsp MSG",
 "meta": "Serves 4 · Prep 15 min · Cook 40 min",
 "intro": "Sausages baked in a tall, crisp-edged Yorkshire pudding, served with onion gravy. A spoonful of mayonnaise in the batter helps it rise higher and collapse less.",
 "photo": "",
@@ -763,7 +763,7 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "tsp"
 },
 {
-"t": "½ tsp cooking or kosher salt",
+"t": "½ tsp cooking salt",
 "n": "Salt",
 "a": "Herbs & spices",
 "s": true,
@@ -844,7 +844,7 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "tsp"
 },
 {
-"t": "¼ tsp cooking or kosher salt",
+"t": "¼ tsp cooking salt",
 "n": "Salt",
 "a": "Herbs & spices",
 "s": true,
@@ -868,7 +868,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Chinese",
 "category": "Beef",
 "url": "chinese/beef/mongolian-beef.html",
-"text": "450 g (1 lb) flank steak, thinly sliced 3–6 mm (⅛–¼ inch) thick 30 ml (2 tbsp) water 2 tsp Shaoxing rice wine ½ tsp kosher salt (a little less if using fine salt) ¼ tsp bicarbonate of soda (baking soda) 16 g (2 tbsp) cornflour (cornstarch) 15 ml (1 tbsp) neutral oil 1 tsp cracked black pepper, more or less to taste 15 ml (1 tbsp) Shaoxing rice wine 38 g (3 tbsp) white sugar 30 ml (2 tbsp) regular soy sauce ½ tsp MSG 1 tbsp minced garlic (about 2 cloves) ½ large brown (yellow) onion, sliced 1 bunch spring onions (green onions), cut into 5 cm (2 inch) pieces, white and green parts separated 30 g (1 oz) medium-thickness rice vermicelli (optional; use more or less to preference) Oil, as needed for cooking",
+"text": "450 g (1 lb) flank steak, thinly sliced 3–6 mm (⅛–¼ inch) thick 30 ml (2 tbsp) water 2 tsp Shaoxing rice wine Scant ½ tsp fine salt ¼ tsp bicarbonate of soda (baking soda) 16 g (2 tbsp) cornflour (cornstarch) 15 ml (1 tbsp) neutral oil 1 tsp cracked black pepper, more or less to taste 15 ml (1 tbsp) Shaoxing rice wine 38 g (3 tbsp) white sugar 30 ml (2 tbsp) regular soy sauce ½ tsp MSG 1 tbsp minced garlic (about 2 cloves) ½ large brown (yellow) onion, sliced 1 bunch spring onions (green onions), cut into 5 cm (2 inch) pieces, white and green parts separated 30 g (1 oz) medium-thickness rice vermicelli (optional; use more or less to preference) Oil, as needed for cooking",
 "meta": "Serves 3 · Prep 15 min · Cook 15 min",
 "intro": "Restaurant-style, served over an optional nest of crisp fried rice vermicelli.",
 "photo": "",
@@ -906,13 +906,13 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "tsp"
 },
 {
-"t": "½ tsp kosher salt (a little less if using fine salt)",
+"t": "Scant ½ tsp fine salt",
 "n": "Salt",
 "a": "Herbs & spices",
 "s": true,
 "p": "\\bsalt\\b",
-"q": 0.5,
-"u": "tsp"
+"q": null,
+"u": null
 },
 {
 "t": "¼ tsp bicarbonate of soda (baking soda)",
@@ -1181,7 +1181,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Chinese",
 "category": "Noodles",
 "url": "chinese/noodles/crispy-chilli-bacon-noodles.html",
-"text": "8 rashers thick-cut streaky bacon, cut into 2.5 cm (1 inch) pieces 1 tsp neutral oil 5 garlic cloves, minced 1–2 tbsp chilli crisp 15 ml (1 tbsp) soy sauce 15 ml (1 tbsp) oyster sauce 15 ml (1 tbsp) dark soy sauce 1 tsp sesame oil ½ tsp sugar ½ tsp MSG 180 ml (¾ cup) chicken stock for fresh lo mein, or 240–480 ml (1–2 cups) for dried egg noodles 225 g (8 oz) fresh lo mein, or dried egg noodles (puck or nest style) Spring onions (scallions), thinly sliced Toasted sesame seeds Extra chilli crisp, for drizzling",
+"text": "8 rashers thick-cut streaky bacon, cut into 2.5 cm (1 inch) pieces 1 tsp neutral oil 5 garlic cloves, minced 1–2 tbsp chilli crisp 15 ml (1 tbsp) soy sauce 15 ml (1 tbsp) oyster sauce 15 ml (1 tbsp) dark soy sauce 1 tsp sesame oil ½ tsp sugar ½ tsp MSG 180 ml (¾ cup) chicken stock for fresh egg noodles, or 240–480 ml (1–2 cups) for dried 225 g (8 oz) fresh thin egg noodles (from the fridge section), or dried egg noodles (nests) Spring onions (scallions), thinly sliced Toasted sesame seeds Extra chilli crisp, for drizzling",
 "meta": "Serves 2 · Cook 15 min",
 "intro": "Bacon rendered slowly until crisp, chilli crisp bloomed in the fat, and noodles tossed through it all.",
 "photo": "",
@@ -1282,7 +1282,7 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "tsp"
 },
 {
-"t": "180 ml (¾ cup) chicken stock for fresh lo mein, or 240–480 ml (1–2 cups) for dried egg noodles",
+"t": "180 ml (¾ cup) chicken stock for fresh egg noodles, or 240–480 ml (1–2 cups) for dried",
 "n": "Chicken stock",
 "a": "Pantry & sauces",
 "s": false,
@@ -1291,7 +1291,7 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "ml"
 },
 {
-"t": "225 g (8 oz) fresh lo mein, or dried egg noodles (puck or nest style)",
+"t": "225 g (8 oz) fresh thin egg noodles (from the fridge section), or dried egg noodles (nests)",
 "n": "Egg noodles",
 "a": "Bread, pasta & rice",
 "s": false,
@@ -1697,7 +1697,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Italian",
 "category": "Breads",
 "url": "italian/breads/focaccia.html",
-"text": "7 g (1 sachet / ¼ oz) active dry yeast 680 g water (113 g / ½ cup lukewarm, plus 567 g / 2½ cups at room temperature) 780 g (6 cups) bread flour 17 g (2 tbsp) Diamond Crystal kosher salt 110 g (½ cup) extra-virgin olive oil, plus more for oiling your hands One topping (see Topping Options) 55 g (¼ cup) extra-virgin olive oil Fresh rosemary leaves Flaky salt 55 g (¼ cup) extra-virgin olive oil 6 cloves garlic, thinly sliced Flaky salt 55 g (¼ cup) extra-virgin olive oil 4 cloves garlic, finely chopped 1–2 tsp chilli flakes Flaky salt 60 ml (¼ cup) olive oil 1½ tbsp Sichuan peppercorns ½ tbsp black peppercorns ½ tbsp white peppercorns 2 large onions, halved and sliced into thin rings 60 ml (4 tbsp) vegetable oil ½ tbsp sugar, more to taste 30 ml (2 tbsp) soy sauce",
+"text": "7 g (1 sachet / ¼ oz) active dry yeast 680 g water (113 g / ½ cup lukewarm, plus 567 g / 2½ cups at room temperature) 780 g (6 cups) bread flour 17 g salt (weigh it: by volume that's about 2¾ tsp fine salt or 1 tbsp sea salt flakes) 110 g (½ cup) extra-virgin olive oil, plus more for oiling your hands One topping (see Topping Options) 55 g (¼ cup) extra-virgin olive oil Fresh rosemary leaves Flaky salt 55 g (¼ cup) extra-virgin olive oil 6 cloves garlic, thinly sliced Flaky salt 55 g (¼ cup) extra-virgin olive oil 4 cloves garlic, finely chopped 1–2 tsp chilli flakes Flaky salt 60 ml (¼ cup) olive oil 1½ tbsp Sichuan peppercorns ½ tbsp black peppercorns ½ tbsp white peppercorns 2 large onions, halved and sliced into thin rings 60 ml (4 tbsp) vegetable oil ½ tbsp sugar, more to taste 30 ml (2 tbsp) soy sauce",
 "meta": "Serves 1 half-sheet pan · Prep 3 hr 45 min (mostly rising) · Cook 30 min",
 "intro": "Claire Saffitz's focaccia: a very wet, well-kneaded dough baked in a half-sheet pan for a tall, airy crumb and a crisp, oily base. Pick a topping from the options after the method.",
 "photo": "",
@@ -1734,7 +1734,7 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "g"
 },
 {
-"t": "17 g (2 tbsp) Diamond Crystal kosher salt",
+"t": "17 g salt (weigh it: by volume that's about 2¾ tsp fine salt or 1 tbsp sea salt flakes)",
 "n": "Salt",
 "a": "Herbs & spices",
 "s": true,
@@ -2385,7 +2385,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Japanese",
 "category": "Chicken",
 "url": "japanese/chicken/chicken-nanban.html",
-"text": "400 g (14 oz) boneless, skin-on chicken thighs (or breasts) Kosher salt and black pepper, to season 30 g (¼ cup) plain (all-purpose) flour 1 egg High-heat oil for frying, such as grapeseed, avocado or vegetable oil Lettuce and shredded cabbage (or salad greens), to serve Cherry tomatoes, to serve Hot cooked short-grain rice for 2–3, about 210 g per serving 30 ml (2 tbsp) soy sauce 30 ml (2 tbsp) white vinegar 25 g (2 tbsp) sugar 15 ml (1 tbsp) mirin ½ tsp MSG 2 eggs ¼ brown (yellow) onion 1 spring onion (green onion) 55 g (4 tbsp) Japanese Kewpie mayonnaise 1 tsp lemon juice ½ tbsp tomato sauce (ketchup) Kosher salt and black pepper, to taste",
+"text": "400 g (14 oz) boneless, skin-on chicken thighs (or breasts) Salt and black pepper, to season 30 g (¼ cup) plain (all-purpose) flour 1 egg High-heat oil for frying, such as grapeseed, avocado or vegetable oil Lettuce and shredded cabbage (or salad greens), to serve Cherry tomatoes, to serve Hot cooked short-grain rice for 2–3, about 210 g per serving 30 ml (2 tbsp) soy sauce 30 ml (2 tbsp) white vinegar 25 g (2 tbsp) sugar 15 ml (1 tbsp) mirin ½ tsp MSG 2 eggs ¼ brown (yellow) onion 1 spring onion (green onion) 55 g (4 tbsp) Japanese Kewpie mayonnaise 1 tsp lemon juice ½ tbsp tomato sauce (ketchup) Salt and black pepper, to taste",
 "meta": "Serves 3 · Prep 20 min · Cook 15 min",
 "intro": "Egg-coated fried chicken soaked in a sweet and tangy nanban sauce and topped with a generous spoonful of tartar sauce.",
 "photo": "",
@@ -2404,7 +2404,7 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "g"
 },
 {
-"t": "Kosher salt and black pepper, to season",
+"t": "Salt and black pepper, to season",
 "n": "Salt",
 "a": "Herbs & spices",
 "s": true,
@@ -2566,7 +2566,7 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "tsp"
 },
 {
-"t": "Kosher salt and black pepper, to taste",
+"t": "Salt and black pepper, to taste",
 "n": "Salt",
 "a": "Herbs & spices",
 "s": true,
@@ -2581,7 +2581,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Japanese",
 "category": "Chicken",
 "url": "japanese/chicken/karaage.html",
-"text": "680 g (1½ lb) boneless, skin-on chicken thighs (4–6 pieces) ½ tsp Diamond Crystal kosher salt (for table salt, use half the amount, or the same weight) ⅛ tsp freshly ground black pepper ½ tsp grated fresh ginger, with its juice 1 clove garlic ½–1 tbsp soy sauce ½ tbsp sake (or dry sherry or Chinese rice wine, or leave it out) ½ tsp toasted sesame oil ½ tsp MSG 700–950 ml (3–4 cups) neutral oil 2 tbsp potato starch or cornflour (cornstarch), plus more if needed 2 tbsp plain (all-purpose) flour, plus more if needed Lemon wedges Japanese Kewpie mayonnaise Shichimi togarashi (Japanese seven spice)",
+"text": "680 g (1½ lb) boneless, skin-on chicken thighs (4–6 pieces) ¼ tsp fine salt ⅛ tsp freshly ground black pepper ½ tsp grated fresh ginger, with its juice 1 clove garlic ½–1 tbsp soy sauce ½ tbsp sake (or dry sherry or Chinese rice wine, or leave it out) ½ tsp toasted sesame oil ½ tsp MSG 700–950 ml (3–4 cups) neutral oil 2 tbsp potato starch or cornflour (cornstarch), plus more if needed 2 tbsp plain (all-purpose) flour, plus more if needed Lemon wedges Japanese Kewpie mayonnaise Shichimi togarashi (Japanese seven spice)",
 "meta": "Serves 4 · Prep 15 min + 30 min marinating · Cook 15 min",
 "intro": "Marinated in ginger, garlic and soy, then fried twice for a light, crisp crust.",
 "photo": "",
@@ -2600,12 +2600,12 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "g"
 },
 {
-"t": "½ tsp Diamond Crystal kosher salt (for table salt, use half the amount, or the same weight)",
+"t": "¼ tsp fine salt",
 "n": "Salt",
 "a": "Herbs & spices",
 "s": true,
 "p": "\\bsalt\\b",
-"q": 0.5,
+"q": 0.25,
 "u": "tsp"
 },
 {
@@ -2732,7 +2732,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Japanese",
 "category": "Chicken",
 "url": "japanese/chicken/nagoya-chicken-wings.html",
-"text": "450 g (1 lb) chicken wings, flats and drumettes (this much sauce covers up to 900 g / 2 lb) 35 g (¼ cup) potato starch or cornflour (cornstarch) 700 ml (3 cups) neutral oil, for deep-frying Toasted white sesame seeds 240 ml (1 cup) mirin 120 ml (½ cup) soy sauce 45 ml (3 tbsp) sake 65 g (⅓ cup) sugar ¼ tsp Diamond Crystal kosher salt (for table salt, use half the amount, or the same weight) 1 knob fresh ginger (about 1.3 cm / ½ inch), sliced 2 cloves garlic, crushed or minced ½ tsp MSG",
+"text": "450 g (1 lb) chicken wings, flats and drumettes (this much sauce covers up to 900 g / 2 lb) 35 g (¼ cup) potato starch or cornflour (cornstarch) 700 ml (3 cups) neutral oil, for deep-frying Toasted white sesame seeds 240 ml (1 cup) mirin 120 ml (½ cup) soy sauce 45 ml (3 tbsp) sake 65 g (⅓ cup) sugar ⅛ tsp fine salt 1 knob fresh ginger (about 1.3 cm / ½ inch), sliced 2 cloves garlic, crushed or minced ½ tsp MSG",
 "meta": "Serves 4 · Prep 20 min · Cook 30 min",
 "intro": "Double-fried wings glazed in a sticky, sweet soy, mirin and ginger sauce and finished with sesame seeds. The sauce keeps in the fridge for a month.",
 "photo": "",
@@ -2814,12 +2814,12 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "g"
 },
 {
-"t": "¼ tsp Diamond Crystal kosher salt (for table salt, use half the amount, or the same weight)",
+"t": "⅛ tsp fine salt",
 "n": "Salt",
 "a": "Herbs & spices",
 "s": true,
 "p": "\\bsalt\\b",
-"q": 0.25,
+"q": 0.125,
 "u": "tsp"
 },
 {
@@ -3187,7 +3187,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Mexican",
 "category": "Beef",
 "url": "mexican/beef/chilli-con-carne.html",
-"text": "15 ml (1 tbsp) olive oil 3 garlic cloves, minced 1 onion (brown or white), diced 500 g (1 lb) beef mince 3 tbsp tomato paste 800 g (28 oz) can crushed tomatoes 420 g (14 oz) can red kidney beans, drained (or other beans) 2 beef stock cubes, crumbled 1½ tsp sugar 125–375 ml (½–1½ cups) water 1–2 tsp cayenne pepper, to taste 4 tsp paprika 5 tsp ground cumin 2 tsp garlic powder (or onion powder) 2 tsp onion powder 2 tsp dried oregano 1½ tsp cooking or kosher salt ½ tsp MSG Rice, corn chips or tortillas Sour cream, yoghurt, grated cheese and coriander",
+"text": "15 ml (1 tbsp) olive oil 3 garlic cloves, minced 1 onion (brown or white), diced 500 g (1 lb) beef mince 3 tbsp tomato paste 800 g (28 oz) can crushed tomatoes 420 g (14 oz) can red kidney beans, drained (or other beans) 2 beef stock cubes, crumbled 1½ tsp sugar 125–375 ml (½–1½ cups) water 1–2 tsp cayenne pepper, to taste 4 tsp paprika 5 tsp ground cumin 2 tsp garlic powder (or onion powder) 2 tsp onion powder 2 tsp dried oregano 1½ tsp cooking salt ½ tsp MSG Rice, corn chips or tortillas Sour cream, yoghurt, grated cheese and coriander",
 "meta": "Serves 5–6 · Prep 10 min · Cook 30 min",
 "intro": "A rich, properly spiced beef and bean chilli from RecipeTin Eats. Quick enough for a weeknight, even better slow-cooked or the next day.",
 "photo": "",
@@ -3341,7 +3341,7 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "tsp"
 },
 {
-"t": "1½ tsp cooking or kosher salt",
+"t": "1½ tsp cooking salt",
 "n": "Salt",
 "a": "Herbs & spices",
 "s": true,
@@ -3848,7 +3848,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Thai",
 "category": "Beef",
 "url": "thai/beef/thai-beef-salad.html",
-"text": "½ tsp bird's eye or Thai chilli, deseeded and finely minced ¼ tsp finely minced garlic (½ small clove) 2¼ tsp white sugar 30 ml (2 tbsp) fish sauce 45 ml (3 tbsp) lime juice 15 ml (1 tbsp) grapeseed oil (or canola or vegetable oil) 1 small pinch cooking or kosher salt ½ tsp MSG 200–250 g (7–8 oz) good-quality beef steak, such as sirloin, at room temperature 15 ml (1 tbsp) vegetable, peanut or canola oil ¼ tsp each salt and pepper 2 heaped cups mixed lettuce leaves 10 cherry tomatoes, halved ¼ small red onion, very finely sliced ½ cucumber (deseeded if you like), halved lengthways and sliced ¼ cup mint leaves, lightly packed 35 g (¼ cup) roasted unsalted peanuts, finely chopped Extra mint leaves, to garnish",
+"text": "½ tsp bird's eye or Thai chilli, deseeded and finely minced ¼ tsp finely minced garlic (½ small clove) 2¼ tsp white sugar 30 ml (2 tbsp) fish sauce 45 ml (3 tbsp) lime juice 15 ml (1 tbsp) grapeseed oil (or canola or vegetable oil) 1 small pinch cooking salt ½ tsp MSG 200–250 g (7–8 oz) good-quality beef steak, such as sirloin, at room temperature 15 ml (1 tbsp) vegetable, peanut or canola oil ¼ tsp each salt and pepper 2 heaped cups mixed lettuce leaves 10 cherry tomatoes, halved ¼ small red onion, very finely sliced ½ cucumber (deseeded if you like), halved lengthways and sliced ¼ cup mint leaves, lightly packed 35 g (¼ cup) roasted unsalted peanuts, finely chopped Extra mint leaves, to garnish",
 "meta": "Serves 2 · Prep 20 min · Cook 5 min",
 "intro": "Seared steak sliced thin and tossed with crisp salad, mint and peanuts in a hot, sour, salty and sweet dressing. Adapted by RecipeTin Eats from the Spice I Am cookbook.",
 "photo": "",
@@ -3913,7 +3913,7 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "ml"
 },
 {
-"t": "1 small pinch cooking or kosher salt",
+"t": "1 small pinch cooking salt",
 "n": "Salt",
 "a": "Herbs & spices",
 "s": true,
@@ -4027,7 +4027,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Thai",
 "category": "Chicken",
 "url": "thai/chicken/yellow-curry.html",
-"text": "15 ml (1 tbsp) oil, or thick coconut cream from the top of the can 4–5 tbsp yellow curry paste (a good authentic brand, or homemade) 500 g (1 lb) boneless, skinless chicken thighs, cut into bite-sized pieces 1 tsp curry powder 400 ml (14 oz) can full-fat coconut milk A splash of chicken stock or water 3 Yukon gold or Warba potatoes, peeled and cubed 1 brown (yellow) onion, cut into wedges 2 carrots, sliced 30 ml (2 tbsp) fish sauce ½ tsp MSG 1–2½ tbsp palm sugar or brown sugar Fresh coriander and sliced red chillies, to garnish Steamed jasmine rice, to serve",
+"text": "15 ml (1 tbsp) oil, or thick coconut cream from the top of the can 4–5 tbsp yellow curry paste (a good authentic brand, or homemade) 500 g (1 lb) boneless, skinless chicken thighs, cut into bite-sized pieces 1 tsp curry powder 400 ml (14 oz) can full-fat coconut milk A splash of chicken stock or water 3 Dutch cream, Désirée or Warba potatoes, peeled and cubed 1 brown (yellow) onion, cut into wedges 2 carrots, sliced 30 ml (2 tbsp) fish sauce ½ tsp MSG 1–2½ tbsp palm sugar or brown sugar Fresh coriander and sliced red chillies, to garnish Steamed jasmine rice, to serve",
 "meta": "Serves 4 · Prep 15 min · Cook 25 min",
 "intro": "A mild, fragrant coconut curry with chicken, potato and carrot. Serve over steamed jasmine rice.",
 "photo": "",
@@ -4091,11 +4091,11 @@ window.FIELD_KITCHEN_INDEX = [
 "u": null
 },
 {
-"t": "3 Yukon gold or Warba potatoes, peeled and cubed",
-"n": "Potatoes",
-"a": "Fruit & veg",
+"t": "3 Dutch cream, Désirée or Warba potatoes, peeled and cubed",
+"n": "Thickened cream",
+"a": "Dairy & eggs",
 "s": false,
-"p": "\\bpotato(es)?\\b",
+"p": "\\bcream\\b",
 "q": 3.0,
 "u": null
 },

@@ -22,7 +22,7 @@ Sausages baked in a tall, crisp-edged Yorkshire pudding, served with onion gravy
 - 185 ml (¾ cup) full-fat milk
 - 60 ml (¼ cup) water
 - 1 tbsp full-fat mayonnaise
-- ½ tsp cooking or kosher salt
+- ½ tsp cooking salt
 - Pinch of white pepper
 
 ### For the onion gravy
@@ -34,7 +34,7 @@ Sausages baked in a tall, crisp-edged Yorkshire pudding, served with onion gravy
 - 500 ml (2 cups) low-sodium beef stock
 - ½ tsp Worcestershire sauce
 - ½ tsp black pepper
-- ¼ tsp cooking or kosher salt
+- ¼ tsp cooking salt
 - ½ tsp MSG
 
 ## Method
