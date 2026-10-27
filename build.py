@@ -91,6 +91,7 @@ CUISINE_ART = {
     'mexican': '<path d="M13 11c0 2.21 -2.239 4 -5 4s-5 -1.79 -5 -4a8 8 0 1 0 16 0a3 3 0 0 0 -6 0" /> <path d="M16 8c0 -2 2 -4 4 -4" />',  # pepper
     'south african': '<path d="M4 21l16 -4" /> <path d="M20 21l-16 -4" /> <path d="M12 15a4 4 0 0 0 4 -4c0 -3 -2 -3 -2 -8c-4 2 -6 5 -6 8a4 4 0 0 0 4 4z" />',  # campfire
     'spanish': '<path d="M5.5 5.5a2.5 2.5 0 0 0 -2.5 2.5c0 7.18 5.82 13 13 13a2.5 2.5 0 1 0 0 -5a8 8 0 0 1 -8 -8a2.5 2.5 0 0 0 -2.5 -2.5z" /> <path d="M5.195 5.519l-1.243 -1.989a1 1 0 0 1 .848 -1.53h1.392a1 1 0 0 1 .848 1.53l-1.245 1.99" /> <path d="M18.482 18.225l1.989 -1.243a1 1 0 0 1 1.53 .848v1.392a1 1 0 0 1 -1.53 .848l-1.991 -1.245" />',  # sausage
+    'thai': '<path d="M17.536 3.393c3.905 3.906 3.905 10.237 0 14.143c-3.906 3.905 -10.237 3.905 -14.143 0l14.143 -14.143" /> <path d="M5.868 15.06a6.5 6.5 0 0 0 9.193 -9.192" /> <path d="M10.464 10.464l4.597 4.597" /> <path d="M10.464 10.464v6.364" /> <path d="M10.464 10.464h6.364" />',  # lemon (a lime slice)
     '_default': '<path d="M19 3v12h-5c-.023 -3.681 .184 -7.406 5 -12zm0 12v6h-1v-3m-10 -14v17m-3 -17v3a3 3 0 1 0 6 0v-3" />',  # tools-kitchen-2
 }
 # Where each cuisine sits on the home page map: (longitude, latitude, label side:
@@ -108,6 +109,7 @@ CUISINE_PLACES = {
     "mexican": (-102, 23, "end"),
     "south african": (25, -29, "start"),
     "spanish": (-3.7, 40, "end"),
+    "thai": (101, 15, "start"),
 }
 QUICK_CHIPS = (("quick", f"Under {QUICK_MINUTES} min"), ("make-ahead", "Make ahead"), ("project", "Weekend project"))
 # docs/ is fully generated, but these must survive a rebuild.
