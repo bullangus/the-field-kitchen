@@ -80,6 +80,7 @@ NAV_ICONS = {
 # Cuisine icons (24x24 outline paths) from Tabler Icons v3.19.0, MIT licence,
 # https://tabler.io/icons. New cuisines get the knife and fork until one is added here.
 CUISINE_ART = {
+    'american': '<path d="M4 15h16a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /> <path d="M12 4c3.783 0 6.953 2.133 7.786 5h-15.572c.833 -2.867 4.003 -5 7.786 -5z" /> <path d="M5 12h14" />',  # burger
     'australian': '<path d="M19 8h-14a6 6 0 0 0 6 6h2a6 6 0 0 0 6 -5.775l0 -.225z" /> <path d="M17 20a2 2 0 1 1 0 -4a2 2 0 0 1 0 4z" /> <path d="M15 14l1 2" /> <path d="M9 14l-3 6" /> <path d="M15 18h-8" /> <path d="M15 5v-1" /> <path d="M12 5v-1" /> <path d="M9 5v-1" />',  # grill
     'british': '<path d="M10.29 3h3.42a2 2 0 0 1 1.988 1.78l1.555 14a2 2 0 0 1 -1.988 2.22h-6.53a2 2 0 0 1 -1.988 -2.22l1.555 -14a2 2 0 0 1 1.988 -1.78z" /> <path d="M7.47 12.5l-4.257 -5.019a.899 .899 0 0 1 .69 -1.481h13.09a3 3 0 0 1 3.007 3v3c0 1.657 -1.346 3 -3.007 3" /> <path d="M7 17h10" />',  # teapot
     'chinese': '<path d="M4 11h16a1 1 0 0 1 1 1v.5c0 1.5 -2.517 5.573 -4 6.5v1a1 1 0 0 1 -1 1h-8a1 1 0 0 1 -1 -1v-1c-1.687 -1.054 -4 -5 -4 -6.5v-.5a1 1 0 0 1 1 -1z" /> <path d="M19 7l-14 1" /> <path d="M19 2l-14 3" />',  # bowl-chopsticks
@@ -94,6 +95,7 @@ CUISINE_ART = {
 # Where each cuisine sits on the home page map: (longitude, latitude, label side).
 # Add one per new cuisine; cuisines without a place are left off the map.
 CUISINE_PLACES = {
+    "american": (-98, 39, "end"),
     "australian": (134, -25, "end"),
     "british": (-2, 54, "end"),
     "chinese": (104, 34, "start"),
