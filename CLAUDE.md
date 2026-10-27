@@ -19,7 +19,7 @@ A family cookbook destined for print. The owner sends recipes (links, pasted tex
 
 - Weights in g/kg first. Add cups/tbsp/tsp in brackets where that's easier to measure: `200 g (1 cup) caster sugar`, `15 ml (1 tbsp) olive oil`.
 - If the source is in cups, keep the cup measure and add grams, using **ingredient-specific** densities (e.g. flour ≈ 125 g/cup, caster sugar ≈ 200 g/cup, butter 227 g/cup, rice ≈ 185 g/cup). Never use one density for everything.
-- Spoons: 1 tbsp = 15 ml, 1 tsp = 5 ml. US cup = 240 ml.
+- Spoons: 1 tbsp = 15 ml, 1 tsp = 5 ml. Use the source's cup: Australian/metric 250 ml (e.g. Marion's Kitchen), US 240 ml. Flour weights assume spooned-and-levelled cups.
 - Oven: `180°C (160°C fan / 350°F / gas 4)`.
 - Small amounts (pinches, 1 tsp spices) can stay in spoons only when grams would be fussy.
 - Double-check every conversion.

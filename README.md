@@ -7,7 +7,10 @@
 ## Contents
 
 <!-- CONTENTS:START -->
-_No recipes yet._
+### Chinese
+- **Chicken:** [Crispy Salt & Pepper Wings](recipes/Chinese/Chicken/salt-and-pepper-wings.md)
+
+_1 recipe._
 <!-- CONTENTS:END -->
 
 ## How it's organised
