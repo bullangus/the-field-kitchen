@@ -12,7 +12,7 @@ Marinated in ginger, garlic and soy, then fried twice for a light, crisp crust.
 ## Ingredients
 
 - 680 g (1½ lb) boneless, skin-on chicken thighs (4–6 pieces)
-- ¼ tsp fine salt
+- ½ tsp table salt
 - ⅛ tsp freshly ground black pepper
 
 ### For the marinade
@@ -53,5 +53,4 @@ Marinated in ginger, garlic and soy, then fried twice for a light, crisp crust.
 ## Notes
 
 - Once completely cool, keeps in an airtight container in the fridge for up to 3 days, or in the freezer for up to a month.
-- The original uses ½ tsp Diamond Crystal kosher salt, which isn't sold in Australia; ¼ tsp fine salt is the same amount of salt.
 - 2026-10-28: Added ½ tsp MSG to the marinade. We add it to most savoury dishes.

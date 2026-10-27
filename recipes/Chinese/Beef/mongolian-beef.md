@@ -16,7 +16,7 @@ Restaurant-style, served over an optional nest of crisp fried rice vermicelli.
 - 450 g (1 lb) flank steak, thinly sliced 3–6 mm (⅛–¼ inch) thick
 - 30 ml (2 tbsp) water
 - 2 tsp Shaoxing rice wine
-- Scant ½ tsp fine salt
+- ½ tsp table salt
 - ¼ tsp bicarbonate of soda (baking soda)
 - 16 g (2 tbsp) cornflour (cornstarch)
 - 15 ml (1 tbsp) neutral oil

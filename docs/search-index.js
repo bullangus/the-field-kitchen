@@ -868,7 +868,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Chinese",
 "category": "Beef",
 "url": "chinese/beef/mongolian-beef.html",
-"text": "450 g (1 lb) flank steak, thinly sliced 3–6 mm (⅛–¼ inch) thick 30 ml (2 tbsp) water 2 tsp Shaoxing rice wine Scant ½ tsp fine salt ¼ tsp bicarbonate of soda (baking soda) 16 g (2 tbsp) cornflour (cornstarch) 15 ml (1 tbsp) neutral oil 1 tsp cracked black pepper, more or less to taste 15 ml (1 tbsp) Shaoxing rice wine 38 g (3 tbsp) white sugar 30 ml (2 tbsp) regular soy sauce ½ tsp MSG 1 tbsp minced garlic (about 2 cloves) ½ large brown (yellow) onion, sliced 1 bunch spring onions (green onions), cut into 5 cm (2 inch) pieces, white and green parts separated 30 g (1 oz) medium-thickness rice vermicelli (optional; use more or less to preference) Oil, as needed for cooking",
+"text": "450 g (1 lb) flank steak, thinly sliced 3–6 mm (⅛–¼ inch) thick 30 ml (2 tbsp) water 2 tsp Shaoxing rice wine ½ tsp table salt ¼ tsp bicarbonate of soda (baking soda) 16 g (2 tbsp) cornflour (cornstarch) 15 ml (1 tbsp) neutral oil 1 tsp cracked black pepper, more or less to taste 15 ml (1 tbsp) Shaoxing rice wine 38 g (3 tbsp) white sugar 30 ml (2 tbsp) regular soy sauce ½ tsp MSG 1 tbsp minced garlic (about 2 cloves) ½ large brown (yellow) onion, sliced 1 bunch spring onions (green onions), cut into 5 cm (2 inch) pieces, white and green parts separated 30 g (1 oz) medium-thickness rice vermicelli (optional; use more or less to preference) Oil, as needed for cooking",
 "meta": "Serves 3 · Prep 15 min · Cook 15 min",
 "intro": "Restaurant-style, served over an optional nest of crisp fried rice vermicelli.",
 "photo": "",
@@ -906,13 +906,13 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "tsp"
 },
 {
-"t": "Scant ½ tsp fine salt",
+"t": "½ tsp table salt",
 "n": "Salt",
 "a": "Herbs & spices",
 "s": true,
 "p": "\\bsalt\\b",
-"q": null,
-"u": null
+"q": 0.5,
+"u": "tsp"
 },
 {
 "t": "¼ tsp bicarbonate of soda (baking soda)",
@@ -1697,7 +1697,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Italian",
 "category": "Breads",
 "url": "italian/breads/focaccia.html",
-"text": "7 g (1 sachet / ¼ oz) active dry yeast 680 g water (113 g / ½ cup lukewarm, plus 567 g / 2½ cups at room temperature) 780 g (6 cups) bread flour 17 g salt (weigh it: by volume that's about 2¾ tsp fine salt or 1 tbsp sea salt flakes) 110 g (½ cup) extra-virgin olive oil, plus more for oiling your hands One topping (see Topping Options) 55 g (¼ cup) extra-virgin olive oil Fresh rosemary leaves Flaky salt 55 g (¼ cup) extra-virgin olive oil 6 cloves garlic, thinly sliced Flaky salt 55 g (¼ cup) extra-virgin olive oil 4 cloves garlic, finely chopped 1–2 tsp chilli flakes Flaky salt 60 ml (¼ cup) olive oil 1½ tbsp Sichuan peppercorns ½ tbsp black peppercorns ½ tbsp white peppercorns 2 large onions, halved and sliced into thin rings 60 ml (4 tbsp) vegetable oil ½ tbsp sugar, more to taste 30 ml (2 tbsp) soy sauce",
+"text": "7 g (1 sachet / ¼ oz) active dry yeast 680 g water (113 g / ½ cup lukewarm, plus 567 g / 2½ cups at room temperature) 780 g (6 cups) bread flour 17 g (2 tbsp) table salt 110 g (½ cup) extra-virgin olive oil, plus more for oiling your hands One topping (see Topping Options) 55 g (¼ cup) extra-virgin olive oil Fresh rosemary leaves Flaky salt 55 g (¼ cup) extra-virgin olive oil 6 cloves garlic, thinly sliced Flaky salt 55 g (¼ cup) extra-virgin olive oil 4 cloves garlic, finely chopped 1–2 tsp chilli flakes Flaky salt 60 ml (¼ cup) olive oil 1½ tbsp Sichuan peppercorns ½ tbsp black peppercorns ½ tbsp white peppercorns 2 large onions, halved and sliced into thin rings 60 ml (4 tbsp) vegetable oil ½ tbsp sugar, more to taste 30 ml (2 tbsp) soy sauce",
 "meta": "Serves 1 half-sheet pan · Prep 3 hr 45 min (mostly rising) · Cook 30 min",
 "intro": "Claire Saffitz's focaccia: a very wet, well-kneaded dough baked in a half-sheet pan for a tall, airy crumb and a crisp, oily base. Pick a topping from the options after the method.",
 "photo": "",
@@ -1734,7 +1734,7 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "g"
 },
 {
-"t": "17 g salt (weigh it: by volume that's about 2¾ tsp fine salt or 1 tbsp sea salt flakes)",
+"t": "17 g (2 tbsp) table salt",
 "n": "Salt",
 "a": "Herbs & spices",
 "s": true,
@@ -2581,7 +2581,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Japanese",
 "category": "Chicken",
 "url": "japanese/chicken/karaage.html",
-"text": "680 g (1½ lb) boneless, skin-on chicken thighs (4–6 pieces) ¼ tsp fine salt ⅛ tsp freshly ground black pepper ½ tsp grated fresh ginger, with its juice 1 clove garlic ½–1 tbsp soy sauce ½ tbsp sake (or dry sherry or Chinese rice wine, or leave it out) ½ tsp toasted sesame oil ½ tsp MSG 700–950 ml (3–4 cups) neutral oil 2 tbsp potato starch or cornflour (cornstarch), plus more if needed 2 tbsp plain (all-purpose) flour, plus more if needed Lemon wedges Japanese Kewpie mayonnaise Shichimi togarashi (Japanese seven spice)",
+"text": "680 g (1½ lb) boneless, skin-on chicken thighs (4–6 pieces) ½ tsp table salt ⅛ tsp freshly ground black pepper ½ tsp grated fresh ginger, with its juice 1 clove garlic ½–1 tbsp soy sauce ½ tbsp sake (or dry sherry or Chinese rice wine, or leave it out) ½ tsp toasted sesame oil ½ tsp MSG 700–950 ml (3–4 cups) neutral oil 2 tbsp potato starch or cornflour (cornstarch), plus more if needed 2 tbsp plain (all-purpose) flour, plus more if needed Lemon wedges Japanese Kewpie mayonnaise Shichimi togarashi (Japanese seven spice)",
 "meta": "Serves 4 · Prep 15 min + 30 min marinating · Cook 15 min",
 "intro": "Marinated in ginger, garlic and soy, then fried twice for a light, crisp crust.",
 "photo": "",
@@ -2600,12 +2600,12 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "g"
 },
 {
-"t": "¼ tsp fine salt",
+"t": "½ tsp table salt",
 "n": "Salt",
 "a": "Herbs & spices",
 "s": true,
 "p": "\\bsalt\\b",
-"q": 0.25,
+"q": 0.5,
 "u": "tsp"
 },
 {
@@ -2732,7 +2732,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Japanese",
 "category": "Chicken",
 "url": "japanese/chicken/nagoya-chicken-wings.html",
-"text": "450 g (1 lb) chicken wings, flats and drumettes (this much sauce covers up to 900 g / 2 lb) 35 g (¼ cup) potato starch or cornflour (cornstarch) 700 ml (3 cups) neutral oil, for deep-frying Toasted white sesame seeds 240 ml (1 cup) mirin 120 ml (½ cup) soy sauce 45 ml (3 tbsp) sake 65 g (⅓ cup) sugar ⅛ tsp fine salt 1 knob fresh ginger (about 1.3 cm / ½ inch), sliced 2 cloves garlic, crushed or minced ½ tsp MSG",
+"text": "450 g (1 lb) chicken wings, flats and drumettes (this much sauce covers up to 900 g / 2 lb) 35 g (¼ cup) potato starch or cornflour (cornstarch) 700 ml (3 cups) neutral oil, for deep-frying Toasted white sesame seeds 240 ml (1 cup) mirin 120 ml (½ cup) soy sauce 45 ml (3 tbsp) sake 65 g (⅓ cup) sugar ¼ tsp table salt 1 knob fresh ginger (about 1.3 cm / ½ inch), sliced 2 cloves garlic, crushed or minced ½ tsp MSG",
 "meta": "Serves 4 · Prep 20 min · Cook 30 min",
 "intro": "Double-fried wings glazed in a sticky, sweet soy, mirin and ginger sauce and finished with sesame seeds. The sauce keeps in the fridge for a month.",
 "photo": "",
@@ -2814,12 +2814,12 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "g"
 },
 {
-"t": "⅛ tsp fine salt",
+"t": "¼ tsp table salt",
 "n": "Salt",
 "a": "Herbs & spices",
 "s": true,
 "p": "\\bsalt\\b",
-"q": 0.125,
+"q": 0.25,
 "u": "tsp"
 },
 {

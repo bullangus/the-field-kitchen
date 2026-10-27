@@ -22,7 +22,7 @@ Double-fried wings glazed in a sticky, sweet soy, mirin and ginger sauce and fin
 - 120 ml (½ cup) soy sauce
 - 45 ml (3 tbsp) sake
 - 65 g (⅓ cup) sugar
-- ⅛ tsp fine salt
+- ¼ tsp table salt
 - 1 knob fresh ginger (about 1.3 cm / ½ inch), sliced
 - 2 cloves garlic, crushed or minced
 - ½ tsp MSG
@@ -40,5 +40,4 @@ Double-fried wings glazed in a sticky, sweet soy, mirin and ginger sauce and fin
 
 - Leftover sauce keeps in a jar in the fridge for up to a month.
 - Leftover wings keep in an airtight container in the fridge for 3–4 days, or in the freezer for a month.
-- The original uses ¼ tsp Diamond Crystal kosher salt, which isn't sold in Australia; ⅛ tsp fine salt is the same amount of salt.
 - 2026-10-28: Added ½ tsp MSG to the sauce. We add it to most savoury dishes.

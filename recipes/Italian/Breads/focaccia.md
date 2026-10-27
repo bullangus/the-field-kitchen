@@ -14,7 +14,7 @@ Claire Saffitz's focaccia: a very wet, well-kneaded dough baked in a half-sheet 
 - 7 g (1 sachet / ¼ oz) active dry yeast
 - 680 g water (113 g / ½ cup lukewarm, plus 567 g / 2½ cups at room temperature)
 - 780 g (6 cups) bread flour
-- 17 g salt (weigh it: by volume that's about 2¾ tsp fine salt or 1 tbsp sea salt flakes)
+- 17 g (2 tbsp) table salt
 - 110 g (½ cup) extra-virgin olive oil, plus more for oiling your hands
 - One topping (see Topping Options)
 
@@ -88,6 +88,5 @@ Claire Saffitz's focaccia: a very wet, well-kneaded dough baked in a half-sheet 
 
 ## Notes
 
-- The original uses Diamond Crystal kosher salt (2 tbsp), which isn't sold in Australia and is about half as salty by volume. Weighing 17 g of any salt gives the same result.
 - 2026-10-28: Toppings are separate options so the base focaccia stays plain. The Sichuan pepper oil and soy caramelised onions are our go-to alternative to garlic, rosemary or chilli garlic.
 - 2026-10-28: Added garlic and chilli garlic options. Their amounts are a starting point we haven't measured yet: adjust after the next bake.
