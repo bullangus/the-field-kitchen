@@ -16,6 +16,8 @@
 
 ### British
 - **Chicken:** [Classic Roast Chicken](recipes/British/Chicken/classic-roast-chicken.md)
+- **Desserts:** [Classic Trifle](recipes/British/Desserts/classic-trifle.md)
+- **Pork:** [Toad in the Hole](recipes/British/Pork/toad-in-the-hole.md)
 
 ### Chinese
 - **Beef:** [Mongolian Beef](recipes/Chinese/Beef/mongolian-beef.md)
@@ -49,7 +51,7 @@
 ### Spanish
 - **Chicken:** [Chicken & White Bean Stew](recipes/Spanish/Chicken/chicken-and-white-bean-stew.md)
 
-_26 recipes._
+_28 recipes._
 <!-- CONTENTS:END -->
 
 ## How it's organised

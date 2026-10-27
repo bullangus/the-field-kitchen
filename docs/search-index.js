@@ -516,6 +516,318 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
+"title": "Classic Trifle",
+"cuisine": "British",
+"category": "Desserts",
+"url": "british/desserts/classic-trifle.html",
+"text": "Jam rolls (from Coles or Woolworths), sliced, enough to cover the base of the bowl 1 punnet strawberries 1 small wineglass Cointreau 1 packet (85 g) Aeroplane strawberry jelly 1.1 litres (2 UK pints) milk 4 tsp caster sugar 35 g sachet strawberry blancmange 450 g tin mandarin segments 1 packet (85 g) Aeroplane orange jelly Bird's custard powder, enough to make 600 ml custard 300 ml thickened cream (double cream) Flake chocolate, to finish 1 orange",
+"meta": "Serves 12",
+"intro": "Our family classic, from Jamie Oliver's retro trifle: jam roll, strawberries and Cointreau under strawberry jelly, blancmange, mandarins, orange jelly, custard and cream. Give each layer time to set before adding the next.",
+"photo": "",
+"tags": [
+"desserts",
+"make-ahead"
+],
+"serves": 12,
+"ingredients": [
+{
+"t": "Jam rolls (from Coles or Woolworths), sliced, enough to cover the base of the bowl",
+"n": "Jam rolls",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bjam rolls?\\b|\\brolls?\\b",
+"q": null,
+"u": null
+},
+{
+"t": "1 punnet strawberries",
+"n": "Strawberries",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bstrawberries\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "1 small wineglass Cointreau",
+"n": "Cointreau",
+"a": "Wine & spirits",
+"s": false,
+"p": "\\bcointreau\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "1 packet (85 g) Aeroplane strawberry jelly",
+"n": "Aeroplane strawberry jelly",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bstrawberry jelly\\b|\\bjelly\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "1.1 litres (2 UK pints) milk",
+"n": "Milk",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bmilk\\b",
+"q": 1.1,
+"u": null
+},
+{
+"t": "4 tsp caster sugar",
+"n": "Sugar",
+"a": "Pantry & sauces",
+"s": true,
+"p": "\\bsugar\\b",
+"q": 4.0,
+"u": "tsp"
+},
+{
+"t": "35 g sachet strawberry blancmange",
+"n": "Strawberry blancmange",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bblancmange\\b",
+"q": 35.0,
+"u": "g"
+},
+{
+"t": "450 g tin mandarin segments",
+"n": "Tinned mandarins",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmandarin",
+"q": 450.0,
+"u": "g"
+},
+{
+"t": "1 packet (85 g) Aeroplane orange jelly",
+"n": "Aeroplane orange jelly",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\borange jelly\\b|\\bjelly\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "Bird's custard powder, enough to make 600 ml custard",
+"n": "Bird's custard powder",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bcustard\\b",
+"q": null,
+"u": null
+},
+{
+"t": "300 ml thickened cream (double cream)",
+"n": "Thickened cream",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bcream\\b",
+"q": 300.0,
+"u": "ml"
+},
+{
+"t": "Flake chocolate, to finish",
+"n": "Flake chocolate",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bflake\\b",
+"q": null,
+"u": null
+},
+{
+"t": "1 orange",
+"n": "Oranges",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\boranges?\\b",
+"q": 1.0,
+"u": null
+}
+]
+},
+{
+"title": "Toad in the Hole",
+"cuisine": "British",
+"category": "Pork",
+"url": "british/pork/toad-in-the-hole.html",
+"text": "700 g (1.4 lb) pork sausages (8 × 85 g / 3 oz), or other sausages 10 g (2 tsp) beef dripping, or canola or vegetable oil, for browning 50 g (¼ cup) beef dripping, or canola or vegetable oil, for the pan 250 ml (1 cup) eggs, lightly whisked (4–5 large eggs; measure them) 130 g (1 cup) plain flour 185 ml (¾ cup) full-fat milk 60 ml (¼ cup) water 1 tbsp full-fat mayonnaise ½ tsp cooking or kosher salt Pinch of white pepper 30 g (2 tbsp) beef dripping or unsalted butter 2 onions, halved and cut into 7 mm (¼ inch) wedges 1 garlic clove, finely minced 3 tbsp plain flour 500 ml (2 cups) low-sodium beef stock ½ tsp Worcestershire sauce ½ tsp black pepper ¼ tsp cooking or kosher salt",
+"meta": "Serves 4 · Prep 15 min · Cook 40 min",
+"intro": "Sausages baked in a tall, crisp-edged Yorkshire pudding, served with onion gravy. A spoonful of mayonnaise in the batter helps it rise higher and collapse less.",
+"photo": "",
+"tags": [
+"pork"
+],
+"serves": 4,
+"ingredients": [
+{
+"t": "700 g (1.4 lb) pork sausages (8 × 85 g / 3 oz), or other sausages",
+"n": "Pork sausages",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bsausages?\\b",
+"q": 700.0,
+"u": "g"
+},
+{
+"t": "10 g (2 tsp) beef dripping, or canola or vegetable oil, for browning",
+"n": "Beef dripping",
+"a": "Oils & vinegars",
+"s": false,
+"p": "\\bdripping\\b",
+"q": 10.0,
+"u": "g"
+},
+{
+"t": "50 g (¼ cup) beef dripping, or canola or vegetable oil, for the pan",
+"n": "Beef dripping",
+"a": "Oils & vinegars",
+"s": false,
+"p": "\\bdripping\\b",
+"q": 50.0,
+"u": "g"
+},
+{
+"t": "250 ml (1 cup) eggs, lightly whisked (4–5 large eggs; measure them)",
+"n": "Eggs",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\beggs?\\b",
+"q": 250.0,
+"u": "ml"
+},
+{
+"t": "130 g (1 cup) plain flour",
+"n": "Plain flour",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bflour\\b",
+"q": 130.0,
+"u": "g"
+},
+{
+"t": "185 ml (¾ cup) full-fat milk",
+"n": "Milk",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bmilk\\b",
+"q": 185.0,
+"u": "ml"
+},
+{
+"t": "60 ml (¼ cup) water",
+"n": "Water",
+"a": "Pantry & sauces",
+"s": true,
+"p": "\\bwater\\b",
+"q": 60.0,
+"u": "ml"
+},
+{
+"t": "1 tbsp full-fat mayonnaise",
+"n": "Mayonnaise",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bmayonnaise\\b",
+"q": 3.0,
+"u": "tsp"
+},
+{
+"t": "½ tsp cooking or kosher salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
+"t": "Pinch of white pepper",
+"n": "Pepper",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bpepper(corns)?\\b",
+"q": null,
+"u": null
+},
+{
+"t": "30 g (2 tbsp) beef dripping or unsalted butter",
+"n": "Beef dripping",
+"a": "Oils & vinegars",
+"s": false,
+"p": "\\bdripping\\b",
+"q": 30.0,
+"u": "g"
+},
+{
+"t": "2 onions, halved and cut into 7 mm (¼ inch) wedges",
+"n": "Brown onions",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bonions?\\b",
+"q": 2.0,
+"u": null
+},
+{
+"t": "1 garlic clove, finely minced",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "3 tbsp plain flour",
+"n": "Plain flour",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bflour\\b",
+"q": 9.0,
+"u": "tsp"
+},
+{
+"t": "500 ml (2 cups) low-sodium beef stock",
+"n": "Low-sodium beef stock",
+"a": "Other",
+"s": false,
+"p": "",
+"q": 500.0,
+"u": "ml"
+},
+{
+"t": "½ tsp Worcestershire sauce",
+"n": "Worcestershire sauce",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bworcestershire\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
+"t": "½ tsp black pepper",
+"n": "Pepper",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bpepper(corns)?\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
+"t": "¼ tsp cooking or kosher salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": 0.25,
+"u": "tsp"
+}
+]
+},
+{
 "title": "Mongolian Beef",
 "cuisine": "Chinese",
 "category": "Beef",
@@ -2114,7 +2426,7 @@ window.FIELD_KITCHEN_INDEX = [
 "n": "Kewpie mayonnaise",
 "a": "Dairy & eggs",
 "s": false,
-"p": "\\bmayonnaise\\b|\\bkewpie\\b",
+"p": "\\bkewpie\\b",
 "q": 55.0,
 "u": "g"
 },
@@ -2274,7 +2586,7 @@ window.FIELD_KITCHEN_INDEX = [
 "n": "Kewpie mayonnaise",
 "a": "Dairy & eggs",
 "s": false,
-"p": "\\bmayonnaise\\b|\\bkewpie\\b",
+"p": "\\bkewpie\\b",
 "q": null,
 "u": null
 },
