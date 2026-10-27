@@ -1,0 +1,79 @@
+# ---- Local AI assistant config ----
+# CLAUDE.md holds the cookbook's house rules, so it is committed. Only local overrides are ignored.
+CLAUDE.local.md
+.claude/
+
+# ---- Dependencies ----
+node_modules/
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# ---- Environment ----
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+# ...but keep the example tracked
+!.env.example
+
+# ---- Build output ----
+dist/
+build/
+out/
+.next/
+.nuxt/
+.svelte-kit/
+.turbo/
+.vercel/
+*.tsbuildinfo
+
+# ---- Testing / coverage ----
+coverage/
+.nyc_output/
+
+# ---- Logs ----
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---- Caches ----
+.cache/
+.eslintcache
+.parcel-cache/
+
+# ---- OS cruft ----
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ---- Editors / IDEs ----
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.swp
+*.swo
+
+# ---- Misc ----
+tmp/
+temp/
+*.pid
+*.seed
+
+# ---- Language-specific (uncomment what you need) ----
+__pycache__/
+*.py[cod]
+# .venv/
+# target/          # Rust / Java
+# vendor/          # Go / PHP
