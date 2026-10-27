@@ -2927,7 +2927,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Japanese",
 "category": "Chicken",
 "url": "japanese/chicken/katsu-curry.html",
-"text": "4 chicken thigh fillets or breasts (about 150 g each) 50 g (⅓ cup) plain flour ½ tsp salt ¼ tsp pepper 2 eggs, beaten 60 g (1 cup) panko breadcrumbs Neutral oil, for frying (2–3 cm deep in the pan) 100 g Golden Curry blocks (about half a 220 g box) 625 ml (2½ cups) boiling water: 250 ml (1 cup) to start, then 375 ml (1½ cups) ½ tsp MSG 2 potatoes and 1 carrot, peeled, cut into chunks and boiled until tender (optional) Steamed short-grain rice Grated cheese (optional)",
+"text": "4 chicken thigh fillets or breasts (about 150 g each) 50 g (⅓ cup) plain flour ½ tsp salt ¼ tsp pepper 2 eggs, beaten 60 g (1 cup) panko breadcrumbs Neutral oil, for frying (2–3 cm deep in the pan) 100 g Golden Curry blocks (about half a 220 g box) 625 ml (2½ cups) boiling water: 250 ml (1 cup) to start, then 375 ml (1½ cups) ½ tsp MSG 2 potatoes, peeled, cut into chunks and boiled until tender (optional) 1 carrot, peeled, cut into chunks and boiled until tender (optional) Steamed short-grain rice Grated cheese (optional)",
 "meta": "Serves 4 · Prep 20 min · Cook 30 min",
 "intro": "Crisp crumbed chicken on rice with a rich Japanese curry sauce made from Golden Curry blocks. The cutlets are made exactly as for Tonkatsu.",
 "photo": "",
@@ -3027,12 +3027,21 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "tsp"
 },
 {
-"t": "2 potatoes and 1 carrot, peeled, cut into chunks and boiled until tender (optional)",
+"t": "2 potatoes, peeled, cut into chunks and boiled until tender (optional)",
 "n": "Potatoes",
 "a": "Fruit & veg",
 "s": false,
 "p": "\\bpotato(es)?\\b",
 "q": 2.0,
+"u": null
+},
+{
+"t": "1 carrot, peeled, cut into chunks and boiled until tender (optional)",
+"n": "Carrots",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bcarrots?\\b",
+"q": 1.0,
 "u": null
 },
 {
@@ -3285,10 +3294,10 @@ window.FIELD_KITCHEN_INDEX = [
 "ingredients": [
 {
 "t": "4 pork loin steaks (about 150 g each), or chicken thigh fillets or breasts",
-"n": "Chicken thighs",
+"n": "Pork loin steaks",
 "a": "Meat & seafood",
 "s": false,
-"p": "\\bchicken thighs?\\b|\\bchicken\\b",
+"p": "\\bpork loin\\b|\\bloin\\b",
 "q": 4.0,
 "u": null
 },

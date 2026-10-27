@@ -26,7 +26,8 @@ Crisp crumbed chicken on rice with a rich Japanese curry sauce made from Golden 
 - 100 g Golden Curry blocks (about half a 220 g box)
 - 625 ml (2½ cups) boiling water: 250 ml (1 cup) to start, then 375 ml (1½ cups)
 - ½ tsp MSG
-- 2 potatoes and 1 carrot, peeled, cut into chunks and boiled until tender (optional)
+- 2 potatoes, peeled, cut into chunks and boiled until tender (optional)
+- 1 carrot, peeled, cut into chunks and boiled until tender (optional)
 
 ### To serve
 

@@ -93,6 +93,8 @@ INGREDIENTS = [
     (r"\bred wine\b", "Red wine", DRINKS, False),
     # Meat and seafood.
     (r"\bsnapper\b|\bwhole fish\b", "Whole snapper", MEAT, False),
+    # Before chicken: tonkatsu is "pork loin steaks, or chicken".
+    (r"\bpork loin\b", "Pork loin steaks", MEAT, False),
     (r"\bchicken wings\b", "Chicken wings", MEAT, False),
     (r"\bchicken thighs?\b", "Chicken thighs", MEAT, False),
     (r"\bwhole chicken\b", "Whole chicken", MEAT, False),
@@ -104,7 +106,6 @@ INGREDIENTS = [
     (r"\bpork mince\b", "Pork mince", MEAT, False),
     (r"\bbeef mince\b", "Beef mince", MEAT, False),
     (r"\bpork belly\b", "Pork belly with loin", MEAT, False),
-    (r"\bpork loin\b", "Pork loin steaks", MEAT, False),
     (r"\bflank\b|\bskirt\b|\bsteak\b", "Beef steak", MEAT, False),
     # Bread, pasta and rice (egg noodles before eggs, flours before plain flour).
     (r"\bwonton\b|\bdumpling wrappers\b", "Wonton or dumpling wrappers", GRAINS, False),
