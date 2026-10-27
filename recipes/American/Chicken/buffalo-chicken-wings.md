@@ -1,5 +1,5 @@
 ---
-title: Restaurant-Style Buffalo Chicken Wings
+title: Buffalo Wings
 cuisine: American
 category: Chicken
 serves: 5 (10 wings)

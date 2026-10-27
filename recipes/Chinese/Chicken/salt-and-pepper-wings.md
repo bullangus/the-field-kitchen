@@ -1,5 +1,5 @@
 ---
-title: Crispy Salt & Pepper Wings
+title: Salt & Pepper Wings
 cuisine: Chinese
 category: Chicken
 serves: 4

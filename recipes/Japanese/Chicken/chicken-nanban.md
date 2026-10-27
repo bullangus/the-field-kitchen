@@ -1,5 +1,5 @@
 ---
-title: Chicken Nanban (Fried Chicken with Tartar Sauce)
+title: Chicken Nanban
 cuisine: Japanese
 category: Chicken
 serves: 3

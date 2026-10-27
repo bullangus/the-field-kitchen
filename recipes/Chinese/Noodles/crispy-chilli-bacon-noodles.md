@@ -1,5 +1,5 @@
 ---
-title: Crispy Chilli Bacon Noodles
+title: Chilli Bacon Noodles
 cuisine: Chinese
 category: Noodles
 serves: 2

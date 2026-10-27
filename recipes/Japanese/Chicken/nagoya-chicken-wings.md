@@ -1,5 +1,5 @@
 ---
-title: Nagoya-Style Fried Chicken Wings (Tebasaki)
+title: Tebasaki Wings
 cuisine: Japanese
 category: Chicken
 serves: 4

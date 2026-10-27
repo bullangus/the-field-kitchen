@@ -8,52 +8,52 @@
 
 <!-- CONTENTS:START -->
 ### American
-- **Chicken:** [Restaurant-Style Buffalo Chicken Wings](recipes/American/Chicken/buffalo-chicken-wings.md)
+- **Chicken:** [Buffalo Wings](recipes/American/Chicken/buffalo-chicken-wings.md)
 
 ### Australian
-- **Pork:** [Maple & Caramelised Orange Glazed Ham](recipes/Australian/Pork/maple-orange-glazed-ham.md)
-- **Seafood:** [Barbecued Whole Snapper with Lime & Chilli](recipes/Australian/Seafood/barbecued-whole-snapper.md)
+- **Pork:** [Maple Orange Glazed Ham](recipes/Australian/Pork/maple-orange-glazed-ham.md)
+- **Seafood:** [Barbecued Snapper](recipes/Australian/Seafood/barbecued-whole-snapper.md)
 
 ### British
-- **Chicken:** [Classic Roast Chicken](recipes/British/Chicken/classic-roast-chicken.md)
-- **Desserts:** [Classic Trifle](recipes/British/Desserts/classic-trifle.md)
+- **Chicken:** [Roast Chicken](recipes/British/Chicken/classic-roast-chicken.md)
+- **Desserts:** [Trifle](recipes/British/Desserts/classic-trifle.md)
 - **Pork:** [Toad in the Hole](recipes/British/Pork/toad-in-the-hole.md)
 
 ### Chinese
 - **Beef:** [Mongolian Beef](recipes/Chinese/Beef/mongolian-beef.md)
-- **Chicken:** [Crispy Salt & Pepper Wings](recipes/Chinese/Chicken/salt-and-pepper-wings.md)
-- **Noodles:** [Crispy Chilli Bacon Noodles](recipes/Chinese/Noodles/crispy-chilli-bacon-noodles.md)
+- **Chicken:** [Salt & Pepper Wings](recipes/Chinese/Chicken/salt-and-pepper-wings.md)
+- **Noodles:** [Chilli Bacon Noodles](recipes/Chinese/Noodles/crispy-chilli-bacon-noodles.md)
 - **Pork:** [Dumpling Lasagna](recipes/Chinese/Pork/dumpling-lasagna.md)
 
 ### Greek
-- **Sides:** [Greek Yoghurt Sauce](recipes/Greek/Sides/greek-yoghurt-sauce.md)
+- **Sides:** [Yoghurt Sauce](recipes/Greek/Sides/greek-yoghurt-sauce.md)
 
 ### Indian
-- **Breads:** [Simple Naan (No Yeast)](recipes/Indian/Breads/simple-naan.md)
+- **Breads:** [Naan](recipes/Indian/Breads/simple-naan.md)
 - **Sides:** [Raita](recipes/Indian/Sides/raita.md)
 
 ### Italian
 - **Breads:** [Focaccia](recipes/Italian/Breads/focaccia.md)
-- **Pasta:** ['Nduja Pasta](recipes/Italian/Pasta/nduja-pasta.md), [Fettuccine Alfredo](recipes/Italian/Pasta/fettuccine-alfredo.md), [Lasagne](recipes/Italian/Pasta/lasagne.md), [Spaghetti alla Carbonara](recipes/Italian/Pasta/carbonara.md)
-- **Pork:** [Crispy Porchetta](recipes/Italian/Pork/crispy-porchetta.md)
+- **Pasta:** ['Nduja Pasta](recipes/Italian/Pasta/nduja-pasta.md), [Carbonara](recipes/Italian/Pasta/carbonara.md), [Fettuccine Alfredo](recipes/Italian/Pasta/fettuccine-alfredo.md), [Lasagne](recipes/Italian/Pasta/lasagne.md)
+- **Pork:** [Porchetta](recipes/Italian/Pork/crispy-porchetta.md)
 
 ### Japanese
-- **Chicken:** [Chicken Nanban (Fried Chicken with Tartar Sauce)](recipes/Japanese/Chicken/chicken-nanban.md), [Karaage (Japanese Fried Chicken)](recipes/Japanese/Chicken/karaage.md), [Nagoya-Style Fried Chicken Wings (Tebasaki)](recipes/Japanese/Chicken/nagoya-chicken-wings.md)
-- **Eggs:** [Ramen Egg (Ajitsuke Tamago)](recipes/Japanese/Eggs/ramen-egg.md)
+- **Chicken:** [Chicken Nanban](recipes/Japanese/Chicken/chicken-nanban.md), [Karaage](recipes/Japanese/Chicken/karaage.md), [Tebasaki Wings](recipes/Japanese/Chicken/nagoya-chicken-wings.md)
+- **Eggs:** [Ramen Eggs](recipes/Japanese/Eggs/ramen-egg.md)
 
 ### Mexican
 - **Beef:** [Carne Asada Tacos](recipes/Mexican/Beef/carne-asada-tacos.md), [Chilli Con Carne](recipes/Mexican/Beef/chilli-con-carne.md)
 
 ### South African
-- **Duck:** [Moh's Duck and Tamarind Curry](recipes/South African/Duck/mohs-duck-and-tamarind-curry.md)
-- **Sides:** [Chunky Onion and Tomato Relish](recipes/South African/Sides/chunky-onion-and-tomato-relish.md)
+- **Duck:** [Moh's Duck Curry](recipes/South African/Duck/mohs-duck-and-tamarind-curry.md)
+- **Sides:** [Onion & Tomato Relish](recipes/South African/Sides/chunky-onion-and-tomato-relish.md)
 
 ### Spanish
 - **Chicken:** [Chicken & White Bean Stew](recipes/Spanish/Chicken/chicken-and-white-bean-stew.md)
 
 ### Thai
 - **Beef:** [Thai Beef Salad](recipes/Thai/Beef/thai-beef-salad.md)
-- **Chicken:** [Thai Yellow Chicken Curry](recipes/Thai/Chicken/yellow-curry.md)
+- **Chicken:** [Yellow Curry](recipes/Thai/Chicken/yellow-curry.md)
 
 _30 recipes._
 <!-- CONTENTS:END -->

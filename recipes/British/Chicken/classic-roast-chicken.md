@@ -1,5 +1,5 @@
 ---
-title: Classic Roast Chicken
+title: Roast Chicken
 cuisine: British
 category: Chicken
 serves: 4

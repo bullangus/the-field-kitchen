@@ -1,5 +1,5 @@
 ---
-title: Chunky Onion and Tomato Relish
+title: Onion & Tomato Relish
 cuisine: South African
 category: Sides
 serves: 6

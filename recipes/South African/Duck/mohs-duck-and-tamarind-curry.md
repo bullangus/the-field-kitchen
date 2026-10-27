@@ -1,5 +1,5 @@
 ---
-title: Moh's Duck and Tamarind Curry
+title: Moh's Duck Curry
 cuisine: South African
 category: Duck
 serves: 4
@@ -63,7 +63,7 @@ A modern Durban duck curry from Mohammed Khalid Moola of Ladysmith, with a nod t
 
 1. Put the curry paste in a heavy-based pot and add the roasted duck, skin side up. Pour in whatever is left of the 750 ml (3 cups) water after blending the paste, then the orange juice, and add the sugar, tamarind and MSG.
 2. Cover and cook for about 20–30 minutes, until the duck is very tender.
-3. Scatter with fresh coriander. Serve with rice, Simple Naan and Raita (both in the Indian section).
+3. Scatter with fresh coriander. Serve with rice, Naan and Raita (both in the Indian section).
 
 ## Notes
 

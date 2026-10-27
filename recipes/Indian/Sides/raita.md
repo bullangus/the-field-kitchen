@@ -7,7 +7,7 @@ time: Prep 10 min
 source: https://www.bbcgoodfood.com/recipes/raita
 ---
 
-A cooling yoghurt and mint side with ginger and garam masala for warmth. We serve it with Moh's Duck and Tamarind Curry.
+A cooling yoghurt and mint side with ginger and garam masala for warmth. We serve it with Moh's Duck Curry.
 
 ## Ingredients
 

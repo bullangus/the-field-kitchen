@@ -1,5 +1,5 @@
 ---
-title: Crispy Porchetta
+title: Porchetta
 cuisine: Italian
 category: Pork
 serves: 12

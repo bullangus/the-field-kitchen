@@ -1,5 +1,5 @@
 ---
-title: Spaghetti alla Carbonara
+title: Carbonara
 cuisine: Italian
 category: Pasta
 serves: 3–4

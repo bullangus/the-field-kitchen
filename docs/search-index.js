@@ -1,6 +1,6 @@
 window.FIELD_KITCHEN_INDEX = [
 {
-"title": "Restaurant-Style Buffalo Chicken Wings",
+"title": "Buffalo Wings",
 "cuisine": "American",
 "category": "Chicken",
 "url": "american/chicken/buffalo-chicken-wings.html",
@@ -116,7 +116,7 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
-"title": "Maple & Caramelised Orange Glazed Ham",
+"title": "Maple Orange Glazed Ham",
 "cuisine": "Australian",
 "category": "Pork",
 "url": "australian/pork/maple-orange-glazed-ham.html",
@@ -277,7 +277,7 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
-"title": "Barbecued Whole Snapper with Lime & Chilli",
+"title": "Barbecued Snapper",
 "cuisine": "Australian",
 "category": "Seafood",
 "url": "australian/seafood/barbecued-whole-snapper.html",
@@ -464,7 +464,7 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
-"title": "Classic Roast Chicken",
+"title": "Roast Chicken",
 "cuisine": "British",
 "category": "Chicken",
 "url": "british/chicken/classic-roast-chicken.html",
@@ -543,7 +543,7 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
-"title": "Classic Trifle",
+"title": "Trifle",
 "cuisine": "British",
 "category": "Desserts",
 "url": "british/desserts/classic-trifle.html",
@@ -1034,7 +1034,7 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
-"title": "Crispy Salt & Pepper Wings",
+"title": "Salt & Pepper Wings",
 "cuisine": "Chinese",
 "category": "Chicken",
 "url": "chinese/chicken/salt-and-pepper-wings.html",
@@ -1177,7 +1177,7 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
-"title": "Crispy Chilli Bacon Noodles",
+"title": "Chilli Bacon Noodles",
 "cuisine": "Chinese",
 "category": "Noodles",
 "url": "chinese/noodles/crispy-chilli-bacon-noodles.html",
@@ -1498,7 +1498,7 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
-"title": "Greek Yoghurt Sauce",
+"title": "Yoghurt Sauce",
 "cuisine": "Greek",
 "category": "Sides",
 "url": "greek/sides/greek-yoghurt-sauce.html",
@@ -1551,13 +1551,13 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
-"title": "Simple Naan (No Yeast)",
+"title": "Naan",
 "cuisine": "Indian",
 "category": "Breads",
 "url": "indian/breads/simple-naan.html",
 "text": "260 g self-raising flour, plus extra for dusting 200 g Greek yoghurt 1 tsp fine sea salt Butter, for serving Fresh coriander, to sprinkle",
 "meta": "Serves 6 naan · Prep 10 min · Cook 10 min",
-"intro": "Two-ingredient dough, cooked in a dry pan. Good with any curry, including Moh's Duck and Tamarind Curry.",
+"intro": "Two-ingredient dough, cooked in a dry pan. Good with any curry, including Moh's Duck Curry.",
 "photo": "",
 "tags": [
 "breads",
@@ -1619,7 +1619,7 @@ window.FIELD_KITCHEN_INDEX = [
 "url": "indian/sides/raita.html",
 "text": "250 g (1 cup) Greek yoghurt 1 garlic clove Thumb-sized piece ginger, finely grated ¼ small pack (UK size) mint, leaves chopped Juice of ½ lime ½ tsp garam masala, plus a little extra to serve ¼ cucumber, grated and lightly squeezed",
 "meta": "Serves 6–8 · Prep 10 min",
-"intro": "A cooling yoghurt and mint side with ginger and garam masala for warmth. We serve it with Moh's Duck and Tamarind Curry.",
+"intro": "A cooling yoghurt and mint side with ginger and garam masala for warmth. We serve it with Moh's Duck Curry.",
 "photo": "",
 "tags": [
 "sides",
@@ -1846,6 +1846,86 @@ window.FIELD_KITCHEN_INDEX = [
 "a": "Dairy & eggs",
 "s": false,
 "p": "\\bpecorino\\b",
+"q": null,
+"u": null
+}
+]
+},
+{
+"title": "Carbonara",
+"cuisine": "Italian",
+"category": "Pasta",
+"url": "italian/pasta/carbonara.html",
+"text": "Salt 340 g (12 oz) rigatoni or spaghetti 125 g (4½ oz) guanciale (or pancetta or bacon if you must) 4 large eggs 55 g (2 oz) grated pecorino, plus extra to serve ½ tsp MSG Freshly ground black pepper",
+"meta": "Serves 3–4 · Cook 20 min",
+"intro": "The Roman way: egg yolks, pecorino, guanciale and black pepper, and nothing else. No cream.",
+"photo": "",
+"tags": [
+"pasta",
+"quick"
+],
+"serves": 3,
+"ingredients": [
+{
+"t": "Salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": null,
+"u": null
+},
+{
+"t": "340 g (12 oz) rigatoni or spaghetti",
+"n": "Spaghetti or rigatoni",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bspaghetti\\b|\\brigatoni\\b",
+"q": 340.0,
+"u": "g"
+},
+{
+"t": "125 g (4½ oz) guanciale (or pancetta or bacon if you must)",
+"n": "Guanciale",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bguanciale\\b",
+"q": 125.0,
+"u": "g"
+},
+{
+"t": "4 large eggs",
+"n": "Eggs",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\beggs?\\b",
+"q": 4.0,
+"u": null
+},
+{
+"t": "55 g (2 oz) grated pecorino, plus extra to serve",
+"n": "Pecorino",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bpecorino\\b",
+"q": 55.0,
+"u": "g"
+},
+{
+"t": "½ tsp MSG",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
+"t": "Freshly ground black pepper",
+"n": "Pepper",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bpepper(corns)?\\b",
 "q": null,
 "u": null
 }
@@ -2202,87 +2282,7 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
-"title": "Spaghetti alla Carbonara",
-"cuisine": "Italian",
-"category": "Pasta",
-"url": "italian/pasta/carbonara.html",
-"text": "Salt 340 g (12 oz) rigatoni or spaghetti 125 g (4½ oz) guanciale (or pancetta or bacon if you must) 4 large eggs 55 g (2 oz) grated pecorino, plus extra to serve ½ tsp MSG Freshly ground black pepper",
-"meta": "Serves 3–4 · Cook 20 min",
-"intro": "The Roman way: egg yolks, pecorino, guanciale and black pepper, and nothing else. No cream.",
-"photo": "",
-"tags": [
-"pasta",
-"quick"
-],
-"serves": 3,
-"ingredients": [
-{
-"t": "Salt",
-"n": "Salt",
-"a": "Herbs & spices",
-"s": true,
-"p": "\\bsalt\\b",
-"q": null,
-"u": null
-},
-{
-"t": "340 g (12 oz) rigatoni or spaghetti",
-"n": "Spaghetti or rigatoni",
-"a": "Bread, pasta & rice",
-"s": false,
-"p": "\\bspaghetti\\b|\\brigatoni\\b",
-"q": 340.0,
-"u": "g"
-},
-{
-"t": "125 g (4½ oz) guanciale (or pancetta or bacon if you must)",
-"n": "Guanciale",
-"a": "Meat & seafood",
-"s": false,
-"p": "\\bguanciale\\b",
-"q": 125.0,
-"u": "g"
-},
-{
-"t": "4 large eggs",
-"n": "Eggs",
-"a": "Dairy & eggs",
-"s": false,
-"p": "\\beggs?\\b",
-"q": 4.0,
-"u": null
-},
-{
-"t": "55 g (2 oz) grated pecorino, plus extra to serve",
-"n": "Pecorino",
-"a": "Dairy & eggs",
-"s": false,
-"p": "\\bpecorino\\b",
-"q": 55.0,
-"u": "g"
-},
-{
-"t": "½ tsp MSG",
-"n": "MSG",
-"a": "Pantry & sauces",
-"s": false,
-"p": "\\bmsg\\b",
-"q": 0.5,
-"u": "tsp"
-},
-{
-"t": "Freshly ground black pepper",
-"n": "Pepper",
-"a": "Herbs & spices",
-"s": true,
-"p": "\\bpepper(corns)?\\b",
-"q": null,
-"u": null
-}
-]
-},
-{
-"title": "Crispy Porchetta",
+"title": "Porchetta",
 "cuisine": "Italian",
 "category": "Pork",
 "url": "italian/pork/crispy-porchetta.html",
@@ -2381,7 +2381,7 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
-"title": "Chicken Nanban (Fried Chicken with Tartar Sauce)",
+"title": "Chicken Nanban",
 "cuisine": "Japanese",
 "category": "Chicken",
 "url": "japanese/chicken/chicken-nanban.html",
@@ -2577,7 +2577,7 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
-"title": "Karaage (Japanese Fried Chicken)",
+"title": "Karaage",
 "cuisine": "Japanese",
 "category": "Chicken",
 "url": "japanese/chicken/karaage.html",
@@ -2728,7 +2728,7 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
-"title": "Nagoya-Style Fried Chicken Wings (Tebasaki)",
+"title": "Tebasaki Wings",
 "cuisine": "Japanese",
 "category": "Chicken",
 "url": "japanese/chicken/nagoya-chicken-wings.html",
@@ -2852,7 +2852,7 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
-"title": "Ramen Egg (Ajitsuke Tamago)",
+"title": "Ramen Eggs",
 "cuisine": "Japanese",
 "category": "Eggs",
 "url": "japanese/eggs/ramen-egg.html",
@@ -3379,7 +3379,7 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
-"title": "Moh's Duck and Tamarind Curry",
+"title": "Moh's Duck Curry",
 "cuisine": "South African",
 "category": "Duck",
 "url": "south-african/duck/mohs-duck-and-tamarind-curry.html",
@@ -3603,7 +3603,7 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
-"title": "Chunky Onion and Tomato Relish",
+"title": "Onion & Tomato Relish",
 "cuisine": "South African",
 "category": "Sides",
 "url": "south-african/sides/chunky-onion-and-tomato-relish.html",
@@ -4023,7 +4023,7 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
-"title": "Thai Yellow Chicken Curry",
+"title": "Yellow Curry",
 "cuisine": "Thai",
 "category": "Chicken",
 "url": "thai/chicken/yellow-curry.html",

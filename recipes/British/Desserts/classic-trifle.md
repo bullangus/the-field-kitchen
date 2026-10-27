@@ -1,5 +1,5 @@
 ---
-title: Classic Trifle
+title: Trifle
 cuisine: British
 category: Desserts
 serves: 12

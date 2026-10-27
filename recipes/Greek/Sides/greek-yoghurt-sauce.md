@@ -1,5 +1,5 @@
 ---
-title: Greek Yoghurt Sauce
+title: Yoghurt Sauce
 cuisine: Greek
 category: Sides
 serves: 4

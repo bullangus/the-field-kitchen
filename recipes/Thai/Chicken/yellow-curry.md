@@ -1,5 +1,5 @@
 ---
-title: Thai Yellow Chicken Curry
+title: Yellow Curry
 cuisine: Thai
 category: Chicken
 serves: 4

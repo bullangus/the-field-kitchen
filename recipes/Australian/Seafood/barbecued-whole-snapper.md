@@ -1,5 +1,5 @@
 ---
-title: Barbecued Whole Snapper with Lime & Chilli
+title: Barbecued Snapper
 cuisine: Australian
 category: Seafood
 serves: 4

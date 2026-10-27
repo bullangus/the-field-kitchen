@@ -1,5 +1,5 @@
 ---
-title: Ramen Egg (Ajitsuke Tamago)
+title: Ramen Eggs
 cuisine: Japanese
 category: Eggs
 serves: 4 eggs

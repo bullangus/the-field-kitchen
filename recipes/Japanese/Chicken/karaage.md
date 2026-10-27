@@ -1,5 +1,5 @@
 ---
-title: Karaage (Japanese Fried Chicken)
+title: Karaage
 cuisine: Japanese
 category: Chicken
 serves: 4

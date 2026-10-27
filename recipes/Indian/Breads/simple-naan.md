@@ -1,5 +1,5 @@
 ---
-title: Simple Naan (No Yeast)
+title: Naan
 cuisine: Indian
 category: Breads
 serves: 6 naan
@@ -7,7 +7,7 @@ time: Prep 10 min · Cook 10 min
 source: https://cooksimply.co.uk/simple-naan-bread-recipe-no-yeast/
 ---
 
-Two-ingredient dough, cooked in a dry pan. Good with any curry, including Moh's Duck and Tamarind Curry.
+Two-ingredient dough, cooked in a dry pan. Good with any curry, including Moh's Duck Curry.
 
 ## Ingredients
 

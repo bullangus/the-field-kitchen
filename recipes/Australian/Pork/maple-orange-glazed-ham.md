@@ -1,5 +1,5 @@
 ---
-title: Maple & Caramelised Orange Glazed Ham
+title: Maple Orange Glazed Ham
 cuisine: Australian
 category: Pork
 serves: 8
