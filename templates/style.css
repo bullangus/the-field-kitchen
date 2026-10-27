@@ -390,30 +390,34 @@ main.home { max-width: 72rem; padding-top: 1.5rem; }
 .section-head p { margin: 0; color: var(--muted); font-style: italic; }
 
 /* Filter chips above the cuisine cards */
-.chips {
-  display: flex; flex-wrap: wrap; align-items: center; gap: 0.45rem; padding: 0.15rem 0.1rem 0.5rem; margin: 0 0 1rem;
+.chips { display: flex; align-items: center; gap: 0.6rem; margin: 0 0 1.25rem; }
+.chips[hidden] { display: none; }
+.chip-track {
+  flex: 1; min-width: 0; display: flex; align-items: center; gap: 0.3rem;
+  overflow-x: auto; scrollbar-width: none; padding: 0.2rem 0.1rem;
 }
-.chip-sep { width: 1px; height: 1.6rem; background: var(--rule); margin: 0 0.25rem; }
+/* Only when the chips don't all fit (site.js adds .overflows): a soft fade on the right. */
+.chip-track.overflows {
+  padding-right: 1.5rem;
+  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 2rem), transparent);
+  mask-image: linear-gradient(to right, #000 calc(100% - 2rem), transparent);
+}
+.chip-track::-webkit-scrollbar { display: none; }
+.chip-sep { flex: none; width: 1px; height: 1.4rem; background: var(--rule); margin: 0 0.15rem; }
 .chip-select {
-  font: inherit; font-size: 0.9rem; color: var(--ink); cursor: pointer; margin-left: auto;
-  background: var(--card); border: 1px solid var(--rule); border-radius: 999px; padding: 0.35rem 0.9rem;
+  flex: none; font: inherit; font-size: 0.85rem; color: var(--ink); cursor: pointer;
+  background: var(--card); border: 1px solid var(--rule); border-radius: 999px; padding: 0.3rem 0.8rem;
 }
 .chip-select:hover { border-color: var(--accent); }
 .chip-select.active { background: var(--ink); border-color: var(--ink); color: var(--paper); }
-/* Phones: one row that scrolls sideways instead of wrapping into a block. */
-@media (max-width: 700px) {
-  .chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
-  .chip-select { margin-left: 0; flex: none; }
-}
-.chips::-webkit-scrollbar { display: none; }
 .chip {
-  font: inherit; font-size: 0.9rem; white-space: nowrap; cursor: pointer; color: var(--ink);
-  background: var(--card); border: 1px solid var(--rule); border-radius: 999px; padding: 0.35rem 0.9rem;
+  flex: none; font: inherit; font-size: 0.85rem; white-space: nowrap; cursor: pointer; color: var(--ink);
+  background: var(--card); border: 1px solid var(--rule); border-radius: 999px; padding: 0.28rem 0.68rem;
   transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 .chip:hover { border-color: var(--accent); color: var(--accent); }
 .chip[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--paper); }
-.chip small { opacity: 0.7; margin-left: 0.25rem; }
+.chip small { opacity: 0.55; margin-left: 0.3rem; font-size: 0.75rem; }
 .filter-empty { color: var(--muted); font-style: italic; }
 
 .kitchen-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr)); grid-auto-rows: 1fr; gap: 1rem; }

@@ -554,17 +554,21 @@ def chips_html(recipes, with_styles=True):
         return ""
 
     def chip(key, label):
-        return (f'<button type="button" class="chip" data-filter="{key}" aria-pressed="false">'
-                f'{html.escape(label)}<small>{counts[key]}</small></button>')
+        n = counts[key]
+        return (f'<button type="button" class="chip" data-filter="{key}" aria-pressed="false" '
+                f'title="{n} recipe{"s" if n != 1 else ""}">{html.escape(label)}</button>')
     parts = ['<button type="button" class="chip" data-filter="" aria-pressed="true">All</button>']
     parts += [chip(k, l) for k, l in time_chips]
     if time_chips and tag_chips:
         parts.append('<span class="chip-sep" aria-hidden="true"></span>')
     parts += [chip(k, l) for k, l in tag_chips]
+    select = ""
     if styles:
         options = "".join(f'<option value="{slug(s)}">{html.escape(s)} ({counts[slug(s)]})</option>' for s in styles)
-        parts.append(f'<select class="chip-select" aria-label="Filter by style"><option value="">Any style</option>{options}</select>')
-    return (f'<div class="chips" role="group" aria-label="Filter recipes" hidden>{"".join(parts)}</div>'
+        select = f'<select class="chip-select" aria-label="Filter by style"><option value="">Any style</option>{options}</select>'
+    # One line: the chips scroll sideways if they don't fit; the style dropdown stays put.
+    return (f'<div class="chips" role="group" aria-label="Filter recipes" hidden>'
+            f'<div class="chip-track">{"".join(parts)}</div>{select}</div>'
             '<p class="filter-empty" hidden>Nothing matches that filter yet.</p>')
 
 

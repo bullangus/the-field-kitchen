@@ -263,6 +263,11 @@
     var empty = scope.querySelector(".filter-empty");
     chips.hidden = false;
     scope.classList.add("js-limited");
+    var track = chips.querySelector(".chip-track");
+    var checkOverflow = function () { track.classList.toggle("overflows", track.scrollWidth > track.clientWidth + 1); };
+    checkOverflow();
+    window.addEventListener("resize", checkOverflow);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(checkOverflow);
     // One filter at a time: a chip clears the style dropdown, and the dropdown clears the chips.
     if (select) {
       select.addEventListener("change", function () {
