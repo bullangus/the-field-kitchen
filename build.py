@@ -43,7 +43,9 @@ RECENT_COUNT = 5
 NOTES_COUNT = 3
 TONES = 6  # colour tones for the cuisine cards, .tone-1 to .tone-6 in style.css
 QUICK_MINUTES = 30
-PROJECT_MINUTES = 150
+PROJECT_MINUTES = 150  # hands-on time
+MAKE_AHEAD_MINUTES = 240  # waiting time (marinating, curing...) that means starting ahead
+PASSIVE_WORDS = r"marinat|curing|drying|rising|resting|chilling"
 TITLE = "The Field Kitchen"
 SUBTITLE = "Recipes from our family table"
 THEME_COLOR = "#8a3b24"
@@ -62,27 +64,19 @@ NAV_ICONS = {
             'M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>'),
     "flame": '<path d="M12 3c.5 3 5 5 5 10a5 5 0 0 1-10 0c0-2.5 1.5-4 2.5-5 .3 1.5 1.2 2.5 2.5 2.5-.5-2.5-.5-5 0-7.5z"/>',
 }
-# Line drawings (64x64, stroked) shown on cuisine cards and pages; new cuisines get the plate.
+# Cuisine icons (24x24 outline paths) from Tabler Icons v3.19.0, MIT licence,
+# https://tabler.io/icons. New cuisines get the knife and fork until one is added here.
 CUISINE_ART = {
-    "british": ('<ellipse cx="30" cy="38" rx="16" ry="13"/><path d="M22 25h16M28 25v-4h4v4"/>'
-                '<path d="M14 37c-6 0-8-6-11-9"/><path d="M46 31c9 0 9 13 0 13"/><path d="M18 51h24"/>'),
-    "chinese": ('<path d="M6 30h46a23 17 0 0 1-46 0z"/><path d="M52 32l9-2"/>'
-                '<path d="M20 22c-2-4 2-6 0-10M29 22c-2-4 2-6 0-10M38 22c-2-4 2-6 0-10"/>'),
-    "indian": ('<path d="M14 28h36l-4 21a7 7 0 0 1-7 6H25a7 7 0 0 1-7-6z"/><path d="M11 28h42"/>'
-               '<path d="M14 35h-5M50 35h5"/><path d="M26 20c-2-3 2-5 0-8M33 20c-2-3 2-5 0-8M40 20c-2-3 2-5 0-8"/>'),
-    "italian": ('<path d="M8 34h48a24 16 0 0 1-48 0z"/>'
-                '<path d="M16 34c2-8 6-8 8 0s6-8 8 0 6-8 8 0 6-8 8 0"/><path d="M47 6v24M43 6v7a4 4 0 0 0 8 0V6"/>'),
-    "japanese": ('<path d="M8 32h46a23 18 0 0 1-46 0z"/><path d="M15 32c4-11 28-11 32 0"/>'
-                 '<path d="M30 21 58 7M34 24 60 12"/>'),
-    "mexican": ('<path d="M8 46a24 24 0 0 1 48 0z"/><path d="M13 36c3-3 6 1 9-2s6 1 9-2 6 1 9-2 6 1 9 0"/>'
-                '<path d="M20 46a12 12 0 0 1 24 0"/><path d="M46 12c4 0 8 3 8 8"/><path d="M44 10c-2 2-2 5 0 6"/>'),
-    "south african": ('<path d="M14 24h36v12a18 16 0 0 1-36 0z"/><path d="M11 24h42"/>'
-                      '<path d="M18 24c0-11 28-11 28 0"/><path d="M21 48l-5 9M32 52v7M43 48l5 9"/>'),
-    "spanish": ('<ellipse cx="32" cy="38" rx="24" ry="10"/><path d="M8 38H2M56 38h6"/>'
-                '<circle cx="23" cy="36" r="3"/><circle cx="39" cy="41" r="3"/><path d="M29 33c4-3 8 0 6 4"/>'
-                '<path d="M42 33c2-2 5-1 5 1"/>'),
-    "_plate": ('<circle cx="32" cy="34" r="17"/><circle cx="32" cy="34" r="10"/>'
-               '<path d="M7 16v34M4 16v8a3 3 0 0 0 6 0v-8M57 16c-4 4-4 15 0 17v17"/>'),
+    'australian': '<path d="M19 8h-14a6 6 0 0 0 6 6h2a6 6 0 0 0 6 -5.775l0 -.225z" /> <path d="M17 20a2 2 0 1 1 0 -4a2 2 0 0 1 0 4z" /> <path d="M15 14l1 2" /> <path d="M9 14l-3 6" /> <path d="M15 18h-8" /> <path d="M15 5v-1" /> <path d="M12 5v-1" /> <path d="M9 5v-1" />',  # grill
+    'british': '<path d="M10.29 3h3.42a2 2 0 0 1 1.988 1.78l1.555 14a2 2 0 0 1 -1.988 2.22h-6.53a2 2 0 0 1 -1.988 -2.22l1.555 -14a2 2 0 0 1 1.988 -1.78z" /> <path d="M7.47 12.5l-4.257 -5.019a.899 .899 0 0 1 .69 -1.481h13.09a3 3 0 0 1 3.007 3v3c0 1.657 -1.346 3 -3.007 3" /> <path d="M7 17h10" />',  # teapot
+    'chinese': '<path d="M4 11h16a1 1 0 0 1 1 1v.5c0 1.5 -2.517 5.573 -4 6.5v1a1 1 0 0 1 -1 1h-8a1 1 0 0 1 -1 -1v-1c-1.687 -1.054 -4 -5 -4 -6.5v-.5a1 1 0 0 1 1 -1z" /> <path d="M19 7l-14 1" /> <path d="M19 2l-14 3" />',  # bowl-chopsticks
+    'indian': '<path d="M4 11h16a1 1 0 0 1 1 1v.5c0 1.5 -2.517 5.573 -4 6.5v1a1 1 0 0 1 -1 1h-8a1 1 0 0 1 -1 -1v-1c-1.687 -1.054 -4 -5 -4 -6.5v-.5a1 1 0 0 1 1 -1z" /> <path d="M12 4a2.4 2.4 0 0 0 -1 2a2.4 2.4 0 0 0 1 2" /> <path d="M16 4a2.4 2.4 0 0 0 -1 2a2.4 2.4 0 0 0 1 2" /> <path d="M8 4a2.4 2.4 0 0 0 -1 2a2.4 2.4 0 0 0 1 2" />',  # soup
+    'italian': '<path d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983z" /> <path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479" /> <path d="M13 11.01v-.01" /> <path d="M11 14v-.01" />',  # pizza
+    'japanese': '<path d="M16.69 7.44a6.973 6.973 0 0 0 -1.69 4.56c0 1.747 .64 3.345 1.699 4.571" /> <path d="M2 9.504c7.715 8.647 14.75 10.265 20 2.498c-5.25 -7.761 -12.285 -6.142 -20 2.504" /> <path d="M18 11v.01" /> <path d="M11.5 10.5c-.667 1 -.667 2 0 3" />',  # fish
+    'mexican': '<path d="M13 11c0 2.21 -2.239 4 -5 4s-5 -1.79 -5 -4a8 8 0 1 0 16 0a3 3 0 0 0 -6 0" /> <path d="M16 8c0 -2 2 -4 4 -4" />',  # pepper
+    'south african': '<path d="M4 21l16 -4" /> <path d="M20 21l-16 -4" /> <path d="M12 15a4 4 0 0 0 4 -4c0 -3 -2 -3 -2 -8c-4 2 -6 5 -6 8a4 4 0 0 0 4 4z" />',  # campfire
+    'spanish': '<path d="M5.5 5.5a2.5 2.5 0 0 0 -2.5 2.5c0 7.18 5.82 13 13 13a2.5 2.5 0 1 0 0 -5a8 8 0 0 1 -8 -8a2.5 2.5 0 0 0 -2.5 -2.5z" /> <path d="M5.195 5.519l-1.243 -1.989a1 1 0 0 1 .848 -1.53h1.392a1 1 0 0 1 .848 1.53l-1.245 1.99" /> <path d="M18.482 18.225l1.989 -1.243a1 1 0 0 1 1.53 .848v1.392a1 1 0 0 1 -1.53 .848l-1.991 -1.245" />',  # sausage
+    '_default': '<path d="M19 3v12h-5c-.023 -3.681 .184 -7.406 5 -12zm0 12v6h-1v-3m-10 -14v17m-3 -17v3a3 3 0 1 0 6 0v-3" />',  # tools-kitchen-2
 }
 # docs/ is fully generated, but these must survive a rebuild.
 KEEP_IN_DOCS = {".nojekyll", "CNAME"}
@@ -212,26 +206,39 @@ def all_recipes(book):
     return [r for cats in book.values() for recipes in cats.values() for r in recipes]
 
 
-def total_minutes(r):
-    """Sum of every '<n> min' and '<n> hr' in the time line (upper end of ranges), or None."""
-    time = r.get("time", "")
-    found = re.findall(r"(\d+(?:\.\d+)?)\s*(hr|min)", time)
-    if not found:
-        return None
+def minutes_in(text):
+    """Sum of every '<n> min' and '<n> hr' in text (the upper end of a range counts)."""
+    found = re.findall(r"(\d+(?:\.\d+)?)\s*(hr|min)", text)
     return sum(float(n) * (60 if unit == "hr" else 1) for n, unit in found)
+
+
+def split_time(r):
+    """(hands-on, hands-off) minutes from the time line, or None if it has no times.
+    Parts like '+ 30 min marinating' or '(mostly rising)' are waiting, not work."""
+    time = r.get("time", "")
+    if not re.search(r"\d+\s*(hr|min)", time):
+        return None
+    active = passive = 0
+    for part in re.split(r"[+·]", time):
+        if re.search(PASSIVE_WORDS, part, re.I):
+            passive += minutes_in(part)
+        else:
+            active += minutes_in(part)
+    return active, passive
 
 
 def recipe_tags(r):
     """Quick-filter tags for the home page chips, plus the recipe's style."""
     tags = [slug(r["category"])]
-    minutes = total_minutes(r)
+    times = split_time(r)
+    active, passive = times if times else (None, 0)
     text = (r.get("time", "") + " " + r["body"]).lower()
     ahead = re.search(r"day before|make ahead|made ahead|make these ahead|ahead of time|curing|drying", text)
-    if minutes is not None and minutes <= QUICK_MINUTES and not ahead:
+    if active is not None and active <= QUICK_MINUTES and not passive and not ahead:
         tags.append("quick")
-    if ahead:
+    if ahead or passive >= MAKE_AHEAD_MINUTES:
         tags.append("make-ahead")
-    if (minutes is not None and minutes >= PROJECT_MINUTES) or "day before" in r.get("time", "").lower():
+    if (active is not None and active >= PROJECT_MINUTES) or "day before" in r.get("time", "").lower():
         tags.append("project")
     return tags
 
@@ -289,9 +296,10 @@ def icon_inline():
 
 
 def cuisine_art(cuisine, css):
-    paths = CUISINE_ART.get(cuisine.lower(), CUISINE_ART["_plate"])
-    return (f'<svg class="{css}" aria-hidden="true" viewBox="0 0 64 64" fill="none" stroke="currentColor" '
-            f'stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{paths}</svg>')
+    paths = CUISINE_ART.get(cuisine.lower(), CUISINE_ART["_default"])
+    # Thinner than the icon set's default 2, since these are shown large.
+    return (f'<svg class="{css}" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+            f'stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round">{paths}</svg>')
 
 
 def intro(r):

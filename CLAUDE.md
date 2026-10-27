@@ -65,7 +65,7 @@ templates/home.js                home: random recipe tile, filter chips, fade-up
 templates/recipe.js              recipe pages: serving scaler and cook mode
 templates/sw.js                  offline cache; build.py fills in the file list and version
 build.py                         generates everything in docs/ (standard library only); cuisine
-                                 line drawings live in its CUISINE_ART (new cuisines get a plate)
+                                 icons (Tabler, MIT) live in its CUISINE_ART; add one per new cuisine
 docs/                            GENERATED, wiped and rebuilt each run (.nojekyll kept):
   index.html                       home (wide bento grid): title tile with counts, random "Why not
                                    cook…" tile, recently added (git add date), newest dated note per
@@ -78,7 +78,7 @@ docs/                            GENERATED, wiped and rebuilt each run (.nojekyl
 README.md                        contents list between the CONTENTS markers is GENERATED
 ```
 
-Filter chips come from each recipe's `time` line and text: "Under 30 min" (total time ≤ 30 and nothing made ahead), "Make ahead" (mentions the day before, making ahead, curing or drying), "Weekend project" (≥ 150 min or a day-before start), plus one chip per style. Keep `time` lines in the `Prep X min · Cook Y hr` form so they're counted.
+Filter chips come from each recipe's `time` line and text. Parts of the time line that mention marinating, curing, drying, rising, resting or chilling count as waiting, the rest as hands-on. "Under 30 min" = hands-on ≤ 30 with no waiting and nothing made ahead; "Make ahead" = mentions the day before, making ahead, curing or drying, or has 4+ hours of waiting; "Weekend project" = 150+ hands-on minutes or a day-before start; plus one chip per style. Keep `time` lines in the `Prep X min + Y hr marinating · Cook Z min` form so they're counted.
 
 The serving scaler on recipe pages only scales ingredient amounts that have a unit (g, ml, cups, tbsp…) or a count at the start of the line, and says so on the page; method text is never changed. Write ingredient lines with the amount first so they scale.
 
