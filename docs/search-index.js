@@ -1123,6 +1123,59 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
+"title": "Greek Yoghurt Sauce",
+"cuisine": "Greek",
+"category": "Sides",
+"url": "greek/sides/greek-yoghurt-sauce.html",
+"text": "250 g (1 cup) Greek yoghurt 15–30 ml (1–2 tbsp) lemon juice (about ½ lemon) ¼ tsp salt A few grinds of black pepper",
+"meta": "Serves 4 · Prep 5 min",
+"intro": "Our simple, tangy yoghurt sauce: just yoghurt, lemon, salt and pepper, mixed to taste.",
+"photo": "",
+"tags": [
+"sides",
+"quick"
+],
+"serves": 4,
+"ingredients": [
+{
+"t": "250 g (1 cup) Greek yoghurt",
+"n": "Greek yoghurt",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\byoghurt\\b",
+"q": 250.0,
+"u": "g"
+},
+{
+"t": "15–30 ml (1–2 tbsp) lemon juice (about ½ lemon)",
+"n": "Lemons",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\blemons?\\b",
+"q": 30.0,
+"u": "ml"
+},
+{
+"t": "¼ tsp salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": 0.25,
+"u": "tsp"
+},
+{
+"t": "A few grinds of black pepper",
+"n": "Pepper",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bpepper(corns)?\\b",
+"q": null,
+"u": null
+}
+]
+},
+{
 "title": "Simple Naan (No Yeast)",
 "cuisine": "Indian",
 "category": "Breads",

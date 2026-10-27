@@ -23,6 +23,9 @@
 - **Noodles:** [Crispy Chilli Bacon Noodles](recipes/Chinese/Noodles/crispy-chilli-bacon-noodles.md)
 - **Pork:** [Dumpling Lasagna](recipes/Chinese/Pork/dumpling-lasagna.md)
 
+### Greek
+- **Sides:** [Greek Yoghurt Sauce](recipes/Greek/Sides/greek-yoghurt-sauce.md)
+
 ### Indian
 - **Breads:** [Simple Naan (No Yeast)](recipes/Indian/Breads/simple-naan.md)
 - **Sides:** [Raita](recipes/Indian/Sides/raita.md)
@@ -46,7 +49,7 @@
 ### Spanish
 - **Chicken:** [Chicken & White Bean Stew](recipes/Spanish/Chicken/chicken-and-white-bean-stew.md)
 
-_25 recipes._
+_26 recipes._
 <!-- CONTENTS:END -->
 
 ## How it's organised
