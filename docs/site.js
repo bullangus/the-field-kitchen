@@ -35,6 +35,23 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
+  // ---- Light / dark ----
+  // The choice is a per-browser convenience; without storage it lasts for the visit.
+  var themeToggle = nav.querySelector(".theme-toggle");
+  themeToggle.addEventListener("click", function () {
+    var html = document.documentElement;
+    var dark = html.getAttribute("data-theme") === "dark" ||
+      (!html.getAttribute("data-theme") && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    var next = dark ? "light" : "dark";
+    html.setAttribute("data-theme", next);
+    try { localStorage.setItem("fk-theme", next); } catch (e) { /* storage blocked */ }
+  });
+
+  // ---- Offline / install ----
+  if ("serviceWorker" in navigator && location.protocol === "https:") {
+    navigator.serviceWorker.register(root + "sw.js").catch(function () { /* the site still works online */ });
+  }
+
   // ---- Search ----
   var input = nav.querySelector(".search input");
   var list = nav.querySelector(".search-results");

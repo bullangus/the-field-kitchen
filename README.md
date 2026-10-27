@@ -44,4 +44,4 @@ recipes/
       <recipe-name>.md
 ```
 
-Each recipe is one Markdown file using [templates/recipe.md](templates/recipe.md). `python build.py` regenerates the contents above and the whole website in `docs/` (one page per cuisine and recipe, plus the printable `book.html`). Don't edit either of those by hand.
+Each recipe is one Markdown file using [templates/recipe.md](templates/recipe.md). To add a photo, drop it in [photos/](photos/README.md) named after the recipe file (e.g. `photos/lasagne.jpg`). `python build.py` regenerates the contents above and the whole website in `docs/` (one page per cuisine and recipe, plus the printable `book.html`). Don't edit either of those by hand.
