@@ -1,5 +1,15 @@
 window.FIELD_KITCHEN_INDEX = [
 {
+"title": "Maple & Caramelised Orange Glazed Ham",
+"cuisine": "Australian",
+"category": "Pork",
+"url": "australian/pork/maple-orange-glazed-ham.html",
+"text": "1 medium orange, thinly sliced into ¼ cm rings 250 ml (1 cup) maple syrup 125 ml (½ cup) Italian white wine vinegar 125 g (½ cup) Dijon mustard 125 ml (½ cup) fresh orange juice 110 g (½ cup) caster sugar 125 ml (½ cup) Grand Marnier or similar orange liqueur 5 whole cloves ¼ tsp ground allspice 1½ tsp whole coriander seeds ½ tsp whole black peppercorns 1 half leg ham 2 carrots, peeled and cut into large chunks 2 celery stalks, cut into large chunks 1 brown onion, cut into large chunks 1 head garlic, split in half horizontally",
+"meta": "Serves 8 · Prep 20 min · Cook 3 hr 45 min",
+"intro": "A Christmas ham glazed with maple, orange and Grand Marnier, with candied orange slices pressed over the top and a sauce from the pan juices.",
+"photo": ""
+},
+{
 "title": "Classic Roast Chicken",
 "cuisine": "British",
 "category": "Chicken",
@@ -57,6 +67,16 @@ window.FIELD_KITCHEN_INDEX = [
 "text": "250 g (1 cup) Greek yoghurt 1 garlic clove Thumb-sized piece ginger, finely grated ¼ small pack (UK size) mint, leaves chopped Juice of ½ lime ½ tsp garam masala, plus a little extra to serve ¼ cucumber, grated and lightly squeezed",
 "meta": "Serves 6–8 · Prep 10 min",
 "intro": "A cooling yoghurt and mint side with ginger and garam masala for warmth. We serve it with Moh's Duck and Tamarind Curry.",
+"photo": ""
+},
+{
+"title": "Focaccia",
+"cuisine": "Italian",
+"category": "Breads",
+"url": "italian/breads/focaccia.html",
+"text": "7 g (1 sachet / ¼ oz) active dry yeast 680 g water (113 g / ½ cup lukewarm, plus 567 g / 2½ cups at room temperature) 780 g (6 cups) bread flour 17 g (2 tbsp) Diamond Crystal kosher salt 110 g (½ cup) extra-virgin olive oil, plus more for oiling your hands 55 g (¼ cup) extra-virgin olive oil Fresh rosemary leaves Flaky salt 60 ml (¼ cup) olive oil 1½ tbsp Sichuan peppercorns ½ tbsp black peppercorns ½ tbsp white peppercorns 2 large onions, halved and sliced into thin rings 60 ml (4 tbsp) vegetable oil ½ tbsp sugar, more to taste 30 ml (2 tbsp) soy sauce",
+"meta": "Serves 1 half-sheet pan · Prep 3 hr 45 min (mostly rising) · Cook 30 min",
+"intro": "Claire Saffitz's focaccia: a very wet, well-kneaded dough baked in a half-sheet pan for a tall, airy crumb and a crisp, oily base. Our usual toppings are garlic, rosemary or chilli garlic; the Sichuan pepper oil and soy caramelised onions below are the other favourite.",
 "photo": ""
 },
 {

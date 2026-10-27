@@ -7,6 +7,9 @@
 ## Contents
 
 <!-- CONTENTS:START -->
+### Australian
+- **Pork:** [Maple & Caramelised Orange Glazed Ham](recipes/Australian/Pork/maple-orange-glazed-ham.md)
+
 ### British
 - **Chicken:** [Classic Roast Chicken](recipes/British/Chicken/classic-roast-chicken.md)
 
@@ -20,6 +23,7 @@
 - **Sides:** [Raita](recipes/Indian/Sides/raita.md)
 
 ### Italian
+- **Breads:** [Focaccia](recipes/Italian/Breads/focaccia.md)
 - **Pasta:** [Fettuccine Alfredo](recipes/Italian/Pasta/fettuccine-alfredo.md), [Lasagne](recipes/Italian/Pasta/lasagne.md)
 - **Pork:** [Crispy Porchetta](recipes/Italian/Pork/crispy-porchetta.md)
 
@@ -36,7 +40,7 @@
 ### Spanish
 - **Chicken:** [Chicken & White Bean Stew](recipes/Spanish/Chicken/chicken-and-white-bean-stew.md)
 
-_15 recipes._
+_17 recipes._
 <!-- CONTENTS:END -->
 
 ## How it's organised
