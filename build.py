@@ -84,6 +84,7 @@ CUISINE_ART = {
     'australian': '<path d="M19 8h-14a6 6 0 0 0 6 6h2a6 6 0 0 0 6 -5.775l0 -.225z" /> <path d="M17 20a2 2 0 1 1 0 -4a2 2 0 0 1 0 4z" /> <path d="M15 14l1 2" /> <path d="M9 14l-3 6" /> <path d="M15 18h-8" /> <path d="M15 5v-1" /> <path d="M12 5v-1" /> <path d="M9 5v-1" />',  # grill
     'british': '<path d="M10.29 3h3.42a2 2 0 0 1 1.988 1.78l1.555 14a2 2 0 0 1 -1.988 2.22h-6.53a2 2 0 0 1 -1.988 -2.22l1.555 -14a2 2 0 0 1 1.988 -1.78z" /> <path d="M7.47 12.5l-4.257 -5.019a.899 .899 0 0 1 .69 -1.481h13.09a3 3 0 0 1 3.007 3v3c0 1.657 -1.346 3 -3.007 3" /> <path d="M7 17h10" />',  # teapot
     'chinese': '<path d="M4 11h16a1 1 0 0 1 1 1v.5c0 1.5 -2.517 5.573 -4 6.5v1a1 1 0 0 1 -1 1h-8a1 1 0 0 1 -1 -1v-1c-1.687 -1.054 -4 -5 -4 -6.5v-.5a1 1 0 0 1 1 -1z" /> <path d="M19 7l-14 1" /> <path d="M19 2l-14 3" />',  # bowl-chopsticks
+    'greek': '<path d="M18 4a2 2 0 0 1 1.185 3.611c1.55 2.94 .873 6.917 -1.892 9.682c-2.765 2.765 -6.743 3.442 -9.682 1.892a2 2 0 1 1 -2.796 -2.796c-1.55 -2.94 -.873 -6.917 1.892 -9.682c2.765 -2.765 6.743 -3.442 9.682 -1.892a2 2 0 0 1 1.611 -.815z" />',  # lemon-2
     'indian': '<path d="M4 11h16a1 1 0 0 1 1 1v.5c0 1.5 -2.517 5.573 -4 6.5v1a1 1 0 0 1 -1 1h-8a1 1 0 0 1 -1 -1v-1c-1.687 -1.054 -4 -5 -4 -6.5v-.5a1 1 0 0 1 1 -1z" /> <path d="M12 4a2.4 2.4 0 0 0 -1 2a2.4 2.4 0 0 0 1 2" /> <path d="M16 4a2.4 2.4 0 0 0 -1 2a2.4 2.4 0 0 0 1 2" /> <path d="M8 4a2.4 2.4 0 0 0 -1 2a2.4 2.4 0 0 0 1 2" />',  # soup
     'italian': '<path d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983z" /> <path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479" /> <path d="M13 11.01v-.01" /> <path d="M11 14v-.01" />',  # pizza
     'japanese': '<path d="M16.69 7.44a6.973 6.973 0 0 0 -1.69 4.56c0 1.747 .64 3.345 1.699 4.571" /> <path d="M2 9.504c7.715 8.647 14.75 10.265 20 2.498c-5.25 -7.761 -12.285 -6.142 -20 2.504" /> <path d="M18 11v.01" /> <path d="M11.5 10.5c-.667 1 -.667 2 0 3" />',  # fish
@@ -92,15 +93,17 @@ CUISINE_ART = {
     'spanish': '<path d="M5.5 5.5a2.5 2.5 0 0 0 -2.5 2.5c0 7.18 5.82 13 13 13a2.5 2.5 0 1 0 0 -5a8 8 0 0 1 -8 -8a2.5 2.5 0 0 0 -2.5 -2.5z" /> <path d="M5.195 5.519l-1.243 -1.989a1 1 0 0 1 .848 -1.53h1.392a1 1 0 0 1 .848 1.53l-1.245 1.99" /> <path d="M18.482 18.225l1.989 -1.243a1 1 0 0 1 1.53 .848v1.392a1 1 0 0 1 -1.53 .848l-1.991 -1.245" />',  # sausage
     '_default': '<path d="M19 3v12h-5c-.023 -3.681 .184 -7.406 5 -12zm0 12v6h-1v-3m-10 -14v17m-3 -17v3a3 3 0 1 0 6 0v-3" />',  # tools-kitchen-2
 }
-# Where each cuisine sits on the home page map: (longitude, latitude, label side).
+# Where each cuisine sits on the home page map: (longitude, latitude, label side:
+# "start" right of the pin, "end" left of it, "above" over it).
 # Add one per new cuisine; cuisines without a place are left off the map.
 CUISINE_PLACES = {
     "american": (-98, 39, "end"),
     "australian": (134, -25, "end"),
     "british": (-2, 54, "end"),
     "chinese": (104, 34, "start"),
+    "greek": (22, 39, "start"),
     "indian": (78, 22, "end"),
-    "italian": (12.5, 42.5, "start"),
+    "italian": (12.5, 42.5, "above"),
     "japanese": (138, 37, "start"),
     "mexican": (-102, 23, "end"),
     "south african": (25, -29, "start"),
@@ -538,13 +541,14 @@ def world_map(book):
         lon, lat, side = place
         x, y = lon + 180, 80 - lat
         n = sum(len(rs) for rs in cats.values())
-        dx = 4.5 if side == "start" else -4.5
+        # Label to the right ("start"), left ("end") or centred above the pin ("above").
+        dx, dy, anchor = {"start": (4.5, 1.4, "start"), "end": (-4.5, 1.4, "end"), "above": (0, -4.5, "middle")}[side]
         pins.append(
             f'<a class="pin tone-{i % TONES + 1}" href="{cuisine_url(cuisine)}" '
             f'aria-label="{html.escape(cuisine)}: {n} recipe{"s" if n != 1 else ""}">'
             f'<circle class="pin-pulse" cx="{x:g}" cy="{y:g}" r="3"/>'
             f'<circle class="pin-dot" cx="{x:g}" cy="{y:g}" r="{1.6 + min(n, 6) * 0.25:g}"/>'
-            f'<text x="{x + dx:g}" y="{y + 1.4:g}" text-anchor="{side}">{html.escape(cuisine)}</text></a>')
+            f'<text x="{x + dx:g}" y="{y + dy:g}" text-anchor="{anchor}">{html.escape(cuisine)}</text></a>')
     return f"""
   <section class="atlas reveal" aria-label="Where our recipes come from">
     <div class="section-head">
@@ -733,12 +737,16 @@ def recipe_page_html(book, r, prev, nxt):
     intro_md, parts = sections(r["body"])
     serves = re.match(r"\d+", r["serves"])
     if serves:
+        # The scaler starts from the first number; whatever follows it is shown underneath.
+        # A range ("2–3") reads oddly as "–3", so ranges show in full instead.
+        rest = r["serves"][len(serves.group()):].strip()
+        if re.match(r"[–-]\s*\d", rest):
+            rest = f"recipe says {r['serves']}"
         serves_html = (f'<div class="scaler" data-base="{serves.group()}">'
                        '<button type="button" class="scale-down" aria-label="Fewer servings">−</button>'
                        f'<output aria-live="polite">{serves.group()}</output>'
                        '<button type="button" class="scale-up" aria-label="More servings">+</button></div>'
-                       + (f'<small>{html.escape(r["serves"][len(serves.group()):].strip())}</small>'
-                          if r["serves"][len(serves.group()):].strip() else ""))
+                       + (f'<small>{html.escape(rest)}</small>' if rest else ""))
     else:
         serves_html = f'<strong>{html.escape(r["serves"])}</strong>'
     facts = (f'<div class="fact fact-serves"><span>Serves</span>{serves_html}</div>'
