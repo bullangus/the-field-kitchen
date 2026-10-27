@@ -56,34 +56,43 @@ Update the recipe itself (quantities, steps, timings). Unless told otherwise, al
 ```
 recipes/<Cuisine>/<Style>/*.md   one file per recipe (files starting with _ are skipped)
 photos/<recipe-file-name>.jpg    optional photo per recipe, matched by file name (see photos/README.md)
+build.py                         generates everything in docs/ (standard library only). Tables to
+                                 extend as the book grows: CUISINE_ART (Tabler icons, MIT) and
+                                 CUISINE_PLACES (map pin) per cuisine
+ingredients.py                   reads ingredient lines: amount, unit, shopping name, aisle, staple.
+                                 Add an INGREDIENTS entry when a recipe brings a new ingredient
 templates/recipe.md              the recipe format to copy
 templates/style.css              all styling: colour tokens (light + dark), screen and print
-templates/page.html              shell for website pages (home, cuisine, recipe)
-templates/book.html              shell for the one-page printable book
+templates/page.html, book.html   page shells (site pages; the one-page printable book)
 templates/icon.svg, icon-*.png   chef's hat: favicon, nav bar, and phone home-screen icons
-templates/site.js                every page: nav menus, light/dark toggle, search, offline registration
-templates/home.js                home: random recipe tile, filter chips, fade-up on scroll
-templates/recipe.js              recipe pages: serving scaler and cook mode
+templates/world-dots.json        land dots for the home page map (Natural Earth via world-atlas)
+templates/site.js                every page: nav, light/dark, search, Ctrl/Cmd+K palette, filter
+                                 chips, fade-up and self-drawing icons, card tilt, offline
+templates/home.js                home: random "Why not cook…" tile
+templates/recipe.js              recipe pages: tick-offs, ingredient highlighting, scaler, phone
+                                 tabs, add to shopping list, step-by-step view with timers and voice
+templates/tools.js               shopping list and "What can I cook?" pages
 templates/sw.js                  offline cache; build.py fills in the file list and version
-build.py                         generates everything in docs/ (standard library only); cuisine
-                                 icons (Tabler, MIT) live in its CUISINE_ART; add one per new cuisine
 docs/                            GENERATED, wiped and rebuilt each run (.nojekyll kept):
-  index.html                       home (wide bento grid): title tile with counts, random "Why not
-                                   cook…" tile, recently added (git add date), newest dated note per
-                                   recipe as a quote, filter chips, then a tinted card per cuisine
-  <cuisine>/index.html             one page per cuisine, recipes grouped by style
-  <cuisine>/<style>/<recipe>.html  one page per recipe, with previous/next links
-  book.html                        the whole book on one page, for printing
-  search-index.js                  every recipe's title, place, ingredients, intro and photo
+  index.html                       home: bento tiles, world map, filter chips, a card per cuisine
+                                   (at most 3 recipes each, all the same height)
+  <cuisine>/index.html             coloured header with the cuisine icon, recipe cards by style
+  <cuisine>/<style>/<recipe>.html  coloured header with fact tiles; ingredients pinned beside the
+                                   method (tabs on phones); notes panel; previous/next
+  list.html, cook.html             shopping list; "What can I cook?"
+  book.html                        the whole book for printing, previewed as paper sheets on screen
+  search-index.js                  every recipe's details plus its parsed ingredients
   sw.js, manifest.webmanifest      install-to-phone and offline support
 README.md                        contents list between the CONTENTS markers is GENERATED
 ```
 
 Filter chips come from each recipe's `time` line and text. Parts of the time line that mention marinating, curing, drying, rising, resting or chilling count as waiting, the rest as hands-on. "Under 30 min" = hands-on ≤ 30 with no waiting and nothing made ahead; "Make ahead" = mentions the day before, making ahead, curing or drying, or has 4+ hours of waiting; "Weekend project" = 150+ hands-on minutes or a day-before start; plus one chip per style. Keep `time` lines in the `Prep X min + Y hr marinating · Cook Z min` form so they're counted.
 
+Ingredient lines feed the shopping list (merged by shopping name and unit, sorted by aisle), "What can I cook?" and ingredient highlighting, so keep each line one ingredient with the amount first. Shopping lists, pantry picks and recent recipes are per-browser conveniences (localStorage). The step-by-step view turns any duration in a step ("simmer for 10 minutes") into a timer button.
+
 The serving scaler on recipe pages only scales ingredient amounts that have a unit (g, ml, cups, tbsp…) or a count at the start of the line, and says so on the page; method text is never changed. Write ingredient lines with the amount first so they scale.
 
-Every site page has a sticky nav bar (home, a Cuisines dropdown, Print, light/dark toggle; a menu panel on phones) and a search box ("/" focuses it) that matches every word typed against titles, cuisines, styles and ingredients. Page titles carry a `view-transition-name` so they glide between pages; motion is off for readers who prefer reduced motion. Cuisines, styles and recipes are ordered alphabetically; previous/next follows that same order. In `book.html` each cuisine gets a divider page and in print every recipe starts on a new page; the nav and pager are hidden in print. Never hand-edit anything in `docs/` or the README contents block. Change the recipe files or the templates and rebuild.
+Every site page has a sticky nav bar (home, a Cuisines dropdown, What can I cook?, Print, the shopping list basket, light/dark toggle; a menu panel on phones) and a search box ("/" focuses it) that matches every word typed against titles, cuisines, styles and ingredients. Page titles carry a `view-transition-name` so they glide between pages; motion is off for readers who prefer reduced motion. Cuisines, styles and recipes are ordered alphabetically; previous/next follows that same order. In `book.html` each cuisine gets a divider page and in print every recipe starts on a new page; the nav and pager are hidden in print. Never hand-edit anything in `docs/` or the README contents block. Change the recipe files or the templates and rebuild.
 
 ---
 

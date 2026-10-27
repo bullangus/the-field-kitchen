@@ -27,27 +27,45 @@
         <button type="button" class="nav-button cuisine-toggle current" aria-expanded="false" aria-controls="cuisine-list">Cuisines<svg class="chevron" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
         <ul class="cuisine-list" id="cuisine-list"><li><a href="../../australian/index.html">Australian<small>2</small></a></li><li><a href="../../british/index.html">British<small>1</small></a></li><li><a href="../../chinese/index.html">Chinese<small>3</small></a></li><li><a href="../../indian/index.html" aria-current="page">Indian<small>2</small></a></li><li><a href="../../italian/index.html">Italian<small>6</small></a></li><li><a href="../../japanese/index.html">Japanese<small>3</small></a></li><li><a href="../../mexican/index.html">Mexican<small>1</small></a></li><li><a href="../../south-african/index.html">South African<small>1</small></a></li><li><a href="../../spanish/index.html">Spanish<small>1</small></a></li></ul>
       </div>
+      <a class="nav-button" href="../../cook.html"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/></svg>What can I cook?</a>
       <a class="nav-button print" href="../../book.html"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6"/><rect x="6" y="14" width="12" height="7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/></svg>Print</a>
       <form class="search" role="search">
-        <label class="search-field"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" placeholder="Search recipes" aria-label="Search recipes or ingredients" autocomplete="off"><kbd>/</kbd></label>
+        <label class="search-field"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" placeholder="Search recipes" aria-label="Search recipes or ingredients" autocomplete="off"><kbd title="Ctrl or ⌘ K opens the command palette">/</kbd></label>
         <ul class="search-results" hidden></ul>
       </form>
     </div>
+    <a class="nav-button list-link" href="../../list.html" aria-label="Shopping list"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16l-1.6 9.6a2 2 0 0 1-2 1.7H7.6a2 2 0 0 1-2-1.7z"/><path d="m8 9 4-5 4 5"/><path d="M10 13v3M14 13v3"/></svg><span class="list-count" hidden>0</span></a>
     <button type="button" class="nav-button theme-toggle" aria-label="Switch between light and dark"><svg class="moon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><svg class="sun" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
     <button type="button" class="nav-button menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Menu"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
 </nav>
-<main>
+<main class="wide">
 <div class="read-progress" aria-hidden="true"></div>
-<article class="recipe solo">
-  
-  <p class="kicker"><a href="../../indian/index.html">Indian</a> · Sides</p>
-  <h3 style="view-transition-name: r-indian-sides-raita">Raita</h3>
-  <p class="meta">Serves 6–8 · Prep 10 min</p>
-  <div class="recipe-tools" hidden><div class="scaler" data-base="6"><span>Serves</span><button type="button" class="scale-down" aria-label="Fewer servings">−</button><output aria-live="polite">6</output><button type="button" class="scale-up" aria-label="More servings">+</button></div><button type="button" class="pill pill-outline cook-toggle" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c.5 3 5 5 5 10a5 5 0 0 1-10 0c0-2.5 1.5-4 2.5-5 .3 1.5 1.2 2.5 2.5 2.5-.5-2.5-.5-5 0-7.5z"/></svg>Cook mode</button></div><p class="scale-note" hidden>Amounts with a number are scaled and rounded. Amounts in the method, and things like "to taste" or "a handful", stay as written.</p>
-  <p>A cooling yoghurt and mint side with ginger and garam masala for warmth. We serve it with Moh's Duck and Tamarind Curry.</p>
-<h4 class="part part-ingredients">Ingredients</h4>
-<ul>
+<article class="recipe-page" data-url="indian/sides/raita.html">
+  <header class="recipe-hero tone-4">
+    <svg class="hero-art draw" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M4 11h16a1 1 0 0 1 1 1v.5c0 1.5 -2.517 5.573 -4 6.5v1a1 1 0 0 1 -1 1h-8a1 1 0 0 1 -1 -1v-1c-1.687 -1.054 -4 -5 -4 -6.5v-.5a1 1 0 0 1 1 -1z" /> <path pathLength="1" d="M12 4a2.4 2.4 0 0 0 -1 2a2.4 2.4 0 0 0 1 2" /> <path pathLength="1" d="M16 4a2.4 2.4 0 0 0 -1 2a2.4 2.4 0 0 0 1 2" /> <path pathLength="1" d="M8 4a2.4 2.4 0 0 0 -1 2a2.4 2.4 0 0 0 1 2" /></svg>
+    <div class="hero-text">
+      <p class="kicker"><a href="../../indian/index.html">Indian</a> · Sides</p>
+      <h1 style="view-transition-name: r-indian-sides-raita">Raita</h1>
+      <p class="hero-intro">A cooling yoghurt and mint side with ginger and garam masala for warmth. We serve it with Moh's Duck and Tamarind Curry.</p>
+      <div class="facts"><div class="fact fact-serves"><span>Serves</span><div class="scaler" data-base="6"><button type="button" class="scale-down" aria-label="Fewer servings">−</button><output aria-live="polite">6</output><button type="button" class="scale-up" aria-label="More servings">+</button></div><small>–8</small></div><div class="fact"><span>Prep</span><strong>10 min</strong></div></div>
+      <div class="tags"><span class="tag">Under 30 min</span></div>
+      <div class="hero-actions">
+        <button type="button" class="pill pill-solid start-cooking" hidden><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4.5v15l12.5-7.5z"/></svg>Start cooking</button>
+        <button type="button" class="pill pill-outline add-to-list" hidden><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>Add to shopping list</button>
+      </div>
+    </div>
+    
+  </header>
+  <div class="recipe-tabs" role="tablist" aria-label="Recipe sections" hidden>
+    <button type="button" role="tab" aria-selected="true" data-tab="ingredients">Ingredients</button>
+    <button type="button" role="tab" aria-selected="false" data-tab="method">Method</button>
+  </div>
+  <div class="recipe-layout" data-tab="ingredients">
+    <aside class="ingredients-panel" aria-label="Ingredients">
+      <h2>Ingredients</h2>
+      <p class="scale-note" hidden>Amounts with a number are scaled and rounded. Amounts in the method, and things like "to taste" or "a handful", stay as written.</p>
+      <ul>
 <li>250 g (1 cup) Greek yoghurt</li>
 <li>1 garlic clove</li>
 <li>Thumb-sized piece ginger, finely grated</li>
@@ -56,15 +74,18 @@
 <li>½ tsp garam masala, plus a little extra to serve</li>
 <li>¼ cucumber, grated and lightly squeezed</li>
 </ul>
-<h4 class="part part-method">Method</h4>
-<ol>
+      <p class="panel-hint">Tick things off as you go. Tap an ingredient's name to see where it's used.</p>
+    </aside>
+    <div class="method-panel">
+      <h2>Method</h2>
+      <ol>
 <li>Mix all the ingredients together and season.</li>
 <li>Serve sprinkled with extra garam masala.</li>
 </ol>
-<h4 class="part part-notes">Notes</h4>
-<ul>
-<li>2026-10-28: Left out the coriander (½ small pack, chopped, in the original). We make it without.</li>
-</ul>
+      
+    </div>
+  </div>
+  <section class="notes-panel reveal"><h2>From our kitchen</h2><div class="notes-columns"><div><h3>How we make it</h3><ol class="changes"><li><time datetime="2026-10-28">28 Oct 2026</time><p>Left out the coriander (½ small pack, chopped, in the original). We make it without.</p></li></ol></div></div></section>
   <p class="source">Source: <a href="https://www.bbcgoodfood.com/recipes/raita">bbcgoodfood.com</a></p>
 </article>
 <nav class="pager" aria-label="More recipes"><a class="prev" href="../../indian/breads/simple-naan.html"><span>Previous</span>Simple Naan (No Yeast)</a><a class="next" href="../../italian/breads/focaccia.html"><span>Next</span>Focaccia</a></nav>

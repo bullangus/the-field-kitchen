@@ -27,17 +27,25 @@
         <button type="button" class="nav-button cuisine-toggle" aria-expanded="false" aria-controls="cuisine-list">Cuisines<svg class="chevron" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
         <ul class="cuisine-list" id="cuisine-list"><li><a href="australian/index.html">Australian<small>2</small></a></li><li><a href="british/index.html">British<small>1</small></a></li><li><a href="chinese/index.html">Chinese<small>3</small></a></li><li><a href="indian/index.html">Indian<small>2</small></a></li><li><a href="italian/index.html">Italian<small>6</small></a></li><li><a href="japanese/index.html">Japanese<small>3</small></a></li><li><a href="mexican/index.html">Mexican<small>1</small></a></li><li><a href="south-african/index.html">South African<small>1</small></a></li><li><a href="spanish/index.html">Spanish<small>1</small></a></li></ul>
       </div>
+      <a class="nav-button" href="cook.html"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/></svg>What can I cook?</a>
       <a class="nav-button print" href="book.html" aria-current="page"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6"/><rect x="6" y="14" width="12" height="7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/></svg>Print</a>
       <form class="search" role="search">
-        <label class="search-field"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" placeholder="Search recipes" aria-label="Search recipes or ingredients" autocomplete="off"><kbd>/</kbd></label>
+        <label class="search-field"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" placeholder="Search recipes" aria-label="Search recipes or ingredients" autocomplete="off"><kbd title="Ctrl or ⌘ K opens the command palette">/</kbd></label>
         <ul class="search-results" hidden></ul>
       </form>
     </div>
+    <a class="nav-button list-link" href="list.html" aria-label="Shopping list"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16l-1.6 9.6a2 2 0 0 1-2 1.7H7.6a2 2 0 0 1-2-1.7z"/><path d="m8 9 4-5 4 5"/><path d="M10 13v3M14 13v3"/></svg><span class="list-count" hidden>0</span></a>
     <button type="button" class="nav-button theme-toggle" aria-label="Switch between light and dark"><svg class="moon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><svg class="sun" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
     <button type="button" class="nav-button menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Menu"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
 </nav>
-<main>
+<main class="book-pages">
+  <section class="print-intro">
+    <p class="eyebrow">The whole book</p>
+    <h1>Ready to print</h1>
+    <p>Every recipe on its own page, with a cover, contents and a divider for each cuisine. The pages below are a preview; print it, or choose "Save as PDF" to keep a copy.</p>
+    <button type="button" class="pill pill-solid" data-print><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6"/><rect x="6" y="14" width="12" height="7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/></svg>Print or save as PDF</button>
+  </section>
   <header class="cover">
     <h1>The Field Kitchen</h1>
     <div class="ornament">· · ·</div>
@@ -130,7 +138,6 @@
   <p class="kicker">Australian · Pork</p>
   <h3>Maple &amp; Caramelised Orange Glazed Ham</h3>
   <p class="meta">Serves 8 · Prep 20 min · Cook 3 hr 45 min</p>
-  
   <p>A Christmas ham glazed with maple, orange and Grand Marnier, with candied orange slices pressed over the top and a sauce from the pan juices.</p>
 <h4 class="part part-ingredients">Ingredients</h4>
 <ul>
@@ -187,7 +194,6 @@
   <p class="kicker">Australian · Seafood</p>
   <h3>Barbecued Whole Snapper with Lime &amp; Chilli</h3>
   <p class="meta">Serves 4 · Prep 15 min · Cook 35 min</p>
-  
   <p>A whole snapper stuffed with lemongrass, garlic and makrut lime, coated in sesame seeds and cooked standing upright in a foil parcel on the barbecue, then dressed with a sweet chilli, lime and ginger dressing.</p>
 <h4 class="part part-ingredients">Ingredients</h4>
 <ul>
@@ -238,7 +244,6 @@
   <p class="kicker">British · Chicken</p>
   <h3>Classic Roast Chicken</h3>
   <p class="meta">Serves 4 · Prep 20 min · Cook about 1 hr 15 min</p>
-  
   <p>Lemon, garlic and thyme butter pushed under the skin, then trussed and roasted to temperature for crisp skin and juicy breast meat.</p>
 <h4 class="part part-ingredients">Ingredients</h4>
 <ul>
@@ -281,7 +286,6 @@
   <p class="kicker">Chinese · Beef</p>
   <h3>Mongolian Beef</h3>
   <p class="meta">Serves 3 · Prep 15 min · Cook 15 min</p>
-  
   <p>Restaurant-style, served over an optional nest of crisp fried rice vermicelli.</p>
 <h4 class="part part-ingredients">Ingredients</h4>
 <h5>For marinating the beef</h5>
@@ -338,7 +342,6 @@
   <p class="kicker">Chinese · Chicken</p>
   <h3>Crispy Salt &amp; Pepper Wings</h3>
   <p class="meta">Serves 4 · Prep 10 min + at least 4 hr curing · Cook about 1 hr</p>
-  
   <p>Double-fried for extra crunch and seasoned with three kinds of peppercorn. Using just one type of peppercorn works fine too.</p>
 <h4 class="part part-ingredients">Ingredients</h4>
 <ul>
@@ -377,7 +380,6 @@
   <p class="kicker">Chinese · Noodles</p>
   <h3>Crispy Chilli Bacon Noodles</h3>
   <p class="meta">Serves 2 · Cook 15 min</p>
-  
   <p>Bacon rendered slowly until crisp, chilli crisp bloomed in the fat, and noodles tossed through it all.</p>
 <h4 class="part part-ingredients">Ingredients</h4>
 <ul>
@@ -430,7 +432,6 @@
   <p class="kicker">Indian · Breads</p>
   <h3>Simple Naan (No Yeast)</h3>
   <p class="meta">Serves 6 naan · Prep 10 min · Cook 10 min</p>
-  
   <p>Two-ingredient dough, cooked in a dry pan. Good with any curry, including Moh's Duck and Tamarind Curry.</p>
 <h4 class="part part-ingredients">Ingredients</h4>
 <ul>
@@ -466,7 +467,6 @@
   <p class="kicker">Indian · Sides</p>
   <h3>Raita</h3>
   <p class="meta">Serves 6–8 · Prep 10 min</p>
-  
   <p>A cooling yoghurt and mint side with ginger and garam masala for warmth. We serve it with Moh's Duck and Tamarind Curry.</p>
 <h4 class="part part-ingredients">Ingredients</h4>
 <ul>
@@ -500,7 +500,6 @@
   <p class="kicker">Italian · Breads</p>
   <h3>Focaccia</h3>
   <p class="meta">Serves 1 half-sheet pan · Prep 3 hr 45 min (mostly rising) · Cook 30 min</p>
-  
   <p>Claire Saffitz's focaccia: a very wet, well-kneaded dough baked in a half-sheet pan for a tall, airy crumb and a crisp, oily base. Pick a topping from the options after the method.</p>
 <h4 class="part part-ingredients">Ingredients</h4>
 <ul>
@@ -594,7 +593,6 @@
   <p class="kicker">Italian · Pasta</p>
   <h3>&#x27;Nduja Pasta</h3>
   <p class="meta">Serves 3–4 · Cook 20–30 min</p>
-  
   <p>A simple, fiery Calabrian sauce: tomatoes with 'nduja, the soft, spicy pork spread, melted through at the end.</p>
 <h4 class="part part-ingredients">Ingredients</h4>
 <ul>
@@ -627,7 +625,6 @@
   <p class="kicker">Italian · Pasta</p>
   <h3>Fettuccine Alfredo</h3>
   <p class="meta">Serves 3 · Prep 5 min · Cook 13 min</p>
-  
   <p>Butter, cream and Parmigiano, tossed with the pasta so the sauce clings to every strand rather than pooling.</p>
 <h4 class="part part-ingredients">Ingredients</h4>
 <ul>
@@ -669,7 +666,6 @@
   <p class="kicker">Italian · Pasta</p>
   <h3>Lasagne</h3>
   <p class="meta">Serves 8 · Prep 2 hr · Cook 3 hr 45 min</p>
-  
   <p>A slow pork and beef ragu, béchamel and plenty of cheese. Make the ragu the day before if you can: it deepens overnight and spreads the work out.</p>
 <h4 class="part part-ingredients">Ingredients</h4>
 <h5>For the ragu</h5>
@@ -744,7 +740,6 @@
   <p class="kicker">Italian · Pasta</p>
   <h3>Spaghetti alla Carbonara</h3>
   <p class="meta">Serves 3–4 · Cook 20 min</p>
-  
   <p>The Roman way: egg yolks, pecorino, guanciale and black pepper, and nothing else. No cream.</p>
 <h4 class="part part-ingredients">Ingredients</h4>
 <ul>
@@ -777,7 +772,6 @@
   <p class="kicker">Italian · Pork</p>
   <h3>Crispy Porchetta</h3>
   <p class="meta">Serves 12 · Prep the day before (24–48 hr drying in the fridge) · Cook about 4 hr</p>
-  
   <p>Pork belly rolled around the loin with a herb, garlic and fennel filling. Start a day or two ahead: the skin needs to dry out in the fridge to crackle.</p>
 <h4 class="part part-ingredients">Ingredients</h4>
 <ul>
@@ -820,7 +814,6 @@
   <p class="kicker">Japanese · Chicken</p>
   <h3>Chicken Nanban (Fried Chicken with Tartar Sauce)</h3>
   <p class="meta">Serves 3 · Prep 20 min · Cook 15 min</p>
-  
   <p>Egg-coated fried chicken soaked in a sweet and tangy nanban sauce and topped with a generous spoonful of tartar sauce.</p>
 <h4 class="part part-ingredients">Ingredients</h4>
 <ul>
@@ -875,7 +868,6 @@
   <p class="kicker">Japanese · Chicken</p>
   <h3>Karaage (Japanese Fried Chicken)</h3>
   <p class="meta">Serves 4 · Prep 15 min + 30 min marinating · Cook 15 min</p>
-  
   <p>Marinated in ginger, garlic and soy, then fried twice for a light, crisp crust.</p>
 <h4 class="part part-ingredients">Ingredients</h4>
 <ul>
@@ -929,7 +921,6 @@
   <p class="kicker">Japanese · Eggs</p>
   <h3>Ramen Egg (Ajitsuke Tamago)</h3>
   <p class="meta">Serves 4 eggs · Prep 5 min · Cook 7 min + 8–10 hr marinating</p>
-  
   <p>Soft-boiled eggs with jammy yolks, marinated overnight in a sweet soy sauce. For ramen, rice bowls or on their own.</p>
 <h4 class="part part-ingredients">Ingredients</h4>
 <ul>
@@ -980,7 +971,6 @@
   <p class="kicker">Mexican · Beef</p>
   <h3>Carne Asada Tacos</h3>
   <p class="meta">Serves 4 · Prep 20 min + 2–8 hr marinating · Cook about 1 hr</p>
-  
   <p>Citrus-marinated steak, reverse-seared so the outside chars without burning, sliced thin and piled into charred corn tortillas with cumin guacamole, salted paneer "queso fresco" and a quick lime onion. Start the marinade a few hours ahead.</p>
 <h4 class="part part-ingredients">Ingredients</h4>
 <h5>For the marinade</h5>
@@ -1063,7 +1053,6 @@
   <p class="kicker">South African · Duck</p>
   <h3>Moh&#x27;s Duck and Tamarind Curry</h3>
   <p class="meta">Serves 4</p>
-  
   <p>A modern Durban duck curry from Mohammed Khalid Moola of Ladysmith, with a nod to France in the orange sauce and his mother's touch of tamarind. Make the curry paste the day before, or at least before you start the duck.</p>
 <h4 class="part part-ingredients">Ingredients</h4>
 <h5>For the curry paste</h5>
@@ -1138,7 +1127,6 @@
   <p class="kicker">Spanish · Chicken</p>
   <h3>Chicken &amp; White Bean Stew</h3>
   <p class="meta">Serves 1 · Prep 5 min · Cook 15 min</p>
-  
   <p>A quick, cheap one-pot stew written for one. Multiply it to feed more, or cook a big batch for the fridge or freezer.</p>
 <h4 class="part part-ingredients">Ingredients</h4>
 <ul>

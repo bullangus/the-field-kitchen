@@ -2,7 +2,7 @@
 // every file in docs/, so the whole book is saved on first visit. Pages are
 // fetched fresh when online (so new recipes show up) and fall back to the saved
 // copy when offline; a new build changes VERSION and replaces the old copy.
-var VERSION = "deda1342bbbd";
+var VERSION = "2b876883b2b2";
 var CACHE = "field-kitchen-" + VERSION;
 var FILES = [
   "./",
@@ -16,6 +16,7 @@ var FILES = [
   "chinese/chicken/salt-and-pepper-wings.html",
   "chinese/index.html",
   "chinese/noodles/crispy-chilli-bacon-noodles.html",
+  "cook.html",
   "home.js",
   "icon-192.png",
   "icon-512.png",
@@ -35,6 +36,7 @@ var FILES = [
   "japanese/chicken/karaage.html",
   "japanese/eggs/ramen-egg.html",
   "japanese/index.html",
+  "list.html",
   "manifest.webmanifest",
   "mexican/beef/carne-asada-tacos.html",
   "mexican/index.html",
@@ -45,7 +47,8 @@ var FILES = [
   "south-african/index.html",
   "spanish/chicken/chicken-and-white-bean-stew.html",
   "spanish/index.html",
-  "style.css"
+  "style.css",
+  "tools.js"
 ];
 
 self.addEventListener("install", function (event) {

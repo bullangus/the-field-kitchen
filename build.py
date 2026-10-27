@@ -4,11 +4,13 @@ Reads every recipe in recipes/<Cuisine>/<Style>/*.md (plus any matching photo in
 photos/) and regenerates:
   - the Contents section of README.md (between the CONTENTS markers)
   - the website in docs/ (served by GitHub Pages): a home page, one page per
-    cuisine, one page per recipe, and docs/book.html, the whole book for printing
-  - docs/search-index.js, the recipe index the site search and home page read
+    cuisine, one page per recipe, the shopping list and "What can I cook?"
+    pages, and docs/book.html, the whole book for printing
+  - docs/search-index.js, every recipe's details and parsed ingredients, read
+    by search, the home page, the shopping list and "What can I cook?"
   - docs/sw.js and docs/manifest.webmanifest, so the site installs and works offline
 
-Standard library only. Run:  python build.py
+Standard library only (plus ingredients.py beside it). Run:  python build.py
 """
 
 import hashlib
@@ -21,6 +23,8 @@ import sys
 from datetime import date, datetime
 from pathlib import Path
 
+from ingredients import AISLES, parse_line
+
 ROOT = Path(__file__).parent
 RECIPES = ROOT / "recipes"
 PHOTOS = ROOT / "photos"
@@ -28,20 +32,25 @@ README = ROOT / "README.md"
 TEMPLATES = ROOT / "templates"
 DOCS = ROOT / "docs"
 BOOK_PAGE = "book.html"
+LIST_PAGE = "list.html"
+COOK_PAGE = "cook.html"
 STYLESHEET = "style.css"
 ICON = "icon.svg"
 APP_ICONS = ("icon-192.png", "icon-512.png")
 SITE_SCRIPT = "site.js"
 HOME_SCRIPT = "home.js"
 RECIPE_SCRIPT = "recipe.js"
+TOOLS_SCRIPT = "tools.js"
 SEARCH_INDEX = "search-index.js"
+WORLD_DOTS = "world-dots.json"
 MANIFEST = "manifest.webmanifest"
 SERVICE_WORKER = "sw.js"
 PHOTO_EXTENSIONS = (".jpg", ".jpeg", ".png", ".webp")
 PHOTO_WARN_BYTES = 1_500_000
 RECENT_COUNT = 5
 NOTES_COUNT = 3
-TONES = 6  # colour tones for the cuisine cards, .tone-1 to .tone-6 in style.css
+KITCHEN_CARD_RECIPES = 3  # recipes shown on each home page cuisine card; the rest are a click away
+TONES = 6  # colour tones for cuisine cards and headers, .tone-1 to .tone-6 in style.css
 QUICK_MINUTES = 30
 PROJECT_MINUTES = 150  # hands-on time
 MAKE_AHEAD_MINUTES = 240  # waiting time (marinating, curing...) that means starting ahead
@@ -62,7 +71,11 @@ NAV_ICONS = {
     "moon": '<path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/>',
     "sun": ('<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4'
             'M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>'),
-    "flame": '<path d="M12 3c.5 3 5 5 5 10a5 5 0 0 1-10 0c0-2.5 1.5-4 2.5-5 .3 1.5 1.2 2.5 2.5 2.5-.5-2.5-.5-5 0-7.5z"/>',
+    "basket": '<path d="M4 9h16l-1.6 9.6a2 2 0 0 1-2 1.7H7.6a2 2 0 0 1-2-1.7z"/><path d="m8 9 4-5 4 5"/><path d="M10 13v3M14 13v3"/>',
+    "sparkle": ('<path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/>'
+                '<path d="M19 15l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/>'),
+    "play": '<path d="M7 4.5v15l12.5-7.5z"/>',
+    "plus": '<path d="M12 5v14M5 12h14"/>',
 }
 # Cuisine icons (24x24 outline paths) from Tabler Icons v3.19.0, MIT licence,
 # https://tabler.io/icons. New cuisines get the knife and fork until one is added here.
@@ -78,6 +91,20 @@ CUISINE_ART = {
     'spanish': '<path d="M5.5 5.5a2.5 2.5 0 0 0 -2.5 2.5c0 7.18 5.82 13 13 13a2.5 2.5 0 1 0 0 -5a8 8 0 0 1 -8 -8a2.5 2.5 0 0 0 -2.5 -2.5z" /> <path d="M5.195 5.519l-1.243 -1.989a1 1 0 0 1 .848 -1.53h1.392a1 1 0 0 1 .848 1.53l-1.245 1.99" /> <path d="M18.482 18.225l1.989 -1.243a1 1 0 0 1 1.53 .848v1.392a1 1 0 0 1 -1.53 .848l-1.991 -1.245" />',  # sausage
     '_default': '<path d="M19 3v12h-5c-.023 -3.681 .184 -7.406 5 -12zm0 12v6h-1v-3m-10 -14v17m-3 -17v3a3 3 0 1 0 6 0v-3" />',  # tools-kitchen-2
 }
+# Where each cuisine sits on the home page map: (longitude, latitude, label side).
+# Add one per new cuisine; cuisines without a place are left off the map.
+CUISINE_PLACES = {
+    "australian": (134, -25, "end"),
+    "british": (-2, 54, "end"),
+    "chinese": (104, 34, "start"),
+    "indian": (78, 22, "end"),
+    "italian": (12.5, 42.5, "start"),
+    "japanese": (138, 37, "start"),
+    "mexican": (-102, 23, "end"),
+    "south african": (25, -29, "start"),
+    "spanish": (-3.7, 40, "end"),
+}
+QUICK_CHIPS = (("quick", f"Under {QUICK_MINUTES} min"), ("make-ahead", "Make ahead"), ("project", "Weekend project"))
 # docs/ is fully generated, but these must survive a rebuild.
 KEEP_IN_DOCS = {".nojekyll", "CNAME"}
 
@@ -159,6 +186,16 @@ def render(body):
     return "\n".join(out)
 
 
+def sections(body):
+    """(intro markdown, {heading: markdown}) for a recipe body split on its ## headings."""
+    parts = re.split(r"^## (.+)$", body, flags=re.M)
+    return parts[0].strip(), {name.strip(): md for name, md in zip(parts[1::2], parts[2::2])}
+
+
+def bullets(md):
+    return re.findall(r"^- (.*)", md or "", re.M)
+
+
 def find_photos(recipes):
     """Match photos/<recipe file name>.<jpg|jpeg|png|webp> to recipes by file name."""
     if not PHOTOS.is_dir():
@@ -199,7 +236,12 @@ def load():
     for cats in book.values():
         for rs in cats.values():
             rs.sort(key=lambda r: r["title"].lower())
-    return {c: dict(sorted(cats.items())) for c, cats in sorted(book.items())}
+    book = {c: dict(sorted(cats.items())) for c, cats in sorted(book.items())}
+    for i, cuisine in enumerate(book):
+        for rs in book[cuisine].values():
+            for r in rs:
+                r["tone"] = i % TONES + 1
+    return book
 
 
 def all_recipes(book):
@@ -228,7 +270,7 @@ def split_time(r):
 
 
 def recipe_tags(r):
-    """Quick-filter tags for the home page chips, plus the recipe's style."""
+    """Quick-filter tags for the chips, plus the recipe's style."""
     tags = [slug(r["category"])]
     times = split_time(r)
     active, passive = times if times else (None, 0)
@@ -243,7 +285,20 @@ def recipe_tags(r):
     return tags
 
 
-QUICK_CHIPS = (("quick", f"Under {QUICK_MINUTES} min"), ("make-ahead", "Make ahead"), ("project", "Weekend project"))
+def quick_tag_labels(r):
+    return [label for key, label in QUICK_CHIPS if key in r["tags"]]
+
+
+def time_facts(r):
+    """[(label, value)] from the time line: 'Prep 15 min · Cook 30 min' -> Prep / Cook tiles."""
+    facts = []
+    for part in (p.strip() for p in r.get("time", "").split("·") if p.strip()):
+        word, _, rest = part.partition(" ")
+        if word in ("Prep", "Cook") and rest:
+            facts.append((word, rest))
+        else:
+            facts.append(("Time", part))
+    return facts
 
 
 def contents_md(book):
@@ -297,8 +352,10 @@ def icon_inline():
 
 def cuisine_art(cuisine, css):
     paths = CUISINE_ART.get(cuisine.lower(), CUISINE_ART["_default"])
+    # pathLength lets CSS "draw" each line in, whatever its real length.
+    paths = paths.replace("<path ", '<path pathLength="1" ')
     # Thinner than the icon set's default 2, since these are shown large.
-    return (f'<svg class="{css}" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+    return (f'<svg class="{css} draw" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
             f'stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round">{paths}</svg>')
 
 
@@ -309,16 +366,19 @@ def intro(r):
 
 
 def search_index(book):
-    """Title, place in the book, ingredient lines and card details for each recipe."""
+    """Every recipe's details for search, the home page, shopping list and "What can I cook?"."""
     entries = []
     for r in all_recipes(book):
-        # Ingredients plus any topping options, so searching a topping finds its recipe.
-        sections = re.findall(r"^## (?:Ingredients|Topping Options)\n(.*?)(?=^## |\Z)", r["body"], re.S | re.M)
-        lines = [line for s in sections for line in re.findall(r"^- (.*)", s, re.M)]
+        _, parts = sections(r["body"])
+        # Search covers topping options too, so searching a topping finds its recipe.
+        lines = bullets(parts.get("Ingredients")) + bullets(parts.get("Topping Options"))
+        serves = re.match(r"\d+", r["serves"])
         entries.append({"title": r["title"], "cuisine": r["cuisine"], "category": r["category"],
                         "url": r["url"], "text": " ".join(lines),
                         "meta": html.unescape(meta_line(r)), "intro": intro(r),
-                        "photo": r.get("photo", "")})
+                        "photo": r.get("photo", ""), "tags": r["tags"],
+                        "serves": int(serves.group()) if serves else 1,
+                        "ingredients": [parse_line(line) for line in bullets(parts.get("Ingredients"))]})
     return "window.FIELD_KITCHEN_INDEX = " + json.dumps(entries, ensure_ascii=False, indent=0) + ";\n"
 
 
@@ -336,7 +396,9 @@ def nav_html(book, root, current=None):
         links.append(f'<li><a href="{root}{cuisine_url(cuisine)}"{here}>{html.escape(cuisine)}'
                      f'<small>{n}</small></a></li>')
     in_cuisine = " current" if current in book else ""
-    print_here = ' aria-current="page"' if current == BOOK_PAGE else ""
+
+    def here(page):
+        return ' aria-current="page"' if current == page else ""
     return f"""<nav class="site-nav" aria-label="Site" data-root="{root}">
   <div class="inner">
     <a class="home" href="{root}index.html">{icon_inline()}{TITLE}</a>
@@ -345,12 +407,14 @@ def nav_html(book, root, current=None):
         <button type="button" class="nav-button cuisine-toggle{in_cuisine}" aria-expanded="false" aria-controls="cuisine-list">Cuisines{svg_icon("chevron", "chevron")}</button>
         <ul class="cuisine-list" id="cuisine-list">{"".join(links)}</ul>
       </div>
-      <a class="nav-button print" href="{root}{BOOK_PAGE}"{print_here}>{svg_icon("printer")}Print</a>
+      <a class="nav-button" href="{root}{COOK_PAGE}"{here(COOK_PAGE)}>{svg_icon("sparkle")}What can I cook?</a>
+      <a class="nav-button print" href="{root}{BOOK_PAGE}"{here(BOOK_PAGE)}>{svg_icon("printer")}Print</a>
       <form class="search" role="search">
-        <label class="search-field">{svg_icon("search")}<input type="search" placeholder="Search recipes" aria-label="Search recipes or ingredients" autocomplete="off"><kbd>/</kbd></label>
+        <label class="search-field">{svg_icon("search")}<input type="search" placeholder="Search recipes" aria-label="Search recipes or ingredients" autocomplete="off"><kbd title="Ctrl or ⌘ K opens the command palette">/</kbd></label>
         <ul class="search-results" hidden></ul>
       </form>
     </div>
+    <a class="nav-button list-link" href="{root}{LIST_PAGE}"{here(LIST_PAGE)} aria-label="Shopping list">{svg_icon("basket")}<span class="list-count" hidden>0</span></a>
     <button type="button" class="nav-button theme-toggle" aria-label="Switch between light and dark">{svg_icon("moon", "moon")}{svg_icon("sun", "sun")}</button>
     <button type="button" class="nav-button menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Menu">{svg_icon("menu")}</button>
   </div>
@@ -373,28 +437,30 @@ def toc_html(book, href):
     return "\n".join(toc)
 
 
-def recipe_html(r, root="", anchor=None, kicker=None, css="recipe", tools="", title_attr=""):
-    source = ""
-    if r.get("source"):
-        s = r["source"]
-        label = html.escape(re.sub(r"^https?://(www\.)?", "", s).split("/")[0])
-        s_html = f'<a href="{html.escape(s)}">{label}</a>' if s.startswith("http") else html.escape(s)
-        source = f'<p class="source">Source: {s_html}</p>'
+def source_html(r):
+    if not r.get("source"):
+        return ""
+    s = r["source"]
+    label = html.escape(re.sub(r"^https?://(www\.)?", "", s).split("/")[0])
+    s_html = f'<a href="{html.escape(s)}">{label}</a>' if s.startswith("http") else html.escape(s)
+    return f'<p class="source">Source: {s_html}</p>'
+
+
+def recipe_html(r, root="", anchor=None):
+    """A recipe as it appears in the printed book: one plain column."""
     photo = ""
     if r.get("photo"):
         photo = (f'<figure class="recipe-photo"><img src="{root}{r["photo"]}" '
                  f'alt="{html.escape(r["title"])}" loading="lazy"></figure>')
-    kicker = kicker or f"{html.escape(r['cuisine'])} · {html.escape(r['category'])}"
     id_attr = f' id="{anchor}"' if anchor else ""
     return f"""
-<article class="{css}"{id_attr}>
+<article class="recipe"{id_attr}>
   {photo}
-  <p class="kicker">{kicker}</p>
-  <h3{title_attr}>{html.escape(r['title'])}</h3>
+  <p class="kicker">{html.escape(r['cuisine'])} · {html.escape(r['category'])}</p>
+  <h3>{html.escape(r['title'])}</h3>
   <p class="meta">{meta_line(r)}</p>
-  {tools}
   {render(r['body'])}
-  {source}
+  {source_html(r)}
 </article>"""
 
 
@@ -435,6 +501,61 @@ def family_notes(book):
 def nice_date(iso):
     d = date.fromisoformat(iso[:10])
     return f"{d.day} {d.strftime('%b %Y')}"
+
+
+def chips_html(recipes, with_styles=True):
+    """Filter chips: the quick filters that match something here, then (optionally) every style."""
+    counts = {}
+    for r in recipes:
+        for t in r["tags"]:
+            counts[t] = counts.get(t, 0) + 1
+    chip_list = [(key, label) for key, label in QUICK_CHIPS if counts.get(key)]
+    if with_styles:
+        chip_list += [(slug(s), s) for s in sorted({r["category"] for r in recipes})]
+    if not chip_list:
+        return ""
+    chips = '<button type="button" class="chip" data-filter="" aria-pressed="true">All</button>' + "".join(
+        f'<button type="button" class="chip" data-filter="{key}" aria-pressed="false">'
+        f'{html.escape(label)}<small>{counts[key]}</small></button>'
+        for key, label in chip_list
+    )
+    return (f'<div class="chips" role="group" aria-label="Filter recipes" hidden>{chips}</div>'
+            '<p class="filter-empty" hidden>Nothing matches that filter yet.</p>')
+
+
+def world_map(book):
+    """Dotted world map with a glowing pin per cuisine, linking to its page."""
+    data = json.loads((TEMPLATES / WORLD_DOTS).read_text(encoding="utf-8"))
+    land = "".join(f"M{x:g} {y:g}h0" for x, y in data["dots"])
+    pins = []
+    for i, (cuisine, cats) in enumerate(book.items()):
+        place = CUISINE_PLACES.get(cuisine.lower())
+        if not place:
+            print(f"Note: {cuisine} has no CUISINE_PLACES entry, so it isn't on the home page map.")
+            continue
+        lon, lat, side = place
+        x, y = lon + 180, 80 - lat
+        n = sum(len(rs) for rs in cats.values())
+        dx = 4.5 if side == "start" else -4.5
+        pins.append(
+            f'<a class="pin tone-{i % TONES + 1}" href="{cuisine_url(cuisine)}" '
+            f'aria-label="{html.escape(cuisine)}: {n} recipe{"s" if n != 1 else ""}">'
+            f'<circle class="pin-pulse" cx="{x:g}" cy="{y:g}" r="3"/>'
+            f'<circle class="pin-dot" cx="{x:g}" cy="{y:g}" r="{1.6 + min(n, 6) * 0.25:g}"/>'
+            f'<text x="{x + dx:g}" y="{y + 1.4:g}" text-anchor="{side}">{html.escape(cuisine)}</text></a>')
+    return f"""
+  <section class="atlas reveal" aria-label="Where our recipes come from">
+    <div class="section-head">
+      <h2>Our table, around the world</h2>
+      <p>Tap a pin to visit that kitchen.</p>
+    </div>
+    <div class="atlas-map">
+      <svg viewBox="0 0 {data['width']} {data['height']}" role="img" aria-label="World map with a pin for each cuisine">
+        <path class="land" d="{land}"/>
+        {"".join(pins)}
+      </svg>
+    </div>
+  </section>"""
 
 
 def home_html(book):
@@ -486,20 +607,6 @@ def home_html(book):
       <ul class="note-more">{more}</ul>
     </section>"""
 
-    # Chips: the quick filters that match at least one recipe, then every style.
-    tag_counts = {}
-    for r in recipes:
-        for t in r["tags"]:
-            tag_counts[t] = tag_counts.get(t, 0) + 1
-    styles = sorted({r["category"] for r in recipes})
-    chip_list = [(key, label) for key, label in QUICK_CHIPS if tag_counts.get(key)]
-    chip_list += [(slug(s), s) for s in styles]
-    chips = '<button type="button" class="chip" data-filter="" aria-pressed="true">All</button>' + "".join(
-        f'<button type="button" class="chip" data-filter="{key}" aria-pressed="false">'
-        f'{html.escape(label)}<small>{tag_counts[key]}</small></button>'
-        for key, label in chip_list
-    )
-
     cards = []
     for i, (cuisine, cats) in enumerate(book.items()):
         n = sum(len(rs) for rs in cats.values())
@@ -512,7 +619,7 @@ def home_html(book):
             for rs in cats.values() for r in rs
         )
         cards.append(f"""
-      <article class="kitchen tone-{i % TONES + 1} reveal">
+      <article class="kitchen filter-group tone-{i % TONES + 1} reveal" data-limit="{KITCHEN_CARD_RECIPES}" data-tilt>
         {cuisine_art(cuisine, "kitchen-art")}
         <header>
           <h3><a href="{cuisine_url(cuisine)}"{vt_name("c", cuisine)}>{html.escape(cuisine)}</a></h3>
@@ -520,7 +627,7 @@ def home_html(book):
         </header>
         <div class="tags">{tags}</div>
         <ul>{items}</ul>
-        <a class="kitchen-more" href="{cuisine_url(cuisine)}">All {html.escape(cuisine)} recipes →</a>
+        <a class="kitchen-more" href="{cuisine_url(cuisine)}">{f"All {n} {html.escape(cuisine)} recipes" if n > KITCHEN_CARD_RECIPES else f"All {html.escape(cuisine)} recipes"} →</a>
       </article>""")
 
     content = f"""
@@ -536,7 +643,7 @@ def home_html(book):
       </ul>
       <div class="tile-actions">
         <a class="pill pill-solid" href="#kitchens">Browse the kitchens</a>
-        <a class="pill pill-outline" href="{BOOK_PAGE}">Print the book</a>
+        <a class="pill pill-outline" href="{COOK_PAGE}">{svg_icon("sparkle")}What can I cook?</a>
       </div>
     </header>{feature}
     <section class="tile tile-recent reveal">
@@ -544,14 +651,13 @@ def home_html(book):
       <ul>{recent}</ul>
     </section>{quote}
   </div>
-
-  <section class="kitchens" id="kitchens" aria-label="Contents">
+{world_map(book)}
+  <section class="kitchens filter-scope" id="kitchens" aria-label="Contents">
     <div class="section-head reveal">
       <h2>The Kitchens</h2>
       <p>{plural(count, 'recipe')} across {plural(cuisines, 'cuisine')}, every one cooked at our table.</p>
     </div>
-    <div class="chips" role="group" aria-label="Filter recipes" hidden>{chips}</div>
-    <p class="filter-empty" hidden>Nothing matches that filter yet.</p>
+    {chips_html(recipes)}
     <div class="kitchen-grid">{"".join(cards)}
     </div>
   </section>
@@ -559,49 +665,188 @@ def home_html(book):
     return page(book, 0, TITLE, content, main_class="home")
 
 
+def recipe_card(r, href):
+    photo = f'<img class="card-photo" src="../{r["photo"]}" alt="" loading="lazy">' if r.get("photo") else ""
+    facts = "".join(f'<span><b>{html.escape(label)}</b> {html.escape(value)}</span>' for label, value in time_facts(r))
+    tags = "".join(f'<span class="tag">{html.escape(t)}</span>' for t in quick_tag_labels(r))
+    return f"""
+      <a class="recipe-card reveal" href="{href}" data-tags="{" ".join(r["tags"])}" data-tilt>
+        {photo}
+        <h3{vt_name("r", r["url"][:-5])}>{html.escape(r["title"])}</h3>
+        <p class="card-intro">{html.escape(intro(r))}</p>
+        <div class="card-facts"><span><b>Serves</b> {html.escape(r["serves"])}</span>{facts}</div>
+        <div class="tags">{tags}</div>
+      </a>"""
+
+
 def cuisine_html(book, cuisine):
-    groups = []
-    for category, recipes in book[cuisine].items():
-        items = "\n".join(
-            f'<li><a href="{r["url"].split("/", 1)[1]}"{vt_name("r", r["url"][:-5])}>{html.escape(r["title"])}</a>'
-            f'<span class="meta">{meta_line(r)}</span></li>'
-            for r in recipes
-        )
-        groups.append(f'<section class="style-group"><h2>{html.escape(category)}</h2>\n'
-                      f'<ul class="recipe-list">\n{items}\n</ul></section>')
-    content = (f'<header class="page-head">{cuisine_art(cuisine, "cuisine-art")}'
-               f'<h1{vt_name("c", cuisine)}>{html.escape(cuisine)}</h1>'
-               f'<div class="ornament">· · ·</div></header>\n' + "\n".join(groups))
-    return page(book, 1, f"{cuisine} · {TITLE}", content, current=cuisine)
+    cats = book[cuisine]
+    recipes = [r for rs in cats.values() for r in rs]
+    tone = recipes[0]["tone"]
+    n = len(recipes)
+    groups = "".join(
+        f'<section class="style-group filter-group"><h2>{html.escape(category)}</h2><div class="recipe-cards">'
+        + "".join(recipe_card(r, r["url"].split("/", 1)[1]) for r in rs)
+        + "</div></section>"
+        for category, rs in cats.items()
+    )
+    styles = "".join(f'<span class="tag">{html.escape(c)}</span>' for c in cats)
+    content = f"""
+  <header class="cuisine-hero tone-{tone} reveal">
+    {cuisine_art(cuisine, "hero-art")}
+    <p class="eyebrow">The {html.escape(cuisine)} kitchen</p>
+    <h1{vt_name("c", cuisine)}>{html.escape(cuisine)}</h1>
+    <p class="hero-count">{n} recipe{'s' if n != 1 else ''}</p>
+    <div class="tags">{styles}</div>
+  </header>
+  <div class="filter-scope">
+    {chips_html(recipes, with_styles=False)}
+    {groups}
+  </div>"""
+    return page(book, 1, f"{cuisine} · {TITLE}", content, current=cuisine, main_class="wide")
+
+
+def notes_panel(md):
+    """The Notes section as two groups: undated tips, and our dated changes."""
+    tips, changes = [], []
+    for line in bullets(md):
+        m = re.match(r"(\d{4}-\d{2}-\d{2}): (.+)", line)
+        if m:
+            changes.append(f'<li><time datetime="{m.group(1)}">{nice_date(m.group(1))}</time><p>{inline(m.group(2))}</p></li>')
+        else:
+            tips.append(f"<li>{inline(line)}</li>")
+    if not tips and not changes:
+        return ""
+    out = ['<section class="notes-panel reveal"><h2>From our kitchen</h2><div class="notes-columns">']
+    if tips:
+        out.append(f'<div><h3>Good to know</h3><ul class="tips">{"".join(tips)}</ul></div>')
+    if changes:
+        out.append(f'<div><h3>How we make it</h3><ol class="changes">{"".join(changes)}</ol></div>')
+    out.append("</div></section>")
+    return "".join(out)
 
 
 def recipe_page_html(book, r, prev, nxt):
     root = "../../"
-    kicker = (f'<a href="{root}{cuisine_url(r["cuisine"])}">{html.escape(r["cuisine"])}</a>'
-              f' · {html.escape(r["category"])}')
+    intro_md, parts = sections(r["body"])
     serves = re.match(r"\d+", r["serves"])
-    scaler = ""
     if serves:
-        scaler = (f'<div class="scaler" data-base="{serves.group()}"><span>Serves</span>'
-                  '<button type="button" class="scale-down" aria-label="Fewer servings">−</button>'
-                  f'<output aria-live="polite">{serves.group()}</output>'
-                  '<button type="button" class="scale-up" aria-label="More servings">+</button></div>')
-    tools = (f'<div class="recipe-tools" hidden>{scaler}'
-             f'<button type="button" class="pill pill-outline cook-toggle" aria-pressed="false">'
-             f'{svg_icon("flame")}Cook mode</button></div>'
-             '<p class="scale-note" hidden>Amounts with a number are scaled and rounded. '
-             'Amounts in the method, and things like "to taste" or "a handful", stay as written.</p>')
+        serves_html = (f'<div class="scaler" data-base="{serves.group()}">'
+                       '<button type="button" class="scale-down" aria-label="Fewer servings">−</button>'
+                       f'<output aria-live="polite">{serves.group()}</output>'
+                       '<button type="button" class="scale-up" aria-label="More servings">+</button></div>'
+                       + (f'<small>{html.escape(r["serves"][len(serves.group()):].strip())}</small>'
+                          if r["serves"][len(serves.group()):].strip() else ""))
+    else:
+        serves_html = f'<strong>{html.escape(r["serves"])}</strong>'
+    facts = (f'<div class="fact fact-serves"><span>Serves</span>{serves_html}</div>'
+             + "".join(f'<div class="fact"><span>{html.escape(label)}</span><strong>{html.escape(value)}</strong></div>'
+                       for label, value in time_facts(r)))
+    tags = "".join(f'<span class="tag">{html.escape(t)}</span>' for t in quick_tag_labels(r))
+    photo = (f'<figure class="hero-photo"><img src="{root}{r["photo"]}" alt="{html.escape(r["title"])}"></figure>'
+             if r.get("photo") else "")
+    options = ""
+    if parts.get("Topping Options"):
+        options = f'<section class="options"><h2>Topping options</h2>{render(parts["Topping Options"])}</section>'
     pager = []
     if prev:
         pager.append(f'<a class="prev" href="{root}{prev["url"]}"><span>Previous</span>{html.escape(prev["title"])}</a>')
     if nxt:
         pager.append(f'<a class="next" href="{root}{nxt["url"]}"><span>Next</span>{html.escape(nxt["title"])}</a>')
-    content = ('<div class="read-progress" aria-hidden="true"></div>'
-               + recipe_html(r, root=root, kicker=kicker, css="recipe solo", tools=tools,
-                             title_attr=vt_name("r", r["url"][:-5]))
-               + f'\n<nav class="pager" aria-label="More recipes">{"".join(pager)}</nav>'
-               + f'\n<script src="{root}{RECIPE_SCRIPT}" defer></script>')
-    return page(book, 2, f"{r['title']} · {TITLE}", content, current=r["cuisine"])
+    content = f"""<div class="read-progress" aria-hidden="true"></div>
+<article class="recipe-page" data-url="{r['url']}">
+  <header class="recipe-hero tone-{r['tone']}{' has-photo' if photo else ''}">
+    {cuisine_art(r["cuisine"], "hero-art")}
+    <div class="hero-text">
+      <p class="kicker"><a href="{root}{cuisine_url(r['cuisine'])}">{html.escape(r['cuisine'])}</a> · {html.escape(r['category'])}</p>
+      <h1{vt_name("r", r["url"][:-5])}>{html.escape(r['title'])}</h1>
+      {f'<p class="hero-intro">{inline(" ".join(intro_md.split()))}</p>' if intro_md else ''}
+      <div class="facts">{facts}</div>
+      {f'<div class="tags">{tags}</div>' if tags else ''}
+      <div class="hero-actions">
+        <button type="button" class="pill pill-solid start-cooking" hidden>{svg_icon("play")}Start cooking</button>
+        <button type="button" class="pill pill-outline add-to-list" hidden>{svg_icon("plus")}Add to shopping list</button>
+      </div>
+    </div>
+    {photo}
+  </header>
+  <div class="recipe-tabs" role="tablist" aria-label="Recipe sections" hidden>
+    <button type="button" role="tab" aria-selected="true" data-tab="ingredients">Ingredients</button>
+    <button type="button" role="tab" aria-selected="false" data-tab="method">Method</button>
+  </div>
+  <div class="recipe-layout" data-tab="ingredients">
+    <aside class="ingredients-panel" aria-label="Ingredients">
+      <h2>Ingredients</h2>
+      <p class="scale-note" hidden>Amounts with a number are scaled and rounded. Amounts in the method, and things like "to taste" or "a handful", stay as written.</p>
+      {render(parts.get("Ingredients", ""))}
+      <p class="panel-hint">Tick things off as you go. Tap an ingredient's name to see where it's used.</p>
+    </aside>
+    <div class="method-panel">
+      <h2>Method</h2>
+      {render(parts.get("Method", ""))}
+      {options}
+    </div>
+  </div>
+  {notes_panel(parts.get("Notes"))}
+  {source_html(r)}
+</article>
+<nav class="pager" aria-label="More recipes">{"".join(pager)}</nav>
+<script src="{root}{RECIPE_SCRIPT}" defer></script>"""
+    return page(book, 2, f"{r['title']} · {TITLE}", content, current=r["cuisine"], main_class="wide")
+
+
+def list_html(book):
+    content = f"""
+  <header class="page-hero">
+    <p class="eyebrow">Shopping list</p>
+    <h1>Shopping list</h1>
+    <p class="list-summary">Add recipes from their page with "Add to shopping list". Amounts are combined and sorted by aisle.</p>
+    <div class="hero-actions list-actions" hidden>
+      <button type="button" class="pill pill-solid list-share">Share or copy</button>
+      <button type="button" class="pill pill-outline list-print">{svg_icon("printer")}Print</button>
+      <button type="button" class="pill pill-outline list-clear">Clear list</button>
+    </div>
+  </header>
+  <div class="list-recipes"></div>
+  <div class="list-aisles"></div>
+  <p class="list-empty" hidden>Your list is empty. Open a recipe and choose "Add to shopping list".</p>
+  <script src="{TOOLS_SCRIPT}" defer></script>"""
+    return page(book, 0, f"Shopping list · {TITLE}", content, current=LIST_PAGE, main_class="wide")
+
+
+def cook_html(book):
+    """'What can I cook?': every non-staple ingredient as a chip, grouped by aisle."""
+    by_aisle = {}
+    for r in all_recipes(book):
+        _, parts = sections(r["body"])
+        for line in bullets(parts.get("Ingredients")):
+            item = parse_line(line)
+            if item["n"] and not item["s"]:
+                by_aisle.setdefault(item["a"], set()).add(item["n"])
+    groups = "".join(
+        f'<fieldset class="pantry-group"><legend>{html.escape(aisle)}</legend>'
+        + "".join(f'<button type="button" class="chip" aria-pressed="false" data-ingredient="{html.escape(name)}">{html.escape(name)}</button>'
+                  for name in sorted(by_aisle[aisle]))
+        + "</fieldset>"
+        for aisle in AISLES if aisle in by_aisle
+    )
+    content = f"""
+  <header class="page-hero">
+    <p class="eyebrow">{svg_icon("sparkle")}What can I cook?</p>
+    <h1>Cook with what you have</h1>
+    <p>Tap what's in your fridge and pantry. Salt, pepper, oil, sugar and water are assumed.</p>
+    <div class="hero-actions"><button type="button" class="pill pill-outline pantry-clear">Clear</button></div>
+  </header>
+  <div class="cook-layout">
+    <div class="pantry">{groups}</div>
+    <section class="matches" aria-live="polite">
+      <h2>Best matches</h2>
+      <p class="matches-empty">Pick a few ingredients to see what you can make.</p>
+      <ol class="match-list"></ol>
+    </section>
+  </div>
+  <script src="{TOOLS_SCRIPT}" defer></script>"""
+    return page(book, 0, f"What can I cook? · {TITLE}", content, current=COOK_PAGE, main_class="wide")
 
 
 def book_html(book):
@@ -621,6 +866,7 @@ def book_html(book):
     return (template.replace("{{TITLE}}", TITLE)
                     .replace("{{SUBTITLE}}", SUBTITLE)
                     .replace("{{NAV}}", nav_html(book, "", BOOK_PAGE))
+                    .replace("{{PRINT_ICON}}", svg_icon("printer"))
                     .replace("{{CONTENTS}}", toc)
                     .replace("{{BODY}}", "\n".join(body)))
 
@@ -668,13 +914,15 @@ def build_site(book):
             shutil.rmtree(p)
         else:
             p.unlink()
-    for asset in (STYLESHEET, ICON, SITE_SCRIPT, HOME_SCRIPT, RECIPE_SCRIPT):
+    for asset in (STYLESHEET, ICON, SITE_SCRIPT, HOME_SCRIPT, RECIPE_SCRIPT, TOOLS_SCRIPT):
         write(asset, (TEMPLATES / asset).read_text(encoding="utf-8"))
     for name in APP_ICONS:
         shutil.copyfile(TEMPLATES / name, DOCS / name)
     write(MANIFEST, manifest())
     write(SEARCH_INDEX, search_index(book))
     write("index.html", home_html(book))
+    write(LIST_PAGE, list_html(book))
+    write(COOK_PAGE, cook_html(book))
     write(BOOK_PAGE, book_html(book))
     for cuisine in book:
         write(cuisine_url(cuisine), cuisine_html(book, cuisine))

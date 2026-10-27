@@ -27,27 +27,45 @@
         <button type="button" class="nav-button cuisine-toggle current" aria-expanded="false" aria-controls="cuisine-list">Cuisines<svg class="chevron" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
         <ul class="cuisine-list" id="cuisine-list"><li><a href="../../australian/index.html">Australian<small>2</small></a></li><li><a href="../../british/index.html">British<small>1</small></a></li><li><a href="../../chinese/index.html">Chinese<small>3</small></a></li><li><a href="../../indian/index.html">Indian<small>2</small></a></li><li><a href="../../italian/index.html">Italian<small>6</small></a></li><li><a href="../../japanese/index.html" aria-current="page">Japanese<small>3</small></a></li><li><a href="../../mexican/index.html">Mexican<small>1</small></a></li><li><a href="../../south-african/index.html">South African<small>1</small></a></li><li><a href="../../spanish/index.html">Spanish<small>1</small></a></li></ul>
       </div>
+      <a class="nav-button" href="../../cook.html"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/></svg>What can I cook?</a>
       <a class="nav-button print" href="../../book.html"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6"/><rect x="6" y="14" width="12" height="7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/></svg>Print</a>
       <form class="search" role="search">
-        <label class="search-field"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" placeholder="Search recipes" aria-label="Search recipes or ingredients" autocomplete="off"><kbd>/</kbd></label>
+        <label class="search-field"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" placeholder="Search recipes" aria-label="Search recipes or ingredients" autocomplete="off"><kbd title="Ctrl or ⌘ K opens the command palette">/</kbd></label>
         <ul class="search-results" hidden></ul>
       </form>
     </div>
+    <a class="nav-button list-link" href="../../list.html" aria-label="Shopping list"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16l-1.6 9.6a2 2 0 0 1-2 1.7H7.6a2 2 0 0 1-2-1.7z"/><path d="m8 9 4-5 4 5"/><path d="M10 13v3M14 13v3"/></svg><span class="list-count" hidden>0</span></a>
     <button type="button" class="nav-button theme-toggle" aria-label="Switch between light and dark"><svg class="moon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><svg class="sun" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
     <button type="button" class="nav-button menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Menu"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
 </nav>
-<main>
+<main class="wide">
 <div class="read-progress" aria-hidden="true"></div>
-<article class="recipe solo">
-  
-  <p class="kicker"><a href="../../japanese/index.html">Japanese</a> · Eggs</p>
-  <h3 style="view-transition-name: r-japanese-eggs-ramen-egg">Ramen Egg (Ajitsuke Tamago)</h3>
-  <p class="meta">Serves 4 eggs · Prep 5 min · Cook 7 min + 8–10 hr marinating</p>
-  <div class="recipe-tools" hidden><div class="scaler" data-base="4"><span>Serves</span><button type="button" class="scale-down" aria-label="Fewer servings">−</button><output aria-live="polite">4</output><button type="button" class="scale-up" aria-label="More servings">+</button></div><button type="button" class="pill pill-outline cook-toggle" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c.5 3 5 5 5 10a5 5 0 0 1-10 0c0-2.5 1.5-4 2.5-5 .3 1.5 1.2 2.5 2.5 2.5-.5-2.5-.5-5 0-7.5z"/></svg>Cook mode</button></div><p class="scale-note" hidden>Amounts with a number are scaled and rounded. Amounts in the method, and things like "to taste" or "a handful", stay as written.</p>
-  <p>Soft-boiled eggs with jammy yolks, marinated overnight in a sweet soy sauce. For ramen, rice bowls or on their own.</p>
-<h4 class="part part-ingredients">Ingredients</h4>
-<ul>
+<article class="recipe-page" data-url="japanese/eggs/ramen-egg.html">
+  <header class="recipe-hero tone-6">
+    <svg class="hero-art draw" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M16.69 7.44a6.973 6.973 0 0 0 -1.69 4.56c0 1.747 .64 3.345 1.699 4.571" /> <path pathLength="1" d="M2 9.504c7.715 8.647 14.75 10.265 20 2.498c-5.25 -7.761 -12.285 -6.142 -20 2.504" /> <path pathLength="1" d="M18 11v.01" /> <path pathLength="1" d="M11.5 10.5c-.667 1 -.667 2 0 3" /></svg>
+    <div class="hero-text">
+      <p class="kicker"><a href="../../japanese/index.html">Japanese</a> · Eggs</p>
+      <h1 style="view-transition-name: r-japanese-eggs-ramen-egg">Ramen Egg (Ajitsuke Tamago)</h1>
+      <p class="hero-intro">Soft-boiled eggs with jammy yolks, marinated overnight in a sweet soy sauce. For ramen, rice bowls or on their own.</p>
+      <div class="facts"><div class="fact fact-serves"><span>Serves</span><div class="scaler" data-base="4"><button type="button" class="scale-down" aria-label="Fewer servings">−</button><output aria-live="polite">4</output><button type="button" class="scale-up" aria-label="More servings">+</button></div><small>eggs</small></div><div class="fact"><span>Prep</span><strong>5 min</strong></div><div class="fact"><span>Cook</span><strong>7 min + 8–10 hr marinating</strong></div></div>
+      <div class="tags"><span class="tag">Make ahead</span></div>
+      <div class="hero-actions">
+        <button type="button" class="pill pill-solid start-cooking" hidden><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4.5v15l12.5-7.5z"/></svg>Start cooking</button>
+        <button type="button" class="pill pill-outline add-to-list" hidden><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>Add to shopping list</button>
+      </div>
+    </div>
+    
+  </header>
+  <div class="recipe-tabs" role="tablist" aria-label="Recipe sections" hidden>
+    <button type="button" role="tab" aria-selected="true" data-tab="ingredients">Ingredients</button>
+    <button type="button" role="tab" aria-selected="false" data-tab="method">Method</button>
+  </div>
+  <div class="recipe-layout" data-tab="ingredients">
+    <aside class="ingredients-panel" aria-label="Ingredients">
+      <h2>Ingredients</h2>
+      <p class="scale-note" hidden>Amounts with a number are scaled and rounded. Amounts in the method, and things like "to taste" or "a handful", stay as written.</p>
+      <ul>
 <li>4 eggs (about 55 g each), straight from the fridge</li>
 </ul>
 <h5>For the marinade</h5>
@@ -59,8 +77,11 @@
 <li>15 ml (1 tbsp) cooking sake</li>
 <li>5 g dashi powder (optional)</li>
 </ul>
-<h4 class="part part-method">Method</h4>
-<h5>Marinade</h5>
+      <p class="panel-hint">Tick things off as you go. Tap an ingredient's name to see where it's used.</p>
+    </aside>
+    <div class="method-panel">
+      <h2>Method</h2>
+      <h5>Marinade</h5>
 <ol>
 <li>Put all the marinade ingredients in a small saucepan and bring to the boil. Cook for about a minute, until the sugar has completely dissolved.</li>
 <li>Pour into a small bowl and let it cool.</li>
@@ -80,10 +101,10 @@
 <li>Refrigerate for 8–10 hours, turning the eggs after 4 hours so they marinate evenly.</li>
 <li>To serve, halve each egg with a piece of thread wrapped around it (cleaner than a knife with a runny yolk). Serve on ramen, as a side or over rice.</li>
 </ol>
-<h4 class="part part-notes">Notes</h4>
-<ul>
-<li>2026-10-28: We use about 5 g dashi powder in place of the 5 g bonito flakes, so there's nothing to strain out. It can be left out entirely: the marinade has less umami but the eggs are still good.</li>
-</ul>
+      
+    </div>
+  </div>
+  <section class="notes-panel reveal"><h2>From our kitchen</h2><div class="notes-columns"><div><h3>How we make it</h3><ol class="changes"><li><time datetime="2026-10-28">28 Oct 2026</time><p>We use about 5 g dashi powder in place of the 5 g bonito flakes, so there's nothing to strain out. It can be left out entirely: the marinade has less umami but the eggs are still good.</p></li></ol></div></div></section>
   <p class="source">Source: <a href="https://japan.recipetineats.com/ramen-egg-ajitsuke-tamago/">japan.recipetineats.com</a></p>
 </article>
 <nav class="pager" aria-label="More recipes"><a class="prev" href="../../japanese/chicken/karaage.html"><span>Previous</span>Karaage (Japanese Fried Chicken)</a><a class="next" href="../../mexican/beef/carne-asada-tacos.html"><span>Next</span>Carne Asada Tacos</a></nav>

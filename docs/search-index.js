@@ -7,7 +7,158 @@ window.FIELD_KITCHEN_INDEX = [
 "text": "1 medium orange, thinly sliced into ¼ cm rings 250 ml (1 cup) maple syrup 125 ml (½ cup) Italian white wine vinegar 125 g (½ cup) Dijon mustard 125 ml (½ cup) fresh orange juice 110 g (½ cup) caster sugar 125 ml (½ cup) Grand Marnier or similar orange liqueur 5 whole cloves ¼ tsp ground allspice 1½ tsp whole coriander seeds ½ tsp whole black peppercorns 1 half leg ham 2 carrots, peeled and cut into large chunks 2 celery stalks, cut into large chunks 1 brown onion, cut into large chunks 1 head garlic, split in half horizontally",
 "meta": "Serves 8 · Prep 20 min · Cook 3 hr 45 min",
 "intro": "A Christmas ham glazed with maple, orange and Grand Marnier, with candied orange slices pressed over the top and a sauce from the pan juices.",
-"photo": ""
+"photo": "",
+"tags": [
+"pork",
+"project"
+],
+"serves": 8,
+"ingredients": [
+{
+"t": "1 medium orange, thinly sliced into ¼ cm rings",
+"n": "Oranges",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\boranges?\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "250 ml (1 cup) maple syrup",
+"n": "Maple syrup",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmaple syrup\\b",
+"q": 250.0,
+"u": "ml"
+},
+{
+"t": "125 ml (½ cup) Italian white wine vinegar",
+"n": "White wine vinegar",
+"a": "Oils & vinegars",
+"s": false,
+"p": "\\bvinegar\\b",
+"q": 125.0,
+"u": "ml"
+},
+{
+"t": "125 g (½ cup) Dijon mustard",
+"n": "Dijon mustard",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bdijon\\b|\\bmustard\\b",
+"q": 125.0,
+"u": "g"
+},
+{
+"t": "125 ml (½ cup) fresh orange juice",
+"n": "Oranges",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\boranges?\\b",
+"q": 125.0,
+"u": "ml"
+},
+{
+"t": "110 g (½ cup) caster sugar",
+"n": "Sugar",
+"a": "Pantry & sauces",
+"s": true,
+"p": "\\bsugar\\b",
+"q": 110.0,
+"u": "g"
+},
+{
+"t": "125 ml (½ cup) Grand Marnier or similar orange liqueur",
+"n": "Grand Marnier",
+"a": "Wine & spirits",
+"s": false,
+"p": "\\bgrand marnier\\b|\\borange liqueur\\b|\\bmarnier\\b|\\bliqueur\\b",
+"q": 125.0,
+"u": "ml"
+},
+{
+"t": "5 whole cloves",
+"n": "Whole cloves",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bwhole cloves\\b|\\bcloves, whole\\b|\\bcloves\\b|\\bwhole\\b",
+"q": 5.0,
+"u": null
+},
+{
+"t": "¼ tsp ground allspice",
+"n": "Ground allspice",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\ballspice\\b",
+"q": 0.25,
+"u": "tsp"
+},
+{
+"t": "1½ tsp whole coriander seeds",
+"n": "Coriander seeds",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bcoriander seeds\\b|\\bcoriander\\b",
+"q": 1.5,
+"u": "tsp"
+},
+{
+"t": "½ tsp whole black peppercorns",
+"n": "Pepper",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bpepper(corns)?\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
+"t": "1 half leg ham",
+"n": "Leg ham",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bleg ham\\b|\\bham\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "2 carrots, peeled and cut into large chunks",
+"n": "Carrots",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bcarrots?\\b",
+"q": 2.0,
+"u": null
+},
+{
+"t": "2 celery stalks, cut into large chunks",
+"n": "Celery",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bcelery\\b",
+"q": 2.0,
+"u": null
+},
+{
+"t": "1 brown onion, cut into large chunks",
+"n": "Brown onions",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bonions?\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "1 head garlic, split in half horizontally",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 1.0,
+"u": "head"
+}
+]
 },
 {
 "title": "Barbecued Whole Snapper with Lime & Chilli",
@@ -17,7 +168,175 @@ window.FIELD_KITCHEN_INDEX = [
 "text": "1.5 kg whole snapper 1 stick lemongrass, trimmed, halved and cut into 5 cm lengths 4 garlic cloves, bruised 6 makrut lime leaves, torn Salt and black pepper, to season 2 tbsp toasted sesame seeds Sliced spring onion (green onion), to serve Fresh coriander sprigs, to serve Steamed jasmine rice, to serve Lime wedges, to serve 125 ml (½ cup) sweet chilli sauce 125 ml (½ cup) lime juice 1 tsp caster sugar 80 ml (⅓ cup) light soy sauce 2 cm piece fresh ginger, peeled and finely grated 1½ tbsp fish sauce 30 ml (2 tbsp) peanut oil 2 tbsp chopped fresh coriander",
 "meta": "Serves 4 · Prep 15 min · Cook 35 min",
 "intro": "A whole snapper stuffed with lemongrass, garlic and makrut lime, coated in sesame seeds and cooked standing upright in a foil parcel on the barbecue, then dressed with a sweet chilli, lime and ginger dressing.",
-"photo": ""
+"photo": "",
+"tags": [
+"seafood"
+],
+"serves": 4,
+"ingredients": [
+{
+"t": "1.5 kg whole snapper",
+"n": "Whole snapper",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bsnapper\\b|\\bwhole fish\\b",
+"q": 1500.0,
+"u": "g"
+},
+{
+"t": "1 stick lemongrass, trimmed, halved and cut into 5 cm lengths",
+"n": "Lemongrass",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\blemongrass\\b",
+"q": 1.0,
+"u": "stick"
+},
+{
+"t": "4 garlic cloves, bruised",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 4.0,
+"u": null
+},
+{
+"t": "6 makrut lime leaves, torn",
+"n": "Makrut lime leaves",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bmakrut\\b|\\blime leaves\\b",
+"q": 6.0,
+"u": null
+},
+{
+"t": "Salt and black pepper, to season",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": null,
+"u": null
+},
+{
+"t": "2 tbsp toasted sesame seeds",
+"n": "Sesame seeds",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bsesame seeds\\b",
+"q": 6.0,
+"u": "tsp"
+},
+{
+"t": "Sliced spring onion (green onion), to serve",
+"n": "Spring onions",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bspring onions?\\b|\\bgreen onions?\\b|\\bscallions?\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Fresh coriander sprigs, to serve",
+"n": "Coriander",
+"a": "Herbs",
+"s": false,
+"p": "\\bcoriander\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Steamed jasmine rice, to serve",
+"n": "Rice",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\brice\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Lime wedges, to serve",
+"n": "Limes",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\blimes?\\b",
+"q": null,
+"u": null
+},
+{
+"t": "125 ml (½ cup) sweet chilli sauce",
+"n": "Sweet chilli sauce",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bsweet chilli sauce\\b",
+"q": 125.0,
+"u": "ml"
+},
+{
+"t": "125 ml (½ cup) lime juice",
+"n": "Limes",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\blimes?\\b",
+"q": 125.0,
+"u": "ml"
+},
+{
+"t": "1 tsp caster sugar",
+"n": "Sugar",
+"a": "Pantry & sauces",
+"s": true,
+"p": "\\bsugar\\b",
+"q": 1.0,
+"u": "tsp"
+},
+{
+"t": "80 ml (⅓ cup) light soy sauce",
+"n": "Soy sauce",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bsoy sauce\\b|\\bsoy\\b",
+"q": 80.0,
+"u": "ml"
+},
+{
+"t": "2 cm piece fresh ginger, peeled and finely grated",
+"n": "Fresh ginger",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bginger\\b",
+"q": 2.0,
+"u": "cm"
+},
+{
+"t": "1½ tbsp fish sauce",
+"n": "Fish sauce",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bfish sauce\\b",
+"q": 4.5,
+"u": "tsp"
+},
+{
+"t": "30 ml (2 tbsp) peanut oil",
+"n": "Peanut oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\bpeanut oil\\b",
+"q": 30.0,
+"u": "ml"
+},
+{
+"t": "2 tbsp chopped fresh coriander",
+"n": "Coriander",
+"a": "Herbs",
+"s": false,
+"p": "\\bcoriander\\b",
+"q": 6.0,
+"u": "tsp"
+}
+]
 },
 {
 "title": "Classic Roast Chicken",
@@ -27,7 +346,67 @@ window.FIELD_KITCHEN_INDEX = [
 "text": "1 whole chicken, about 1.5–1.8 kg (free-range if you can) 150 g (5.3 oz) unsalted butter, at room temperature 1 lemon 3 cloves garlic Salt and freshly ground white pepper (or black pepper) Small bunch thyme, leaves picked and chopped",
 "meta": "Serves 4 · Prep 20 min · Cook about 1 hr 15 min",
 "intro": "Lemon, garlic and thyme butter pushed under the skin, then trussed and roasted to temperature for crisp skin and juicy breast meat.",
-"photo": ""
+"photo": "",
+"tags": [
+"chicken"
+],
+"serves": 4,
+"ingredients": [
+{
+"t": "1 whole chicken, about 1.5–1.8 kg (free-range if you can)",
+"n": "Whole chicken",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bwhole chicken\\b|\\bchicken\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "150 g (5.3 oz) unsalted butter, at room temperature",
+"n": "Butter",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bbutter\\b",
+"q": 150.0,
+"u": "g"
+},
+{
+"t": "1 lemon",
+"n": "Lemons",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\blemons?\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "3 cloves garlic",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 3.0,
+"u": "cloves"
+},
+{
+"t": "Salt and freshly ground white pepper (or black pepper)",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Small bunch thyme, leaves picked and chopped",
+"n": "Thyme",
+"a": "Herbs",
+"s": false,
+"p": "\\bthyme\\b",
+"q": null,
+"u": null
+}
+]
 },
 {
 "title": "Mongolian Beef",
@@ -37,7 +416,158 @@ window.FIELD_KITCHEN_INDEX = [
 "text": "450 g (1 lb) flank steak, thinly sliced 3–6 mm (⅛–¼ inch) thick 30 ml (2 tbsp) water 2 tsp Shaoxing rice wine ½ tsp kosher salt (a little less if using fine salt) ¼ tsp bicarbonate of soda (baking soda) 16 g (2 tbsp) cornflour (cornstarch) 15 ml (1 tbsp) neutral oil 1 tsp cracked black pepper, more or less to taste 15 ml (1 tbsp) Shaoxing rice wine 38 g (3 tbsp) white sugar 30 ml (2 tbsp) regular soy sauce 1 tbsp minced garlic (about 2 cloves) ½ large brown (yellow) onion, sliced 1 bunch spring onions (green onions), cut into 5 cm (2 inch) pieces, white and green parts separated 30 g (1 oz) medium-thickness rice vermicelli (optional; use more or less to preference) Oil, as needed for cooking",
 "meta": "Serves 3 · Prep 15 min · Cook 15 min",
 "intro": "Restaurant-style, served over an optional nest of crisp fried rice vermicelli.",
-"photo": ""
+"photo": "",
+"tags": [
+"beef",
+"quick"
+],
+"serves": 3,
+"ingredients": [
+{
+"t": "450 g (1 lb) flank steak, thinly sliced 3–6 mm (⅛–¼ inch) thick",
+"n": "Flank or skirt steak",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bflank\\b|\\bskirt\\b|\\bsteak\\b",
+"q": 450.0,
+"u": "g"
+},
+{
+"t": "30 ml (2 tbsp) water",
+"n": "Water",
+"a": "Pantry & sauces",
+"s": true,
+"p": "\\bwater\\b",
+"q": 30.0,
+"u": "ml"
+},
+{
+"t": "2 tsp Shaoxing rice wine",
+"n": "Shaoxing wine",
+"a": "Wine & spirits",
+"s": false,
+"p": "\\bshaoxing\\b|\\brice wine\\b",
+"q": 2.0,
+"u": "tsp"
+},
+{
+"t": "½ tsp kosher salt (a little less if using fine salt)",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
+"t": "¼ tsp bicarbonate of soda (baking soda)",
+"n": "Bicarbonate of soda",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bbicarbonate\\b|\\bbaking soda\\b|\\bsoda\\b",
+"q": 0.25,
+"u": "tsp"
+},
+{
+"t": "16 g (2 tbsp) cornflour (cornstarch)",
+"n": "Cornflour",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bcornflour\\b|\\bcornstarch\\b|\\bpotato starch\\b|\\bstarch\\b",
+"q": 16.0,
+"u": "g"
+},
+{
+"t": "15 ml (1 tbsp) neutral oil",
+"n": "Neutral oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\boil\\b",
+"q": 15.0,
+"u": "ml"
+},
+{
+"t": "1 tsp cracked black pepper, more or less to taste",
+"n": "Pepper",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bpepper(corns)?\\b",
+"q": 1.0,
+"u": "tsp"
+},
+{
+"t": "15 ml (1 tbsp) Shaoxing rice wine",
+"n": "Shaoxing wine",
+"a": "Wine & spirits",
+"s": false,
+"p": "\\bshaoxing\\b|\\brice wine\\b",
+"q": 15.0,
+"u": "ml"
+},
+{
+"t": "38 g (3 tbsp) white sugar",
+"n": "Sugar",
+"a": "Pantry & sauces",
+"s": true,
+"p": "\\bsugar\\b",
+"q": 38.0,
+"u": "g"
+},
+{
+"t": "30 ml (2 tbsp) regular soy sauce",
+"n": "Soy sauce",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bsoy sauce\\b|\\bsoy\\b",
+"q": 30.0,
+"u": "ml"
+},
+{
+"t": "1 tbsp minced garlic (about 2 cloves)",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 3.0,
+"u": "tsp"
+},
+{
+"t": "½ large brown (yellow) onion, sliced",
+"n": "Brown onions",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bonions?\\b",
+"q": 0.5,
+"u": null
+},
+{
+"t": "1 bunch spring onions (green onions), cut into 5 cm (2 inch) pieces, white and green parts separated",
+"n": "Spring onions",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bspring onions?\\b|\\bgreen onions?\\b|\\bscallions?\\b",
+"q": 1.0,
+"u": "bunch"
+},
+{
+"t": "30 g (1 oz) medium-thickness rice vermicelli (optional; use more or less to preference)",
+"n": "Rice vermicelli",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bvermicelli\\b",
+"q": 30.0,
+"u": "g"
+},
+{
+"t": "Oil, as needed for cooking",
+"n": "Neutral oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\boil\\b",
+"q": null,
+"u": null
+}
+]
 },
 {
 "title": "Crispy Salt & Pepper Wings",
@@ -47,7 +577,131 @@ window.FIELD_KITCHEN_INDEX = [
 "text": "1 kg (2 lb) chicken wings 1 tsp black peppercorns 1 tsp white peppercorns 1 tsp Sichuan peppercorns 1½ tbsp sea salt, plus 2 tsp extra 3 tsp (1 tbsp) garlic powder Vegetable oil, for deep frying ¼ tsp chilli flakes Coconut sriracha or any hot sauce, to serve Lime wedges, to serve (optional) 130 g (1 cup) cornflour (cornstarch) 65 g (½ cup) plain flour 375 ml (1½ cups) cold water",
 "meta": "Serves 4 · Prep 10 min + at least 4 hr curing · Cook about 1 hr",
 "intro": "Double-fried for extra crunch and seasoned with three kinds of peppercorn. Using just one type of peppercorn works fine too.",
-"photo": ""
+"photo": "",
+"tags": [
+"chicken",
+"make-ahead"
+],
+"serves": 4,
+"ingredients": [
+{
+"t": "1 kg (2 lb) chicken wings",
+"n": "Chicken wings",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bchicken wings\\b|\\bchicken\\b",
+"q": 1000.0,
+"u": "g"
+},
+{
+"t": "1 tsp black peppercorns",
+"n": "Pepper",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bpepper(corns)?\\b",
+"q": 1.0,
+"u": "tsp"
+},
+{
+"t": "1 tsp white peppercorns",
+"n": "Pepper",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bpepper(corns)?\\b",
+"q": 1.0,
+"u": "tsp"
+},
+{
+"t": "1 tsp Sichuan peppercorns",
+"n": "Sichuan peppercorns",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bsichuan pepper|\\bsichuan\\b",
+"q": 1.0,
+"u": "tsp"
+},
+{
+"t": "1½ tbsp sea salt, plus 2 tsp extra",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": 4.5,
+"u": "tsp"
+},
+{
+"t": "3 tsp (1 tbsp) garlic powder",
+"n": "Garlic powder",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bgarlic powder\\b|\\bgarlic\\b",
+"q": 3.0,
+"u": "tsp"
+},
+{
+"t": "Vegetable oil, for deep frying",
+"n": "Neutral oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\boil\\b",
+"q": null,
+"u": null
+},
+{
+"t": "¼ tsp chilli flakes",
+"n": "Chilli flakes",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bchilli flakes\\b|\\bchilli\\b",
+"q": 0.25,
+"u": "tsp"
+},
+{
+"t": "Coconut sriracha or any hot sauce, to serve",
+"n": "Hot sauce",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bsriracha\\b|\\bhot sauce\\b|\\bhot\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Lime wedges, to serve (optional)",
+"n": "Limes",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\blimes?\\b",
+"q": null,
+"u": null
+},
+{
+"t": "130 g (1 cup) cornflour (cornstarch)",
+"n": "Cornflour",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bcornflour\\b|\\bcornstarch\\b|\\bpotato starch\\b|\\bstarch\\b",
+"q": 130.0,
+"u": "g"
+},
+{
+"t": "65 g (½ cup) plain flour",
+"n": "Plain flour",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bflour\\b",
+"q": 65.0,
+"u": "g"
+},
+{
+"t": "375 ml (1½ cups) cold water",
+"n": "Water",
+"a": "Pantry & sauces",
+"s": true,
+"p": "\\bwater\\b",
+"q": 375.0,
+"u": "ml"
+}
+]
 },
 {
 "title": "Crispy Chilli Bacon Noodles",
@@ -57,7 +711,149 @@ window.FIELD_KITCHEN_INDEX = [
 "text": "8 rashers thick-cut streaky bacon, cut into 2.5 cm (1 inch) pieces 1 tsp neutral oil 5 garlic cloves, minced 1–2 tbsp chilli crisp 15 ml (1 tbsp) soy sauce 15 ml (1 tbsp) oyster sauce 15 ml (1 tbsp) dark soy sauce 1 tsp sesame oil ½ tsp sugar ½ tsp MSG 180 ml (¾ cup) chicken stock for fresh lo mein, or 240–480 ml (1–2 cups) for dried egg noodles 225 g (8 oz) fresh lo mein, or dried egg noodles (puck or nest style) Spring onions (scallions), thinly sliced Toasted sesame seeds Extra chilli crisp, for drizzling",
 "meta": "Serves 2 · Cook 15 min",
 "intro": "Bacon rendered slowly until crisp, chilli crisp bloomed in the fat, and noodles tossed through it all.",
-"photo": ""
+"photo": "",
+"tags": [
+"noodles",
+"quick"
+],
+"serves": 2,
+"ingredients": [
+{
+"t": "8 rashers thick-cut streaky bacon, cut into 2.5 cm (1 inch) pieces",
+"n": "Streaky bacon",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bbacon\\b",
+"q": 8.0,
+"u": "rashers"
+},
+{
+"t": "1 tsp neutral oil",
+"n": "Neutral oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\boil\\b",
+"q": 1.0,
+"u": "tsp"
+},
+{
+"t": "5 garlic cloves, minced",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 5.0,
+"u": null
+},
+{
+"t": "1–2 tbsp chilli crisp",
+"n": "Chilli crisp",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bchilli crisp\\b|\\bchilli\\b",
+"q": 6.0,
+"u": "tsp"
+},
+{
+"t": "15 ml (1 tbsp) soy sauce",
+"n": "Soy sauce",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bsoy sauce\\b|\\bsoy\\b",
+"q": 15.0,
+"u": "ml"
+},
+{
+"t": "15 ml (1 tbsp) oyster sauce",
+"n": "Oyster sauce",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\boyster sauce\\b",
+"q": 15.0,
+"u": "ml"
+},
+{
+"t": "15 ml (1 tbsp) dark soy sauce",
+"n": "Dark soy sauce",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bdark soy\\b|\\bsoy\\b",
+"q": 15.0,
+"u": "ml"
+},
+{
+"t": "1 tsp sesame oil",
+"n": "Sesame oil",
+"a": "Oils & vinegars",
+"s": false,
+"p": "\\bsesame oil\\b",
+"q": 1.0,
+"u": "tsp"
+},
+{
+"t": "½ tsp sugar",
+"n": "Sugar",
+"a": "Pantry & sauces",
+"s": true,
+"p": "\\bsugar\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
+"t": "½ tsp MSG",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
+"t": "180 ml (¾ cup) chicken stock for fresh lo mein, or 240–480 ml (1–2 cups) for dried egg noodles",
+"n": "Chicken stock",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bchicken stock\\b|\\bchicken\\b",
+"q": 180.0,
+"u": "ml"
+},
+{
+"t": "225 g (8 oz) fresh lo mein, or dried egg noodles (puck or nest style)",
+"n": "Egg noodles",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\begg noodles\\b|\\blo mein\\b|\\bmein\\b",
+"q": 225.0,
+"u": "g"
+},
+{
+"t": "Spring onions (scallions), thinly sliced",
+"n": "Spring onions",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bspring onions?\\b|\\bgreen onions?\\b|\\bscallions?\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Toasted sesame seeds",
+"n": "Sesame seeds",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bsesame seeds\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Extra chilli crisp, for drizzling",
+"n": "Chilli crisp",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bchilli crisp\\b|\\bchilli\\b",
+"q": null,
+"u": null
+}
+]
 },
 {
 "title": "Simple Naan (No Yeast)",
@@ -67,7 +863,59 @@ window.FIELD_KITCHEN_INDEX = [
 "text": "260 g self-raising flour, plus extra for dusting 200 g Greek yoghurt 1 tsp fine sea salt Butter, for serving Fresh coriander, to sprinkle",
 "meta": "Serves 6 naan · Prep 10 min · Cook 10 min",
 "intro": "Two-ingredient dough, cooked in a dry pan. Good with any curry, including Moh's Duck and Tamarind Curry.",
-"photo": ""
+"photo": "",
+"tags": [
+"breads",
+"make-ahead"
+],
+"serves": 6,
+"ingredients": [
+{
+"t": "260 g self-raising flour, plus extra for dusting",
+"n": "Self-raising flour",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bself-raising\\b",
+"q": 260.0,
+"u": "g"
+},
+{
+"t": "200 g Greek yoghurt",
+"n": "Greek yoghurt",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\byoghurt\\b",
+"q": 200.0,
+"u": "g"
+},
+{
+"t": "1 tsp fine sea salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": 1.0,
+"u": "tsp"
+},
+{
+"t": "Butter, for serving",
+"n": "Butter",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bbutter\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Fresh coriander, to sprinkle",
+"n": "Coriander",
+"a": "Herbs",
+"s": false,
+"p": "\\bcoriander\\b",
+"q": null,
+"u": null
+}
+]
 },
 {
 "title": "Raita",
@@ -77,7 +925,77 @@ window.FIELD_KITCHEN_INDEX = [
 "text": "250 g (1 cup) Greek yoghurt 1 garlic clove Thumb-sized piece ginger, finely grated ¼ small pack (UK size) mint, leaves chopped Juice of ½ lime ½ tsp garam masala, plus a little extra to serve ¼ cucumber, grated and lightly squeezed",
 "meta": "Serves 6–8 · Prep 10 min",
 "intro": "A cooling yoghurt and mint side with ginger and garam masala for warmth. We serve it with Moh's Duck and Tamarind Curry.",
-"photo": ""
+"photo": "",
+"tags": [
+"sides",
+"quick"
+],
+"serves": 6,
+"ingredients": [
+{
+"t": "250 g (1 cup) Greek yoghurt",
+"n": "Greek yoghurt",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\byoghurt\\b",
+"q": 250.0,
+"u": "g"
+},
+{
+"t": "1 garlic clove",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "Thumb-sized piece ginger, finely grated",
+"n": "Fresh ginger",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bginger\\b",
+"q": null,
+"u": null
+},
+{
+"t": "¼ small pack (UK size) mint, leaves chopped",
+"n": "Mint",
+"a": "Herbs",
+"s": false,
+"p": "\\bmint\\b",
+"q": 0.25,
+"u": null
+},
+{
+"t": "Juice of ½ lime",
+"n": "Limes",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\blimes?\\b",
+"q": null,
+"u": null
+},
+{
+"t": "½ tsp garam masala, plus a little extra to serve",
+"n": "Garam masala",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bgaram masala\\b|\\bmasala\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
+"t": "¼ cucumber, grated and lightly squeezed",
+"n": "Cucumber",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bcucumber\\b",
+"q": 0.25,
+"u": null
+}
+]
 },
 {
 "title": "Focaccia",
@@ -87,7 +1005,67 @@ window.FIELD_KITCHEN_INDEX = [
 "text": "7 g (1 sachet / ¼ oz) active dry yeast 680 g water (113 g / ½ cup lukewarm, plus 567 g / 2½ cups at room temperature) 780 g (6 cups) bread flour 17 g (2 tbsp) Diamond Crystal kosher salt 110 g (½ cup) extra-virgin olive oil, plus more for oiling your hands One topping (see Topping Options) 55 g (¼ cup) extra-virgin olive oil Fresh rosemary leaves Flaky salt 55 g (¼ cup) extra-virgin olive oil 6 cloves garlic, thinly sliced Flaky salt 55 g (¼ cup) extra-virgin olive oil 4 cloves garlic, finely chopped 1–2 tsp chilli flakes Flaky salt 60 ml (¼ cup) olive oil 1½ tbsp Sichuan peppercorns ½ tbsp black peppercorns ½ tbsp white peppercorns 2 large onions, halved and sliced into thin rings 60 ml (4 tbsp) vegetable oil ½ tbsp sugar, more to taste 30 ml (2 tbsp) soy sauce",
 "meta": "Serves 1 half-sheet pan · Prep 3 hr 45 min (mostly rising) · Cook 30 min",
 "intro": "Claire Saffitz's focaccia: a very wet, well-kneaded dough baked in a half-sheet pan for a tall, airy crumb and a crisp, oily base. Pick a topping from the options after the method.",
-"photo": ""
+"photo": "",
+"tags": [
+"breads"
+],
+"serves": 1,
+"ingredients": [
+{
+"t": "7 g (1 sachet / ¼ oz) active dry yeast",
+"n": "Dried yeast",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\byeast\\b",
+"q": 7.0,
+"u": "g"
+},
+{
+"t": "680 g water (113 g / ½ cup lukewarm, plus 567 g / 2½ cups at room temperature)",
+"n": "Water",
+"a": "Pantry & sauces",
+"s": true,
+"p": "\\bwater\\b",
+"q": 680.0,
+"u": "g"
+},
+{
+"t": "780 g (6 cups) bread flour",
+"n": "Bread flour",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bbread flour\\b",
+"q": 780.0,
+"u": "g"
+},
+{
+"t": "17 g (2 tbsp) Diamond Crystal kosher salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": 17.0,
+"u": "g"
+},
+{
+"t": "110 g (½ cup) extra-virgin olive oil, plus more for oiling your hands",
+"n": "Olive oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\bolive oil\\b",
+"q": 110.0,
+"u": "g"
+},
+{
+"t": "One topping (see Topping Options)",
+"n": null,
+"a": null,
+"s": true,
+"p": "",
+"q": null,
+"u": null
+}
+]
 },
 {
 "title": "'Nduja Pasta",
@@ -97,7 +1075,77 @@ window.FIELD_KITCHEN_INDEX = [
 "text": "Salt 15 ml (1 tbsp) extra-virgin olive oil 1 clove garlic, peeled 400 g (14 oz) tin whole peeled tomatoes 200 g (7 oz) 'nduja, or to taste (more or less to adjust the heat) 340 g (12 oz) fileja pasta (or rigatoni or bucatini) Grated Pecorino Romano, to serve",
 "meta": "Serves 3–4 · Cook 20–30 min",
 "intro": "A simple, fiery Calabrian sauce: tomatoes with 'nduja, the soft, spicy pork spread, melted through at the end.",
-"photo": ""
+"photo": "",
+"tags": [
+"pasta",
+"quick"
+],
+"serves": 3,
+"ingredients": [
+{
+"t": "Salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": null,
+"u": null
+},
+{
+"t": "15 ml (1 tbsp) extra-virgin olive oil",
+"n": "Olive oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\bolive oil\\b",
+"q": 15.0,
+"u": "ml"
+},
+{
+"t": "1 clove garlic, peeled",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 1.0,
+"u": "clove"
+},
+{
+"t": "400 g (14 oz) tin whole peeled tomatoes",
+"n": "Tinned tomatoes",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\btomatoes\\b",
+"q": 400.0,
+"u": "g"
+},
+{
+"t": "200 g (7 oz) 'nduja, or to taste (more or less to adjust the heat)",
+"n": "'Nduja",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bnduja\\b",
+"q": 200.0,
+"u": "g"
+},
+{
+"t": "340 g (12 oz) fileja pasta (or rigatoni or bucatini)",
+"n": "Fileja pasta",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bfileja\\b",
+"q": 340.0,
+"u": "g"
+},
+{
+"t": "Grated Pecorino Romano, to serve",
+"n": "Pecorino",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bpecorino\\b",
+"q": null,
+"u": null
+}
+]
 },
 {
 "title": "Fettuccine Alfredo",
@@ -107,7 +1155,95 @@ window.FIELD_KITCHEN_INDEX = [
 "text": "250 g (8 oz) dried fettuccine 42 g (3 tbsp) unsalted butter 1 small eschallot (French shallot), very finely minced 125 ml (½ cup) thickened or pure cream (heavy cream) 60 g (¾ cup) freshly and finely grated Parmigiano Reggiano or parmesan ¼ tsp salt A good grind of black pepper Extra Parmigiano Reggiano Fresh parsley (optional)",
 "meta": "Serves 3 · Prep 5 min · Cook 13 min",
 "intro": "Butter, cream and Parmigiano, tossed with the pasta so the sauce clings to every strand rather than pooling.",
-"photo": ""
+"photo": "",
+"tags": [
+"pasta",
+"quick"
+],
+"serves": 3,
+"ingredients": [
+{
+"t": "250 g (8 oz) dried fettuccine",
+"n": "Dried fettuccine",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bfettuccine\\b",
+"q": 250.0,
+"u": "g"
+},
+{
+"t": "42 g (3 tbsp) unsalted butter",
+"n": "Butter",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bbutter\\b",
+"q": 42.0,
+"u": "g"
+},
+{
+"t": "1 small eschallot (French shallot), very finely minced",
+"n": "Eschallot",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\beschallot\\b|\\bshallot\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "125 ml (½ cup) thickened or pure cream (heavy cream)",
+"n": "Thickened cream",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bcream\\b",
+"q": 125.0,
+"u": "ml"
+},
+{
+"t": "60 g (¾ cup) freshly and finely grated Parmigiano Reggiano or parmesan",
+"n": "Parmesan",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bparmesan\\b|\\bparmigiano\\b",
+"q": 60.0,
+"u": "g"
+},
+{
+"t": "¼ tsp salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": 0.25,
+"u": "tsp"
+},
+{
+"t": "A good grind of black pepper",
+"n": "Pepper",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bpepper(corns)?\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Extra Parmigiano Reggiano",
+"n": "Parmesan",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bparmesan\\b|\\bparmigiano\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Fresh parsley (optional)",
+"n": "Parsley",
+"a": "Herbs",
+"s": false,
+"p": "\\bparsley\\b",
+"q": null,
+"u": null
+}
+]
 },
 {
 "title": "Lasagne",
@@ -117,7 +1253,231 @@ window.FIELD_KITCHEN_INDEX = [
 "text": "2 sticks celery 1 large carrot 1 brown onion 4 cloves garlic 60 ml (¼ cup) olive oil 500 g pork mince 500 g beef mince 250 ml (1 cup) red wine, something bold like a Sangiovese or shiraz 700 g tomato passata 100 ml milk Sea salt, to taste 100 g Parmesan, grated, plus the rind 350 g mozzarella, grated Small bunch basil 250 g baby spinach 3 eggs 320 g Tipo 00 flour, plus extra for dusting 15 ml (1 tbsp) olive oil Or store-bought fresh lasagne sheets instead (we use Latina) 50 g butter 50 g plain flour 600 ml milk Sea salt and cracked white pepper Nutmeg, to taste (or cinnamon)",
 "meta": "Serves 8 · Prep 2 hr · Cook 3 hr 45 min",
 "intro": "A slow pork and beef ragu, béchamel and plenty of cheese. Make the ragu the day before if you can: it deepens overnight and spreads the work out.",
-"photo": ""
+"photo": "",
+"tags": [
+"pasta",
+"make-ahead",
+"project"
+],
+"serves": 8,
+"ingredients": [
+{
+"t": "2 sticks celery",
+"n": "Celery",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bcelery\\b",
+"q": 2.0,
+"u": "sticks"
+},
+{
+"t": "1 large carrot",
+"n": "Carrots",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bcarrots?\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "1 brown onion",
+"n": "Brown onions",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bonions?\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "4 cloves garlic",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 4.0,
+"u": "cloves"
+},
+{
+"t": "60 ml (¼ cup) olive oil",
+"n": "Olive oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\bolive oil\\b",
+"q": 60.0,
+"u": "ml"
+},
+{
+"t": "500 g pork mince",
+"n": "Pork mince",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bpork mince\\b|\\bpork\\b",
+"q": 500.0,
+"u": "g"
+},
+{
+"t": "500 g beef mince",
+"n": "Beef mince",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bbeef mince\\b|\\bbeef\\b",
+"q": 500.0,
+"u": "g"
+},
+{
+"t": "250 ml (1 cup) red wine, something bold like a Sangiovese or shiraz",
+"n": "Red wine",
+"a": "Wine & spirits",
+"s": false,
+"p": "\\bred wine\\b",
+"q": 250.0,
+"u": "ml"
+},
+{
+"t": "700 g tomato passata",
+"n": "Tomato passata",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bpassata\\b",
+"q": 700.0,
+"u": "g"
+},
+{
+"t": "100 ml milk",
+"n": "Milk",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bmilk\\b",
+"q": 100.0,
+"u": "ml"
+},
+{
+"t": "Sea salt, to taste",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": null,
+"u": null
+},
+{
+"t": "100 g Parmesan, grated, plus the rind",
+"n": "Parmesan",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bparmesan\\b|\\bparmigiano\\b",
+"q": 100.0,
+"u": "g"
+},
+{
+"t": "350 g mozzarella, grated",
+"n": "Mozzarella",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bmozzarella\\b",
+"q": 350.0,
+"u": "g"
+},
+{
+"t": "Small bunch basil",
+"n": "Basil",
+"a": "Herbs",
+"s": false,
+"p": "\\bbasil\\b",
+"q": null,
+"u": null
+},
+{
+"t": "250 g baby spinach",
+"n": "Baby spinach",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bspinach\\b",
+"q": 250.0,
+"u": "g"
+},
+{
+"t": "3 eggs",
+"n": "Eggs",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\beggs?\\b",
+"q": 3.0,
+"u": null
+},
+{
+"t": "320 g Tipo 00 flour, plus extra for dusting",
+"n": "Tipo 00 flour",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\btipo 00\\b|\\b00\\b",
+"q": 320.0,
+"u": "g"
+},
+{
+"t": "15 ml (1 tbsp) olive oil",
+"n": "Olive oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\bolive oil\\b",
+"q": 15.0,
+"u": "ml"
+},
+{
+"t": "Or store-bought fresh lasagne sheets instead (we use Latina)",
+"n": "Fresh lasagne sheets",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\blasagne sheets\\b|\\blasagne\\b",
+"q": null,
+"u": null
+},
+{
+"t": "50 g butter",
+"n": "Butter",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bbutter\\b",
+"q": 50.0,
+"u": "g"
+},
+{
+"t": "50 g plain flour",
+"n": "Plain flour",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bflour\\b",
+"q": 50.0,
+"u": "g"
+},
+{
+"t": "600 ml milk",
+"n": "Milk",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bmilk\\b",
+"q": 600.0,
+"u": "ml"
+},
+{
+"t": "Sea salt and cracked white pepper",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Nutmeg, to taste (or cinnamon)",
+"n": "Nutmeg",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bnutmeg\\b",
+"q": null,
+"u": null
+}
+]
 },
 {
 "title": "Spaghetti alla Carbonara",
@@ -127,7 +1487,68 @@ window.FIELD_KITCHEN_INDEX = [
 "text": "Salt 340 g (12 oz) rigatoni or spaghetti 125 g (4½ oz) guanciale (or pancetta or bacon if you must) 4 large eggs 55 g (2 oz) grated pecorino, plus extra to serve Freshly ground black pepper",
 "meta": "Serves 3–4 · Cook 20 min",
 "intro": "The Roman way: egg yolks, pecorino, guanciale and black pepper, and nothing else. No cream.",
-"photo": ""
+"photo": "",
+"tags": [
+"pasta",
+"quick"
+],
+"serves": 3,
+"ingredients": [
+{
+"t": "Salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": null,
+"u": null
+},
+{
+"t": "340 g (12 oz) rigatoni or spaghetti",
+"n": "Spaghetti or rigatoni",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bspaghetti\\b|\\brigatoni\\b",
+"q": 340.0,
+"u": "g"
+},
+{
+"t": "125 g (4½ oz) guanciale (or pancetta or bacon if you must)",
+"n": "Guanciale",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bguanciale\\b",
+"q": 125.0,
+"u": "g"
+},
+{
+"t": "4 large eggs",
+"n": "Eggs",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\beggs?\\b",
+"q": 4.0,
+"u": null
+},
+{
+"t": "55 g (2 oz) grated pecorino, plus extra to serve",
+"n": "Pecorino",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bpecorino\\b",
+"q": 55.0,
+"u": "g"
+},
+{
+"t": "Freshly ground black pepper",
+"n": "Pepper",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bpepper(corns)?\\b",
+"q": null,
+"u": null
+}
+]
 },
 {
 "title": "Crispy Porchetta",
@@ -137,7 +1558,87 @@ window.FIELD_KITCHEN_INDEX = [
 "text": "1 pork belly, bone out, skin on, with the loin still attached (a belly without the loin also works; ask your butcher) 4 large sprigs rosemary 12 cloves garlic Zest of 1 lemon 1 bunch flat-leaf parsley 15 ml (1 tbsp) fennel pollen (or toasted fennel seeds, crushed) 15 ml (1 tbsp) chilli flakes 30 g (about 1 oz) salt",
 "meta": "Serves 12 · Prep the day before (24–48 hr drying in the fridge) · Cook about 4 hr",
 "intro": "Pork belly rolled around the loin with a herb, garlic and fennel filling. Start a day or two ahead: the skin needs to dry out in the fridge to crackle.",
-"photo": ""
+"photo": "",
+"tags": [
+"pork",
+"make-ahead",
+"project"
+],
+"serves": 12,
+"ingredients": [
+{
+"t": "1 pork belly, bone out, skin on, with the loin still attached (a belly without the loin also works; ask your butcher)",
+"n": "Pork belly with loin",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bpork belly\\b|\\bbelly\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "4 large sprigs rosemary",
+"n": "Rosemary",
+"a": "Herbs",
+"s": false,
+"p": "\\brosemary\\b",
+"q": 4.0,
+"u": null
+},
+{
+"t": "12 cloves garlic",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 12.0,
+"u": "cloves"
+},
+{
+"t": "Zest of 1 lemon",
+"n": "Lemons",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\blemons?\\b",
+"q": null,
+"u": null
+},
+{
+"t": "1 bunch flat-leaf parsley",
+"n": "Parsley",
+"a": "Herbs",
+"s": false,
+"p": "\\bparsley\\b",
+"q": 1.0,
+"u": "bunch"
+},
+{
+"t": "15 ml (1 tbsp) fennel pollen (or toasted fennel seeds, crushed)",
+"n": "Fennel pollen or seeds",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bfennel\\b",
+"q": 15.0,
+"u": "ml"
+},
+{
+"t": "15 ml (1 tbsp) chilli flakes",
+"n": "Chilli flakes",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bchilli flakes\\b|\\bchilli\\b",
+"q": 15.0,
+"u": "ml"
+},
+{
+"t": "30 g (about 1 oz) salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": 30.0,
+"u": "g"
+}
+]
 },
 {
 "title": "Chicken Nanban (Fried Chicken with Tartar Sauce)",
@@ -147,7 +1648,184 @@ window.FIELD_KITCHEN_INDEX = [
 "text": "400 g (14 oz) boneless, skin-on chicken thighs (or breasts) Kosher salt and black pepper, to season 30 g (¼ cup) plain (all-purpose) flour 1 egg High-heat oil for frying, such as grapeseed, avocado or vegetable oil Lettuce and shredded cabbage (or salad greens), to serve Cherry tomatoes, to serve Hot cooked short-grain rice for 2–3, about 210 g per serving 30 ml (2 tbsp) soy sauce 30 ml (2 tbsp) white vinegar 25 g (2 tbsp) sugar 15 ml (1 tbsp) mirin 2 eggs ¼ brown (yellow) onion 1 spring onion (green onion) 55 g (4 tbsp) Japanese Kewpie mayonnaise 1 tsp lemon juice ½ tbsp tomato sauce (ketchup) Kosher salt and black pepper, to taste",
 "meta": "Serves 3 · Prep 20 min · Cook 15 min",
 "intro": "Egg-coated fried chicken soaked in a sweet and tangy nanban sauce and topped with a generous spoonful of tartar sauce.",
-"photo": ""
+"photo": "",
+"tags": [
+"chicken"
+],
+"serves": 3,
+"ingredients": [
+{
+"t": "400 g (14 oz) boneless, skin-on chicken thighs (or breasts)",
+"n": "Chicken thighs",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bchicken thighs?\\b|\\bchicken\\b",
+"q": 400.0,
+"u": "g"
+},
+{
+"t": "Kosher salt and black pepper, to season",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": null,
+"u": null
+},
+{
+"t": "30 g (¼ cup) plain (all-purpose) flour",
+"n": "Plain flour",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bflour\\b",
+"q": 30.0,
+"u": "g"
+},
+{
+"t": "1 egg",
+"n": "Eggs",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\beggs?\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "High-heat oil for frying, such as grapeseed, avocado or vegetable oil",
+"n": "Neutral oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\boil\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Lettuce and shredded cabbage (or salad greens), to serve",
+"n": "Lettuce and cabbage",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\blettuce\\b|\\bcabbage\\b|\\bsalad greens\\b|\\bgreens\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Cherry tomatoes, to serve",
+"n": "Cherry tomatoes",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bcherry tomatoes\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Hot cooked short-grain rice for 2–3, about 210 g per serving",
+"n": "Rice",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\brice\\b",
+"q": null,
+"u": null
+},
+{
+"t": "30 ml (2 tbsp) soy sauce",
+"n": "Soy sauce",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bsoy sauce\\b|\\bsoy\\b",
+"q": 30.0,
+"u": "ml"
+},
+{
+"t": "30 ml (2 tbsp) white vinegar",
+"n": "White wine vinegar",
+"a": "Oils & vinegars",
+"s": false,
+"p": "\\bvinegar\\b",
+"q": 30.0,
+"u": "ml"
+},
+{
+"t": "25 g (2 tbsp) sugar",
+"n": "Sugar",
+"a": "Pantry & sauces",
+"s": true,
+"p": "\\bsugar\\b",
+"q": 25.0,
+"u": "g"
+},
+{
+"t": "15 ml (1 tbsp) mirin",
+"n": "Mirin",
+"a": "Wine & spirits",
+"s": false,
+"p": "\\bmirin\\b",
+"q": 15.0,
+"u": "ml"
+},
+{
+"t": "2 eggs",
+"n": "Eggs",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\beggs?\\b",
+"q": 2.0,
+"u": null
+},
+{
+"t": "¼ brown (yellow) onion",
+"n": "Brown onions",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bonions?\\b",
+"q": 0.25,
+"u": null
+},
+{
+"t": "1 spring onion (green onion)",
+"n": "Spring onions",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bspring onions?\\b|\\bgreen onions?\\b|\\bscallions?\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "55 g (4 tbsp) Japanese Kewpie mayonnaise",
+"n": "Kewpie mayonnaise",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bmayonnaise\\b|\\bkewpie\\b",
+"q": 55.0,
+"u": "g"
+},
+{
+"t": "1 tsp lemon juice",
+"n": "Lemons",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\blemons?\\b",
+"q": 1.0,
+"u": "tsp"
+},
+{
+"t": "½ tbsp tomato sauce (ketchup)",
+"n": "Tomato sauce",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\btomato sauce\\b|\\bketchup\\b",
+"q": 1.5,
+"u": "tsp"
+},
+{
+"t": "Kosher salt and black pepper, to taste",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": null,
+"u": null
+}
+]
 },
 {
 "title": "Karaage (Japanese Fried Chicken)",
@@ -157,7 +1835,139 @@ window.FIELD_KITCHEN_INDEX = [
 "text": "680 g (1½ lb) boneless, skin-on chicken thighs (4–6 pieces) ½ tsp Diamond Crystal kosher salt (for table salt, use half the amount, or the same weight) ⅛ tsp freshly ground black pepper ½ tsp grated fresh ginger, with its juice 1 clove garlic ½–1 tbsp soy sauce ½ tbsp sake (or dry sherry or Chinese rice wine, or leave it out) ½ tsp toasted sesame oil 700–950 ml (3–4 cups) neutral oil 2 tbsp potato starch or cornflour (cornstarch), plus more if needed 2 tbsp plain (all-purpose) flour, plus more if needed Lemon wedges Japanese Kewpie mayonnaise Shichimi togarashi (Japanese seven spice)",
 "meta": "Serves 4 · Prep 15 min + 30 min marinating · Cook 15 min",
 "intro": "Marinated in ginger, garlic and soy, then fried twice for a light, crisp crust.",
-"photo": ""
+"photo": "",
+"tags": [
+"chicken"
+],
+"serves": 4,
+"ingredients": [
+{
+"t": "680 g (1½ lb) boneless, skin-on chicken thighs (4–6 pieces)",
+"n": "Chicken thighs",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bchicken thighs?\\b|\\bchicken\\b",
+"q": 680.0,
+"u": "g"
+},
+{
+"t": "½ tsp Diamond Crystal kosher salt (for table salt, use half the amount, or the same weight)",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
+"t": "⅛ tsp freshly ground black pepper",
+"n": "Pepper",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bpepper(corns)?\\b",
+"q": 0.125,
+"u": "tsp"
+},
+{
+"t": "½ tsp grated fresh ginger, with its juice",
+"n": "Fresh ginger",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bginger\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
+"t": "1 clove garlic",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 1.0,
+"u": "clove"
+},
+{
+"t": "½–1 tbsp soy sauce",
+"n": "Soy sauce",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bsoy sauce\\b|\\bsoy\\b",
+"q": 3.0,
+"u": "tsp"
+},
+{
+"t": "½ tbsp sake (or dry sherry or Chinese rice wine, or leave it out)",
+"n": "Cooking sake",
+"a": "Wine & spirits",
+"s": false,
+"p": "\\bsake\\b",
+"q": 1.5,
+"u": "tsp"
+},
+{
+"t": "½ tsp toasted sesame oil",
+"n": "Sesame oil",
+"a": "Oils & vinegars",
+"s": false,
+"p": "\\bsesame oil\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
+"t": "700–950 ml (3–4 cups) neutral oil",
+"n": "Neutral oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\boil\\b",
+"q": 950.0,
+"u": "ml"
+},
+{
+"t": "2 tbsp potato starch or cornflour (cornstarch), plus more if needed",
+"n": "Cornflour",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bcornflour\\b|\\bcornstarch\\b|\\bpotato starch\\b|\\bstarch\\b",
+"q": 6.0,
+"u": "tsp"
+},
+{
+"t": "2 tbsp plain (all-purpose) flour, plus more if needed",
+"n": "Plain flour",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bflour\\b",
+"q": 6.0,
+"u": "tsp"
+},
+{
+"t": "Lemon wedges",
+"n": "Lemons",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\blemons?\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Japanese Kewpie mayonnaise",
+"n": "Kewpie mayonnaise",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bmayonnaise\\b|\\bkewpie\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Shichimi togarashi (Japanese seven spice)",
+"n": "Shichimi togarashi",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bshichimi\\b",
+"q": null,
+"u": null
+}
+]
 },
 {
 "title": "Ramen Egg (Ajitsuke Tamago)",
@@ -167,7 +1977,77 @@ window.FIELD_KITCHEN_INDEX = [
 "text": "4 eggs (about 55 g each), straight from the fridge 60 ml (4 tbsp) soy sauce 60 ml (4 tbsp) mirin 30 ml (2 tbsp) water 12 g (1 tbsp) sugar 15 ml (1 tbsp) cooking sake 5 g dashi powder (optional)",
 "meta": "Serves 4 eggs · Prep 5 min · Cook 7 min + 8–10 hr marinating",
 "intro": "Soft-boiled eggs with jammy yolks, marinated overnight in a sweet soy sauce. For ramen, rice bowls or on their own.",
-"photo": ""
+"photo": "",
+"tags": [
+"eggs",
+"make-ahead"
+],
+"serves": 4,
+"ingredients": [
+{
+"t": "4 eggs (about 55 g each), straight from the fridge",
+"n": "Eggs",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\beggs?\\b",
+"q": 4.0,
+"u": null
+},
+{
+"t": "60 ml (4 tbsp) soy sauce",
+"n": "Soy sauce",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bsoy sauce\\b|\\bsoy\\b",
+"q": 60.0,
+"u": "ml"
+},
+{
+"t": "60 ml (4 tbsp) mirin",
+"n": "Mirin",
+"a": "Wine & spirits",
+"s": false,
+"p": "\\bmirin\\b",
+"q": 60.0,
+"u": "ml"
+},
+{
+"t": "30 ml (2 tbsp) water",
+"n": "Water",
+"a": "Pantry & sauces",
+"s": true,
+"p": "\\bwater\\b",
+"q": 30.0,
+"u": "ml"
+},
+{
+"t": "12 g (1 tbsp) sugar",
+"n": "Sugar",
+"a": "Pantry & sauces",
+"s": true,
+"p": "\\bsugar\\b",
+"q": 12.0,
+"u": "g"
+},
+{
+"t": "15 ml (1 tbsp) cooking sake",
+"n": "Cooking sake",
+"a": "Wine & spirits",
+"s": false,
+"p": "\\bsake\\b",
+"q": 15.0,
+"u": "ml"
+},
+{
+"t": "5 g dashi powder (optional)",
+"n": "Dashi powder",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bdashi\\b",
+"q": 5.0,
+"u": "g"
+}
+]
 },
 {
 "title": "Carne Asada Tacos",
@@ -177,7 +2057,239 @@ window.FIELD_KITCHEN_INDEX = [
 "text": "1 kg flank or skirt steak 60 ml (¼ cup) orange juice 60 ml (¼ cup) lime juice (about 2 limes) 60 ml (¼ cup) olive oil 4 cloves garlic, minced 1 jalapeño, finely chopped Small handful coriander, chopped 1 tsp ground cumin 1 tsp chilli powder ½ tsp cayenne pepper ½ tsp MSG 1½ tsp salt ½ tsp black pepper 3 ripe avocados 30 ml (2 tbsp) lime juice (about 1 lime) ½ tsp ground cumin ½ tsp salt 200 g paneer ½ tsp salt 1 white onion, finely diced 30 ml (2 tbsp) lime juice (about 1 lime) ¼ tsp salt Black pepper 12 small corn tortillas Lime wedges",
 "meta": "Serves 4 · Prep 20 min + 2–8 hr marinating · Cook about 1 hr",
 "intro": "Citrus-marinated steak, reverse-seared so the outside chars without burning, sliced thin and piled into charred corn tortillas with cumin guacamole, salted paneer \"queso fresco\" and a quick lime onion. Start the marinade a few hours ahead.",
-"photo": ""
+"photo": "",
+"tags": [
+"beef",
+"make-ahead"
+],
+"serves": 4,
+"ingredients": [
+{
+"t": "1 kg flank or skirt steak",
+"n": "Flank or skirt steak",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bflank\\b|\\bskirt\\b|\\bsteak\\b",
+"q": 1000.0,
+"u": "g"
+},
+{
+"t": "60 ml (¼ cup) orange juice",
+"n": "Oranges",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\boranges?\\b",
+"q": 60.0,
+"u": "ml"
+},
+{
+"t": "60 ml (¼ cup) lime juice (about 2 limes)",
+"n": "Limes",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\blimes?\\b",
+"q": 60.0,
+"u": "ml"
+},
+{
+"t": "60 ml (¼ cup) olive oil",
+"n": "Olive oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\bolive oil\\b",
+"q": 60.0,
+"u": "ml"
+},
+{
+"t": "4 cloves garlic, minced",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 4.0,
+"u": "cloves"
+},
+{
+"t": "1 jalapeño, finely chopped",
+"n": "Jalapeño",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bjalape",
+"q": 1.0,
+"u": null
+},
+{
+"t": "Small handful coriander, chopped",
+"n": "Coriander",
+"a": "Herbs",
+"s": false,
+"p": "\\bcoriander\\b",
+"q": null,
+"u": null
+},
+{
+"t": "1 tsp ground cumin",
+"n": "Cumin",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bcumin\\b",
+"q": 1.0,
+"u": "tsp"
+},
+{
+"t": "1 tsp chilli powder",
+"n": "Chilli powder",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bchilli powder\\b|\\bchilli\\b",
+"q": 1.0,
+"u": "tsp"
+},
+{
+"t": "½ tsp cayenne pepper",
+"n": "Cayenne pepper",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bcayenne\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
+"t": "½ tsp MSG",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
+"t": "1½ tsp salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": 1.5,
+"u": "tsp"
+},
+{
+"t": "½ tsp black pepper",
+"n": "Pepper",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bpepper(corns)?\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
+"t": "3 ripe avocados",
+"n": "Avocados",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bavocados?\\b",
+"q": 3.0,
+"u": null
+},
+{
+"t": "30 ml (2 tbsp) lime juice (about 1 lime)",
+"n": "Limes",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\blimes?\\b",
+"q": 30.0,
+"u": "ml"
+},
+{
+"t": "½ tsp ground cumin",
+"n": "Cumin",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bcumin\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
+"t": "½ tsp salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
+"t": "200 g paneer",
+"n": "Paneer",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bpaneer\\b",
+"q": 200.0,
+"u": "g"
+},
+{
+"t": "½ tsp salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
+"t": "1 white onion, finely diced",
+"n": "White onion",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bwhite onion\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "30 ml (2 tbsp) lime juice (about 1 lime)",
+"n": "Limes",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\blimes?\\b",
+"q": 30.0,
+"u": "ml"
+},
+{
+"t": "¼ tsp salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": 0.25,
+"u": "tsp"
+},
+{
+"t": "Black pepper",
+"n": "Pepper",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bpepper(corns)?\\b",
+"q": null,
+"u": null
+},
+{
+"t": "12 small corn tortillas",
+"n": "Corn tortillas",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\btortillas\\b",
+"q": 12.0,
+"u": null
+},
+{
+"t": "Lime wedges",
+"n": "Limes",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\blimes?\\b",
+"q": null,
+"u": null
+}
+]
 },
 {
 "title": "Moh's Duck and Tamarind Curry",
@@ -187,7 +2299,212 @@ window.FIELD_KITCHEN_INDEX = [
 "text": "45 ml (3 tbsp) oil 2 tbsp coriander seeds 2 tbsp cumin seeds 2 tbsp sesame seeds 1 tsp black mustard seeds 2 large onions, chopped Handful of curry leaves 3 tbsp chilli flakes 1 tsp garam masala 85 g (1 cup) desiccated coconut 150 g (1 cup) cashew nuts 1 tsp turmeric 4 duck breasts 45 ml (3 tbsp) sunflower oil 30 g (80 ml / ⅓ cup) gram (chickpea) flour Salt White pepper 750 ml (3 cups) water 250 ml (1 cup) orange juice 1 tbsp brown sugar 45 ml (3 tbsp) tamarind paste Fresh coriander, to garnish",
 "meta": "Serves 4",
 "intro": "A modern Durban duck curry from Mohammed Khalid Moola of Ladysmith, with a nod to France in the orange sauce and his mother's touch of tamarind. Make the curry paste the day before, or at least before you start the duck.",
-"photo": ""
+"photo": "",
+"tags": [
+"duck",
+"make-ahead"
+],
+"serves": 4,
+"ingredients": [
+{
+"t": "45 ml (3 tbsp) oil",
+"n": "Neutral oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\boil\\b",
+"q": 45.0,
+"u": "ml"
+},
+{
+"t": "2 tbsp coriander seeds",
+"n": "Coriander seeds",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bcoriander seeds\\b|\\bcoriander\\b",
+"q": 6.0,
+"u": "tsp"
+},
+{
+"t": "2 tbsp cumin seeds",
+"n": "Cumin",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bcumin\\b",
+"q": 6.0,
+"u": "tsp"
+},
+{
+"t": "2 tbsp sesame seeds",
+"n": "Sesame seeds",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bsesame seeds\\b",
+"q": 6.0,
+"u": "tsp"
+},
+{
+"t": "1 tsp black mustard seeds",
+"n": "Black mustard seeds",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bmustard seeds\\b|\\bmustard\\b",
+"q": 1.0,
+"u": "tsp"
+},
+{
+"t": "2 large onions, chopped",
+"n": "Brown onions",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bonions?\\b",
+"q": 2.0,
+"u": null
+},
+{
+"t": "Handful of curry leaves",
+"n": "Curry leaves",
+"a": "Herbs",
+"s": false,
+"p": "\\bcurry leaves\\b|\\bcurry\\b",
+"q": null,
+"u": null
+},
+{
+"t": "3 tbsp chilli flakes",
+"n": "Chilli flakes",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bchilli flakes\\b|\\bchilli\\b",
+"q": 9.0,
+"u": "tsp"
+},
+{
+"t": "1 tsp garam masala",
+"n": "Garam masala",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bgaram masala\\b|\\bmasala\\b",
+"q": 1.0,
+"u": "tsp"
+},
+{
+"t": "85 g (1 cup) desiccated coconut",
+"n": "Desiccated coconut",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bdesiccated coconut\\b|\\bcoconut\\b",
+"q": 85.0,
+"u": "g"
+},
+{
+"t": "150 g (1 cup) cashew nuts",
+"n": "Cashew nuts",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bcashew",
+"q": 150.0,
+"u": "g"
+},
+{
+"t": "1 tsp turmeric",
+"n": "Turmeric",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bturmeric\\b",
+"q": 1.0,
+"u": "tsp"
+},
+{
+"t": "4 duck breasts",
+"n": "Duck breasts",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bduck\\b",
+"q": 4.0,
+"u": null
+},
+{
+"t": "45 ml (3 tbsp) sunflower oil",
+"n": "Sunflower oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\bsunflower oil\\b",
+"q": 45.0,
+"u": "ml"
+},
+{
+"t": "30 g (80 ml / ⅓ cup) gram (chickpea) flour",
+"n": "Gram (chickpea) flour",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bgram\\b|\\bchickpea\\b",
+"q": 30.0,
+"u": "g"
+},
+{
+"t": "Salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": null,
+"u": null
+},
+{
+"t": "White pepper",
+"n": "Pepper",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bpepper(corns)?\\b",
+"q": null,
+"u": null
+},
+{
+"t": "750 ml (3 cups) water",
+"n": "Water",
+"a": "Pantry & sauces",
+"s": true,
+"p": "\\bwater\\b",
+"q": 750.0,
+"u": "ml"
+},
+{
+"t": "250 ml (1 cup) orange juice",
+"n": "Oranges",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\boranges?\\b",
+"q": 250.0,
+"u": "ml"
+},
+{
+"t": "1 tbsp brown sugar",
+"n": "Sugar",
+"a": "Pantry & sauces",
+"s": true,
+"p": "\\bsugar\\b",
+"q": 3.0,
+"u": "tsp"
+},
+{
+"t": "45 ml (3 tbsp) tamarind paste",
+"n": "Tamarind paste",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\btamarind\\b",
+"q": 45.0,
+"u": "ml"
+},
+{
+"t": "Fresh coriander, to garnish",
+"n": "Coriander",
+"a": "Herbs",
+"s": false,
+"p": "\\bcoriander\\b",
+"q": null,
+"u": null
+}
+]
 },
 {
 "title": "Chicken & White Bean Stew",
@@ -197,6 +2514,139 @@ window.FIELD_KITCHEN_INDEX = [
 "text": "1 red onion 2 cloves garlic 1 bunch asparagus 1 chicken thigh Salt, to taste 1 tsp gochugaru (Korean chilli flakes) 1 tsp ground coriander 1 tsp ground cumin ½ tsp MSG 400 g (14 oz) can whole tomatoes 400 g (14 oz) can cannellini beans, drained 1 sprig rosemary 30 ml (2 tbsp) olive oil 1 small handful parsley leaves",
 "meta": "Serves 1 · Prep 5 min · Cook 15 min",
 "intro": "A quick, cheap one-pot stew written for one. Multiply it to feed more, or cook a big batch for the fridge or freezer.",
-"photo": ""
+"photo": "",
+"tags": [
+"chicken",
+"quick"
+],
+"serves": 1,
+"ingredients": [
+{
+"t": "1 red onion",
+"n": "Red onion",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bred onion\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "2 cloves garlic",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 2.0,
+"u": "cloves"
+},
+{
+"t": "1 bunch asparagus",
+"n": "Asparagus",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\basparagus\\b",
+"q": 1.0,
+"u": "bunch"
+},
+{
+"t": "1 chicken thigh",
+"n": "Chicken thighs",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bchicken thighs?\\b|\\bchicken\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "Salt, to taste",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": null,
+"u": null
+},
+{
+"t": "1 tsp gochugaru (Korean chilli flakes)",
+"n": "Gochugaru",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bgochugaru\\b",
+"q": 1.0,
+"u": "tsp"
+},
+{
+"t": "1 tsp ground coriander",
+"n": "Ground coriander",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bground coriander\\b|\\bcoriander\\b",
+"q": 1.0,
+"u": "tsp"
+},
+{
+"t": "1 tsp ground cumin",
+"n": "Cumin",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bcumin\\b",
+"q": 1.0,
+"u": "tsp"
+},
+{
+"t": "½ tsp MSG",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
+"t": "400 g (14 oz) can whole tomatoes",
+"n": "Tinned tomatoes",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\btomatoes\\b",
+"q": 400.0,
+"u": "g"
+},
+{
+"t": "400 g (14 oz) can cannellini beans, drained",
+"n": "Cannellini beans",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bcannellini\\b",
+"q": 400.0,
+"u": "g"
+},
+{
+"t": "1 sprig rosemary",
+"n": "Rosemary",
+"a": "Herbs",
+"s": false,
+"p": "\\brosemary\\b",
+"q": 1.0,
+"u": "sprig"
+},
+{
+"t": "30 ml (2 tbsp) olive oil",
+"n": "Olive oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\bolive oil\\b",
+"q": 30.0,
+"u": "ml"
+},
+{
+"t": "1 small handful parsley leaves",
+"n": "Parsley",
+"a": "Herbs",
+"s": false,
+"p": "\\bparsley\\b",
+"q": 1.0,
+"u": null
+}
+]
 }
 ];
