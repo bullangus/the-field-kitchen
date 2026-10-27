@@ -679,9 +679,10 @@ html.cooking { overflow: hidden; }
 @keyframes fk-step { from { opacity: 0; transform: translateX(18px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .cv-text.enter { animation: none; } }
 .cv-uses { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.25rem; }
-.cv-uses::before { content: "Uses"; width: 100%; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
+.cv-uses::before { content: "You'll need"; width: 100%; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
 .cv-uses[hidden] { display: none; }
-.cv-uses span { background: var(--card); border: 1px solid var(--rule); border-radius: 999px; padding: 0.2rem 0.75rem; font-size: 0.95rem; }
+.cv-uses span { background: var(--card); border: 1px solid var(--rule); border-radius: 999px; padding: 0.3rem 0.85rem; font-size: 1rem; }
+.cv-uses b { color: var(--accent); font-weight: 600; }
 .cv-timers { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .cv-foot {
   display: flex; align-items: center; gap: 1rem; padding: 1rem clamp(1rem, 4vw, 2.5rem) max(1rem, env(safe-area-inset-bottom));

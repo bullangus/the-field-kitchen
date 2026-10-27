@@ -214,7 +214,8 @@ GENERIC_LAST = {"sauce", "oil", "seeds", "powder", "flakes", "leaves", "juice", 
                 "pepper", "syrup", "tomatoes", "ham", "steak", "fish", "chilli"}
 GENERIC_FIRST = {"sweet", "dark", "light", "fresh", "whole", "red", "white", "ground", "black", "spring", "green",
                  "olive", "sesame", "peanut", "sunflower", "fish", "rice", "egg", "leg", "orange", "lime", "tomato",
-                 "cherry", "baby", "bread", "self-raising", "tipo", "corn", "desiccated", "maple", "oyster", "chicken"}
+                 "cherry", "baby", "bread", "self-raising", "tipo", "corn", "desiccated", "maple", "oyster", "chicken",
+                 "curry"}
 
 
 def highlight_pattern(pattern):

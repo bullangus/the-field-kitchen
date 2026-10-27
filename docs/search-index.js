@@ -4038,7 +4038,7 @@ window.FIELD_KITCHEN_INDEX = [
 "n": "Curry leaves",
 "a": "Herbs",
 "s": false,
-"p": "\\bcurry leaves\\b|\\bcurry\\b",
+"p": "\\bcurry leaves\\b",
 "q": null,
 "u": null
 },
@@ -4636,7 +4636,7 @@ window.FIELD_KITCHEN_INDEX = [
 "n": "Yellow curry paste",
 "a": "Pantry & sauces",
 "s": false,
-"p": "\\bcurry paste\\b|\\bcurry\\b",
+"p": "\\bcurry paste\\b",
 "q": 15.0,
 "u": "tsp"
 },
@@ -4654,7 +4654,7 @@ window.FIELD_KITCHEN_INDEX = [
 "n": "Curry powder",
 "a": "Herbs & spices",
 "s": false,
-"p": "\\bcurry powder\\b|\\bcurry\\b",
+"p": "\\bcurry powder\\b",
 "q": 1.0,
 "u": "tsp"
 },

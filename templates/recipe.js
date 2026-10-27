@@ -299,6 +299,56 @@
     return out;
   }
 
+  // Which ingredient group ("For the sauce") each ingredient line sits under.
+  ingredients.forEach(function (li) {
+    var el = li.parentNode.previousElementSibling;
+    while (el && el.tagName !== "H5" && el.tagName !== "H2") el = el.previousElementSibling;
+    li.setAttribute("data-group", el && el.tagName === "H5" ? el.textContent.toLowerCase() : "");
+  });
+  var STOP = ["for", "the", "and", "with", "to", "of", "a", "serve", "finish"];
+  function words(text) {
+    return text.toLowerCase().split(/[^a-zà-ÿ]+/).filter(function (w) { return w.length > 2 && STOP.indexOf(w) === -1; });
+  }
+  // The lines a step needs. When the same ingredient appears more than once (the
+  // marinade's Shaoxing wine and the sauce's), keep the line whose amount the step
+  // mentions, else the one from the group the step is about, else all of them.
+  function ingredientsForStep(s) {
+    var text = s.text.textContent.toLowerCase();
+    var about = words(text + " " + s.stage);
+    var found = ingredientsIn(s.text.textContent);
+    // Lines compete when they matched the same word in the step: "the coriander"
+    // could be the seeds or the fresh garnish.
+    var term = function (li) { var m = patternOf(li).exec(s.text.textContent); return m ? m[0].toLowerCase() : ""; };
+    var byTerm = {};
+    found.forEach(function (li) { (byTerm[term(li)] = byTerm[term(li)] || []).push(li); });
+    return found.filter(function (li) {
+      var twins = byTerm[term(li)];
+      if (twins.length < 2) return true;
+      var named = twins.filter(function (t) {
+        var amount = amountAndName(t.getAttribute("data-original")).amount.toLowerCase();
+        return amount && amount.split(/[()]/).some(function (a) { a = a.trim(); return a && text.indexOf(a) !== -1; });
+      });
+      if (named.length) return named.indexOf(li) !== -1;
+      var score = function (t) {
+        return words(t.getAttribute("data-group")).filter(function (w) { return about.indexOf(w) !== -1; }).length;
+      };
+      var best = Math.max.apply(null, twins.map(score));
+      return best === 0 || score(li) === best;
+    });
+  }
+
+  // "125 g (4½ oz) guanciale (or pancetta...)" -> { amount: "125 g (4½ oz)", name: "guanciale" }.
+  // Uses the line as currently shown, so scaled amounts come through. Prep notes after a
+  // comma and bracketed alternatives are dropped to keep the chip short.
+  var AMOUNT = /^((?:[\d.½¼¾⅓⅔⅛]+(?:\s*[–-]\s*[\d.½¼¾⅓⅔⅛]+)?)\s*(?:kg|g|ml|l|tsp|tbsp|cups?|cloves?|cm|sticks?|sprigs?|rashers?|bunch|head|punnet|packet|tins?|cans?)?\b(?:\s*\([^)]*[\d½¼¾⅓⅔⅛][^)]*\))?)\s+/i;
+  function amountAndName(text) {
+    var m = AMOUNT.exec(text);
+    var amount = m ? m[1].trim() : "";
+    var name = (m ? text.slice(m[0].length) : text).split(",")[0];
+    name = name.replace(/\s*\((?!\s*[\d½¼¾⅓⅔⅛])[^)]*\)/g, "").trim();
+    return { amount: amount, name: name };
+  }
+
   // ---- Step-by-step cooking view ----
   var startButton = page.querySelector(".start-cooking");
   if (!steps.length) return;
@@ -327,9 +377,16 @@
     text.classList.remove("enter"); void text.offsetWidth; text.classList.add("enter");
     var uses = view.querySelector(".cv-uses");
     uses.textContent = "";
-    ingredientsIn(s.text.textContent).forEach(function (li) {
+    ingredientsForStep(s).forEach(function (li) {
+      var part = amountAndName(li.querySelector(".ing-text").textContent);
       var chip = document.createElement("span");
-      chip.textContent = li.getAttribute("data-name") || li.querySelector(".ing-text").textContent.split(/,|\(/)[0].trim();
+      if (part.amount) {
+        var b = document.createElement("b");
+        b.textContent = part.amount;
+        chip.appendChild(b);
+        chip.appendChild(document.createTextNode(" "));
+      }
+      chip.appendChild(document.createTextNode(part.name || li.getAttribute("data-name") || ""));
       uses.appendChild(chip);
     });
     uses.hidden = !uses.childNodes.length;
