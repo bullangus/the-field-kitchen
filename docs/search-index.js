@@ -4,7 +4,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "American",
 "category": "Chicken",
 "url": "american/chicken/buffalo-chicken-wings.html",
-"text": "65 g (½ cup) plain (all-purpose) flour ¼ tsp ground paprika ¼ tsp cayenne pepper ¼ tsp salt 10 chicken wings About 480 ml (2 cups) vegetable oil, for frying 57 g (¼ cup) butter 60 ml (¼ cup) hot sauce 1 pinch ground black pepper 1 pinch garlic powder",
+"text": "65 g (½ cup) plain (all-purpose) flour ¼ tsp ground paprika ¼ tsp cayenne pepper ¼ tsp salt 10 chicken wings About 480 ml (2 cups) vegetable oil, for frying 57 g (¼ cup) butter 60 ml (¼ cup) hot sauce 1 pinch ground black pepper 1 pinch garlic powder ½ tsp MSG",
 "meta": "Serves 5 (10 wings) · Prep 10 min + 1–1½ hr chilling · Cook 15 min",
 "intro": "Floured, chilled and fried until crisp, then tossed in the classic butter and hot sauce mix.",
 "photo": "",
@@ -103,6 +103,15 @@ window.FIELD_KITCHEN_INDEX = [
 "p": "\\bgarlic powder\\b|\\bgarlic\\b",
 "q": 1.0,
 "u": null
+},
+{
+"t": "½ tsp MSG",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": 0.5,
+"u": "tsp"
 }
 ]
 },
@@ -272,7 +281,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Australian",
 "category": "Seafood",
 "url": "australian/seafood/barbecued-whole-snapper.html",
-"text": "1.5 kg whole snapper 1 stick lemongrass, trimmed, halved and cut into 5 cm lengths 4 garlic cloves, bruised 6 makrut lime leaves, torn Salt and black pepper, to season 2 tbsp toasted sesame seeds Sliced spring onion (green onion), to serve Fresh coriander sprigs, to serve Steamed jasmine rice, to serve Lime wedges, to serve 125 ml (½ cup) sweet chilli sauce 125 ml (½ cup) lime juice 1 tsp caster sugar 80 ml (⅓ cup) light soy sauce 2 cm piece fresh ginger, peeled and finely grated 1½ tbsp fish sauce 30 ml (2 tbsp) peanut oil 2 tbsp chopped fresh coriander",
+"text": "1.5 kg whole snapper 1 stick lemongrass, trimmed, halved and cut into 5 cm lengths 4 garlic cloves, bruised 6 makrut lime leaves, torn Salt and black pepper, to season 2 tbsp toasted sesame seeds Sliced spring onion (green onion), to serve Fresh coriander sprigs, to serve Steamed jasmine rice, to serve Lime wedges, to serve 125 ml (½ cup) sweet chilli sauce 125 ml (½ cup) lime juice 1 tsp caster sugar 80 ml (⅓ cup) light soy sauce 2 cm piece fresh ginger, peeled and finely grated 1½ tbsp fish sauce 30 ml (2 tbsp) peanut oil 2 tbsp chopped fresh coriander ½ tsp MSG",
 "meta": "Serves 4 · Prep 15 min · Cook 35 min",
 "intro": "A whole snapper stuffed with lemongrass, garlic and makrut lime, coated in sesame seeds and cooked standing upright in a foil parcel on the barbecue, then dressed with a sweet chilli, lime and ginger dressing.",
 "photo": "",
@@ -442,6 +451,15 @@ window.FIELD_KITCHEN_INDEX = [
 "p": "\\bcoriander\\b",
 "q": 6.0,
 "u": "tsp"
+},
+{
+"t": "½ tsp MSG",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": 0.5,
+"u": "tsp"
 }
 ]
 },
@@ -450,7 +468,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "British",
 "category": "Chicken",
 "url": "british/chicken/classic-roast-chicken.html",
-"text": "1 whole chicken, about 1.5–1.8 kg (free-range if you can) 150 g (5.3 oz) unsalted butter, at room temperature 1 lemon 3 cloves garlic Salt and freshly ground white pepper (or black pepper) Small bunch thyme, leaves picked and chopped",
+"text": "1 whole chicken, about 1.5–1.8 kg (free-range if you can) 150 g (5.3 oz) unsalted butter, at room temperature 1 lemon 3 cloves garlic Salt and freshly ground white pepper (or black pepper) Small bunch thyme, leaves picked and chopped ½ tsp MSG",
 "meta": "Serves 4 · Prep 20 min · Cook about 1 hr 15 min",
 "intro": "Lemon, garlic and thyme butter pushed under the skin, then trussed and roasted to temperature for crisp skin and juicy breast meat.",
 "photo": "",
@@ -512,6 +530,15 @@ window.FIELD_KITCHEN_INDEX = [
 "p": "\\bthyme\\b",
 "q": null,
 "u": null
+},
+{
+"t": "½ tsp MSG",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": 0.5,
+"u": "tsp"
 }
 ]
 },
@@ -654,7 +681,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "British",
 "category": "Pork",
 "url": "british/pork/toad-in-the-hole.html",
-"text": "700 g (1.4 lb) pork sausages (8 × 85 g / 3 oz), or other sausages 10 g (2 tsp) beef dripping, or canola or vegetable oil, for browning 50 g (¼ cup) beef dripping, or canola or vegetable oil, for the pan 250 ml (1 cup) eggs, lightly whisked (4–5 large eggs; measure them) 130 g (1 cup) plain flour 185 ml (¾ cup) full-fat milk 60 ml (¼ cup) water 1 tbsp full-fat mayonnaise ½ tsp cooking or kosher salt Pinch of white pepper 30 g (2 tbsp) beef dripping or unsalted butter 2 onions, halved and cut into 7 mm (¼ inch) wedges 1 garlic clove, finely minced 3 tbsp plain flour 500 ml (2 cups) low-sodium beef stock ½ tsp Worcestershire sauce ½ tsp black pepper ¼ tsp cooking or kosher salt",
+"text": "700 g (1.4 lb) pork sausages (8 × 85 g / 3 oz), or other sausages 10 g (2 tsp) beef dripping, or canola or vegetable oil, for browning 50 g (¼ cup) beef dripping, or canola or vegetable oil, for the pan 250 ml (1 cup) eggs, lightly whisked (4–5 large eggs; measure them) 130 g (1 cup) plain flour 185 ml (¾ cup) full-fat milk 60 ml (¼ cup) water 1 tbsp full-fat mayonnaise ½ tsp cooking or kosher salt Pinch of white pepper 30 g (2 tbsp) beef dripping or unsalted butter 2 onions, halved and cut into 7 mm (¼ inch) wedges 1 garlic clove, finely minced 3 tbsp plain flour 500 ml (2 cups) low-sodium beef stock ½ tsp Worcestershire sauce ½ tsp black pepper ¼ tsp cooking or kosher salt ½ tsp MSG",
 "meta": "Serves 4 · Prep 15 min · Cook 40 min",
 "intro": "Sausages baked in a tall, crisp-edged Yorkshire pudding, served with onion gravy. A spoonful of mayonnaise in the batter helps it rise higher and collapse less.",
 "photo": "",
@@ -824,6 +851,15 @@ window.FIELD_KITCHEN_INDEX = [
 "p": "\\bsalt\\b",
 "q": 0.25,
 "u": "tsp"
+},
+{
+"t": "½ tsp MSG",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": 0.5,
+"u": "tsp"
 }
 ]
 },
@@ -832,7 +868,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Chinese",
 "category": "Beef",
 "url": "chinese/beef/mongolian-beef.html",
-"text": "450 g (1 lb) flank steak, thinly sliced 3–6 mm (⅛–¼ inch) thick 30 ml (2 tbsp) water 2 tsp Shaoxing rice wine ½ tsp kosher salt (a little less if using fine salt) ¼ tsp bicarbonate of soda (baking soda) 16 g (2 tbsp) cornflour (cornstarch) 15 ml (1 tbsp) neutral oil 1 tsp cracked black pepper, more or less to taste 15 ml (1 tbsp) Shaoxing rice wine 38 g (3 tbsp) white sugar 30 ml (2 tbsp) regular soy sauce 1 tbsp minced garlic (about 2 cloves) ½ large brown (yellow) onion, sliced 1 bunch spring onions (green onions), cut into 5 cm (2 inch) pieces, white and green parts separated 30 g (1 oz) medium-thickness rice vermicelli (optional; use more or less to preference) Oil, as needed for cooking",
+"text": "450 g (1 lb) flank steak, thinly sliced 3–6 mm (⅛–¼ inch) thick 30 ml (2 tbsp) water 2 tsp Shaoxing rice wine ½ tsp kosher salt (a little less if using fine salt) ¼ tsp bicarbonate of soda (baking soda) 16 g (2 tbsp) cornflour (cornstarch) 15 ml (1 tbsp) neutral oil 1 tsp cracked black pepper, more or less to taste 15 ml (1 tbsp) Shaoxing rice wine 38 g (3 tbsp) white sugar 30 ml (2 tbsp) regular soy sauce ½ tsp MSG 1 tbsp minced garlic (about 2 cloves) ½ large brown (yellow) onion, sliced 1 bunch spring onions (green onions), cut into 5 cm (2 inch) pieces, white and green parts separated 30 g (1 oz) medium-thickness rice vermicelli (optional; use more or less to preference) Oil, as needed for cooking",
 "meta": "Serves 3 · Prep 15 min · Cook 15 min",
 "intro": "Restaurant-style, served over an optional nest of crisp fried rice vermicelli.",
 "photo": "",
@@ -942,6 +978,15 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "ml"
 },
 {
+"t": "½ tsp MSG",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
 "t": "1 tbsp minced garlic (about 2 cloves)",
 "n": "Garlic",
 "a": "Fruit & veg",
@@ -993,7 +1038,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Chinese",
 "category": "Chicken",
 "url": "chinese/chicken/salt-and-pepper-wings.html",
-"text": "1 kg (2 lb) chicken wings 1 tsp black peppercorns 1 tsp white peppercorns 1 tsp Sichuan peppercorns 1½ tbsp sea salt, plus 2 tsp extra 3 tsp (1 tbsp) garlic powder Vegetable oil, for deep frying ¼ tsp chilli flakes Coconut sriracha or any hot sauce, to serve Lime wedges, to serve (optional) 130 g (1 cup) cornflour (cornstarch) 65 g (½ cup) plain flour 375 ml (1½ cups) cold water",
+"text": "1 kg (2 lb) chicken wings 1 tsp black peppercorns 1 tsp white peppercorns 1 tsp Sichuan peppercorns 1½ tbsp sea salt, plus 2 tsp extra 3 tsp (1 tbsp) garlic powder ½ tsp MSG Vegetable oil, for deep frying ¼ tsp chilli flakes Coconut sriracha or any hot sauce, to serve Lime wedges, to serve (optional) 130 g (1 cup) cornflour (cornstarch) 65 g (½ cup) plain flour 375 ml (1½ cups) cold water",
 "meta": "Serves 4 · Prep 10 min + at least 4 hr curing · Cook about 1 hr",
 "intro": "Double-fried for extra crunch and seasoned with three kinds of peppercorn. Using just one type of peppercorn works fine too.",
 "photo": "",
@@ -1055,6 +1100,15 @@ window.FIELD_KITCHEN_INDEX = [
 "s": false,
 "p": "\\bgarlic powder\\b|\\bgarlic\\b",
 "q": 3.0,
+"u": "tsp"
+},
+{
+"t": "½ tsp MSG",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": 0.5,
 "u": "tsp"
 },
 {
@@ -1279,7 +1333,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Chinese",
 "category": "Pork",
 "url": "chinese/pork/dumpling-lasagna.html",
-"text": "450 g (1 lb) pork mince 4 spring onions (scallions), thinly sliced, whites and greens 3 cloves garlic, grated 1 tbsp grated fresh ginger 45 ml (3 tbsp) soy sauce or tamari 1 tsp toasted sesame oil 1–2 tsp chilli crisp, to taste A splash of rice vinegar ¾ tsp white pepper (or black pepper) 45–60 ml (3–4 tbsp) chicken stock per ramekin Wonton or dumpling wrappers A small bowl of water, for dipping the wrappers Extra soy sauce or tamari Extra chilli crisp Extra spring onions Sesame seeds",
+"text": "450 g (1 lb) pork mince 4 spring onions (scallions), thinly sliced, whites and greens 3 cloves garlic, grated 1 tbsp grated fresh ginger 45 ml (3 tbsp) soy sauce or tamari 1 tsp toasted sesame oil 1–2 tsp chilli crisp, to taste A splash of rice vinegar ¾ tsp white pepper (or black pepper) ½ tsp MSG 45–60 ml (3–4 tbsp) chicken stock per ramekin Wonton or dumpling wrappers A small bowl of water, for dipping the wrappers Extra soy sauce or tamari Extra chilli crisp Extra spring onions Sesame seeds",
 "meta": "Serves 2–3 · Prep 10 min · Cook 25 min",
 "intro": "All the flavour of pork and spring onion dumplings with no folding: wonton wrappers and filling layered in ramekins and steamed until glossy and juicy.",
 "photo": "",
@@ -1367,6 +1421,15 @@ window.FIELD_KITCHEN_INDEX = [
 "s": true,
 "p": "\\bpepper(corns)?\\b",
 "q": 0.75,
+"u": "tsp"
+},
+{
+"t": "½ tsp MSG",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": 0.5,
 "u": "tsp"
 },
 {
@@ -1704,7 +1767,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Italian",
 "category": "Pasta",
 "url": "italian/pasta/nduja-pasta.html",
-"text": "Salt 15 ml (1 tbsp) extra-virgin olive oil 1 clove garlic, peeled 400 g (14 oz) tin whole peeled tomatoes 200 g (7 oz) 'nduja, or to taste (more or less to adjust the heat) 340 g (12 oz) fileja pasta (or rigatoni or bucatini) Grated Pecorino Romano, to serve",
+"text": "Salt 15 ml (1 tbsp) extra-virgin olive oil 1 clove garlic, peeled 400 g (14 oz) tin whole peeled tomatoes 200 g (7 oz) 'nduja, or to taste (more or less to adjust the heat) ½ tsp MSG 340 g (12 oz) fileja pasta (or rigatoni or bucatini) Grated Pecorino Romano, to serve",
 "meta": "Serves 3–4 · Cook 20–30 min",
 "intro": "A simple, fiery Calabrian sauce: tomatoes with 'nduja, the soft, spicy pork spread, melted through at the end.",
 "photo": "",
@@ -1760,6 +1823,15 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "g"
 },
 {
+"t": "½ tsp MSG",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
 "t": "340 g (12 oz) fileja pasta (or rigatoni or bucatini)",
 "n": "Fileja pasta",
 "a": "Bread, pasta & rice",
@@ -1784,7 +1856,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Italian",
 "category": "Pasta",
 "url": "italian/pasta/fettuccine-alfredo.html",
-"text": "250 g (8 oz) dried fettuccine 42 g (3 tbsp) unsalted butter 1 small eschallot (French shallot), very finely minced 125 ml (½ cup) thickened or pure cream (heavy cream) 60 g (¾ cup) freshly and finely grated Parmigiano Reggiano or parmesan ¼ tsp salt A good grind of black pepper Extra Parmigiano Reggiano Fresh parsley (optional)",
+"text": "250 g (8 oz) dried fettuccine 42 g (3 tbsp) unsalted butter 1 small eschallot (French shallot), very finely minced 125 ml (½ cup) thickened or pure cream (heavy cream) 60 g (¾ cup) freshly and finely grated Parmigiano Reggiano or parmesan ¼ tsp salt ½ tsp MSG A good grind of black pepper Extra Parmigiano Reggiano Fresh parsley (optional)",
 "meta": "Serves 3 · Prep 5 min · Cook 13 min",
 "intro": "Butter, cream and Parmigiano, tossed with the pasta so the sauce clings to every strand rather than pooling.",
 "photo": "",
@@ -1849,6 +1921,15 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "tsp"
 },
 {
+"t": "½ tsp MSG",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
 "t": "A good grind of black pepper",
 "n": "Pepper",
 "a": "Herbs & spices",
@@ -1882,7 +1963,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Italian",
 "category": "Pasta",
 "url": "italian/pasta/lasagne.html",
-"text": "2 sticks celery 1 large carrot 1 brown onion 4 cloves garlic 60 ml (¼ cup) olive oil 500 g pork mince 500 g beef mince 250 ml (1 cup) red wine, something bold like a Sangiovese or shiraz 700 g tomato passata 100 ml milk Sea salt, to taste 100 g Parmesan, grated, plus the rind 350 g mozzarella, grated Small bunch basil 250 g baby spinach 3 eggs 320 g Tipo 00 flour, plus extra for dusting 15 ml (1 tbsp) olive oil Or store-bought fresh lasagne sheets instead (we use Latina) 50 g butter 50 g plain flour 600 ml milk Sea salt and cracked white pepper Nutmeg, to taste (or cinnamon)",
+"text": "2 sticks celery 1 large carrot 1 brown onion 4 cloves garlic 60 ml (¼ cup) olive oil 500 g pork mince 500 g beef mince 250 ml (1 cup) red wine, something bold like a Sangiovese or shiraz 700 g tomato passata 100 ml milk Sea salt, to taste ½ tsp MSG 100 g Parmesan, grated, plus the rind 350 g mozzarella, grated Small bunch basil 250 g baby spinach 3 eggs 320 g Tipo 00 flour, plus extra for dusting 15 ml (1 tbsp) olive oil Or store-bought fresh lasagne sheets instead (we use Latina) 50 g butter 50 g plain flour 600 ml milk Sea salt and cracked white pepper Nutmeg, to taste (or cinnamon)",
 "meta": "Serves 8 · Prep 2 hr · Cook 3 hr 45 min",
 "intro": "A slow pork and beef ragu, béchamel and plenty of cheese. Make the ragu the day before if you can: it deepens overnight and spreads the work out.",
 "photo": "",
@@ -1991,6 +2072,15 @@ window.FIELD_KITCHEN_INDEX = [
 "p": "\\bsalt\\b",
 "q": null,
 "u": null
+},
+{
+"t": "½ tsp MSG",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": 0.5,
+"u": "tsp"
 },
 {
 "t": "100 g Parmesan, grated, plus the rind",
@@ -2116,7 +2206,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Italian",
 "category": "Pasta",
 "url": "italian/pasta/carbonara.html",
-"text": "Salt 340 g (12 oz) rigatoni or spaghetti 125 g (4½ oz) guanciale (or pancetta or bacon if you must) 4 large eggs 55 g (2 oz) grated pecorino, plus extra to serve Freshly ground black pepper",
+"text": "Salt 340 g (12 oz) rigatoni or spaghetti 125 g (4½ oz) guanciale (or pancetta or bacon if you must) 4 large eggs 55 g (2 oz) grated pecorino, plus extra to serve ½ tsp MSG Freshly ground black pepper",
 "meta": "Serves 3–4 · Cook 20 min",
 "intro": "The Roman way: egg yolks, pecorino, guanciale and black pepper, and nothing else. No cream.",
 "photo": "",
@@ -2172,6 +2262,15 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "g"
 },
 {
+"t": "½ tsp MSG",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
 "t": "Freshly ground black pepper",
 "n": "Pepper",
 "a": "Herbs & spices",
@@ -2187,7 +2286,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Italian",
 "category": "Pork",
 "url": "italian/pork/crispy-porchetta.html",
-"text": "1 pork belly, bone out, skin on, with the loin still attached (a belly without the loin also works; ask your butcher) 4 large sprigs rosemary 12 cloves garlic Zest of 1 lemon 1 bunch flat-leaf parsley 15 ml (1 tbsp) fennel pollen (or toasted fennel seeds, crushed) 15 ml (1 tbsp) chilli flakes 30 g (about 1 oz) salt",
+"text": "1 pork belly, bone out, skin on, with the loin still attached (a belly without the loin also works; ask your butcher) 4 large sprigs rosemary 12 cloves garlic Zest of 1 lemon 1 bunch flat-leaf parsley 15 ml (1 tbsp) fennel pollen (or toasted fennel seeds, crushed) 15 ml (1 tbsp) chilli flakes 30 g (about 1 oz) salt ½ tsp MSG",
 "meta": "Serves 12 · Prep the day before (24–48 hr drying in the fridge) · Cook about 4 hr",
 "intro": "Pork belly rolled around the loin with a herb, garlic and fennel filling. Start a day or two ahead: the skin needs to dry out in the fridge to crackle.",
 "photo": "",
@@ -2269,6 +2368,15 @@ window.FIELD_KITCHEN_INDEX = [
 "p": "\\bsalt\\b",
 "q": 30.0,
 "u": "g"
+},
+{
+"t": "½ tsp MSG",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": 0.5,
+"u": "tsp"
 }
 ]
 },
@@ -2277,7 +2385,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Japanese",
 "category": "Chicken",
 "url": "japanese/chicken/chicken-nanban.html",
-"text": "400 g (14 oz) boneless, skin-on chicken thighs (or breasts) Kosher salt and black pepper, to season 30 g (¼ cup) plain (all-purpose) flour 1 egg High-heat oil for frying, such as grapeseed, avocado or vegetable oil Lettuce and shredded cabbage (or salad greens), to serve Cherry tomatoes, to serve Hot cooked short-grain rice for 2–3, about 210 g per serving 30 ml (2 tbsp) soy sauce 30 ml (2 tbsp) white vinegar 25 g (2 tbsp) sugar 15 ml (1 tbsp) mirin 2 eggs ¼ brown (yellow) onion 1 spring onion (green onion) 55 g (4 tbsp) Japanese Kewpie mayonnaise 1 tsp lemon juice ½ tbsp tomato sauce (ketchup) Kosher salt and black pepper, to taste",
+"text": "400 g (14 oz) boneless, skin-on chicken thighs (or breasts) Kosher salt and black pepper, to season 30 g (¼ cup) plain (all-purpose) flour 1 egg High-heat oil for frying, such as grapeseed, avocado or vegetable oil Lettuce and shredded cabbage (or salad greens), to serve Cherry tomatoes, to serve Hot cooked short-grain rice for 2–3, about 210 g per serving 30 ml (2 tbsp) soy sauce 30 ml (2 tbsp) white vinegar 25 g (2 tbsp) sugar 15 ml (1 tbsp) mirin ½ tsp MSG 2 eggs ¼ brown (yellow) onion 1 spring onion (green onion) 55 g (4 tbsp) Japanese Kewpie mayonnaise 1 tsp lemon juice ½ tbsp tomato sauce (ketchup) Kosher salt and black pepper, to taste",
 "meta": "Serves 3 · Prep 20 min · Cook 15 min",
 "intro": "Egg-coated fried chicken soaked in a sweet and tangy nanban sauce and topped with a generous spoonful of tartar sauce.",
 "photo": "",
@@ -2395,6 +2503,15 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "ml"
 },
 {
+"t": "½ tsp MSG",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
 "t": "2 eggs",
 "n": "Eggs",
 "a": "Dairy & eggs",
@@ -2464,7 +2581,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Japanese",
 "category": "Chicken",
 "url": "japanese/chicken/karaage.html",
-"text": "680 g (1½ lb) boneless, skin-on chicken thighs (4–6 pieces) ½ tsp Diamond Crystal kosher salt (for table salt, use half the amount, or the same weight) ⅛ tsp freshly ground black pepper ½ tsp grated fresh ginger, with its juice 1 clove garlic ½–1 tbsp soy sauce ½ tbsp sake (or dry sherry or Chinese rice wine, or leave it out) ½ tsp toasted sesame oil 700–950 ml (3–4 cups) neutral oil 2 tbsp potato starch or cornflour (cornstarch), plus more if needed 2 tbsp plain (all-purpose) flour, plus more if needed Lemon wedges Japanese Kewpie mayonnaise Shichimi togarashi (Japanese seven spice)",
+"text": "680 g (1½ lb) boneless, skin-on chicken thighs (4–6 pieces) ½ tsp Diamond Crystal kosher salt (for table salt, use half the amount, or the same weight) ⅛ tsp freshly ground black pepper ½ tsp grated fresh ginger, with its juice 1 clove garlic ½–1 tbsp soy sauce ½ tbsp sake (or dry sherry or Chinese rice wine, or leave it out) ½ tsp toasted sesame oil ½ tsp MSG 700–950 ml (3–4 cups) neutral oil 2 tbsp potato starch or cornflour (cornstarch), plus more if needed 2 tbsp plain (all-purpose) flour, plus more if needed Lemon wedges Japanese Kewpie mayonnaise Shichimi togarashi (Japanese seven spice)",
 "meta": "Serves 4 · Prep 15 min + 30 min marinating · Cook 15 min",
 "intro": "Marinated in ginger, garlic and soy, then fried twice for a light, crisp crust.",
 "photo": "",
@@ -2546,6 +2663,15 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "tsp"
 },
 {
+"t": "½ tsp MSG",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
 "t": "700–950 ml (3–4 cups) neutral oil",
 "n": "Neutral oil",
 "a": "Oils & vinegars",
@@ -2606,7 +2732,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Japanese",
 "category": "Chicken",
 "url": "japanese/chicken/nagoya-chicken-wings.html",
-"text": "450 g (1 lb) chicken wings, flats and drumettes (this much sauce covers up to 900 g / 2 lb) 35 g (¼ cup) potato starch or cornflour (cornstarch) 700 ml (3 cups) neutral oil, for deep-frying Toasted white sesame seeds 240 ml (1 cup) mirin 120 ml (½ cup) soy sauce 45 ml (3 tbsp) sake 65 g (⅓ cup) sugar ¼ tsp Diamond Crystal kosher salt (for table salt, use half the amount, or the same weight) 1 knob fresh ginger (about 1.3 cm / ½ inch), sliced 2 cloves garlic, crushed or minced",
+"text": "450 g (1 lb) chicken wings, flats and drumettes (this much sauce covers up to 900 g / 2 lb) 35 g (¼ cup) potato starch or cornflour (cornstarch) 700 ml (3 cups) neutral oil, for deep-frying Toasted white sesame seeds 240 ml (1 cup) mirin 120 ml (½ cup) soy sauce 45 ml (3 tbsp) sake 65 g (⅓ cup) sugar ¼ tsp Diamond Crystal kosher salt (for table salt, use half the amount, or the same weight) 1 knob fresh ginger (about 1.3 cm / ½ inch), sliced 2 cloves garlic, crushed or minced ½ tsp MSG",
 "meta": "Serves 4 · Prep 20 min · Cook 30 min",
 "intro": "Double-fried wings glazed in a sticky, sweet soy, mirin and ginger sauce and finished with sesame seeds. The sauce keeps in the fridge for a month.",
 "photo": "",
@@ -2713,6 +2839,15 @@ window.FIELD_KITCHEN_INDEX = [
 "p": "\\bgarlic\\b",
 "q": 2.0,
 "u": "cloves"
+},
+{
+"t": "½ tsp MSG",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": 0.5,
+"u": "tsp"
 }
 ]
 },
@@ -2721,7 +2856,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Japanese",
 "category": "Eggs",
 "url": "japanese/eggs/ramen-egg.html",
-"text": "4 eggs (about 55 g each), straight from the fridge 60 ml (4 tbsp) soy sauce 60 ml (4 tbsp) mirin 30 ml (2 tbsp) water 12 g (1 tbsp) sugar 15 ml (1 tbsp) cooking sake 5 g dashi powder (optional)",
+"text": "4 eggs (about 55 g each), straight from the fridge 60 ml (4 tbsp) soy sauce 60 ml (4 tbsp) mirin 30 ml (2 tbsp) water 12 g (1 tbsp) sugar 15 ml (1 tbsp) cooking sake 5 g dashi powder (optional) ½ tsp MSG",
 "meta": "Serves 4 eggs · Prep 5 min · Cook 7 min + 8–10 hr marinating",
 "intro": "Soft-boiled eggs with jammy yolks, marinated overnight in a sweet soy sauce. For ramen, rice bowls or on their own.",
 "photo": "",
@@ -2793,6 +2928,15 @@ window.FIELD_KITCHEN_INDEX = [
 "p": "\\bdashi\\b",
 "q": 5.0,
 "u": "g"
+},
+{
+"t": "½ tsp MSG",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": 0.5,
+"u": "tsp"
 }
 ]
 },
@@ -3043,7 +3187,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Mexican",
 "category": "Beef",
 "url": "mexican/beef/chilli-con-carne.html",
-"text": "15 ml (1 tbsp) olive oil 3 garlic cloves, minced 1 onion (brown or white), diced 500 g (1 lb) beef mince 3 tbsp tomato paste 800 g (28 oz) can crushed tomatoes 420 g (14 oz) can red kidney beans, drained (or other beans) 2 beef stock cubes, crumbled 1½ tsp sugar 125–375 ml (½–1½ cups) water 1–2 tsp cayenne pepper, to taste 4 tsp paprika 5 tsp ground cumin 2 tsp garlic powder (or onion powder) 2 tsp onion powder 2 tsp dried oregano 1½ tsp cooking or kosher salt Rice, corn chips or tortillas Sour cream, yoghurt, grated cheese and coriander",
+"text": "15 ml (1 tbsp) olive oil 3 garlic cloves, minced 1 onion (brown or white), diced 500 g (1 lb) beef mince 3 tbsp tomato paste 800 g (28 oz) can crushed tomatoes 420 g (14 oz) can red kidney beans, drained (or other beans) 2 beef stock cubes, crumbled 1½ tsp sugar 125–375 ml (½–1½ cups) water 1–2 tsp cayenne pepper, to taste 4 tsp paprika 5 tsp ground cumin 2 tsp garlic powder (or onion powder) 2 tsp onion powder 2 tsp dried oregano 1½ tsp cooking or kosher salt ½ tsp MSG Rice, corn chips or tortillas Sour cream, yoghurt, grated cheese and coriander",
 "meta": "Serves 5–6 · Prep 10 min · Cook 30 min",
 "intro": "A rich, properly spiced beef and bean chilli from RecipeTin Eats. Quick enough for a weeknight, even better slow-cooked or the next day.",
 "photo": "",
@@ -3206,6 +3350,15 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "tsp"
 },
 {
+"t": "½ tsp MSG",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
 "t": "Rice, corn chips or tortillas",
 "n": "Corn chips",
 "a": "Bread, pasta & rice",
@@ -3230,7 +3383,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "South African",
 "category": "Duck",
 "url": "south-african/duck/mohs-duck-and-tamarind-curry.html",
-"text": "45 ml (3 tbsp) oil 2 tbsp coriander seeds 2 tbsp cumin seeds 2 tbsp sesame seeds 1 tsp black mustard seeds 2 large onions, chopped Handful of curry leaves 3 tbsp chilli flakes 1 tsp garam masala 85 g (1 cup) desiccated coconut 150 g (1 cup) cashew nuts 1 tsp turmeric 4 duck breasts 45 ml (3 tbsp) sunflower oil 30 g (80 ml / ⅓ cup) gram (chickpea) flour Salt White pepper 750 ml (3 cups) water 250 ml (1 cup) orange juice 1 tbsp brown sugar 45 ml (3 tbsp) tamarind paste Fresh coriander, to garnish",
+"text": "45 ml (3 tbsp) oil 2 tbsp coriander seeds 2 tbsp cumin seeds 2 tbsp sesame seeds 1 tsp black mustard seeds 2 large onions, chopped Handful of curry leaves 3 tbsp chilli flakes 1 tsp garam masala 85 g (1 cup) desiccated coconut 150 g (1 cup) cashew nuts 1 tsp turmeric 4 duck breasts 45 ml (3 tbsp) sunflower oil 30 g (80 ml / ⅓ cup) gram (chickpea) flour Salt White pepper 750 ml (3 cups) water 250 ml (1 cup) orange juice 1 tbsp brown sugar 45 ml (3 tbsp) tamarind paste ½ tsp MSG Fresh coriander, to garnish",
 "meta": "Serves 4",
 "intro": "A modern Durban duck curry from Mohammed Khalid Moola of Ladysmith, with a nod to France in the orange sauce and his mother's touch of tamarind. Make the curry paste the day before, or at least before you start the duck.",
 "photo": "",
@@ -3430,6 +3583,15 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "ml"
 },
 {
+"t": "½ tsp MSG",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
 "t": "Fresh coriander, to garnish",
 "n": "Coriander",
 "a": "Herbs",
@@ -3445,7 +3607,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "South African",
 "category": "Sides",
 "url": "south-african/sides/chunky-onion-and-tomato-relish.html",
-"text": "30 ml (2 tbsp) olive oil 2 onions (or 1 large onion), roughly chopped 2 tins diced tomatoes (or 8 fresh tomatoes, diced) 30 ml (2 tbsp) Mrs Ball's chutney 30 ml (2 tbsp) balsamic vinegar 15 ml (1 tbsp) Worcestershire sauce Salt and pepper 12 g (1 tbsp) sugar (optional), to help the caramelising",
+"text": "30 ml (2 tbsp) olive oil 2 onions (or 1 large onion), roughly chopped 2 tins diced tomatoes (or 8 fresh tomatoes, diced) 30 ml (2 tbsp) Mrs Ball's chutney 30 ml (2 tbsp) balsamic vinegar 15 ml (1 tbsp) Worcestershire sauce ½ tsp MSG Salt and pepper 12 g (1 tbsp) sugar (optional), to help the caramelising",
 "meta": "Serves 6 · Prep 5 min · Cook 20 min",
 "intro": "A simple, full-flavoured South African tomato relish for the braai: with pap, boerewors rolls, meatballs or even on pasta.",
 "photo": "",
@@ -3508,6 +3670,15 @@ window.FIELD_KITCHEN_INDEX = [
 "p": "\\bworcestershire\\b",
 "q": 15.0,
 "u": "ml"
+},
+{
+"t": "½ tsp MSG",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": 0.5,
+"u": "tsp"
 },
 {
 "t": "Salt and pepper",
@@ -3677,7 +3848,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Thai",
 "category": "Beef",
 "url": "thai/beef/thai-beef-salad.html",
-"text": "½ tsp bird's eye or Thai chilli, deseeded and finely minced ¼ tsp finely minced garlic (½ small clove) 2¼ tsp white sugar 30 ml (2 tbsp) fish sauce 45 ml (3 tbsp) lime juice 15 ml (1 tbsp) grapeseed oil (or canola or vegetable oil) 1 small pinch cooking or kosher salt 200–250 g (7–8 oz) good-quality beef steak, such as sirloin, at room temperature 15 ml (1 tbsp) vegetable, peanut or canola oil ¼ tsp each salt and pepper 2 heaped cups mixed lettuce leaves 10 cherry tomatoes, halved ¼ small red onion, very finely sliced ½ cucumber (deseeded if you like), halved lengthways and sliced ¼ cup mint leaves, lightly packed 35 g (¼ cup) roasted unsalted peanuts, finely chopped Extra mint leaves, to garnish",
+"text": "½ tsp bird's eye or Thai chilli, deseeded and finely minced ¼ tsp finely minced garlic (½ small clove) 2¼ tsp white sugar 30 ml (2 tbsp) fish sauce 45 ml (3 tbsp) lime juice 15 ml (1 tbsp) grapeseed oil (or canola or vegetable oil) 1 small pinch cooking or kosher salt ½ tsp MSG 200–250 g (7–8 oz) good-quality beef steak, such as sirloin, at room temperature 15 ml (1 tbsp) vegetable, peanut or canola oil ¼ tsp each salt and pepper 2 heaped cups mixed lettuce leaves 10 cherry tomatoes, halved ¼ small red onion, very finely sliced ½ cucumber (deseeded if you like), halved lengthways and sliced ¼ cup mint leaves, lightly packed 35 g (¼ cup) roasted unsalted peanuts, finely chopped Extra mint leaves, to garnish",
 "meta": "Serves 2 · Prep 20 min · Cook 5 min",
 "intro": "Seared steak sliced thin and tossed with crisp salad, mint and peanuts in a hot, sour, salty and sweet dressing. Adapted by RecipeTin Eats from the Spice I Am cookbook.",
 "photo": "",
@@ -3749,6 +3920,15 @@ window.FIELD_KITCHEN_INDEX = [
 "p": "\\bsalt\\b",
 "q": 1.0,
 "u": null
+},
+{
+"t": "½ tsp MSG",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": 0.5,
+"u": "tsp"
 },
 {
 "t": "200–250 g (7–8 oz) good-quality beef steak, such as sirloin, at room temperature",
@@ -3847,7 +4027,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Thai",
 "category": "Chicken",
 "url": "thai/chicken/yellow-curry.html",
-"text": "15 ml (1 tbsp) oil, or thick coconut cream from the top of the can 4–5 tbsp yellow curry paste (a good authentic brand, or homemade) 500 g (1 lb) boneless, skinless chicken thighs, cut into bite-sized pieces 1 tsp curry powder 400 ml (14 oz) can full-fat coconut milk A splash of chicken stock or water 3 Yukon gold or Warba potatoes, peeled and cubed 1 brown (yellow) onion, cut into wedges 2 carrots, sliced 30 ml (2 tbsp) fish sauce 1–2½ tbsp palm sugar or brown sugar Fresh coriander and sliced red chillies, to garnish Steamed jasmine rice, to serve",
+"text": "15 ml (1 tbsp) oil, or thick coconut cream from the top of the can 4–5 tbsp yellow curry paste (a good authentic brand, or homemade) 500 g (1 lb) boneless, skinless chicken thighs, cut into bite-sized pieces 1 tsp curry powder 400 ml (14 oz) can full-fat coconut milk A splash of chicken stock or water 3 Yukon gold or Warba potatoes, peeled and cubed 1 brown (yellow) onion, cut into wedges 2 carrots, sliced 30 ml (2 tbsp) fish sauce ½ tsp MSG 1–2½ tbsp palm sugar or brown sugar Fresh coriander and sliced red chillies, to garnish Steamed jasmine rice, to serve",
 "meta": "Serves 4 · Prep 15 min · Cook 25 min",
 "intro": "A mild, fragrant coconut curry with chicken, potato and carrot. Serve over steamed jasmine rice.",
 "photo": "",
@@ -3945,6 +4125,15 @@ window.FIELD_KITCHEN_INDEX = [
 "p": "\\bfish sauce\\b",
 "q": 30.0,
 "u": "ml"
+},
+{
+"t": "½ tsp MSG",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": 0.5,
+"u": "tsp"
 },
 {
 "t": "1–2½ tbsp palm sugar or brown sugar",

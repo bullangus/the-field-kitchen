@@ -31,6 +31,7 @@ A rich, properly spiced beef and bean chilli from RecipeTin Eats. Quick enough f
 - 2 tsp onion powder
 - 2 tsp dried oregano
 - 1½ tsp cooking or kosher salt
+- ½ tsp MSG
 
 ### To serve
 
@@ -56,3 +57,4 @@ A rich, properly spiced beef and bean chilli from RecipeTin Eats. Quick enough f
 - Even better the next day, and it freezes well.
 - More toppings: sliced spring onions, diced red onion, pico de gallo, avocado, sliced jalapeño or other chillies.
 - 2026-10-28: We leave out the capsicum (1 red capsicum, diced, cooked with the onion for 2 minutes in the original).
+- 2026-10-28: Added ½ tsp MSG to the spice mix. We add it to most savoury dishes.

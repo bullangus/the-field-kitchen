@@ -27,6 +27,7 @@ Restaurant-style, served over an optional nest of crisp fried rice vermicelli.
 - 15 ml (1 tbsp) Shaoxing rice wine
 - 38 g (3 tbsp) white sugar
 - 30 ml (2 tbsp) regular soy sauce
+- ½ tsp MSG
 
 ### For the rest of the dish
 
@@ -48,7 +49,7 @@ Restaurant-style, served over an optional nest of crisp fried rice vermicelli.
 8. Keep about 1–2 tbsp of oil in the same pan over medium-high heat. Add the garlic and stir-fry until fragrant, 15–30 seconds.
 9. Add the onion and the white parts of the spring onions. Stir-fry until the onion just starts to turn translucent.
 10. Return the beef to the pan with the black pepper and stir-fry briefly. Drizzle the 1 tbsp Shaoxing wine around the pan and stir-fry for 30 seconds to 1 minute, until fragrant and the wine has cooked off.
-11. Add the sugar and soy sauce and stir-fry until the beef is well coated and just starting to smell a little charred and caramelised.
+11. Add the sugar, soy sauce and MSG and stir-fry until the beef is well coated and just starting to smell a little charred and caramelised.
 12. Add the green parts of the spring onions and toss briefly to combine. Serve over the fried rice noodles.
 
 ## Notes
@@ -56,3 +57,4 @@ Restaurant-style, served over an optional nest of crisp fried rice vermicelli.
 - Semi-freezing the steak makes it much easier to slice thinly. Let it thaw fully and drain off any blood before marinating.
 - For a less sweet version, cut the sugar by 1 tbsp (about 12 g).
 - For a saucier version, double the soy sauce and sugar and add 15–30 ml (1–2 tbsp) water.
+- 2026-10-28: Added ½ tsp MSG to the sauce. We add it to most savoury dishes.

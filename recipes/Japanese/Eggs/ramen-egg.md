@@ -21,6 +21,7 @@ Soft-boiled eggs with jammy yolks, marinated overnight in a sweet soy sauce. For
 - 12 g (1 tbsp) sugar
 - 15 ml (1 tbsp) cooking sake
 - 5 g dashi powder (optional)
+- ½ tsp MSG
 
 ## Method
 
@@ -47,3 +48,4 @@ Soft-boiled eggs with jammy yolks, marinated overnight in a sweet soy sauce. For
 ## Notes
 
 - 2026-10-28: We use about 5 g dashi powder in place of the 5 g bonito flakes, so there's nothing to strain out. It can be left out entirely: the marinade has less umami but the eggs are still good.
+- 2026-10-28: Added ½ tsp MSG to the marinade. We add it to most savoury dishes.

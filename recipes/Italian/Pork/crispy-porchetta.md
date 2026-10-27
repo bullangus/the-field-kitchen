@@ -19,10 +19,11 @@ Pork belly rolled around the loin with a herb, garlic and fennel filling. Start 
 - 15 ml (1 tbsp) fennel pollen (or toasted fennel seeds, crushed)
 - 15 ml (1 tbsp) chilli flakes
 - 30 g (about 1 oz) salt
+- ½ tsp MSG
 
 ## Method
 
-1. The day before: finely chop the rosemary and parsley and put them in a medium bowl. Grate in the garlic and zest in the lemon, then add the fennel pollen, chilli flakes and salt. Mix well and keep in the fridge until needed.
+1. The day before: finely chop the rosemary and parsley and put them in a medium bowl. Grate in the garlic and zest in the lemon, then add the fennel pollen, chilli flakes, salt and MSG. Mix well and keep in the fridge until needed.
 2. Roll the pork up to see where the skin overlaps, and trim the skin back to that point so no skin is rolled up on the inside. The two sides should meet with no overhang.
 3. Remove the loin by following the seam, running a boning knife under it where it meets the fat and keeping the skin and belly intact. Trim the thick fat layer slightly, but not all of it, as it keeps the loin moist.
 4. Butterfly the loin: cut down the middle, stopping about 7 cm from the bottom, then cut sideways on both sides until it opens flat. Rub in about a quarter of the marinade and set aside.
@@ -37,3 +38,4 @@ Pork belly rolled around the loin with a herb, garlic and fennel filling. Start 
 
 - If the crackling hasn't puffed everywhere, return it to a 220°C oven for 5–10 minutes, or use a kitchen blowtorch on the stubborn spots.
 - Carve only what you need and keep the rest of the roll whole so it doesn't dry out. Keeps in an airtight container in the fridge for up to 3 days. Reheat slices at 180°C for 10–15 minutes, or eat it cold, thinly sliced in a bread roll.
+- 2026-10-28: Added ½ tsp MSG to the herb marinade. We add it to most savoury dishes.

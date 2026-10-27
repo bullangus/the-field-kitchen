@@ -24,6 +24,7 @@ A slow pork and beef ragu, béchamel and plenty of cheese. Make the ragu the day
 - 700 g tomato passata
 - 100 ml milk
 - Sea salt, to taste
+- ½ tsp MSG
 - 100 g Parmesan, grated, plus the rind
 
 ### For assembling
@@ -53,7 +54,7 @@ A slow pork and beef ragu, béchamel and plenty of cheese. Make the ragu the day
 2. Heat 30 ml (2 tbsp) of the oil in a large heavy-based saucepan or Dutch oven over high heat. Working in batches, crumble in some of the mince and turn the heat down to medium. Cook without stirring for 8–10 minutes, then break it up with a wooden spoon and stir to brown all over. Transfer to a plate and repeat with the remaining mince.
 3. Leave about 1 tbsp of fat in the pan and add the carrot. Season with salt and cook over medium heat for 2 minutes, stirring. Add the onion and cook for 2 minutes, then the celery and garlic and sweat for another minute.
 4. Return the mince to the pan and pour in the wine. Bring to a simmer and cook until the wine has reduced by 80%.
-5. Add 600 ml of the passata (keep the remaining 100 g for the top) and the Parmesan rind. Mix well and bring to a simmer, then lower the heat, cover and cook for 2–6 hours, stirring occasionally so it doesn't stick. Add a little water if it gets too thick. Make the pasta while it cooks.
+5. Add 600 ml of the passata (keep the remaining 100 g for the top) the Parmesan rind and the MSG. Mix well and bring to a simmer, then lower the heat, cover and cook for 2–6 hours, stirring occasionally so it doesn't stick. Add a little water if it gets too thick. Make the pasta while it cooks.
 6. Stir in the 100 ml milk 30 minutes before the ragu is finished. When it's done, remove the rind and let the ragu cool to room temperature.
 7. For the pasta (skip if using store-bought sheets): blanch the spinach in a large saucepan of boiling salted water for 20 seconds, then drain and plunge into iced water. Drain well and squeeze out as much water as you can; wet spinach makes a tougher dough. Blend with the eggs until smooth.
 8. Pile the flour on a clean work surface and make a well in the centre. Pour in the spinach mixture with a pinch of salt and the olive oil. With a fork, gradually draw in the flour from the edges until it's all incorporated, then knead until smooth and elastic.
@@ -74,3 +75,4 @@ A slow pork and beef ragu, béchamel and plenty of cheese. Make the ragu the day
 - Dried lasagne sheets also work: use about 250 g, either soaked in warm water for 5 minutes or the no-boil kind, and keep the layers slightly wetter.
 - Make ahead: assemble, cover and refrigerate for up to 24 hours, adding 10–15 minutes to the covered bake time from cold. Freezes well, baked or unbaked; thaw overnight in the fridge first. Keeps in the fridge for up to 3 days; reheat portions covered at 180°C for 15 minutes.
 - 2026-10-28: We usually skip the homemade pasta and use store-bought Latina fresh lasagne sheets, as the packet directs. The spinach pasta stays in as an option.
+- 2026-10-28: Added ½ tsp MSG to the ragu. We add it to most savoury dishes.

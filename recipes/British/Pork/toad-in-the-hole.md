@@ -35,6 +35,7 @@ Sausages baked in a tall, crisp-edged Yorkshire pudding, served with onion gravy
 - ½ tsp Worcestershire sauce
 - ½ tsp black pepper
 - ¼ tsp cooking or kosher salt
+- ½ tsp MSG
 
 ## Method
 
@@ -51,7 +52,7 @@ Sausages baked in a tall, crisp-edged Yorkshire pudding, served with onion gravy
 
 1. Melt the dripping in the pan used for the sausages over high heat. Add the onions and cook, stirring constantly, until nicely browned, about 5 minutes.
 2. Add the garlic and stir for 30 seconds. Add the flour and stir for 1 minute so it's mixed through the onions, for a lump-free gravy.
-3. Slowly pour in the stock, stirring as you go. Add the Worcestershire sauce, salt and pepper.
+3. Slowly pour in the stock, stirring as you go. Add the Worcestershire sauce, MSG, salt and pepper.
 4. Bring to a simmer, stirring, for 2 minutes until it thickens into a gravy. Keep warm until ready to serve.
 
 ## Notes
@@ -62,3 +63,4 @@ Sausages baked in a tall, crisp-edged Yorkshire pudding, served with onion gravy
 - The same batter makes 12 Yorkshire puddings: 1 tsp dripping heated in each hole, baked for 17 minutes.
 - For a darker gravy, add ½ tsp dark soy sauce.
 - Leftovers keep for 3 days, though the pudding softens. Re-crisp at 180°C for about 7 minutes.
+- 2026-10-28: Added ½ tsp MSG to the onion gravy. We add it to most savoury dishes.

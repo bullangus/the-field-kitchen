@@ -26,6 +26,7 @@ Egg-coated fried chicken soaked in a sweet and tangy nanban sauce and topped wit
 - 30 ml (2 tbsp) white vinegar
 - 25 g (2 tbsp) sugar
 - 15 ml (1 tbsp) mirin
+- ½ tsp MSG
 
 ### For the tartar sauce
 
@@ -39,7 +40,7 @@ Egg-coated fried chicken soaked in a sweet and tangy nanban sauce and topped wit
 
 ## Method
 
-1. For the nanban sauce, mix the soy sauce, vinegar, sugar and mirin in a small saucepan. Bring to the boil and simmer for 2–3 minutes. Once it's at a rapid boil and the sugar has completely dissolved, take it off the heat and set aside.
+1. For the nanban sauce, mix the soy sauce, vinegar, sugar, mirin and MSG in a small saucepan. Bring to the boil and simmer for 2–3 minutes. Once it's at a rapid boil and the sugar has completely dissolved, take it off the heat and set aside.
 2. For the tartar sauce, bring a pot of water to the boil. Gently lower in the eggs and cook for 12 minutes, then peel and finely chop.
 3. Finely dice the onion and soak it in cold water for 10 minutes to take the edge off. Drain and squeeze out the excess water with your hands or a piece of muslin, so the tartar sauce doesn't turn watery.
 4. Finely chop the spring onion. In a medium bowl, combine the eggs, onion and spring onion. Add the mayonnaise, lemon juice, tomato sauce, and salt and pepper to taste, and mix well.
@@ -53,3 +54,4 @@ Egg-coated fried chicken soaked in a sweet and tangy nanban sauce and topped wit
 ## Notes
 
 - The source uses 1 tbsp = 15 ml and 1 cup = 240 ml.
+- 2026-10-28: Added ½ tsp MSG to the nanban sauce. We add it to most savoury dishes.

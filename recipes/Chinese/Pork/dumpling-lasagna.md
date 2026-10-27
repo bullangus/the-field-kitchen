@@ -20,6 +20,7 @@ All the flavour of pork and spring onion dumplings with no folding: wonton wrapp
 - 1–2 tsp chilli crisp, to taste
 - A splash of rice vinegar
 - ¾ tsp white pepper (or black pepper)
+- ½ tsp MSG
 - 45–60 ml (3–4 tbsp) chicken stock per ramekin
 - Wonton or dumpling wrappers
 - A small bowl of water, for dipping the wrappers
@@ -34,7 +35,7 @@ All the flavour of pork and spring onion dumplings with no folding: wonton wrapp
 ## Method
 
 1. Set up a steamer, or fill a large pot halfway with water and bring it to a gentle boil.
-2. In a large bowl, mix the pork, spring onions, garlic, ginger, soy sauce, sesame oil, chilli crisp, rice vinegar and white pepper gently with your hands until just combined.
+2. In a large bowl, mix the pork, spring onions, garlic, ginger, soy sauce, sesame oil, chilli crisp, rice vinegar, white pepper and MSG gently with your hands until just combined.
 3. Set out as many ramekins as will fit in your steamer.
 4. Dip a wrapper in the water for a second or two and lay it flat in the bottom of a ramekin, overlapping slightly if needed. Spread a thin layer of the pork mixture over it.
 5. Repeat the layers of dipped wrappers and pork until the ramekins are full or you run out, finishing with a layer of wrappers.
@@ -46,3 +47,4 @@ All the flavour of pork and spring onion dumplings with no folding: wonton wrapp
 
 - Endlessly flexible: thinly sliced cabbage, mushrooms or a little oyster sauce all work in the filling.
 - 2026-10-28: We make these in individual ramekins with 3–4 tbsp stock each. The original layers it in one small baking dish with 1–2 tbsp stock over the top.
+- 2026-10-28: Added ½ tsp MSG to the filling. We add it to most savoury dishes.

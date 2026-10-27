@@ -22,6 +22,7 @@ Marinated in ginger, garlic and soy, then fried twice for a light, crisp crust.
 - ½–1 tbsp soy sauce
 - ½ tbsp sake (or dry sherry or Chinese rice wine, or leave it out)
 - ½ tsp toasted sesame oil
+- ½ tsp MSG
 
 ### For deep-frying
 
@@ -39,7 +40,7 @@ Marinated in ginger, garlic and soy, then fried twice for a light, crisp crust.
 
 1. Cut the chicken into 5 cm (2 inch) pieces and season with the salt and pepper.
 2. Grate the ginger and add ½ tsp of it, with its juice, to a large bowl. Mince or press the garlic and add it to the bowl.
-3. Add the soy sauce, sake and sesame oil and whisk to combine.
+3. Add the soy sauce, sake, sesame oil and MSG and whisk to combine.
 4. Add the chicken and mix it through with your hands. Cover and marinate in the fridge for 30 minutes.
 5. While the chicken marinates, pour the oil into a heavy-based pot to a depth of at least 2.5–4 cm (1–1½ inches). Heat it to 160°C (325°F) over medium-low heat, so you have time to coat the chicken.
 6. Put the flour and the potato starch in separate piles on a tray. Lightly coat a piece of chicken in the flour and dust off the excess, then dredge it in the potato starch and shake off the excess. Set it on a separate tray and repeat with the remaining chicken.
@@ -52,3 +53,4 @@ Marinated in ginger, garlic and soy, then fried twice for a light, crisp crust.
 ## Notes
 
 - Once completely cool, keeps in an airtight container in the fridge for up to 3 days, or in the freezer for up to a month.
+- 2026-10-28: Added ½ tsp MSG to the marinade. We add it to most savoury dishes.

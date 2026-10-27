@@ -32,6 +32,7 @@ A whole snapper stuffed with lemongrass, garlic and makrut lime, coated in sesam
 - 1½ tbsp fish sauce
 - 30 ml (2 tbsp) peanut oil
 - 2 tbsp chopped fresh coriander
+- ½ tsp MSG
 
 ## Method
 
@@ -39,10 +40,11 @@ A whole snapper stuffed with lemongrass, garlic and makrut lime, coated in sesam
 2. Lay a large sheet of baking paper on top of a large sheet of foil on a flat surface. Fill the cavity with the lemongrass, garlic and lime leaves. Season the fish with salt and pepper, then press the sesame seeds over both sides, into the cuts.
 3. Stand the fish upright on its belly in the centre of the paper, splaying the belly slightly so it sits steady. Bring the paper and foil up around the fish and scrunch the edges together at the top to seal.
 4. Barbecue with the hood closed for 30–35 minutes, or until the flesh flakes easily at the thickest part. Standing upright, it doesn't need turning.
-5. Meanwhile, make the dressing: combine the sweet chilli sauce, lime juice, sugar, soy sauce, ginger, fish sauce, oil and coriander in a jug.
+5. Meanwhile, make the dressing: combine the sweet chilli sauce, lime juice, sugar, soy sauce, ginger, fish sauce, oil, coriander and MSG in a jug.
 6. Open the parcel and lift the fish onto a platter. Pour over some of the dressing and scatter with spring onion and coriander sprigs. Serve with steamed rice, lime wedges and the rest of the dressing.
 
 ## Notes
 
 - 2026-10-28: We coat the fish in sesame seeds and cook it standing upright rather than lying flat, so it isn't turned. The original lays it flat and turns it halfway through.
 - 2026-10-28: The servings, times, sesame amount and serving step (step 6) are our best guess, since our copy of the recipe didn't include them. Adjust them after the next cook.
+- 2026-10-28: Added ½ tsp MSG to the dressing. We add it to most savoury dishes.
