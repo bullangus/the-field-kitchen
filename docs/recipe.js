@@ -353,18 +353,68 @@
   var startButton = page.querySelector(".start-cooking");
   if (!steps.length) return;
   startButton.hidden = false;
-  var view = null, at = 0, wakeLock = null, listening = false, recognition = null;
+  var view = null, at = 0, wakeLock = null, listening = false, reading = false, recognition = null;
   var Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  var canSpeak = "speechSynthesis" in window;
+
+  // ---- Voices: use the most natural one the device has ----
+  // Devices ship robotic default voices alongside much better ones (Edge's "Natural"
+  // voices, Chrome's Google voices, Apple's Enhanced/Premium voices); rank and pick.
+  function voiceScore(v) {
+    var name = v.name.toLowerCase(), lang = (v.lang || "").toLowerCase().replace("_", "-");
+    var s = 0;
+    if (/natural|neural|premium|enhanced|online/.test(name)) s += 50;
+    if (/google/.test(name)) s += 20;
+    if (lang === "en-au") s += 30; else if (lang === "en-gb" || lang === "en-nz") s += 20; else if (lang.indexOf("en") === 0) s += 10;
+    if (/compact|espeak|robot|novelty|bad news|bells|whisper|zarvox|trinoids|bubbles/.test(name)) s -= 80;
+    return s;
+  }
+  function englishVoices() {
+    if (!canSpeak) return [];
+    return speechSynthesis.getVoices()
+      .filter(function (v) { return /^en/i.test(v.lang || ""); })
+      .sort(function (a, b) { return voiceScore(b) - voiceScore(a) || a.name.localeCompare(b.name); });
+  }
+  function chosenVoice() {
+    var all = englishVoices();
+    var saved = stored("fk-voice", "");
+    return all.filter(function (v) { return v.voiceURI === saved; })[0] || all[0] || null;
+  }
 
   function speak(text) {
-    if (!("speechSynthesis" in window)) return;
+    if (!canSpeak) return;
     speechSynthesis.cancel();
     var u = new SpeechSynthesisUtterance(text);
-    u.lang = "en-AU";
+    var voice = chosenVoice();
+    if (voice) { u.voice = voice; u.lang = voice.lang; } else { u.lang = "en-AU"; }
+    u.rate = 0.97;
     speechSynthesis.speak(u);
   }
+  function fillVoicePicker() {
+    var pick = view && view.querySelector(".cv-voice-pick");
+    if (!pick) return;
+    var all = englishVoices(), current = chosenVoice();
+    pick.textContent = "";
+    all.forEach(function (v) {
+      var o = document.createElement("option");
+      o.value = v.voiceURI;
+      o.textContent = v.name.replace(/^Microsoft /, "").replace(/ - English.*$/, "") + " (" + v.lang + ")";
+      if (current && v.voiceURI === current.voiceURI) o.selected = true;
+      pick.appendChild(o);
+    });
+    pick.hidden = !all.length;
+  }
+  if (canSpeak) speechSynthesis.addEventListener("voiceschanged", fillVoicePicker);
+  // Keep the screen on for the whole cooking view (hands-free or not), and say so
+  // only once the device has actually agreed.
   function lockScreen() {
-    if ("wakeLock" in navigator) navigator.wakeLock.request("screen").then(function (l) { wakeLock = l; }).catch(function () {});
+    if (!("wakeLock" in navigator)) return;
+    navigator.wakeLock.request("screen").then(function (l) {
+      wakeLock = l;
+      var awake = view && view.querySelector(".cv-awake");
+      if (awake) awake.hidden = false;
+      l.addEventListener("release", function () { if (view && document.visibilityState === "visible") lockScreen(); });
+    }).catch(function () {});
   }
   function showStep(i) {
     at = Math.max(0, Math.min(steps.length - 1, i));
@@ -402,7 +452,13 @@
     });
     view.querySelector(".cv-prev").disabled = at === 0;
     view.querySelector(".cv-next").textContent = at === steps.length - 1 ? "Finish" : "Next →";
-    if (listening) speak(s.text.textContent);
+    if (listening || reading) speak(s.text.textContent);
+  }
+  function setReading(on) {
+    reading = on && canSpeak;
+    view.querySelector(".cv-read").setAttribute("aria-pressed", String(reading));
+    if (reading) speak(steps[at].text.textContent);
+    else if (canSpeak && !listening) speechSynthesis.cancel();
   }
   function next() { if (at === steps.length - 1) closeView(); else showStep(at + 1); }
   function prev() { showStep(at - 1); }
@@ -441,13 +497,16 @@
     view.setAttribute("aria-label", "Cooking " + title);
     view.innerHTML =
       '<header class="cv-head"><span class="cv-title"></span>' +
+      '<select class="cv-voice-pick" aria-label="Reading voice" hidden></select>' +
+      '<button type="button" class="cv-read" aria-pressed="false" hidden>🔊 Read aloud</button>' +
       '<button type="button" class="cv-voice" aria-pressed="false" hidden>🎤 Hands-free</button>' +
       '<button type="button" class="cv-close" aria-label="Close">×</button></header>' +
       '<div class="cv-bar"><span></span></div>' +
       '<div class="cv-body"><p class="cv-stage"></p><p class="cv-count"></p><p class="cv-text" aria-live="polite"></p>' +
       '<div class="cv-uses"></div><div class="cv-timers"></div></div>' +
       '<footer class="cv-foot"><button type="button" class="pill pill-outline cv-prev">← Back</button>' +
-      '<p class="cv-hint"></p><button type="button" class="pill pill-solid cv-next">Next →</button></footer>';
+      '<p class="cv-hint"></p><button type="button" class="pill pill-solid cv-next">Next →</button>' +
+      '<p class="cv-awake" hidden>☀ Screen stays on while you cook</p></footer>';
     view.querySelector(".cv-title").textContent = title;
     view.querySelector(".cv-hint").textContent = Recognition
       ? "Swipe, use the arrow keys, or turn on hands-free and say “next”, “back”, “repeat” or “timer”."
@@ -457,6 +516,15 @@
     var voice = view.querySelector(".cv-voice");
     voice.hidden = !Recognition;
     voice.addEventListener("click", function () { setListening(!listening); });
+    var read = view.querySelector(".cv-read");
+    read.hidden = !canSpeak;
+    read.addEventListener("click", function () { setReading(!reading); });
+    var pick = view.querySelector(".cv-voice-pick");
+    pick.addEventListener("change", function () {
+      store("fk-voice", pick.value);
+      speak("This is how I'll read your recipe.");
+    });
+    fillVoicePicker();
     view.querySelector(".cv-close").addEventListener("click", closeView);
     view.querySelector(".cv-next").addEventListener("click", next);
     view.querySelector(".cv-prev").addEventListener("click", prev);
@@ -479,9 +547,13 @@
     steps.slice(0, at).forEach(function (s) { setDone(s.li, true); });
     saveTicks();
     setListening(false);
+    reading = false;
+    if (canSpeak) speechSynthesis.cancel();
     view.remove(); view = null;
     document.documentElement.classList.remove("cooking");
-    if (wakeLock) { wakeLock.release(); wakeLock = null; }
+    var lock = wakeLock;
+    wakeLock = null;
+    if (lock) lock.release();
     startButton.focus();
   }
   startButton.addEventListener("click", openView);

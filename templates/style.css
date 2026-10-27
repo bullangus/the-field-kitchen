@@ -658,13 +658,16 @@ html.cooking { overflow: hidden; }
   position: fixed; inset: 0; z-index: 60; display: flex; flex-direction: column;
   background: var(--grain), var(--paper); color: var(--ink);
 }
-.cv-head { display: flex; align-items: center; gap: 0.75rem; padding: 1rem clamp(1rem, 4vw, 2.5rem); }
+.cv-head { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; padding: 1rem clamp(1rem, 4vw, 2.5rem); }
 .cv-title { margin-right: auto; font: 600 1.3rem "Cormorant Garamond", Georgia, serif; }
-.cv-voice, .cv-close {
+.cv-voice, .cv-read, .cv-close, .cv-voice-pick {
   font: inherit; cursor: pointer; border: 1px solid var(--rule); background: var(--card); color: var(--ink);
   border-radius: 999px; padding: 0.4rem 0.9rem;
 }
-.cv-voice[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--paper); }
+.cv-voice[aria-pressed="true"], .cv-read[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--paper); }
+.cv-voice-pick { max-width: 14rem; font: inherit; font-size: 0.85rem; cursor: pointer; }
+.cv-voice-pick[hidden], .cv-read[hidden], .cv-voice[hidden] { display: none; }
+@media (max-width: 600px) { .cv-title { flex-basis: 100%; } .cv-voice-pick { max-width: 9.5rem; } }
 .cv-close { width: 2.5rem; height: 2.5rem; padding: 0; font-size: 1.4rem; line-height: 1; }
 .cv-bar { height: 4px; background: var(--rule); }
 .cv-bar span { display: block; height: 100%; width: 0; background: var(--accent); transition: width 0.35s ease; }
@@ -690,6 +693,9 @@ html.cooking { overflow: hidden; }
 }
 .cv-foot .pill { padding: 0.75rem 1.5rem; font-size: 1.05rem; }
 .cv-foot .pill:disabled { opacity: 0.35; cursor: default; transform: none; }
+.cv-foot { flex-wrap: wrap; }
+.cv-awake { flex-basis: 100%; margin: 0; text-align: center; font-size: 0.78rem; color: var(--muted); }
+.cv-awake[hidden] { display: none; }
 .cv-hint { flex: 1; margin: 0; text-align: center; color: var(--muted); font-size: 0.85rem; font-style: italic; }
 @media (max-width: 600px) { .cv-hint { display: none; } .cv-foot { justify-content: space-between; } }
 .timer-tray { position: fixed; right: 1rem; bottom: 6rem; z-index: 70; display: flex; flex-direction: column; gap: 0.5rem; }
