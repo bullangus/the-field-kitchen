@@ -1,0 +1,78 @@
+---
+title: Focaccia
+cuisine: Italian
+category: Breads
+serves: 1 half-sheet pan
+time: Prep 3 hr 45 min (mostly rising) · Cook 30 min
+source: https://www.thecookingworld.com/recipes/claire-saffitz-focaccia-recipe
+---
+
+Claire Saffitz's focaccia: a very wet, well-kneaded dough baked in a half-sheet pan for a tall, airy crumb and a crisp, oily base. Our usual toppings are garlic, rosemary or chilli garlic; the Sichuan pepper oil and soy caramelised onions below are the other favourite.
+
+## Ingredients
+
+### For the dough
+
+- 7 g (1 sachet / ¼ oz) active dry yeast
+- 680 g water (113 g / ½ cup lukewarm, plus 567 g / 2½ cups at room temperature)
+- 780 g (6 cups) bread flour
+- 17 g (2 tbsp) Diamond Crystal kosher salt
+- 110 g (½ cup) extra-virgin olive oil, plus more for oiling your hands
+
+### For a plain topping
+
+- 55 g (¼ cup) extra-virgin olive oil
+- Fresh rosemary leaves
+- Flaky salt
+
+### For the Sichuan pepper oil (in place of the plain topping)
+
+- 60 ml (¼ cup) olive oil
+- 1½ tbsp Sichuan peppercorns
+- ½ tbsp black peppercorns
+- ½ tbsp white peppercorns
+
+### For the soy caramelised onions
+
+- 2 large onions, halved and sliced into thin rings
+- 60 ml (4 tbsp) vegetable oil
+- ½ tbsp sugar, more to taste
+- 30 ml (2 tbsp) soy sauce
+
+## Method
+
+### Dough
+
+1. In a small saucepan, gently warm the 113 g water over low heat, swirling, until lukewarm but not hot, about 40°C (105°F). Pour it into the bowl of a stand mixer and whisk in the yeast. Leave until cloudy and slightly puffed, about 5 minutes.
+2. Fit the dough hook. Add the 567 g room-temperature water, the flour and the kosher salt. Mix on the lowest speed until a very loose dough comes together, about 1 minute, then on medium-high until smooth and wrapping around the hook, about 5 minutes.
+3. Turn off the mixer, cover the bowl with a damp towel and rest for 10 minutes. Mix again on medium-high until the dough is very smooth, extremely elastic and pulling away from the sides of the bowl, another 10–15 minutes. It will still be very sticky; don't add more flour.
+4. Pour 55 g (¼ cup) of the oil into a large bowl and swirl to coat. Scrape the dough into it and dab some of the pooling oil over the surface. Cover with a damp towel and leave at room temperature until doubled, 1–1½ hours.
+5. Drizzle the other 55 g (¼ cup) oil over a standard half-sheet pan and rub it over the base and sides.
+6. With oiled hands, loosen the dough from the sides of the bowl. Slide your hands down either side, lift it out and let its weight stretch it downwards, then let it fold back onto itself in the bowl. Turn the bowl 90 degrees and repeat. Do this twice more, putting the dough onto the oiled pan after the last stretch.
+7. Stretch the dough towards the edges until it springs back, cover with an oiled sheet of plastic wrap and rest for 15 minutes. Then stretch it right into the corners so it fills the pan, and cover again.
+8. At this point the dough can go in the fridge for up to 24 hours; it should nearly double there (if not, leave it at room temperature until it does). To bake straight away, leave it at room temperature until nearly doubled and close to the top of the pan, another 40–55 minutes.
+
+### Sichuan pepper oil (while the dough rises)
+
+1. Grind all the peppercorns to a fine powder in a mortar and pestle.
+2. Sift the powder through a sieve, then grind the larger bits left behind again and sift. Repeat until it's all fine.
+3. Mix the powder with the olive oil and set aside.
+
+### Soy caramelised onions (while the dough rises)
+
+1. Heat the vegetable oil in a medium-large frying pan over medium-high heat until hot. Fry the onions for 2–3 minutes.
+2. Turn the heat down to medium-low and keep frying until the onions are browned, caramelised and soft, about 20–25 minutes. Lower the heat if they start to burn.
+3. Add the soy sauce and sugar and cook for another 5 minutes. Taste and adjust. They keep in the fridge for about a week.
+
+### Bake
+
+1. While the dough rises, put oven racks in the highest and lowest positions and preheat the oven to 230°C (450°F / gas 8).
+2. Uncover the dough. With oiled hands and fingers spread wide, press your fingertips down through the dough to the bottom of the pan, dimpling the whole surface.
+3. For plain focaccia, drizzle with the 55 g (¼ cup) olive oil and sprinkle generously with flaky salt and rosemary. For the Sichuan version, drizzle the pepper oil over instead and dimple it into the dough.
+4. Bake on the lower rack until the corners pull away from the pan, 20–25 minutes.
+5. Move to the top rack and bake until the top is very well browned, about 5 minutes more. For the Sichuan version, spread the soy onions in an even layer over the top for these last 5 minutes.
+6. Cool in the pan for 10 minutes, then loosen the base and sides with a thin spatula and cool completely on a wire rack.
+
+## Notes
+
+- 2026-10-28: Added our Sichuan pepper oil and soy caramelised onion topping, one of our go-to alternatives to garlic, rosemary or chilli garlic.
