@@ -2923,6 +2923,139 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
+"title": "Katsu Curry",
+"cuisine": "Japanese",
+"category": "Chicken",
+"url": "japanese/chicken/katsu-curry.html",
+"text": "4 chicken thigh fillets or breasts (about 150 g each) 50 g (⅓ cup) plain flour ½ tsp salt ¼ tsp pepper 2 eggs, beaten 60 g (1 cup) panko breadcrumbs Neutral oil, for frying (2–3 cm deep in the pan) 100 g Golden Curry blocks (about half a 220 g box) 625 ml (2½ cups) boiling water: 250 ml (1 cup) to start, then 375 ml (1½ cups) ½ tsp MSG 2 potatoes and 1 carrot, peeled, cut into chunks and boiled until tender (optional) Steamed short-grain rice Grated cheese (optional)",
+"meta": "Serves 4 · Prep 20 min · Cook 30 min",
+"intro": "Crisp crumbed chicken on rice with a rich Japanese curry sauce made from Golden Curry blocks. The cutlets are made exactly as for Tonkatsu.",
+"photo": "",
+"tags": [
+"chicken"
+],
+"serves": 4,
+"ingredients": [
+{
+"t": "4 chicken thigh fillets or breasts (about 150 g each)",
+"n": "Chicken thighs",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bchicken thighs?\\b|\\bchicken\\b",
+"q": 4.0,
+"u": null
+},
+{
+"t": "50 g (⅓ cup) plain flour",
+"n": "Plain flour",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bflour\\b",
+"q": 50.0,
+"u": "g"
+},
+{
+"t": "½ tsp salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
+"t": "¼ tsp pepper",
+"n": "Pepper",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bpepper(corns)?\\b",
+"q": 0.25,
+"u": "tsp"
+},
+{
+"t": "2 eggs, beaten",
+"n": "Eggs",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\beggs?\\b",
+"q": 2.0,
+"u": null
+},
+{
+"t": "60 g (1 cup) panko breadcrumbs",
+"n": "Panko breadcrumbs",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bpanko\\b",
+"q": 60.0,
+"u": "g"
+},
+{
+"t": "Neutral oil, for frying (2–3 cm deep in the pan)",
+"n": "Neutral oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\boil\\b",
+"q": null,
+"u": null
+},
+{
+"t": "100 g Golden Curry blocks (about half a 220 g box)",
+"n": "Golden Curry blocks",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bgolden curry\\b|\\bcurry blocks?\\b|\\bcurry\\b|\\bblocks?\\b",
+"q": 100.0,
+"u": "g"
+},
+{
+"t": "625 ml (2½ cups) boiling water: 250 ml (1 cup) to start, then 375 ml (1½ cups)",
+"n": "Water",
+"a": "Pantry & sauces",
+"s": true,
+"p": "\\bwater\\b",
+"q": 625.0,
+"u": "ml"
+},
+{
+"t": "½ tsp MSG",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
+"t": "2 potatoes and 1 carrot, peeled, cut into chunks and boiled until tender (optional)",
+"n": "Potatoes",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bpotato(es)?\\b",
+"q": 2.0,
+"u": null
+},
+{
+"t": "Steamed short-grain rice",
+"n": "Rice",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\brice\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Grated cheese (optional)",
+"n": "Grated cheese",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bcheese\\b",
+"q": null,
+"u": null
+}
+]
+},
+{
 "title": "Tebasaki Wings",
 "cuisine": "Japanese",
 "category": "Chicken",
@@ -3132,6 +3265,122 @@ window.FIELD_KITCHEN_INDEX = [
 "p": "\\bmsg\\b",
 "q": 0.5,
 "u": "tsp"
+}
+]
+},
+{
+"title": "Tonkatsu",
+"cuisine": "Japanese",
+"category": "Pork",
+"url": "japanese/pork/tonkatsu.html",
+"text": "4 pork loin steaks (about 150 g each), or chicken thigh fillets or breasts 50 g (⅓ cup) plain flour ½ tsp salt ¼ tsp pepper 2 eggs, beaten 60 g (1 cup) panko breadcrumbs Neutral oil, for frying (2–3 cm deep in the pan) Steamed short-grain rice Japanese (karashi) or English mustard Pickled ginger Tonkatsu sauce",
+"meta": "Serves 4 · Prep 15 min · Cook 15 min",
+"intro": "Crumbed and fried pork (or chicken) cutlets, crisp outside and juicy inside, with rice, mustard, pickled ginger and tonkatsu sauce.",
+"photo": "",
+"tags": [
+"pork",
+"quick"
+],
+"serves": 4,
+"ingredients": [
+{
+"t": "4 pork loin steaks (about 150 g each), or chicken thigh fillets or breasts",
+"n": "Chicken thighs",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bchicken thighs?\\b|\\bchicken\\b",
+"q": 4.0,
+"u": null
+},
+{
+"t": "50 g (⅓ cup) plain flour",
+"n": "Plain flour",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bflour\\b",
+"q": 50.0,
+"u": "g"
+},
+{
+"t": "½ tsp salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
+"t": "¼ tsp pepper",
+"n": "Pepper",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bpepper(corns)?\\b",
+"q": 0.25,
+"u": "tsp"
+},
+{
+"t": "2 eggs, beaten",
+"n": "Eggs",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\beggs?\\b",
+"q": 2.0,
+"u": null
+},
+{
+"t": "60 g (1 cup) panko breadcrumbs",
+"n": "Panko breadcrumbs",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bpanko\\b",
+"q": 60.0,
+"u": "g"
+},
+{
+"t": "Neutral oil, for frying (2–3 cm deep in the pan)",
+"n": "Neutral oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\boil\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Steamed short-grain rice",
+"n": "Rice",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\brice\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Japanese (karashi) or English mustard",
+"n": "Japanese or English mustard",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bkarashi\\b|\\benglish mustard\\b|\\bjapanese mustard\\b|\\bmustard\\b|\\bmustard\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Pickled ginger",
+"n": "Pickled ginger",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bpickled ginger\\b|\\bginger\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Tonkatsu sauce",
+"n": "Tonkatsu sauce",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\btonkatsu sauce\\b|\\btonkatsu\\b",
+"q": null,
+"u": null
 }
 ]
 },

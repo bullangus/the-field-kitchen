@@ -40,8 +40,9 @@
 - **Pork:** [Porchetta](recipes/Italian/Pork/crispy-porchetta.md)
 
 ### Japanese
-- **Chicken:** [Chicken Nanban](recipes/Japanese/Chicken/chicken-nanban.md), [Karaage](recipes/Japanese/Chicken/karaage.md), [Tebasaki Wings](recipes/Japanese/Chicken/nagoya-chicken-wings.md)
+- **Chicken:** [Chicken Nanban](recipes/Japanese/Chicken/chicken-nanban.md), [Karaage](recipes/Japanese/Chicken/karaage.md), [Katsu Curry](recipes/Japanese/Chicken/katsu-curry.md), [Tebasaki Wings](recipes/Japanese/Chicken/nagoya-chicken-wings.md)
 - **Eggs:** [Ramen Eggs](recipes/Japanese/Eggs/ramen-egg.md)
+- **Pork:** [Tonkatsu](recipes/Japanese/Pork/tonkatsu.md)
 
 ### Mexican
 - **Beef:** [Carne Asada Tacos](recipes/Mexican/Beef/carne-asada-tacos.md), [Chilli Con Carne](recipes/Mexican/Beef/chilli-con-carne.md)
@@ -57,7 +58,7 @@
 - **Beef:** [Thai Beef Salad](recipes/Thai/Beef/thai-beef-salad.md)
 - **Chicken:** [Yellow Curry](recipes/Thai/Chicken/yellow-curry.md)
 
-_32 recipes._
+_34 recipes._
 <!-- CONTENTS:END -->
 
 ## How it's organised
