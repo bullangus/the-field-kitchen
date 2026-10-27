@@ -26,10 +26,13 @@
 ### Japanese
 - **Chicken:** [Chicken Nanban (Fried Chicken with Tartar Sauce)](recipes/Japanese/Chicken/chicken-nanban.md), [Karaage (Japanese Fried Chicken)](recipes/Japanese/Chicken/karaage.md)
 
+### South African
+- **Duck:** [Moh's Duck and Tamarind Curry](recipes/South African/Duck/mohs-duck-and-tamarind-curry.md)
+
 ### Spanish
 - **Chicken:** [Chicken & White Bean Stew](recipes/Spanish/Chicken/chicken-and-white-bean-stew.md)
 
-_12 recipes._
+_13 recipes._
 <!-- CONTENTS:END -->
 
 ## How it's organised

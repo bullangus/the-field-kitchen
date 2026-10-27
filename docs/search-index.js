@@ -77,6 +77,13 @@ window.FIELD_KITCHEN_INDEX = [
 "text": "680 g (1½ lb) boneless, skin-on chicken thighs (4–6 pieces) ½ tsp Diamond Crystal kosher salt (for table salt, use half the amount, or the same weight) ⅛ tsp freshly ground black pepper ½ tsp grated fresh ginger, with its juice 1 clove garlic ½–1 tbsp soy sauce ½ tbsp sake (or dry sherry or Chinese rice wine, or leave it out) ½ tsp toasted sesame oil 700–950 ml (3–4 cups) neutral oil 2 tbsp potato starch or cornflour (cornstarch), plus more if needed 2 tbsp plain (all-purpose) flour, plus more if needed Lemon wedges Japanese Kewpie mayonnaise Shichimi togarashi (Japanese seven spice)"
 },
 {
+"title": "Moh's Duck and Tamarind Curry",
+"cuisine": "South African",
+"category": "Duck",
+"url": "south-african/duck/mohs-duck-and-tamarind-curry.html",
+"text": "4 duck breasts 45 ml (3 tbsp) sunflower oil 30 g (80 ml / ⅓ cup) gram (chickpea) flour Salt White pepper 45 ml (3 tbsp) oil 2 tbsp coriander seeds 2 tbsp cumin seeds 2 tbsp sesame seeds 1 tsp black mustard seeds 2 large onions, chopped Handful of curry leaves 3 tbsp chilli flakes 1 tsp garam masala 85 g (1 cup) desiccated coconut 150 g (1 cup) cashew nuts 1 tsp turmeric 750 ml (3 cups) water 250 ml (1 cup) orange juice 1 tbsp brown sugar 45 ml (3 tbsp) tamarind paste Fresh coriander, to garnish"
+},
+{
 "title": "Chicken & White Bean Stew",
 "cuisine": "Spanish",
 "category": "Chicken",
