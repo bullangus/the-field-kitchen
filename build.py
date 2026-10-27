@@ -14,7 +14,9 @@ import html
 import json
 import re
 import shutil
+import subprocess
 import sys
+from datetime import date, datetime
 from pathlib import Path
 
 ROOT = Path(__file__).parent
@@ -27,6 +29,9 @@ STYLESHEET = "style.css"
 ICON = "icon.svg"
 SEARCH_SCRIPT = "search.js"
 SEARCH_INDEX = "search-index.js"
+HOME_SCRIPT = "home.js"
+RECENT_COUNT = 5
+NOTES_COUNT = 4
 TITLE = "The Field Kitchen"
 SUBTITLE = "Recipes from our family table"
 
@@ -117,6 +122,7 @@ def load():
         if path.name.startswith("_"):
             continue
         r = parse(path)
+        r["added"] = date_added(r)
         book.setdefault(r["cuisine"], {}).setdefault(r["category"], []).append(r)
     for cats in book.values():
         for recipes in cats.values():
@@ -179,7 +185,8 @@ def search_index(book):
         m = re.search(r"^## Ingredients\n(.*?)(?=^## )", r["body"], re.S | re.M)
         lines = re.findall(r"^- (.*)", m.group(1), re.M) if m else []
         entries.append({"title": r["title"], "cuisine": r["cuisine"], "category": r["category"],
-                        "url": r["url"], "text": " ".join(lines)})
+                        "url": r["url"], "text": " ".join(lines),
+                        "meta": html.unescape(meta_line(r)), "intro": intro(r)})
     return "window.FIELD_KITCHEN_INDEX = " + json.dumps(entries, ensure_ascii=False, indent=0) + ";\n"
 
 
@@ -246,22 +253,116 @@ def page(book, depth, page_title, content, current=None):
                     .replace("{{CONTENT}}", content))
 
 
+def intro(r):
+    """The recipe's opening paragraph, before ## Ingredients, as plain text."""
+    head = r["body"].split("\n## ", 1)[0].strip()
+    return re.sub(r"[*_]", "", " ".join(head.split()))
+
+
+def date_added(r):
+    # Timestamp of the commit that first added the file (full time, so recipes added
+    # the same day still sort newest first); uncommitted recipes count as added now.
+    try:
+        out = subprocess.run(["git", "log", "--diff-filter=A", "--format=%aI", "--", r["path"]],
+                             cwd=ROOT, capture_output=True, text=True, timeout=10).stdout.split()
+    except (OSError, subprocess.SubprocessError):
+        out = []
+    return out[-1] if out else datetime.now().astimezone().isoformat(timespec="seconds")
+
+
+def family_notes(book):
+    """Newest dated owner note ('- YYYY-MM-DD: ...') of each recipe, newest first."""
+    notes = []
+    for r in all_recipes(book):
+        section = r["body"].split("\n## Notes", 1)
+        found = re.findall(r"^- (\d{4}-\d{2}-\d{2}): (.+)$", section[1], re.M) if len(section) == 2 else []
+        if found:
+            # Later lines win on the same day, since notes are appended in order.
+            day, text = max(enumerate(found), key=lambda f: (f[1][0], f[0]))[1]
+            notes.append((day, r, text))
+    return sorted(notes, key=lambda n: (n[0], n[1]["added"]), reverse=True)
+
+
+def nice_date(iso):
+    d = date.fromisoformat(iso[:10])
+    return f"{d.day} {d.strftime('%b %Y')}"
+
+
 def home_html(book):
-    toc = toc_html(book, lambda x: cuisine_url(x) if isinstance(x, str) else x["url"])
+    recipes = all_recipes(book)
+    count, cuisines = len(recipes), len(book)
+    hat = icon_inline().replace("<svg ", '<svg class="hat" ', 1)
+
+    pick = recipes[0] if recipes else None
+    feature = ""
+    if pick:
+        feature = f"""
+  <section class="feature" aria-live="polite">
+    <p class="feature-label">Why not cook…</p>
+    <h2><a href="{pick['url']}">{html.escape(pick['title'])}</a></h2>
+    <p class="feature-where">{html.escape(pick['cuisine'])} · {html.escape(pick['category'])}</p>
+    <p class="meta">{meta_line(pick)}</p>
+    <p class="feature-intro">{html.escape(intro(pick))}</p>
+    <button type="button" class="feature-next" hidden>Pick another</button>
+  </section>"""
+
+    cards = []
+    for cuisine, cats in book.items():
+        n = sum(len(rs) for rs in cats.values())
+        groups = "".join(
+            f'<li><span>{html.escape(category)}</span>'
+            + "".join(f'<a href="{r["url"]}">{html.escape(r["title"])}</a>' for r in rs)
+            + "</li>"
+            for category, rs in cats.items()
+        )
+        cards.append(f"""
+    <article class="card">
+      <h3><a href="{cuisine_url(cuisine)}">{html.escape(cuisine)}</a></h3>
+      <p class="card-count">{n} recipe{'s' if n != 1 else ''}</p>
+      <ul>{groups}</ul>
+    </article>""")
+
+    added = sorted(recipes, key=lambda r: r["added"], reverse=True)[:RECENT_COUNT]
+    recent = "".join(
+        f'<li><a href="{r["url"]}">{html.escape(r["title"])}</a>'
+        f'<span>{html.escape(r["cuisine"])} · added {nice_date(r["added"])}</span></li>'
+        for r in added
+    )
+    notes = "".join(
+        f'<li><p>{inline(text)}</p><span><a href="{r["url"]}">{html.escape(r["title"])}</a>'
+        f' · {nice_date(day)}</span></li>'
+        for day, r, text in family_notes(book)[:NOTES_COUNT]
+    )
+    notes_html = f"""
+    <section class="home-list notes-list">
+      <h2>From our kitchen</h2>
+      <ul>{notes}</ul>
+    </section>""" if notes else ""
+
     content = f"""  <header class="cover home-cover">
+    {hat}
     <h1>{TITLE}</h1>
     <div class="ornament">· · ·</div>
     <p>{SUBTITLE}</p>
+    <p class="stats">{count} recipe{'s' if count != 1 else ''} from {cuisines} kitchen{'s' if cuisines != 1 else ''}</p>
   </header>
+{feature}
 
-  <nav class="contents" aria-label="Contents">
-    <h2>Contents</h2>
-    <ul>
-{toc}
-    </ul>
-  </nav>
+  <section class="cuisines" aria-label="Contents">
+    <h2 class="section-title">The Kitchens</h2>
+    <div class="card-grid">{"".join(cards)}
+    </div>
+  </section>
 
-  <p class="print-link">Want it on paper? <a href="{BOOK_PAGE}">Open the whole book</a>, then Print and Save as PDF.</p>"""
+  <div class="home-columns">
+    <section class="home-list">
+      <h2>Recently added</h2>
+      <ul>{recent}</ul>
+    </section>{notes_html}
+  </div>
+
+  <p class="print-link">Want it on paper? <a href="{BOOK_PAGE}">Open the whole book</a>, then Print and Save as PDF.</p>
+  <script src="{HOME_SCRIPT}" defer></script>"""
     return page(book, 0, TITLE, content)
 
 
@@ -330,7 +431,7 @@ def build_site(book):
             shutil.rmtree(p)
         else:
             p.unlink()
-    for asset in (STYLESHEET, ICON, SEARCH_SCRIPT):
+    for asset in (STYLESHEET, ICON, SEARCH_SCRIPT, HOME_SCRIPT):
         write(asset, (TEMPLATES / asset).read_text(encoding="utf-8"))
     write(SEARCH_INDEX, search_index(book))
     write("index.html", home_html(book))

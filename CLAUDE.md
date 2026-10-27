@@ -59,10 +59,13 @@ templates/style.css              all styling, screen and print (copied to docs/s
 templates/page.html              shell for website pages (home, cuisine, recipe)
 templates/icon.svg               chef's hat: favicon, and inlined in the nav bar
 templates/search.js              site search (copied to docs/); reads docs/search-index.js
+templates/home.js                home page "Pick another" recipe card; reads the same index
 templates/book.html              shell for the one-page printable book
 build.py                         generates everything in docs/ (standard library only)
 docs/                            GENERATED, wiped and rebuilt each run (.nojekyll kept):
-  index.html                       home: cover + contents linking to each recipe page
+  index.html                       home: cover, random "Why not cook…" pick (home.js), a card per
+                                   cuisine listing every recipe, recently added (git add date),
+                                   and the newest dated note per recipe ("From our kitchen")
   <cuisine>/index.html             one page per cuisine, recipes grouped by style
   <cuisine>/<style>/<recipe>.html  one page per recipe, with previous/next links
   book.html                        the whole book on one page, for printing

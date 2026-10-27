@@ -4,6 +4,7 @@
   --rule: #d9cfc3;
   --accent: #8a3b24;
   --paper: #fbf8f3;
+  --card: #fffdf9;
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -98,7 +99,56 @@ h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600
 .site-nav li a:hover, .site-nav li a[aria-current="page"] { color: var(--accent); }
 
 /* Home and cuisine pages */
-.cover.home-cover { min-height: 0; padding: 4.5rem 0 1rem; }
+.cover.home-cover { min-height: 0; padding: 3.5rem 0 1rem; }
+.home-cover .hat { width: 3.5rem; height: 3.5rem; color: var(--accent); margin: 0 auto 0.75rem; display: block; }
+.home-cover .stats {
+  font-style: normal; font-variant: small-caps; letter-spacing: 0.08em; color: var(--accent); margin-top: 1rem;
+}
+
+.feature {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+  padding: 1.5rem 1.5rem 1.25rem; margin: 2.5rem 0 1rem; text-align: center;
+}
+.feature-label { margin: 0; font-style: italic; color: var(--muted); }
+.feature h2 { font-size: 2rem; margin: 0.3rem 0 0.1rem; }
+.feature h2 a { text-decoration: none; }
+.feature-where { margin: 0; font-variant: small-caps; letter-spacing: 0.06em; color: var(--accent); }
+.feature .meta { margin: 0.25rem 0 0.75rem; }
+.feature-intro { margin: 0 auto 1rem; max-width: 34rem; }
+.feature-next {
+  font: inherit; font-size: 0.9rem; font-variant: small-caps; letter-spacing: 0.06em; cursor: pointer;
+  color: var(--accent); background: transparent; border: 1px solid var(--accent); border-radius: 999px;
+  padding: 0.3rem 1.1rem;
+}
+.feature-next:hover { background: var(--accent); color: var(--paper); }
+
+.section-title { text-align: center; font-size: 2.2rem; margin: 3rem 0 1.25rem; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 1rem; }
+.card {
+  background: var(--card); border: 1px solid var(--rule); border-top: 3px solid var(--accent);
+  border-radius: 4px; padding: 1rem 1.15rem 1.1rem;
+}
+.card h3 { font-size: 1.7rem; margin: 0; }
+.card h3 a { text-decoration: none; }
+.card-count { margin: 0 0 0.6rem; color: var(--muted); font-style: italic; font-size: 0.9rem; }
+.card ul { list-style: none; margin: 0; padding: 0; }
+.card li { margin: 0.5rem 0 0; }
+.card li span { display: block; font-variant: small-caps; letter-spacing: 0.06em; color: var(--accent); font-size: 0.9rem; }
+.card li a { display: block; text-decoration: none; border-bottom: 1px dotted var(--rule); width: fit-content; line-height: 1.45; margin: 0.1rem 0; }
+.card li a:hover { color: var(--accent); }
+
+.home-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 0 2rem; margin-top: 1rem; }
+.home-list h2 {
+  font-family: "Source Serif 4", Georgia, serif; font-size: 0.85rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent);
+  margin: 2.25rem 0 0.5rem; padding-bottom: 0.25rem; border-bottom: 1px solid var(--rule);
+}
+.home-list ul { list-style: none; margin: 0; padding: 0; }
+.home-list li { margin: 0.7rem 0; }
+.home-list li > a { text-decoration: none; font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.25rem; font-weight: 600; }
+.home-list li span { display: block; color: var(--muted); font-size: 0.85rem; font-style: italic; }
+.notes-list p { margin: 0; font-style: italic; }
+.notes-list li span a { text-decoration: none; font-style: normal; color: var(--ink); }
 .page-head { text-align: center; padding: 3rem 0 0.5rem; }
 .page-head h1 { font-size: clamp(2.4rem, 8vw, 3.5rem); margin: 0; }
 .style-group h2 {

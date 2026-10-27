@@ -26,67 +26,76 @@
 </nav>
 <main>
   <header class="cover home-cover">
+    <svg class="hat" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z"/><path d="M6 17h12"/></svg>
     <h1>The Field Kitchen</h1>
     <div class="ornament">· · ·</div>
     <p>Recipes from our family table</p>
+    <p class="stats">13 recipes from 7 kitchens</p>
   </header>
 
-  <nav class="contents" aria-label="Contents">
-    <h2>Contents</h2>
-    <ul>
-<li class="toc-cuisine"><a href="british/index.html">British</a><ul>
-<li class="toc-category"><span>Chicken</span><ul>
-<li><a href="british/chicken/classic-roast-chicken.html">Classic Roast Chicken</a></li>
-</ul></li>
-</ul></li>
-<li class="toc-cuisine"><a href="chinese/index.html">Chinese</a><ul>
-<li class="toc-category"><span>Beef</span><ul>
-<li><a href="chinese/beef/mongolian-beef.html">Mongolian Beef</a></li>
-</ul></li>
-<li class="toc-category"><span>Chicken</span><ul>
-<li><a href="chinese/chicken/salt-and-pepper-wings.html">Crispy Salt &amp; Pepper Wings</a></li>
-</ul></li>
-<li class="toc-category"><span>Noodles</span><ul>
-<li><a href="chinese/noodles/crispy-chilli-bacon-noodles.html">Crispy Chilli Bacon Noodles</a></li>
-</ul></li>
-</ul></li>
-<li class="toc-cuisine"><a href="indian/index.html">Indian</a><ul>
-<li class="toc-category"><span>Breads</span><ul>
-<li><a href="indian/breads/simple-naan.html">Simple Naan (No Yeast)</a></li>
-</ul></li>
-<li class="toc-category"><span>Sides</span><ul>
-<li><a href="indian/sides/raita.html">Raita</a></li>
-</ul></li>
-</ul></li>
-<li class="toc-cuisine"><a href="italian/index.html">Italian</a><ul>
-<li class="toc-category"><span>Pasta</span><ul>
-<li><a href="italian/pasta/fettuccine-alfredo.html">Fettuccine Alfredo</a></li>
-<li><a href="italian/pasta/lasagne.html">Lasagne</a></li>
-</ul></li>
-<li class="toc-category"><span>Pork</span><ul>
-<li><a href="italian/pork/crispy-porchetta.html">Crispy Porchetta</a></li>
-</ul></li>
-</ul></li>
-<li class="toc-cuisine"><a href="japanese/index.html">Japanese</a><ul>
-<li class="toc-category"><span>Chicken</span><ul>
-<li><a href="japanese/chicken/chicken-nanban.html">Chicken Nanban (Fried Chicken with Tartar Sauce)</a></li>
-<li><a href="japanese/chicken/karaage.html">Karaage (Japanese Fried Chicken)</a></li>
-</ul></li>
-</ul></li>
-<li class="toc-cuisine"><a href="south-african/index.html">South African</a><ul>
-<li class="toc-category"><span>Duck</span><ul>
-<li><a href="south-african/duck/mohs-duck-and-tamarind-curry.html">Moh&#x27;s Duck and Tamarind Curry</a></li>
-</ul></li>
-</ul></li>
-<li class="toc-cuisine"><a href="spanish/index.html">Spanish</a><ul>
-<li class="toc-category"><span>Chicken</span><ul>
-<li><a href="spanish/chicken/chicken-and-white-bean-stew.html">Chicken &amp; White Bean Stew</a></li>
-</ul></li>
-</ul></li>
-    </ul>
-  </nav>
+  <section class="feature" aria-live="polite">
+    <p class="feature-label">Why not cook…</p>
+    <h2><a href="british/chicken/classic-roast-chicken.html">Classic Roast Chicken</a></h2>
+    <p class="feature-where">British · Chicken</p>
+    <p class="meta">Serves 4 · Prep 20 min · Cook about 1 hr 15 min</p>
+    <p class="feature-intro">Lemon, garlic and thyme butter pushed under the skin, then trussed and roasted to temperature for crisp skin and juicy breast meat.</p>
+    <button type="button" class="feature-next" hidden>Pick another</button>
+  </section>
+
+  <section class="cuisines" aria-label="Contents">
+    <h2 class="section-title">The Kitchens</h2>
+    <div class="card-grid">
+    <article class="card">
+      <h3><a href="british/index.html">British</a></h3>
+      <p class="card-count">1 recipe</p>
+      <ul><li><span>Chicken</span><a href="british/chicken/classic-roast-chicken.html">Classic Roast Chicken</a></li></ul>
+    </article>
+    <article class="card">
+      <h3><a href="chinese/index.html">Chinese</a></h3>
+      <p class="card-count">3 recipes</p>
+      <ul><li><span>Beef</span><a href="chinese/beef/mongolian-beef.html">Mongolian Beef</a></li><li><span>Chicken</span><a href="chinese/chicken/salt-and-pepper-wings.html">Crispy Salt &amp; Pepper Wings</a></li><li><span>Noodles</span><a href="chinese/noodles/crispy-chilli-bacon-noodles.html">Crispy Chilli Bacon Noodles</a></li></ul>
+    </article>
+    <article class="card">
+      <h3><a href="indian/index.html">Indian</a></h3>
+      <p class="card-count">2 recipes</p>
+      <ul><li><span>Breads</span><a href="indian/breads/simple-naan.html">Simple Naan (No Yeast)</a></li><li><span>Sides</span><a href="indian/sides/raita.html">Raita</a></li></ul>
+    </article>
+    <article class="card">
+      <h3><a href="italian/index.html">Italian</a></h3>
+      <p class="card-count">3 recipes</p>
+      <ul><li><span>Pasta</span><a href="italian/pasta/fettuccine-alfredo.html">Fettuccine Alfredo</a><a href="italian/pasta/lasagne.html">Lasagne</a></li><li><span>Pork</span><a href="italian/pork/crispy-porchetta.html">Crispy Porchetta</a></li></ul>
+    </article>
+    <article class="card">
+      <h3><a href="japanese/index.html">Japanese</a></h3>
+      <p class="card-count">2 recipes</p>
+      <ul><li><span>Chicken</span><a href="japanese/chicken/chicken-nanban.html">Chicken Nanban (Fried Chicken with Tartar Sauce)</a><a href="japanese/chicken/karaage.html">Karaage (Japanese Fried Chicken)</a></li></ul>
+    </article>
+    <article class="card">
+      <h3><a href="south-african/index.html">South African</a></h3>
+      <p class="card-count">1 recipe</p>
+      <ul><li><span>Duck</span><a href="south-african/duck/mohs-duck-and-tamarind-curry.html">Moh&#x27;s Duck and Tamarind Curry</a></li></ul>
+    </article>
+    <article class="card">
+      <h3><a href="spanish/index.html">Spanish</a></h3>
+      <p class="card-count">1 recipe</p>
+      <ul><li><span>Chicken</span><a href="spanish/chicken/chicken-and-white-bean-stew.html">Chicken &amp; White Bean Stew</a></li></ul>
+    </article>
+    </div>
+  </section>
+
+  <div class="home-columns">
+    <section class="home-list">
+      <h2>Recently added</h2>
+      <ul><li><a href="south-african/duck/mohs-duck-and-tamarind-curry.html">Moh&#x27;s Duck and Tamarind Curry</a><span>South African · added 28 Oct 2026</span></li><li><a href="indian/breads/simple-naan.html">Simple Naan (No Yeast)</a><span>Indian · added 28 Oct 2026</span></li><li><a href="indian/sides/raita.html">Raita</a><span>Indian · added 28 Oct 2026</span></li><li><a href="italian/pasta/lasagne.html">Lasagne</a><span>Italian · added 28 Oct 2026</span></li><li><a href="british/chicken/classic-roast-chicken.html">Classic Roast Chicken</a><span>British · added 28 Oct 2026</span></li></ul>
+    </section>
+    <section class="home-list notes-list">
+      <h2>From our kitchen</h2>
+      <ul><li><p>Made the curry paste a separate first stage. We make it the day before, or at least before starting the duck. The book cooks the duck first.</p><span><a href="south-african/duck/mohs-duck-and-tamarind-curry.html">Moh&#x27;s Duck and Tamarind Curry</a> · 28 Oct 2026</span></li><li><p>We make these ahead, brush them with the garlic butter, wrap them in foil and reheat them in the oven just before serving.</p><span><a href="indian/breads/simple-naan.html">Simple Naan (No Yeast)</a> · 28 Oct 2026</span></li><li><p>Left out the coriander (½ small pack, chopped, in the original). We make it without.</p><span><a href="indian/sides/raita.html">Raita</a> · 28 Oct 2026</span></li><li><p>We usually skip the homemade pasta and use store-bought Latina fresh lasagne sheets, as the packet directs. The spinach pasta stays in as an option.</p><span><a href="italian/pasta/lasagne.html">Lasagne</a> · 28 Oct 2026</span></li></ul>
+    </section>
+  </div>
 
   <p class="print-link">Want it on paper? <a href="book.html">Open the whole book</a>, then Print and Save as PDF.</p>
+  <script src="home.js" defer></script>
 </main>
 </body>
 </html>
