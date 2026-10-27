@@ -58,14 +58,15 @@ templates/recipe.md              the recipe format to copy
 templates/style.css              all styling, screen and print (copied to docs/style.css)
 templates/page.html              shell for website pages (home, cuisine, recipe)
 templates/icon.svg               chef's hat: favicon, and inlined in the nav bar
-templates/search.js              site search (copied to docs/); reads docs/search-index.js
+templates/site.js                nav bar (menus, sticky shadow, "/" to search) and site search;
+                                 copied to docs/, reads docs/search-index.js
 templates/home.js                home page "Pick another" recipe card; reads the same index
 templates/book.html              shell for the one-page printable book
 build.py                         generates everything in docs/ (standard library only)
 docs/                            GENERATED, wiped and rebuilt each run (.nojekyll kept):
-  index.html                       home: cover, random "Why not cook…" pick (home.js), a card per
-                                   cuisine listing every recipe, recently added (git add date),
-                                   and the newest dated note per recipe ("From our kitchen")
+  index.html                       home (wide bento grid): title tile with counts, random "Why not
+                                   cook…" tile (home.js), recently added (git add date), newest
+                                   dated note per recipe as a quote, then a tinted card per cuisine
   <cuisine>/index.html             one page per cuisine, recipes grouped by style
   <cuisine>/<style>/<recipe>.html  one page per recipe, with previous/next links
   book.html                        the whole book on one page, for printing
@@ -73,7 +74,7 @@ docs/                            GENERATED, wiped and rebuilt each run (.nojekyl
 README.md                        contents list between the CONTENTS markers is GENERATED
 ```
 
-Every site page has a nav bar (home, each cuisine, "Print the book") and a search box that matches every word typed against titles, cuisines, styles and ingredients. Cuisines, styles and recipes are ordered alphabetically; previous/next follows that same order. In `book.html` each cuisine gets a divider page and in print every recipe starts on a new page; the nav and pager are hidden in print. Never hand-edit anything in `docs/` or the README contents block. Change the recipe files or the templates and rebuild.
+Every site page has a sticky nav bar (home, a Cuisines dropdown, Print; a menu panel on phones) and a search box ("/" focuses it) that matches every word typed against titles, cuisines, styles and ingredients. Cuisines, styles and recipes are ordered alphabetically; previous/next follows that same order. In `book.html` each cuisine gets a divider page and in print every recipe starts on a new page; the nav and pager are hidden in print. Never hand-edit anything in `docs/` or the README contents block. Change the recipe files or the templates and rebuild.
 
 ---
 

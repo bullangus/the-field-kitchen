@@ -11,90 +11,137 @@
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <script src="search-index.js" defer></script>
-<script src="search.js" defer></script>
+<script src="site.js" defer></script>
 </head>
 <body>
 <nav class="site-nav" aria-label="Site" data-root="">
   <div class="inner">
     <a class="home" href="index.html"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z"/><path d="M6 17h12"/></svg>The Field Kitchen</a>
-    <ul><li><a href="british/index.html">British</a></li><li><a href="chinese/index.html">Chinese</a></li><li><a href="indian/index.html">Indian</a></li><li><a href="italian/index.html">Italian</a></li><li><a href="japanese/index.html">Japanese</a></li><li><a href="south-african/index.html">South African</a></li><li><a href="spanish/index.html">Spanish</a></li><li><a href="book.html">Print the book</a></li></ul>
-    <form class="search" role="search">
-      <input type="search" placeholder="Search recipes or ingredients" aria-label="Search recipes" autocomplete="off">
-      <ul class="search-results" hidden></ul>
-    </form>
+    <button type="button" class="nav-button menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Menu"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <div class="menu" id="site-menu">
+      <div class="cuisine-menu">
+        <button type="button" class="nav-button cuisine-toggle" aria-expanded="false" aria-controls="cuisine-list">Cuisines<svg class="chevron" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+        <ul class="cuisine-list" id="cuisine-list"><li><a href="british/index.html">British<small>1</small></a></li><li><a href="chinese/index.html">Chinese<small>3</small></a></li><li><a href="indian/index.html">Indian<small>2</small></a></li><li><a href="italian/index.html">Italian<small>3</small></a></li><li><a href="japanese/index.html">Japanese<small>2</small></a></li><li><a href="south-african/index.html">South African<small>1</small></a></li><li><a href="spanish/index.html">Spanish<small>1</small></a></li></ul>
+      </div>
+      <a class="nav-button print" href="book.html"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6"/><rect x="6" y="14" width="12" height="7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/></svg>Print</a>
+      <form class="search" role="search">
+        <label class="search-field"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" placeholder="Search recipes" aria-label="Search recipes or ingredients" autocomplete="off"><kbd>/</kbd></label>
+        <ul class="search-results" hidden></ul>
+      </form>
+    </div>
   </div>
 </nav>
-<main>
-  <header class="cover home-cover">
-    <svg class="hat" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z"/><path d="M6 17h12"/></svg>
-    <h1>The Field Kitchen</h1>
-    <div class="ornament">· · ·</div>
-    <p>Recipes from our family table</p>
-    <p class="stats">13 recipes from 7 kitchens</p>
-  </header>
+<main class="home">
 
-  <section class="feature" aria-live="polite">
-    <p class="feature-label">Why not cook…</p>
-    <h2><a href="british/chicken/classic-roast-chicken.html">Classic Roast Chicken</a></h2>
-    <p class="feature-where">British · Chicken</p>
-    <p class="meta">Serves 4 · Prep 20 min · Cook about 1 hr 15 min</p>
-    <p class="feature-intro">Lemon, garlic and thyme butter pushed under the skin, then trussed and roasted to temperature for crisp skin and juicy breast meat.</p>
-    <button type="button" class="feature-next" hidden>Pick another</button>
-  </section>
-
-  <section class="cuisines" aria-label="Contents">
-    <h2 class="section-title">The Kitchens</h2>
-    <div class="card-grid">
-    <article class="card">
-      <h3><a href="british/index.html">British</a></h3>
-      <p class="card-count">1 recipe</p>
-      <ul><li><span>Chicken</span><a href="british/chicken/classic-roast-chicken.html">Classic Roast Chicken</a></li></ul>
-    </article>
-    <article class="card">
-      <h3><a href="chinese/index.html">Chinese</a></h3>
-      <p class="card-count">3 recipes</p>
-      <ul><li><span>Beef</span><a href="chinese/beef/mongolian-beef.html">Mongolian Beef</a></li><li><span>Chicken</span><a href="chinese/chicken/salt-and-pepper-wings.html">Crispy Salt &amp; Pepper Wings</a></li><li><span>Noodles</span><a href="chinese/noodles/crispy-chilli-bacon-noodles.html">Crispy Chilli Bacon Noodles</a></li></ul>
-    </article>
-    <article class="card">
-      <h3><a href="indian/index.html">Indian</a></h3>
-      <p class="card-count">2 recipes</p>
-      <ul><li><span>Breads</span><a href="indian/breads/simple-naan.html">Simple Naan (No Yeast)</a></li><li><span>Sides</span><a href="indian/sides/raita.html">Raita</a></li></ul>
-    </article>
-    <article class="card">
-      <h3><a href="italian/index.html">Italian</a></h3>
-      <p class="card-count">3 recipes</p>
-      <ul><li><span>Pasta</span><a href="italian/pasta/fettuccine-alfredo.html">Fettuccine Alfredo</a><a href="italian/pasta/lasagne.html">Lasagne</a></li><li><span>Pork</span><a href="italian/pork/crispy-porchetta.html">Crispy Porchetta</a></li></ul>
-    </article>
-    <article class="card">
-      <h3><a href="japanese/index.html">Japanese</a></h3>
-      <p class="card-count">2 recipes</p>
-      <ul><li><span>Chicken</span><a href="japanese/chicken/chicken-nanban.html">Chicken Nanban (Fried Chicken with Tartar Sauce)</a><a href="japanese/chicken/karaage.html">Karaage (Japanese Fried Chicken)</a></li></ul>
-    </article>
-    <article class="card">
-      <h3><a href="south-african/index.html">South African</a></h3>
-      <p class="card-count">1 recipe</p>
-      <ul><li><span>Duck</span><a href="south-african/duck/mohs-duck-and-tamarind-curry.html">Moh&#x27;s Duck and Tamarind Curry</a></li></ul>
-    </article>
-    <article class="card">
-      <h3><a href="spanish/index.html">Spanish</a></h3>
-      <p class="card-count">1 recipe</p>
-      <ul><li><span>Chicken</span><a href="spanish/chicken/chicken-and-white-bean-stew.html">Chicken &amp; White Bean Stew</a></li></ul>
-    </article>
-    </div>
-  </section>
-
-  <div class="home-columns">
-    <section class="home-list">
-      <h2>Recently added</h2>
-      <ul><li><a href="south-african/duck/mohs-duck-and-tamarind-curry.html">Moh&#x27;s Duck and Tamarind Curry</a><span>South African · added 28 Oct 2026</span></li><li><a href="indian/breads/simple-naan.html">Simple Naan (No Yeast)</a><span>Indian · added 28 Oct 2026</span></li><li><a href="indian/sides/raita.html">Raita</a><span>Indian · added 28 Oct 2026</span></li><li><a href="italian/pasta/lasagne.html">Lasagne</a><span>Italian · added 28 Oct 2026</span></li><li><a href="british/chicken/classic-roast-chicken.html">Classic Roast Chicken</a><span>British · added 28 Oct 2026</span></li></ul>
+  <div class="bento">
+    <header class="tile tile-hero reveal">
+      <svg class="hat" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z"/><path d="M6 17h12"/></svg>
+      <h1>The Field Kitchen</h1>
+      <p class="hero-sub">Recipes from our family table</p>
+      <ul class="stats">
+        <li><strong>13</strong> recipes</li>
+        <li><strong>7</strong> cuisines</li>
+        <li><strong>6</strong> kitchen notes</li>
+      </ul>
+      <div class="tile-actions">
+        <a class="pill pill-solid" href="#kitchens">Browse the kitchens</a>
+        <a class="pill pill-outline" href="book.html">Print the book</a>
+      </div>
+    </header>
+    <section class="tile tile-feature reveal" aria-live="polite">
+      <p class="eyebrow">Why not cook…</p>
+      <h2><a href="british/chicken/classic-roast-chicken.html">Classic Roast Chicken</a></h2>
+      <p class="feature-where">British · Chicken</p>
+      <p class="feature-meta">Serves 4 · Prep 20 min · Cook about 1 hr 15 min</p>
+      <p class="feature-intro">Lemon, garlic and thyme butter pushed under the skin, then trussed and roasted to temperature for crisp skin and juicy breast meat.</p>
+      <div class="tile-actions">
+        <a class="pill pill-light" href="british/chicken/classic-roast-chicken.html">Open recipe</a>
+        <button type="button" class="pill pill-ghost feature-next" hidden>Pick another</button>
+      </div>
     </section>
-    <section class="home-list notes-list">
-      <h2>From our kitchen</h2>
-      <ul><li><p>The paste is often too thick to blend, so we loosen it with some of the finishing water (usually about 500 ml / 2 cups) and add only what's left at the end. The total water stays at 750 ml.</p><span><a href="south-african/duck/mohs-duck-and-tamarind-curry.html">Moh&#x27;s Duck and Tamarind Curry</a> · 28 Oct 2026</span></li><li><p>We make these ahead, brush them with the garlic butter, wrap them in foil and reheat them in the oven just before serving.</p><span><a href="indian/breads/simple-naan.html">Simple Naan (No Yeast)</a> · 28 Oct 2026</span></li><li><p>Left out the coriander (½ small pack, chopped, in the original). We make it without.</p><span><a href="indian/sides/raita.html">Raita</a> · 28 Oct 2026</span></li><li><p>We usually skip the homemade pasta and use store-bought Latina fresh lasagne sheets, as the packet directs. The spinach pasta stays in as an option.</p><span><a href="italian/pasta/lasagne.html">Lasagne</a> · 28 Oct 2026</span></li></ul>
+    <section class="tile tile-recent reveal">
+      <p class="eyebrow">Recently added</p>
+      <ul><li><a href="south-african/duck/mohs-duck-and-tamarind-curry.html">Moh&#x27;s Duck and Tamarind Curry</a><span>South African · 28 Oct 2026</span></li><li><a href="indian/breads/simple-naan.html">Simple Naan (No Yeast)</a><span>Indian · 28 Oct 2026</span></li><li><a href="indian/sides/raita.html">Raita</a><span>Indian · 28 Oct 2026</span></li><li><a href="italian/pasta/lasagne.html">Lasagne</a><span>Italian · 28 Oct 2026</span></li><li><a href="british/chicken/classic-roast-chicken.html">Classic Roast Chicken</a><span>British · 28 Oct 2026</span></li></ul>
+    </section>
+    <section class="tile tile-note reveal">
+      <p class="eyebrow">From our kitchen</p>
+      <blockquote>The paste is often too thick to blend, so we loosen it with some of the finishing water (usually about 500 ml / 2 cups) and add only what's left at the end. The total water stays at 750 ml.</blockquote>
+      <p class="note-source"><a href="south-african/duck/mohs-duck-and-tamarind-curry.html">Moh&#x27;s Duck and Tamarind Curry</a> · 28 Oct 2026</p>
+      <ul class="note-more"><li><a href="indian/breads/simple-naan.html">Simple Naan (No Yeast)</a> <span>We make these ahead, brush them with the garlic butter, wrap them in foil and reheat them in the oven just before serving.</span></li><li><a href="indian/sides/raita.html">Raita</a> <span>Left out the coriander (½ small pack, chopped, in the original). We make it without.</span></li></ul>
     </section>
   </div>
 
-  <p class="print-link">Want it on paper? <a href="book.html">Open the whole book</a>, then Print and Save as PDF.</p>
+  <section class="kitchens" id="kitchens" aria-label="Contents">
+    <div class="section-head reveal">
+      <h2>The Kitchens</h2>
+      <p>13 recipes across 7 cuisines, every one cooked at our table.</p>
+    </div>
+    <div class="kitchen-grid">
+      <article class="kitchen tone-1 reveal">
+        <header>
+          <h3><a href="british/index.html">British</a></h3>
+          <span class="kitchen-count">1</span>
+        </header>
+        <div class="tags"><span class="tag">Chicken</span></div>
+        <ul><li><a href="british/chicken/classic-roast-chicken.html">Classic Roast Chicken</a><span>Prep 20 min · Cook about 1 hr 15 min</span></li></ul>
+        <a class="kitchen-more" href="british/index.html">All British recipes →</a>
+      </article>
+      <article class="kitchen tone-2 reveal">
+        <header>
+          <h3><a href="chinese/index.html">Chinese</a></h3>
+          <span class="kitchen-count">3</span>
+        </header>
+        <div class="tags"><span class="tag">Beef</span><span class="tag">Chicken</span><span class="tag">Noodles</span></div>
+        <ul><li><a href="chinese/beef/mongolian-beef.html">Mongolian Beef</a><span>Prep 15 min · Cook 15 min</span></li><li><a href="chinese/chicken/salt-and-pepper-wings.html">Crispy Salt &amp; Pepper Wings</a><span>Prep 10 min + at least 4 hr curing · Cook about 1 hr</span></li><li><a href="chinese/noodles/crispy-chilli-bacon-noodles.html">Crispy Chilli Bacon Noodles</a><span>Cook 15 min</span></li></ul>
+        <a class="kitchen-more" href="chinese/index.html">All Chinese recipes →</a>
+      </article>
+      <article class="kitchen tone-3 reveal">
+        <header>
+          <h3><a href="indian/index.html">Indian</a></h3>
+          <span class="kitchen-count">2</span>
+        </header>
+        <div class="tags"><span class="tag">Breads</span><span class="tag">Sides</span></div>
+        <ul><li><a href="indian/breads/simple-naan.html">Simple Naan (No Yeast)</a><span>Prep 10 min · Cook 10 min</span></li><li><a href="indian/sides/raita.html">Raita</a><span>Prep 10 min</span></li></ul>
+        <a class="kitchen-more" href="indian/index.html">All Indian recipes →</a>
+      </article>
+      <article class="kitchen tone-4 reveal">
+        <header>
+          <h3><a href="italian/index.html">Italian</a></h3>
+          <span class="kitchen-count">3</span>
+        </header>
+        <div class="tags"><span class="tag">Pasta</span><span class="tag">Pork</span></div>
+        <ul><li><a href="italian/pasta/fettuccine-alfredo.html">Fettuccine Alfredo</a><span>Prep 5 min · Cook 13 min</span></li><li><a href="italian/pasta/lasagne.html">Lasagne</a><span>Prep 2 hr · Cook 3 hr 45 min</span></li><li><a href="italian/pork/crispy-porchetta.html">Crispy Porchetta</a><span>Prep the day before (24–48 hr drying in the fridge) · Cook about 4 hr</span></li></ul>
+        <a class="kitchen-more" href="italian/index.html">All Italian recipes →</a>
+      </article>
+      <article class="kitchen tone-5 reveal">
+        <header>
+          <h3><a href="japanese/index.html">Japanese</a></h3>
+          <span class="kitchen-count">2</span>
+        </header>
+        <div class="tags"><span class="tag">Chicken</span></div>
+        <ul><li><a href="japanese/chicken/chicken-nanban.html">Chicken Nanban (Fried Chicken with Tartar Sauce)</a><span>Prep 20 min · Cook 15 min</span></li><li><a href="japanese/chicken/karaage.html">Karaage (Japanese Fried Chicken)</a><span>Prep 15 min + 30 min marinating · Cook 15 min</span></li></ul>
+        <a class="kitchen-more" href="japanese/index.html">All Japanese recipes →</a>
+      </article>
+      <article class="kitchen tone-6 reveal">
+        <header>
+          <h3><a href="south-african/index.html">South African</a></h3>
+          <span class="kitchen-count">1</span>
+        </header>
+        <div class="tags"><span class="tag">Duck</span></div>
+        <ul><li><a href="south-african/duck/mohs-duck-and-tamarind-curry.html">Moh&#x27;s Duck and Tamarind Curry</a><span>Serves 4</span></li></ul>
+        <a class="kitchen-more" href="south-african/index.html">All South African recipes →</a>
+      </article>
+      <article class="kitchen tone-1 reveal">
+        <header>
+          <h3><a href="spanish/index.html">Spanish</a></h3>
+          <span class="kitchen-count">1</span>
+        </header>
+        <div class="tags"><span class="tag">Chicken</span></div>
+        <ul><li><a href="spanish/chicken/chicken-and-white-bean-stew.html">Chicken &amp; White Bean Stew</a><span>Prep 5 min · Cook 15 min</span></li></ul>
+        <a class="kitchen-more" href="spanish/index.html">All Spanish recipes →</a>
+      </article>
+    </div>
+  </section>
   <script src="home.js" defer></script>
 </main>
 </body>

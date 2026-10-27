@@ -27,15 +27,24 @@ DOCS = ROOT / "docs"
 BOOK_PAGE = "book.html"
 STYLESHEET = "style.css"
 ICON = "icon.svg"
-SEARCH_SCRIPT = "search.js"
+SITE_SCRIPT = "site.js"
 SEARCH_INDEX = "search-index.js"
 HOME_SCRIPT = "home.js"
 RECENT_COUNT = 5
-NOTES_COUNT = 4
+NOTES_COUNT = 3
+TONES = 6  # colour tones for the cuisine cards, .tone-1 to .tone-6 in style.css
 TITLE = "The Field Kitchen"
 SUBTITLE = "Recipes from our family table"
 
 REQUIRED = ("title", "cuisine", "category", "serves")
+# Inner paths of the 24x24 stroke icons used in the nav bar.
+NAV_ICONS = {
+    "menu": '<path d="M4 7h16M4 12h16M4 17h16"/>',
+    "chevron": '<path d="m6 9 6 6 6-6"/>',
+    "search": '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',
+    "printer": ('<path d="M6 9V3h12v6"/><rect x="6" y="14" width="12" height="7"/>'
+                '<path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>'),
+}
 # docs/ is fully generated, but these must survive a rebuild.
 KEEP_IN_DOCS = {".nojekyll", "CNAME"}
 
@@ -190,21 +199,36 @@ def search_index(book):
     return "window.FIELD_KITCHEN_INDEX = " + json.dumps(entries, ensure_ascii=False, indent=0) + ";\n"
 
 
+def svg_icon(name, css=""):
+    cls = f' class="{css}"' if css else ""
+    return (f'<svg{cls} aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+            f'stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">{NAV_ICONS[name]}</svg>')
+
+
 def nav_html(book, root, current=None):
     links = []
-    for cuisine in book:
+    for cuisine, cats in book.items():
         here = ' aria-current="page"' if cuisine == current else ""
-        links.append(f'<li><a href="{root}{cuisine_url(cuisine)}"{here}>{html.escape(cuisine)}</a></li>')
-    here = ' aria-current="page"' if current == BOOK_PAGE else ""
-    links.append(f'<li><a href="{root}{BOOK_PAGE}"{here}>Print the book</a></li>')
+        n = sum(len(rs) for rs in cats.values())
+        links.append(f'<li><a href="{root}{cuisine_url(cuisine)}"{here}>{html.escape(cuisine)}'
+                     f'<small>{n}</small></a></li>')
+    in_cuisine = " current" if current in book else ""
+    print_here = ' aria-current="page"' if current == BOOK_PAGE else ""
     return f"""<nav class="site-nav" aria-label="Site" data-root="{root}">
   <div class="inner">
     <a class="home" href="{root}index.html">{icon_inline()}{TITLE}</a>
-    <ul>{"".join(links)}</ul>
-    <form class="search" role="search">
-      <input type="search" placeholder="Search recipes or ingredients" aria-label="Search recipes" autocomplete="off">
-      <ul class="search-results" hidden></ul>
-    </form>
+    <button type="button" class="nav-button menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Menu">{svg_icon("menu")}</button>
+    <div class="menu" id="site-menu">
+      <div class="cuisine-menu">
+        <button type="button" class="nav-button cuisine-toggle{in_cuisine}" aria-expanded="false" aria-controls="cuisine-list">Cuisines{svg_icon("chevron", "chevron")}</button>
+        <ul class="cuisine-list" id="cuisine-list">{"".join(links)}</ul>
+      </div>
+      <a class="nav-button print" href="{root}{BOOK_PAGE}"{print_here}>{svg_icon("printer")}Print</a>
+      <form class="search" role="search">
+        <label class="search-field">{svg_icon("search")}<input type="search" placeholder="Search recipes" aria-label="Search recipes or ingredients" autocomplete="off"><kbd>/</kbd></label>
+        <ul class="search-results" hidden></ul>
+      </form>
+    </div>
   </div>
 </nav>"""
 
@@ -244,12 +268,13 @@ def recipe_html(r, anchor=None, kicker=None, css="recipe"):
 </article>"""
 
 
-def page(book, depth, page_title, content, current=None):
+def page(book, depth, page_title, content, current=None, main_class=None):
     root = "../" * depth
     template = (TEMPLATES / "page.html").read_text(encoding="utf-8")
     return (template.replace("{{PAGE_TITLE}}", html.escape(page_title))
                     .replace("{{ROOT}}", root)
                     .replace("{{NAV}}", nav_html(book, root, current))
+                    .replace("{{MAIN_CLASS}}", f' class="{main_class}"' if main_class else "")
                     .replace("{{CONTENT}}", content))
 
 
@@ -291,79 +316,102 @@ def nice_date(iso):
 def home_html(book):
     recipes = all_recipes(book)
     count, cuisines = len(recipes), len(book)
+    notes = family_notes(book)
     hat = icon_inline().replace("<svg ", '<svg class="hat" ', 1)
+
+    def plural(n, word):
+        return f"{n} {word}{'' if n == 1 else 's'}"
 
     pick = recipes[0] if recipes else None
     feature = ""
     if pick:
         feature = f"""
-  <section class="feature" aria-live="polite">
-    <p class="feature-label">Why not cook…</p>
-    <h2><a href="{pick['url']}">{html.escape(pick['title'])}</a></h2>
-    <p class="feature-where">{html.escape(pick['cuisine'])} · {html.escape(pick['category'])}</p>
-    <p class="meta">{meta_line(pick)}</p>
-    <p class="feature-intro">{html.escape(intro(pick))}</p>
-    <button type="button" class="feature-next" hidden>Pick another</button>
-  </section>"""
-
-    cards = []
-    for cuisine, cats in book.items():
-        n = sum(len(rs) for rs in cats.values())
-        groups = "".join(
-            f'<li><span>{html.escape(category)}</span>'
-            + "".join(f'<a href="{r["url"]}">{html.escape(r["title"])}</a>' for r in rs)
-            + "</li>"
-            for category, rs in cats.items()
-        )
-        cards.append(f"""
-    <article class="card">
-      <h3><a href="{cuisine_url(cuisine)}">{html.escape(cuisine)}</a></h3>
-      <p class="card-count">{n} recipe{'s' if n != 1 else ''}</p>
-      <ul>{groups}</ul>
-    </article>""")
+    <section class="tile tile-feature reveal" aria-live="polite">
+      <p class="eyebrow">Why not cook…</p>
+      <h2><a href="{pick['url']}">{html.escape(pick['title'])}</a></h2>
+      <p class="feature-where">{html.escape(pick['cuisine'])} · {html.escape(pick['category'])}</p>
+      <p class="feature-meta">{meta_line(pick)}</p>
+      <p class="feature-intro">{html.escape(intro(pick))}</p>
+      <div class="tile-actions">
+        <a class="pill pill-light" href="{pick['url']}">Open recipe</a>
+        <button type="button" class="pill pill-ghost feature-next" hidden>Pick another</button>
+      </div>
+    </section>"""
 
     added = sorted(recipes, key=lambda r: r["added"], reverse=True)[:RECENT_COUNT]
     recent = "".join(
         f'<li><a href="{r["url"]}">{html.escape(r["title"])}</a>'
-        f'<span>{html.escape(r["cuisine"])} · added {nice_date(r["added"])}</span></li>'
+        f'<span>{html.escape(r["cuisine"])} · {nice_date(r["added"])}</span></li>'
         for r in added
     )
-    notes = "".join(
-        f'<li><p>{inline(text)}</p><span><a href="{r["url"]}">{html.escape(r["title"])}</a>'
-        f' · {nice_date(day)}</span></li>'
-        for day, r, text in family_notes(book)[:NOTES_COUNT]
-    )
-    notes_html = f"""
-    <section class="home-list notes-list">
-      <h2>From our kitchen</h2>
-      <ul>{notes}</ul>
-    </section>""" if notes else ""
 
-    content = f"""  <header class="cover home-cover">
-    {hat}
-    <h1>{TITLE}</h1>
-    <div class="ornament">· · ·</div>
-    <p>{SUBTITLE}</p>
-    <p class="stats">{count} recipe{'s' if count != 1 else ''} from {cuisines} kitchen{'s' if cuisines != 1 else ''}</p>
-  </header>
-{feature}
+    quote = ""
+    if notes:
+        day, r, text = notes[0]
+        more = "".join(
+            f'<li><a href="{nr["url"]}">{html.escape(nr["title"])}</a> <span>{inline(nt)}</span></li>'
+            for _, nr, nt in notes[1:NOTES_COUNT]
+        )
+        quote = f"""
+    <section class="tile tile-note reveal">
+      <p class="eyebrow">From our kitchen</p>
+      <blockquote>{inline(text)}</blockquote>
+      <p class="note-source"><a href="{r['url']}">{html.escape(r['title'])}</a> · {nice_date(day)}</p>
+      <ul class="note-more">{more}</ul>
+    </section>"""
 
-  <section class="cuisines" aria-label="Contents">
-    <h2 class="section-title">The Kitchens</h2>
-    <div class="card-grid">{"".join(cards)}
-    </div>
-  </section>
+    cards = []
+    for i, (cuisine, cats) in enumerate(book.items()):
+        n = sum(len(rs) for rs in cats.values())
+        tags = "".join(f'<span class="tag">{html.escape(c)}</span>' for c in cats)
+        items = "".join(
+            f'<li><a href="{r["url"]}">{html.escape(r["title"])}</a>'
+            f'<span>{html.escape(r.get("time") or "Serves " + r["serves"])}</span></li>'
+            for rs in cats.values() for r in rs
+        )
+        cards.append(f"""
+      <article class="kitchen tone-{i % TONES + 1} reveal">
+        <header>
+          <h3><a href="{cuisine_url(cuisine)}">{html.escape(cuisine)}</a></h3>
+          <span class="kitchen-count">{n}</span>
+        </header>
+        <div class="tags">{tags}</div>
+        <ul>{items}</ul>
+        <a class="kitchen-more" href="{cuisine_url(cuisine)}">All {html.escape(cuisine)} recipes →</a>
+      </article>""")
 
-  <div class="home-columns">
-    <section class="home-list">
-      <h2>Recently added</h2>
+    content = f"""
+  <div class="bento">
+    <header class="tile tile-hero reveal">
+      {hat}
+      <h1>{TITLE}</h1>
+      <p class="hero-sub">{SUBTITLE}</p>
+      <ul class="stats">
+        <li><strong>{count}</strong> {'recipe' if count == 1 else 'recipes'}</li>
+        <li><strong>{cuisines}</strong> {'cuisine' if cuisines == 1 else 'cuisines'}</li>
+        <li><strong>{len(notes)}</strong> {'kitchen note' if len(notes) == 1 else 'kitchen notes'}</li>
+      </ul>
+      <div class="tile-actions">
+        <a class="pill pill-solid" href="#kitchens">Browse the kitchens</a>
+        <a class="pill pill-outline" href="{BOOK_PAGE}">Print the book</a>
+      </div>
+    </header>{feature}
+    <section class="tile tile-recent reveal">
+      <p class="eyebrow">Recently added</p>
       <ul>{recent}</ul>
-    </section>{notes_html}
+    </section>{quote}
   </div>
 
-  <p class="print-link">Want it on paper? <a href="{BOOK_PAGE}">Open the whole book</a>, then Print and Save as PDF.</p>
+  <section class="kitchens" id="kitchens" aria-label="Contents">
+    <div class="section-head reveal">
+      <h2>The Kitchens</h2>
+      <p>{plural(count, 'recipe')} across {plural(cuisines, 'cuisine')}, every one cooked at our table.</p>
+    </div>
+    <div class="kitchen-grid">{"".join(cards)}
+    </div>
+  </section>
   <script src="{HOME_SCRIPT}" defer></script>"""
-    return page(book, 0, TITLE, content)
+    return page(book, 0, TITLE, content, main_class="home")
 
 
 def cuisine_html(book, cuisine):
@@ -431,7 +479,7 @@ def build_site(book):
             shutil.rmtree(p)
         else:
             p.unlink()
-    for asset in (STYLESHEET, ICON, SEARCH_SCRIPT, HOME_SCRIPT):
+    for asset in (STYLESHEET, ICON, SITE_SCRIPT, HOME_SCRIPT):
         write(asset, (TEMPLATES / asset).read_text(encoding="utf-8"))
     write(SEARCH_INDEX, search_index(book))
     write("index.html", home_html(book))
