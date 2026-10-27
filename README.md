@@ -7,13 +7,21 @@
 ## Contents
 
 <!-- CONTENTS:START -->
+### British
+- **Chicken:** [Classic Roast Chicken](recipes/British/Chicken/classic-roast-chicken.md)
+
 ### Chinese
 - **Beef:** [Mongolian Beef](recipes/Chinese/Beef/mongolian-beef.md)
 - **Chicken:** [Crispy Salt & Pepper Wings](recipes/Chinese/Chicken/salt-and-pepper-wings.md)
 - **Noodles:** [Crispy Chilli Bacon Noodles](recipes/Chinese/Noodles/crispy-chilli-bacon-noodles.md)
 
+### Indian
+- **Breads:** [Simple Naan (No Yeast)](recipes/Indian/Breads/simple-naan.md)
+- **Sides:** [Raita](recipes/Indian/Sides/raita.md)
+
 ### Italian
-- **Pasta:** [Fettuccine Alfredo](recipes/Italian/Pasta/fettuccine-alfredo.md)
+- **Pasta:** [Fettuccine Alfredo](recipes/Italian/Pasta/fettuccine-alfredo.md), [Lasagne](recipes/Italian/Pasta/lasagne.md)
+- **Pork:** [Crispy Porchetta](recipes/Italian/Pork/crispy-porchetta.md)
 
 ### Japanese
 - **Chicken:** [Chicken Nanban (Fried Chicken with Tartar Sauce)](recipes/Japanese/Chicken/chicken-nanban.md), [Karaage (Japanese Fried Chicken)](recipes/Japanese/Chicken/karaage.md)
@@ -21,7 +29,7 @@
 ### Spanish
 - **Chicken:** [Chicken & White Bean Stew](recipes/Spanish/Chicken/chicken-and-white-bean-stew.md)
 
-_7 recipes._
+_12 recipes._
 <!-- CONTENTS:END -->
 
 ## How it's organised
