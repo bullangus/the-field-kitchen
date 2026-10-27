@@ -2,10 +2,12 @@
 // every file in docs/, so the whole book is saved on first visit. Pages are
 // fetched fresh when online (so new recipes show up) and fall back to the saved
 // copy when offline; a new build changes VERSION and replaces the old copy.
-var VERSION = "2b876883b2b2";
+var VERSION = "3d6f39869f27";
 var CACHE = "field-kitchen-" + VERSION;
 var FILES = [
   "./",
+  "american/chicken/buffalo-chicken-wings.html",
+  "american/index.html",
   "australian/index.html",
   "australian/pork/maple-orange-glazed-ham.html",
   "australian/seafood/barbecued-whole-snapper.html",
@@ -16,6 +18,7 @@ var FILES = [
   "chinese/chicken/salt-and-pepper-wings.html",
   "chinese/index.html",
   "chinese/noodles/crispy-chilli-bacon-noodles.html",
+  "chinese/pork/dumpling-lasagna.html",
   "cook.html",
   "home.js",
   "icon-192.png",
@@ -34,11 +37,13 @@ var FILES = [
   "italian/pork/crispy-porchetta.html",
   "japanese/chicken/chicken-nanban.html",
   "japanese/chicken/karaage.html",
+  "japanese/chicken/nagoya-chicken-wings.html",
   "japanese/eggs/ramen-egg.html",
   "japanese/index.html",
   "list.html",
   "manifest.webmanifest",
   "mexican/beef/carne-asada-tacos.html",
+  "mexican/beef/chilli-con-carne.html",
   "mexican/index.html",
   "recipe.js",
   "search-index.js",

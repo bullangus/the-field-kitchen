@@ -1,5 +1,112 @@
 window.FIELD_KITCHEN_INDEX = [
 {
+"title": "Restaurant-Style Buffalo Chicken Wings",
+"cuisine": "American",
+"category": "Chicken",
+"url": "american/chicken/buffalo-chicken-wings.html",
+"text": "65 g (½ cup) plain (all-purpose) flour ¼ tsp ground paprika ¼ tsp cayenne pepper ¼ tsp salt 10 chicken wings About 480 ml (2 cups) vegetable oil, for frying 57 g (¼ cup) butter 60 ml (¼ cup) hot sauce 1 pinch ground black pepper 1 pinch garlic powder",
+"meta": "Serves 5 (10 wings) · Prep 10 min + 1–1½ hr chilling · Cook 15 min",
+"intro": "Floured, chilled and fried until crisp, then tossed in the classic butter and hot sauce mix.",
+"photo": "",
+"tags": [
+"chicken",
+"quick"
+],
+"serves": 5,
+"ingredients": [
+{
+"t": "65 g (½ cup) plain (all-purpose) flour",
+"n": "Plain flour",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bflour\\b",
+"q": 65.0,
+"u": "g"
+},
+{
+"t": "¼ tsp ground paprika",
+"n": "Paprika",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bpaprika\\b",
+"q": 0.25,
+"u": "tsp"
+},
+{
+"t": "¼ tsp cayenne pepper",
+"n": "Cayenne pepper",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bcayenne\\b",
+"q": 0.25,
+"u": "tsp"
+},
+{
+"t": "¼ tsp salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": 0.25,
+"u": "tsp"
+},
+{
+"t": "10 chicken wings",
+"n": "Chicken wings",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bchicken wings\\b|\\bchicken\\b",
+"q": 10.0,
+"u": null
+},
+{
+"t": "About 480 ml (2 cups) vegetable oil, for frying",
+"n": "Neutral oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\boil\\b",
+"q": null,
+"u": null
+},
+{
+"t": "57 g (¼ cup) butter",
+"n": "Butter",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bbutter\\b",
+"q": 57.0,
+"u": "g"
+},
+{
+"t": "60 ml (¼ cup) hot sauce",
+"n": "Hot sauce",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bsriracha\\b|\\bhot sauce\\b|\\bhot\\b",
+"q": 60.0,
+"u": "ml"
+},
+{
+"t": "1 pinch ground black pepper",
+"n": "Pepper",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bpepper(corns)?\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "1 pinch garlic powder",
+"n": "Garlic powder",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bgarlic powder\\b|\\bgarlic\\b",
+"q": 1.0,
+"u": null
+}
+]
+},
+{
 "title": "Maple & Caramelised Orange Glazed Ham",
 "cuisine": "Australian",
 "category": "Pork",
@@ -856,6 +963,166 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
+"title": "Dumpling Lasagna",
+"cuisine": "Chinese",
+"category": "Pork",
+"url": "chinese/pork/dumpling-lasagna.html",
+"text": "450 g (1 lb) pork mince 4 spring onions (scallions), thinly sliced, whites and greens 3 cloves garlic, grated 1 tbsp grated fresh ginger 45 ml (3 tbsp) soy sauce or tamari 1 tsp toasted sesame oil 1–2 tsp chilli crisp, to taste A splash of rice vinegar ¾ tsp white pepper (or black pepper) 45–60 ml (3–4 tbsp) chicken stock per ramekin Wonton or dumpling wrappers A small bowl of water, for dipping the wrappers Extra soy sauce or tamari Extra chilli crisp Extra spring onions Sesame seeds",
+"meta": "Serves 2–3 · Prep 10 min · Cook 25 min",
+"intro": "All the flavour of pork and spring onion dumplings with no folding: wonton wrappers and filling layered in ramekins and steamed until glossy and juicy.",
+"photo": "",
+"tags": [
+"pork"
+],
+"serves": 2,
+"ingredients": [
+{
+"t": "450 g (1 lb) pork mince",
+"n": "Pork mince",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bpork mince\\b|\\bpork\\b",
+"q": 450.0,
+"u": "g"
+},
+{
+"t": "4 spring onions (scallions), thinly sliced, whites and greens",
+"n": "Spring onions",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bspring onions?\\b|\\bgreen onions?\\b|\\bscallions?\\b",
+"q": 4.0,
+"u": null
+},
+{
+"t": "3 cloves garlic, grated",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 3.0,
+"u": "cloves"
+},
+{
+"t": "1 tbsp grated fresh ginger",
+"n": "Fresh ginger",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bginger\\b",
+"q": 3.0,
+"u": "tsp"
+},
+{
+"t": "45 ml (3 tbsp) soy sauce or tamari",
+"n": "Soy sauce",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bsoy sauce\\b|\\bsoy\\b",
+"q": 45.0,
+"u": "ml"
+},
+{
+"t": "1 tsp toasted sesame oil",
+"n": "Sesame oil",
+"a": "Oils & vinegars",
+"s": false,
+"p": "\\bsesame oil\\b",
+"q": 1.0,
+"u": "tsp"
+},
+{
+"t": "1–2 tsp chilli crisp, to taste",
+"n": "Chilli crisp",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bchilli crisp\\b|\\bchilli\\b",
+"q": 2.0,
+"u": "tsp"
+},
+{
+"t": "A splash of rice vinegar",
+"n": "Rice vinegar",
+"a": "Oils & vinegars",
+"s": false,
+"p": "\\brice vinegar\\b|\\bvinegar\\b",
+"q": null,
+"u": null
+},
+{
+"t": "¾ tsp white pepper (or black pepper)",
+"n": "Pepper",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bpepper(corns)?\\b",
+"q": 0.75,
+"u": "tsp"
+},
+{
+"t": "45–60 ml (3–4 tbsp) chicken stock per ramekin",
+"n": "Chicken stock",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bchicken stock\\b|\\bchicken\\b",
+"q": 60.0,
+"u": "ml"
+},
+{
+"t": "Wonton or dumpling wrappers",
+"n": "Wonton or dumpling wrappers",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bwonton\\b|\\bdumpling wrappers\\b|\\bwrappers\\b",
+"q": null,
+"u": null
+},
+{
+"t": "A small bowl of water, for dipping the wrappers",
+"n": "Water",
+"a": "Pantry & sauces",
+"s": true,
+"p": "\\bwater\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Extra soy sauce or tamari",
+"n": "Soy sauce",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bsoy sauce\\b|\\bsoy\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Extra chilli crisp",
+"n": "Chilli crisp",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bchilli crisp\\b|\\bchilli\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Extra spring onions",
+"n": "Spring onions",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bspring onions?\\b|\\bgreen onions?\\b|\\bscallions?\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Sesame seeds",
+"n": "Sesame seeds",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bsesame seeds\\b",
+"q": null,
+"u": null
+}
+]
+},
+{
 "title": "Simple Naan (No Yeast)",
 "cuisine": "Indian",
 "category": "Breads",
@@ -1114,7 +1381,7 @@ window.FIELD_KITCHEN_INDEX = [
 "n": "Tinned tomatoes",
 "a": "Pantry & sauces",
 "s": false,
-"p": "\\btomatoes\\b",
+"p": "\\btomato(es)?\\b",
 "q": 400.0,
 "u": "g"
 },
@@ -1970,6 +2237,121 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
+"title": "Nagoya-Style Fried Chicken Wings (Tebasaki)",
+"cuisine": "Japanese",
+"category": "Chicken",
+"url": "japanese/chicken/nagoya-chicken-wings.html",
+"text": "450 g (1 lb) chicken wings, flats and drumettes (this much sauce covers up to 900 g / 2 lb) 35 g (¼ cup) potato starch or cornflour (cornstarch) 700 ml (3 cups) neutral oil, for deep-frying Toasted white sesame seeds 240 ml (1 cup) mirin 120 ml (½ cup) soy sauce 45 ml (3 tbsp) sake 65 g (⅓ cup) sugar ¼ tsp Diamond Crystal kosher salt (for table salt, use half the amount, or the same weight) 1 knob fresh ginger (about 1.3 cm / ½ inch), sliced 2 cloves garlic, crushed or minced",
+"meta": "Serves 4 · Prep 20 min · Cook 30 min",
+"intro": "Double-fried wings glazed in a sticky, sweet soy, mirin and ginger sauce and finished with sesame seeds. The sauce keeps in the fridge for a month.",
+"photo": "",
+"tags": [
+"chicken"
+],
+"serves": 4,
+"ingredients": [
+{
+"t": "450 g (1 lb) chicken wings, flats and drumettes (this much sauce covers up to 900 g / 2 lb)",
+"n": "Chicken wings",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bchicken wings\\b|\\bchicken\\b",
+"q": 450.0,
+"u": "g"
+},
+{
+"t": "35 g (¼ cup) potato starch or cornflour (cornstarch)",
+"n": "Cornflour",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bcornflour\\b|\\bcornstarch\\b|\\bpotato starch\\b|\\bstarch\\b",
+"q": 35.0,
+"u": "g"
+},
+{
+"t": "700 ml (3 cups) neutral oil, for deep-frying",
+"n": "Neutral oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\boil\\b",
+"q": 700.0,
+"u": "ml"
+},
+{
+"t": "Toasted white sesame seeds",
+"n": "Sesame seeds",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bsesame seeds\\b",
+"q": null,
+"u": null
+},
+{
+"t": "240 ml (1 cup) mirin",
+"n": "Mirin",
+"a": "Wine & spirits",
+"s": false,
+"p": "\\bmirin\\b",
+"q": 240.0,
+"u": "ml"
+},
+{
+"t": "120 ml (½ cup) soy sauce",
+"n": "Soy sauce",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bsoy sauce\\b|\\bsoy\\b",
+"q": 120.0,
+"u": "ml"
+},
+{
+"t": "45 ml (3 tbsp) sake",
+"n": "Cooking sake",
+"a": "Wine & spirits",
+"s": false,
+"p": "\\bsake\\b",
+"q": 45.0,
+"u": "ml"
+},
+{
+"t": "65 g (⅓ cup) sugar",
+"n": "Sugar",
+"a": "Pantry & sauces",
+"s": true,
+"p": "\\bsugar\\b",
+"q": 65.0,
+"u": "g"
+},
+{
+"t": "¼ tsp Diamond Crystal kosher salt (for table salt, use half the amount, or the same weight)",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": 0.25,
+"u": "tsp"
+},
+{
+"t": "1 knob fresh ginger (about 1.3 cm / ½ inch), sliced",
+"n": "Fresh ginger",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bginger\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "2 cloves garlic, crushed or minced",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 2.0,
+"u": "cloves"
+}
+]
+},
+{
 "title": "Ramen Egg (Ajitsuke Tamago)",
 "cuisine": "Japanese",
 "category": "Eggs",
@@ -2292,6 +2674,193 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
+"title": "Chilli Con Carne",
+"cuisine": "Mexican",
+"category": "Beef",
+"url": "mexican/beef/chilli-con-carne.html",
+"text": "15 ml (1 tbsp) olive oil 3 garlic cloves, minced 1 onion (brown or white), diced 500 g (1 lb) beef mince 3 tbsp tomato paste 800 g (28 oz) can crushed tomatoes 420 g (14 oz) can red kidney beans, drained (or other beans) 2 beef stock cubes, crumbled 1½ tsp sugar 125–375 ml (½–1½ cups) water 1–2 tsp cayenne pepper, to taste 4 tsp paprika 5 tsp ground cumin 2 tsp garlic powder (or onion powder) 2 tsp onion powder 2 tsp dried oregano 1½ tsp cooking or kosher salt Rice, corn chips or tortillas Sour cream, yoghurt, grated cheese and coriander",
+"meta": "Serves 5–6 · Prep 10 min · Cook 30 min",
+"intro": "A rich, properly spiced beef and bean chilli from RecipeTin Eats. Quick enough for a weeknight, even better slow-cooked or the next day.",
+"photo": "",
+"tags": [
+"beef"
+],
+"serves": 5,
+"ingredients": [
+{
+"t": "15 ml (1 tbsp) olive oil",
+"n": "Olive oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\bolive oil\\b",
+"q": 15.0,
+"u": "ml"
+},
+{
+"t": "3 garlic cloves, minced",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 3.0,
+"u": null
+},
+{
+"t": "1 onion (brown or white), diced",
+"n": "Brown onions",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bonions?\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "500 g (1 lb) beef mince",
+"n": "Beef mince",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bbeef mince\\b|\\bbeef\\b",
+"q": 500.0,
+"u": "g"
+},
+{
+"t": "3 tbsp tomato paste",
+"n": "Tomato paste",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\btomato paste\\b",
+"q": 9.0,
+"u": "tsp"
+},
+{
+"t": "800 g (28 oz) can crushed tomatoes",
+"n": "Tinned tomatoes",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\btomato(es)?\\b",
+"q": 800.0,
+"u": "g"
+},
+{
+"t": "420 g (14 oz) can red kidney beans, drained (or other beans)",
+"n": "Red kidney beans",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bkidney beans\\b|\\bbeans\\b",
+"q": 420.0,
+"u": "g"
+},
+{
+"t": "2 beef stock cubes, crumbled",
+"n": "Beef stock cubes",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bstock cubes?\\b|\\bbouillon\\b|\\bcubes?\\b",
+"q": 2.0,
+"u": null
+},
+{
+"t": "1½ tsp sugar",
+"n": "Sugar",
+"a": "Pantry & sauces",
+"s": true,
+"p": "\\bsugar\\b",
+"q": 1.5,
+"u": "tsp"
+},
+{
+"t": "125–375 ml (½–1½ cups) water",
+"n": "Water",
+"a": "Pantry & sauces",
+"s": true,
+"p": "\\bwater\\b",
+"q": 375.0,
+"u": "ml"
+},
+{
+"t": "1–2 tsp cayenne pepper, to taste",
+"n": "Cayenne pepper",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bcayenne\\b",
+"q": 2.0,
+"u": "tsp"
+},
+{
+"t": "4 tsp paprika",
+"n": "Paprika",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bpaprika\\b",
+"q": 4.0,
+"u": "tsp"
+},
+{
+"t": "5 tsp ground cumin",
+"n": "Cumin",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bcumin\\b",
+"q": 5.0,
+"u": "tsp"
+},
+{
+"t": "2 tsp garlic powder (or onion powder)",
+"n": "Garlic powder",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bgarlic powder\\b|\\bgarlic\\b",
+"q": 2.0,
+"u": "tsp"
+},
+{
+"t": "2 tsp onion powder",
+"n": "Onion powder",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bonion powder\\b|\\bonion\\b",
+"q": 2.0,
+"u": "tsp"
+},
+{
+"t": "2 tsp dried oregano",
+"n": "Dried oregano",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\boregano\\b",
+"q": 2.0,
+"u": "tsp"
+},
+{
+"t": "1½ tsp cooking or kosher salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": 1.5,
+"u": "tsp"
+},
+{
+"t": "Rice, corn chips or tortillas",
+"n": "Corn chips",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bcorn chips\\b|\\bchips\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Sour cream, yoghurt, grated cheese and coriander",
+"n": "Sour cream",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bsour cream\\b|\\bsour\\b",
+"q": null,
+"u": null
+}
+]
+},
+{
 "title": "Moh's Duck and Tamarind Curry",
 "cuisine": "South African",
 "category": "Duck",
@@ -2607,7 +3176,7 @@ window.FIELD_KITCHEN_INDEX = [
 "n": "Tinned tomatoes",
 "a": "Pantry & sauces",
 "s": false,
-"p": "\\btomatoes\\b",
+"p": "\\btomato(es)?\\b",
 "q": 400.0,
 "u": "g"
 },

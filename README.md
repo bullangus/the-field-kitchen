@@ -7,6 +7,9 @@
 ## Contents
 
 <!-- CONTENTS:START -->
+### American
+- **Chicken:** [Restaurant-Style Buffalo Chicken Wings](recipes/American/Chicken/buffalo-chicken-wings.md)
+
 ### Australian
 - **Pork:** [Maple & Caramelised Orange Glazed Ham](recipes/Australian/Pork/maple-orange-glazed-ham.md)
 - **Seafood:** [Barbecued Whole Snapper with Lime & Chilli](recipes/Australian/Seafood/barbecued-whole-snapper.md)
@@ -18,6 +21,7 @@
 - **Beef:** [Mongolian Beef](recipes/Chinese/Beef/mongolian-beef.md)
 - **Chicken:** [Crispy Salt & Pepper Wings](recipes/Chinese/Chicken/salt-and-pepper-wings.md)
 - **Noodles:** [Crispy Chilli Bacon Noodles](recipes/Chinese/Noodles/crispy-chilli-bacon-noodles.md)
+- **Pork:** [Dumpling Lasagna](recipes/Chinese/Pork/dumpling-lasagna.md)
 
 ### Indian
 - **Breads:** [Simple Naan (No Yeast)](recipes/Indian/Breads/simple-naan.md)
@@ -29,11 +33,11 @@
 - **Pork:** [Crispy Porchetta](recipes/Italian/Pork/crispy-porchetta.md)
 
 ### Japanese
-- **Chicken:** [Chicken Nanban (Fried Chicken with Tartar Sauce)](recipes/Japanese/Chicken/chicken-nanban.md), [Karaage (Japanese Fried Chicken)](recipes/Japanese/Chicken/karaage.md)
+- **Chicken:** [Chicken Nanban (Fried Chicken with Tartar Sauce)](recipes/Japanese/Chicken/chicken-nanban.md), [Karaage (Japanese Fried Chicken)](recipes/Japanese/Chicken/karaage.md), [Nagoya-Style Fried Chicken Wings (Tebasaki)](recipes/Japanese/Chicken/nagoya-chicken-wings.md)
 - **Eggs:** [Ramen Egg (Ajitsuke Tamago)](recipes/Japanese/Eggs/ramen-egg.md)
 
 ### Mexican
-- **Beef:** [Carne Asada Tacos](recipes/Mexican/Beef/carne-asada-tacos.md)
+- **Beef:** [Carne Asada Tacos](recipes/Mexican/Beef/carne-asada-tacos.md), [Chilli Con Carne](recipes/Mexican/Beef/chilli-con-carne.md)
 
 ### South African
 - **Duck:** [Moh's Duck and Tamarind Curry](recipes/South African/Duck/mohs-duck-and-tamarind-curry.md)
@@ -41,7 +45,7 @@
 ### Spanish
 - **Chicken:** [Chicken & White Bean Stew](recipes/Spanish/Chicken/chicken-and-white-bean-stew.md)
 
-_20 recipes._
+_24 recipes._
 <!-- CONTENTS:END -->
 
 ## How it's organised
