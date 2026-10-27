@@ -81,7 +81,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "South African",
 "category": "Duck",
 "url": "south-african/duck/mohs-duck-and-tamarind-curry.html",
-"text": "4 duck breasts 45 ml (3 tbsp) sunflower oil 30 g (80 ml / ⅓ cup) gram (chickpea) flour Salt White pepper 45 ml (3 tbsp) oil 2 tbsp coriander seeds 2 tbsp cumin seeds 2 tbsp sesame seeds 1 tsp black mustard seeds 2 large onions, chopped Handful of curry leaves 3 tbsp chilli flakes 1 tsp garam masala 85 g (1 cup) desiccated coconut 150 g (1 cup) cashew nuts 1 tsp turmeric 750 ml (3 cups) water 250 ml (1 cup) orange juice 1 tbsp brown sugar 45 ml (3 tbsp) tamarind paste Fresh coriander, to garnish"
+"text": "45 ml (3 tbsp) oil 2 tbsp coriander seeds 2 tbsp cumin seeds 2 tbsp sesame seeds 1 tsp black mustard seeds 2 large onions, chopped Handful of curry leaves 3 tbsp chilli flakes 1 tsp garam masala 85 g (1 cup) desiccated coconut 150 g (1 cup) cashew nuts 1 tsp turmeric 4 duck breasts 45 ml (3 tbsp) sunflower oil 30 g (80 ml / ⅓ cup) gram (chickpea) flour Salt White pepper 750 ml (3 cups) water 250 ml (1 cup) orange juice 1 tbsp brown sugar 45 ml (3 tbsp) tamarind paste Fresh coriander, to garnish"
 },
 {
 "title": "Chicken & White Bean Stew",
