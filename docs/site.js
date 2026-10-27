@@ -258,7 +258,7 @@
     var chips = scope.querySelector(".chips");
     if (!chips) return;
     var buttons = [].slice.call(chips.querySelectorAll(".chip"));
-    var select = chips.querySelector(".chip-select");
+    var menu = chips.querySelector(".style-menu");
     var groups = [].slice.call(scope.querySelectorAll(".filter-group"));
     var empty = scope.querySelector(".filter-empty");
     chips.hidden = false;
@@ -268,20 +268,41 @@
     checkOverflow();
     window.addEventListener("resize", checkOverflow);
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(checkOverflow);
-    // One filter at a time: a chip clears the style dropdown, and the dropdown clears the chips.
-    if (select) {
-      select.addEventListener("change", function () {
-        if (!select.value) { buttons[0].click(); return; }
-        buttons.forEach(function (x) { x.setAttribute("aria-pressed", "false"); });
-        select.classList.add("active");
-        apply(select.value);
+    // One filter at a time: a chip clears the style menu, and the style menu clears the chips.
+    var toggle = menu && menu.querySelector(".style-toggle");
+    var options = menu ? [].slice.call(menu.querySelectorAll("[data-style]")) : [];
+    function setMenu(open) {
+      menu.classList.toggle("open", open);
+      toggle.setAttribute("aria-expanded", String(open));
+    }
+    function resetStyle() {
+      if (!menu) return;
+      toggle.firstChild.textContent = "Any style";
+      toggle.classList.remove("active");
+      options.forEach(function (o) { o.setAttribute("aria-selected", String(o.getAttribute("data-style") === "")); });
+    }
+    if (menu) {
+      toggle.addEventListener("click", function () { setMenu(!menu.classList.contains("open")); });
+      options.forEach(function (o) {
+        o.addEventListener("click", function () {
+          var style = o.getAttribute("data-style");
+          setMenu(false);
+          if (!style) { buttons[0].click(); return; }
+          buttons.forEach(function (x) { x.setAttribute("aria-pressed", "false"); });
+          options.forEach(function (x) { x.setAttribute("aria-selected", String(x === o)); });
+          toggle.firstChild.textContent = o.firstChild.textContent;
+          toggle.classList.add("active");
+          apply(style);
+        });
       });
+      document.addEventListener("click", function (e) { if (!menu.contains(e.target)) setMenu(false); });
+      document.addEventListener("keydown", function (e) { if (e.key === "Escape") setMenu(false); });
     }
     buttons.forEach(function (b) {
       b.addEventListener("click", function () {
         var tag = b.getAttribute("data-filter");
         buttons.forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
-        if (select) { select.value = ""; select.classList.remove("active"); }
+        resetStyle();
         apply(tag);
       });
     });

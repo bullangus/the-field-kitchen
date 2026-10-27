@@ -295,6 +295,15 @@ main.wide { max-width: 72rem; padding-top: 1.5rem; }
   transition: opacity 0.2s ease;
 }
 [data-tilt]:hover::after { opacity: 1; }
+/* In dark mode a white highlight reads as a grey smudge; glow in the card's own colour. */
+:root[data-theme="dark"] [data-tilt]::after {
+  background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), color-mix(in srgb, var(--tone-ink, var(--accent)) 16%, transparent), transparent 60%);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) [data-tilt]::after {
+    background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), color-mix(in srgb, var(--tone-ink, var(--accent)) 16%, transparent), transparent 60%);
+  }
+}
 
 /* Home page: wide bento grid of tiles, then a card per cuisine. */
 main.home { max-width: 72rem; padding-top: 1.5rem; }
@@ -404,12 +413,31 @@ main.home { max-width: 72rem; padding-top: 1.5rem; }
 }
 .chip-track::-webkit-scrollbar { display: none; }
 .chip-sep { flex: none; width: 1px; height: 1.4rem; background: var(--rule); margin: 0 0.15rem; }
-.chip-select {
-  flex: none; font: inherit; font-size: 0.85rem; color: var(--ink); cursor: pointer;
-  background: var(--card); border: 1px solid var(--rule); border-radius: 999px; padding: 0.3rem 0.8rem;
+.style-menu { position: relative; flex: none; }
+.style-toggle {
+  font: inherit; font-size: 0.85rem; color: var(--ink); cursor: pointer; white-space: nowrap;
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  background: var(--card); border: 1px solid var(--rule); border-radius: 999px; padding: 0.28rem 0.6rem 0.28rem 0.8rem;
 }
-.chip-select:hover { border-color: var(--accent); }
-.chip-select.active { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.style-toggle:hover, .style-menu.open .style-toggle { border-color: var(--accent); color: var(--accent); }
+.style-toggle.active { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.style-toggle .chevron { width: 0.9rem; height: 0.9rem; transition: transform 0.2s ease; }
+.style-menu.open .chevron { transform: rotate(180deg); }
+.style-list {
+  position: absolute; top: calc(100% + 0.5rem); right: 0; z-index: 15; min-width: 12rem; max-height: 60vh; overflow: auto;
+  list-style: none; margin: 0; padding: 0.4rem;
+  background: var(--paper); border: 1px solid var(--rule); border-radius: 12px; box-shadow: 0 12px 32px var(--shadow);
+  opacity: 0; visibility: hidden; transform: translateY(-4px); transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+}
+.style-menu.open .style-list { opacity: 1; visibility: visible; transform: none; }
+.style-list button {
+  width: 100%; display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+  font: inherit; font-size: 0.92rem; text-align: left; cursor: pointer; color: var(--ink);
+  background: transparent; border: 0; border-radius: 8px; padding: 0.45rem 0.75rem;
+}
+.style-list button:hover, .style-list button:focus-visible { background: var(--hover); color: var(--accent); outline: none; }
+.style-list button[aria-selected="true"] { color: var(--accent); font-weight: 600; }
+.style-list small { color: var(--muted); font-size: 0.78rem; font-weight: 400; }
 .chip {
   flex: none; font: inherit; font-size: 0.85rem; white-space: nowrap; cursor: pointer; color: var(--ink);
   background: var(--card); border: 1px solid var(--rule); border-radius: 999px; padding: 0.28rem 0.68rem;

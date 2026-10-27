@@ -564,8 +564,14 @@ def chips_html(recipes, with_styles=True):
     parts += [chip(k, l) for k, l in tag_chips]
     select = ""
     if styles:
-        options = "".join(f'<option value="{slug(s)}">{html.escape(s)} ({counts[slug(s)]})</option>' for s in styles)
-        select = f'<select class="chip-select" aria-label="Filter by style"><option value="">Any style</option>{options}</select>'
+        # A custom menu rather than a <select>, whose option list can't be styled.
+        options = '<li><button type="button" data-style="" aria-selected="true">Any style</button></li>' + "".join(
+            f'<li><button type="button" data-style="{slug(s)}" aria-selected="false">{html.escape(s)}'
+            f'<small>{counts[slug(s)]}</small></button></li>'
+            for s in styles)
+        select = (f'<div class="style-menu"><button type="button" class="style-toggle" aria-expanded="false" '
+                  f'aria-haspopup="listbox" aria-label="Filter by style"><span>Any style</span>{svg_icon("chevron", "chevron")}</button>'
+                  f'<ul class="style-list" role="listbox" aria-label="Styles">{options}</ul></div>')
     # One line: the chips scroll sideways if they don't fit; the style dropdown stays put.
     return (f'<div class="chips" role="group" aria-label="Filter recipes" hidden>'
             f'<div class="chip-track">{"".join(parts)}</div>{select}</div>'
