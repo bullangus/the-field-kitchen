@@ -57,9 +57,9 @@
 
 ### Thai
 - **Beef:** [Thai Beef Salad](recipes/Thai/Beef/thai-beef-salad.md)
-- **Chicken:** [Yellow Curry](recipes/Thai/Chicken/yellow-curry.md)
+- **Chicken:** [Satay Chicken](recipes/Thai/Chicken/satay-chicken.md), [Yellow Curry](recipes/Thai/Chicken/yellow-curry.md)
 
-_35 recipes._
+_36 recipes._
 <!-- CONTENTS:END -->
 
 ## How it's organised

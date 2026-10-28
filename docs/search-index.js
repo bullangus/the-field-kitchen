@@ -4635,6 +4635,86 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
+"title": "Satay Chicken",
+"cuisine": "Thai",
+"category": "Chicken",
+"url": "thai/chicken/satay-chicken.html",
+"text": "2 chicken thigh fillets, cut into strips 400 ml can coconut milk 95 g (6 tbsp) peanut butter 3–4 tbsp Thai red curry paste 5 ml (1 tsp) lime juice Salt, to taste Steamed rice, to serve Spicy",
+"meta": "Serves 2",
+"intro": "Strips of chicken thigh simmered in a quick peanut and red curry sauce. Serve with steamed rice.",
+"photo": "",
+"tags": [
+"chicken",
+"spicy"
+],
+"serves": 2,
+"ingredients": [
+{
+"t": "2 chicken thigh fillets, cut into strips",
+"n": "Chicken thighs",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bchicken thighs?\\b|\\bchicken\\b",
+"q": 2.0,
+"u": null
+},
+{
+"t": "400 ml can coconut milk",
+"n": "Coconut milk",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bcoconut milk\\b|\\bcoconut cream\\b|\\bmilk\\b|\\bcoconut\\b",
+"q": 400.0,
+"u": "ml"
+},
+{
+"t": "95 g (6 tbsp) peanut butter",
+"n": "Peanut butter",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bpeanut butter\\b|\\bbutter\\b",
+"q": 95.0,
+"u": "g"
+},
+{
+"t": "3–4 tbsp Thai red curry paste",
+"n": "Red curry paste",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bred curry paste\\b",
+"q": 12.0,
+"u": "tsp"
+},
+{
+"t": "5 ml (1 tsp) lime juice",
+"n": "Limes",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\blimes?\\b",
+"q": 5.0,
+"u": "ml"
+},
+{
+"t": "Salt, to taste",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Steamed rice, to serve",
+"n": "Rice",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\brice\\b",
+"q": null,
+"u": null
+}
+]
+},
+{
 "title": "Yellow Curry",
 "cuisine": "Thai",
 "category": "Chicken",
