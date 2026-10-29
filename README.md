@@ -15,6 +15,7 @@
 ### Australian
 - **Pork:** [Maple Orange Glazed Ham](recipes/Australian/Pork/maple-orange-glazed-ham.md)
 - **Seafood:** [Barbecued Snapper](recipes/Australian/Seafood/barbecued-whole-snapper.md)
+- **Sides:** [Nan's Christmas Pasta Salad](recipes/Australian/Sides/nans-christmas-pasta-salad.md)
 
 ### British
 - **Chicken:** [Roast Chicken](recipes/British/Chicken/classic-roast-chicken.md)
@@ -59,7 +60,7 @@
 - **Beef:** [Thai Beef Salad](recipes/Thai/Beef/thai-beef-salad.md)
 - **Chicken:** [Satay Chicken](recipes/Thai/Chicken/satay-chicken.md), [Yellow Curry](recipes/Thai/Chicken/yellow-curry.md)
 
-_36 recipes._
+_37 recipes._
 <!-- CONTENTS:END -->
 
 ## How it's organised

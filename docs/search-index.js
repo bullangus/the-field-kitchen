@@ -710,6 +710,50 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
+"title": "Nan's Christmas Pasta Salad",
+"cuisine": "Australian",
+"category": "Sides",
+"url": "australian/sides/nans-christmas-pasta-salad.html",
+"text": "500 g spiral pasta (fusilli), or any shape you like 2 cabana sticks 220 ml (⅔ of a 330 ml bottle) thousand island dressing Christmas",
+"meta": "Serves 4–6",
+"intro": "Nan's pasta salad with cabana and thousand island dressing, a side we have every Christmas. Serve it warm or cool.",
+"photo": "",
+"tags": [
+"sides",
+"christmas"
+],
+"serves": 4,
+"ingredients": [
+{
+"t": "500 g spiral pasta (fusilli), or any shape you like",
+"n": "Spiral pasta (fusilli)",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bfusilli\\b|\\bspiral pasta\\b|\\bpasta\\b",
+"q": 500.0,
+"u": "g"
+},
+{
+"t": "2 cabana sticks",
+"n": "Cabana",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bcabana\\b",
+"q": 2.0,
+"u": null
+},
+{
+"t": "220 ml (⅔ of a 330 ml bottle) thousand island dressing",
+"n": "Thousand island dressing",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bthousand island\\b|\\bisland\\b",
+"q": 220.0,
+"u": "ml"
+}
+]
+},
+{
 "title": "Roast Chicken",
 "cuisine": "British",
 "category": "Chicken",
