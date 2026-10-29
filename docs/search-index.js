@@ -714,9 +714,9 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Australian",
 "category": "Sides",
 "url": "australian/sides/nans-christmas-pasta-salad.html",
-"text": "500 g spiral pasta (fusilli), or any shape you like 2 cabana sticks 220 ml (⅔ of a 330 ml bottle) thousand island dressing Christmas",
+"text": "500 g spiral pasta (fusilli), or any shape you like 2 kabana sticks 220 ml (⅔ of a 330 ml bottle) thousand island dressing Christmas",
 "meta": "Serves 4–6",
-"intro": "Nan's pasta salad with cabana and thousand island dressing, a side we have every Christmas. Serve it warm or cool.",
+"intro": "Nan's pasta salad with kabana and thousand island dressing, a side we have every Christmas. Serve it warm or cool.",
 "photo": "",
 "tags": [
 "sides",
@@ -734,11 +734,11 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "g"
 },
 {
-"t": "2 cabana sticks",
-"n": "Cabana",
+"t": "2 kabana sticks",
+"n": "Kabana",
 "a": "Meat & seafood",
 "s": false,
-"p": "\\bcabana\\b",
+"p": "\\bkabana\\b",
 "q": 2.0,
 "u": null
 },

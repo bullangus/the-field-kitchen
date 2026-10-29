@@ -107,7 +107,7 @@ INGREDIENTS = [
     (r"\bleg ham\b|\bham\b", "Leg ham", MEAT, False),
     (r"\bguanciale\b", "Guanciale", MEAT, False),
     (r"\bbacon\b", "Streaky bacon", MEAT, False),
-    (r"\bcabana\b", "Cabana", MEAT, False),
+    (r"\bkabana\b", "Kabana", MEAT, False),
     (r"\bnduja\b", "'Nduja", MEAT, False),
     (r"\bpork mince\b", "Pork mince", MEAT, False),
     (r"\bbeef mince\b", "Beef mince", MEAT, False),
