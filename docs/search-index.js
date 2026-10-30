@@ -1165,6 +1165,50 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
+"title": "Baked Potato",
+"cuisine": "British",
+"category": "Potatoes",
+"url": "british/potatoes/baked-potato.html",
+"text": "4 large potatoes Olive oil spray Salt Vegetarian",
+"meta": "Serves 4 · Cook 1 hr 45–50 min",
+"intro": "Baked in foil until soft, then crisped with olive oil and salt. Quartered and loaded with whatever toppings you like.",
+"photo": "",
+"tags": [
+"potatoes",
+"vegetarian"
+],
+"serves": 4,
+"ingredients": [
+{
+"t": "4 large potatoes",
+"n": "Potatoes",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bpotato(es)?\\b",
+"q": 4.0,
+"u": null
+},
+{
+"t": "Olive oil spray",
+"n": "Olive oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\bolive oil\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": null,
+"u": null
+}
+]
+},
+{
 "title": "Duck Fat Potatoes",
 "cuisine": "British",
 "category": "Sides",
