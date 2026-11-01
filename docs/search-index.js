@@ -710,6 +710,113 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
+"title": "Honey Glazed Salmon",
+"cuisine": "Australian",
+"category": "Seafood",
+"url": "australian/seafood/honey-glazed-salmon.html",
+"text": "2 salmon fillets 16 g (2 tbsp) cornflour (cornstarch) Steamed rice and vegetables such as broccolini, to serve 75 ml (5 tbsp) honey 45 ml (3 tbsp) soy sauce 30 ml (2 tbsp) oyster sauce 15 ml (1 tbsp) sesame oil 4 cloves garlic, chopped 15 g fresh ginger, minced 1 red chilli (use more or less depending on how hot you like it)",
+"meta": "Serves 2 · Ready in 15 min",
+"intro": "Pan-fried salmon in a sticky honey, soy, garlic and ginger glaze. Serve with rice and greens.",
+"photo": "",
+"tags": [
+"seafood",
+"quick"
+],
+"serves": 2,
+"ingredients": [
+{
+"t": "2 salmon fillets",
+"n": "Salmon fillets",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bsalmon\\b",
+"q": 2.0,
+"u": null
+},
+{
+"t": "16 g (2 tbsp) cornflour (cornstarch)",
+"n": "Cornflour",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bcornflour\\b|\\bcornstarch\\b|\\bpotato starch\\b|\\bstarch\\b",
+"q": 16.0,
+"u": "g"
+},
+{
+"t": "Steamed rice and vegetables such as broccolini, to serve",
+"n": "Rice",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\brice\\b",
+"q": null,
+"u": null
+},
+{
+"t": "75 ml (5 tbsp) honey",
+"n": "Honey",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bhoney\\b",
+"q": 75.0,
+"u": "ml"
+},
+{
+"t": "45 ml (3 tbsp) soy sauce",
+"n": "Soy sauce",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bsoy sauce\\b|\\bsoy\\b",
+"q": 45.0,
+"u": "ml"
+},
+{
+"t": "30 ml (2 tbsp) oyster sauce",
+"n": "Oyster sauce",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\boyster sauce\\b",
+"q": 30.0,
+"u": "ml"
+},
+{
+"t": "15 ml (1 tbsp) sesame oil",
+"n": "Sesame oil",
+"a": "Oils & vinegars",
+"s": false,
+"p": "\\bsesame oil\\b",
+"q": 15.0,
+"u": "ml"
+},
+{
+"t": "4 cloves garlic, chopped",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 4.0,
+"u": "cloves"
+},
+{
+"t": "15 g fresh ginger, minced",
+"n": "Fresh ginger",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bginger\\b",
+"q": 15.0,
+"u": "g"
+},
+{
+"t": "1 red chilli (use more or less depending on how hot you like it)",
+"n": "Fresh red chillies",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bchillies\\b|\\bchilli\\b",
+"q": 1.0,
+"u": null
+}
+]
+},
+{
 "title": "Nan's Christmas Pasta Salad",
 "cuisine": "Australian",
 "category": "Sides",
