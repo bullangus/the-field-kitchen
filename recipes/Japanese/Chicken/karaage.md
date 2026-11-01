@@ -49,8 +49,23 @@ Marinated in ginger, garlic and soy, then fried twice for a light, crisp crust.
 8. First fry: add 3–5 pieces at a time without overcrowding the pot, since too many at once drops the oil temperature and the chicken absorbs too much oil. Fry for 90 seconds, or until light golden. Drain on a wire rack. If the chicken browns too quickly, the oil is too hot: add a few more pieces or lower the heat.
 9. The chicken keeps cooking in its own heat as it rests. Fry the remaining pieces, scooping out the crumbs with a fine-mesh sieve between batches to keep the oil clean.
 10. Second fry: raise the oil to 180°C (350°F). Return the rested chicken, 3–5 pieces at a time, and fry for 45 seconds, or until golden brown and crispy. Drain on the wire rack.
-11. Serve hot with lemon wedges and a dish of Kewpie mayonnaise, sprinkled with shichimi togarashi if you like.
+11. Serve hot with lemon wedges and a dish of Kewpie mayonnaise, sprinkled with shichimi togarashi if you like. Or serve it plain with a topping from the Topping Options.
+
+## Topping Options
+
+### Shio negi
+
+- 1 bunch spring onions (scallions), finely sliced
+- ½ tsp chicken bouillon powder
+- A drizzle of honey (or sugar)
+- 30 ml (2 tbsp) sesame oil
+- 2 cloves garlic, finely grated on a microplane
+- A splash of yuzu juice (or fresh lemon juice)
+
+1. Mix everything together cold.
+2. Pile it directly over the plain fried karaage.
 
 ## Notes
 
 - Once completely cool, keeps in an airtight container in the fridge for up to 3 days, or in the freezer for up to a month.
+- 2026-11-01: Added a shio negi topping option.

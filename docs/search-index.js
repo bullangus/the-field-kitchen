@@ -3025,7 +3025,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Japanese",
 "category": "Chicken",
 "url": "japanese/chicken/karaage.html",
-"text": "680 g (1½ lb) boneless, skin-on chicken thighs (4–6 pieces) ½ tsp table salt ⅛ tsp freshly ground black pepper ½ tsp grated fresh ginger, with its juice 1 clove garlic ½–1 tbsp soy sauce ½ tbsp sake (or dry sherry or Chinese rice wine, or leave it out) ½ tsp toasted sesame oil ½ tsp MSG 700–950 ml (3–4 cups) neutral oil 2 tbsp potato starch or cornflour (cornstarch), plus more if needed 2 tbsp plain (all-purpose) flour, plus more if needed Lemon wedges Japanese Kewpie mayonnaise Shichimi togarashi (Japanese seven spice) Party food",
+"text": "680 g (1½ lb) boneless, skin-on chicken thighs (4–6 pieces) ½ tsp table salt ⅛ tsp freshly ground black pepper ½ tsp grated fresh ginger, with its juice 1 clove garlic ½–1 tbsp soy sauce ½ tbsp sake (or dry sherry or Chinese rice wine, or leave it out) ½ tsp toasted sesame oil ½ tsp MSG 700–950 ml (3–4 cups) neutral oil 2 tbsp potato starch or cornflour (cornstarch), plus more if needed 2 tbsp plain (all-purpose) flour, plus more if needed Lemon wedges Japanese Kewpie mayonnaise Shichimi togarashi (Japanese seven spice) 1 bunch spring onions (scallions), finely sliced ½ tsp chicken bouillon powder A drizzle of honey (or sugar) 30 ml (2 tbsp) sesame oil 2 cloves garlic, finely grated on a microplane A splash of yuzu juice (or fresh lemon juice) Party food",
 "meta": "Serves 4 · Prep 15 min + 30 min marinating · Cook 15 min",
 "intro": "Marinated in ginger, garlic and soy, then fried twice for a light, crisp crust.",
 "photo": "",

@@ -24,6 +24,7 @@ INGREDIENTS = [
     (r"\bone topping\b|\bsee topping", None, None, True),
     (r"\bwater\b", "Water", PANTRY, True),
     # Stocks, sauces and pastes named after other ingredients go first.
+    (r"\bchicken bouillon\b|\bchicken stock powder\b", "Chicken stock powder", PANTRY, False),
     (r"\bchicken stock\b", "Chicken stock", PANTRY, False),
     (r"\bfish sauce\b", "Fish sauce", PANTRY, False),
     (r"\bsweet chilli sauce\b", "Sweet chilli sauce", PANTRY, False),
@@ -70,6 +71,8 @@ INGREDIENTS = [
     (r"\btamarind\b", "Tamarind paste", PANTRY, False),
     (r"\bworcestershire\b", "Worcestershire sauce", PANTRY, False),
     (r"\bchutney\b", "Mrs Ball's chutney", PANTRY, False),
+    (r"\bhoney\b", "Honey", PANTRY, False),
+    (r"\byuzu\b", "Yuzu juice", PANTRY, False),
     (r"\bmaple syrup\b", "Maple syrup", PANTRY, False),
     (r"\bmustard seeds\b", "Black mustard seeds", SPICES, False),
     (r"\bdijon\b|\bmustard\b", "Dijon mustard", PANTRY, False),
