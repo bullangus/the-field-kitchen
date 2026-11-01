@@ -12,8 +12,8 @@ Two-ingredient dough, cooked in a dry pan. Good with any curry, including Moh's 
 
 ## Ingredients
 
-- 260 g self-raising flour, plus extra for dusting
-- 200 g Greek yoghurt
+- 260 g (2 cups) self-raising flour, plus extra for dusting
+- 200 g (¾ cup) Greek yoghurt
 - 1 tsp fine sea salt
 - Butter, for serving
 - Fresh coriander, to sprinkle

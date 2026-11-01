@@ -2100,7 +2100,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Indian",
 "category": "Breads",
 "url": "indian/breads/simple-naan.html",
-"text": "260 g self-raising flour, plus extra for dusting 200 g Greek yoghurt 1 tsp fine sea salt Butter, for serving Fresh coriander, to sprinkle Vegetarian",
+"text": "260 g (2 cups) self-raising flour, plus extra for dusting 200 g (¾ cup) Greek yoghurt 1 tsp fine sea salt Butter, for serving Fresh coriander, to sprinkle Vegetarian",
 "meta": "Serves 6 naan · Prep 10 min · Cook 10 min",
 "intro": "Two-ingredient dough, cooked in a dry pan. Good with any curry, including Moh's Duck Curry.",
 "photo": "",
@@ -2112,7 +2112,7 @@ window.FIELD_KITCHEN_INDEX = [
 "serves": 6,
 "ingredients": [
 {
-"t": "260 g self-raising flour, plus extra for dusting",
+"t": "260 g (2 cups) self-raising flour, plus extra for dusting",
 "n": "Self-raising flour",
 "a": "Bread, pasta & rice",
 "s": false,
@@ -2121,7 +2121,7 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "g"
 },
 {
-"t": "200 g Greek yoghurt",
+"t": "200 g (¾ cup) Greek yoghurt",
 "n": "Greek yoghurt",
 "a": "Dairy & eggs",
 "s": false,
