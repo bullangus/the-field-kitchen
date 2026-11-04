@@ -28,8 +28,8 @@ Marinated in ginger, garlic and soy, then fried twice for a light, crisp crust.
 ### For deep-frying
 
 - 700–950 ml (3–4 cups) neutral oil
-- 2 tbsp potato starch or cornflour (cornstarch), plus more if needed
-- 2 tbsp plain (all-purpose) flour, plus more if needed
+- Potato starch or cornflour (cornstarch), enough to coat the chicken
+- Plain (all-purpose) flour, enough to coat the chicken
 
 ### For serving (optional)
 
@@ -48,7 +48,7 @@ Marinated in ginger, garlic and soy, then fried twice for a light, crisp crust.
 7. Check the oil has reached 160°C (325°F). Without a thermometer, dip a wooden chopstick in: it's hot enough when small bubbles appear around the tip.
 8. First fry: add 3–5 pieces at a time without overcrowding the pot, since too many at once drops the oil temperature and the chicken absorbs too much oil. Fry for 90 seconds, or until light golden. Drain on a wire rack. If the chicken browns too quickly, the oil is too hot: add a few more pieces or lower the heat.
 9. The chicken keeps cooking in its own heat as it rests. Fry the remaining pieces, scooping out the crumbs with a fine-mesh sieve between batches to keep the oil clean.
-10. Second fry: raise the oil to 180°C (350°F). Return the rested chicken, 3–5 pieces at a time, and fry for 45 seconds, or until golden brown and crispy. Drain on the wire rack.
+10. Second fry: raise the oil to 190°C (375°F); it drops back to about 180°C (350°F) once the chicken goes in. Return the rested chicken, 3–5 pieces at a time, and fry for 45 seconds, or until golden brown and crispy. Drain on the wire rack.
 11. Serve hot with lemon wedges and a dish of Kewpie mayonnaise, sprinkled with shichimi togarashi if you like. Or serve it plain with a topping from the Topping Options.
 
 ## Topping Options
@@ -69,3 +69,4 @@ Marinated in ginger, garlic and soy, then fried twice for a light, crisp crust.
 
 - Once completely cool, keeps in an airtight container in the fridge for up to 3 days, or in the freezer for up to a month.
 - 2026-11-01: Added a shio negi topping option.
+- 2026-11-04: Dropped the 2 tbsp amounts for the flour and potato starch because we need nearly double; use enough to coat the chicken. Raised the second fry to 190°C, since the oil drops back to about 180°C as the chicken fries.
