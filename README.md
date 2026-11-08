@@ -22,7 +22,7 @@
 - **Desserts:** [Trifle](recipes/British/Desserts/classic-trifle.md)
 - **Pork:** [Toad in the Hole](recipes/British/Pork/toad-in-the-hole.md)
 - **Potatoes:** [Baked Potato](recipes/British/Potatoes/baked-potato.md)
-- **Sides:** [Duck Fat Potatoes](recipes/British/Sides/duck-fat-potatoes.md)
+- **Sides:** [Duck Fat Potatoes](recipes/British/Sides/duck-fat-potatoes.md), [Gravy](recipes/British/Sides/gravy.md)
 
 ### Chinese
 - **Beef:** [Mongolian Beef](recipes/Chinese/Beef/mongolian-beef.md)
@@ -61,7 +61,7 @@
 - **Beef:** [Thai Beef Salad](recipes/Thai/Beef/thai-beef-salad.md)
 - **Chicken:** [Satay Chicken](recipes/Thai/Chicken/satay-chicken.md), [Yellow Curry](recipes/Thai/Chicken/yellow-curry.md)
 
-_39 recipes._
+_40 recipes._
 <!-- CONTENTS:END -->
 
 ## How it's organised

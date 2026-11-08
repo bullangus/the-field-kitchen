@@ -21,7 +21,7 @@ AISLES = (PRODUCE, HERBS, MEAT, DAIRY, GRAINS, PANTRY, SPICES, OILS, DRINKS, OTH
 
 INGREDIENTS = [
     # Skip: pointers rather than things to buy.
-    (r"\bone topping\b|\bsee topping", None, None, True),
+    (r"\bone topping\b|\bsee topping|\bpan juices\b", None, None, True),
     (r"\bwater\b", "Water", PANTRY, True),
     # Stocks, sauces and pastes named after other ingredients go first.
     (r"\bchicken bouillon\b|\bchicken stock powder\b", "Chicken stock powder", PANTRY, False),
@@ -44,6 +44,7 @@ INGREDIENTS = [
     (r"\bstrawberry jelly\b", "Aeroplane strawberry jelly", PANTRY, False),
     (r"\borange jelly\b", "Aeroplane orange jelly", PANTRY, False),
     (r"\bblancmange\b", "Strawberry blancmange", PANTRY, False),
+    (r"\bgravox\b|\bgravy mix\b", "Gravox Traditional Gravy Mix", PANTRY, False),
     (r"\bcustard\b", "Bird's custard powder", PANTRY, False),
     (r"\bmandarin", "Tinned mandarins", PANTRY, False),
     (r"\bflake\b", "Flake chocolate", PANTRY, False),
