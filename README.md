@@ -18,6 +18,7 @@
 - **Sides:** [Nan's Christmas Pasta Salad](recipes/Australian/Sides/nans-christmas-pasta-salad.md)
 
 ### British
+- **Beef:** [Cottage Pie](recipes/British/Beef/cottage-pie.md)
 - **Chicken:** [Roast Chicken](recipes/British/Chicken/classic-roast-chicken.md)
 - **Desserts:** [Trifle](recipes/British/Desserts/classic-trifle.md)
 - **Pork:** [Toad in the Hole](recipes/British/Pork/toad-in-the-hole.md)
@@ -61,7 +62,7 @@
 - **Beef:** [Thai Beef Salad](recipes/Thai/Beef/thai-beef-salad.md)
 - **Chicken:** [Satay Chicken](recipes/Thai/Chicken/satay-chicken.md), [Yellow Curry](recipes/Thai/Chicken/yellow-curry.md)
 
-_40 recipes._
+_41 recipes._
 <!-- CONTENTS:END -->
 
 ## How it's organised

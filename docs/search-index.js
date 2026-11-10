@@ -870,6 +870,184 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
+"title": "Cottage Pie",
+"cuisine": "British",
+"category": "Beef",
+"url": "british/beef/cottage-pie.html",
+"text": "4 washed potatoes, peeled and chopped Salt and pepper 56 g (¼ cup) butter, cut into chunks 30 ml (2 tbsp) milk or cream 15 ml (1 tbsp) olive oil 450 g (1 lb) beef mince 1 medium brown onion, diced 2 medium carrots, diced 2 cloves garlic, pressed or minced 1 tsp Italian seasoning 16 g (2 tbsp) plain (all-purpose) flour 30 ml (2 tbsp) tomato sauce (ketchup) or tomato paste 360 ml (1½ cups) chicken stock 5 ml (1 tsp) Worcestershire sauce 70 g (½ cup) frozen peas MSG, to taste A handful of grated mozzarella A handful of finely grated Parmesan",
+"meta": "Serves 4 · Prep 10 min · Cook 45 min",
+"intro": "Beef, carrot and pea filling under buttery mash, finished with a mozzarella and Parmesan top. Made and baked in one ovenproof pan.",
+"photo": "",
+"tags": [
+"beef"
+],
+"serves": 4,
+"ingredients": [
+{
+"t": "4 washed potatoes, peeled and chopped",
+"n": "Potatoes",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bpotato(es)?\\b",
+"q": 4.0,
+"u": null
+},
+{
+"t": "Salt and pepper",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": null,
+"u": null
+},
+{
+"t": "56 g (¼ cup) butter, cut into chunks",
+"n": "Butter",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bbutter\\b",
+"q": 56.0,
+"u": "g"
+},
+{
+"t": "30 ml (2 tbsp) milk or cream",
+"n": "Thickened cream",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bcream\\b",
+"q": 30.0,
+"u": "ml"
+},
+{
+"t": "15 ml (1 tbsp) olive oil",
+"n": "Olive oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\bolive oil\\b",
+"q": 15.0,
+"u": "ml"
+},
+{
+"t": "450 g (1 lb) beef mince",
+"n": "Beef mince",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bbeef mince\\b|\\bbeef\\b",
+"q": 450.0,
+"u": "g"
+},
+{
+"t": "1 medium brown onion, diced",
+"n": "Brown onions",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bonions?\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "2 medium carrots, diced",
+"n": "Carrots",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bcarrots?\\b",
+"q": 2.0,
+"u": null
+},
+{
+"t": "2 cloves garlic, pressed or minced",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 2.0,
+"u": "cloves"
+},
+{
+"t": "1 tsp Italian seasoning",
+"n": "Italian seasoning",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bitalian seasoning\\b|\\bseasoning\\b",
+"q": 1.0,
+"u": "tsp"
+},
+{
+"t": "16 g (2 tbsp) plain (all-purpose) flour",
+"n": "Plain flour",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bflour\\b",
+"q": 16.0,
+"u": "g"
+},
+{
+"t": "30 ml (2 tbsp) tomato sauce (ketchup) or tomato paste",
+"n": "Tomato sauce",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\btomato sauce\\b|\\bketchup\\b",
+"q": 30.0,
+"u": "ml"
+},
+{
+"t": "360 ml (1½ cups) chicken stock",
+"n": "Chicken stock",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bchicken stock\\b|\\bchicken\\b",
+"q": 360.0,
+"u": "ml"
+},
+{
+"t": "5 ml (1 tsp) Worcestershire sauce",
+"n": "Worcestershire sauce",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bworcestershire\\b",
+"q": 5.0,
+"u": "ml"
+},
+{
+"t": "70 g (½ cup) frozen peas",
+"n": "Frozen peas",
+"a": "Other",
+"s": false,
+"p": "",
+"q": 70.0,
+"u": "g"
+},
+{
+"t": "MSG, to taste",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": null,
+"u": null
+},
+{
+"t": "A handful of grated mozzarella",
+"n": "Mozzarella",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bmozzarella\\b",
+"q": null,
+"u": null
+},
+{
+"t": "A handful of finely grated Parmesan",
+"n": "Parmesan",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bparmesan\\b|\\bparmigiano\\b",
+"q": null,
+"u": null
+}
+]
+},
+{
 "title": "Roast Chicken",
 "cuisine": "British",
 "category": "Chicken",
