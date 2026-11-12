@@ -3840,6 +3840,114 @@ window.FIELD_KITCHEN_INDEX = [
 "options": []
 },
 {
+"title": "Shokupan",
+"cuisine": "Japanese",
+"category": "Breads",
+"url": "japanese/breads/shokupan.html",
+"text": "275 g water (see step 1 for its temperature) 22 g sugar 11 g honey 8 g instant yeast 385 g bread flour, plus about 2 tsp for dusting 8 g table salt 22 g skim milk powder 28 g unsalted butter, cut into small cubes ½ tsp neutral oil, for greasing the bowl 10 g unsalted butter, at room temperature, for greasing the loaf pan Vegetarian",
+"meta": "Serves 1 loaf (about 10 slices) · Prep 1 hr + 2 hr 30 min rising · Cook 30 min",
+"intro": "Japanese milk bread: soft, pillowy and faintly sweet. Baked in a lidded 1.5 kin shokupan loaf pan (20 × 12 × 12.5 cm) for a flat top, or without the lid for a rounded one. Use it for the Egg Sando.",
+"photo": "",
+"tags": [
+"breads",
+"vegetarian"
+],
+"serves": 1,
+"ingredients": [
+{
+"t": "275 g water (see step 1 for its temperature)",
+"n": "Water",
+"a": "Pantry & sauces",
+"s": true,
+"p": "\\bwater\\b",
+"q": 275.0,
+"u": "g"
+},
+{
+"t": "22 g sugar",
+"n": "Sugar",
+"a": "Pantry & sauces",
+"s": true,
+"p": "\\bsugar\\b",
+"q": 22.0,
+"u": "g"
+},
+{
+"t": "11 g honey",
+"n": "Honey",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bhoney\\b",
+"q": 11.0,
+"u": "g"
+},
+{
+"t": "8 g instant yeast",
+"n": "Dried yeast",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\byeast\\b",
+"q": 8.0,
+"u": "g"
+},
+{
+"t": "385 g bread flour, plus about 2 tsp for dusting",
+"n": "Bread flour",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bbread flour\\b",
+"q": 385.0,
+"u": "g"
+},
+{
+"t": "8 g table salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": 8.0,
+"u": "g"
+},
+{
+"t": "22 g skim milk powder",
+"n": "Skim milk powder",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmilk powder\\b|\\bmilk\\b",
+"q": 22.0,
+"u": "g"
+},
+{
+"t": "28 g unsalted butter, cut into small cubes",
+"n": "Butter",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bbutter\\b",
+"q": 28.0,
+"u": "g"
+},
+{
+"t": "½ tsp neutral oil, for greasing the bowl",
+"n": "Neutral oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\boil\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
+"t": "10 g unsalted butter, at room temperature, for greasing the loaf pan",
+"n": "Butter",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bbutter\\b",
+"q": 10.0,
+"u": "g"
+}
+],
+"options": []
+},
+{
 "title": "Chicken Nanban",
 "cuisine": "Japanese",
 "category": "Chicken",

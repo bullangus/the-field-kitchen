@@ -2,7 +2,7 @@
 // every file in docs/, so the whole book is saved on first visit. Pages are
 // fetched fresh when online (so new recipes show up) and fall back to the saved
 // copy when offline; a new build changes VERSION and replaces the old copy.
-var VERSION = "4e4f78180685";
+var VERSION = "42e000971141";
 var CACHE = "field-kitchen-" + VERSION;
 var FILES = [
   "./",
@@ -56,6 +56,7 @@ var FILES = [
   "italian/pasta/marry-me-chicken-risoni.html",
   "italian/pasta/nduja-pasta.html",
   "italian/pork/crispy-porchetta.html",
+  "japanese/breads/shokupan.html",
   "japanese/chicken/chicken-nanban.html",
   "japanese/chicken/karaage.html",
   "japanese/chicken/katsu-curry.html",
