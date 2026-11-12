@@ -8,7 +8,7 @@ time: Prep 10 min · Cook 10 min
 source: https://cooksimply.co.uk/simple-naan-bread-recipe-no-yeast/
 ---
 
-Warm, blistered naan straight from the pan, brushed with butter and torn at the table. The dough is just two ingredients and cooks in a dry pan, so it's easy enough for any curry night, including Moh's Duck Curry.
+Warm, blistered naan straight from the pan, brushed with butter and torn at the table. The dough is just two ingredients and cooks in a dry pan, so it's easy enough for any curry night, including Yvette's Duck Curry.
 
 ## Ingredients
 

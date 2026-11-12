@@ -1,13 +1,13 @@
 ---
-title: Moh's Duck Curry
+title: Yvette's Duck Curry
 cuisine: South African
 category: Duck
 tags: Spicy
 serves: 4
-source: Mohammed Khalid Moola, from a cookbook (p. 43)
+source: Family recipe, from Yvette
 ---
 
-A very special recipe, given to me by my aunt. It's a modern Durban duck curry from Mohammed Khalid Moola of Ladysmith, with a nod to France in the orange sauce and his mother's touch of tamarind, and it's the curry we save for the meals that matter. Make the curry paste the day before, or at least before you start the duck.
+A very special recipe from my aunt Yvette. A Durban duck curry with a nod to France in its orange sauce and a sour touch of tamarind, it's the curry we save for the meals that matter. Make the curry paste the day before, or at least before you start the duck.
 
 ## Ingredients
 

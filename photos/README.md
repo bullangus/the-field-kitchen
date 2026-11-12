@@ -5,7 +5,7 @@ Drop a photo in this folder named exactly like the recipe's file, and the next `
 | Recipe file | Photo |
 |---|---|
 | `recipes/Italian/Pasta/lasagne.md` | `photos/lasagne.jpg` |
-| `recipes/South African/Duck/mohs-duck-and-tamarind-curry.md` | `photos/mohs-duck-and-tamarind-curry.jpg` |
+| `recipes/South African/Duck/yvettes-duck-curry.md` | `photos/yvettes-duck-curry.jpg` |
 
 - Formats: `.jpg`, `.jpeg`, `.png` or `.webp`. One photo per recipe.
 - Landscape works best. Pages crop to 3:2 and the home page tile to 16:9, from the centre.

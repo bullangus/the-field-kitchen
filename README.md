@@ -54,7 +54,7 @@
 - **Beef:** [Carne Asada Tacos](recipes/Mexican/Beef/carne-asada-tacos.md), [Chilli Con Carne](recipes/Mexican/Beef/chilli-con-carne.md)
 
 ### South African
-- **Duck:** [Moh's Duck Curry](recipes/South African/Duck/mohs-duck-and-tamarind-curry.md)
+- **Duck:** [Yvette's Duck Curry](recipes/South African/Duck/yvettes-duck-curry.md)
 - **Sides:** [Onion & Tomato Relish](recipes/South African/Sides/chunky-onion-and-tomato-relish.md)
 
 ### Spanish

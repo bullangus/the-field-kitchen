@@ -8,7 +8,7 @@ time: Prep 10 min
 source: https://www.bbcgoodfood.com/recipes/raita
 ---
 
-The cool, fresh counterpoint every curry needs. Yoghurt, cucumber and mint, with ginger and a little garam masala for warmth. We always serve it with Moh's Duck Curry.
+The cool, fresh counterpoint every curry needs. Yoghurt, cucumber and mint, with ginger and a little garam masala for warmth. We always serve it with Yvette's Duck Curry.
 
 ## Ingredients
 

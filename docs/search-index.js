@@ -2757,7 +2757,7 @@ window.FIELD_KITCHEN_INDEX = [
 "url": "indian/breads/simple-naan.html",
 "text": "260 g (2 cups) self-raising flour, plus extra for dusting 200 g (¾ cup) Greek yoghurt 1 tsp fine sea salt Butter, for serving Fresh coriander, to sprinkle Vegetarian",
 "meta": "Serves 6 naan · Prep 10 min · Cook 10 min",
-"intro": "Warm, blistered naan straight from the pan, brushed with butter and torn at the table. The dough is just two ingredients and cooks in a dry pan, so it's easy enough for any curry night, including Moh's Duck Curry.",
+"intro": "Warm, blistered naan straight from the pan, brushed with butter and torn at the table. The dough is just two ingredients and cooks in a dry pan, so it's easy enough for any curry night, including Yvette's Duck Curry.",
 "photo": "",
 "tags": [
 "breads",
@@ -2821,7 +2821,7 @@ window.FIELD_KITCHEN_INDEX = [
 "url": "indian/sides/raita.html",
 "text": "250 g (1 cup) Greek yoghurt 1 garlic clove Thumb-sized piece ginger, finely grated ¼ small pack (UK size) mint, leaves chopped Juice of ½ lime ½ tsp garam masala, plus a little extra to serve ¼ cucumber, grated and lightly squeezed Vegetarian",
 "meta": "Serves 6–8 · Prep 10 min",
-"intro": "The cool, fresh counterpoint every curry needs. Yoghurt, cucumber and mint, with ginger and a little garam masala for warmth. We always serve it with Moh's Duck Curry.",
+"intro": "The cool, fresh counterpoint every curry needs. Yoghurt, cucumber and mint, with ginger and a little garam masala for warmth. We always serve it with Yvette's Duck Curry.",
 "photo": "",
 "tags": [
 "sides",
@@ -5458,13 +5458,13 @@ window.FIELD_KITCHEN_INDEX = [
 "options": []
 },
 {
-"title": "Moh's Duck Curry",
+"title": "Yvette's Duck Curry",
 "cuisine": "South African",
 "category": "Duck",
-"url": "south-african/duck/mohs-duck-and-tamarind-curry.html",
+"url": "south-african/duck/yvettes-duck-curry.html",
 "text": "45 ml (3 tbsp) oil 2 tbsp coriander seeds 2 tbsp cumin seeds 2 tbsp sesame seeds 1 tsp black mustard seeds 2 large onions, chopped Handful of curry leaves 3 tbsp chilli flakes 1 tsp garam masala 85 g (1 cup) desiccated coconut 150 g (1 cup) cashew nuts 1 tsp turmeric 4 duck breasts 45 ml (3 tbsp) sunflower oil 30 g (80 ml / ⅓ cup) gram (chickpea) flour Salt White pepper 750 ml (3 cups) water 250 ml (1 cup) orange juice 1 tbsp brown sugar 45 ml (3 tbsp) tamarind paste ½ tsp MSG Fresh coriander, to garnish Spicy",
 "meta": "Serves 4",
-"intro": "A very special recipe, given to me by my aunt. It's a modern Durban duck curry from Mohammed Khalid Moola of Ladysmith, with a nod to France in the orange sauce and his mother's touch of tamarind, and it's the curry we save for the meals that matter. Make the curry paste the day before, or at least before you start the duck.",
+"intro": "A very special recipe from my aunt Yvette. A Durban duck curry with a nod to France in its orange sauce and a sour touch of tamarind, it's the curry we save for the meals that matter. Make the curry paste the day before, or at least before you start the duck.",
 "photo": "",
 "tags": [
 "duck",
