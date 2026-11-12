@@ -10,7 +10,7 @@ source: https://www.thecookingworld.com/recipes/claire-saffitz-focaccia-recipe
 
 Much loved and made more times than we can count, this is the bread that turns any meal into an occasion. Claire Saffitz's very wet, well-kneaded dough bakes in a half-sheet pan into a tall, airy crumb with a crisp, olive-oil base that's golden and dimpled on top. Pick a topping from the options after the method.
 
-It's a bread that rewards patience, with a long rise and plenty of stretching and folding, but every time it comes out of the oven, golden and crisp at the edges, it feels worth it. The dimples fill with olive oil and the smell fills the house. It never lasts long on the table.
+It's a bread that rewards patience, with a long rise and plenty of stretching and folding, but every time it comes out of the oven, golden and crisp at the edges, it feels worth it. The dimples fill with olive oil and the smell fills the house. It's the bread we're always asked to bring, and it never lasts long on the table.
 
 ## Ingredients
 
