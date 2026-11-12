@@ -89,6 +89,4 @@ Claire Saffitz's focaccia: a very wet, well-kneaded dough baked in a half-sheet 
 
 ## Notes
 
-- 2026-10-28: Toppings are separate options so the base focaccia stays plain. The Sichuan pepper oil and soy caramelised onions are our go-to alternative to garlic, rosemary or chilli garlic.
-- 2026-10-28: Added garlic and chilli garlic options. Their amounts are a starting point we haven't measured yet: adjust after the next bake.
-- 2026-10-28: We measure 2 tbsp of table salt (about 36 g). The original's 17 g matches 2 tbsp of Diamond Crystal kosher salt, which is about half as dense.
+- The Sichuan pepper oil and soy caramelised onions are our favourite topping.

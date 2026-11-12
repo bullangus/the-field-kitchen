@@ -62,4 +62,3 @@ Seared steak sliced thin and tossed with crisp salad, mint and peanuts in a hot,
 - Chilli: ¼ tsp is mild, ½ tsp mildly spicy, 1 tsp properly spicy. Chilli paste works too.
 - Any good grilling steak works: sirloin, rib eye, scotch fillet, rump, flank or flat iron. It keeps cooking as it rests.
 - Cut against the grain: turn the steak so its fibres run left to right, then slice straight across them.
-- 2026-10-28: We leave out the coriander: 1 tbsp chopped stems in the dressing paste, ¼ cup leaves in the salad, and the extra leaves to garnish.

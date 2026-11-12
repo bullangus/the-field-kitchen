@@ -47,4 +47,4 @@ Soft-boiled eggs with jammy yolks, marinated overnight in a sweet soy sauce. For
 
 ## Notes
 
-- 2026-10-28: We use about 5 g dashi powder in place of the 5 g bonito flakes, so there's nothing to strain out. It can be left out entirely: the marinade has less umami but the eggs are still good.
+- The dashi powder can be left out: the marinade has less umami, but the eggs are still good.

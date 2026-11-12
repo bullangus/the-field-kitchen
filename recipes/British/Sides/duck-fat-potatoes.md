@@ -46,4 +46,3 @@ The crunchiest roast potatoes: parboiled, roughed up, then roasted in smoking-ho
 - Use starchy or all-rounder potatoes, not waxy ones, cut into big pieces that can stand up to the long roast.
 - Goose fat works just as well as duck fat.
 - About half the fat is left in the pan afterwards. Strain out the bits, let it cool and keep it in a jar in the fridge for months; it'll be a little salty.
-- 2026-10-28: We boil the potatoes in chicken stock instead of salted water, and leave out the semolina (2 tbsp, shaken through with the salt in the original).

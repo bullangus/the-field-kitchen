@@ -51,8 +51,3 @@ A Christmas ham glazed with maple, orange and Grand Marnier, with candied orange
 12. Take the pan out of the oven and rest the ham for 10–15 minutes, loosely covered with foil. Transfer to a carving board.
 13. Strain the pan drippings into a small saucepan and skim off the fat. Add the remaining glaze and reduce over medium heat until the sauce thickens slightly, then take it off the heat.
 14. Slice the ham ¼ cm thick, arrange on a platter and serve with the sauce.
-
-## Notes
-
-- The card doesn't say whether 180°C is fan-forced or conventional, or give a weight for the ham.
-- 2026-10-28: The card lists the garlic but its method never places it. Everything under "For the ham" goes under the ham, so the garlic halves go in the pan with the vegetables.

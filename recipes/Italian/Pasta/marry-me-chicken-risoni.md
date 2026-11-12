@@ -35,7 +35,3 @@ Seared chicken thigh in a creamy sun-dried tomato and Parmesan sauce, with the r
 5. Once the stock begins to simmer, add the risoni and cook for 7–8 minutes, until most of the liquid has been absorbed and the risoni is al dente.
 6. Add the seared chicken, cream and Parmesan and stir through over low heat. Put the spinach on top and leave it to wilt for 2 minutes without stirring.
 7. Stir the spinach through, then taste and adjust the seasoning. Serve.
-
-## Notes
-
-- 2026-11-12: We finely dice the sun-dried tomatoes (the original leaves them sliced) so they melt into the sauce for anyone who doesn't like tomato.

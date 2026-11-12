@@ -57,4 +57,3 @@ A rich, properly spiced beef and bean chilli from RecipeTin Eats. Quick enough f
 - Slow cooker: follow the steps up to adding the remaining ingredients, using only 60 ml (¼ cup) water, then cook on low for 6–8 hours.
 - Even better the next day, and it freezes well.
 - More toppings: sliced spring onions, diced red onion, pico de gallo, avocado, sliced jalapeño or other chillies.
-- 2026-10-28: We leave out the capsicum (1 red capsicum, diced, cooked with the onion for 2 minutes in the original).

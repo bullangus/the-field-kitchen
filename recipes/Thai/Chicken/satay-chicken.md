@@ -28,5 +28,4 @@ Strips of chicken thigh simmered in a quick peanut and red curry sauce. Serve wi
 
 ## Notes
 
-- The original sauce is sweetened with 2–3 drops of liquid stevia; we leave it out.
 - The sauce freezes well, so leftovers can go in a small jar in the freezer.

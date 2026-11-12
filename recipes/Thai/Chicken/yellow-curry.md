@@ -38,5 +38,3 @@ A mild, fragrant coconut curry with chicken, potato and carrot. Serve over steam
 ## Notes
 
 - Homemade yellow curry paste is made from dried chillies, lemongrass, galangal, garlic, shallots, turmeric, cumin, coriander and yellow curry powder.
-- Yukon gold potatoes aren't sold in Australia; Dutch cream or Désirée are the closest, waxy all-rounders.
-- 2026-10-28: Our recipe didn't give servings, times or how many carrots, so serves 4, the prep and cook times and 2 carrots are our best guess. Adjust them after the next cook.

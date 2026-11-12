@@ -50,7 +50,3 @@ Egg-coated fried chicken soaked in a sweet and tangy nanban sauce and topped wit
 8. Repeat with the remaining chicken, working in batches if needed, and fry for 7–8 minutes, or until cooked through. You can shallow-fry instead if you prefer.
 9. Drain on a wire rack, then coat the chicken in the nanban sauce.
 10. To serve, arrange lettuce and shredded cabbage on each plate. Put the chicken alongside and top with a generous amount of tartar sauce. Garnish with cherry tomatoes and serve with a bowl of hot rice.
-
-## Notes
-
-- The source uses 1 tbsp = 15 ml and 1 cup = 240 ml.

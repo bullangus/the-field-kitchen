@@ -21,7 +21,3 @@ Our simple, tangy yoghurt sauce: just yoghurt, lemon, salt and pepper, mixed to 
 
 1. Mix the yoghurt, lemon juice, salt and pepper together.
 2. Taste and adjust: more lemon for tang, more salt to make it pop.
-
-## Notes
-
-- 2026-10-28: We've always made this to taste. These amounts are our best estimate, based on the raita; adjust them next time and we'll update them.

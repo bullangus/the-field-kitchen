@@ -77,7 +77,3 @@ Citrus-marinated steak, reverse-seared so the outside chars without burning, sli
 
 1. Heat the tortillas over an open gas flame for a few seconds a side until lightly charred, or in a sandwich press. Wrap them in a tea towel to keep warm.
 2. Fill with the steak and top with guacamole, queso fresco and lime onion. Serve with lime wedges.
-
-## Notes
-
-- 2026-10-28: Written from how we make it. The marinade is loosely based on Isabel Eats with cayenne and MSG added. The spice amounts, marinating time and quantities here are a starting point, not measured from our kitchen yet: adjust them after the next cook.

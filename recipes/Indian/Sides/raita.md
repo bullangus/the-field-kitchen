@@ -24,7 +24,3 @@ A cooling yoghurt and mint side with ginger and garam masala for warmth. We serv
 
 1. Mix all the ingredients together and season.
 2. Serve sprinkled with extra garam masala.
-
-## Notes
-
-- 2026-10-28: Left out the coriander (½ small pack, chopped, in the original). We make it without.

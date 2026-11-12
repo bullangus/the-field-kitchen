@@ -26,4 +26,3 @@ Quick gravy from the Roast Chicken's pan juices, thickened with Gravox. Makes ab
 ## Notes
 
 - For thicker or thinner gravy, use more or less Gravox.
-- 2026-11-08: Amounts are the pan juices method on the Gravox Traditional Gravy Mix tin. Adjust after the next roast.

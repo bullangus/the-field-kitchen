@@ -54,7 +54,3 @@ Crisp crumbed chicken on rice with a rich Japanese curry sauce made from Golden 
 
 1. Spoon rice into one side of each bowl and curry sauce into the other.
 2. Lay the sliced chicken on top, and scatter with cheese if you like.
-
-## Notes
-
-- 2026-10-28: Written from how we make it. The chicken weight, crumbing amounts, frying times, simmering time and the potato and carrot quantities are our best estimate; adjust them after the next cook.

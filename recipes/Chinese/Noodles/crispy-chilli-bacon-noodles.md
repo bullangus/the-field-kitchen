@@ -44,7 +44,3 @@ Bacon rendered slowly until crisp, chilli crisp bloomed in the fat, and noodles 
 3. Add the soy sauce, oyster sauce, dark soy sauce, sesame oil, garlic, chilli crisp, sugar and MSG and stir to combine. Add the stock (180 ml for fresh noodles, 240–480 ml for dried) and bring to a simmer. Let it reduce for 1–2 minutes, until slightly thickened and glossy.
 4. Add the noodles to the sauce and toss vigorously until every strand is coated and glossy, 1–2 minutes. Add a splash more stock as it tightens (dried noodles especially keep soaking it up) so it stays loose and glossy rather than dry. Add the bacon and spring onions and give it a quick toss.
 5. Finish with more spring onions, sesame seeds and an extra drizzle of chilli crisp, if you like.
-
-## Notes
-
-- The original uses fresh lo mein, which is hard to find in Australia; fresh thin egg noodles are the same thing.

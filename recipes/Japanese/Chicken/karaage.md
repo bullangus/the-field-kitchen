@@ -69,6 +69,3 @@ Marinated in ginger, garlic and soy, then fried twice for a light, crisp crust.
 
 - Let leftovers cool completely. They keep in an airtight container in the fridge for up to 3 days, or bagged in the freezer for 2–3 months.
 - To reheat from frozen, air-fry at 180°C (350°F) for 7 minutes, shaking the basket halfway through.
-- 2026-11-01: Added a shio negi topping option.
-- 2026-11-04: Dropped the 2 tbsp amounts for the flour and potato starch because we need nearly double; use enough to coat the chicken. Raised the second fry to 190°C, since the oil drops back to about 180°C as the chicken fries.
-- 2026-11-05: Leftovers keep 2–3 months in the freezer, not the original's one month. Added how we reheat them from frozen in the air fryer.

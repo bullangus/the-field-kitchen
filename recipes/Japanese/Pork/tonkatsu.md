@@ -39,4 +39,3 @@ Crumbed and fried pork (or chicken) cutlets, crisp outside and juicy inside, wit
 ## Notes
 
 - The same crumbed and fried cutlets make Katsu Curry.
-- 2026-10-28: Written from how we make it. The meat weight, flour, egg and panko amounts, the 1.5 cm thickness and the frying times are our best estimate; adjust them after the next cook.

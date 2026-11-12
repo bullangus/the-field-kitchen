@@ -27,8 +27,3 @@ A simple, full-flavoured South African tomato relish for the braai: with pap, bo
 1. Heat the olive oil in a frying pan and fry the chunky onion pieces over medium heat until soft and caramelised.
 2. Add the tomatoes, Mrs Ball's chutney, sugar, balsamic vinegar, Worcestershire sauce, MSG, salt and pepper.
 3. Simmer for 15–20 minutes, stirring occasionally.
-
-## Notes
-
-- The original's olive oil is only mentioned in its method; it's listed here so it isn't missed.
-- 2026-10-28: The original lists the Mrs Ball's chutney but never says when to add it. It goes in with the tomatoes.

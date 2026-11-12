@@ -37,4 +37,3 @@ Bon Appétit's best: brown butter and dark brown sugar for deep toffee flavour, 
 
 - Make ahead: freeze the portioned dough balls on trays, then bag them; they keep 3 months. Bake from frozen, adding 1–2 minutes.
 - Baked cookies keep 3 days in an airtight container at room temperature.
-- The original lists 4 g of Diamond Crystal (1¼ tsp) or Morton (¾ tsp) kosher salt; we use table salt.

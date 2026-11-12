@@ -40,5 +40,4 @@ Our family classic, from Jamie Oliver's retro trifle: jam roll, strawberries and
 
 ## Notes
 
-- 2026-10-28: Our family's version of Jamie's trifle. We use supermarket jam rolls instead of trifle sponges or a Swiss roll, Aeroplane strawberry and orange jelly (made up as the packet says) instead of the 135 g jelly blocks with 300 ml boiling and 300 ml cold water, Bird's for the 30 g custard powder, and a Flake instead of grated good-quality chocolate.
-- 2026-10-28: The original doesn't give servings or times; 12 servings is our estimate for a large glass bowl. Allow several hours, or make it the day before, so each layer can set.
+- Allow several hours, or make it the day before, so each layer can set.

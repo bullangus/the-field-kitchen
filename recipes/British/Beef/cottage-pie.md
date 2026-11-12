@@ -55,4 +55,3 @@ Beef, carrot and pea filling under buttery mash, finished with a mozzarella and 
 ## Notes
 
 - No ovenproof frying pan? Do the stovetop steps in any large frying pan, then spread the filling in a 20 or 23 cm (8 or 9 inch) square baking dish and top with the mash.
-- 2026-11-10: Our changes to the original: 4 washed potatoes instead of 2 large russets (about 340 g / 12 oz each), no egg yolk in the mash, 1 tsp Italian seasoning instead of ⅛ tsp ground thyme, MSG with the seasoning, double the tomato sauce or paste, and a mozzarella and Parmesan top for the last 15 minutes of a 45-minute bake (the original bakes for 35–45 minutes).
