@@ -10,6 +10,7 @@
 ### American
 - **Baking:** [Chocolate Chip Cookies](recipes/American/Baking/chocolate-chip-cookies.md)
 - **Chicken:** [Buffalo Wings](recipes/American/Chicken/buffalo-chicken-wings.md)
+- **Pasta:** [Mac and Cheese](recipes/American/Pasta/mac-and-cheese.md)
 - **Salads:** [Caesar Salad](recipes/American/Salads/caesar-salad.md)
 
 ### Australian
@@ -62,7 +63,7 @@
 - **Beef:** [Thai Beef Salad](recipes/Thai/Beef/thai-beef-salad.md)
 - **Chicken:** [Satay Chicken](recipes/Thai/Chicken/satay-chicken.md), [Yellow Curry](recipes/Thai/Chicken/yellow-curry.md)
 
-_43 recipes._
+_44 recipes._
 <!-- CONTENTS:END -->
 
 ## How it's organised

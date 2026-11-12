@@ -227,6 +227,159 @@ window.FIELD_KITCHEN_INDEX = [
 "options": []
 },
 {
+"title": "Mac and Cheese",
+"cuisine": "American",
+"category": "Pasta",
+"url": "american/pasta/mac-and-cheese.html",
+"text": "450 g (1 lb) cavatappi (corkscrew pasta) 450 g (1 lb) mozzarella 450 g (1 lb) Colby cheese 225 g (8 oz) cheddar 1 tsp salt, or to taste 1 tsp pepper, or to taste 1 tsp garlic powder, or to taste 1 tsp smoked paprika, or to taste 45 g (3 tbsp) butter 24 g (3 tbsp) plain (all-purpose) flour 1 can (about 350 ml / 12 oz) evaporated milk (not condensed milk) 480 ml (2 cups) thickened (heavy) cream 1 good spoonful Dijon mustard A splash of milk, if the sauce is too thick Sliced spring onions, chives or parsley, to garnish Vegetarian",
+"meta": "Serves 8–10",
+"intro": "Creamy baked mac and cheese for the holiday table: a three-cheese sauce made with evaporated milk and cream, layered with more cheese and baked until the top is crusty.",
+"photo": "",
+"tags": [
+"pasta",
+"vegetarian"
+],
+"serves": 8,
+"ingredients": [
+{
+"t": "450 g (1 lb) cavatappi (corkscrew pasta)",
+"n": "Cavatappi pasta",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bcavatappi\\b",
+"q": 450.0,
+"u": "g"
+},
+{
+"t": "450 g (1 lb) mozzarella",
+"n": "Mozzarella",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bmozzarella\\b",
+"q": 450.0,
+"u": "g"
+},
+{
+"t": "450 g (1 lb) Colby cheese",
+"n": "Colby cheese",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bcolby\\b",
+"q": 450.0,
+"u": "g"
+},
+{
+"t": "225 g (8 oz) cheddar",
+"n": "Cheddar",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bcheddar\\b",
+"q": 225.0,
+"u": "g"
+},
+{
+"t": "1 tsp salt, or to taste",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": 1.0,
+"u": "tsp"
+},
+{
+"t": "1 tsp pepper, or to taste",
+"n": "Pepper",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bpepper(corns)?\\b",
+"q": 1.0,
+"u": "tsp"
+},
+{
+"t": "1 tsp garlic powder, or to taste",
+"n": "Garlic powder",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bgarlic powder\\b|\\bgarlic\\b",
+"q": 1.0,
+"u": "tsp"
+},
+{
+"t": "1 tsp smoked paprika, or to taste",
+"n": "Smoked paprika",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bsmoked paprika\\b|\\bpaprika\\b",
+"q": 1.0,
+"u": "tsp"
+},
+{
+"t": "45 g (3 tbsp) butter",
+"n": "Butter",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bbutter\\b",
+"q": 45.0,
+"u": "g"
+},
+{
+"t": "24 g (3 tbsp) plain (all-purpose) flour",
+"n": "Plain flour",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bflour\\b",
+"q": 24.0,
+"u": "g"
+},
+{
+"t": "1 can (about 350 ml / 12 oz) evaporated milk (not condensed milk)",
+"n": "Evaporated milk",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bevaporated milk\\b|\\bmilk\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "480 ml (2 cups) thickened (heavy) cream",
+"n": "Thickened cream",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bcream\\b",
+"q": 480.0,
+"u": "ml"
+},
+{
+"t": "1 good spoonful Dijon mustard",
+"n": "Dijon mustard",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bdijon\\b|\\bmustard\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "A splash of milk, if the sauce is too thick",
+"n": "Milk",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bmilk\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Sliced spring onions, chives or parsley, to garnish",
+"n": "Spring onions",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bspring onions?\\b|\\bgreen onions?\\b|\\bscallions?\\b",
+"q": null,
+"u": null
+}
+],
+"options": []
+},
+{
 "title": "Caesar Salad",
 "cuisine": "American",
 "category": "Salads",
