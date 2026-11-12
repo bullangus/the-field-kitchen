@@ -37,6 +37,7 @@ COOK_PAGE = "cook.html"
 STYLESHEET = "style.css"
 ICON = "icon.svg"
 APP_ICONS = ("icon-192.png", "icon-512.png")
+FONTS = "fonts"  # woff2 files in templates/fonts, named in style.css
 SITE_SCRIPT = "site.js"
 HOME_SCRIPT = "home.js"
 RECIPE_SCRIPT = "recipe.js"
@@ -1019,6 +1020,7 @@ def build_site(book):
         write(asset, (TEMPLATES / asset).read_text(encoding="utf-8"))
     for name in APP_ICONS:
         shutil.copyfile(TEMPLATES / name, DOCS / name)
+    shutil.copytree(TEMPLATES / FONTS, DOCS / FONTS)
     write(MANIFEST, manifest())
     write(SEARCH_INDEX, search_index(book))
     write("index.html", home_html(book))
