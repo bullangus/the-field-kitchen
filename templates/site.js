@@ -333,7 +333,19 @@
         apply(tag);
       });
     });
+    // Where the browser can, cards glide to their new places instead of jumping.
+    var cards = [].slice.call(scope.querySelectorAll(".recipe-card, .kitchen"));
+    var ready = false;
     function apply(tag) {
+      if (ready && !calm && document.startViewTransition) {
+        cards.forEach(function (c, i) { c.style.viewTransitionName = "card-" + i; });
+        var done = function () { cards.forEach(function (c) { c.style.viewTransitionName = ""; }); };
+        document.startViewTransition(function () { filter(tag); }).finished.then(done, done);
+      } else {
+        filter(tag);
+      }
+    }
+    function filter(tag) {
       var shown = 0;
       // Phones show the home page kitchens as compact tiles until a filter is picked.
       scope.classList.toggle("filtered", !!tag);
@@ -352,6 +364,7 @@
       empty.hidden = shown > 0;
     }
     buttons[0].click();  // apply "All", including any per-card limit
+    ready = true;
   });
 
   // ---- Print button on the book page ----

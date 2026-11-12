@@ -142,6 +142,11 @@ h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600
   max-width: 72rem; margin: 0 auto; padding: 0 16px; height: 3.75rem;
   display: flex; align-items: center; gap: 0.5rem;
 }
+/* The bar slims down once you scroll, giving the page the room. */
+.site-nav .inner, .site-nav .home, .site-nav .home svg { transition: height 0.25s ease, font-size 0.25s ease, width 0.25s ease; }
+.site-nav.scrolled .inner { height: 3.1rem; }
+.site-nav.scrolled .home { font-size: 1.25rem; }
+.site-nav.scrolled .home svg { width: 1.4rem; height: 1.4rem; }
 .site-nav a { text-decoration: none; }
 .site-nav svg { width: 1.1rem; height: 1.1rem; flex: none; }
 .site-nav .home {
@@ -246,6 +251,22 @@ h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600
   /* Without JS the menu can't open, so keep it as a wrapping row. */
   .site-nav:not(.js) .inner { height: auto; flex-wrap: wrap; padding: 0.6rem 16px; }
 }
+
+/* Small motion that answers a touch: buttons press in, ticks and hearts pop, and the
+   recipe header's icon drifts as the page scrolls. Off for readers who prefer less. */
+@media (prefers-reduced-motion: no-preference) {
+  .pill:active, .chip:active, .scaler button:active, .tabbar a:active, .tabbar button:active { transform: scale(0.96); }
+  .chip, .scaler button { transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.12s ease; }
+  li.done > .tick, li.done > .step-num, .fav-toggle.pop svg { animation: fk-pop 0.32s cubic-bezier(0.3, 1.6, 0.5, 1); }
+  li > .ing-text, li > .step-text { transition: opacity 0.25s ease, color 0.15s ease; }
+  @supports (animation-timeline: scroll()) {
+    .recipe-hero .hero-art { animation: fk-art linear both; animation-timeline: scroll(root); animation-range: 0 28rem; }
+  }
+  /* Filtering: cards glide to their new places (site.js names each one). */
+  ::view-transition-group(*) { animation-duration: 0.4s; }
+}
+@keyframes fk-pop { 0% { transform: scale(0.6); } 100% { transform: scale(1); } }
+@keyframes fk-art { to { transform: translateY(1.5rem) rotate(-8deg); opacity: 0.12; } }
 
 /* Phones: a bar at thumb height with the four places you go most. The top bar keeps
    the name, light/dark and the menu of cuisines. */
