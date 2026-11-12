@@ -265,8 +265,8 @@ def all_recipes(book):
 
 def minutes_in(text):
     """Sum of every '<n> min' and '<n> hr' in text (the upper end of a range counts)."""
-    found = re.findall(r"(\d+(?:\.\d+)?)\s*(hr|min)", text)
-    return sum(float(n) * (60 if unit == "hr" else 1) for n, unit in found)
+    found = re.findall(r"(\d+(?:\.\d+)?)(½)?\s*(hr|min)", text)
+    return sum((float(n) + (0.5 if half else 0)) * (60 if unit == "hr" else 1) for n, half, unit in found)
 
 
 def split_time(r):
@@ -592,7 +592,7 @@ def world_map(book):
     """Dotted world map with a glowing pin per cuisine, linking to its page."""
     data = json.loads((TEMPLATES / WORLD_DOTS).read_text(encoding="utf-8"))
     land = "".join(f"M{x:g} {y:g}h0" for x, y in data["dots"])
-    pins, legend = [], []
+    pins = []
     for i, (cuisine, cats) in enumerate(book.items()):
         place = CUISINE_PLACES.get(cuisine.lower())
         if not place:
@@ -611,20 +611,17 @@ def world_map(book):
             f'<circle class="pin-pulse" cx="{x:g}" cy="{y:g}" r="3"/>'
             f'<circle class="pin-dot" cx="{x:g}" cy="{y:g}" r="{1.6 + min(n, 6) * 0.25:g}"/>'
             f'<text x="{x + dx:g}" y="{y + dy:g}" text-anchor="{anchor}">{html.escape(cuisine)}</text></a>')
-        legend.append(f'<li><a href="{cuisine_url(cuisine)}"><span class="legend-dot"></span>'
-                      f'{html.escape(cuisine)}<small>{n}</small></a></li>')
     return f"""
   <section class="atlas reveal" aria-label="Where our recipes come from">
     <div class="section-head">
       <h2>Our table, around the world</h2>
-      <p>Tap a pin, or a kitchen below, to visit it.</p>
+      <p>Tap a pin to visit that kitchen.</p>
     </div>
     <div class="atlas-map">
       <svg viewBox="0 0 {data['width']} {data['height']}" role="img" aria-label="World map with a pin for each cuisine">
         <path class="land" d="{land}"/>
         {"".join(pins)}
       </svg>
-      <ul class="atlas-legend">{"".join(legend)}</ul>
     </div>
   </section>"""
 
@@ -699,7 +696,7 @@ def home_html(book):
         {cuisine_art(cuisine, "kitchen-art")}
         <header>
           <h3><a href="{cuisine_url(cuisine)}"{vt_name("c", cuisine)}>{html.escape(cuisine)}</a></h3>
-          <span class="kitchen-count">{n}</span>
+          <span class="kitchen-count" data-n="{n}">{n}</span>
         </header>
         <div class="tags">{tags}</div>
         <ul>{items}</ul>

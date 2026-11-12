@@ -119,8 +119,7 @@ window.FIELD_KITCHEN_INDEX = [
 "tags": [
 "chicken",
 "party-food",
-"spicy",
-"quick"
+"spicy"
 ],
 "serves": 5,
 "ingredients": [

@@ -308,6 +308,8 @@
     });
     function apply(tag) {
       var shown = 0;
+      // Phones show the home page kitchens as compact tiles until a filter is picked.
+      scope.classList.toggle("filtered", !!tag);
       groups.forEach(function (group) {
         // Cards with data-limit (home page) show only their first few matches.
         var limit = parseInt(group.getAttribute("data-limit"), 10) || Infinity;
