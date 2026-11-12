@@ -8,9 +8,9 @@ source: Family recipe
 goes with: Tonkatsu
 ---
 
-A big, warming plate of comfort for a rainy night. Crisp crumbed chicken on rice, smothered in a rich, glossy Japanese curry sauce made from Golden Curry blocks. The cutlets are made exactly as for Tonkatsu.
+A big, warming plate of comfort for a rainy night. Crisp crumbed chicken with rice and a rich, glossy Japanese curry sauce made from Golden Curry blocks. The cutlets are made exactly as for Tonkatsu.
 
-It's comfort on a plate: a crisp, golden cutlet sliced and laid over rice, then smothered in thick, glossy curry. The Golden Curry blocks give it that rich, mellow flavour everyone loves. Add a handful of grated cheese if you like.
+It's comfort on a plate: rice on one side of the bowl, thick, glossy curry on the other, and a crisp, golden cutlet sliced and laid over the top. The Golden Curry blocks give it that rich, mellow flavour everyone loves. Add a handful of grated cheese if you like.
 
 ## Ingredients
 

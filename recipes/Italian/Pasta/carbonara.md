@@ -9,7 +9,7 @@ source: https://pastagrammar.com/blogs/recipes/spaghetti-alla-carbonara-authenti
 
 Just a handful of ingredients that turn into something magical in the hot pan. The Roman way: egg yolks, pecorino, crisp guanciale and plenty of black pepper, tossed into a silky sauce. No cream.
 
-The trick is the heat: take the pan off so the eggs turn creamy rather than scrambling, and loosen it with a splash of the pasta water. Done right, it's glossy and rich, every piece of pasta coated in the sauce. Eat it straight away, before it has a chance to set.
+The trick is the heat: the hot pasta goes straight into the yolks in a bowl, off the stove, so they turn creamy rather than scrambling, and a splash of pasta water loosens it. Done right, it's glossy and rich, every piece of pasta coated in the sauce. Eat it straight away, before it has a chance to set.
 
 ## Ingredients
 

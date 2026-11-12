@@ -10,7 +10,7 @@ source: https://www.recipetineats.com/chilli-con-carne/
 
 A big, warming pot that tastes even better the next day. A rich, properly spiced beef and bean chilli from RecipeTin Eats, quick enough for a weeknight and even better slow-cooked.
 
-It's a big pot of comfort that simmers away and fills the house with spice. It's endlessly flexible, served over rice, with corn chips, or on a baked potato. Make extra: it freezes beautifully for the nights you need something warming on the table fast.
+It's a big pot of comfort that simmers away and fills the house with spice. It's endlessly flexible: over rice, with corn chips, or wrapped in warm tortillas. Make extra: it freezes well for the nights you need something warming on the table fast.
 
 ## Ingredients
 

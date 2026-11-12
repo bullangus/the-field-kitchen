@@ -10,7 +10,7 @@ source: https://www.ozbraai.com.au/recipes/chunky-onion-and-tomato-relish/
 
 A taste of the braai: smoky fire, good company and this relish spooned over everything. A simple, full-flavoured South African tomato and onion relish for pap, boerewors rolls, meatballs or even pasta.
 
-It's the relish that goes on everything at a braai: piled onto boerewors rolls, spooned over pap or served alongside grilled meat. Sweet, tangy and full of flavour, it's simple to make and always worth having in the fridge. Mrs Ball's chutney gives it its unmistakable taste.
+It's the relish that goes on everything at a braai: piled onto boerewors rolls, spooned over pap or served alongside grilled meat. Sweet, tangy and full of flavour, it's simple to make. Mrs Ball's chutney gives it its unmistakable taste.
 
 ## Ingredients
 

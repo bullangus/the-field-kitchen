@@ -10,7 +10,7 @@ source: https://www.andy-cooks.com/blogs/recipes/packet-ramen-chilli-oil-noodles
 
 A packet of instant noodles turned into a late-night treat you'll crave. Smoking-hot oil is poured over the Shin Ramyun seasoning and garlic with a satisfying sizzle, then soy, black vinegar and a crispy fried egg finish it. It has to be Shin Ramyun, because its seasoning makes the chilli oil.
 
-The best part is the sizzle when the hot oil hits the seasoning and garlic, and the smell that fills the kitchen straight after. It turns a cheap packet of noodles into something you'll crave. Make sure the egg is crispy at the edges and runny in the middle.
+The best part is the sizzle when the hot oil hits the seasoning and garlic, and the smell that fills the kitchen straight after. It turns a cheap packet of noodles into something you'll crave. Fry the egg until its edges are crisp and lacy.
 
 ## Ingredients
 

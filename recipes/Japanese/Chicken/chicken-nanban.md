@@ -9,7 +9,7 @@ source: https://aaronandclaire.com/chicken-nanban-fried-chicken-with-tartar-sauc
 
 Crisp, tangy and creamy all in one bite. Egg-coated fried chicken is soaked in a sweet and sour nanban sauce, then topped with a generous spoonful of rich tartar sauce.
 
-The chicken is fried, then dunked straight into the tangy nanban sauce, so it soaks up all that flavour while it's still hot. A heap of creamy tartar on top makes it rich and satisfying. Serve it with rice and a crunchy salad.
+I first discovered chicken nanban in Australia, but it was in Japan that I fell in love with it. The chicken is coated in the tangy nanban sauce straight from the fryer, so it soaks up all that flavour while it's still hot, and a heap of creamy tartar on top makes it rich and satisfying. Serve it with a bowl of hot rice and plenty of lettuce and shredded cabbage.
 
 ## Ingredients
 

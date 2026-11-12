@@ -10,7 +10,7 @@ source: https://www.bonappetit.com/recipe/bas-best-chocolate-chip-cookies
 
 The smell of browning butter is the first sign these are on the way, and nobody stays out of the kitchen for long after that. Bon Appétit's best: dark brown sugar for deep toffee flavour, crisp edges, chewy middles and puddles of dark chocolate. Keep a tray of dough balls in the freezer and warm cookies are only ever a few minutes away.
 
-There's a moment, about ten minutes in, when the edges have set and the middles still look a little underdone, and that's exactly when they need to come out. Leave them on the tray and they finish themselves. The hardest part is waiting long enough not to burn your mouth on the chocolate, and in our kitchen nobody ever quite manages it.
+There's a moment, somewhere between 8 and 10 minutes, when the edges are deep golden and firm but the middles still look a little soft, and that's exactly when they need to come out. Leave them to cool on the tray and they finish themselves. The hardest part is waiting long enough not to burn your mouth on the chocolate, and in our kitchen nobody ever quite manages it.
 
 ## Ingredients
 

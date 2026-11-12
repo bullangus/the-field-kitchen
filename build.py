@@ -122,6 +122,12 @@ CUISINE_PLACES = {
     "spanish": (-3.7, 40, "end"),
     "thai": (101, 15, "start"),
 }
+# A few words from us at the top of a cuisine's page and its divider in the printed book.
+# Optional: only cuisines with something personal to say need one.
+CUISINE_STORIES = {
+    "japanese": "Japanese food is the closest to my heart. I speak Japanese and go back to Japan often, "
+                "and these are the dishes I cook to bring a little of it home.",
+}
 QUICK_CHIPS = (("quick", f"Under {QUICK_MINUTES} min"), ("make-ahead", "Make ahead"), ("project", "Weekend project"))
 # Hand-picked tags (a recipe's `tags:` line), in chip order. Others are allowed and sort after.
 TAG_ORDER = ("Christmas", "Sunday roast", "Barbecue", "Party food", "Vegetarian", "Spicy")
@@ -880,6 +886,7 @@ def cuisine_html(book, cuisine):
     <p class="eyebrow">The {html.escape(cuisine)} kitchen</p>
     <h1{vt_name("c", cuisine)}>{html.escape(cuisine)}</h1>
     <p class="hero-count">{n} recipe{'s' if n != 1 else ''}</p>
+    {f'<p class="cuisine-story">{html.escape(CUISINE_STORIES[cuisine.lower()])}</p>' if cuisine.lower() in CUISINE_STORIES else ''}
     <div class="tags">{styles}</div>
   </header>
   <div class="filter-scope">
@@ -1080,6 +1087,8 @@ def book_html(book):
     for cuisine, cats in book.items():
         cid = slug(cuisine)
         body.append(f'<section class="cuisine" id="{cid}"><h2>{html.escape(cuisine)}</h2>')
+        if cuisine.lower() in CUISINE_STORIES:
+            body.append(f'<p class="cuisine-story">{html.escape(CUISINE_STORIES[cuisine.lower()])}</p>')
         for category, recipes in cats.items():
             body.append(f'<p class="category-list">{html.escape(category)}: '
                         + ", ".join(html.escape(r["title"]) for r in recipes) + "</p>")

@@ -10,7 +10,7 @@ source: Family recipe
 
 A cool, bright spoonful that lifts whatever it sits beside. Our simple, tangy yoghurt sauce is just yoghurt, lemon, salt and pepper, mixed to taste.
 
-We make it by taste and feel rather than measurements, adding more lemon or salt until it's just right. It's the sauce we reach for alongside grilled meat, roast vegetables or anything that needs a bit of brightness. Keep a bowl of it on the table.
+We make it by taste and feel rather than measurements, adding more lemon or salt until it's just right. It's the sauce we reach for whenever a plate needs a bit of brightness.
 
 ## Ingredients
 

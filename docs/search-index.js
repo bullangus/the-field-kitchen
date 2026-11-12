@@ -981,7 +981,7 @@ window.FIELD_KITCHEN_INDEX = [
 "url": "australian/sides/nans-christmas-pasta-salad.html",
 "text": "500 g spiral pasta (fusilli), or any shape you like 2 kabana sticks 220 ml (⅔ of a 330 ml bottle) thousand island dressing 3 spring onions, thinly sliced (optional) Christmas",
 "meta": "Serves 4–6",
-"intro": "Nan's pasta salad, the side we have every Christmas, and the taste of every family get-together. Spirals of pasta, kabana and plenty of thousand island dressing, simple and impossible to stop picking at. Serve it warm or cool.",
+"intro": "Nan's pasta salad, the side we have every Christmas. Spirals of pasta, kabana and plenty of thousand island dressing, simple and impossible to stop picking at. Serve it warm or cool.",
 "photo": "",
 "tags": [
 "sides",
@@ -2821,7 +2821,7 @@ window.FIELD_KITCHEN_INDEX = [
 "url": "indian/sides/raita.html",
 "text": "250 g (1 cup) Greek yoghurt 1 garlic clove Thumb-sized piece ginger, finely grated ¼ small pack (UK size) mint, leaves chopped Juice of ½ lime ½ tsp garam masala, plus a little extra to serve ¼ cucumber, grated and lightly squeezed Vegetarian",
 "meta": "Serves 6–8 · Prep 10 min",
-"intro": "The cool, fresh counterpoint every curry needs. Yoghurt, cucumber and mint, with ginger and a little garam masala for warmth. We always serve it with Yvette's Duck Curry.",
+"intro": "The cool, fresh counterpoint every curry needs. Yoghurt, cucumber and mint, with ginger and a little garam masala for warmth. We serve it with Yvette's Duck Curry.",
 "photo": "",
 "tags": [
 "sides",
@@ -3928,7 +3928,7 @@ window.FIELD_KITCHEN_INDEX = [
 "url": "japanese/breads/shokupan.html",
 "text": "275 g water (see step 1 for its temperature) 22 g sugar 11 g honey 8 g instant yeast 385 g bread flour, plus about 2 tsp for dusting 8 g table salt 22 g skim milk powder 28 g unsalted butter, cut into small cubes ½ tsp neutral oil, for greasing the bowl 10 g unsalted butter, at room temperature, for greasing the loaf pan Vegetarian",
 "meta": "Serves 1 loaf (about 10 slices) · Prep 1 hr + 2 hr 30 min rising · Cook 30 min",
-"intro": "There's nothing quite like tearing into a loaf of shokupan still warm from the oven: soft, pillowy, faintly sweet and impossibly light. Baked in a lidded 1.5 kin shokupan loaf pan (20 × 12 × 12.5 cm) for a flat top, or without the lid for a rounded one. It's the bread for the Egg Sando.",
+"intro": "There's nothing quite like the first slice of a homemade shokupan: soft, pillowy, faintly sweet and impossibly light. Baked in a lidded 1.5 kin shokupan loaf pan (20 × 12 × 12.5 cm) for a flat top, or without the lid for a rounded one. It's the bread for the Egg Sando.",
 "photo": "",
 "tags": [
 "breads",
@@ -4446,7 +4446,7 @@ window.FIELD_KITCHEN_INDEX = [
 "url": "japanese/chicken/katsu-curry.html",
 "text": "4 chicken thigh fillets or breasts (about 150 g each) 50 g (⅓ cup) plain flour ½ tsp salt ¼ tsp pepper 2 eggs, beaten 60 g (1 cup) panko breadcrumbs Neutral oil, for frying (2–3 cm deep in the pan) 100 g Golden Curry blocks (about half a 220 g box) 625 ml (2½ cups) boiling water: 250 ml (1 cup) to start, then 375 ml (1½ cups) ½ tsp MSG 2 potatoes, peeled, cut into chunks and boiled until tender (optional) 1 carrot, peeled, cut into chunks and boiled until tender (optional) Steamed short-grain rice Grated cheese (optional)",
 "meta": "Serves 4 · Prep 20 min · Cook 30 min",
-"intro": "A big, warming plate of comfort for a rainy night. Crisp crumbed chicken on rice, smothered in a rich, glossy Japanese curry sauce made from Golden Curry blocks. The cutlets are made exactly as for Tonkatsu.",
+"intro": "A big, warming plate of comfort for a rainy night. Crisp crumbed chicken with rice and a rich, glossy Japanese curry sauce made from Golden Curry blocks. The cutlets are made exactly as for Tonkatsu.",
 "photo": "",
 "tags": [
 "chicken"
@@ -4589,7 +4589,7 @@ window.FIELD_KITCHEN_INDEX = [
 "url": "japanese/chicken/nagoya-chicken-wings.html",
 "text": "450 g (1 lb) chicken wings, flats and drumettes (this much sauce covers up to 900 g / 2 lb) 35 g (¼ cup) potato starch or cornflour (cornstarch) 700 ml (3 cups) neutral oil, for deep-frying Toasted white sesame seeds 240 ml (1 cup) mirin 120 ml (½ cup) soy sauce 45 ml (3 tbsp) sake 65 g (⅓ cup) sugar ¼ tsp table salt 1 knob fresh ginger (about 1.3 cm / ½ inch), sliced 2 cloves garlic, crushed or minced ½ tsp MSG Party food",
 "meta": "Serves 4 · Prep 20 min · Cook 30 min",
-"intro": "Sticky, sweet and peppery, these are the wings you'll lick your fingers clean of. Double-fried and glazed in a soy, mirin and ginger sauce, then finished with a shower of sesame seeds. The sauce keeps in the fridge for a month.",
+"intro": "Sticky, sweet and savoury, these are the wings you'll lick your fingers clean of. Double-fried and glazed in a soy, mirin and ginger sauce, then finished with a shower of sesame seeds. The sauce keeps in the fridge for a month.",
 "photo": "",
 "tags": [
 "chicken",
