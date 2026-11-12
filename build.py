@@ -50,7 +50,7 @@ SERVICE_WORKER = "sw.js"
 PHOTO_EXTENSIONS = (".jpg", ".jpeg", ".png", ".webp")
 PHOTO_WARN_BYTES = 1_500_000
 RECENT_COUNT = 5
-NOTES_COUNT = 3
+TONIGHT_COUNT = 3  # quick recipes on the home page's "Cook tonight" tile
 KITCHEN_CARD_RECIPES = 3  # recipes shown on each home page cuisine card; the rest are a click away
 CARD_TAGS = 3  # style tags shown on each home page cuisine card before "+N"
 TONES = 6  # colour tones for cuisine cards and headers, .tone-1 to .tone-6 in style.css
@@ -81,6 +81,7 @@ NAV_ICONS = {
                 '<path d="M19 15l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/>'),
     "play": '<path d="M7 4.5v15l12.5-7.5z"/>',
     "plus": '<path d="M12 5v14M5 12h14"/>',
+    "heart": '<path d="M12 20.5s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.9a4.3 4.3 0 0 1 7.5 2.6c0 5.4-7.5 10-7.5 10z"/>',
     "home": '<path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9.5h4.5V15h3v4.5H18V10"/>',
 }
 # Cuisine icons (24x24 outline paths) from Tabler Icons v3.19.0, MIT licence,
@@ -563,19 +564,6 @@ def date_added(r):
     return out[-1] if out else datetime.now().astimezone().isoformat(timespec="seconds")
 
 
-def family_notes(book):
-    """Newest dated owner note ('- YYYY-MM-DD: ...') of each recipe, newest first."""
-    notes = []
-    for r in all_recipes(book):
-        section = r["body"].split("\n## Notes", 1)
-        found = re.findall(r"^- (\d{4}-\d{2}-\d{2}): (.+)$", section[1], re.M) if len(section) == 2 else []
-        if found:
-            # Later lines win on the same day, since notes are appended in order.
-            day, text = max(enumerate(found), key=lambda f: (f[1][0], f[0]))[1]
-            notes.append((day, r, text))
-    return sorted(notes, key=lambda n: (n[0], n[1]["added"]), reverse=True)
-
-
 def nice_date(iso):
     d = date.fromisoformat(iso[:10])
     return f"{d.day} {d.strftime('%b %Y')}"
@@ -662,7 +650,7 @@ def world_map(book):
 def home_html(book):
     recipes = all_recipes(book)
     count, cuisines = len(recipes), len(book)
-    notes = family_notes(book)
+    quick = [r for r in recipes if "quick" in r["tags"]]
     hat = icon_inline().replace("<svg ", '<svg class="hat" ', 1)
 
     def plural(n, word):
@@ -693,19 +681,30 @@ def home_html(book):
         for r in added
     )
 
-    quote = ""
-    if notes:
-        day, r, text = notes[0]
-        more = "".join(
-            f'<li><a href="{nr["url"]}">{html.escape(nr["title"])}</a> <span>{inline(nt)}</span></li>'
-            for _, nr, nt in notes[1:NOTES_COUNT]
-        )
-        quote = f"""
-    <section class="tile tile-note reveal">
-      <p class="eyebrow">From our kitchen</p>
-      <blockquote>{inline(text)}</blockquote>
-      <p class="note-source"><a href="{r['url']}">{html.escape(r['title'])}</a> · {nice_date(day)}</p>
-      <ul class="note-more">{more}</ul>
+    # Quick wins for tonight (home.js reshuffles them), and a tile home.js fills with
+    # this reader's own favourites and recently opened recipes.
+    tonight = ""
+    if quick:
+        picks = "".join(
+            f'<li><a href="{r["url"]}"><strong>{html.escape(r["title"])}</strong>'
+            f'<span>{html.escape(r["cuisine"])} · {html.escape(r["category"])}</span>'
+            f'<small>{meta_line(r)}</small></a></li>'
+            for r in quick[:TONIGHT_COUNT])
+        tonight = f"""
+    <section class="tile tile-tonight reveal">
+      <div class="tonight-head">
+        <div>
+          <p class="eyebrow">Cook tonight</p>
+          <h2>On the table in under {QUICK_MINUTES} minutes</h2>
+        </div>
+        <button type="button" class="pill pill-outline tonight-shuffle" hidden>Shuffle</button>
+      </div>
+      <ul class="tonight-list" data-count="{TONIGHT_COUNT}">{picks}</ul>
+    </section>
+    <section class="tile tile-yours reveal" hidden>
+      <p class="eyebrow">Your kitchen</p>
+      <div class="yours-favs" hidden><h3>{svg_icon("heart")}Favourites</h3><ul></ul></div>
+      <div class="yours-recent" hidden><h3>Recently opened</h3><ul></ul></div>
     </section>"""
 
     cards = []
@@ -745,7 +744,7 @@ def home_html(book):
       <ul class="stats">
         <li><strong>{count}</strong> {'recipe' if count == 1 else 'recipes'}</li>
         <li><strong>{cuisines}</strong> {'cuisine' if cuisines == 1 else 'cuisines'}</li>
-        <li><strong>{len(notes)}</strong> {'kitchen note' if len(notes) == 1 else 'kitchen notes'}</li>
+        <li><strong>{len(quick)}</strong> under {QUICK_MINUTES} min</li>
       </ul>
       <div class="tile-actions">
         <a class="pill pill-solid" href="#kitchens">Browse the kitchens</a>
@@ -755,7 +754,7 @@ def home_html(book):
     <section class="tile tile-recent reveal">
       <p class="eyebrow">Recently added</p>
       <ul>{recent}</ul>
-    </section>{quote}
+    </section>{tonight}
   </div>
 {world_map(book)}
   <section class="kitchens filter-scope" id="kitchens" aria-label="Contents">
@@ -879,9 +878,11 @@ def recipe_page_html(book, r, prev, nxt):
       {f'<p class="hero-intro">{inline(" ".join(intro_md.split()))}</p>' if intro_md else ''}
       <div class="facts">{facts}</div>
       {f'<div class="tags">{tags}</div>' if tags else ''}
+      <p class="cooked" hidden></p>
       <div class="hero-actions">
         <button type="button" class="pill pill-solid start-cooking" hidden>{svg_icon("play")}Start cooking</button>
         <button type="button" class="pill pill-outline add-to-list" hidden>{svg_icon("plus")}Add to shopping list</button>
+        <button type="button" class="pill pill-outline fav-toggle" aria-pressed="false" aria-label="Add to favourites" hidden>{svg_icon("heart")}</button>
       </div>
     </div>
     {photo}

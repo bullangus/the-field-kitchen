@@ -314,6 +314,40 @@
     syncOptions();
   }
 
+  // ---- Favourite, and how often we've cooked it (both kept in this browser) ----
+  var favButton = page.querySelector(".fav-toggle");
+  var syncFav = function () {
+    var on = stored("fk-favs", []).indexOf(url) !== -1;
+    favButton.setAttribute("aria-pressed", String(on));
+    favButton.setAttribute("aria-label", on ? "Remove from favourites" : "Add to favourites");
+  };
+  favButton.hidden = false;
+  favButton.addEventListener("click", function () {
+    var favs = stored("fk-favs", []);
+    var i = favs.indexOf(url);
+    if (i === -1) favs.unshift(url); else favs.splice(i, 1);
+    store("fk-favs", favs);
+    syncFav();
+    if (i === -1) { favButton.classList.remove("pop"); void favButton.offsetWidth; favButton.classList.add("pop"); }
+  });
+  syncFav();
+  var cookedNote = page.querySelector(".cooked");
+  function showCooked() {
+    var c = stored("fk-cooked", {})[url];
+    if (!c) return;
+    var when = new Date(c.last).toLocaleDateString("en-AU", { day: "numeric", month: "short", year: "numeric" });
+    cookedNote.textContent = "Cooked " + (c.n === 1 ? "once" : c.n + " times") + ", last on " + when;
+    cookedNote.hidden = false;
+  }
+  function markCooked() {
+    var all = stored("fk-cooked", {});
+    var c = all[url] || { n: 0 };
+    all[url] = { n: c.n + 1, last: new Date().toISOString().slice(0, 10) };
+    store("fk-cooked", all);
+    showCooked();
+  }
+  showCooked();
+
   // ---- Timers ----
   var tray = null;
   var timers = [];
@@ -567,7 +601,8 @@
     if (reading) speak(steps[at].text.textContent);
     else if (canSpeak && !listening) speechSynthesis.cancel();
   }
-  function next() { if (at === steps.length - 1) closeView(); else showStep(at + 1); }
+  // "Finish" on the last step counts as having cooked it.
+  function next() { if (at === steps.length - 1) { at = steps.length; markCooked(); closeView(); } else showStep(at + 1); }
   function prev() { showStep(at - 1); }
   function setListening(on) {
     listening = on && !!Recognition;

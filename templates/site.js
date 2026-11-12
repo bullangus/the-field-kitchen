@@ -166,7 +166,11 @@
       var q = field.value.trim();
       items = [];
       if (!q) {
-        stored("fk-recent", []).forEach(function (url) {
+        stored("fk-favs", []).forEach(function (url) {
+          var r = index.filter(function (x) { return x.url === url; })[0];
+          if (r) items.push({ group: "Favourites", label: r.title, hint: r.cuisine, go: function () { location.href = root + r.url; } });
+        });
+        stored("fk-recent", []).filter(function (url) { return stored("fk-favs", []).indexOf(url) === -1; }).forEach(function (url) {
           var r = index.filter(function (x) { return x.url === url; })[0];
           if (r) items.push({ group: "Recent", label: r.title, hint: r.cuisine, go: function () { location.href = root + r.url; } });
         });
@@ -255,10 +259,31 @@
     }
   });
 
+  // ---- Favourites: mark them wherever recipes are listed ----
+  var favs = stored("fk-favs", []);
+  [].forEach.call(document.querySelectorAll(".filter-scope [data-tags]"), function (item) {
+    var link = item.href ? item : item.querySelector("a");
+    var isFav = link && favs.some(function (u) { return link.href.slice(-u.length - 1) === "/" + u; });
+    if (!isFav) return;
+    item.classList.add("is-fav");
+    item.setAttribute("data-tags", item.getAttribute("data-tags") + " fav");
+  });
+
   // ---- Filter chips (home and cuisine pages) ----
   [].forEach.call(document.querySelectorAll(".filter-scope"), function (scope) {
     var chips = scope.querySelector(".chips");
     if (!chips) return;
+    // A Favourites chip, once this reader has some here.
+    if (scope.querySelector(".is-fav")) {
+      var favChip = document.createElement("button");
+      favChip.type = "button";
+      favChip.className = "chip chip-fav";
+      favChip.setAttribute("data-filter", "fav");
+      favChip.setAttribute("aria-pressed", "false");
+      favChip.textContent = "Favourites";
+      var all = chips.querySelector(".chip");
+      all.parentNode.insertBefore(favChip, all.nextSibling);
+    }
     var buttons = [].slice.call(chips.querySelectorAll(".chip"));
     var menu = chips.querySelector(".style-menu");
     var groups = [].slice.call(scope.querySelectorAll(".filter-group"));

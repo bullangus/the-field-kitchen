@@ -360,7 +360,10 @@ main.home { max-width: 72rem; padding-top: 1.5rem; }
 .tile-hero { grid-column: span 7; grid-row: span 2; display: flex; flex-direction: column; justify-content: center; }
 .tile-feature { grid-column: span 5; }
 .tile-recent { grid-column: span 5; }
-.tile-note { grid-column: span 12; }
+.tile-tonight { grid-column: span 12; }
+.bento.has-yours .tile-tonight { grid-column: span 7; }
+.tile-yours { grid-column: span 5; }
+.tile-yours[hidden] { display: none; }
 .eyebrow {
   margin: 0 0 0.6rem; font-size: 0.8rem; font-weight: 600; text-transform: uppercase;
   letter-spacing: 0.14em; color: var(--accent);
@@ -419,24 +422,41 @@ main.home { max-width: 72rem; padding-top: 1.5rem; }
 .tile-recent a:hover { color: var(--accent); }
 .tile-recent span { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
 
-.tile-note {
-  display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 0 2.5rem;
-  background: var(--grain), var(--note-bg); border-color: transparent;
+.tile-tonight { background: var(--grain), var(--note-bg); border-color: transparent; }
+.tonight-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+.tonight-head h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); margin: 0; line-height: 1.1; }
+.tonight-shuffle { flex: none; font-size: 0.88rem; padding: 0.4rem 1rem; }
+.tonight-shuffle[hidden] { display: none; }
+.tonight-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 0.75rem; }
+.tonight-list a {
+  display: flex; flex-direction: column; gap: 0.15rem; height: 100%; text-decoration: none;
+  background: var(--card); border: 1px solid var(--rule); border-radius: 16px; padding: 1rem 1.1rem;
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
-.tile-note .eyebrow { grid-column: 1 / -1; }
-.tile-note blockquote {
-  margin: 0; font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(1.4rem, 2.6vw, 1.9rem);
-  line-height: 1.25; font-weight: 500; position: relative; padding-left: 1.6rem;
-}
-.tile-note blockquote::before {
-  content: "\201C"; position: absolute; left: -0.2rem; top: -0.6rem; font-size: 3.5rem; color: var(--accent); line-height: 1;
-}
-.note-source { grid-column: 1; margin: 0.75rem 0 0 1.6rem; color: var(--muted); font-size: 0.9rem; }
-.note-source a { color: var(--ink); text-decoration: none; font-weight: 600; }
-.note-more { grid-column: 2; grid-row: 2 / span 2; list-style: none; margin: 0; padding: 0 0 0 1.5rem; border-left: 1px solid var(--rule); align-self: start; }
-.note-more li { margin: 0 0 0.9rem; font-size: 0.92rem; line-height: 1.45; }
-.note-more a { display: block; text-decoration: none; font-weight: 600; }
-.note-more span { color: var(--muted); font-style: italic; }
+.tonight-list a:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 10px 24px var(--hair); }
+.tonight-list strong { font: 600 1.45rem/1.15 "Cormorant Garamond", Georgia, serif; }
+.tonight-list span { font-variant: small-caps; letter-spacing: 0.06em; color: var(--accent); font-size: 0.9rem; }
+.tonight-list small { margin-top: auto; padding-top: 0.5rem; color: var(--muted); font-size: 0.82rem; font-style: italic; }
+.tile-yours h3 { display: flex; align-items: center; gap: 0.4rem; font-size: 1.35rem; margin: 0 0 0.25rem; }
+.tile-yours h3 svg { width: 1.05rem; height: 1.05rem; color: var(--accent); fill: currentColor; }
+.tile-yours ul { list-style: none; margin: 0 0 1rem; padding: 0; }
+.tile-yours div:last-child ul { margin-bottom: 0; }
+.tile-yours div[hidden] { display: none; }
+.tile-yours li { padding: 0.4rem 0; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; }
+.tile-yours li:first-child { border-top: 0; }
+.tile-yours a { text-decoration: none; font-weight: 600; }
+.tile-yours a:hover { color: var(--accent); }
+.tile-yours li span { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
+
+/* Favourites (kept in this browser): a heart on the recipe, and a mark wherever it's listed. */
+.fav-toggle { padding: 0.55rem 0.7rem; }
+.fav-toggle[hidden], .cooked[hidden] { display: none; }
+.fav-toggle[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); }
+.fav-toggle[aria-pressed="true"] svg { fill: currentColor; }
+.is-fav > h3::after, .is-fav > div > a::after { content: " \2665"; color: var(--accent); font-size: 0.6em; vertical-align: 0.25em; }
+.cooked { margin: 0.5rem 0 0; font-size: 0.85rem; font-style: italic; color: var(--tone-ink); }
+.chip-fav::before { content: "\2665  "; color: var(--accent); }
+.chip-fav[aria-pressed="true"]::before { color: inherit; }
 
 .kitchens { margin-top: 3.5rem; scroll-margin-top: 4.5rem; }
 .section-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.5rem 2rem; margin-bottom: 1.25rem; }
@@ -587,8 +607,16 @@ main.home { max-width: 72rem; padding-top: 1.5rem; }
 
 @media (max-width: 900px) {
   .tile-hero, .tile-feature, .tile-recent { grid-column: span 12; grid-row: auto; }
-  .tile-note { grid-template-columns: 1fr; }
-  .note-more { grid-column: 1; grid-row: auto; border-left: 0; padding: 1.25rem 0 0; }
+  .tile-tonight, .bento.has-yours .tile-tonight, .tile-yours { grid-column: span 12; }
+}
+@media (max-width: 600px) {
+  /* Tonight's picks as a row to swipe through, rather than a tall stack. */
+  .tonight-list {
+    display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
+    margin: 0 -1.4rem; padding: 0 1.4rem 0.25rem; scroll-padding-left: 1.4rem;
+  }
+  .tonight-list::-webkit-scrollbar { display: none; }
+  .tonight-list li { flex: 0 0 78%; scroll-snap-align: start; }
 }
 @media (max-width: 520px) {
   .tile, .tile-hero { padding: 1.4rem; border-radius: 16px; }
@@ -800,6 +828,7 @@ li.done > .step-num { background: var(--accent); color: var(--paper); }
   .fact strong { font-size: 0.93rem; }
   .recipe-hero .hero-actions { flex-wrap: nowrap; gap: 0.45rem; margin-top: 0.9rem; }
   .recipe-hero .hero-actions .pill { flex: 1 1 0; justify-content: center; white-space: nowrap; padding-inline: 0.5rem; }
+  .recipe-hero .hero-actions .fav-toggle { flex: 0 0 auto; padding-inline: 0.8rem; }
 }
 
 /* Step-by-step cooking view (recipe.js) */
