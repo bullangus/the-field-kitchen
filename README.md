@@ -27,7 +27,7 @@
 
 ### Chinese
 - **Beef:** [Mongolian Beef](recipes/Chinese/Beef/mongolian-beef.md)
-- **Chicken:** [Salt & Pepper Wings](recipes/Chinese/Chicken/salt-and-pepper-wings.md)
+- **Chicken:** [Dry Chilli Chicken](recipes/Chinese/Chicken/dry-chilli-chicken.md), [Salt & Pepper Wings](recipes/Chinese/Chicken/salt-and-pepper-wings.md)
 - **Noodles:** [Chilli Bacon Noodles](recipes/Chinese/Noodles/crispy-chilli-bacon-noodles.md)
 - **Pork:** [Dumpling Lasagna](recipes/Chinese/Pork/dumpling-lasagna.md)
 
@@ -62,7 +62,7 @@
 - **Beef:** [Thai Beef Salad](recipes/Thai/Beef/thai-beef-salad.md)
 - **Chicken:** [Satay Chicken](recipes/Thai/Chicken/satay-chicken.md), [Yellow Curry](recipes/Thai/Chicken/yellow-curry.md)
 
-_42 recipes._
+_43 recipes._
 <!-- CONTENTS:END -->
 
 ## How it's organised

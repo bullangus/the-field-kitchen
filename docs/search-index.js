@@ -1798,6 +1798,185 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
+"title": "Dry Chilli Chicken",
+"cuisine": "Chinese",
+"category": "Chicken",
+"url": "chinese/chicken/dry-chilli-chicken.html",
+"text": "2–4 chicken thighs 2.5 cm (1 inch) piece fresh ginger 2 cloves garlic 30 ml (2 tbsp) Shaoxing wine 15 ml (1 tbsp) soy sauce Cornflour (cornstarch), enough to coat the chicken Neutral oil, for deep-frying 3 cups dried Sichuan red chillies 2 tbsp Sichuan red peppercorns 4 cloves garlic, minced 2.5 cm (1 inch) piece fresh ginger, minced 3 spring onions (scallions), chopped A splash of neutral oil 1 tsp salt 4 tbsp (¼ cup) Sichuan chilli flakes 2 tsp sugar 1 tsp MSG Sesame seeds and sliced spring onions, to garnish Spicy",
+"meta": "Serves 2–4",
+"intro": "Crisp, double-fried chicken tossed through toasted dried chillies and Sichuan pepper. Not as spicy as it looks.",
+"photo": "",
+"tags": [
+"chicken",
+"spicy"
+],
+"serves": 2,
+"ingredients": [
+{
+"t": "2–4 chicken thighs",
+"n": "Chicken thighs",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bchicken thighs?\\b|\\bchicken\\b",
+"q": 4.0,
+"u": null
+},
+{
+"t": "2.5 cm (1 inch) piece fresh ginger",
+"n": "Fresh ginger",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bginger\\b",
+"q": 2.5,
+"u": "cm"
+},
+{
+"t": "2 cloves garlic",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 2.0,
+"u": "cloves"
+},
+{
+"t": "30 ml (2 tbsp) Shaoxing wine",
+"n": "Shaoxing wine",
+"a": "Wine & spirits",
+"s": false,
+"p": "\\bshaoxing\\b|\\brice wine\\b",
+"q": 30.0,
+"u": "ml"
+},
+{
+"t": "15 ml (1 tbsp) soy sauce",
+"n": "Soy sauce",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bsoy sauce\\b|\\bsoy\\b",
+"q": 15.0,
+"u": "ml"
+},
+{
+"t": "Cornflour (cornstarch), enough to coat the chicken",
+"n": "Cornflour",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bcornflour\\b|\\bcornstarch\\b|\\bpotato starch\\b|\\bstarch\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Neutral oil, for deep-frying",
+"n": "Neutral oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\boil\\b",
+"q": null,
+"u": null
+},
+{
+"t": "3 cups dried Sichuan red chillies",
+"n": "Dried red chillies",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bdried sichuan red chillies\\b|\\bdried chillies\\b|\\bchillies\\b|\\bchillies\\b",
+"q": 3.0,
+"u": null
+},
+{
+"t": "2 tbsp Sichuan red peppercorns",
+"n": "Sichuan peppercorns",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bsichuan pepper|\\bsichuan red pepper|\\bsichuan\\b|\\bsichuan\\b",
+"q": 6.0,
+"u": "tsp"
+},
+{
+"t": "4 cloves garlic, minced",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 4.0,
+"u": "cloves"
+},
+{
+"t": "2.5 cm (1 inch) piece fresh ginger, minced",
+"n": "Fresh ginger",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bginger\\b",
+"q": 2.5,
+"u": "cm"
+},
+{
+"t": "3 spring onions (scallions), chopped",
+"n": "Spring onions",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bspring onions?\\b|\\bgreen onions?\\b|\\bscallions?\\b",
+"q": 3.0,
+"u": null
+},
+{
+"t": "A splash of neutral oil",
+"n": "Neutral oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\boil\\b",
+"q": null,
+"u": null
+},
+{
+"t": "1 tsp salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": 1.0,
+"u": "tsp"
+},
+{
+"t": "4 tbsp (¼ cup) Sichuan chilli flakes",
+"n": "Chilli flakes",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bchilli flakes\\b|\\bchilli\\b",
+"q": 12.0,
+"u": "tsp"
+},
+{
+"t": "2 tsp sugar",
+"n": "Sugar",
+"a": "Pantry & sauces",
+"s": true,
+"p": "\\bsugar\\b",
+"q": 2.0,
+"u": "tsp"
+},
+{
+"t": "1 tsp MSG",
+"n": "MSG",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bmsg\\b",
+"q": 1.0,
+"u": "tsp"
+},
+{
+"t": "Sesame seeds and sliced spring onions, to garnish",
+"n": "Sesame seeds",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bsesame seeds\\b",
+"q": null,
+"u": null
+}
+]
+},
+{
 "title": "Salt & Pepper Wings",
 "cuisine": "Chinese",
 "category": "Chicken",
@@ -1845,7 +2024,7 @@ window.FIELD_KITCHEN_INDEX = [
 "n": "Sichuan peppercorns",
 "a": "Herbs & spices",
 "s": false,
-"p": "\\bsichuan pepper|\\bsichuan\\b",
+"p": "\\bsichuan pepper|\\bsichuan red pepper|\\bsichuan\\b|\\bsichuan\\b",
 "q": 1.0,
 "u": "tsp"
 },
