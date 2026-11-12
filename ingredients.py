@@ -199,6 +199,8 @@ INGREDIENTS = [
     (r"\bcelery\b", "Celery", PRODUCE, False),
     (r"\bcucumber\b", "Cucumber", PRODUCE, False),
     (r"\basparagus\b", "Asparagus", PRODUCE, False),
+    (r"\bpeas and corn\b", "Frozen peas and corn", PRODUCE, False),
+    (r"\bfrozen peas\b", "Frozen peas", PRODUCE, False),
     (r"\bspinach\b", "Baby spinach", PRODUCE, False),
     (r"\bcos\b", "Cos lettuce", PRODUCE, False),
     (r"\blettuce\b|\bcabbage\b|\bsalad greens\b", "Lettuce and cabbage", PRODUCE, False),

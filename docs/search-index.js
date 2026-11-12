@@ -874,7 +874,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "British",
 "category": "Beef",
 "url": "british/beef/cottage-pie.html",
-"text": "4 washed potatoes, peeled and chopped Salt and pepper 56 g (¼ cup) butter, cut into chunks 30 ml (2 tbsp) milk or cream 15 ml (1 tbsp) olive oil 450 g (1 lb) beef mince 1 medium brown onion, diced 2 medium carrots, diced 2 cloves garlic, pressed or minced 1 tsp Italian seasoning 16 g (2 tbsp) plain (all-purpose) flour 30 ml (2 tbsp) tomato sauce (ketchup) or tomato paste 360 ml (1½ cups) chicken stock 5 ml (1 tsp) Worcestershire sauce 70 g (½ cup) frozen peas MSG, to taste A handful of grated mozzarella A handful of finely grated Parmesan",
+"text": "4 washed potatoes, peeled and chopped Salt and pepper 56 g (¼ cup) butter, cut into chunks 30 ml (2 tbsp) milk or cream 15 ml (1 tbsp) olive oil 450 g (1 lb) beef mince 1 medium brown onion, diced 2 medium carrots, diced 2 cloves garlic, pressed or minced 1 tsp Italian seasoning 16 g (2 tbsp) plain (all-purpose) flour 30 ml (2 tbsp) tomato sauce (ketchup) or tomato paste 360 ml (1½ cups) chicken stock 5 ml (1 tsp) Worcestershire sauce 70 g (½ cup) frozen peas and corn MSG, to taste A handful of grated mozzarella A handful of finely grated Parmesan",
 "meta": "Serves 4 · Prep 10 min · Cook 45 min",
 "intro": "Beef, carrot and pea filling under buttery mash, finished with a mozzarella and Parmesan top. Made and baked in one ovenproof pan.",
 "photo": "",
@@ -1010,11 +1010,11 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "ml"
 },
 {
-"t": "70 g (½ cup) frozen peas",
-"n": "Frozen peas",
-"a": "Other",
+"t": "70 g (½ cup) frozen peas and corn",
+"n": "Frozen peas and corn",
+"a": "Fruit & veg",
 "s": false,
-"p": "",
+"p": "\\bpeas and corn\\b|\\bcorn\\b",
 "q": 70.0,
 "u": "g"
 },

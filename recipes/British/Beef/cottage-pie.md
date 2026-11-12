@@ -30,7 +30,7 @@ Beef, carrot and pea filling under buttery mash, finished with a mozzarella and 
 - 30 ml (2 tbsp) tomato sauce (ketchup) or tomato paste
 - 360 ml (1½ cups) chicken stock
 - 5 ml (1 tsp) Worcestershire sauce
-- 70 g (½ cup) frozen peas
+- 70 g (½ cup) frozen peas and corn
 - MSG, to taste
 
 ### For the top
@@ -46,7 +46,7 @@ Beef, carrot and pea filling under buttery mash, finished with a mozzarella and 
 4. Spoon off and discard all but a couple of teaspoons of fat from the pan. Turn the heat to medium, add the onion and carrots and cook until the onion begins to soften, about 5 minutes.
 5. Add the garlic and Italian seasoning and cook for 30 seconds.
 6. Stir in the flour and tomato sauce or paste and cook for 1 minute. Stir in the stock and Worcestershire sauce. Bring to a simmer and cook, stirring occasionally, for 3–6 minutes, until thickened.
-7. Take the pan off the heat and season with salt, pepper and MSG to taste. Stir in the beef and the frozen peas.
+7. Take the pan off the heat and season with salt, pepper and MSG to taste. Stir in the beef and the frozen peas and corn.
 8. Add the butter to the potatoes and mash until smooth. Stir in the milk or cream and season with salt and pepper to taste.
 9. Spoon the mash over the filling in the pan and spread it out evenly.
 10. Bake for 30 minutes. Take it out of the oven, scatter over the mozzarella and Parmesan, and return it to the oven for 15 minutes.
