@@ -47,7 +47,7 @@
 ### Japanese
 - **Breads:** [Shokupan](recipes/Japanese/Breads/shokupan.md)
 - **Chicken:** [Chicken Nanban](recipes/Japanese/Chicken/chicken-nanban.md), [Karaage](recipes/Japanese/Chicken/karaage.md), [Katsu Curry](recipes/Japanese/Chicken/katsu-curry.md), [Tebasaki Wings](recipes/Japanese/Chicken/nagoya-chicken-wings.md)
-- **Eggs:** [Ramen Eggs](recipes/Japanese/Eggs/ramen-egg.md)
+- **Eggs:** [Egg Sando](recipes/Japanese/Eggs/egg-sando.md), [Ramen Eggs](recipes/Japanese/Eggs/ramen-egg.md)
 - **Pork:** [Tonkatsu](recipes/Japanese/Pork/tonkatsu.md)
 
 ### Mexican
@@ -64,7 +64,7 @@
 - **Beef:** [Thai Beef Salad](recipes/Thai/Beef/thai-beef-salad.md)
 - **Chicken:** [Satay Chicken](recipes/Thai/Chicken/satay-chicken.md), [Yellow Curry](recipes/Thai/Chicken/yellow-curry.md)
 
-_45 recipes._
+_46 recipes._
 <!-- CONTENTS:END -->
 
 ## How it's organised

@@ -4627,6 +4627,106 @@ window.FIELD_KITCHEN_INDEX = [
 "options": []
 },
 {
+"title": "Egg Sando",
+"cuisine": "Japanese",
+"category": "Eggs",
+"url": "japanese/eggs/egg-sando.html",
+"text": "6 slices shokupan (Japanese milk bread) Spreadable butter 5 ml (1 tsp) vinegar 5 large eggs 45 ml (3 tbsp) Kewpie mayonnaise 15 ml (1 tbsp) milk ¼ tsp salt ¼ tsp black pepper ½ tsp sugar Vegetarian",
+"meta": "Serves 3 · Prep 5 min · Cook 10 min",
+"intro": "The Japanese convenience-store egg sandwich: creamy Kewpie egg salad in soft, crustless Shokupan.",
+"photo": "",
+"tags": [
+"eggs",
+"vegetarian",
+"quick"
+],
+"serves": 3,
+"ingredients": [
+{
+"t": "6 slices shokupan (Japanese milk bread)",
+"n": "Shokupan (Japanese milk bread)",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bshokupan\\b",
+"q": 6.0,
+"u": null
+},
+{
+"t": "Spreadable butter",
+"n": "Butter",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bbutter\\b",
+"q": null,
+"u": null
+},
+{
+"t": "5 ml (1 tsp) vinegar",
+"n": "White wine vinegar",
+"a": "Oils & vinegars",
+"s": false,
+"p": "\\bvinegar\\b",
+"q": 5.0,
+"u": "ml"
+},
+{
+"t": "5 large eggs",
+"n": "Eggs",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\beggs?\\b",
+"q": 5.0,
+"u": null
+},
+{
+"t": "45 ml (3 tbsp) Kewpie mayonnaise",
+"n": "Kewpie mayonnaise",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bkewpie\\b",
+"q": 45.0,
+"u": "ml"
+},
+{
+"t": "15 ml (1 tbsp) milk",
+"n": "Milk",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bmilk\\b",
+"q": 15.0,
+"u": "ml"
+},
+{
+"t": "¼ tsp salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": 0.25,
+"u": "tsp"
+},
+{
+"t": "¼ tsp black pepper",
+"n": "Pepper",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bpepper(corns)?\\b",
+"q": 0.25,
+"u": "tsp"
+},
+{
+"t": "½ tsp sugar",
+"n": "Sugar",
+"a": "Pantry & sauces",
+"s": true,
+"p": "\\bsugar\\b",
+"q": 0.5,
+"u": "tsp"
+}
+],
+"options": []
+},
+{
 "title": "Ramen Eggs",
 "cuisine": "Japanese",
 "category": "Eggs",
