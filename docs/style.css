@@ -554,6 +554,23 @@ main.home { max-width: 72rem; padding-top: 1.5rem; }
 .pin:hover .pin-dot, .pin:focus-visible .pin-dot { r: 3.4; }
 .pin:hover text, .pin:focus-visible text { fill: var(--tone-ink); }
 .pin:focus-visible { outline: none; }
+.pin .pin-hit { fill: transparent; }
+/* Every kitchen by name under the map: easier to tap than a pin on a small screen. */
+.atlas-legend { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 1rem 0 0; padding: 0; }
+.atlas-legend a {
+  display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.9rem;
+  text-decoration: none; color: var(--ink); background: var(--paper); border: 1px solid var(--rule);
+  border-radius: 999px; padding: 0.35rem 0.8rem;
+}
+.atlas-legend a:hover, .atlas-legend a:focus-visible { border-color: var(--t1-ink); color: var(--t1-ink); }
+.legend-dot { flex: none; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--t1-ink); }
+.atlas-legend small { color: var(--muted); font-size: 0.78rem; }
+@media (max-width: 600px) {
+  /* Map labels are unreadably small on a phone; the kitchens are named underneath instead. */
+  .pin text { display: none; }
+  .pin .pin-dot { r: 3; }
+  .pin .pin-hit { r: 11; }
+}
 @media (prefers-reduced-motion: no-preference) {
   .pin .pin-pulse { animation: fk-pulse 2.6s ease-out infinite; }
   .pin:nth-of-type(2n) .pin-pulse { animation-delay: 0.8s; }
