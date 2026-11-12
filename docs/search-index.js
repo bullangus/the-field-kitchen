@@ -2448,9 +2448,9 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Chinese",
 "category": "Noodles",
 "url": "chinese/noodles/chilli-oil-noodles.html",
-"text": "1 packet spicy instant ramen noodles 1 clove garlic 1 spring onion, green part only, finely sliced 1 egg 45 ml (3 tbsp) peanut oil 15 ml (1 tbsp) soy sauce 15 ml (1 tbsp) Chinese black vinegar Spicy",
+"text": "1 packet Shin Ramyun noodles 1 clove garlic 1 spring onion, green part only, finely sliced 1 egg 45 ml (3 tbsp) peanut oil 15 ml (1 tbsp) soy sauce 15 ml (1 tbsp) Chinese black vinegar Spicy",
 "meta": "Serves 1 · Prep 5 min · Cook 5 min",
-"intro": "Packet ramen dressed up: smoking-hot oil poured over the seasoning and garlic, then soy, black vinegar and a crispy fried egg.",
+"intro": "Shin Ramyun dressed up: smoking-hot oil poured over its seasoning packet and garlic, then soy, black vinegar and a crispy fried egg. It has to be Shin Ramyun, because its seasoning makes the chilli oil.",
 "photo": "",
 "tags": [
 "noodles",
@@ -2460,11 +2460,11 @@ window.FIELD_KITCHEN_INDEX = [
 "serves": 1,
 "ingredients": [
 {
-"t": "1 packet spicy instant ramen noodles",
-"n": "Instant ramen noodles",
+"t": "1 packet Shin Ramyun noodles",
+"n": "Shin Ramyun noodles",
 "a": "Bread, pasta & rice",
 "s": false,
-"p": "\\binstant ramen\\b|\\bramen noodles\\b|\\bramen\\b|\\bramen\\b",
+"p": "\\bshin ramyun\\b|\\bramyun\\b",
 "q": 1.0,
 "u": null
 },

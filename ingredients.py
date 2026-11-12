@@ -138,6 +138,7 @@ INGREDIENTS = [
     (r"\bself-raising\b", "Self-raising flour", GRAINS, False),
     (r"\bshokupan\b", "Shokupan (Japanese milk bread)", GRAINS, False),
     (r"\bcavatappi\b", "Cavatappi pasta", GRAINS, False),
+    (r"\bshin ramyun\b", "Shin Ramyun noodles", GRAINS, False),
     (r"\binstant ramen\b|\bramen noodles\b", "Instant ramen noodles", GRAINS, False),
     (r"\bbread flour\b", "Bread flour", GRAINS, False),
     (r"\btipo 00\b", "Tipo 00 flour", GRAINS, False),
