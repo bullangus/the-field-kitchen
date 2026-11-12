@@ -412,6 +412,19 @@
   }
 
   // ---- Step-by-step cooking view ----
+  // Line icons in the same style as the rest of the site (see NAV_ICONS in build.py).
+  var ICONS = {
+    speaker: '<path d="M4 9.5v5h3.5L12 18V6L7.5 9.5z"/><path d="M15.5 9.5a3.5 3.5 0 0 1 0 5M18 7a7 7 0 0 1 0 10"/>',
+    mic: '<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v3"/>',
+    close: '<path d="M6 6l12 12M18 6 6 18"/>',
+    timer: '<circle cx="12" cy="13.5" r="7"/><path d="M12 13.5V10M9.5 3h5"/>',
+    left: '<path d="M19 12H5M11 6l-6 6 6 6"/>',
+    right: '<path d="M5 12h14M13 6l6 6-6 6"/>'
+  };
+  function icon(name) {
+    return '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" ' +
+      'stroke-linecap="round" stroke-linejoin="round">' + ICONS[name] + "</svg>";
+  }
   var startButton = page.querySelector(".start-cooking");
   if (!steps.length) return;
   startButton.hidden = false;
@@ -483,9 +496,15 @@
     var s = steps[at];
     view.querySelector(".cv-stage").textContent = s.stage;
     view.querySelector(".cv-count").textContent = "Step " + (at + 1) + " of " + steps.length;
-    view.querySelector(".cv-bar span").style.width = ((at + 1) / steps.length * 100) + "%";
+    [].forEach.call(view.querySelectorAll(".cv-track button"), function (b, i) {
+      b.classList.toggle("done", i < at);
+      if (i === at) b.setAttribute("aria-current", "step"); else b.removeAttribute("aria-current");
+    });
     var text = view.querySelector(".cv-text");
     text.textContent = s.text.textContent;
+    // Short steps are set huge, to read from across the bench; long ones step down to fit.
+    var length = s.text.textContent.length;
+    text.setAttribute("data-size", length > 260 ? "long" : length > 130 ? "medium" : "short");
     text.classList.remove("enter"); void text.offsetWidth; text.classList.add("enter");
     var uses = view.querySelector(".cv-uses");
     uses.textContent = "";
@@ -498,7 +517,11 @@
         chip.appendChild(b);
         chip.appendChild(document.createTextNode(" "));
       }
-      chip.appendChild(document.createTextNode(part.name || li.getAttribute("data-name") || ""));
+      // "680 g boneless, skin-on chicken thighs" would shorten to "boneless": when the
+      // short name has lost the ingredient itself, use its shopping name instead.
+      var rx = patternOf(li), name = part.name;
+      if (!name || (rx && !rx.test(name))) name = (li.getAttribute("data-name") || name || "").toLowerCase();
+      chip.appendChild(document.createTextNode(name));
       uses.appendChild(chip);
     });
     uses.hidden = !uses.childNodes.length;
@@ -508,12 +531,13 @@
       var b = document.createElement("button");
       b.type = "button";
       b.className = "pill pill-outline";
-      b.textContent = "⏱ Start " + d.label + " timer";
+      b.innerHTML = icon("timer");
+      b.appendChild(document.createTextNode("Start " + d.label + " timer"));
       b.addEventListener("click", function () { startTimer(d.minutes, (s.stage ? s.stage + ": " : "") + d.label); });
       timerBox.appendChild(b);
     });
     view.querySelector(".cv-prev").disabled = at === 0;
-    view.querySelector(".cv-next").textContent = at === steps.length - 1 ? "Finish" : "Next →";
+    view.querySelector(".cv-next").innerHTML = at === steps.length - 1 ? "Finish" : "Next" + icon("right");
     if (listening || reading) speak(s.text.textContent);
   }
   function setReading(on) {
@@ -560,15 +584,26 @@
     view.innerHTML =
       '<header class="cv-head"><span class="cv-title"></span>' +
       '<select class="cv-voice-pick" aria-label="Reading voice" hidden></select>' +
-      '<button type="button" class="cv-read" aria-pressed="false" hidden>🔊 Read aloud</button>' +
-      '<button type="button" class="cv-voice" aria-pressed="false" hidden>🎤 Hands-free</button>' +
-      '<button type="button" class="cv-close" aria-label="Close">×</button></header>' +
-      '<div class="cv-bar"><span></span></div>' +
+      '<button type="button" class="cv-read" aria-pressed="false" hidden>' + icon("speaker") + 'Read aloud</button>' +
+      '<button type="button" class="cv-voice" aria-pressed="false" hidden>' + icon("mic") + 'Hands-free</button>' +
+      '<button type="button" class="cv-close" aria-label="Close">' + icon("close") + '</button></header>' +
+      '<ol class="cv-track" aria-label="Steps"></ol>' +
       '<div class="cv-body"><p class="cv-stage"></p><p class="cv-count"></p><p class="cv-text" aria-live="polite"></p>' +
       '<div class="cv-uses"></div><div class="cv-timers"></div></div>' +
-      '<footer class="cv-foot"><button type="button" class="pill pill-outline cv-prev">← Back</button>' +
-      '<p class="cv-hint"></p><button type="button" class="pill pill-solid cv-next">Next →</button>' +
-      '<p class="cv-awake" hidden>☀ Screen stays on while you cook</p></footer>';
+      '<footer class="cv-foot"><button type="button" class="pill pill-outline cv-prev">' + icon("left") + 'Back</button>' +
+      '<p class="cv-hint"></p><button type="button" class="pill pill-solid cv-next"></button>' +
+      '<p class="cv-awake" hidden>Screen stays on while you cook</p></footer>';
+    // One segment per step: see how far along you are, and tap to jump.
+    var track = view.querySelector(".cv-track");
+    steps.forEach(function (s, i) {
+      var li = document.createElement("li");
+      var b = document.createElement("button");
+      b.type = "button";
+      b.setAttribute("aria-label", "Go to step " + (i + 1));
+      b.addEventListener("click", function () { showStep(i); });
+      li.appendChild(b);
+      track.appendChild(li);
+    });
     view.querySelector(".cv-title").textContent = title;
     view.querySelector(".cv-hint").textContent = Recognition
       ? "Swipe, use the arrow keys, or turn on hands-free and say “next”, “back”, “repeat” or “timer”."

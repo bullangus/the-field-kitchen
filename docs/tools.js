@@ -36,7 +36,8 @@
     if (u === "ml") return q >= 1000 ? Math.round(q / 100) / 10 + " l" : metric(q) + " ml";
     if (u === "tsp") return q >= 3 && Math.abs(q / 3 - Math.round(q / 1.5) / 2) < 0.01 ? frac(q / 3) + " tbsp" : frac(q) + " tsp";
     if (u === "cm") return Math.ceil(q) + " cm";
-    return (q > 1 ? String(Math.ceil(q - 0.05)) : frac(q)) + (u ? " " + u : "");
+    var whole = q > 1 ? Math.ceil(q - 0.05) : 0;
+    return (whole ? String(whole) : frac(q)) + (u ? " " + (whole > 1 ? u : u.replace(/s$/, "")) : "");
   }
 
   // ---- Shopping list ----

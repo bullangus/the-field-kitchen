@@ -804,36 +804,57 @@ html.cooking { overflow: hidden; }
 .cv-title { margin-right: auto; font: 600 1.3rem "Cormorant Garamond", Georgia, serif; }
 .cv-voice, .cv-read, .cv-close, .cv-voice-pick {
   font: inherit; cursor: pointer; border: 1px solid var(--rule); background: var(--card); color: var(--ink);
-  border-radius: 999px; padding: 0.4rem 0.9rem;
+  border-radius: 999px; padding: 0.4rem 0.9rem; display: inline-flex; align-items: center; gap: 0.4rem;
 }
+.cook-view svg { width: 1.15rem; height: 1.15rem; flex: none; }
 .cv-voice[aria-pressed="true"], .cv-read[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--paper); }
 .cv-voice-pick { max-width: 14rem; font: inherit; font-size: 0.85rem; cursor: pointer; }
 .cv-voice-pick[hidden], .cv-read[hidden], .cv-voice[hidden] { display: none; }
-@media (max-width: 600px) { .cv-title { flex-basis: 100%; } .cv-voice-pick { max-width: 9.5rem; } }
-.cv-close { width: 2.5rem; height: 2.5rem; padding: 0; font-size: 1.4rem; line-height: 1; }
-.cv-bar { height: 4px; background: var(--rule); }
-.cv-bar span { display: block; height: 100%; width: 0; background: var(--accent); transition: width 0.35s ease; }
+@media (max-width: 600px) {
+  /* Title and close share the first row; the voice controls sit under them. */
+  .cv-title { flex-basis: calc(100% - 3.75rem); }
+  .cv-close { order: 1; }
+  .cv-voice-pick, .cv-read, .cv-voice { order: 2; }
+  .cv-voice-pick { max-width: 9.5rem; }
+}
+.cv-close { width: 2.5rem; height: 2.5rem; padding: 0; justify-content: center; }
+/* Step tracker: a segment per step, filled as you go; each one jumps to its step. */
+.cv-track { list-style: none; display: flex; gap: 4px; margin: 0; padding: 0 clamp(1rem, 4vw, 2.5rem); }
+.cv-track li { flex: 1; min-width: 0; }
+.cv-track button { display: block; width: 100%; height: 1.75rem; padding: 0; border: 0; background: none; cursor: pointer; position: relative; }
+.cv-track button::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 5px; margin-top: -2.5px; border-radius: 999px;
+  background: var(--rule); transition: background 0.25s ease, height 0.2s ease, margin 0.2s ease;
+}
+.cv-track button.done::before { background: var(--accent); opacity: 0.55; }
+.cv-track button[aria-current]::before { background: var(--accent); height: 9px; margin-top: -4.5px; }
+.cv-track button:hover::before, .cv-track button:focus-visible::before { background: var(--accent); opacity: 1; }
+.cv-track button:focus-visible { outline: none; }
 .cv-body {
-  flex: 1; overflow: auto; width: 100%; max-width: 52rem; margin: 0 auto;
-  padding: clamp(1.5rem, 6vh, 4rem) clamp(1.25rem, 5vw, 3rem);
+  flex: 1; overflow: auto; width: 100%; max-width: 64rem; margin: 0 auto;
+  padding: clamp(1rem, 4vh, 3rem) clamp(1.25rem, 5vw, 3rem);
+  display: grid; align-content: safe center;
 }
 .cv-stage { margin: 0; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--accent); }
-.cv-count { margin: 0.25rem 0 1.25rem; color: var(--muted); font-style: italic; }
-.cv-text { font: 500 clamp(1.6rem, 4.2vw, 2.6rem)/1.3 "Cormorant Garamond", Georgia, serif; margin: 0 0 1.75rem; }
+.cv-count { margin: 0.25rem 0 1rem; color: var(--muted); font-style: italic; }
+.cv-text { font: 500 clamp(2rem, 5.4vw, 3.9rem)/1.18 "Cormorant Garamond", Georgia, serif; margin: 0 0 1.75rem; text-wrap: pretty; }
+.cv-text[data-size="medium"] { font-size: clamp(1.75rem, 4.3vw, 3rem); line-height: 1.22; }
+.cv-text[data-size="long"] { font-size: clamp(1.45rem, 3.2vw, 2.3rem); line-height: 1.28; }
 .cv-text.enter { animation: fk-step 0.35s ease; }
 @keyframes fk-step { from { opacity: 0; transform: translateX(18px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .cv-text.enter { animation: none; } }
-.cv-uses { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.25rem; }
+.cv-uses { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-bottom: 1.25rem; }
 .cv-uses::before { content: "You'll need"; width: 100%; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
 .cv-uses[hidden] { display: none; }
-.cv-uses span { background: var(--card); border: 1px solid var(--rule); border-radius: 999px; padding: 0.3rem 0.85rem; font-size: 1rem; }
+.cv-uses span { background: var(--card); border: 1px solid var(--rule); border-radius: 999px; padding: 0.4rem 1rem; font-size: clamp(1rem, 1.6vw, 1.2rem); }
 .cv-uses b { color: var(--accent); font-weight: 600; }
 .cv-timers { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .cv-foot {
   display: flex; align-items: center; gap: 1rem; padding: 1rem clamp(1rem, 4vw, 2.5rem) max(1rem, env(safe-area-inset-bottom));
   border-top: 1px solid var(--rule);
 }
-.cv-foot .pill { padding: 0.75rem 1.5rem; font-size: 1.05rem; }
+.cv-foot .pill { padding: 0.85rem 1.6rem; font-size: 1.1rem; }
+.cv-next { min-width: 8.5rem; justify-content: center; }
 .cv-foot .pill:disabled { opacity: 0.35; cursor: default; transform: none; }
 .cv-foot { flex-wrap: wrap; }
 .cv-awake { flex-basis: 100%; margin: 0; text-align: center; font-size: 0.78rem; color: var(--muted); }
