@@ -981,7 +981,7 @@ window.FIELD_KITCHEN_INDEX = [
 "url": "australian/sides/nans-christmas-pasta-salad.html",
 "text": "500 g spiral pasta (fusilli), or any shape you like 2 kabana sticks 220 ml (⅔ of a 330 ml bottle) thousand island dressing 3 spring onions, thinly sliced (optional) Christmas",
 "meta": "Serves 4–6",
-"intro": "Nan's pasta salad, the side we have every Christmas. Spirals of pasta, kabana and plenty of thousand island dressing, simple and impossible to stop picking at. Serve it warm or cool.",
+"intro": "My husband's Nan's pasta salad, the side we have every Christmas. Spirals of pasta, kabana and plenty of thousand island dressing, simple and impossible to stop picking at. Serve it warm or cool.",
 "photo": "",
 "tags": [
 "sides",

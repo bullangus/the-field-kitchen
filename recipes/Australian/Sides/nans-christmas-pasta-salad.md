@@ -7,9 +7,9 @@ serves: 4–6
 source: Family recipe
 ---
 
-Nan's pasta salad, the side we have every Christmas. Spirals of pasta, kabana and plenty of thousand island dressing, simple and impossible to stop picking at. Serve it warm or cool.
+My husband's Nan's pasta salad, the side we have every Christmas. Spirals of pasta, kabana and plenty of thousand island dressing, simple and impossible to stop picking at. Serve it warm or cool.
 
-Nan made it for Christmas and for the horse owners' functions, and it has been on our Christmas table for as long as we can remember. It's simple and unfussy, and that's the point: it tastes like home, like long tables and the noise of everyone together. Making it now feels like keeping a little bit of her at the table with us.
+Nan made it for Christmas and for the horse owners' functions, and it has been on his family's Christmas table for as long as anyone can remember, and now on ours. It's simple and unfussy, and that's the point: it tastes like home, like long tables and the noise of everyone together. Making it now feels like keeping a little bit of her at the table with us.
 
 ## Ingredients
 
