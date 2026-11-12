@@ -898,6 +898,9 @@ html.cooking { overflow: hidden; }
 .footer-meta { margin: 0; font-size: 0.8rem; font-variant: small-caps; letter-spacing: 0.08em; color: var(--muted); }
 .footer-meta a { text-decoration: none; color: var(--ink); }
 .footer-meta a:hover { color: var(--accent); }
+/* Everywhere but the home page and the printed book: one quiet line. */
+.site-footer.slim { margin-top: 4rem; padding: 1.25rem 16px; border-top-width: 1px; background: none; }
+.site-footer.slim .footer-meta span { color: var(--accent); font-style: italic; font-variant: normal; letter-spacing: 0; }
 
 /* Print book: on screen, an intro and the pages as paper sheets */
 .print-intro {

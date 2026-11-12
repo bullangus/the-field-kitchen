@@ -485,23 +485,30 @@ def recipe_html(r, root="", anchor=None):
 </article>"""
 
 
-def footer_html(book, root, colophon=False):
-    """The sign-off on every page; in the printed book it becomes the last page."""
+def footer_html(book, root, style="slim"):
+    """The sign-off: one quiet line on most pages ("slim"), the full signed footer on
+    the home page ("full"), and the last page of the printed book ("colophon")."""
     n = len(all_recipes(book))
+    meta = (f'<a href="{root}index.html">{TITLE}</a> · Est. {ESTABLISHED} · '
+            f'{n} recipe{"s" if n != 1 else ""} and counting')
+    if style == "slim":
+        return f"""<footer class="site-footer slim">
+  <p class="footer-meta">{meta} · Collected, cooked and written down by <span>{AUTHOR}</span></p>
+</footer>"""
     hat = icon_inline().replace("<svg ", '<svg class="footer-hat" ', 1)
-    css = "site-footer colophon" if colophon else "site-footer"
+    css = "site-footer colophon" if style == "colophon" else "site-footer"
     return f"""<footer class="{css}">
   <div class="inner">
     {hat}
     <p class="footer-sign">Collected, cooked and written down by <span>{AUTHOR}</span></p>
     <p class="footer-story">Every recipe here has been made at our table, tweaked a little and argued over a lot. This book is meant to be cooked from: splattered, scribbled in and handed down, like the recipe tins and dog-eared cards that came before it.</p>
     <div class="ornament">· · ·</div>
-    <p class="footer-meta"><a href="{root}index.html">{TITLE}</a> · Est. {ESTABLISHED} · {n} recipe{'s' if n != 1 else ''} and counting</p>
+    <p class="footer-meta">{meta}</p>
   </div>
 </footer>"""
 
 
-def page(book, depth, page_title, content, current=None, main_class=None):
+def page(book, depth, page_title, content, current=None, main_class=None, footer="slim"):
     root = "../" * depth
     template = (TEMPLATES / "page.html").read_text(encoding="utf-8")
     return (template.replace("{{PAGE_TITLE}}", html.escape(page_title))
@@ -509,7 +516,7 @@ def page(book, depth, page_title, content, current=None, main_class=None):
                     .replace("{{NAV}}", nav_html(book, root, current))
                     .replace("{{MAIN_CLASS}}", f' class="{main_class}"' if main_class else "")
                     .replace("{{CONTENT}}", content)
-                    .replace("{{FOOTER}}", footer_html(book, root)))
+                    .replace("{{FOOTER}}", footer_html(book, root, footer)))
 
 
 def date_added(r):
@@ -731,7 +738,7 @@ def home_html(book):
     </div>
   </section>
   <script src="{HOME_SCRIPT}" defer></script>"""
-    return page(book, 0, TITLE, content, main_class="home")
+    return page(book, 0, TITLE, content, main_class="home", footer="full")
 
 
 def recipe_card(r, href):
@@ -957,7 +964,7 @@ def book_html(book):
                     .replace("{{PRINT_ICON}}", svg_icon("printer"))
                     .replace("{{CONTENTS}}", toc)
                     .replace("{{BODY}}", "\n".join(body))
-                    .replace("{{FOOTER}}", footer_html(book, "", colophon=True)))
+                    .replace("{{FOOTER}}", footer_html(book, "", "colophon")))
 
 
 def manifest():
