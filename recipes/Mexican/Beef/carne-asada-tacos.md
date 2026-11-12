@@ -8,7 +8,7 @@ time: Prep 20 min + 2–8 hr marinating · Cook about 1 hr
 source: Our own, loosely based on Isabel Eats' carne asada tacos
 ---
 
-Citrus-marinated steak, reverse-seared so the outside chars without burning, sliced thin and piled into charred corn tortillas with cumin guacamole, salted paneer "queso fresco" and a quick lime onion. Start the marinade a few hours ahead.
+Taco night, with everyone building their own and the table covered in bowls. Citrus-marinated steak, reverse-seared so the outside chars without burning, sliced thin and piled into charred corn tortillas with cumin guacamole, salted paneer "queso fresco" and a quick lime onion. Start the marinade a few hours ahead.
 
 ## Ingredients
 

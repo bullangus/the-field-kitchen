@@ -8,7 +8,7 @@ time: Prep 10 min + at least 4 hr curing · Cook about 1 hr
 source: https://www.marionskitchen.com/crispy-salt-and-pepper-wings/
 ---
 
-Double-fried for extra crunch and seasoned with three kinds of peppercorn. Using just one type of peppercorn works fine too.
+The wings that vanish first from any platter. They're double-fried for extra crunch and seasoned with three kinds of peppercorn for a warm, tingling heat, though just one type of peppercorn works fine too.
 
 ## Ingredients
 

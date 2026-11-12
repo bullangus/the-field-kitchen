@@ -8,7 +8,7 @@ time: Prep 20 min · Cook 30 min
 source: https://www.justonecookbook.com/nagoya-style-fried-chicken-wings/
 ---
 
-Double-fried wings glazed in a sticky, sweet soy, mirin and ginger sauce and finished with sesame seeds. The sauce keeps in the fridge for a month.
+Sticky, sweet and peppery, these are the wings you'll lick your fingers clean of. Double-fried and glazed in a soy, mirin and ginger sauce, then finished with a shower of sesame seeds. The sauce keeps in the fridge for a month.
 
 ## Ingredients
 

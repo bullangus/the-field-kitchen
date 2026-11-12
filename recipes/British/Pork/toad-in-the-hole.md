@@ -7,7 +7,7 @@ time: Prep 15 min · Cook 40 min
 source: https://www.recipetineats.com/toad-in-the-hole/
 ---
 
-Sausages baked in a tall, crisp-edged Yorkshire pudding, served with onion gravy. A spoonful of mayonnaise in the batter helps it rise higher and collapse less.
+Pure comfort: sausages baked into a tall, golden Yorkshire pudding that puffs up around them in the oven, served with a jug of onion gravy. A spoonful of mayonnaise in the batter is the secret to a pudding that rises higher and collapses less.
 
 ## Ingredients
 

@@ -8,7 +8,7 @@ time: Prep 15 min + 30 min marinating · Cook 15 min
 source: https://www.justonecookbook.com/karaage/
 ---
 
-Marinated in ginger, garlic and soy, then fried twice for a light, crisp crust.
+Golden, crackling pieces of chicken that rarely make it from the rack to the plate. Marinated in ginger, garlic and soy, then fried twice for a light, crisp crust and a juicy middle.
 
 ## Ingredients
 

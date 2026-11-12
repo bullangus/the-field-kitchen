@@ -8,7 +8,7 @@ time: Prep 10 min · Cook 30 min
 source: https://www.recipetineats.com/chilli-con-carne/
 ---
 
-A rich, properly spiced beef and bean chilli from RecipeTin Eats. Quick enough for a weeknight, even better slow-cooked or the next day.
+A big, warming pot that tastes even better the next day. A rich, properly spiced beef and bean chilli from RecipeTin Eats, quick enough for a weeknight and even better slow-cooked.
 
 ## Ingredients
 

@@ -7,7 +7,7 @@ time: Prep 5 min · Cook 13 min
 source: https://www.recipetineats.com/fettuccine-alfredo/
 ---
 
-Butter, cream and Parmigiano, tossed with the pasta so the sauce clings to every strand rather than pooling.
+Rich, buttery and utterly comforting, the kind of pasta you eat curled up on the couch. Butter, cream and Parmigiano are tossed with the fettuccine so the sauce clings to every strand rather than pooling.
 
 ## Ingredients
 

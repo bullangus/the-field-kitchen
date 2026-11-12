@@ -7,7 +7,7 @@ time: Prep 20 min · Cook 20 min
 source: Family recipe
 ---
 
-Our Caesar: crisp cos, bacon, shredded chicken thigh, jammy eggs and garlic-butter croutons, tossed in Beerenberg Caesar dressing and finished with plenty of parmesan. The eggs and croutons can be made ahead.
+A salad that eats like a proper meal. Crisp cos, salty bacon, shredded chicken thigh, jammy eggs and garlic-butter croutons, tossed in Beerenberg Caesar dressing and buried under parmesan. The eggs and croutons can be made ahead, so it comes together in minutes when everyone's hungry.
 
 ## Ingredients
 

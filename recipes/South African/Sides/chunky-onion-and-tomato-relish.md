@@ -8,7 +8,7 @@ time: Prep 5 min · Cook 20 min
 source: https://www.ozbraai.com.au/recipes/chunky-onion-and-tomato-relish/
 ---
 
-A simple, full-flavoured South African tomato relish for the braai: with pap, boerewors rolls, meatballs or even on pasta.
+A taste of the braai: smoky fire, good company and this relish spooned over everything. A simple, full-flavoured South African tomato and onion relish for pap, boerewors rolls, meatballs or even pasta.
 
 ## Ingredients
 

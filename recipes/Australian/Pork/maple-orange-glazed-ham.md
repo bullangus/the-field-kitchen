@@ -8,7 +8,7 @@ time: Prep 20 min · Cook 3 hr 45 min
 source: Coles Christmas recipe card
 ---
 
-A Christmas ham glazed with maple, orange and Grand Marnier, with candied orange slices pressed over the top and a sauce from the pan juices.
+Christmas isn't Christmas without this ham, and it is always made. It's the one that converted my husband from a cold ham person to a baked ham one the very first time he tried it. Glazed with maple, orange and Grand Marnier, with candied orange slices pressed over the top and a glossy sauce from the pan juices, it fills the house with the smell of the holidays.
 
 ## Ingredients
 

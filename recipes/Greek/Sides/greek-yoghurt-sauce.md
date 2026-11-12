@@ -8,7 +8,7 @@ time: Prep 5 min
 source: Family recipe
 ---
 
-Our simple, tangy yoghurt sauce: just yoghurt, lemon, salt and pepper, mixed to taste.
+A cool, bright spoonful that lifts whatever it sits beside. Our simple, tangy yoghurt sauce is just yoghurt, lemon, salt and pepper, mixed to taste.
 
 ## Ingredients
 

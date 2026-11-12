@@ -8,7 +8,7 @@ time: Prep 15 min · Cook 35 min
 source: https://www.taste.com.au/recipes/barbecued-whole-snapper-lime-chilli/a6559c91-9215-4ab1-8823-0c54582602ff
 ---
 
-A whole snapper stuffed with lemongrass, garlic and makrut lime, coated in sesame seeds and cooked standing upright in a foil parcel on the barbecue, then dressed with a sweet chilli, lime and ginger dressing.
+A whole fish on the barbecue makes any summer evening feel like a celebration. The snapper is stuffed with lemongrass, garlic and makrut lime, coated in sesame seeds and cooked standing upright in a foil parcel, then brought to the table whole with a sweet chilli, lime and ginger dressing for everyone to pick at.
 
 ## Ingredients
 

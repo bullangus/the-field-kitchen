@@ -7,7 +7,7 @@ time: Prep 2 hr · Cook 3 hr 45 min
 source: https://www.andy-cooks.com/blogs/recipes/lasagne
 ---
 
-A slow pork and beef ragu, béchamel and plenty of cheese. Make the ragu the day before if you can: it deepens overnight and spreads the work out.
+A lasagne worth every minute it takes, the dish for when the whole family is coming over. A slow pork and beef ragu, creamy béchamel and plenty of bubbling cheese. Make the ragu the day before if you can: it deepens overnight and spreads the work out.
 
 ## Ingredients
 

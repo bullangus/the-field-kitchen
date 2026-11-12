@@ -8,7 +8,7 @@ time: Cook 20–30 min
 source: https://pastagrammar.com/blogs/recipes/pasta-with-nduja-recipe-the-best-spicy-pasta-you-ll-ever-try
 ---
 
-A simple, fiery Calabrian sauce: tomatoes with 'nduja, the soft, spicy pork spread, melted through at the end.
+A little jar of 'nduja brings all the fire of Calabria to a weeknight. Tomatoes simmer gently before the soft, spicy pork spread melts through at the end, turning the sauce a deep, smoky red.
 
 ## Ingredients
 

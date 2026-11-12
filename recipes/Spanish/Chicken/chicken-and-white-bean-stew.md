@@ -7,7 +7,7 @@ time: Prep 5 min · Cook 15 min
 source: https://www.andy-cooks.com/blogs/recipes/chicken-white-bean-stew
 ---
 
-A quick, cheap one-pot stew written for one. Multiply it to feed more, or cook a big batch for the fridge or freezer.
+A warming one-pot stew for the nights you need something nourishing without the fuss. It's quick, cheap and written for one, so multiply it to feed more, or cook a big batch for the fridge or freezer.
 
 ## Ingredients
 

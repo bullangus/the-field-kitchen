@@ -7,7 +7,7 @@ time: Cook 20 min
 source: https://pastagrammar.com/blogs/recipes/spaghetti-alla-carbonara-authentic-italian-carbonara-pasta-recipe
 ---
 
-The Roman way: egg yolks, pecorino, guanciale and black pepper, and nothing else. No cream.
+Just a handful of ingredients that turn into something magical in the hot pan. The Roman way: egg yolks, pecorino, crisp guanciale and plenty of black pepper, tossed into a silky sauce. No cream.
 
 ## Ingredients
 

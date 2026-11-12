@@ -8,7 +8,7 @@ time: Prep 10 min + 1–1½ hr chilling · Cook 15 min
 source: https://www.allrecipes.com/recipe/24087/restaurant-style-buffalo-chicken-wings/
 ---
 
-Floured, chilled and fried until crisp, then tossed in the classic butter and hot sauce mix.
+Sticky fingers, a pile of napkins and someone always reaching for just one more. The wings are floured, chilled and fried until they crackle, then tossed in the classic butter and hot sauce mix.
 
 ## Ingredients
 

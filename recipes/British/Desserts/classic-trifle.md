@@ -7,7 +7,7 @@ serves: 12
 source: https://www.express.co.uk/life-style/food/1830491/Jamie-Oliver-recipe-trifle
 ---
 
-Our family classic, from Jamie Oliver's retro trifle: jam roll, strawberries and Cointreau under strawberry jelly, blancmange, mandarins, orange jelly, custard and cream. Give each layer time to set before adding the next.
+Our family classic, and the dessert everyone waits for at Christmas. Based on Jamie Oliver's retro trifle, it's layer upon layer of jam roll, strawberries and Cointreau, strawberry jelly, blancmange, mandarins, orange jelly, custard and cream. It needs time for each layer to set, so make it the day before.
 
 ## Ingredients
 

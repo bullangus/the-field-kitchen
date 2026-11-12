@@ -8,7 +8,7 @@ time: Prep 15 min · Cook 1 hr 15 min
 source: https://www.recipetineats.com/duck-fat-potatoes-crispiest-best-roast-potatoes/
 ---
 
-The crunchiest roast potatoes: parboiled, roughed up, then roasted in smoking-hot duck fat. Adapted by RecipeTin Eats from Nigella Lawson's goose fat potatoes.
+The potatoes everyone fights over at Christmas and Sunday roasts. Parboiled, roughed up so the edges go fluffy, then roasted in smoking-hot duck fat until they shatter when you bite in. Adapted by RecipeTin Eats from Nigella Lawson's goose fat potatoes.
 
 ## Ingredients
 

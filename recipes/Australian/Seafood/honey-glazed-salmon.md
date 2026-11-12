@@ -7,7 +7,7 @@ time: Ready in 15 min
 source: Family recipe
 ---
 
-Pan-fried salmon in a sticky honey, soy, garlic and ginger glaze. Serve with rice and greens.
+Fifteen minutes from fridge to table, and it tastes like far more effort. Pan-fried salmon is turned in a sticky honey, soy, garlic and ginger glaze until it shines. Serve it over rice with greens on the side.
 
 ## Ingredients
 

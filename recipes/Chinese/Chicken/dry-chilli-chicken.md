@@ -7,7 +7,7 @@ serves: 2–4
 source: https://www.tiktok.com/@chefzealand/video/7694443456416042271
 ---
 
-Crisp, double-fried chicken tossed through toasted dried chillies and Sichuan pepper. Not as spicy as it looks.
+A mountain of red chillies that looks fierce and tastes addictive. Crisp, double-fried chicken is tossed through toasted dried chillies and tingling Sichuan pepper. It's not as spicy as it looks, and it disappears fast.
 
 ## Ingredients
 

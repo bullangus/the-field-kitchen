@@ -7,7 +7,7 @@ serves: 2
 source: https://havebutterwilltravel.com/keto-satay-sauce/
 ---
 
-Strips of chicken thigh simmered in a quick peanut and red curry sauce. Serve with steamed rice.
+Creamy, nutty and warming, the satay you'll want to mop up every last drop of. Strips of chicken thigh are simmered in a quick peanut and red curry sauce. Serve with steamed rice.
 
 ## Ingredients
 

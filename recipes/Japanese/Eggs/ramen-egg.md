@@ -7,7 +7,7 @@ time: Prep 5 min · Cook 7 min + 8–10 hr marinating
 source: https://japan.recipetineats.com/ramen-egg-ajitsuke-tamago/
 ---
 
-Soft-boiled eggs with jammy yolks, marinated overnight in a sweet soy sauce. For ramen, rice bowls or on their own.
+The little luxury that makes a bowl of ramen feel special. Soft-boiled eggs with jammy, golden yolks are marinated overnight in a sweet soy sauce. Add them to ramen or rice bowls, or eat them on their own.
 
 ## Ingredients
 

@@ -7,7 +7,7 @@ time: Prep 10 min · Cook 45 min
 source: https://bakingmischief.com/cottage-pie/
 ---
 
-Beef, carrot and pea filling under buttery mash, finished with a mozzarella and Parmesan top. Made and baked in one ovenproof pan.
+The kind of dinner that makes a cold night feel cosy. A rich beef, carrot, pea and corn filling under buttery mash, finished with a blanket of melted mozzarella and Parmesan, all made and baked in one ovenproof pan.
 
 ## Ingredients
 

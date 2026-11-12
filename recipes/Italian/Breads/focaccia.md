@@ -8,7 +8,7 @@ time: Prep 3 hr 45 min (mostly rising) · Cook 30 min
 source: https://www.thecookingworld.com/recipes/claire-saffitz-focaccia-recipe
 ---
 
-Claire Saffitz's focaccia: a very wet, well-kneaded dough baked in a half-sheet pan for a tall, airy crumb and a crisp, oily base. Pick a topping from the options after the method.
+Much loved and made more times than we can count, this is the bread that turns any meal into an occasion. Claire Saffitz's very wet, well-kneaded dough bakes in a half-sheet pan into a tall, airy crumb with a crisp, olive-oil base that's golden and dimpled on top. Pick a topping from the options after the method.
 
 ## Ingredients
 

@@ -7,7 +7,7 @@ serves: 4–6
 source: Family recipe
 ---
 
-Nan's pasta salad with kabana and thousand island dressing, a side we have every Christmas. Serve it warm or cool.
+Nan's pasta salad, the side we have every Christmas, and the taste of every family get-together. Spirals of pasta, kabana and plenty of thousand island dressing, simple and impossible to stop picking at. Serve it warm or cool.
 
 ## Ingredients
 

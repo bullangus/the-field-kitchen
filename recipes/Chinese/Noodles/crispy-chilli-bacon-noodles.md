@@ -8,7 +8,7 @@ time: Cook 15 min
 source: https://www.cheffatty.com/recipes/crispy-chili-bacon-noodles
 ---
 
-Bacon rendered slowly until crisp, chilli crisp bloomed in the fat, and noodles tossed through it all.
+A bowl of noodles for when you need something deeply satisfying, fast. Bacon is rendered slowly until crisp, chilli crisp blooms in the fat, and the noodles are tossed through it all until every strand is glossy and spicy.
 
 ## Ingredients
 

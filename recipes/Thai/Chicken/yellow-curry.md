@@ -7,7 +7,7 @@ time: Prep 15 min · Cook 25 min
 source: Family recipe
 ---
 
-A mild, fragrant coconut curry with chicken, potato and carrot. Serve over steamed jasmine rice.
+Golden, gentle and fragrant, the curry that fills the kitchen with coconut and spice. Mild enough for everyone at the table, with chicken, potato and carrot. Serve over steamed jasmine rice.
 
 ## Ingredients
 

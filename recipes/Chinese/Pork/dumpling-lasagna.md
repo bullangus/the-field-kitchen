@@ -7,7 +7,7 @@ time: Prep 10 min · Cook 25 min
 source: https://heresyourbite.substack.com/p/dumpling-lasagna
 ---
 
-All the flavour of pork and spring onion dumplings with no folding: wonton wrappers and filling layered in ramekins and steamed until glossy and juicy.
+All the joy of pork and spring onion dumplings with none of the folding. Wonton wrappers and filling are layered in ramekins and steamed until glossy and juicy, ready to be drizzled with soy and chilli and eaten straight from the dish.
 
 ## Ingredients
 

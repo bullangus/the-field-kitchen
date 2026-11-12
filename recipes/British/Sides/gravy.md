@@ -7,7 +7,7 @@ serves: 4
 source: Gravox Traditional Gravy Mix packet
 ---
 
-Quick gravy from the Roast Chicken's pan juices, thickened with Gravox. Makes about 1 cup.
+No roast is finished until the gravy jug goes round. This one is made in minutes from the Roast Chicken's pan juices, thickened with Gravox. Makes about 1 cup.
 
 ## Ingredients
 

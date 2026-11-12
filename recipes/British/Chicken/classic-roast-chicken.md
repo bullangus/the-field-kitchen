@@ -8,7 +8,7 @@ time: Prep 20 min · Cook about 1 hr 15 min
 source: https://www.andy-cooks.com/blogs/recipes/classic-roast-chicken
 ---
 
-Lemon, garlic and thyme butter pushed under the skin, then trussed and roasted to temperature for crisp skin and juicy breast meat.
+A Sunday roast chicken brings everyone to the table without being called. Lemon, garlic and thyme butter is pushed under the skin, then the bird is trussed and roasted to temperature for crackling-crisp skin and breast meat that's still juicy. Save the pan juices for the gravy.
 
 ## Ingredients
 

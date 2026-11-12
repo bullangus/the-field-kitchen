@@ -7,7 +7,7 @@ time: Prep 20 min · Cook 15 min
 source: https://aaronandclaire.com/chicken-nanban-fried-chicken-with-tartar-sauce/
 ---
 
-Egg-coated fried chicken soaked in a sweet and tangy nanban sauce and topped with a generous spoonful of tartar sauce.
+Crisp, tangy and creamy all in one bite. Egg-coated fried chicken is soaked in a sweet and sour nanban sauce, then topped with a generous spoonful of rich tartar sauce.
 
 ## Ingredients
 

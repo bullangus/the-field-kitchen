@@ -7,7 +7,7 @@ time: Prep 15 min · Cook 15 min
 source: Family recipe
 ---
 
-Crumbed and fried pork (or chicken) cutlets, crisp outside and juicy inside, with rice, mustard, pickled ginger and tonkatsu sauce.
+The crunch as the knife goes through is half the pleasure. Crumbed and fried pork (or chicken) cutlets, crisp outside and juicy inside, served with rice, a dab of mustard, pickled ginger and tonkatsu sauce.
 
 ## Ingredients
 

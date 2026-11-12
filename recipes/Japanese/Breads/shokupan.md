@@ -8,7 +8,7 @@ time: Prep 1 hr + 2 hr 30 min rising · Cook 30 min
 source: https://www.justonecookbook.com/japanese-milk-bread-shokupan/
 ---
 
-Japanese milk bread: soft, pillowy and faintly sweet. Baked in a lidded 1.5 kin shokupan loaf pan (20 × 12 × 12.5 cm) for a flat top, or without the lid for a rounded one. Use it for the Egg Sando.
+There's nothing quite like tearing into a loaf of shokupan still warm from the oven: soft, pillowy, faintly sweet and impossibly light. Baked in a lidded 1.5 kin shokupan loaf pan (20 × 12 × 12.5 cm) for a flat top, or without the lid for a rounded one. It's the bread for the Egg Sando.
 
 ## Ingredients
 

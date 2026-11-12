@@ -8,7 +8,7 @@ time: Prep the day before (24–48 hr drying in the fridge) · Cook about 4 hr
 source: https://www.andy-cooks.com/blogs/recipes/crispy-porchetta
 ---
 
-Pork belly rolled around the loin with a herb, garlic and fennel filling. Start a day or two ahead: the skin needs to dry out in the fridge to crackle.
+A showstopper for Christmas and big Sunday lunches, carved at the table to the sound of crackling. Pork belly is rolled around the loin with a herb, garlic and fennel filling. Start a day or two ahead: the skin needs to dry out in the fridge to crackle.
 
 ## Ingredients
 

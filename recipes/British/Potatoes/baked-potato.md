@@ -8,7 +8,7 @@ time: Cook 1 hr 45–50 min
 source: Family recipe
 ---
 
-Baked in foil until soft, then crisped with olive oil and salt. Quartered and loaded with whatever toppings you like.
+A baked potato with a crisp, salty skin and a fluffy middle is one of life's simple pleasures. These are baked in foil until soft, crisped with olive oil and salt, then quartered and piled high with whatever toppings you love.
 
 ## Ingredients
 

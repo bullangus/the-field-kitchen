@@ -7,7 +7,7 @@ serves: 8–10
 source: https://www.tiktok.com/@tinekeyounger/video/7568236205008030990
 ---
 
-Creamy baked mac and cheese for the holiday table: a three-cheese sauce made with evaporated milk and cream, layered with more cheese and baked until the top is crusty.
+The dish people hover over at the holiday table, waiting for the first spoon to break through the crust. Three cheeses melted into a sauce of evaporated milk and cream, layered with more cheese and baked until the top is golden and crackling and the middle pulls into long, stretchy strings.
 
 ## Ingredients
 
