@@ -3053,6 +3053,149 @@ window.FIELD_KITCHEN_INDEX = [
 ]
 },
 {
+"title": "Marry Me Chicken Risoni",
+"cuisine": "Italian",
+"category": "Pasta",
+"url": "italian/pasta/marry-me-chicken-risoni.html",
+"text": "6 boneless, skinless chicken thighs 15 ml (1 tbsp) olive oil 1 red onion 4 cloves garlic 280 g jar sliced sun-dried tomatoes 1 tsp dried oregano Small bunch fresh thyme 1 tsp smoked paprika 900 ml chicken stock 300 g risoni 200 ml cream 60 g finely grated Parmesan 60 g (1 small bag) baby spinach Salt and pepper",
+"meta": "Serves 4 · Prep 10 min · Cook 20 min",
+"intro": "Seared chicken thigh in a creamy sun-dried tomato and Parmesan sauce, with the risoni cooked straight in the pan.",
+"photo": "",
+"tags": [
+"pasta",
+"quick"
+],
+"serves": 4,
+"ingredients": [
+{
+"t": "6 boneless, skinless chicken thighs",
+"n": "Chicken thighs",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bchicken thighs?\\b|\\bchicken\\b",
+"q": 6.0,
+"u": null
+},
+{
+"t": "15 ml (1 tbsp) olive oil",
+"n": "Olive oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\bolive oil\\b",
+"q": 15.0,
+"u": "ml"
+},
+{
+"t": "1 red onion",
+"n": "Red onion",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bred onion\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "4 cloves garlic",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 4.0,
+"u": "cloves"
+},
+{
+"t": "280 g jar sliced sun-dried tomatoes",
+"n": "Sun-dried tomatoes",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bsun-dried tomato(es)?\\b|\\bsun dried tomato(es)?\\b|\\btomato(es)?\\b|\\btomato(es)?\\b",
+"q": 280.0,
+"u": "g"
+},
+{
+"t": "1 tsp dried oregano",
+"n": "Dried oregano",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\boregano\\b",
+"q": 1.0,
+"u": "tsp"
+},
+{
+"t": "Small bunch fresh thyme",
+"n": "Thyme",
+"a": "Herbs",
+"s": false,
+"p": "\\bthyme\\b",
+"q": null,
+"u": null
+},
+{
+"t": "1 tsp smoked paprika",
+"n": "Smoked paprika",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bsmoked paprika\\b|\\bpaprika\\b",
+"q": 1.0,
+"u": "tsp"
+},
+{
+"t": "900 ml chicken stock",
+"n": "Chicken stock",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bchicken stock\\b|\\bchicken\\b",
+"q": 900.0,
+"u": "ml"
+},
+{
+"t": "300 g risoni",
+"n": "Risoni",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\brisoni\\b|\\borzo\\b",
+"q": 300.0,
+"u": "g"
+},
+{
+"t": "200 ml cream",
+"n": "Thickened cream",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bcream\\b",
+"q": 200.0,
+"u": "ml"
+},
+{
+"t": "60 g finely grated Parmesan",
+"n": "Parmesan",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bparmesan\\b|\\bparmigiano\\b",
+"q": 60.0,
+"u": "g"
+},
+{
+"t": "60 g (1 small bag) baby spinach",
+"n": "Baby spinach",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bspinach\\b",
+"q": 60.0,
+"u": "g"
+},
+{
+"t": "Salt and pepper",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": null,
+"u": null
+}
+]
+},
+{
 "title": "Porchetta",
 "cuisine": "Italian",
 "category": "Pork",
