@@ -329,6 +329,15 @@ main.wide { max-width: 72rem; padding-top: 1.5rem; }
   transform: translateY(-50%); color: var(--tone-ink); opacity: 0.55; pointer-events: none;
 }
 .cuisine-hero .tags { padding-right: 0; }
+/* Keep the name clear of the icon: the icon gets its own column on the right. */
+.cuisine-hero h1, .cuisine-hero .eyebrow, .hero-count { padding-right: clamp(8rem, 24vw, 14rem); }
+@media (max-width: 600px) {
+  .cuisine-hero { padding: 1.6rem 1.25rem 1.4rem; border-radius: 20px; }
+  .cuisine-hero .hero-art { width: 4.75rem; right: 0.9rem; top: 1.1rem; transform: none; }
+  .cuisine-hero .eyebrow, .cuisine-hero h1 { padding-right: 5.25rem; }
+  .cuisine-hero h1 { font-size: 2.6rem; line-height: 1; }
+  .hero-count { padding-right: 0; }
+}
 .style-group h2 {
   font-family: "Source Serif 4", Georgia, serif; font-size: 0.85rem; font-weight: 600;
   text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent);
