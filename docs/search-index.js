@@ -4903,7 +4903,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Japanese",
 "category": "Pork",
 "url": "japanese/pork/tonkatsu.html",
-"text": "4 pork loin steaks (about 150 g each), or chicken thigh fillets or breasts 50 g (⅓ cup) plain flour ½ tsp salt ¼ tsp pepper 2 eggs, beaten 60 g (1 cup) panko breadcrumbs Neutral oil, for frying (2–3 cm deep in the pan) Steamed short-grain rice Japanese (karashi) or English mustard Pickled ginger Tonkatsu sauce",
+"text": "4 pork loin steaks (about 150 g each), or chicken thigh fillets or breasts 50 g (⅓ cup) plain flour ½ tsp salt ¼ tsp pepper 2 eggs, beaten 60 g (1 cup) panko breadcrumbs Neutral oil, for frying (2–3 cm deep in the pan) Steamed short-grain rice Japanese (karashi) or English mustard Pickled ginger Tonkatsu sauce ¼ drum cabbage, shredded (see Shredded Cabbage)",
 "meta": "Serves 4 · Prep 15 min · Cook 15 min",
 "intro": "The crunch as the knife goes through is half the pleasure. Crumbed and fried pork (or chicken) cutlets, crisp outside and juicy inside, served with rice, a dab of mustard, pickled ginger and tonkatsu sauce.",
 "photo": "",
@@ -5011,6 +5011,51 @@ window.FIELD_KITCHEN_INDEX = [
 "p": "\\btonkatsu sauce\\b|\\btonkatsu\\b",
 "q": null,
 "u": null
+},
+{
+"t": "¼ drum cabbage, shredded (see Shredded Cabbage)",
+"n": "Drum cabbage",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bdrum cabbage\\b|\\bcabbage\\b",
+"q": 0.25,
+"u": null
+}
+],
+"options": []
+},
+{
+"title": "Shredded Cabbage",
+"cuisine": "Japanese",
+"category": "Sides",
+"url": "japanese/sides/shredded-cabbage.html",
+"text": "¼ drum cabbage ½ tsp salt Vegetarian",
+"meta": "Serves 4 · Prep 10 min + 10 min resting",
+"intro": "The mound of fine, feathery cabbage that comes beside almost anything fried in Japan. A quarter of a drum cabbage, shaved on a mandoline, lightly salted and squeezed.",
+"photo": "",
+"tags": [
+"sides",
+"vegetarian"
+],
+"serves": 4,
+"ingredients": [
+{
+"t": "¼ drum cabbage",
+"n": "Drum cabbage",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bdrum cabbage\\b|\\bcabbage\\b",
+"q": 0.25,
+"u": null
+},
+{
+"t": "½ tsp salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": 0.5,
+"u": "tsp"
 }
 ],
 "options": []

@@ -49,6 +49,7 @@
 - **Chicken:** [Chicken Nanban](recipes/Japanese/Chicken/chicken-nanban.md), [Karaage](recipes/Japanese/Chicken/karaage.md), [Katsu Curry](recipes/Japanese/Chicken/katsu-curry.md), [Tebasaki Wings](recipes/Japanese/Chicken/nagoya-chicken-wings.md)
 - **Eggs:** [Egg Sando](recipes/Japanese/Eggs/egg-sando.md), [Ramen Eggs](recipes/Japanese/Eggs/ramen-egg.md)
 - **Pork:** [Tonkatsu](recipes/Japanese/Pork/tonkatsu.md)
+- **Sides:** [Shredded Cabbage](recipes/Japanese/Sides/shredded-cabbage.md)
 
 ### Mexican
 - **Beef:** [Carne Asada Tacos](recipes/Mexican/Beef/carne-asada-tacos.md), [Chilli Con Carne](recipes/Mexican/Beef/chilli-con-carne.md)
@@ -64,7 +65,7 @@
 - **Beef:** [Thai Beef Salad](recipes/Thai/Beef/thai-beef-salad.md)
 - **Chicken:** [Satay Chicken](recipes/Thai/Chicken/satay-chicken.md), [Yellow Curry](recipes/Thai/Chicken/yellow-curry.md)
 
-_47 recipes._
+_48 recipes._
 <!-- CONTENTS:END -->
 
 ## How it's organised

@@ -9,7 +9,7 @@ source: Family recipe
 
 The crunch as the knife goes through is half the pleasure. Crumbed and fried pork (or chicken) cutlets, crisp outside and juicy inside, served with rice, a dab of mustard, pickled ginger and tonkatsu sauce.
 
-The perfect tonkatsu is crisp and golden on the outside, juicy and tender inside. Slice it into strips, then dip each piece in the tangy, fruity sauce with a little mustard. Serve it with plenty of rice and pickled ginger.
+The perfect tonkatsu is crisp and golden on the outside, juicy and tender inside. Slice it into strips, then dip each piece in the tangy, fruity sauce with a little mustard. Serve it with plenty of rice, pickled ginger and a mound of Shredded Cabbage.
 
 ## Ingredients
 
@@ -27,6 +27,7 @@ The perfect tonkatsu is crisp and golden on the outside, juicy and tender inside
 - Japanese (karashi) or English mustard
 - Pickled ginger
 - Tonkatsu sauce
+- ¼ drum cabbage, shredded (see Shredded Cabbage)
 
 ## Method
 
@@ -36,7 +37,7 @@ The perfect tonkatsu is crisp and golden on the outside, juicy and tender inside
 4. Heat the oil in a deep frying pan or pot to 170°C (340°F).
 5. Fry one or two pieces at a time for 3–4 minutes each side, until deep golden and cooked through.
 6. Drain on a wire rack (not paper towel) so the underside stays crisp. Rest for a couple of minutes, then slice into strips.
-7. Serve with rice, mustard, pickled ginger and tonkatsu sauce.
+7. Serve with rice, mustard, pickled ginger, tonkatsu sauce and a mound of Shredded Cabbage.
 
 ## Notes
 

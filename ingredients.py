@@ -212,6 +212,7 @@ INGREDIENTS = [
     (r"\bfrozen peas\b", "Frozen peas", PRODUCE, False),
     (r"\bspinach\b", "Baby spinach", PRODUCE, False),
     (r"\bcos\b", "Cos lettuce", PRODUCE, False),
+    (r"\bdrum cabbage\b", "Drum cabbage", PRODUCE, False),
     (r"\blettuce\b|\bcabbage\b|\bsalad greens\b", "Lettuce and cabbage", PRODUCE, False),
     (r"\bcurry leaves\b", "Curry leaves", HERBS, False),
     (r"\bcoriander\b", "Coriander", HERBS, False),
