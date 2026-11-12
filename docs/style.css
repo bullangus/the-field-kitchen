@@ -737,6 +737,22 @@ li.done > .step-num { background: var(--accent); color: var(--paper); }
   .recipe-layout.tabbed[data-tab="method"] .ingredients-panel { display: none; }
 }
 
+/* Phones: a shorter header, with the facts as an even two-column grid and the two
+   actions side by side, so the ingredients start on the first screen. */
+@media (max-width: 600px) {
+  .recipe-hero, .recipe-hero.has-photo { padding: 1.35rem 1.15rem 1.15rem; border-radius: 20px; gap: 1rem; margin-bottom: 1rem; }
+  .recipe-hero h1 { font-size: 2.15rem; margin: 0.2rem 0 0.5rem; }
+  .recipe-hero:not(.has-photo) h1 { padding-right: 4.25rem; }
+  .recipe-hero .hero-art { width: 4.25rem; right: 0.6rem; top: 0.9rem; }
+  .hero-intro { font-size: 0.98rem; line-height: 1.5; margin: 0 0 0.9rem; }
+  .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 0.45rem; margin-bottom: 0.65rem; }
+  .fact { max-width: none; min-height: 3.5rem; padding: 0.5rem 0.8rem; }
+  .fact:last-child:nth-child(odd) { grid-column: span 2; }
+  .fact strong { font-size: 0.93rem; }
+  .recipe-hero .hero-actions { flex-wrap: nowrap; gap: 0.45rem; margin-top: 0.9rem; }
+  .recipe-hero .hero-actions .pill { flex: 1 1 0; justify-content: center; white-space: nowrap; padding-inline: 0.5rem; }
+}
+
 /* Step-by-step cooking view (recipe.js) */
 html.cooking { overflow: hidden; }
 .cook-view {

@@ -218,7 +218,9 @@
     var label = addButton.lastChild;
     var syncAdd = function () {
       var inList = stored("fk-list", []).some(function (x) { return x.url === url; });
-      label.textContent = inList ? "In your shopping list" : "Add to shopping list";
+      // Short labels on phones, where the button shares a row with "Start cooking".
+      var narrow = window.matchMedia("(max-width: 600px)").matches;
+      label.textContent = inList ? (narrow ? "On your list" : "In your shopping list") : (narrow ? "Add to list" : "Add to shopping list");
       addButton.classList.toggle("added", inList);
     };
     addButton.addEventListener("click", function () {

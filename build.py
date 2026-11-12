@@ -318,6 +318,23 @@ def time_facts(r):
     return facts
 
 
+def total_time(r):
+    """'1 hr 15 min' when the time line gives both prep and cook as numbers; 'About …'
+    if any of it is a range or an estimate. None for day-before recipes, where a
+    total in hours would mislead more than help."""
+    time = r.get("time", "")
+    parts = [p for p in time.split("·") if p.strip()]
+    if len(parts) < 2 or "day" in time.lower() or not all(re.search(r"\d½?\s*(hr|min)", p) for p in parts):
+        return None
+    rough = re.search(r"about|at least|\d½?\s*[–-]\s*\d", time)
+    total = minutes_in(time)
+    hours, minutes = divmod(round(total / 5) * 5 if rough else round(total), 60)
+    if hours >= 24:
+        return None
+    text = " ".join(filter(None, [f"{hours} hr" if hours else "", f"{minutes} min" if minutes else ""]))
+    return f"About {text}" if rough else text
+
+
 def contents_md(book):
     if not book:
         return "_No recipes yet._"
@@ -818,7 +835,8 @@ def recipe_page_html(book, r, prev, nxt):
         serves_html = f'<strong>{html.escape(r["serves"])}</strong>'
     facts = (f'<div class="fact fact-serves"><span>Serves</span>{serves_html}</div>'
              + "".join(f'<div class="fact"><span>{html.escape(label)}</span><strong>{html.escape(value)}</strong></div>'
-                       for label, value in time_facts(r)))
+                       for label, value in time_facts(r))
+             + (f'<div class="fact fact-total"><span>Total</span><strong>{total_time(r)}</strong></div>' if total_time(r) else ""))
     tags = "".join(f'<span class="tag">{html.escape(t)}</span>' for t in quick_tag_labels(r))
     photo = (f'<figure class="hero-photo"><img src="{root}{r["photo"]}" alt="{html.escape(r["title"])}"></figure>'
              if r.get("photo") else "")
