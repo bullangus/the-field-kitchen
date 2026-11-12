@@ -11,7 +11,7 @@
    prefers it (unless they chose light) or when they pick it with the toggle. */
 :root {
   --ink: #2a2622;
-  --muted: #7a6f64;
+  --muted: #6a6056;
   --rule: #d9cfc3;
   --hair: rgba(42, 38, 34, 0.08);
   --accent: #8a3b24;
@@ -881,6 +881,25 @@ html.cooking { overflow: hidden; }
   /* On phones the matches sit below the pantry, so keep a way to them in reach. */
   .matches-jump { display: inline-flex; position: fixed; right: 1rem; bottom: 1rem; z-index: 20; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18); }
   .matches-jump.away { display: none; }
+}
+
+/* Touch screens: controls a fingertip can hit (about 44px), without growing them for a mouse. */
+@media (pointer: coarse) {
+  .chip, .style-toggle, .pantry-more { min-height: 2.6rem; padding: 0.5rem 0.95rem; font-size: 0.92rem; }
+  .chip-track { gap: 0.4rem; }
+  .pantry-group .chip, .pantry-more { margin: 0 0.4rem 0.5rem 0; }
+  .style-list button { padding: 0.7rem 0.85rem; }
+  .scaler button { width: 2.5rem; height: 2.5rem; font-size: 1.25rem; }
+  .ingredients-panel li, .aisle li { padding: 0.55rem 0; }
+  /* The tick box stays small to look at; its tappable area is the full 44px. */
+  .tick::before { content: ""; position: absolute; inset: -0.75rem; }
+  .step-num { width: 2.6rem; height: 2.6rem; }
+  .cuisine-list a { padding: 0.7rem 0.75rem; }
+  .list-recipe button { width: 2.4rem; height: 2.4rem; }
+  .pill { padding: 0.7rem 1.25rem; }
+  .cv-voice, .cv-read { padding: 0.6rem 1rem; }
+  .cv-close { width: 2.75rem; height: 2.75rem; }
+  .timer button { min-width: 2.6rem; height: 2.6rem; }
 }
 
 /* Footer: a signed sign-off on every page; the last page of the printed book */
