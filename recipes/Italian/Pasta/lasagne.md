@@ -9,6 +9,8 @@ source: https://www.andy-cooks.com/blogs/recipes/lasagne
 
 A lasagne worth every minute it takes, the dish for when the whole family is coming over. A slow pork and beef ragu, creamy béchamel and plenty of bubbling cheese. Make the ragu the day before if you can: it deepens overnight and spreads the work out.
 
+It's a labour of love, but there's nothing quite like carrying a bubbling lasagne to the table, the cheese golden and crisp at the edges. Let it rest before cutting so the layers hold. It makes enough for a crowd and tastes even better the next day.
+
 ## Ingredients
 
 ### For the ragu

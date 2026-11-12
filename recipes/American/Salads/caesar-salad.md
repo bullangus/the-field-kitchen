@@ -9,6 +9,8 @@ source: Family recipe
 
 A salad that eats like a proper meal. Crisp cos, salty bacon, shredded chicken thigh, jammy eggs and garlic-butter croutons, tossed in Beerenberg Caesar dressing and buried under parmesan. The eggs and croutons can be made ahead, so it comes together in minutes when everyone's hungry.
 
+It's our go-to when it's too hot to want anything heavy but everyone is still properly hungry. Every bite has a bit of everything: crunch from the croutons, salt from the bacon, the soft richness of the egg. Set it in the middle of the table in a big bowl and let everyone help themselves.
+
 ## Ingredients
 
 ### For the eggs

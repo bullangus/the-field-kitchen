@@ -10,6 +10,8 @@ source: https://www.justonecookbook.com/nagoya-style-fried-chicken-wings/
 
 Sticky, sweet and peppery, these are the wings you'll lick your fingers clean of. Double-fried and glazed in a soy, mirin and ginger sauce, then finished with a shower of sesame seeds. The sauce keeps in the fridge for a month.
 
+The sweet and savoury glaze, the crunch of the double fry and the sprinkle of sesame make these wings impossible to stop eating. They're messy, sticky and completely worth it. Keep a jar of the sauce in the fridge for next time.
+
 ## Ingredients
 
 - 450 g (1 lb) chicken wings, flats and drumettes (this much sauce covers up to 900 g / 2 lb)

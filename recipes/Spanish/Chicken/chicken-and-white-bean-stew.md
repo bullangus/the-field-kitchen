@@ -9,6 +9,8 @@ source: https://www.andy-cooks.com/blogs/recipes/chicken-white-bean-stew
 
 A warming one-pot stew for the nights you need something nourishing without the fuss. It's quick, cheap and written for one, so multiply it to feed more, or cook a big batch for the fridge or freezer.
 
+Tender chicken, creamy beans and a rich tomato sauce with a gentle warmth from the spices. It's the kind of meal that feels nourishing and comforting without any fuss. Serve it in big bowls with a drizzle of olive oil and a scattering of parsley.
+
 ## Ingredients
 
 - 1 red onion

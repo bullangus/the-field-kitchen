@@ -10,6 +10,8 @@ source: https://www.taste.com.au/recipes/barbecued-whole-snapper-lime-chilli/a65
 
 A whole fish on the barbecue makes any summer evening feel like a celebration. The snapper is stuffed with lemongrass, garlic and makrut lime, coated in sesame seeds and cooked standing upright in a foil parcel, then brought to the table whole with a sweet chilli, lime and ginger dressing for everyone to pick at.
 
+Cooking it standing up means the skin doesn't stick and the fish stays beautifully moist. Bring it out whole on a big platter, scattered with spring onion and coriander, and let everyone pull away the sweet white flesh with a fork. It's the taste of a long summer evening outside.
+
 ## Ingredients
 
 - 1.5 kg whole snapper

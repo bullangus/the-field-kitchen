@@ -10,6 +10,8 @@ source: Our own, loosely based on Isabel Eats' carne asada tacos
 
 Taco night, with everyone building their own and the table covered in bowls. Citrus-marinated steak, reverse-seared so the outside chars without burning, sliced thin and piled into charred corn tortillas with cumin guacamole, salted paneer "queso fresco" and a quick lime onion. Start the marinade a few hours ahead.
 
+The steak gets its flavour from the citrus and spice marinade and its char from the reverse sear, so it stays tender inside. Everyone builds their own tacos at the table, piling on guacamole, the salty paneer and plenty of lime onion. It's loud, messy and a lot of fun.
+
 ## Ingredients
 
 ### For the marinade

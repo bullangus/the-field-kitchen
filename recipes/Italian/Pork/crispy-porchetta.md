@@ -10,6 +10,8 @@ source: https://www.andy-cooks.com/blogs/recipes/crispy-porchetta
 
 A showstopper for Christmas and big Sunday lunches, carved at the table to the sound of crackling. Pork belly is rolled around the loin with a herb, garlic and fennel filling. Start a day or two ahead: the skin needs to dry out in the fridge to crackle.
 
+Unrolling it after a day of drying and a long, slow roast, with the crackling puffed and golden all the way round, is one of the proudest moments in the kitchen. The herby, garlicky filling seasons every slice. Carve it thickly and serve it with the crackling broken into pieces.
+
 ## Ingredients
 
 - 1 pork belly, bone out, skin on, with the loin still attached (a belly without the loin also works; ask your butcher)

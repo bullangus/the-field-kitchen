@@ -9,6 +9,8 @@ source: https://twoplaidaprons.com/restaurant-style-mongolian-beef/
 
 Better than the takeaway, and on the table almost as quickly. Silky slices of beef in a glossy, sweet soy glaze with spring onions, served restaurant-style over an optional nest of crackling fried rice vermicelli.
 
+The secret is in the tenderising: a little bicarb and a short rest make the beef impossibly soft. Cook it fast in a very hot wok so it sears rather than stews. The crisp rice noodles that puff up in the hot oil are pure theatre, and the crackle as the sauce hits them is part of the fun.
+
 ## Ingredients
 
 ### For marinating the beef

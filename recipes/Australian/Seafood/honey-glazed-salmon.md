@@ -9,6 +9,8 @@ source: Family recipe
 
 Fifteen minutes from fridge to table, and it tastes like far more effort. Pan-fried salmon is turned in a sticky honey, soy, garlic and ginger glaze until it shines. Serve it over rice with greens on the side.
 
+It's the dinner for the nights when there's not much time but you still want something that feels like a treat. The cornflour gives the salmon a light crust that the glaze clings to, and the chilli adds just enough warmth. Spoon every last bit of sauce from the pan over the rice.
+
 ## Ingredients
 
 - 2 salmon fillets

@@ -10,6 +10,8 @@ source: https://pastagrammar.com/blogs/recipes/pasta-with-nduja-recipe-the-best-
 
 A little jar of 'nduja brings all the fire of Calabria to a weeknight. Tomatoes simmer gently before the soft, spicy pork spread melts through at the end, turning the sauce a deep, smoky red.
 
+The 'nduja goes in at the very end, melting into the sauce and turning it a deep, glossy red. It's simple, but the heat and depth of flavour make it taste like it took all day. Finish it with plenty of grated pecorino.
+
 ## Ingredients
 
 - Salt

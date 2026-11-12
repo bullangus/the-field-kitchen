@@ -10,6 +10,8 @@ goes with: Roast Chicken, Duck Fat Potatoes
 
 No roast is finished until the gravy jug goes round. This one is made in minutes from the Roast Chicken's pan juices, thickened with Gravox. Makes about 1 cup.
 
+It's simple and it's quick, but it's what ties a roast together. Making it from the chicken's own juices means it tastes of the meal it's served with. Pour it generously over the chicken and potatoes, and keep the jug close by.
+
 ## Ingredients
 
 - 45 ml (3 tbsp) pan juices from the Roast Chicken

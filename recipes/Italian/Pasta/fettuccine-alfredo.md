@@ -9,6 +9,8 @@ source: https://www.recipetineats.com/fettuccine-alfredo/
 
 Rich, buttery and utterly comforting, the kind of pasta you eat curled up on the couch. Butter, cream and Parmigiano are tossed with the fettuccine so the sauce clings to every strand rather than pooling.
 
+It's a dish that's all about doing a few simple things well: freshly grated Parmigiano, good butter and pasta cooked just right. The sauce comes together in the pan in minutes, clinging to the ribbons of fettuccine. A grind of black pepper and a scattering of parsley finish it.
+
 ## Ingredients
 
 - 250 g (8 oz) dried fettuccine

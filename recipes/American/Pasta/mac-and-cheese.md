@@ -9,6 +9,8 @@ source: https://www.tiktok.com/@tinekeyounger/video/7568236205008030990
 
 The dish people hover over at the holiday table, waiting for the first spoon to break through the crust. Three cheeses melted into a sauce of evaporated milk and cream, layered with more cheese and baked until the top is golden and crackling and the middle pulls into long, stretchy strings.
 
+Grating your own cheese is the one job everyone wants to skip, and it's the one that matters most: it's the difference between a sauce that's silky and one that's grainy. Take it slowly, whisking in the milk and cream a little at a time, and the reward is a dish people talk about long after the plates are cleared.
+
 ## Ingredients
 
 - 450 g (1 lb) cavatappi (corkscrew pasta)

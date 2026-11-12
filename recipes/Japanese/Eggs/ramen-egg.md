@@ -9,6 +9,8 @@ source: https://japan.recipetineats.com/ramen-egg-ajitsuke-tamago/
 
 The little luxury that makes a bowl of ramen feel special. Soft-boiled eggs with jammy, golden yolks are marinated overnight in a sweet soy sauce. Add them to ramen or rice bowls, or eat them on their own.
 
+Slicing one open to reveal that glossy, jammy yolk is always a small moment of joy. They soak up the sweet, salty marinade overnight, so make a batch and keep them in the fridge. They make any bowl of noodles feel special.
+
 ## Ingredients
 
 - 4 eggs (about 55 g each), straight from the fridge

@@ -162,6 +162,19 @@
     });
   });
 
+  // ---- Phones: the story after the lead folds away behind "Read the story" ----
+  var storyToggle = page.querySelector(".story-toggle");
+  if (storyToggle && window.matchMedia("(max-width: 600px)").matches) {
+    var hero = page.querySelector(".recipe-hero");
+    hero.classList.add("story-folded");
+    storyToggle.hidden = false;
+    storyToggle.addEventListener("click", function () {
+      var open = hero.classList.toggle("story-folded") === false;
+      storyToggle.setAttribute("aria-expanded", String(open));
+      storyToggle.textContent = open ? "Hide the story" : "Read the story";
+    });
+  }
+
   // ---- Pinned ingredients panel: how many are still out of sight below ----
   var more = document.createElement("button");
   more.type = "button";

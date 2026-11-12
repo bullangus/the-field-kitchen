@@ -9,6 +9,8 @@ source: https://havebutterwilltravel.com/keto-satay-sauce/
 
 Creamy, nutty and warming, the satay you'll want to mop up every last drop of. Strips of chicken thigh are simmered in a quick peanut and red curry sauce. Serve with steamed rice.
 
+The sauce is rich and creamy, with a gentle warmth from the curry paste and a squeeze of lime to brighten it. It comes together quickly, so it's an easy weeknight favourite. Spoon plenty of sauce over the rice.
+
 ## Ingredients
 
 - 2 chicken thigh fillets, cut into strips

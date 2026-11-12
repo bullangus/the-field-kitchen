@@ -11,6 +11,8 @@ goes with: Nan's Christmas Pasta Salad, Duck Fat Potatoes, Trifle
 
 Christmas isn't Christmas without this ham, and it is always made. It's the one that converted my husband from a cold ham person to a baked ham one the very first time he tried it. Glazed with maple, orange and Grand Marnier, with candied orange slices pressed over the top and a glossy sauce from the pan juices, it fills the house with the smell of the holidays.
 
+The glaze goes on in layers through the afternoon, and every time the oven door opens the whole house smells of orange, maple and cloves. By the time it comes out, burnished and studded with sticky orange slices, everyone has found a reason to be in the kitchen. The leftovers, in sandwiches on Boxing Day, are almost as good as the first slice.
+
 ## Ingredients
 
 - 1 medium orange, thinly sliced into ¼ cm rings

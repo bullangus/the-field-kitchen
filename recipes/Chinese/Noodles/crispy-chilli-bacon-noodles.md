@@ -10,6 +10,8 @@ source: https://www.cheffatty.com/recipes/crispy-chili-bacon-noodles
 
 A bowl of noodles for when you need something deeply satisfying, fast. Bacon is rendered slowly until crisp, chilli crisp blooms in the fat, and the noodles are tossed through it all until every strand is glossy and spicy.
 
+It's the bowl you make for yourself late at night or on a lazy weekend when only something rich and spicy will do. The bacon fat carries all the flavour of the chilli crisp through the noodles. Pile on the spring onions and sesame seeds and eat it straight away.
+
 ## Ingredients
 
 - 8 rashers thick-cut streaky bacon, cut into 2.5 cm (1 inch) pieces

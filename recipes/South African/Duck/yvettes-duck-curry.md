@@ -10,6 +10,8 @@ goes with: Naan, Raita
 
 A very special recipe from my aunt Yvette. A Durban duck curry with a nod to France in its orange sauce and a sour touch of tamarind, it's the curry we save for the meals that matter. Make the curry paste the day before, or at least before you start the duck.
 
+It takes care and time, with a fragrant paste and a slow simmer, and every step feels worth it. The duck is rich, the sauce is sweet, sour and gently spiced, and the orange gives it a warmth that's all its own. Serve it with naan and raita, and plenty of people around the table.
+
 ## Ingredients
 
 ### For the curry paste

@@ -9,6 +9,8 @@ source: https://www.recipetineats.com/toad-in-the-hole/
 
 Pure comfort: sausages baked into a tall, golden Yorkshire pudding that puffs up around them in the oven, served with a jug of onion gravy. A spoonful of mayonnaise in the batter is the secret to a pudding that rises higher and collapses less.
 
+Keep the oven door shut while it cooks and resist the urge to peek: the batter needs all that heat to climb up the sides of the pan. When it comes out tall and golden, with the sausages nestled inside, it's one of the most satisfying things you can make. Pour over plenty of onion gravy.
+
 ## Ingredients
 
 - 700 g (1.4 lb) pork sausages (8 × 85 g / 3 oz), or other sausages

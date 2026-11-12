@@ -9,6 +9,8 @@ source: https://www.express.co.uk/life-style/food/1830491/Jamie-Oliver-recipe-tr
 
 Our family classic, and the dessert everyone waits for at Christmas. Based on Jamie Oliver's retro trifle, it's layer upon layer of jam roll, strawberries and Cointreau, strawberry jelly, blancmange, mandarins, orange jelly, custard and cream. It needs time for each layer to set, so make it the day before.
 
+Every layer has its job, and the anticipation of watching each one set is half the fun. It comes to the table in a big glass bowl so everyone can see the stripes of red, pink and orange under the cream, with a crumbled Flake on top. The first spoonful, cutting down through every layer, is the best one.
+
 ## Ingredients
 
 - Jam rolls (from Coles or Woolworths), sliced, enough to cover the base of the bowl

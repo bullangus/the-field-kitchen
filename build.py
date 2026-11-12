@@ -442,9 +442,24 @@ def cuisine_art(cuisine, css):
 
 
 def intro(r):
-    """The recipe's opening paragraph, before ## Ingredients, as plain text."""
-    head = r["body"].split("\n## ", 1)[0].strip()
+    """The recipe's opening paragraph (the lead, before any story paragraphs), as plain text."""
+    head = r["body"].split("\n## ", 1)[0].strip().split("\n\n")[0]
     return re.sub(r"[*_]", "", " ".join(head.split()))
+
+
+def intro_html(intro_md, r, xref):
+    """The lead paragraph for the recipe header, then any story paragraphs after it, which
+    phones fold behind "Read the story" (recipe.js). Related titles become links."""
+    paras = [inline(" ".join(p.split())) for p in intro_md.split("\n\n") if p.strip()]
+    if not paras:
+        return ""
+    lead = f'<p class="hero-intro">{paras[0]}</p>'
+    story = ""
+    if len(paras) > 1:
+        story = ('<div class="hero-story" id="hero-story">' + "".join(f"<p>{p}</p>" for p in paras[1:]) + "</div>"
+                 '<button type="button" class="story-toggle" aria-expanded="false" aria-controls="hero-story" hidden>'
+                 'Read the story</button>')
+    return link_mentions(lead + story, r, xref)
 
 
 def search_index(book):
@@ -941,7 +956,7 @@ def recipe_page_html(book, r, prev, nxt):
     <div class="hero-text">
       <p class="kicker"><a href="{root}{cuisine_url(r['cuisine'])}">{html.escape(r['cuisine'])}</a> · {html.escape(r['category'])}</p>
       <h1{vt_name("r", r["url"][:-5])}>{html.escape(r['title'])}</h1>
-      {f'<p class="hero-intro">{link_mentions(inline(" ".join(intro_md.split())), r, xref)}</p>' if intro_md else ''}
+      {intro_html(intro_md, r, xref)}
       <div class="facts">{facts}</div>
       {f'<div class="tags">{tags}</div>' if tags else ''}
       <p class="cooked" hidden></p>

@@ -10,6 +10,8 @@ source: https://www.recipetineats.com/thai-beef-salad-2/
 
 Fresh, fiery and full of life. Seared steak sliced thin and tossed with crisp salad, mint and peanuts in a hot, sour, salty and sweet dressing. Adapted by RecipeTin Eats from the Spice I Am cookbook.
 
+Every mouthful is a balance of heat, sourness, saltiness and sweetness, with the crunch of fresh salad and peanuts. The steak should be pink and juicy, sliced against the grain. It's fresh and bright, perfect for a warm evening.
+
 ## Ingredients
 
 ### For the dressing

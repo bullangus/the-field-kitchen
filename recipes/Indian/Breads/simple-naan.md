@@ -10,6 +10,8 @@ source: https://cooksimply.co.uk/simple-naan-bread-recipe-no-yeast/
 
 Warm, blistered naan straight from the pan, brushed with butter and torn at the table. The dough is just two ingredients and cooks in a dry pan, so it's easy enough for any curry night, including Yvette's Duck Curry.
 
+Watching them puff and blister in the hot pan is part of the joy, and the smell of butter melting over them brings everyone to the kitchen. They're best eaten straight away, torn and dragged through curry. Make a big stack, because they go fast.
+
 ## Ingredients
 
 - 260 g (2 cups) self-raising flour, plus extra for dusting

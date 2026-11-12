@@ -10,6 +10,8 @@ source: https://www.marionskitchen.com/crispy-salt-and-pepper-wings/
 
 The wings that vanish first from any platter. They're double-fried for extra crunch and seasoned with three kinds of peppercorn for a warm, tingling heat, though just one type of peppercorn works fine too.
 
+The double fry is what makes them shatter when you bite in, and the peppery salt clings to every crisp edge. Squeeze over a little lime and have the sriracha close by. They're the first plate to empty at any gathering.
+
 ## Ingredients
 
 - 1 kg (2 lb) chicken wings

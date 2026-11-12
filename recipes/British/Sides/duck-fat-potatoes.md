@@ -10,6 +10,8 @@ source: https://www.recipetineats.com/duck-fat-potatoes-crispiest-best-roast-pot
 
 The potatoes everyone fights over at Christmas and Sunday roasts. Parboiled, roughed up so the edges go fluffy, then roasted in smoking-hot duck fat until they shatter when you bite in. Adapted by RecipeTin Eats from Nigella Lawson's goose fat potatoes.
 
+The trick is in the roughing up: shake them in the pot until the edges go fluffy, so they catch every bit of the hot fat and turn into a craggy, golden crust. They come out of the oven crackling, and the first few never make it to the table. Save the leftover fat in a jar for the next roast.
+
 ## Ingredients
 
 - 1.75–2 kg (3.5–4 lb) medium to large potatoes, such as Sebago or Dutch cream

@@ -9,6 +9,8 @@ source: https://bakingmischief.com/cottage-pie/
 
 The kind of dinner that makes a cold night feel cosy. A rich beef, carrot, pea and corn filling under buttery mash, finished with a blanket of melted mozzarella and Parmesan, all made and baked in one ovenproof pan.
 
+The best moment is pulling it from the oven, the cheese bubbling and golden at the edges, the filling just peeking up around the sides. Leave it to settle for ten minutes before you dig in, if you can wait. It's even better reheated the next day.
+
 ## Ingredients
 
 ### For the mash

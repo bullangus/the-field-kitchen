@@ -9,6 +9,8 @@ source: https://heresyourbite.substack.com/p/dumpling-lasagna
 
 All the joy of pork and spring onion dumplings with none of the folding. Wonton wrappers and filling are layered in ramekins and steamed until glossy and juicy, ready to be drizzled with soy and chilli and eaten straight from the dish.
 
+It's the comfort of dumplings without an afternoon of folding. Each little ramekin steams into a juicy, savoury stack that you dig into with a spoon. Drizzle over soy and plenty of chilli crisp and eat it hot.
+
 ## Ingredients
 
 - 450 g (1 lb) pork mince

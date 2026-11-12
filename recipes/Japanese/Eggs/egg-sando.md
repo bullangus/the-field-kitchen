@@ -11,6 +11,8 @@ goes with: Shokupan
 
 The humble Japanese convenience-store sandwich that's somehow better than it has any right to be. Creamy Kewpie egg salad is mounded into soft, crustless Shokupan and cut on the diagonal.
 
+The secret is the texture: finely minced whites folded into a creamy, rich yolk mixture, all held together by soft, crustless bread. Cut it on the diagonal to show off the thick filling. It's simple, but it's one of the most satisfying sandwiches you'll eat.
+
 ## Ingredients
 
 - 6 slices shokupan (Japanese milk bread)

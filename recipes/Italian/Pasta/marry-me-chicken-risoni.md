@@ -9,6 +9,8 @@ source: https://www.andy-cooks.com/blogs/recipes/marry-me-chicken-risoni
 
 One pan, one bowl each, and a lot of happy silence at the table. Seared chicken thigh in a creamy sun-dried tomato and Parmesan sauce, with the risoni cooked straight in the pan so it soaks up every bit of flavour.
 
+Everything happens in one pan, so the risoni soaks up all the flavour of the chicken, the sun-dried tomatoes and the stock as it cooks. The spinach wilts in right at the end. It's creamy, comforting and quick enough for any night of the week.
+
 ## Ingredients
 
 - 6 boneless, skinless chicken thighs

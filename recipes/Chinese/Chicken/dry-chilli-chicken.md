@@ -9,6 +9,8 @@ source: https://www.tiktok.com/@chefzealand/video/7694443456416042271
 
 A mountain of red chillies that looks fierce and tastes addictive. Crisp, double-fried chicken is tossed through toasted dried chillies and tingling Sichuan pepper. It's not as spicy as it looks, and it disappears fast.
 
+The chillies are there for their smoky warmth and fragrance as much as their heat, and you pick around them as you eat. The Sichuan pepper brings that tingle that keeps you going back for more. Serve it in the middle of the table and watch it disappear.
+
 ## Ingredients
 
 ### For the chicken

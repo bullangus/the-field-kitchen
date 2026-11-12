@@ -10,6 +10,8 @@ source: https://www.justonecookbook.com/karaage/
 
 Golden, crackling pieces of chicken that rarely make it from the rack to the plate. Marinated in ginger, garlic and soy, then fried twice for a light, crisp crust and a juicy middle.
 
+They're best eaten straight from the rack, while they're still crackling and hot, with a squeeze of lemon and a dab of Kewpie. The second fry is what makes the crust so light and crisp. Make plenty: they disappear as fast as you can fry them.
+
 ## Ingredients
 
 - 680 g (1½ lb) boneless, skin-on chicken thighs (4–6 pieces)

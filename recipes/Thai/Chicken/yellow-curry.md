@@ -9,6 +9,8 @@ source: Family recipe
 
 Golden, gentle and fragrant, the curry that fills the kitchen with coconut and spice. Mild enough for everyone at the table, with chicken, potato and carrot. Serve over steamed jasmine rice.
 
+It's a gentle, comforting curry, with tender chicken, soft potato and sweet carrot in a creamy coconut sauce. It's mild enough for everyone, but full of flavour. Garnish with coriander and sliced chilli for those who like a little more heat.
+
 ## Ingredients
 
 - 15 ml (1 tbsp) oil, or thick coconut cream from the top of the can

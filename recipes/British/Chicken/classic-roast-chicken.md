@@ -11,6 +11,8 @@ goes with: Duck Fat Potatoes
 
 A Sunday roast chicken brings everyone to the table without being called. Lemon, garlic and thyme butter is pushed under the skin, then the bird is trussed and roasted to temperature for crackling-crisp skin and breast meat that's still juicy. Save the pan juices for the gravy.
 
+There's something about a whole roast chicken on the table that makes a meal feel like an occasion, even on an ordinary Sunday. Let it rest properly while you finish the potatoes and gravy; the juices settle back into the meat and the skin stays crisp. Then carve it at the table and pass the plates around.
+
 ## Ingredients
 
 - 1 whole chicken, about 1.5–1.8 kg (free-range if you can)
