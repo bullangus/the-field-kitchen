@@ -681,6 +681,9 @@ li.done > .step-num { background: var(--accent); color: var(--paper); }
 
 @media (max-width: 900px) {
   .recipe-hero, .recipe-hero.has-photo { grid-template-columns: 1fr; padding: 2rem 1.5rem 1.5rem; }
+  /* Keep the title clear of the cuisine icon in the top corner. */
+  .recipe-hero:not(.has-photo) h1 { padding-right: 5.5rem; }
+  .recipe-hero .hero-art { width: 5.5rem; right: 0.75rem; top: 1.25rem; }
   .recipe-layout { grid-template-columns: 1fr; gap: 1rem; }
   .ingredients-panel { position: static; max-height: none; }
   .recipe-tabs:not([hidden]) {
