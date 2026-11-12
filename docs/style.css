@@ -821,6 +821,21 @@ html.cooking { overflow: hidden; }
 .pantry-group { border: 0; margin: 0 0 1.25rem; padding: 0; }
 .pantry-group legend { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 0.5rem; }
 .pantry-group .chip { margin: 0 0.3rem 0.4rem 0; }
+.pantry-group[hidden], .pantry-group .chip[hidden] { display: none; }
+.pantry-search { width: 100%; max-width: 24rem; margin: 0 0 1.25rem; }
+.pantry-search[hidden], .pantry-none[hidden], .picks[hidden], .matches-jump[hidden], .pantry-more[hidden] { display: none; }
+.pantry-search input { flex: 1; min-width: 0; font: inherit; color: var(--ink); background: transparent; border: 0; padding: 0.55rem 0; outline: none; }
+.pantry-search:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px var(--ring); }
+.pantry-search svg { flex: none; width: 1.05rem; height: 1.05rem; }
+.pantry-none { color: var(--muted); font-style: italic; }
+.pantry-more {
+  font: inherit; font-size: 0.85rem; cursor: pointer; color: var(--accent); background: none;
+  border: 1px dashed var(--rule); border-radius: 999px; padding: 0.28rem 0.68rem; margin: 0 0.3rem 0.4rem 0;
+}
+.pantry-more:hover { border-color: var(--accent); }
+.picks { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0 0 0.75rem; }
+.picks .chip { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.matches-jump { display: none; }
 .matches { position: sticky; top: 4.75rem; background: var(--grain), var(--card); border: 1px solid var(--rule); border-radius: 20px; padding: 1.4rem; }
 .matches h2 { font-size: 1.6rem; margin: 0 0 0.75rem; }
 .matches-empty { color: var(--muted); font-style: italic; margin: 0; }
@@ -834,7 +849,13 @@ html.cooking { overflow: hidden; }
 .match-bar { height: 6px; border-radius: 999px; background: var(--hover); margin: 0.4rem 0; overflow: hidden; }
 .match-bar span { display: block; height: 100%; background: var(--accent); border-radius: 999px; transition: width 0.3s ease; }
 .match-detail { margin: 0; font-size: 0.88rem; color: var(--muted); }
-@media (max-width: 800px) { .cook-layout { grid-template-columns: 1fr; } .matches { position: static; } }
+@media (max-width: 800px) {
+  .cook-layout { grid-template-columns: 1fr; }
+  .matches { position: static; scroll-margin-top: 4.5rem; }
+  /* On phones the matches sit below the pantry, so keep a way to them in reach. */
+  .matches-jump { display: inline-flex; position: fixed; right: 1rem; bottom: 1rem; z-index: 20; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18); }
+  .matches-jump.away { display: none; }
+}
 
 /* Footer: a signed sign-off on every page; the last page of the printed book */
 .site-footer {

@@ -149,14 +149,54 @@
   var pantry = document.querySelector(".pantry");
   if (pantry) {
     var chips = [].slice.call(pantry.querySelectorAll("[data-ingredient]"));
+    var groups = [].slice.call(pantry.querySelectorAll(".pantry-group"));
+    var search = pantry.querySelector(".pantry-search");
+    var query = search.querySelector("input");
+    var noneFound = pantry.querySelector(".pantry-none");
+    var picks = document.querySelector(".picks");
+    var jump = document.querySelector(".matches-jump");
     var matchList = document.querySelector(".match-list");
     var none = document.querySelector(".matches-empty");
     var have = stored("fk-fridge", []);
+    var opened = [];
+    search.hidden = false;
+
+    // Only the common ingredients show until an aisle is opened or searched; anything
+    // already picked always stays in view so it can be unticked.
+    var show = function () {
+      var q = query.value.trim().toLowerCase(), any = false;
+      groups.forEach(function (g, gi) {
+        var more = g.querySelector(".pantry-more"), tucked = 0, shown = 0;
+        [].forEach.call(g.querySelectorAll("[data-ingredient]"), function (c) {
+          var name = c.getAttribute("data-ingredient");
+          var visible = q ? name.toLowerCase().indexOf(q) !== -1
+            : !c.classList.contains("rare") || opened.indexOf(gi) !== -1 || have.indexOf(name) !== -1;
+          if (!q && c.classList.contains("rare") && have.indexOf(name) === -1) tucked++;
+          c.hidden = !visible;
+          if (visible) shown++;
+        });
+        g.hidden = !shown;
+        any = any || shown > 0;
+        more.hidden = !!q || !tucked;
+        more.textContent = opened.indexOf(gi) !== -1 ? "Show fewer" : "+" + tucked + " more";
+      });
+      noneFound.hidden = any;
+    };
 
     var rank = function () {
       store("fk-fridge", have);
       chips.forEach(function (c) { c.setAttribute("aria-pressed", String(have.indexOf(c.getAttribute("data-ingredient")) !== -1)); });
+      show();
+      picks.textContent = "";
+      picks.hidden = !have.length;
+      have.forEach(function (name) {
+        var b = el("button", "chip", name + " ×");
+        b.type = "button"; b.setAttribute("aria-label", "Remove " + name);
+        b.addEventListener("click", function () { toggle(name); });
+        picks.appendChild(b);
+      });
       matchList.textContent = "";
+      jump.hidden = true;
       if (!have.length) { none.hidden = false; none.textContent = "Pick a few ingredients to see what you can make."; return; }
       var results = index.map(function (r) {
         var need = [];
@@ -165,10 +205,13 @@
         var missing = need.filter(function (n) { return have.indexOf(n) === -1; });
         return { r: r, got: got, missing: missing, score: need.length ? got.length / need.length : 0 };
       }).filter(function (m) { return m.got.length; })
-        .sort(function (a, b) { return a.missing.length - b.missing.length || b.score - a.score; })
+        // Closest to cookable first: the biggest share of the recipe already in hand.
+        .sort(function (a, b) { return b.score - a.score || b.got.length - a.got.length || a.missing.length - b.missing.length; })
         .slice(0, 12);
       none.hidden = results.length > 0;
       if (!results.length) none.textContent = "Nothing uses those yet. Try adding a few more.";
+      jump.hidden = !results.length;
+      jump.textContent = "See " + results.length + (results.length === 1 ? " match" : " matches");
       results.forEach(function (m) {
         var li = el("li", "match");
         var a = el("a", "", m.r.title); a.href = m.r.url;
@@ -181,15 +224,36 @@
         matchList.appendChild(li);
       });
     };
+    var toggle = function (name) {
+      var i = have.indexOf(name);
+      if (i === -1) have.push(name); else have.splice(i, 1);
+      rank();
+    };
     chips.forEach(function (c) {
-      c.addEventListener("click", function () {
-        var name = c.getAttribute("data-ingredient");
-        var i = have.indexOf(name);
-        if (i === -1) have.push(name); else have.splice(i, 1);
-        rank();
+      c.addEventListener("click", function () { toggle(c.getAttribute("data-ingredient")); });
+    });
+    groups.forEach(function (g, gi) {
+      g.querySelector(".pantry-more").addEventListener("click", function () {
+        var i = opened.indexOf(gi);
+        if (i === -1) opened.push(gi); else opened.splice(i, 1);
+        show();
       });
     });
-    document.querySelector(".pantry-clear").addEventListener("click", function () { have = []; rank(); });
+    query.addEventListener("input", show);
+    if ("IntersectionObserver" in window) {
+      // No need for the shortcut once the matches themselves are on screen.
+      new IntersectionObserver(function (entries) {
+        jump.classList.toggle("away", entries[0].isIntersecting);
+      }).observe(document.querySelector(".matches"));
+    }
+    query.addEventListener("keydown", function (e) {
+      // Enter picks the only (or first) ingredient found, then clears the box for the next.
+      if (e.key !== "Enter") return;
+      e.preventDefault();
+      var first = chips.filter(function (c) { return !c.hidden; })[0];
+      if (first && query.value.trim()) { toggle(first.getAttribute("data-ingredient")); query.value = ""; show(); }
+    });
+    document.querySelector(".pantry-clear").addEventListener("click", function () { have = []; query.value = ""; rank(); });
     rank();
   }
 })();

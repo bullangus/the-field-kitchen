@@ -880,36 +880,51 @@ def list_html(book):
 
 
 def cook_html(book):
-    """'What can I cook?': every non-staple ingredient as a chip, grouped by aisle."""
-    by_aisle = {}
+    """'What can I cook?': every non-staple ingredient as a chip, grouped by aisle, the
+    most-used first. Ones only a single recipe needs start tucked behind "more"."""
+    by_aisle, uses = {}, {}
     for r in all_recipes(book):
         _, parts = sections(r["body"])
+        seen = set()
         for line in bullets(parts.get("Ingredients")):
             item = parse_line(line)
-            if item["n"] and not item["s"]:
+            if item["n"] and not item["s"] and item["n"] not in seen:
+                seen.add(item["n"])
                 by_aisle.setdefault(item["a"], set()).add(item["n"])
+                uses[item["n"]] = uses.get(item["n"], 0) + 1
+
+    def chip(name):
+        rare = " rare" if uses[name] == 1 else ""
+        return (f'<button type="button" class="chip{rare}" aria-pressed="false" data-ingredient="{html.escape(name)}">'
+                f'{html.escape(name)}</button>')
+
     groups = "".join(
         f'<fieldset class="pantry-group"><legend>{html.escape(aisle)}</legend>'
-        + "".join(f'<button type="button" class="chip" aria-pressed="false" data-ingredient="{html.escape(name)}">{html.escape(name)}</button>'
-                  for name in sorted(by_aisle[aisle]))
-        + "</fieldset>"
+        + "".join(chip(name) for name in sorted(by_aisle[aisle], key=lambda n: (-uses[n], n.lower())))
+        + '<button type="button" class="pantry-more" hidden></button></fieldset>'
         for aisle in AISLES if aisle in by_aisle
     )
     content = f"""
   <header class="page-hero">
     <p class="eyebrow">{svg_icon("sparkle")}What can I cook?</p>
     <h1>Cook with what you have</h1>
-    <p>Tap what's in your fridge and pantry. Salt, pepper, oil, sugar and water are assumed.</p>
+    <p>Tap what's in your fridge and pantry. Salt, pepper, oil, sugar, water and MSG are assumed.</p>
     <div class="hero-actions"><button type="button" class="pill pill-outline pantry-clear">Clear</button></div>
   </header>
   <div class="cook-layout">
-    <div class="pantry">{groups}</div>
-    <section class="matches" aria-live="polite">
+    <div class="pantry">
+      <label class="search-field pantry-search" hidden>{svg_icon("search")}<input type="search" placeholder="Find an ingredient" aria-label="Find an ingredient" autocomplete="off"></label>
+      <p class="pantry-none" hidden>No ingredient by that name in the book yet.</p>
+      {groups}
+    </div>
+    <section class="matches" id="matches" aria-live="polite">
       <h2>Best matches</h2>
+      <div class="picks" hidden></div>
       <p class="matches-empty">Pick a few ingredients to see what you can make.</p>
       <ol class="match-list"></ol>
     </section>
   </div>
+  <a class="pill pill-solid matches-jump" href="#matches" hidden></a>
   <script src="{TOOLS_SCRIPT}" defer></script>"""
     return page(book, 0, f"What can I cook? · {TITLE}", content, current=COOK_PAGE, main_class="wide")
 

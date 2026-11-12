@@ -218,7 +218,7 @@ window.FIELD_KITCHEN_INDEX = [
 "t": "½ tsp MSG",
 "n": "MSG",
 "a": "Pantry & sauces",
-"s": false,
+"s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
 "u": "tsp"
@@ -325,7 +325,7 @@ window.FIELD_KITCHEN_INDEX = [
 "t": "½ tsp MSG",
 "n": "MSG",
 "a": "Pantry & sauces",
-"s": false,
+"s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
 "u": "tsp"
@@ -702,7 +702,7 @@ window.FIELD_KITCHEN_INDEX = [
 "t": "½ tsp MSG",
 "n": "MSG",
 "a": "Pantry & sauces",
-"s": false,
+"s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
 "u": "tsp"
@@ -1022,7 +1022,7 @@ window.FIELD_KITCHEN_INDEX = [
 "t": "MSG, to taste",
 "n": "MSG",
 "a": "Pantry & sauces",
-"s": false,
+"s": true,
 "p": "\\bmsg\\b",
 "q": null,
 "u": null
@@ -1120,7 +1120,7 @@ window.FIELD_KITCHEN_INDEX = [
 "t": "½ tsp MSG",
 "n": "MSG",
 "a": "Pantry & sauces",
-"s": false,
+"s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
 "u": "tsp"
@@ -1442,7 +1442,7 @@ window.FIELD_KITCHEN_INDEX = [
 "t": "½ tsp MSG",
 "n": "MSG",
 "a": "Pantry & sauces",
-"s": false,
+"s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
 "u": "tsp"
@@ -1549,7 +1549,7 @@ window.FIELD_KITCHEN_INDEX = [
 "t": "½ tsp MSG",
 "n": "MSG",
 "a": "Pantry & sauces",
-"s": false,
+"s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
 "u": "tsp"
@@ -1745,7 +1745,7 @@ window.FIELD_KITCHEN_INDEX = [
 "t": "½ tsp MSG",
 "n": "MSG",
 "a": "Pantry & sauces",
-"s": false,
+"s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
 "u": "tsp"
@@ -1960,7 +1960,7 @@ window.FIELD_KITCHEN_INDEX = [
 "t": "1 tsp MSG",
 "n": "MSG",
 "a": "Pantry & sauces",
-"s": false,
+"s": true,
 "p": "\\bmsg\\b",
 "q": 1.0,
 "u": "tsp"
@@ -2050,7 +2050,7 @@ window.FIELD_KITCHEN_INDEX = [
 "t": "½ tsp MSG",
 "n": "MSG",
 "a": "Pantry & sauces",
-"s": false,
+"s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
 "u": "tsp"
@@ -2221,7 +2221,7 @@ window.FIELD_KITCHEN_INDEX = [
 "t": "½ tsp MSG",
 "n": "MSG",
 "a": "Pantry & sauces",
-"s": false,
+"s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
 "u": "tsp"
@@ -2372,7 +2372,7 @@ window.FIELD_KITCHEN_INDEX = [
 "t": "½ tsp MSG",
 "n": "MSG",
 "a": "Pantry & sauces",
-"s": false,
+"s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
 "u": "tsp"
@@ -2776,7 +2776,7 @@ window.FIELD_KITCHEN_INDEX = [
 "t": "½ tsp MSG",
 "n": "MSG",
 "a": "Pantry & sauces",
-"s": false,
+"s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
 "u": "tsp"
@@ -2865,7 +2865,7 @@ window.FIELD_KITCHEN_INDEX = [
 "t": "½ tsp MSG",
 "n": "MSG",
 "a": "Pantry & sauces",
-"s": false,
+"s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
 "u": "tsp"
@@ -2954,7 +2954,7 @@ window.FIELD_KITCHEN_INDEX = [
 "t": "½ tsp MSG",
 "n": "MSG",
 "a": "Pantry & sauces",
-"s": false,
+"s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
 "u": "tsp"
@@ -3107,7 +3107,7 @@ window.FIELD_KITCHEN_INDEX = [
 "t": "½ tsp MSG",
 "n": "MSG",
 "a": "Pantry & sauces",
-"s": false,
+"s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
 "u": "tsp"
@@ -3468,7 +3468,7 @@ window.FIELD_KITCHEN_INDEX = [
 "t": "½ tsp MSG",
 "n": "MSG",
 "a": "Pantry & sauces",
-"s": false,
+"s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
 "u": "tsp"
@@ -3601,7 +3601,7 @@ window.FIELD_KITCHEN_INDEX = [
 "t": "½ tsp MSG",
 "n": "MSG",
 "a": "Pantry & sauces",
-"s": false,
+"s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
 "u": "tsp"
@@ -3762,7 +3762,7 @@ window.FIELD_KITCHEN_INDEX = [
 "t": "½ tsp MSG",
 "n": "MSG",
 "a": "Pantry & sauces",
-"s": false,
+"s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
 "u": "tsp"
@@ -3922,7 +3922,7 @@ window.FIELD_KITCHEN_INDEX = [
 "t": "½ tsp MSG",
 "n": "MSG",
 "a": "Pantry & sauces",
-"s": false,
+"s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
 "u": "tsp"
@@ -4083,7 +4083,7 @@ window.FIELD_KITCHEN_INDEX = [
 "t": "½ tsp MSG",
 "n": "MSG",
 "a": "Pantry & sauces",
-"s": false,
+"s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
 "u": "tsp"
@@ -4172,7 +4172,7 @@ window.FIELD_KITCHEN_INDEX = [
 "t": "½ tsp MSG",
 "n": "MSG",
 "a": "Pantry & sauces",
-"s": false,
+"s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
 "u": "tsp"
@@ -4405,7 +4405,7 @@ window.FIELD_KITCHEN_INDEX = [
 "t": "½ tsp MSG",
 "n": "MSG",
 "a": "Pantry & sauces",
-"s": false,
+"s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
 "u": "tsp"
@@ -4710,7 +4710,7 @@ window.FIELD_KITCHEN_INDEX = [
 "t": "½ tsp MSG",
 "n": "MSG",
 "a": "Pantry & sauces",
-"s": false,
+"s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
 "u": "tsp"
@@ -4944,7 +4944,7 @@ window.FIELD_KITCHEN_INDEX = [
 "t": "½ tsp MSG",
 "n": "MSG",
 "a": "Pantry & sauces",
-"s": false,
+"s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
 "u": "tsp"
@@ -5034,7 +5034,7 @@ window.FIELD_KITCHEN_INDEX = [
 "t": "½ tsp MSG",
 "n": "MSG",
 "a": "Pantry & sauces",
-"s": false,
+"s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
 "u": "tsp"
@@ -5150,7 +5150,7 @@ window.FIELD_KITCHEN_INDEX = [
 "t": "½ tsp MSG",
 "n": "MSG",
 "a": "Pantry & sauces",
-"s": false,
+"s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
 "u": "tsp"
@@ -5285,7 +5285,7 @@ window.FIELD_KITCHEN_INDEX = [
 "t": "½ tsp MSG",
 "n": "MSG",
 "a": "Pantry & sauces",
-"s": false,
+"s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
 "u": "tsp"
@@ -5570,7 +5570,7 @@ window.FIELD_KITCHEN_INDEX = [
 "t": "½ tsp MSG",
 "n": "MSG",
 "a": "Pantry & sauces",
-"s": false,
+"s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
 "u": "tsp"

@@ -6,7 +6,7 @@ Each INGREDIENTS entry is (pattern, name, aisle, staple). The first pattern that
 matches a line wins, so specific entries ("spring onion", "lemongrass") come
 before general ones ("onion", "lemon"). The pattern is also used in the browser
 to find the ingredient in method steps, so keep it to plain words, | and \\b.
-Staples (salt, pepper, oil, sugar, water) are assumed to be in the pantry.
+Staples (salt, pepper, oil, sugar, water, MSG) are assumed to be in the pantry.
 Add an entry when a new recipe brings an ingredient the table doesn't know;
 unknown lines still work, they just shop under "Other" by their own name.
 """
@@ -81,7 +81,7 @@ INGREDIENTS = [
     (r"\bkewpie\b", "Kewpie mayonnaise", DAIRY, False),
     (r"\bmayonnaise\b", "Mayonnaise", DAIRY, False),
     (r"\bdashi\b", "Dashi powder", PANTRY, False),
-    (r"\bmsg\b", "MSG", PANTRY, False),
+    (r"\bmsg\b", "MSG", PANTRY, True),
     (r"\bbicarbonate\b|\bbaking soda\b", "Bicarbonate of soda", PANTRY, False),
     (r"\bdesiccated coconut\b", "Desiccated coconut", PANTRY, False),
     (r"\bcashew", "Cashew nuts", PANTRY, False),
