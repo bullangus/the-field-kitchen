@@ -117,6 +117,8 @@ CUISINE_PLACES = {
 QUICK_CHIPS = (("quick", f"Under {QUICK_MINUTES} min"), ("make-ahead", "Make ahead"), ("project", "Weekend project"))
 # Hand-picked tags (a recipe's `tags:` line), in chip order. Others are allowed and sort after.
 TAG_ORDER = ("Christmas", "Sunday roast", "Barbecue", "Party food", "Vegetarian", "Spicy")
+# Content hash of each stylesheet and script written so far, filled in by write().
+ASSET_VERSIONS = {}
 # docs/ is fully generated, but these must survive a rebuild.
 KEEP_IN_DOCS = {".nojekyll", "CNAME"}
 
@@ -985,7 +987,20 @@ def service_worker():
                     .replace("{{FILES}}", json.dumps(["./"] + files, indent=2)))
 
 
+def versioned(page):
+    """Page HTML with each stylesheet and script link stamped ?v=<content hash>, so a
+    browser never pairs a new page with a style or script it cached from an older build."""
+    def stamp(m):
+        return f'{m.group(1)}{m.group(2)}?v={ASSET_VERSIONS[m.group(2)]}"'
+    names = "|".join(re.escape(n) for n in ASSET_VERSIONS)
+    return re.sub(rf'((?:href|src)="(?:\.\./)*)({names})"', stamp, page) if names else page
+
+
 def write(rel, text):
+    if rel.endswith(".html"):
+        text = versioned(text)
+    elif rel.endswith((".css", ".js")) and rel != SERVICE_WORKER:
+        ASSET_VERSIONS[rel] = hashlib.sha256(text.encode("utf-8")).hexdigest()[:10]
     path = DOCS / rel
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(text, encoding="utf-8", newline="\n")
