@@ -314,6 +314,24 @@ main.wide { max-width: 72rem; padding-top: 1.5rem; }
   margin: 2rem 0 0.75rem; padding-bottom: 0.35rem; border-bottom: 1px solid var(--rule);
 }
 .style-group[hidden] { display: none; }
+/* Three columns of cards. A style with one or two recipes takes only that many
+   columns, so small styles share a row; cards in a row are all the same height. */
+.style-groups { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 1rem; grid-auto-flow: dense; }
+.style-group { grid-column: span 3; display: flex; flex-direction: column; min-width: 0; }
+.style-group[data-n="1"] { grid-column: span 1; }
+.style-group[data-n="2"] { grid-column: span 2; }
+.style-group .recipe-cards { flex: 1; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-rows: 1fr; }
+.style-group[data-n="1"] .recipe-cards { grid-template-columns: minmax(0, 1fr); }
+.style-group[data-n="2"] .recipe-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 900px) {
+  .style-groups { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .style-group, .style-group[data-n="2"] { grid-column: span 2; }
+  .style-group .recipe-cards, .style-group[data-n="2"] .recipe-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .style-groups { display: block; }
+  .style-group .recipe-cards, .style-group[data-n="2"] .recipe-cards { grid-template-columns: minmax(0, 1fr); grid-auto-rows: auto; }
+}
 .recipe-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); gap: 1rem; }
 .recipe-card {
   position: relative; display: flex; flex-direction: column; gap: 0.35rem; text-decoration: none;

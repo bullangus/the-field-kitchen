@@ -790,7 +790,8 @@ def cuisine_html(book, cuisine):
     tone = recipes[0]["tone"]
     n = len(recipes)
     groups = "".join(
-        f'<section class="style-group filter-group"><h2>{html.escape(category)}</h2><div class="recipe-cards">'
+        # Small styles sit side by side (data-n drives the column span) instead of each taking a row.
+        f'<section class="style-group filter-group" data-n="{min(len(rs), 3)}"><h2>{html.escape(category)}</h2><div class="recipe-cards">'
         + "".join(recipe_card(r, r["url"].split("/", 1)[1]) for r in rs)
         + "</div></section>"
         for category, rs in cats.items()
@@ -806,7 +807,7 @@ def cuisine_html(book, cuisine):
   </header>
   <div class="filter-scope">
     {chips_html(recipes, with_styles=False)}
-    {groups}
+    <div class="style-groups">{groups}</div>
   </div>"""
     return page(book, 1, f"{cuisine} · {TITLE}", content, current=cuisine, main_class="wide")
 
