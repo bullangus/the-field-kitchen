@@ -992,7 +992,21 @@ html.cooking { overflow: hidden; }
 .aisle .amount { color: var(--accent); }
 .aisle small { flex-basis: 100%; color: var(--muted); font-size: 0.8rem; font-style: italic; }
 .aisle li.done strong, .aisle li.done .amount { opacity: 0.45; text-decoration: line-through; }
-.list-empty { color: var(--muted); font-style: italic; }
+.list-empty {
+  max-width: 40rem; margin: 0.5rem 0 0; padding: 2rem; text-align: left;
+  background: var(--grain), var(--card); border: 1px solid var(--rule); border-radius: 20px;
+}
+.list-empty[hidden], .list-ideas[hidden] { display: none; }
+.list-empty > svg { width: 2.4rem; height: 2.4rem; color: var(--accent); }
+.list-empty h2 { font-size: 1.9rem; margin: 0.5rem 0 0.4rem; }
+.list-empty > p { color: var(--muted); margin: 0; }
+.list-ideas { margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); }
+.list-ideas ul { list-style: none; margin: 0; padding: 0; }
+.list-ideas li { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.5rem 0; border-top: 1px solid var(--hair); }
+.list-ideas li:first-child { border-top: 0; }
+.list-ideas a { text-decoration: none; font-weight: 600; }
+.list-ideas span { display: block; color: var(--muted); font-size: 0.85rem; }
+.list-ideas .pill { flex: none; font-size: 0.88rem; padding: 0.4rem 0.95rem; }
 
 /* What can I cook? page (tools.js) */
 .cook-layout { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 2rem; align-items: start; }

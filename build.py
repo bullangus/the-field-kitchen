@@ -918,7 +918,7 @@ def list_html(book):
   <header class="page-hero">
     <p class="eyebrow">Shopping list</p>
     <h1>Shopping list</h1>
-    <p class="list-summary">Add recipes from their page with "Add to shopping list". Amounts are combined and sorted by aisle.</p>
+    <p class="list-summary">One list for everything you plan to cook.</p>
     <div class="hero-actions list-actions" hidden>
       <button type="button" class="pill pill-solid list-share">Share or copy</button>
       <button type="button" class="pill pill-outline list-print">{svg_icon("printer")}Print</button>
@@ -927,7 +927,19 @@ def list_html(book):
   </header>
   <div class="list-recipes"></div>
   <div class="list-aisles"></div>
-  <p class="list-empty" hidden>Your list is empty. Open a recipe and choose "Add to shopping list".</p>
+  <section class="list-empty" hidden>
+    {svg_icon("basket")}
+    <h2>Nothing on the list yet</h2>
+    <p>Open a recipe and choose "Add to shopping list". Everything you add is combined and sorted by aisle, ready to tick off at the shops.</p>
+    <div class="hero-actions">
+      <a class="pill pill-solid" href="{HOME_PAGE}#kitchens">Browse the kitchens</a>
+      <a class="pill pill-outline" href="{COOK_PAGE}">{svg_icon("sparkle")}What can I cook?</a>
+    </div>
+    <div class="list-ideas" hidden>
+      <p class="eyebrow">Or start with one of these</p>
+      <ul></ul>
+    </div>
+  </section>
   <script src="{TOOLS_SCRIPT}" defer></script>"""
     return page(book, 0, f"Shopping list · {TITLE}", content, current=LIST_PAGE, main_class="wide")
 

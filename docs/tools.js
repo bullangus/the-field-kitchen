@@ -55,7 +55,7 @@
       recipesBox.textContent = ""; aislesBox.textContent = ""; lines = [];
       empty.hidden = picked.length > 0;
       actions.hidden = !picked.length;
-      if (!picked.length) { summary.textContent = "Add recipes from their page with “Add to shopping list”. Amounts are combined and sorted by aisle."; return; }
+      if (!picked.length) { summary.textContent = "One list for everything you plan to cook."; ideas(); return; }
 
       // Recipes on the list, each with its servings.
       picked.forEach(function (x) {
@@ -135,6 +135,31 @@
       });
       summary.textContent = count + " things to buy for " + picked.length + " recipe" + (picked.length === 1 ? "" : "s") +
         ". Tick them off as you shop.";
+    };
+
+    // Empty list: offer a few recipes to start from (favourites first, then a random pick).
+    var ideas = function () {
+      var box = document.querySelector(".list-ideas"), ul = box.querySelector("ul");
+      var pool = stored("fk-favs", []).map(byUrl).filter(Boolean);
+      var rest = index.filter(function (r) { return pool.indexOf(r) === -1; });
+      while (pool.length < 3 && rest.length) pool.push(rest.splice(Math.floor(Math.random() * rest.length), 1)[0]);
+      ul.textContent = "";
+      pool.slice(0, 3).forEach(function (r) {
+        var li = el("li"), text = el("div"), a = el("a", "", r.title);
+        a.href = r.url;
+        text.appendChild(a);
+        text.appendChild(el("span", "", r.cuisine + " · " + r.category));
+        var add = el("button", "pill pill-outline", "+ Add");
+        add.type = "button";
+        add.setAttribute("aria-label", "Add " + r.title + " to the shopping list");
+        add.addEventListener("click", function () {
+          store("fk-list", stored("fk-list", []).concat([{ url: r.url, serves: r.serves }]));
+          build();
+        });
+        li.appendChild(text); li.appendChild(add);
+        ul.appendChild(li);
+      });
+      box.hidden = !pool.length;
     };
 
     document.querySelector(".list-clear").addEventListener("click", function () {
