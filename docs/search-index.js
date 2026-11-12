@@ -2444,6 +2444,88 @@ window.FIELD_KITCHEN_INDEX = [
 "options": []
 },
 {
+"title": "Chilli Oil Noodles",
+"cuisine": "Chinese",
+"category": "Noodles",
+"url": "chinese/noodles/chilli-oil-noodles.html",
+"text": "1 packet spicy instant ramen noodles 1 clove garlic 1 spring onion, green part only, finely sliced 1 egg 45 ml (3 tbsp) peanut oil 15 ml (1 tbsp) soy sauce 15 ml (1 tbsp) Chinese black vinegar Spicy",
+"meta": "Serves 1 · Prep 5 min · Cook 5 min",
+"intro": "Packet ramen dressed up: smoking-hot oil poured over the seasoning and garlic, then soy, black vinegar and a crispy fried egg.",
+"photo": "",
+"tags": [
+"noodles",
+"spicy",
+"quick"
+],
+"serves": 1,
+"ingredients": [
+{
+"t": "1 packet spicy instant ramen noodles",
+"n": "Instant ramen noodles",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\binstant ramen\\b|\\bramen noodles\\b|\\bramen\\b|\\bramen\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "1 clove garlic",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 1.0,
+"u": "clove"
+},
+{
+"t": "1 spring onion, green part only, finely sliced",
+"n": "Spring onions",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bspring onions?\\b|\\bgreen onions?\\b|\\bscallions?\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "1 egg",
+"n": "Eggs",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\beggs?\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "45 ml (3 tbsp) peanut oil",
+"n": "Peanut oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\bpeanut oil\\b",
+"q": 45.0,
+"u": "ml"
+},
+{
+"t": "15 ml (1 tbsp) soy sauce",
+"n": "Soy sauce",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bsoy sauce\\b|\\bsoy\\b",
+"q": 15.0,
+"u": "ml"
+},
+{
+"t": "15 ml (1 tbsp) Chinese black vinegar",
+"n": "Chinese black vinegar",
+"a": "Oils & vinegars",
+"s": false,
+"p": "\\bblack vinegar\\b|\\bblack chinese vinegar\\b|\\bvinegar\\b|\\bvinegar\\b",
+"q": 15.0,
+"u": "ml"
+}
+],
+"options": []
+},
+{
 "title": "Dumpling Lasagna",
 "cuisine": "Chinese",
 "category": "Pork",
