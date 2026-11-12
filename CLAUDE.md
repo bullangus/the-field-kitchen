@@ -108,6 +108,18 @@ The home page ends with a signed footer (by Angus Field, `AUTHOR` in build.py), 
 
 ---
 
+## Cuisine icons
+
+Each cuisine has one line icon in `CUISINE_ART` in build.py. It shows on the home page tiles and cards, the cuisine page header and every recipe header, from about 50 px up to 190 px, in light and dark. A new cuisine falls back to the knife and fork until it has its own. When adding or redrawing one:
+
+- **Pick something unmistakable.** A dish, pot or ingredient people name on sight and tie to that cuisine: the potjie for South African, a paella pan for Spanish, a teapot for British. Avoid generic shapes (a plain bowl, a sausage, a droplet) and anything already used by another cuisine. If two icons would look alike at tile size, change one.
+- **Check Tabler Icons first** (https://tabler.io/icons, MIT). If one fits, copy its inner paths. If none does, draw it in the same style and say so in the line's comment, as the existing hand-drawn ones do.
+- **Keep it simple.** One object, about 4 to 8 strokes. No flames, squiggles, textures or tiny details: they turn to mush on a phone tile. Steam, if used, is the three plain curls from the Indian icon. If a detail doesn't help someone name the object, leave it out.
+- **Draw it like the set.** A 24 × 24 grid, drawn within about 2.5 to 21.5 so round caps aren't clipped. Outline only: no fills, and `<path>` elements only (circles as two arcs), because the build adds `pathLength` to each path so the icon can draw itself in. Don't set stroke width, colour or caps in the paths; the build and CSS supply them. Strokes shouldn't cross or overlap, parts that join should meet end to end, and separate parts need at least 1.5 units of air between them. Prefer symmetry and whole or half-unit coordinates.
+- **Look before committing.** Render the new icon large on a grid beside two or three existing ones, and at tile size, and compare line weight, size and level of detail. Then check the built home page on a phone-width screen in light and dark. If it reads as a face, a warning symbol or some other object, redraw it.
+
+---
+
 ## Commands
 
 ```bash
