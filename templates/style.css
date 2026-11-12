@@ -833,6 +833,28 @@ li.done > .step-num { background: var(--accent); color: var(--paper); }
 .changes time { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); }
 .changes p { margin: 0.15rem 0 0; font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.2rem; line-height: 1.35; }
 .source { font-size: 0.85rem; color: var(--muted); margin-top: 1.5rem; }
+/* "Goes well with": recipes that belong on the same table (build.py, `goes with:`). */
+.related { margin-top: 2.5rem; }
+.related h2 {
+  font-family: "Source Serif 4", Georgia, serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.12em; color: var(--accent); margin: 0 0 0.75rem;
+}
+.related-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 0.75rem; }
+.related-card {
+  --tone-bg: var(--t1-bg); --tone-ink: var(--t1-ink);
+  position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 0.1rem; text-decoration: none;
+  background: var(--grain), var(--tone-bg); border-radius: 18px; padding: 1rem 4.25rem 1rem 1.15rem; min-height: 6rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.related-card:hover { transform: translateY(-2px); box-shadow: 0 10px 24px var(--hair); }
+.related-art { position: absolute; top: 0.7rem; right: 0.7rem; width: 3rem; height: 3rem; color: var(--tone-ink); opacity: 0.4; }
+.related-where { font-variant: small-caps; letter-spacing: 0.06em; color: var(--tone-ink); font-size: 0.88rem; }
+.related-card strong { font: 600 1.45rem/1.15 "Cormorant Garamond", Georgia, serif; }
+.related-card small { margin-top: auto; padding-top: 0.35rem; color: var(--muted); font-size: 0.8rem; font-style: italic; }
+.xref { color: inherit; text-decoration: underline; text-decoration-color: var(--tone-ink, var(--accent)); text-decoration-thickness: 1.5px; text-underline-offset: 0.18em; }
+.xref:hover { color: var(--tone-ink, var(--accent)); }
+.goes-with { font-style: italic; margin-top: 1.25rem; }
+.goes-with a { color: var(--accent); }
 .pager {
   display: flex; justify-content: space-between; gap: 1rem;
   margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule);

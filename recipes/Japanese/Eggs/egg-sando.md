@@ -6,6 +6,7 @@ tags: Vegetarian
 serves: 3
 time: Prep 5 min · Cook 10 min
 source: https://feedthepudge.com/japanese-7-eleven-egg-sando-dupe/
+goes with: Shokupan
 ---
 
 The humble Japanese convenience-store sandwich that's somehow better than it has any right to be. Creamy Kewpie egg salad is mounded into soft, crustless Shokupan and cut on the diagonal.

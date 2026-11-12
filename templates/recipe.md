@@ -6,6 +6,7 @@ tags: Christmas, Vegetarian
 serves: 4
 time: Prep 15 min · Cook 30 min
 source: https://example.com/original-recipe
+goes with: Another Recipe Title, A Third One
 ---
 
 One or two lines of introduction, if useful.

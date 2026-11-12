@@ -5,6 +5,7 @@ category: Duck
 tags: Spicy
 serves: 4
 source: Family recipe, from Yvette
+goes with: Naan, Raita
 ---
 
 A very special recipe from my aunt Yvette. A Durban duck curry with a nod to France in its orange sauce and a sour touch of tamarind, it's the curry we save for the meals that matter. Make the curry paste the day before, or at least before you start the duck.

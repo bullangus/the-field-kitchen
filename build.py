@@ -261,6 +261,7 @@ def load():
         recipes.append(r)
         book.setdefault(r["cuisine"], {}).setdefault(r["category"], []).append(r)
     find_photos(recipes)
+    link_related(recipes)
     for cats in book.values():
         for rs in cats.values():
             rs.sort(key=lambda r: r["title"].lower())
@@ -270,6 +271,40 @@ def load():
             for r in rs:
                 r["tone"] = i % TONES + 1
     return book
+
+
+def link_related(recipes):
+    """Resolve each recipe's optional `goes with:` titles into r["related"]. The link runs
+    both ways, so listing it on one recipe is enough. An unknown title stops the build."""
+    by_title = {r["title"]: r for r in recipes}
+    for r in recipes:
+        r["related"] = []
+    for r in recipes:
+        for title in (t.strip() for t in r.get("goes with", "").split(",") if t.strip()):
+            other = by_title.get(title)
+            if not other:
+                sys.exit(f"{r['path']}: 'goes with' names \"{title}\", but no recipe has that title")
+            for a, b in ((r, other), (other, r)):
+                if b is not a and b not in a["related"]:
+                    a["related"].append(b)
+
+
+def link_mentions(text, r, href):
+    """Turn the first mention of each related recipe's title in already-rendered HTML into
+    a link, skipping anything inside a tag or an existing link."""
+    for other in r["related"]:
+        name = html.escape(other["title"], quote=False)
+        pattern = re.compile(r"(<a\b.*?</a>|<[^>]+>)|(" + re.escape(name) + r")", re.S)
+        done = False
+
+        def swap(m):
+            nonlocal done
+            if m.group(1) or done:
+                return m.group(0)
+            done = True
+            return f'<a class="xref" href="{href(other)}">{m.group(2)}</a>'
+        text = pattern.sub(swap, text)
+    return text
 
 
 def all_recipes(book):
@@ -519,8 +554,31 @@ def recipe_html(r, root="", anchor=None):
   <h3>{html.escape(r['title'])}</h3>
   <p class="meta">{meta_line(r)}</p>
   {render(r['body'])}
+  {goes_with_line(r)}
   {source_html(r)}
 </article>"""
+
+
+def goes_with_line(r):
+    """The printed book's 'Goes well with' line, linking to each recipe's page in the book."""
+    if not r["related"]:
+        return ""
+    links = ", ".join(f'<a href="#{slug(o["url"][:-5])}">{html.escape(o["title"])}</a>' for o in r["related"])
+    return f'<p class="goes-with">Goes well with {links}</p>'
+
+
+def related_html(r, root):
+    """'Goes well with' cards at the foot of a recipe page."""
+    if not r["related"]:
+        return ""
+    cards = "".join(
+        f'<a class="related-card tone-{o["tone"]}" href="{root}{o["url"]}">'
+        f'{cuisine_art(o["cuisine"], "related-art")}'
+        f'<span class="related-where">{html.escape(o["cuisine"])} · {html.escape(o["category"])}</span>'
+        f'<strong>{html.escape(o["title"])}</strong>'
+        f'<small>{meta_line(o)}</small></a>'
+        for o in r["related"])
+    return f'<section class="related reveal" aria-label="Goes well with"><h2>Goes well with</h2><div class="related-cards">{cards}</div></section>'
 
 
 def footer_html(book, root, style="slim"):
@@ -838,6 +896,9 @@ def notes_panel(md):
 
 def recipe_page_html(book, r, prev, nxt):
     root = "../../"
+
+    def xref(other):
+        return root + other["url"]
     intro_md, parts = sections(r["body"])
     serves = re.match(r"\d+", r["serves"])
     if serves:
@@ -880,7 +941,7 @@ def recipe_page_html(book, r, prev, nxt):
     <div class="hero-text">
       <p class="kicker"><a href="{root}{cuisine_url(r['cuisine'])}">{html.escape(r['cuisine'])}</a> · {html.escape(r['category'])}</p>
       <h1{vt_name("r", r["url"][:-5])}>{html.escape(r['title'])}</h1>
-      {f'<p class="hero-intro">{inline(" ".join(intro_md.split()))}</p>' if intro_md else ''}
+      {f'<p class="hero-intro">{link_mentions(inline(" ".join(intro_md.split())), r, xref)}</p>' if intro_md else ''}
       <div class="facts">{facts}</div>
       {f'<div class="tags">{tags}</div>' if tags else ''}
       <p class="cooked" hidden></p>
@@ -909,7 +970,8 @@ def recipe_page_html(book, r, prev, nxt):
       {options}
     </div>
   </div>
-  {notes_panel(parts.get("Notes"))}
+  {link_mentions(notes_panel(parts.get("Notes")), r, xref)}
+  {related_html(r, root)}
   {source_html(r)}
 </article>
 <nav class="pager" aria-label="More recipes">{"".join(pager)}</nav>

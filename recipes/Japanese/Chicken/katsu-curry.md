@@ -5,6 +5,7 @@ category: Chicken
 serves: 4
 time: Prep 20 min · Cook 30 min
 source: Family recipe
+goes with: Tonkatsu
 ---
 
 A big, warming plate of comfort for a rainy night. Crisp crumbed chicken on rice, smothered in a rich, glossy Japanese curry sauce made from Golden Curry blocks. The cutlets are made exactly as for Tonkatsu.
