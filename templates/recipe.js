@@ -162,6 +162,27 @@
     });
   });
 
+  // ---- Pinned ingredients panel: how many are still out of sight below ----
+  var more = document.createElement("button");
+  more.type = "button";
+  more.className = "panel-more";
+  more.hidden = true;
+  ingredientsPanel.appendChild(more);
+  function countBelow() {
+    var scrolls = ingredientsPanel.scrollHeight - ingredientsPanel.clientHeight > 8;
+    var edge = Math.min(ingredientsPanel.getBoundingClientRect().bottom, window.innerHeight) - 24;
+    var below = scrolls ? ingredients.filter(function (li) { return li.getBoundingClientRect().top > edge; }).length : 0;
+    more.hidden = !below;
+    more.textContent = "↓ " + below + " more ingredient" + (below === 1 ? "" : "s");
+  }
+  more.addEventListener("click", function () {
+    ingredientsPanel.scrollBy({ top: ingredientsPanel.clientHeight * 0.7, behavior: "smooth" });
+  });
+  ingredientsPanel.addEventListener("scroll", countBelow, { passive: true });
+  window.addEventListener("resize", countBelow);
+  window.addEventListener("scroll", countBelow, { passive: true });
+  setTimeout(countBelow, 0);
+
   // ---- Serving scaler ----
   var FRACTIONS = { "½": 0.5, "¼": 0.25, "¾": 0.75, "⅓": 1 / 3, "⅔": 2 / 3, "⅛": 0.125 };
   var GLYPHS = [[0.125, "⅛"], [0.25, "¼"], [1 / 3, "⅓"], [0.5, "½"], [2 / 3, "⅔"], [0.75, "¾"]];
