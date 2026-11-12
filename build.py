@@ -31,6 +31,7 @@ PHOTOS = ROOT / "photos"
 README = ROOT / "README.md"
 TEMPLATES = ROOT / "templates"
 DOCS = ROOT / "docs"
+HOME_PAGE = "index.html"
 BOOK_PAGE = "book.html"
 LIST_PAGE = "list.html"
 COOK_PAGE = "cook.html"
@@ -80,6 +81,7 @@ NAV_ICONS = {
                 '<path d="M19 15l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/>'),
     "play": '<path d="M7 4.5v15l12.5-7.5z"/>',
     "plus": '<path d="M12 5v14M5 12h14"/>',
+    "home": '<path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9.5h4.5V15h3v4.5H18V10"/>',
 }
 # Cuisine icons (24x24 outline paths) from Tabler Icons v3.19.0, MIT licence,
 # https://tabler.io/icons. New cuisines get the knife and fork until one is added here.
@@ -452,6 +454,12 @@ def nav_html(book, root, current=None):
     <button type="button" class="nav-button theme-toggle" aria-label="Switch between light and dark">{svg_icon("moon", "moon")}{svg_icon("sun", "sun")}</button>
     <button type="button" class="nav-button menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Menu">{svg_icon("menu")}</button>
   </div>
+</nav>
+<nav class="tabbar" aria-label="Quick links">
+  <a href="{root}index.html"{here(HOME_PAGE)}>{svg_icon("home")}<span>Home</span></a>
+  <button type="button" class="tab-search" hidden>{svg_icon("search")}<span>Search</span></button>
+  <a href="{root}{COOK_PAGE}"{here(COOK_PAGE)}>{svg_icon("sparkle")}<span>Cook</span></a>
+  <a href="{root}{LIST_PAGE}"{here(LIST_PAGE)}>{svg_icon("basket")}<span>List</span><span class="list-count" hidden>0</span></a>
 </nav>"""
 
 
@@ -752,7 +760,7 @@ def home_html(book):
     </div>
   </section>
   <script src="{HOME_SCRIPT}" defer></script>"""
-    return page(book, 0, TITLE, content, main_class="home", footer="full")
+    return page(book, 0, TITLE, content, current=HOME_PAGE, main_class="home", footer="full")
 
 
 def recipe_card(r, href):
@@ -1045,7 +1053,7 @@ def build_site(book):
     shutil.copytree(TEMPLATES / FONTS, DOCS / FONTS)
     write(MANIFEST, manifest())
     write(SEARCH_INDEX, search_index(book))
-    write("index.html", home_html(book))
+    write(HOME_PAGE, home_html(book))
     write(LIST_PAGE, list_html(book))
     write(COOK_PAGE, cook_html(book))
     write(BOOK_PAGE, book_html(book))

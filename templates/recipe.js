@@ -556,9 +556,20 @@
     var lock = wakeLock;
     wakeLock = null;
     if (lock) lock.release();
-    startButton.focus();
+    (startButton.getBoundingClientRect().bottom > 0 ? startButton : document.querySelector(".cook-fab") || startButton).focus();
   }
   startButton.addEventListener("click", openView);
+  // On phones, a floating copy of the button once the header's own has scrolled away.
+  if ("IntersectionObserver" in window) {
+    var fab = document.createElement("button");
+    fab.type = "button";
+    fab.className = "pill pill-solid cook-fab";
+    fab.innerHTML = startButton.innerHTML;
+    fab.hidden = true;
+    fab.addEventListener("click", openView);
+    document.body.appendChild(fab);
+    new IntersectionObserver(function (entries) { fab.hidden = entries[0].isIntersecting; }).observe(startButton);
+  }
   document.addEventListener("keydown", function (e) {
     if (!view) return;
     if (e.key === "ArrowRight" || e.key === " ") { e.preventDefault(); next(); }

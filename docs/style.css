@@ -247,6 +247,42 @@ h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600
   .site-nav:not(.js) .inner { height: auto; flex-wrap: wrap; padding: 0.6rem 16px; }
 }
 
+/* Phones: a bar at thumb height with the four places you go most. The top bar keeps
+   the name, light/dark and the menu of cuisines. */
+:root { --tabbar: 0px; }
+.tabbar { display: none; }
+.cook-fab { display: none; }
+@media (max-width: 760px) {
+  :root { --tabbar: calc(3.9rem + env(safe-area-inset-bottom, 0px)); }
+  body { padding-bottom: var(--tabbar); }
+  .tabbar {
+    display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+    height: var(--tabbar); padding: 0.3rem 0.5rem env(safe-area-inset-bottom, 0px); view-transition-name: tabbar;
+    background: var(--nav-bg); border-top: 1px solid var(--rule);
+    -webkit-backdrop-filter: saturate(1.4) blur(10px); backdrop-filter: saturate(1.4) blur(10px);
+  }
+  .tabbar a, .tabbar button {
+    position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.1rem;
+    font: inherit; font-size: 0.72rem; letter-spacing: 0.02em; color: var(--muted); text-decoration: none;
+    background: none; border: 0; border-radius: 14px; padding: 0; cursor: pointer;
+  }
+  .tabbar [hidden] { display: none; }
+  .tabbar svg { width: 1.45rem; height: 1.45rem; }
+  .tabbar [aria-current="page"] { color: var(--accent); font-weight: 600; }
+  .tabbar a:active, .tabbar button:active { background: var(--hover); }
+  .tabbar .list-count { top: 0.15rem; right: calc(50% - 1.5rem); }
+  /* The basket lives in the bottom bar here. */
+  .site-nav .list-link { display: none; }
+  html.cooking .tabbar { display: none; }
+}
+@media (max-width: 900px) {
+  /* Recipe pages: "Start cooking" follows you once the header has scrolled away. */
+  .cook-fab:not([hidden]) {
+    display: inline-flex; position: fixed; right: 1rem; bottom: calc(var(--tabbar) + 0.9rem); z-index: 25;
+    box-shadow: 0 8px 24px var(--shadow);
+  }
+}
+
 /* Wide pages (cuisine, recipe, list, cook) and shared headers */
 main.wide { max-width: 72rem; padding-top: 1.5rem; }
 .print-link { text-align: center; color: var(--muted); font-style: italic; margin-top: 3rem; }
@@ -799,7 +835,7 @@ html.cooking { overflow: hidden; }
 .cv-awake[hidden] { display: none; }
 .cv-hint { flex: 1; margin: 0; text-align: center; color: var(--muted); font-size: 0.85rem; font-style: italic; }
 @media (max-width: 600px) { .cv-hint { display: none; } .cv-foot { justify-content: space-between; } }
-.timer-tray { position: fixed; right: 1rem; bottom: 6rem; z-index: 70; display: flex; flex-direction: column; gap: 0.5rem; }
+.timer-tray { position: fixed; right: 1rem; bottom: calc(var(--tabbar) + 5rem); z-index: 70; display: flex; flex-direction: column; gap: 0.5rem; }
 .timer-tray[hidden] { display: none; }
 .timer {
   display: flex; align-items: center; gap: 0.75rem; min-width: 14rem;
@@ -838,6 +874,14 @@ html.cooking { overflow: hidden; }
 .palette-foot kbd, .search kbd {
   font: inherit; font-size: 0.75rem; color: var(--muted);
   border: 1px solid var(--rule); border-radius: 5px; padding: 0 0.35rem; line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+  /* Sit high so the results stay above the on-screen keyboard; no keyboard hints. */
+  .palette { padding-top: 4.5rem; }
+  .palette-foot { display: none; }
+  .palette-list { max-height: 42vh; }
+  .palette-list [role="option"] { padding: 0.75rem 0.8rem; }
 }
 
 /* Shopping list page (tools.js) */
@@ -906,7 +950,7 @@ html.cooking { overflow: hidden; }
   .cook-layout { grid-template-columns: 1fr; }
   .matches { position: static; scroll-margin-top: 4.5rem; }
   /* On phones the matches sit below the pantry, so keep a way to them in reach. */
-  .matches-jump { display: inline-flex; position: fixed; right: 1rem; bottom: 1rem; z-index: 20; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18); }
+  .matches-jump { display: inline-flex; position: fixed; right: 1rem; bottom: calc(var(--tabbar) + 0.9rem); z-index: 20; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18); }
   .matches-jump.away { display: none; }
 }
 
@@ -974,7 +1018,7 @@ html.cooking { overflow: hidden; }
   }
   @page { margin: 18mm 16mm 20mm; }
   .site-nav, .pager, .print-link, .print-intro, .search, .read-progress, .recipe-tabs, .hero-actions,
-  .timer-tray, .cook-view, .palette, .hero-art, .panel-hint, .scale-note, .chips, .list-actions { display: none !important; }
+  .timer-tray, .cook-view, .palette, .hero-art, .panel-hint, .scale-note, .chips, .list-actions, .tabbar, .cook-fab { display: none !important; }
   /* Only the printed book keeps the footer, as a colophon on its own last page. */
   .site-footer { display: none; }
   .site-footer.colophon { display: block; break-before: page; background: none; border: 0; margin: 0; padding-top: 90mm; }

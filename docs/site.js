@@ -44,11 +44,10 @@
   onScroll();
 
   // ---- Shopping list count on the basket ----
-  var badge = nav.querySelector(".list-count");
+  var badges = document.querySelectorAll(".list-count");
   function updateBadge() {
     var n = stored("fk-list", []).length;
-    badge.textContent = n;
-    badge.hidden = n === 0;
+    [].forEach.call(badges, function (badge) { badge.textContent = n; badge.hidden = n === 0; });
   }
   updateBadge();
   window.addEventListener("storage", updateBadge);
@@ -234,6 +233,9 @@
     field.focus();
   }
   window.FieldKitchenPalette = openPalette;
+  // The phone bottom bar's Search opens the same palette.
+  var tabSearch = document.querySelector(".tab-search");
+  if (tabSearch) { tabSearch.hidden = false; tabSearch.addEventListener("click", openPalette); }
 
   // ---- Keyboard ----
   document.addEventListener("keydown", function (e) {
