@@ -74,7 +74,8 @@ templates/icon.svg, icon-*.png   chef's hat: favicon, nav bar, and phone home-sc
 templates/world-dots.json        land dots for the home page map (Natural Earth via world-atlas)
 templates/site.js                every page: nav, light/dark, search, Ctrl/Cmd+K palette, filter
                                  chips, fade-up and self-drawing icons, card tilt, offline
-templates/home.js                home: random "Why not cook…" tile, "Cook tonight" quick picks,
+templates/home.js                home: random "Why not cook…" tile, "Cook tonight" quick meals
+                                 (styles in NOT_MEALS in build.py, like Sides, are left out),
                                  "Your kitchen" (favourites and recently opened)
 templates/recipe.js              recipe pages: tick-offs, ingredient highlighting, scaler, phone
                                  tabs, add to shopping list, favourite heart, cooked count, topping

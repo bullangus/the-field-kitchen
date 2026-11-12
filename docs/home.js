@@ -64,7 +64,8 @@
 
   // ---- Cook tonight: a fresh hand of quick recipes on each visit, or on Shuffle ----
   var list = document.querySelector(".tonight-list");
-  var quick = index.filter(function (r) { return r.tags.indexOf("quick") !== -1; });
+  var skip = list ? (list.getAttribute("data-skip") || "").split(",") : [];
+  var quick = index.filter(function (r) { return r.tags.indexOf("quick") !== -1 && skip.indexOf(r.category) === -1; });
   if (list && quick.length) {
     // Beside "Your kitchen" the tile is narrower: two columns, so deal an even four.
     var count = (parseInt(list.getAttribute("data-count"), 10) || 3) + (document.querySelector(".bento.has-yours") ? 1 : 0);

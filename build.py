@@ -51,6 +51,8 @@ PHOTO_EXTENSIONS = (".jpg", ".jpeg", ".png", ".webp")
 PHOTO_WARN_BYTES = 1_500_000
 RECENT_COUNT = 5
 TONIGHT_COUNT = 3  # quick recipes on the home page's "Cook tonight" tile
+# Styles that aren't a meal on their own, so "Cook tonight" and its counter skip them.
+NOT_MEALS = ("Sides", "Desserts", "Breads", "Baking", "Eggs")
 KITCHEN_CARD_RECIPES = 3  # recipes shown on each home page cuisine card; the rest are a click away
 CARD_TAGS = 3  # style tags shown on each home page cuisine card before "+N"
 TONES = 6  # colour tones for cuisine cards and headers, .tone-1 to .tone-6 in style.css
@@ -650,7 +652,7 @@ def world_map(book):
 def home_html(book):
     recipes = all_recipes(book)
     count, cuisines = len(recipes), len(book)
-    quick = [r for r in recipes if "quick" in r["tags"]]
+    quick = [r for r in recipes if "quick" in r["tags"] and r["category"] not in NOT_MEALS]
     hat = icon_inline().replace("<svg ", '<svg class="hat" ', 1)
 
     def plural(n, word):
@@ -699,7 +701,7 @@ def home_html(book):
         </div>
         <button type="button" class="pill pill-outline tonight-shuffle" hidden>Shuffle</button>
       </div>
-      <ul class="tonight-list" data-count="{TONIGHT_COUNT}">{picks}</ul>
+      <ul class="tonight-list" data-count="{TONIGHT_COUNT}" data-skip="{html.escape(",".join(NOT_MEALS))}">{picks}</ul>
     </section>
     <section class="tile tile-yours reveal" hidden>
       <p class="eyebrow">Your kitchen</p>
@@ -744,7 +746,7 @@ def home_html(book):
       <ul class="stats">
         <li><strong>{count}</strong> {'recipe' if count == 1 else 'recipes'}</li>
         <li><strong>{cuisines}</strong> {'cuisine' if cuisines == 1 else 'cuisines'}</li>
-        <li><strong>{len(quick)}</strong> under {QUICK_MINUTES} min</li>
+        <li><strong>{len(quick)}</strong> {"quick dinner" if len(quick) == 1 else "quick dinners"}</li>
       </ul>
       <div class="tile-actions">
         <a class="pill pill-solid" href="#kitchens">Browse the kitchens</a>
