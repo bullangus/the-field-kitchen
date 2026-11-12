@@ -725,10 +725,15 @@ li.done > .step-num { background: var(--accent); color: var(--paper); }
 .focusing li.focus, .focusing li.uses { opacity: 1; }
 .focusing .method-panel li.uses, .focusing .method-panel li.focus { background: var(--hover); }
 .focusing .ingredients-panel li.uses > .ing-text, .focusing .ingredients-panel li.focus > .ing-text { color: var(--accent); font-weight: 600; }
-.options { margin-top: 2.5rem; padding: 1.5rem; border: 1px dashed var(--rule); border-radius: 20px; }
-.options h5 { margin-top: 1.25rem; }
-.options ul { padding-left: 1.1rem; margin: 0.25rem 0 0.6rem; }
-.options ol li { padding-left: 0.75rem; }
+.options { margin-top: 2.5rem; }
+.option { margin-top: 0.9rem; padding: 1.25rem 1.4rem 1.3rem; background: var(--grain), var(--card); border: 1px solid var(--rule); border-radius: 20px; }
+.method-panel .option h5 { font-size: 1.5rem; margin: 0 0 0.5rem; padding: 0; border: 0; }
+.option ul { list-style: none; margin: 0 0 0.6rem; padding: 0 0 0.6rem; border-bottom: 1px solid var(--hair); }
+.option ul li { display: flex; align-items: flex-start; gap: 0.6rem; padding: 0.3rem 0; font-size: 0.97rem; line-height: 1.45; }
+.option .ing-text { cursor: default; }
+.option .ing-text:hover { color: inherit; }
+.option-add { margin-top: 0.6rem; font-size: 0.88rem; padding: 0.4rem 0.95rem; }
+.option-add[hidden] { display: none; }
 
 .notes-panel { margin-top: 3rem; padding: 1.75rem; border-radius: 20px; background: var(--grain), var(--note-bg); }
 .notes-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1.25rem 2.5rem; }

@@ -213,6 +213,12 @@ def bullets(md):
     return re.findall(r"^- (.*)", md or "", re.M)
 
 
+def options_of(md):
+    """[(name, markdown)] for each '### Option' in a Topping Options section."""
+    chunks = re.split(r"^### (.+)$", md or "", flags=re.M)
+    return [(name.strip(), body) for name, body in zip(chunks[1::2], chunks[2::2])]
+
+
 def find_photos(recipes):
     """Match photos/<recipe file name>.<jpg|jpeg|png|webp> to recipes by file name."""
     if not PHOTOS.is_dir():
@@ -414,7 +420,9 @@ def search_index(book):
                         "meta": html.unescape(meta_line(r)), "intro": intro(r),
                         "photo": r.get("photo", ""), "tags": r["tags"],
                         "serves": int(serves.group()) if serves else 1,
-                        "ingredients": [parse_line(line) for line in bullets(parts.get("Ingredients"))]})
+                        "ingredients": [parse_line(line) for line in bullets(parts.get("Ingredients"))],
+                        "options": [{"name": name, "ingredients": [parse_line(line) for line in bullets(md)]}
+                                    for name, md in options_of(parts.get("Topping Options"))]})
     return "window.FIELD_KITCHEN_INDEX = " + json.dumps(entries, ensure_ascii=False, indent=0) + ";\n"
 
 
@@ -850,7 +858,12 @@ def recipe_page_html(book, r, prev, nxt):
              if r.get("photo") else "")
     options = ""
     if parts.get("Topping Options"):
-        options = f'<section class="options"><h2>Topping options</h2>{render(parts["Topping Options"])}</section>'
+        # Each option is its own card: tick-offs, scaling and "add to shopping list" like the main recipe.
+        cards = "".join(
+            f'<article class="option" data-option="{html.escape(name)}"><h5>{inline(name)}</h5>{render(md)}'
+            f'<button type="button" class="pill pill-outline option-add" hidden>{svg_icon("plus")}Add to shopping list</button></article>'
+            for name, md in options_of(parts["Topping Options"]))
+        options = f'<section class="options"><h2>Topping options</h2>{cards}</section>'
     pager = []
     if prev:
         pager.append(f'<a class="prev" href="{root}{prev["url"]}"><span>Previous</span>{html.escape(prev["title"])}</a>')

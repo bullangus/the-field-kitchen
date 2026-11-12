@@ -105,7 +105,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": 170.0,
 "u": "g"
 }
-]
+],
+"options": []
 },
 {
 "title": "Buffalo Wings",
@@ -222,7 +223,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": 0.5,
 "u": "tsp"
 }
-]
+],
+"options": []
 },
 {
 "title": "Caesar Salad",
@@ -356,7 +358,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": 40.0,
 "u": "g"
 }
-]
+],
+"options": []
 },
 {
 "title": "Maple Orange Glazed Ham",
@@ -518,7 +521,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": 1.0,
 "u": "head"
 }
-]
+],
+"options": []
 },
 {
 "title": "Barbecued Snapper",
@@ -706,7 +710,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": 0.5,
 "u": "tsp"
 }
-]
+],
+"options": []
 },
 {
 "title": "Honey Glazed Salmon",
@@ -813,7 +818,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": 1.0,
 "u": null
 }
-]
+],
+"options": []
 },
 {
 "title": "Nan's Christmas Pasta Salad",
@@ -866,7 +872,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": 3.0,
 "u": null
 }
-]
+],
+"options": []
 },
 {
 "title": "Cottage Pie",
@@ -1044,7 +1051,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": null,
 "u": null
 }
-]
+],
+"options": []
 },
 {
 "title": "Roast Chicken",
@@ -1124,7 +1132,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": 0.5,
 "u": "tsp"
 }
-]
+],
+"options": []
 },
 {
 "title": "Trifle",
@@ -1259,7 +1268,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": 1.0,
 "u": null
 }
-]
+],
+"options": []
 },
 {
 "title": "Toad in the Hole",
@@ -1446,7 +1456,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": 0.5,
 "u": "tsp"
 }
-]
+],
+"options": []
 },
 {
 "title": "Baked Potato",
@@ -1490,7 +1501,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": null,
 "u": null
 }
-]
+],
+"options": []
 },
 {
 "title": "Duck Fat Potatoes",
@@ -1580,7 +1592,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": null,
 "u": null
 }
-]
+],
+"options": []
 },
 {
 "title": "Gravy",
@@ -1624,7 +1637,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": 185.0,
 "u": "ml"
 }
-]
+],
+"options": []
 },
 {
 "title": "Mongolian Beef",
@@ -1794,7 +1808,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": null,
 "u": null
 }
-]
+],
+"options": []
 },
 {
 "title": "Dry Chilli Chicken",
@@ -1973,7 +1988,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": null,
 "u": null
 }
-]
+],
+"options": []
 },
 {
 "title": "Salt & Pepper Wings",
@@ -2117,7 +2133,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": 375.0,
 "u": "ml"
 }
-]
+],
+"options": []
 },
 {
 "title": "Chilli Bacon Noodles",
@@ -2270,7 +2287,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": null,
 "u": null
 }
-]
+],
+"options": []
 },
 {
 "title": "Dumpling Lasagna",
@@ -2439,7 +2457,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": null,
 "u": null
 }
-]
+],
+"options": []
 },
 {
 "title": "Yoghurt Sauce",
@@ -2493,7 +2512,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": null,
 "u": null
 }
-]
+],
+"options": []
 },
 {
 "title": "Naan",
@@ -2556,7 +2576,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": null,
 "u": null
 }
-]
+],
+"options": []
 },
 {
 "title": "Raita",
@@ -2637,7 +2658,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": 0.25,
 "u": null
 }
-]
+],
+"options": []
 },
 {
 "title": "Focaccia",
@@ -2707,6 +2729,190 @@ window.FIELD_KITCHEN_INDEX = [
 "p": "",
 "q": null,
 "u": null
+}
+],
+"options": [
+{
+"name": "Rosemary and flaky salt",
+"ingredients": [
+{
+"t": "55 g (¼ cup) extra-virgin olive oil",
+"n": "Olive oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\bolive oil\\b",
+"q": 55.0,
+"u": "g"
+},
+{
+"t": "Fresh rosemary leaves",
+"n": "Rosemary",
+"a": "Herbs",
+"s": false,
+"p": "\\brosemary\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Flaky salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": null,
+"u": null
+}
+]
+},
+{
+"name": "Garlic",
+"ingredients": [
+{
+"t": "55 g (¼ cup) extra-virgin olive oil",
+"n": "Olive oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\bolive oil\\b",
+"q": 55.0,
+"u": "g"
+},
+{
+"t": "6 cloves garlic, thinly sliced",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 6.0,
+"u": "cloves"
+},
+{
+"t": "Flaky salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": null,
+"u": null
+}
+]
+},
+{
+"name": "Chilli garlic",
+"ingredients": [
+{
+"t": "55 g (¼ cup) extra-virgin olive oil",
+"n": "Olive oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\bolive oil\\b",
+"q": 55.0,
+"u": "g"
+},
+{
+"t": "4 cloves garlic, finely chopped",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 4.0,
+"u": "cloves"
+},
+{
+"t": "1–2 tsp chilli flakes",
+"n": "Chilli flakes",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bchilli flakes\\b|\\bchilli\\b",
+"q": 2.0,
+"u": "tsp"
+},
+{
+"t": "Flaky salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": null,
+"u": null
+}
+]
+},
+{
+"name": "Sichuan pepper oil and soy caramelised onions",
+"ingredients": [
+{
+"t": "60 ml (¼ cup) olive oil",
+"n": "Olive oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\bolive oil\\b",
+"q": 60.0,
+"u": "ml"
+},
+{
+"t": "1½ tbsp Sichuan peppercorns",
+"n": "Sichuan peppercorns",
+"a": "Herbs & spices",
+"s": false,
+"p": "\\bsichuan pepper|\\bsichuan red pepper|\\bsichuan\\b|\\bsichuan\\b",
+"q": 4.5,
+"u": "tsp"
+},
+{
+"t": "½ tbsp black peppercorns",
+"n": "Pepper",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bpepper(corns)?\\b",
+"q": 1.5,
+"u": "tsp"
+},
+{
+"t": "½ tbsp white peppercorns",
+"n": "Pepper",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bpepper(corns)?\\b",
+"q": 1.5,
+"u": "tsp"
+},
+{
+"t": "2 large onions, halved and sliced into thin rings",
+"n": "Brown onions",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bonions?\\b",
+"q": 2.0,
+"u": null
+},
+{
+"t": "60 ml (4 tbsp) vegetable oil",
+"n": "Neutral oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\boil\\b",
+"q": 60.0,
+"u": "ml"
+},
+{
+"t": "½ tbsp sugar, more to taste",
+"n": "Sugar",
+"a": "Pantry & sauces",
+"s": true,
+"p": "\\bsugar\\b",
+"q": 1.5,
+"u": "tsp"
+},
+{
+"t": "30 ml (2 tbsp) soy sauce",
+"n": "Soy sauce",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bsoy sauce\\b|\\bsoy\\b",
+"q": 30.0,
+"u": "ml"
+}
+]
 }
 ]
 },
@@ -2798,7 +3004,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": null,
 "u": null
 }
-]
+],
+"options": []
 },
 {
 "title": "Carbonara",
@@ -2878,7 +3085,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": null,
 "u": null
 }
-]
+],
+"options": []
 },
 {
 "title": "Fettuccine Alfredo",
@@ -2985,7 +3193,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": null,
 "u": null
 }
-]
+],
+"options": []
 },
 {
 "title": "Lasagne",
@@ -3228,7 +3437,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": null,
 "u": null
 }
-]
+],
+"options": []
 },
 {
 "title": "Marry Me Chicken Risoni",
@@ -3371,7 +3581,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": null,
 "u": null
 }
-]
+],
+"options": []
 },
 {
 "title": "Porchetta",
@@ -3472,7 +3683,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": 0.5,
 "u": "tsp"
 }
-]
+],
+"options": []
 },
 {
 "title": "Chicken Nanban",
@@ -3668,7 +3880,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": null,
 "u": null
 }
-]
+],
+"options": []
 },
 {
 "title": "Karaage",
@@ -3820,6 +4033,67 @@ window.FIELD_KITCHEN_INDEX = [
 "q": null,
 "u": null
 }
+],
+"options": [
+{
+"name": "Shio negi",
+"ingredients": [
+{
+"t": "1 bunch spring onions (scallions), finely sliced",
+"n": "Spring onions",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bspring onions?\\b|\\bgreen onions?\\b|\\bscallions?\\b",
+"q": 1.0,
+"u": "bunch"
+},
+{
+"t": "½ tsp chicken bouillon powder",
+"n": "Chicken stock powder",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bchicken bouillon\\b|\\bchicken stock powder\\b|\\bbouillon\\b|\\bchicken\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
+"t": "A drizzle of honey (or sugar)",
+"n": "Honey",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\bhoney\\b",
+"q": null,
+"u": null
+},
+{
+"t": "30 ml (2 tbsp) sesame oil",
+"n": "Sesame oil",
+"a": "Oils & vinegars",
+"s": false,
+"p": "\\bsesame oil\\b",
+"q": 30.0,
+"u": "ml"
+},
+{
+"t": "2 cloves garlic, finely grated on a microplane",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 2.0,
+"u": "cloves"
+},
+{
+"t": "A splash of yuzu juice (or fresh lemon juice)",
+"n": "Yuzu juice",
+"a": "Pantry & sauces",
+"s": false,
+"p": "\\byuzu\\b",
+"q": null,
+"u": null
+}
+]
+}
 ]
 },
 {
@@ -3962,7 +4236,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": null,
 "u": null
 }
-]
+],
+"options": []
 },
 {
 "title": "Tebasaki Wings",
@@ -4087,7 +4362,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": 0.5,
 "u": "tsp"
 }
-]
+],
+"options": []
 },
 {
 "title": "Ramen Eggs",
@@ -4176,7 +4452,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": 0.5,
 "u": "tsp"
 }
-]
+],
+"options": []
 },
 {
 "title": "Tonkatsu",
@@ -4292,7 +4569,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": null,
 "u": null
 }
-]
+],
+"options": []
 },
 {
 "title": "Carne Asada Tacos",
@@ -4535,7 +4813,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": null,
 "u": null
 }
-]
+],
+"options": []
 },
 {
 "title": "Chilli Con Carne",
@@ -4732,7 +5011,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": null,
 "u": null
 }
-]
+],
+"options": []
 },
 {
 "title": "Moh's Duck Curry",
@@ -4957,7 +5237,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": null,
 "u": null
 }
-]
+],
+"options": []
 },
 {
 "title": "Onion & Tomato Relish",
@@ -5056,7 +5337,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": 12.0,
 "u": "g"
 }
-]
+],
+"options": []
 },
 {
 "title": "Chicken & White Bean Stew",
@@ -5199,7 +5481,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": 1.0,
 "u": null
 }
-]
+],
+"options": []
 },
 {
 "title": "Thai Beef Salad",
@@ -5379,7 +5662,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": null,
 "u": null
 }
-]
+],
+"options": []
 },
 {
 "title": "Satay Chicken",
@@ -5459,7 +5743,8 @@ window.FIELD_KITCHEN_INDEX = [
 "q": null,
 "u": null
 }
-]
+],
+"options": []
 },
 {
 "title": "Yellow Curry",
@@ -5601,6 +5886,7 @@ window.FIELD_KITCHEN_INDEX = [
 "q": null,
 "u": null
 }
-]
+],
+"options": []
 }
 ];

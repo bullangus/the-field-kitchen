@@ -65,9 +65,40 @@
     if (el.tagName === "SECTION") stage = "";  // topping options: not part of the main run-through
   });
 
+  // ---- Topping options: the same tick-offs, but outside the main run-through ----
+  var optionIngredients = [].slice.call(page.querySelectorAll(".option ul > li"));
+  optionIngredients.forEach(function (li) {
+    var text = document.createElement("span");
+    text.className = "ing-text";
+    while (li.firstChild) text.appendChild(li.firstChild);
+    var tick = document.createElement("button");
+    tick.type = "button";
+    tick.className = "tick";
+    tick.setAttribute("aria-label", "Got it: " + text.textContent);
+    tick.setAttribute("aria-pressed", "false");
+    li.appendChild(tick);
+    li.appendChild(text);
+    li.setAttribute("data-original", text.textContent);
+  });
+  var optionSteps = [].slice.call(page.querySelectorAll(".option ol > li"));
+  optionSteps.forEach(function (li) {
+    var n = [].indexOf.call(li.parentNode.children, li) + 1;
+    var num = document.createElement("button");
+    num.type = "button";
+    num.className = "step-num";
+    num.textContent = n;
+    num.setAttribute("aria-label", "Mark step " + n + " done");
+    num.setAttribute("aria-pressed", "false");
+    var text = document.createElement("div");
+    text.className = "step-text";
+    while (li.firstChild) text.appendChild(li.firstChild);
+    li.appendChild(num);
+    li.appendChild(text);
+  });
+
   // ---- Ticks, kept for this visit ----
   var doneKey = "fk-done:" + url;
-  var tickables = ingredients.concat(steps.map(function (s) { return s.li; }));
+  var tickables = ingredients.concat(steps.map(function (s) { return s.li; }), optionIngredients, optionSteps);
   function saveTicks() {
     store(doneKey, tickables.map(function (li, i) { return li.classList.contains("done") ? i : -1; })
       .filter(function (i) { return i >= 0; }), sessionStorage);
@@ -186,7 +217,7 @@
       output.textContent = serves;
       down.disabled = serves <= 1;
       note.hidden = ratio === 1;
-      ingredients.forEach(function (li) {
+      ingredients.concat(optionIngredients).forEach(function (li) {
         var original = li.getAttribute("data-original");
         var text = li.querySelector(".ing-text");
         if (ratio === 1) { text.textContent = original; li.classList.remove("scaled"); return; }
@@ -223,14 +254,43 @@
       label.textContent = inList ? (narrow ? "On your list" : "In your shopping list") : (narrow ? "Add to list" : "Add to shopping list");
       addButton.classList.toggle("added", inList);
     };
-    addButton.addEventListener("click", function () {
-      var items = stored("fk-list", []).filter(function (x) { return x.url !== url; });
-      if (!addButton.classList.contains("added")) items.push({ url: url, serves: serves });
+    // Each topping option can go on the list too; it brings the recipe with it.
+    var optionButtons = [].slice.call(page.querySelectorAll(".option-add"));
+    var syncOptions = function () {
+      var mine = stored("fk-list", []).filter(function (x) { return x.url === url; })[0];
+      optionButtons.forEach(function (b) {
+        var on = !!mine && (mine.options || []).indexOf(b.parentNode.getAttribute("data-option")) !== -1;
+        b.lastChild.textContent = on ? "On your shopping list" : "Add to shopping list";
+        b.classList.toggle("added", on);
+      });
+    };
+    var saveList = function (items) {
       store("fk-list", items);
       document.dispatchEvent(new Event("fk-list-changed"));
       syncAdd();
+      syncOptions();
+    };
+    addButton.addEventListener("click", function () {
+      var items = stored("fk-list", []).filter(function (x) { return x.url !== url; });
+      if (!addButton.classList.contains("added")) items.push({ url: url, serves: serves });
+      saveList(items);
+    });
+    optionButtons.forEach(function (b) {
+      b.hidden = false;
+      b.addEventListener("click", function () {
+        var name = b.parentNode.getAttribute("data-option");
+        var items = stored("fk-list", []);
+        var mine = items.filter(function (x) { return x.url === url; })[0];
+        if (!mine) { mine = { url: url, serves: serves }; items.push(mine); }
+        var picked = mine.options || [];
+        var i = picked.indexOf(name);
+        if (i === -1) picked.push(name); else picked.splice(i, 1);
+        mine.options = picked;
+        saveList(items);
+      });
     });
     syncAdd();
+    syncOptions();
   }
 
   // ---- Timers ----

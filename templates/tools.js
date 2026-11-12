@@ -61,7 +61,7 @@
         var r = byUrl(x.url);
         var chip = el("div", "list-recipe");
         var a = el("a", "", r.title); a.href = r.url;
-        var s = el("span", "", "Serves " + x.serves);
+        var s = el("span", "", "Serves " + x.serves + (x.options || []).map(function (o) { return " + " + o; }).join(""));
         var rm = el("button", "", "×"); rm.type = "button"; rm.setAttribute("aria-label", "Remove " + r.title);
         rm.addEventListener("click", function () {
           store("fk-list", stored("fk-list", []).filter(function (y) { return y.url !== x.url; }));
@@ -75,11 +75,20 @@
       var items = {};
       picked.forEach(function (x) {
         var r = byUrl(x.url), ratio = x.serves / (r.serves || 1);
-        r.ingredients.forEach(function (ing) {
+        // The recipe's own lines, plus those of any topping options picked on its page.
+        var wanted = r.ingredients.slice();
+        (r.options || []).forEach(function (o) {
+          if ((x.options || []).indexOf(o.name) !== -1) wanted = wanted.concat(o.ingredients);
+        });
+        wanted.forEach(function (ing) {
           if (!ing.n || ing.n === "Water") return;
           var it = items[ing.n] || (items[ing.n] = { name: ing.n, aisle: ing.a, staple: ing.s, units: {}, some: false, from: [] });
           if (ing.q === null) it.some = true;
-          else it.units[ing.u || ""] = (it.units[ing.u || ""] || 0) + ing.q * ratio;
+          else {
+            // "1 clove" and "4 cloves" are the same unit.
+            var unit = (ing.u || "").replace(/^(clove|stick|sprig|piece|stalk|rasher)$/, "$1s");
+            it.units[unit] = (it.units[unit] || 0) + ing.q * ratio;
+          }
           if (it.from.indexOf(r.title) === -1) it.from.push(r.title);
         });
       });
