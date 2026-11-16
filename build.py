@@ -1130,11 +1130,11 @@ def manifest():
         "theme_color": THEME_COLOR,
         # The full-colour icons double as maskable (the hat sits well inside the safe zone), and
         # the monochrome ones let a themed launcher draw the hat light-on-dark like every other app.
+        # icon.svg stays out: it's the light browser-tab icon, and Android would pick it over these.
         "icons": [{"src": name, "sizes": icon_size(name), "type": "image/png", "purpose": purpose}
                   for purpose in ("any", "maskable") for name in APP_ICONS]
                  + [{"src": name, "sizes": icon_size(name), "type": "image/png", "purpose": "monochrome"}
-                    for name in MONO_ICONS]
-                 + [{"src": ICON, "sizes": "any", "type": "image/svg+xml"}],
+                    for name in MONO_ICONS],
     }, indent=2) + "\n"
 
 
