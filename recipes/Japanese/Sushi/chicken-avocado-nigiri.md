@@ -14,11 +14,7 @@ The trick is halving the breast through the middle and pounding it thin, so ever
 
 ### For the rice
 
-- 300 g (2 rice-cooker cups / 360 ml) sushi rice
-- 60 ml (¼ cup) rice vinegar
-- 15 ml (1 tbsp) mirin
-- 1 tbsp sugar
-- 1 tsp salt
+- 300 g (2 rice-cooker cups / 360 ml) sushi rice, made into Sushi Rice
 
 ### For the chicken
 
@@ -39,14 +35,13 @@ The trick is halving the breast through the middle and pounding it thin, so ever
 
 ## Method
 
-1. Rinse the rice until the water runs almost clear, then cook it in a rice cooker or pot.
-2. While the rice cooks, stir the rice vinegar, mirin, sugar and salt together until the sugar and salt dissolve. While the rice is hot, tip it into a wide bowl and fold the seasoning through with a rice paddle, using a cutting motion so the grains don't get mashed. Let it cool to room temperature.
-3. Slice the chicken breast in half horizontally into two thin fillets. Pound each between two sheets of baking paper with a meat mallet or rolling pin until it's an even thickness, about 1 cm.
-4. Mix the flour, salt and pepper in a shallow dish. Put the beaten egg and the panko in two more dishes.
-5. Coat each piece of chicken in the seasoned flour and shake off the excess, dip it in the egg, then press it firmly into the panko on both sides.
-6. Heat the oil in a deep frying pan or pot to 170°C (340°F). Fry the chicken for 2–3 minutes each side, until deep golden and cooked through.
-7. Drain on a wire rack (not paper towel) so the underside stays crisp. Rest for a couple of minutes, then cut each piece into about 6 strips, slightly longer than a nigiri.
-8. Cut the nori sheet into about 12 strips, roughly 2 cm wide. Slice the avocado thinly.
-9. With wet hands, shape the rice into about 12 firm oblong mounds.
-10. Lay a slice of avocado on each mound, then a strip of chicken. Wrap a strip of nori around the middle of each piece, rice, avocado and chicken together, and tuck the ends underneath (a dab of water helps them stick).
-11. Drizzle with tonkatsu sauce and Kewpie mayonnaise and serve straight away.
+1. Make the Sushi Rice and let it cool to room temperature.
+2. Slice the chicken breast in half horizontally into two thin fillets. Pound each between two sheets of baking paper with a meat mallet or rolling pin until it's an even thickness, about 1 cm.
+3. Mix the flour, salt and pepper in a shallow dish. Put the beaten egg and the panko in two more dishes.
+4. Coat each piece of chicken in the seasoned flour and shake off the excess, dip it in the egg, then press it firmly into the panko on both sides.
+5. Heat the oil in a deep frying pan or pot to 170°C (340°F). Fry the chicken for 2–3 minutes each side, until deep golden and cooked through.
+6. Drain on a wire rack (not paper towel) so the underside stays crisp. Rest for a couple of minutes, then cut each piece into about 6 strips, slightly longer than a nigiri.
+7. Cut the nori sheet into about 12 strips, roughly 2 cm wide. Slice the avocado thinly.
+8. With wet hands, shape the rice into about 12 firm oblong mounds.
+9. Lay a slice of avocado on each mound, then a strip of chicken. Wrap a strip of nori around the middle of each piece, rice, avocado and chicken together, and tuck the ends underneath (a dab of water helps them stick).
+10. Drizzle with tonkatsu sauce and Kewpie mayonnaise and serve straight away.

@@ -5206,7 +5206,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Japanese",
 "category": "Sushi",
 "url": "japanese/sushi/chicken-avocado-nigiri.html",
-"text": "300 g (2 rice-cooker cups / 360 ml) sushi rice 60 ml (¼ cup) rice vinegar 15 ml (1 tbsp) mirin 1 tbsp sugar 1 tsp salt 1 chicken breast 25 g (3 tbsp) plain flour ¼ tsp salt Pinch of pepper 1 egg, beaten 30 g (½ cup) panko breadcrumbs Neutral oil, for frying (2–3 cm deep in the pan) 1 avocado 1 nori sheet Tonkatsu sauce, to drizzle Kewpie mayonnaise, to drizzle all-purpose flour plain flour",
+"text": "300 g (2 rice-cooker cups / 360 ml) sushi rice, made into Sushi Rice 1 chicken breast 25 g (3 tbsp) plain flour ¼ tsp salt Pinch of pepper 1 egg, beaten 30 g (½ cup) panko breadcrumbs Neutral oil, for frying (2–3 cm deep in the pan) 1 avocado 1 nori sheet Tonkatsu sauce, to drizzle Kewpie mayonnaise, to drizzle all-purpose flour plain flour",
 "meta": "Serves 2",
 "intro": "Hot, crunchy katsu on cool sushi rice, held together with a band of nori and zigzagged with tonkatsu sauce and Kewpie. It's our take on the chicken nigiri that comes round on sushi trains all over Australia: crumbed chicken and avocado on hand-shaped rice. One chicken breast makes about 12 pieces.",
 "photo": "",
@@ -5216,49 +5216,13 @@ window.FIELD_KITCHEN_INDEX = [
 "serves": 2,
 "ingredients": [
 {
-"t": "300 g (2 rice-cooker cups / 360 ml) sushi rice",
+"t": "300 g (2 rice-cooker cups / 360 ml) sushi rice, made into Sushi Rice",
 "n": "Sushi rice",
 "a": "International foods",
 "s": false,
 "p": "\\bsushi rice\\b|\\brice\\b",
 "q": 300.0,
 "u": "g"
-},
-{
-"t": "60 ml (¼ cup) rice vinegar",
-"n": "Rice vinegar",
-"a": "International foods",
-"s": false,
-"p": "\\brice vinegar\\b|\\bvinegar\\b",
-"q": 60.0,
-"u": "ml"
-},
-{
-"t": "15 ml (1 tbsp) mirin",
-"n": "Mirin",
-"a": "International foods",
-"s": false,
-"p": "\\bmirin\\b",
-"q": 15.0,
-"u": "ml"
-},
-{
-"t": "1 tbsp sugar",
-"n": "Sugar",
-"a": "Baking & eggs",
-"s": true,
-"p": "\\bsugar\\b",
-"q": 3.0,
-"u": "tsp"
-},
-{
-"t": "1 tsp salt",
-"n": "Salt",
-"a": "Herbs & spices",
-"s": true,
-"p": "\\bsalt\\b",
-"q": 1.0,
-"u": "tsp"
 },
 {
 "t": "1 chicken breast",
@@ -5367,7 +5331,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Japanese",
 "category": "Sushi",
 "url": "japanese/sushi/salmon-aburi.html",
-"text": "60 ml (¼ cup) soy sauce 60 ml (¼ cup) mirin 2 tbsp sugar 300 g (2 rice-cooker cups / 360 ml) sushi rice 60 ml (¼ cup) rice vinegar 15 ml (1 tbsp) mirin 1 tbsp sugar 1 tsp salt 200 g sashimi-grade salmon fillet, skin and bones removed Kewpie mayonnaise",
+"text": "60 ml (¼ cup) soy sauce 60 ml (¼ cup) mirin 2 tbsp sugar 300 g (2 rice-cooker cups / 360 ml) sushi rice, made into Sushi Rice 200 g sashimi-grade salmon fillet, skin and bones removed Kewpie mayonnaise",
 "meta": "Serves 2",
 "intro": "The hiss of the blowtorch, the Kewpie blistering and browning, and that smoky, toasty smell. Salmon nigiri piped with Kewpie, seared until golden, then glossed with a sweet soy and mirin tare. You'll need a kitchen blowtorch, and sashimi-grade salmon bought on the day.",
 "photo": "",
@@ -5404,49 +5368,13 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "tsp"
 },
 {
-"t": "300 g (2 rice-cooker cups / 360 ml) sushi rice",
+"t": "300 g (2 rice-cooker cups / 360 ml) sushi rice, made into Sushi Rice",
 "n": "Sushi rice",
 "a": "International foods",
 "s": false,
 "p": "\\bsushi rice\\b|\\brice\\b",
 "q": 300.0,
 "u": "g"
-},
-{
-"t": "60 ml (¼ cup) rice vinegar",
-"n": "Rice vinegar",
-"a": "International foods",
-"s": false,
-"p": "\\brice vinegar\\b|\\bvinegar\\b",
-"q": 60.0,
-"u": "ml"
-},
-{
-"t": "15 ml (1 tbsp) mirin",
-"n": "Mirin",
-"a": "International foods",
-"s": false,
-"p": "\\bmirin\\b",
-"q": 15.0,
-"u": "ml"
-},
-{
-"t": "1 tbsp sugar",
-"n": "Sugar",
-"a": "Baking & eggs",
-"s": true,
-"p": "\\bsugar\\b",
-"q": 3.0,
-"u": "tsp"
-},
-{
-"t": "1 tsp salt",
-"n": "Salt",
-"a": "Herbs & spices",
-"s": true,
-"p": "\\bsalt\\b",
-"q": 1.0,
-"u": "tsp"
 },
 {
 "t": "200 g sashimi-grade salmon fillet, skin and bones removed",
@@ -5474,12 +5402,75 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Japanese",
 "category": "Sushi",
 "url": "japanese/sushi/salmon-nigiri.html",
-"text": "300 g (2 rice-cooker cups / 360 ml) sushi rice 60 ml (¼ cup) rice vinegar 15 ml (1 tbsp) mirin 1 tbsp sugar 1 tsp salt 200 g sashimi-grade salmon fillet, skin and bones removed Wasabi Soy sauce, to serve Pickled ginger, to serve",
+"text": "300 g (2 rice-cooker cups / 360 ml) sushi rice, made into Sushi Rice 200 g sashimi-grade salmon fillet, skin and bones removed Wasabi Soy sauce, to serve Pickled ginger, to serve",
 "meta": "Serves 2",
 "intro": "Soft, glossy slices of salmon draped over little mounds of seasoned rice, with a hidden dab of wasabi in between. The simplest sushi there is, and the one that shows off good fish. Buy sashimi-grade salmon on the day you make it.",
 "photo": "",
 "tags": [
 "sushi"
+],
+"serves": 2,
+"ingredients": [
+{
+"t": "300 g (2 rice-cooker cups / 360 ml) sushi rice, made into Sushi Rice",
+"n": "Sushi rice",
+"a": "International foods",
+"s": false,
+"p": "\\bsushi rice\\b|\\brice\\b",
+"q": 300.0,
+"u": "g"
+},
+{
+"t": "200 g sashimi-grade salmon fillet, skin and bones removed",
+"n": "Salmon fillets",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bsalmon\\b",
+"q": 200.0,
+"u": "g"
+},
+{
+"t": "Wasabi",
+"n": "Wasabi",
+"a": "International foods",
+"s": false,
+"p": "\\bwasabi\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Soy sauce, to serve",
+"n": "Soy sauce",
+"a": "International foods",
+"s": false,
+"p": "\\bsoy sauce\\b|\\bsoy\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Pickled ginger, to serve",
+"n": "Pickled ginger",
+"a": "International foods",
+"s": false,
+"p": "\\bpickled ginger\\b|\\bginger\\b",
+"q": null,
+"u": null
+}
+],
+"options": []
+},
+{
+"title": "Sushi Rice",
+"cuisine": "Japanese",
+"category": "Sushi",
+"url": "japanese/sushi/sushi-rice.html",
+"text": "300 g (2 rice-cooker cups / 360 ml) sushi rice 60 ml (¼ cup) rice vinegar 15 ml (1 tbsp) mirin 1 tbsp sugar 1 tsp salt Vegetarian",
+"meta": "Serves 2 (about 12 nigiri)",
+"intro": "The sharp, sweet smell of rice vinegar hitting hot rice, and the steam rising off the bowl as you fold. Short-grain rice seasoned with rice vinegar, mirin, sugar and salt: the base for all our sushi. Make it first and let it cool to room temperature before shaping.",
+"photo": "",
+"tags": [
+"sushi",
+"vegetarian"
 ],
 "serves": 2,
 "ingredients": [
@@ -5527,42 +5518,6 @@ window.FIELD_KITCHEN_INDEX = [
 "p": "\\bsalt\\b",
 "q": 1.0,
 "u": "tsp"
-},
-{
-"t": "200 g sashimi-grade salmon fillet, skin and bones removed",
-"n": "Salmon fillets",
-"a": "Meat & seafood",
-"s": false,
-"p": "\\bsalmon\\b",
-"q": 200.0,
-"u": "g"
-},
-{
-"t": "Wasabi",
-"n": "Wasabi",
-"a": "International foods",
-"s": false,
-"p": "\\bwasabi\\b",
-"q": null,
-"u": null
-},
-{
-"t": "Soy sauce, to serve",
-"n": "Soy sauce",
-"a": "International foods",
-"s": false,
-"p": "\\bsoy sauce\\b|\\bsoy\\b",
-"q": null,
-"u": null
-},
-{
-"t": "Pickled ginger, to serve",
-"n": "Pickled ginger",
-"a": "International foods",
-"s": false,
-"p": "\\bpickled ginger\\b|\\bginger\\b",
-"q": null,
-"u": null
 }
 ],
 "options": []
