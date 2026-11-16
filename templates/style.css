@@ -1081,6 +1081,8 @@ html.cooking { overflow: hidden; }
 }
 .list-count[hidden] { display: none; }
 .list-recipes { display: grid; grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr)); gap: 0.6rem; margin: 0 0 1.5rem; align-items: start; }
+/* Empty until something is on the list; then they take no space at all. */
+.list-recipes:empty, .list-aisles:empty { display: none; }
 .list-recipe {
   display: flex; align-items: flex-start; gap: 0.5rem; padding: 0.75rem 0.6rem 0.75rem 1.1rem;
   background: var(--grain), var(--card); border: 1px solid var(--rule); border-radius: 16px;
@@ -1122,7 +1124,7 @@ html.cooking { overflow: hidden; }
 .aisle-done h2 { color: var(--muted); }
 .aisle-done small { display: none; }
 .list-empty {
-  max-width: 40rem; margin: 0.5rem 0 0; padding: 2rem; text-align: left;
+  max-width: 40rem; margin: 0; padding: 2rem; text-align: left;
   background: var(--grain), var(--card); border: 1px solid var(--rule); border-radius: 20px;
 }
 .list-empty[hidden], .list-ideas[hidden] { display: none; }
