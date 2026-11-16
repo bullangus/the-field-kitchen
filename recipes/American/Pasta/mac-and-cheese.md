@@ -4,6 +4,7 @@ cuisine: American
 category: Pasta
 tags: Vegetarian
 serves: 8–10
+time: Prep 15 min · Cook 1 hr
 source: https://www.tiktok.com/@tinekeyounger/video/7568236205008030990
 ---
 
@@ -14,9 +15,9 @@ Grating your own cheese is the one job everyone wants to skip, and it's the one 
 ## Ingredients
 
 - 450 g (1 lb) cavatappi (corkscrew pasta)
-- 450 g (1 lb) mozzarella
-- 450 g (1 lb) Colby cheese
-- 225 g (8 oz) cheddar
+- 450 g (1 lb) mozzarella, from a block
+- 450 g (1 lb) Colby cheese, from a block
+- 225 g (8 oz) vintage cheddar
 - 1 tsp salt, or to taste
 - 1 tsp pepper, or to taste
 - 1 tsp garlic powder, or to taste
@@ -42,6 +43,12 @@ Grating your own cheese is the one job everyone wants to skip, and it's the one 
 9. Turn the heat to low, or off, so the cheese doesn't curdle and split. Add half the cheese a handful at a time, whisking until each handful has melted before adding the next. If the sauce becomes too thick to stir, thin it with a splash of milk.
 10. Switch back to a spatula and fold the pasta through the cheese sauce. Taste a piece of pasta and adjust the seasoning.
 11. Preheat the oven to 180°C (160°C fan / 350°F / gas 4).
-12. Spread half the pasta in a baking dish and scatter over half of the remaining cheese. Add the rest of the pasta, then the last of the cheese on top.
+12. Spread half the pasta in a 23 × 33 cm (9 × 13 inch) baking dish and scatter over half of the remaining cheese. Add the rest of the pasta, then the last of the cheese on top.
 13. Bake for 25–30 minutes, then grill for a few minutes until the top has a golden crust.
 14. Garnish with spring onions, chives or parsley.
+
+## Notes
+
+- Colby is in the supermarket cheese fridge next to the cheddar.
+- To make ahead, assemble it up to 3 days before, cover tightly and keep it in the fridge. Bake covered with foil for about 30 minutes, then uncover and bake until heated through before grilling the top.
+- Leftovers keep, covered, in the fridge for up to 4 days. Reheat in the microwave or covered in a low oven.

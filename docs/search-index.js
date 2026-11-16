@@ -231,13 +231,14 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "American",
 "category": "Pasta",
 "url": "american/pasta/mac-and-cheese.html",
-"text": "450 g (1 lb) cavatappi (corkscrew pasta) 450 g (1 lb) mozzarella 450 g (1 lb) Colby cheese 225 g (8 oz) cheddar 1 tsp salt, or to taste 1 tsp pepper, or to taste 1 tsp garlic powder, or to taste 1 tsp smoked paprika, or to taste 45 g (3 tbsp) butter 24 g (3 tbsp) plain (all-purpose) flour 1 can (about 350 ml / 12 oz) evaporated milk (not condensed milk) 480 ml (2 cups) thickened (heavy) cream 1 good spoonful Dijon mustard A splash of milk, if the sauce is too thick Sliced spring onions, chives or parsley, to garnish Vegetarian",
-"meta": "Serves 8–10",
+"text": "450 g (1 lb) cavatappi (corkscrew pasta) 450 g (1 lb) mozzarella, from a block 450 g (1 lb) Colby cheese, from a block 225 g (8 oz) vintage cheddar 1 tsp salt, or to taste 1 tsp pepper, or to taste 1 tsp garlic powder, or to taste 1 tsp smoked paprika, or to taste 45 g (3 tbsp) butter 24 g (3 tbsp) plain (all-purpose) flour 1 can (about 350 ml / 12 oz) evaporated milk (not condensed milk) 480 ml (2 cups) thickened (heavy) cream 1 good spoonful Dijon mustard A splash of milk, if the sauce is too thick Sliced spring onions, chives or parsley, to garnish Vegetarian",
+"meta": "Serves 8–10 · Prep 15 min · Cook 1 hr",
 "intro": "The dish people hover over at the holiday table, waiting for the first spoon to break through the crust. Three cheeses melted into a sauce of evaporated milk and cream, layered with more cheese and baked until the top is golden and crackling and the middle pulls into long, stretchy strings.",
 "photo": "",
 "tags": [
 "pasta",
-"vegetarian"
+"vegetarian",
+"make-ahead"
 ],
 "serves": 8,
 "ingredients": [
@@ -251,7 +252,7 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "g"
 },
 {
-"t": "450 g (1 lb) mozzarella",
+"t": "450 g (1 lb) mozzarella, from a block",
 "n": "Mozzarella",
 "a": "Dairy & fridge",
 "s": false,
@@ -260,7 +261,7 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "g"
 },
 {
-"t": "450 g (1 lb) Colby cheese",
+"t": "450 g (1 lb) Colby cheese, from a block",
 "n": "Colby cheese",
 "a": "Dairy & fridge",
 "s": false,
@@ -269,7 +270,7 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "g"
 },
 {
-"t": "225 g (8 oz) cheddar",
+"t": "225 g (8 oz) vintage cheddar",
 "n": "Cheddar",
 "a": "Dairy & fridge",
 "s": false,
