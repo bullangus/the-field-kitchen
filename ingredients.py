@@ -519,25 +519,42 @@ PACKS = [
 # "Leave out" choices on the week plans page, matched (ignoring case) against each
 # ingredient's shopping name; "#tag" matches a recipe tag instead. Names only, so the page
 # tells readers to check labels: a jar's ingredients can't be seen from here.
+MEAT_RX = r"chicken|beef|ramyun|steak|pork|bacon|guanciale|nduja|\bham\b|kabana|sausage|lamb|duck|dripping|meat pies|dumplings"
+PORK_RX = r"pork|bacon|guanciale|nduja|\bham\b|kabana|(?<!beef )sausage|dumplings"
+SHELLFISH_RX = r"oyster sauce|prawn|shrimp|crab|mussel|laksa paste"
+DAIRY_RX = (r"(?<!peanut )\bbutter\b|cream|(?<!coconut )milk|cheese|cheddar|mozzarella|parmesan|pecorino|paneer|"
+            r"yoghurt|naan|ravioli|caesar dressing|custard|pizza|korma")
+ALCOHOL_RX = r"wine(?! vinegar)|sake|mirin|cointreau|marnier"
 AVOID = (
     ("Gluten", r"^(plain|self-raising|bread|tipo 00) flour$|\bbread\b|loaves|naan|shokupan|panko|spaghetti|fettuccine|"
                r"risoni|cavatappi|fusilli|fileja|ravioli|lasagne|egg noodles|ramen|ramyun|wrappers|soy sauce|"
                r"oyster sauce|golden curry|worcestershire|stock cubes|gravox|shaoxing|taco kit|jam rolls|tonkatsu sauce|"
-               r"crumbed|schnitzel|pies|dumplings|pizza"),
-    ("Dairy", r"(?<!peanut )\bbutter\b|cream|(?<!coconut )milk|cheese|cheddar|mozzarella|parmesan|pecorino|paneer|"
-              r"yoghurt|naan|ravioli|caesar dressing|custard|pizza"),
+               r"crumbed|schnitzel|pies|dumplings|pizza|wraps|burger buns"),
+    ("Dairy", DAIRY_RX),
     ("Eggs", r"\beggs?\b|mayonnaise|egg noodles|ravioli|lasagne sheets|caesar dressing|coleslaw|tartare|schnitzel"),
     ("Peanuts", r"peanut"),
     ("Tree nuts", r"cashew|almond|walnut|pecan|pistachio|hazelnut|pesto"),
-    ("Sesame", r"sesame|tahini"),
+    ("Sesame", r"sesame|tahini|hummus|falafel"),
     ("Soy", r"\bsoy\b|golden curry|chilli crisp|tofu|miso"),
     ("Fish", r"fish|snapper|salmon|worcestershire|caesar dressing|dashi|anchov"),
-    ("Shellfish", r"oyster sauce|prawn|shrimp|crab|mussel|laksa paste"),
-    ("Meat", r"chicken|beef|steak|pork|bacon|guanciale|nduja|\bham\b|kabana|sausage|lamb|duck|dripping|meat pies|dumplings"),
-    ("Pork", r"pork|bacon|guanciale|nduja|\bham\b|kabana|(?<!beef )sausage|dumplings"),
+    ("Shellfish", SHELLFISH_RX),
+    ("Meat", MEAT_RX),
+    ("Pork", PORK_RX),
     ("Beef", r"beef|steak"),
-    ("Alcohol", r"wine(?! vinegar)|sake|mirin|cointreau|marnier"),
+    ("Alcohol", ALCOHOL_RX),
     ("Spicy food", "#spicy"),
+)
+
+# Diets on the week plans page. "tags": a dinner must carry one of these tags; "none": none
+# of its ingredients may match; "apart": it mustn't have ingredients matching both (meat
+# with dairy). Kosher- and halal-style can only go by ingredients, not how the meat was
+# slaughtered or certified, so the page says to buy certified meat.
+DIETS = (
+    ("Vegetarian", {"tags": ["vegetarian", "vegan"]}),
+    ("Vegan", {"tags": ["vegan"]}),
+    ("Pescatarian", {"none": MEAT_RX + r"|stock|gelatine|jelly|gravox"}),
+    ("Kosher-style", {"none": PORK_RX + "|" + SHELLFISH_RX, "apart": [MEAT_RX + r"|chicken stock|stock cubes", DAIRY_RX]}),
+    ("Halal-style", {"none": PORK_RX + "|" + ALCOHOL_RX}),
 )
 
 # How many days the most perishable fresh food keeps once bought, so a plan's dinners are

@@ -119,7 +119,9 @@ docs/                            GENERATED, wiped and rebuilt each run (.nojekyl
                                    No set days: dinners are listed in the order to cook them, soonest
                                    to go off first (KEEPS in ingredients.py), with "cook within N
                                    days", or "freeze the … on shop day" when it falls later than that.
-                                   Diets (PLAN_DIETS) keep only dinners tagged Vegetarian or Vegan.
+                                   Diets (DIETS in ingredients.py: Vegetarian and Vegan by tag;
+                                   Pescatarian, Kosher-style and Halal-style by ingredient name) keep
+                                   only the dinners that fit.
                                    Each plan gets a fun name from PLAN_NAMES (never "Week 1"), and a
                                    savings line against buying for each dinner on its own: fresh food
                                    shared, jars and packets bought once, and what's ticked on "What can
@@ -148,7 +150,7 @@ Ingredient lines feed the shopping list (merged by shopping name and unit, sorte
 
 The serving scaler on recipe pages only scales ingredient amounts that have a unit (g, ml, cups, tbsp…) or a count at the start of the line, and says so on the page; method text is never changed. Write ingredient lines with the amount first so they scale.
 
-The home page ends with a signed footer (by Angus Field, `AUTHOR` in build.py), which becomes the closing colophon page of the printed book; other pages carry a one-line version. Every site page has a sticky nav bar (home, a Cuisines dropdown, What can I cook?, Print, the shopping list basket, light/dark toggle; a menu panel on phones, with a search icon beside it). Phones also get a fixed bottom bar (Home, Search, Cook, List), and recipe pages a floating "Start cooking" button once the header scrolls away. Stylesheet and script links carry a `?v=` content hash (build.py) so a new page never loads with stale styling. The search box ("/" focuses it) matches every word typed against titles, cuisines, styles and ingredients. Page titles carry a `view-transition-name` so they glide between pages; motion is off for readers who prefer reduced motion. Cuisines, styles and recipes are ordered alphabetically; previous/next follows that same order. In `book.html` each cuisine gets a divider page and in print every recipe starts on a new page; the nav and pager are hidden in print. Never hand-edit anything in `docs/` or the README contents block. Change the recipe files or the templates and rebuild.
+The home page ends with a signed footer (by Angus Field, `AUTHOR` in build.py), which becomes the closing colophon page of the printed book; other pages carry a one-line version. Every site page has a sticky nav bar (home, a Cuisines dropdown, What can I cook?, Print, the shopping list basket, light/dark toggle; a menu panel on phones, with a search icon beside it). Phones also get a fixed bottom bar (Home, Search, Cook, List), and recipe pages a floating "Start cooking" button once the header scrolls away. Stylesheet and script links carry a `?v=` content hash (build.py) so a new page never loads with stale styling. The search box ("/" focuses it) matches every word typed against titles, cuisines, styles, tags (Vegan, Under 30 min, Basic…) and ingredients. The home page figures (recipes, cuisines, quick dinners) are links. Page titles carry a `view-transition-name` so they glide between pages; motion is off for readers who prefer reduced motion. Cuisines, styles and recipes are ordered alphabetically; previous/next follows that same order. In `book.html` each cuisine gets a divider page and in print every recipe starts on a new page; the nav and pager are hidden in print. Never hand-edit anything in `docs/` or the README contents block. Change the recipe files or the templates and rebuild.
 
 ---
 

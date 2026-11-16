@@ -378,11 +378,23 @@
     var avoidRules = (RULES.avoid || []).map(function (a) {
       return { label: a[0], tag: a[1].charAt(0) === "#" ? a[1].slice(1) : null, rx: a[1].charAt(0) === "#" ? null : new RegExp(a[1], "i") };
     });
-    // A diet (vegetarian, vegan) keeps only dinners tagged for it.
+    // A diet keeps only the dinners that fit it (DIETS in ingredients.py): tagged for it,
+    // with none of its ruled-out ingredients, and never meat with dairy where that applies.
     var DIETS = {};
-    (RULES.diets || []).forEach(function (d) { DIETS[d[0]] = d[1]; });
+    (RULES.diets || []).forEach(function (d) {
+      DIETS[d[0]] = { tags: d[1].tags, none: d[1].none && new RegExp(d[1].none, "i"),
+        apart: d[1].apart && d[1].apart.map(function (p) { return new RegExp(p, "i"); }) };
+    });
+    var fitsDiet = function (r) {
+      var d = DIETS[avoid.diet]; if (!d) return true;
+      var names = r.ingredients.map(function (i) { return i.n || ""; }).filter(Boolean);
+      var has = function (rx) { return names.some(function (n) { return rx.test(n); }); };
+      if (d.tags && !d.tags.some(function (t) { return r.tags.indexOf(t) !== -1; })) return false;
+      if (d.none && has(d.none)) return false;
+      return !(d.apart && d.apart.every(has));
+    };
     var allowed = function (r) {
-      if (avoid.diet && !(DIETS[avoid.diet] || []).some(function (t) { return r.tags.indexOf(t) !== -1; })) return false;
+      if (!fitsDiet(r)) return false;
       var rules = avoidRules.filter(function (a) { return avoid.groups.indexOf(a.label) !== -1; });
       if (rules.some(function (a) { return a.tag && r.tags.indexOf(a.tag) !== -1; })) return false;
       return !r.ingredients.some(function (i) {
@@ -821,6 +833,7 @@
     if (avoid.diet === undefined) avoid.diet = null;
     var drawAvoid = function () {
       dietChips.forEach(function (c) { c.setAttribute("aria-pressed", String(c.getAttribute("data-diet") === avoid.diet)); });
+      avoidBox.querySelector(".plan-diet-note").hidden = !/-style$/.test(avoid.diet || "");
       avoidChips.forEach(function (c) { c.setAttribute("aria-pressed", String(avoid.groups.indexOf(c.getAttribute("data-avoid")) !== -1)); });
       avoidItems.textContent = "";
       avoid.items.forEach(function (n) {

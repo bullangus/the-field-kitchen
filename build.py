@@ -24,7 +24,7 @@ import sys
 from datetime import date, datetime
 from pathlib import Path
 
-from ingredients import AVOID, FOOD_INFLATION, KEEPS, KEEPS_DEFAULT, PACKS, PRICES_CHECKED, AISLES, BAKERY, DAIRY, DELI, MEAT, PRODUCE, GROCERIES, GROCERY_SUGGESTIONS, INGREDIENTS, NAMES, name_variants, parse_line
+from ingredients import AVOID, DIETS, FOOD_INFLATION, KEEPS, KEEPS_DEFAULT, PACKS, PRICES_CHECKED, AISLES, BAKERY, DAIRY, DELI, MEAT, PRODUCE, GROCERIES, GROCERY_SUGGESTIONS, INGREDIENTS, NAMES, name_variants, parse_line
 
 ROOT = Path(__file__).parent
 RECIPES = ROOT / "recipes"
@@ -63,8 +63,6 @@ TONIGHT_COUNT = 3  # quick recipes on the home page's "Cook tonight" tile
 NOT_MEALS = ("Sides", "Desserts", "Breads", "Baking", "Eggs")
 # Week plans: ready-made sets of weeknight dinners that share ingredients (plans.html).
 PLAN_SIZE = 5  # dinners in a plan; listed in the order to cook them (KEEPS), not on set days
-# Diets on the plans page: a dinner fits when it carries one of these tags.
-PLAN_DIETS = (("Vegetarian", ("vegetarian", "vegan")), ("Vegan", ("vegan",)))
 PLAN_COUNT = 6
 PLAN_SKIP_STYLES = ("Sushi", "Duck")  # built from parts, or kept for a special meal
 # Plans are easy regular dinners: no special-occasion, party, barbecue or multi-day cooking.
@@ -565,7 +563,7 @@ def search_index(book, basics):
         serves = re.match(r"\d+", r["serves"])
         entries.append({"title": r["title"], "cuisine": r["cuisine"], "category": r["category"],
                         # Search finds a recipe by its US and UK ingredient names too ("cilantro").
-                        "url": r["url"], "text": " ".join(lines + r["labels"] + [re.sub(r"\\b|\\|s\?", "", v).replace("?", "")
+                        "url": r["url"], "text": " ".join(lines + quick_tag_labels(r) + (["Basic"] if r.get("basic") else []) + [re.sub(r"\\b|\\|s\?", "", v).replace("?", "")
                                                                                 for line in lines for v in name_variants(line)]),
                         "meta": html.unescape(meta_line(r)), "intro": intro(r),
                         "photo": r.get("photo", ""), "tags": r["tags"],
@@ -584,7 +582,7 @@ def search_index(book, basics):
             "suggestions": list(GROCERY_SUGGESTIONS),
             "names": [[p, us, uk, lines_only] for p, us, uk, lines_only in NAMES],
             # The week plan rules, so "build my week" in the browser picks the same way the build does.
-            "plan": {"size": PLAN_SIZE, "diets": [[label, list(tags)] for label, tags in PLAN_DIETS], "lunches": PLAN_LUNCHES, "maxSame": PLAN_MAX_SAME, "minCuisines": PLAN_MIN_CUISINES,
+            "plan": {"size": PLAN_SIZE, "diets": [[label, rule] for label, rule in DIETS], "lunches": PLAN_LUNCHES, "maxSame": PLAN_MAX_SAME, "minCuisines": PLAN_MIN_CUISINES,
                      "fresh": list(PLAN_FRESH), "freshWeight": PLAN_FRESH_WEIGHT, "everyday": list(PLAN_EVERYDAY),
                      "count": PLAN_COUNT, "names": [list(n) for n in PLAN_NAMES],
                      "packs": [list(p) for p in PACKS], "avoid": [list(a) for a in AVOID],
@@ -827,7 +825,7 @@ def world_map(book):
             f'<circle class="pin-dot" cx="{x:g}" cy="{y:g}" r="{1.6 + min(n, 6) * 0.25:g}"/>'
             f'<text x="{x + dx:g}" y="{y + dy:g}" text-anchor="{anchor}">{html.escape(cuisine)}</text></a>')
     return f"""
-  <section class="atlas reveal" aria-label="Where our recipes come from">
+  <section class="atlas reveal" id="atlas" aria-label="Where our recipes come from">
     <div class="section-head">
       <h2>Our table, around the world</h2>
       <p>Tap a pin to visit that kitchen.</p>
@@ -937,9 +935,9 @@ def home_html(book):
       <h1>{TITLE}</h1>
       <p class="hero-sub">{SUBTITLE}</p>
       <ul class="stats">
-        <li><strong>{count}</strong> {'recipe' if count == 1 else 'recipes'}</li>
-        <li><strong>{cuisines}</strong> {'cuisine' if cuisines == 1 else 'cuisines'}</li>
-        <li><strong>{len(quick)}</strong> {"quick dinner" if len(quick) == 1 else "quick dinners"}</li>
+        <li><a href="#kitchens"><strong>{count}</strong> {'recipe' if count == 1 else 'recipes'}</a></li>
+        <li><a href="#atlas"><strong>{cuisines}</strong> {'cuisine' if cuisines == 1 else 'cuisines'}</a></li>
+        <li><a href="{HOME_PAGE}?filter=quick#kitchens"><strong>{len(quick)}</strong> {"quick dinner" if len(quick) == 1 else "quick dinners"}</a></li>
       </ul>
       <div class="tile-actions">
         <a class="pill pill-solid" href="#kitchens">Browse the kitchens</a>
@@ -1420,7 +1418,8 @@ def plans_html(book, basics):
       <p>Vegetarian or vegan, allergies, or just not a fan: plans and picks only use dinners that fit.</p>
       <div class="plan-avoid-groups plan-diets" role="group" aria-label="Diet">{"".join(
           f'<button type="button" class="chip" data-diet="{html.escape(label)}" aria-pressed="false">{html.escape(label)}</button>'
-          for label, _ in PLAN_DIETS)}</div>
+          for label, _ in DIETS)}</div>
+      <p class="plan-avoid-note plan-diet-note" hidden>Kosher- and halal-style go by ingredients only: no pork or shellfish, and no meat with dairy, for kosher; no pork or alcohol for halal. Buy certified meat.</p>
       <p class="plan-avoid-head">Leave out</p>
       <div class="plan-avoid-groups" role="group" aria-label="Leave out">{"".join(
           f'<button type="button" class="chip" data-avoid="{html.escape(label)}" aria-pressed="false">{html.escape(label)}</button>'
