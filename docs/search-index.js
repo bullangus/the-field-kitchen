@@ -704,14 +704,14 @@ window.FIELD_KITCHEN_INDEX = [
 "category": "Seafood",
 "url": "australian/seafood/barbecued-whole-snapper.html",
 "text": "1.5 kg whole snapper 1 stick lemongrass, trimmed, halved and cut into 5 cm lengths 4 garlic cloves, bruised 6 makrut lime leaves, torn Salt and black pepper, to season 2 tbsp toasted sesame seeds Sliced spring onion, to serve Fresh coriander sprigs, to serve Steamed jasmine rice, to serve Lime wedges, to serve 125 ml (½ cup) sweet chilli sauce 125 ml (½ cup) lime juice 1 tsp caster sugar 80 ml (⅓ cup) light soy sauce 2 cm piece fresh ginger, peeled and finely grated 1½ tbsp fish sauce 30 ml (2 tbsp) peanut oil 2 tbsp chopped fresh coriander ½ tsp MSG Barbecue scallion spring onion cilantro fresh coriander superfine sugar caster sugar cilantro fresh coriander",
-"meta": "Serves 4 · Prep 15 min · Cook 35 min",
+"meta": "Serves 8 · Prep 15 min · Cook 35 min",
 "intro": "A whole fish on the barbecue makes any summer evening feel like a celebration. The snapper is stuffed with lemongrass, garlic and makrut lime, coated in sesame seeds and cooked standing upright in a foil parcel, then brought to the table whole with a sweet chilli, lime and ginger dressing for everyone to pick at.",
 "photo": "",
 "tags": [
 "seafood",
 "barbecue"
 ],
-"serves": 4,
+"serves": 8,
 "lunch": 0,
 "meal": true,
 "plan": false,
