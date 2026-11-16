@@ -424,12 +424,17 @@ def parse_line(line):
     return item
 
 
-# Typical supermarket packs of the fresh food week plans share, for the savings estimate on
-# each plan: shopping name, pack size, how many pack units one recipe unit is ("" for a line
-# with no unit, also used for "to serve" lines with no amount), and the pack's usual price
-# in Australia (A$, Coles/Woolworths), the UK (£, Tesco/Sainsbury's) and the US ($). Only
-# fresh food counts: half a pack of parmesan goes off, half a bottle of soy sauce doesn't.
-# Loose produce bought one at a time (a lemon, a tomato) saves nothing, so isn't listed.
+# Typical supermarket packs of what week plans share, for the savings estimate on each plan:
+# shopping name, pack size, how many pack units one recipe unit is ("" for a line with no
+# unit, also used for "to serve" lines with no amount), and the pack's usual price in
+# Australia (A$, Coles/Woolworths), the UK (£, Tesco/Sainsbury's) and the US ($). Fresh food
+# saves because the rest of the pack would go off; jars and packets because the second and
+# third dinner use the one already bought. Loose produce bought one at a time (a lemon, a
+# tomato) and tins used whole save nothing, so aren't listed. Prices drift up from
+# PRICES_CHECKED by FOOD_INFLATION a year (AU, UK, US) until they're checked again.
+PRICES_CHECKED = "2026-11-16"
+FOOD_INFLATION = (0.03, 0.035, 0.025)
+SPICE_JAR = (40, {"tsp": 2.5, "": 1}, (3.00, 1.00, 3.00))  # a 40 g jar of ground spice or dried herbs
 PACKS = [
     ("Bread", 20, {"": 1}, (3.80, 1.40, 3.50)),  # a sliced loaf
     ("Naan bread", 4, {"": 1}, (3.50, 1.00, 3.00)),
@@ -460,7 +465,26 @@ PACKS = [
     ("Beef steak", 500, {"g": 1}, (15.00, 7.00, 10.00)),
     ("Pork mince", 500, {"g": 1}, (7.00, 3.00, 5.00)),
     ("Beef dripping", 250, {"g": 1}, (3.50, 1.50, 5.00)),
-]
+    # Jars and packets.
+    ("Eggs", 12, {"": 1}, (6.50, 3.00, 4.00)),
+    ("Plain flour", 1000, {"g": 1, "tsp": 3, "": 30}, (1.50, 0.75, 1.50)),
+    ("Cornflour", 300, {"g": 1, "tsp": 3, "": 10}, (2.00, 1.00, 2.00)),
+    ("Rice", 1000, {"g": 1, "": 300}, (2.50, 1.20, 2.00)),
+    ("Spaghetti or rigatoni", 500, {"g": 1}, (1.50, 0.80, 1.50)),
+    ("Panko breadcrumbs", 200, {"g": 1}, (3.00, 1.50, 3.00)),
+    ("Chicken stock", 1000, {"ml": 1, "": 250}, (3.00, 1.20, 2.50)),
+    ("Soy sauce", 500, {"ml": 1, "tsp": 5, "": 15}, (4.00, 1.50, 3.00)),
+    ("Fish sauce", 300, {"ml": 1, "tsp": 5}, (3.50, 1.50, 3.00)),
+    ("Oyster sauce", 500, {"ml": 1, "tsp": 5}, (4.00, 1.50, 3.50)),
+    ("Sesame oil", 150, {"ml": 1, "tsp": 5}, (4.50, 2.00, 4.00)),
+    ("Shaoxing wine", 500, {"ml": 1, "tsp": 5}, (5.00, 2.50, 4.00)),
+    ("Chilli crisp", 210, {"tsp": 5, "": 15}, (5.50, 3.00, 4.50)),
+    ("Worcestershire sauce", 250, {"ml": 1, "tsp": 5}, (4.00, 1.50, 3.50)),
+    ("Ketchup", 500, {"ml": 1, "tsp": 5}, (3.50, 1.80, 2.50)),
+    ("Sesame seeds", 100, {"tsp": 3, "": 10}, (3.00, 1.20, 3.00)),
+] + [(name,) + SPICE_JAR for name in ("Paprika", "Smoked paprika", "Cayenne pepper", "Italian seasoning", "Dried oregano",
+                                       "Cumin", "Curry powder", "Garlic powder", "Onion powder", "Chilli flakes",
+                                       "Ground coriander")]
 
 # "Leave out" choices on the week plans page, matched (ignoring case) against each
 # ingredient's shopping name; "#tag" matches a recipe tag instead. Names only, so the page

@@ -24,7 +24,7 @@ import sys
 from datetime import date, datetime
 from pathlib import Path
 
-from ingredients import AVOID, PACKS, AISLES, BAKERY, DAIRY, DELI, MEAT, PRODUCE, GROCERIES, GROCERY_SUGGESTIONS, INGREDIENTS, NAMES, name_variants, parse_line
+from ingredients import AVOID, FOOD_INFLATION, PACKS, PRICES_CHECKED, AISLES, BAKERY, DAIRY, DELI, MEAT, PRODUCE, GROCERIES, GROCERY_SUGGESTIONS, INGREDIENTS, NAMES, name_variants, parse_line
 
 ROOT = Path(__file__).parent
 RECIPES = ROOT / "recipes"
@@ -575,7 +575,8 @@ def search_index(book, basics):
             "plan": {"days": list(PLAN_DAYS), "lunches": PLAN_LUNCHES, "maxSame": PLAN_MAX_SAME, "minCuisines": PLAN_MIN_CUISINES,
                      "fresh": list(PLAN_FRESH), "freshWeight": PLAN_FRESH_WEIGHT, "everyday": list(PLAN_EVERYDAY),
                      "count": PLAN_COUNT, "names": [list(n) for n in PLAN_NAMES],
-                     "packs": [list(p) for p in PACKS], "avoid": [list(a) for a in AVOID]}}
+                     "packs": [list(p) for p in PACKS], "avoid": [list(a) for a in AVOID],
+                     "pricesChecked": PRICES_CHECKED, "inflation": list(FOOD_INFLATION)}}
     return ("window.FIELD_KITCHEN_INDEX = " + json.dumps(entries, ensure_ascii=False, indent=0) + ";\n"
             "window.FIELD_KITCHEN_SHOP = " + json.dumps(shop, ensure_ascii=False) + ";\n")
 
@@ -1347,6 +1348,7 @@ def plans_html(book, basics):
       <label class="plan-extra"><input type="checkbox"> Cook extra for lunches</label>
       <span class="plan-prices">Prices {NAMES_PICK}</span>
     </div>
+    <p class="plan-tally" hidden></p>
     <details class="plan-avoid" hidden>
       <summary>Leave out <span class="plan-avoid-count"></span></summary>
       <p>Allergies, dietary needs or just not a fan: plans and picks skip any dinner with these.</p>
@@ -1373,9 +1375,11 @@ def plans_html(book, basics):
     <div class="plan-result"></div>
   </section>
   <h2 class="plans-head">Ready-made plans</h2>
+  <p class="plans-have" hidden></p>
   <p class="plans-none" hidden>No ready-made plan fits everything you're leaving out. Try building your own above.</p>
   <div class="plans">{"".join(cards)}
-  </div>{basics_section}
+  </div>
+  <p class="plan-price-note">Savings are estimates from typical supermarket pack prices, checked {html.escape(nice_date(PRICES_CHECKED))} and rising with food inflation since. They compare buying once with buying for each dinner on its own, and count what you've ticked as already in your kitchen on <a href="{COOK_PAGE}">What can I cook?</a></p>{basics_section}
   <script src="{TOOLS_SCRIPT}" defer></script>"""
     return page(book, 0, f"Week plans · {TITLE}", content, current=PLANS_PAGE, main_class="wide")
 

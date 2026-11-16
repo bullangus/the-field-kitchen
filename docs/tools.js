@@ -340,6 +340,8 @@
     var people = stored("fk-people", 4);
     var extra = stored("fk-lunches", false);
     var avoid = stored("fk-avoid", { groups: [], items: [] });
+    // What's ticked on "What can I cook?": already in the kitchen, so plans that use it cost less.
+    var have = stored("fk-fridge", []);
     var peopleBox = document.querySelector(".plan-people");
     var sizeChips = [].slice.call(peopleBox.querySelectorAll("[data-people]"));
     var extraBox = peopleBox.querySelector(".plan-extra input");
@@ -375,8 +377,9 @@
     var score = function (week) {
       var uses = {}, weight = {};
       week.forEach(function (r) { var w = weightsOf(r); for (var n in w) { uses[n] = (uses[n] || 0) + 1; weight[n] = w[n]; } });
+      // Something already in the kitchen counts as if it were shared once more.
       var t = 0;
-      for (var n in uses) t += weight[n] * (uses[n] - 1);
+      for (var n in uses) t += weight[n] * (uses[n] - 1 + (have.indexOf(n) !== -1 ? 1 : 0));
       return t;
     };
     // Cravings may break the variety rules themselves; the fill just mustn't make it worse.
@@ -428,17 +431,22 @@
       return names.length ? names[names.length - 1][0] : "Your plan";
     };
 
-    // -- Savings: fresh food bought once for several dinners instead of a pack for each --
+    // -- Savings: each pack bought once for several dinners instead of once per dinner, and
+    // nothing bought for what's already in the kitchen. Prices rise with food inflation
+    // from the date they were checked, so the estimate keeps up until they're checked again.
     var PACKS = {};
     (RULES.packs || []).forEach(function (p) { PACKS[p[0]] = { size: p[1], per: p[2], price: p[3] }; });
     var country = { au: 0, uk: 1, us: 2 }[(window.FieldKitchenNames || {}).pref] || 0;
-    var money = function (v) { return (country === 1 ? "£" : "$") + Math.round(v); };
+    var years = Math.max(0, (Date.now() - new Date(RULES.pricesChecked || Date.now())) / 31557600000);
+    var priceOf = function (p, c) { return p.price[c] * Math.pow(1 + ((RULES.inflation || [])[c] || 0), years); };
+    var money = function (v, c) { return ((c == null ? country : c) === 1 ? "£" : "$") + Math.round(v); };
     // Lunch dinners go on at double the household; the rest at the household.
     var servesFor = function (card, url) {
       return extra && urlsOf(card, "data-lunches").indexOf(url) !== -1 ? people * 2 : people;
     };
-    var savingOf = function (card) {
-      var uses = {};
+    var savingOf = function (card, c) {
+      if (c == null) c = country;
+      var uses = {}, aisle = {}, out = { fresh: 0, jars: 0, had: 0, hadNames: [] };
       urlsOf(card).forEach(function (url) {
         var r = byUrl(url); if (!r) return;
         var scale = servesFor(card, url) / (r.serves || 1), mine = {};
@@ -448,18 +456,54 @@
           var amount = i.q == null ? (p.per[""] != null ? p.per[""] : p.size / 2)
             : p.per[unit] != null ? i.q * p.per[unit] : p.size / 2;
           mine[i.n] = (mine[i.n] || 0) + amount * scale;
+          aisle[i.n] = i.a;
         });
         for (var n in mine) (uses[n] = uses[n] || []).push(mine[n]);
       });
-      var saved = 0;
       for (var n in uses) {
-        if (uses[n].length < 2) continue;
         var p = PACKS[n], packs = function (a) { return Math.ceil(a / p.size - 1e-6); };
-        var apart = uses[n].reduce(function (t, a) { return t + packs(a); }, 0);
         var together = packs(uses[n].reduce(function (t, a) { return t + a; }, 0));
-        saved += (apart - together) * p.price[country];
+        if (have.indexOf(n) !== -1) { out.had += together * priceOf(p, c); out.hadNames.push(n); continue; }
+        if (uses[n].length < 2) continue;
+        var apart = uses[n].reduce(function (t, a) { return t + packs(a); }, 0);
+        var fresh = (RULES.fresh || []).indexOf(aisle[n]) !== -1;
+        out[fresh ? "fresh" : "jars"] += (apart - together) * priceOf(p, c);
       }
-      return saved;
+      out.total = out.fresh + out.jars + out.had;
+      return out;
+    };
+    var saveLine = function (card) {
+      var save = card.querySelector(".plan-save"), s = savingOf(card);
+      save.hidden = s.total < 1;
+      save.textContent = "";
+      save.appendChild(el("strong", "", "Saves about " + money(s.total)));
+      save.appendChild(document.createTextNode(" against buying for each dinner on its own"));
+      var parts = [];
+      if (s.fresh >= 1) parts.push(money(s.fresh) + " of fresh food shared");
+      if (s.jars >= 1) parts.push(money(s.jars) + " of jars and packets bought once");
+      if (s.had >= 1) parts.push(money(s.had) + " already in your kitchen (" + joinAnd(s.hadNames.map(function (n) { return n.toLowerCase(); })) + ")");
+      if (parts.length) save.appendChild(el("small", "", parts.join(" · ")));
+      if (window.FieldKitchenNames) FieldKitchenNames.swap(save, true);
+    };
+
+    // A running total of what the plans added to the list have saved, kept per browser.
+    // Each plan counts once, at what it saved when it was added, in all three currencies.
+    var tally = document.querySelector(".plan-tally");
+    var syncTally = function () {
+      var saved = stored("fk-saved", []);
+      var total = saved.reduce(function (t, x) { return t + (x.amounts[country] || 0); }, 0);
+      tally.hidden = total < 1;
+      if (tally.hidden) return;
+      var since = new Date(saved[0].date);
+      tally.textContent = "Your plans have saved about " + money(total) + " since " + since.getDate() + " " +
+        since.toLocaleString("en-AU", { month: "short", year: "numeric" }) + " (" + saved.length + " plan" + (saved.length === 1 ? "" : "s") + ")";
+    };
+    var recordSaving = function (card) {
+      var key = urlsOf(card).slice().sort().join(" ");
+      var saved = stored("fk-saved", []).filter(function (x) { return x.key !== key; });
+      saved.push({ key: key, date: new Date().toISOString(), amounts: [0, 1, 2].map(function (c) { return Math.round(savingOf(card, c).total); }) });
+      store("fk-saved", saved);
+      syncTally();
     };
 
     var syncPeople = function () {
@@ -481,9 +525,7 @@
           view.href = "list.html";
           b.parentNode.insertBefore(view, b.nextSibling);
         } else if (!all && view) view.remove();
-        var save = card.querySelector(".plan-save"), saved = savingOf(card);
-        save.hidden = saved < 1;
-        save.textContent = "Sharing fresh food saves about " + money(saved) + " against buying for each dinner on its own.";
+        saveLine(card);
       });
     };
     var wire = function (card) {
@@ -494,6 +536,7 @@
         var list = stored("fk-list", []).filter(function (x) { return urls.indexOf(x.url) === -1; });
         urls.forEach(function (u) { list.push({ url: u, serves: servesFor(card, u) }); });
         store("fk-list", list);
+        recordSaving(card);
         syncPlans();
         syncBasics();
       });
@@ -557,11 +600,16 @@
 
     // Ready-made plans: the build's, or reworked here around what's being left out.
     var plansNone = document.querySelector(".plans-none");
+    var plansHave = document.querySelector(".plans-have");
     var readyMade = function () {
+      var rework = avoiding() || have.length > 0;
       cards.filter(function (c) { return c.classList.contains("plan-local"); }).forEach(unwire);
-      serverCards.forEach(function (c) { c.hidden = avoiding(); });
+      serverCards.forEach(function (c) { c.hidden = rework; });
       plansNone.hidden = true;
-      if (!avoiding()) return;
+      plansHave.hidden = !have.length;
+      plansHave.textContent = have.length ? "Picked to use what's already in your kitchen (" + have.length +
+        " thing" + (have.length === 1 ? "" : "s") + " ticked on What can I cook?)." : "";
+      if (!rework) return;
       var chosen = [], taken = [];
       rank([]).some(function (c) {
         if (chosen.every(function (p) { return c.week.filter(function (r) { return p.indexOf(r) !== -1; }).length <= 1; })) chosen.push(c.week);
@@ -762,6 +810,7 @@
     readyMade();
     syncBasics();
     syncPlans();
+    syncTally();
   }
 
   // ---- What can I cook? ----
