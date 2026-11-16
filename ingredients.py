@@ -218,7 +218,7 @@ INGREDIENTS = [
     (r"\bcos\b", "Cos lettuce", PRODUCE, False),
     (r"\bdrum cabbage\b", "Drum cabbage", PRODUCE, False),
     (r"\bmushrooms?\b", "Mushrooms", PRODUCE, False),
-    (r"\bcoleslaw\b", "Coleslaw", PRODUCE, False),
+    (r"\bcoleslaw\b", "Coleslaw", DELI, False),
     (r"\bcorn kernels\b", "Corn kernels", FROZEN, False),
     (r"\blettuce\b|\bcabbage\b|\bsalad greens\b", "Lettuce and cabbage", PRODUCE, False),
     (r"\bcurry leaves\b", "Curry leaves", PRODUCE, False),
@@ -234,8 +234,9 @@ INGREDIENTS = [
 # Everyday shopping that isn't in a recipe, for things typed straight onto the shopping list
 # ("ravioli", "pasta sauce", "dishwashing liquid"). Checked after INGREDIENTS; first match wins.
 GROCERIES = [
-    (r"\bravioli\b|\btortellini\b|\bgnocchi\b|\bfresh pasta\b", DAIRY),
-    (r"\bpasta sauce\b|\bpesto\b|\bbolognese\b|\bsalsa\b|\bjar\b", TINS),
+    # Fresh pasta and the fresh sauces sold beside it, in the fridge.
+    (r"\bravioli\b|\btortellini\b|\bgnocchi\b|\bfresh pasta\b|\bpasta sauce\b|\bpesto\b", DAIRY),
+    (r"\bbolognese\b|\bsalsa\b|\bjar\b", TINS),
     (r"\bsauce\b|\bketchup\b|\bjam\b|\bvegemite\b|\bnutella\b|\bspread\b|\bstock\b|\bgravy\b", SAUCES),
     (r"\bpasta\b|\bpenne\b|\blasagne\b|\bnoodles?\b|\bcouscous\b|\bquinoa\b", PASTA),
     (r"\bcereal\b|\bweet-?bix\b|\boats\b|\bmuesli\b|\bcoffee\b|\btea\b|\bmilo\b", SNACKS),
