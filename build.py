@@ -1165,7 +1165,7 @@ def list_html(book):
   </header>
   <form class="list-add" hidden>
     <div class="list-add-field">
-      <label class="search-field">{svg_icon("plus")}<input type="text" placeholder="Add an item, e.g. ravioli" aria-label="Add an item to the list" autocomplete="off" enterkeyhint="done" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="list-suggest"><button type="submit" class="list-add-go">Add</button></label>
+      <label class="search-field">{svg_icon("plus")}<input type="text" placeholder="Add an item or a meal, e.g. tacos" aria-label="Add an item or a meal to the list" autocomplete="off" enterkeyhint="done" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="list-suggest"><button type="submit" class="list-add-go">Add</button></label>
       <ul class="list-suggest" id="list-suggest" role="listbox" hidden></ul>
     </div>
   </form>

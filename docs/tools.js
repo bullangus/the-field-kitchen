@@ -242,7 +242,8 @@
     });
     // Add anything else to the list: it's sorted into its section as you add it, with
     // suggestions as you type (what you've added before, every ingredient in the book, and
-    // everyday groceries).
+    // everyday groceries). Typing a basic or recipe offers the whole meal, which goes on
+    // as a recipe card with all its ingredients.
     var addForm = document.querySelector(".list-add");
     var addInput = addForm.querySelector("input");
     var suggestBox = addForm.querySelector(".list-suggest");
@@ -253,9 +254,24 @@
       SHOP.ingredients.forEach(function (r) { if (!r[3] && !seen[r[1]]) { seen[r[1]] = 1; known.push(r[1]); } });
       (SHOP.suggestions || []).forEach(function (n) { if (!seen[n]) { seen[n] = 1; known.push(n); } });
     })();
+    var mealNamed = function (text) {
+      var t = text.trim().toLowerCase();
+      return index.filter(function (r) { return r.title.toLowerCase() === t; })[0];
+    };
+    var addMeal = function (r) {
+      var list = stored("fk-list", []).filter(function (x) { return x.url !== r.url; });
+      list.push({ url: r.url, serves: r.serves });
+      store("fk-list", list);
+      addInput.value = "";
+      closeSuggest();
+      build();
+      addInput.focus();
+    };
     var addItem = function (text) {
       text = text.trim();
       if (!text) return;
+      var meal = mealNamed(text);
+      if (meal) { addMeal(meal); return; }
       var extras = stored("fk-list-extra", []);
       var name = sortItem(text).name;
       if (!extras.some(function (x) { return sortItem(x).name === name; })) extras.push(text);
@@ -290,20 +306,26 @@
         return !history.some(function (h) { return h.toLowerCase() === n.toLowerCase(); });
       })).filter(function (n) { return !onList[sortItem(n).name.toLowerCase()]; });
       // Empty box: just what you've added before. Typing: names starting with it, then containing it.
-      shown = !q ? history.filter(function (n) { return !onList[sortItem(n).name.toLowerCase()]; }).slice(0, 6)
+      var items = !q ? history.filter(function (n) { return !onList[sortItem(n).name.toLowerCase()]; }).slice(0, 6)
         : pool.filter(function (n) { return n.toLowerCase().indexOf(q) === 0; })
             .concat(pool.filter(function (n) { var i = n.toLowerCase().indexOf(q); return i > 0; })).slice(0, 6);
+      // Meals first (basics before recipes), from two letters typed, then single items.
+      var listed = stored("fk-list", []).map(function (x) { return x.url; });
+      var meals = q.length < 2 ? [] : index.filter(function (r) {
+        return r.meal && listed.indexOf(r.url) === -1 && r.title.toLowerCase().indexOf(q) !== -1;
+      }).sort(function (a, b) { return (b.basic ? 1 : 0) - (a.basic ? 1 : 0) || a.title.localeCompare(b.title); }).slice(0, 3);
+      shown = meals.map(function (r) { return { meal: r }; }).concat(items.map(function (n) { return { item: n }; })).slice(0, 7);
       suggestBox.textContent = "";
       if (!shown.length) { closeSuggest(); return; }
-      shown.forEach(function (n, i) {
+      shown.forEach(function (o, i) {
         var li = el("li");
         li.id = "suggest-" + i;
         li.setAttribute("role", "option");
         li.setAttribute("aria-selected", "false");
-        li.appendChild(el("span", "", n));
-        li.appendChild(el("small", "", sortItem(n).aisle));
+        li.appendChild(el("span", "", o.meal ? o.meal.title : o.item));
+        li.appendChild(el("small", "", o.meal ? (o.meal.basic ? "Basic" : "Recipe") + " · " + o.meal.ingredients.filter(function (x) { return x.n && !x.s; }).length + " items" : sortItem(o.item).aisle));
         // pointerdown, so the tap lands before the box loses focus.
-        li.addEventListener("pointerdown", function (e) { e.preventDefault(); addItem(n); });
+        li.addEventListener("pointerdown", function (e) { e.preventDefault(); pick(o); });
         suggestBox.appendChild(li);
       });
       if (window.FieldKitchenNames) FieldKitchenNames.swap(suggestBox, true);
@@ -320,9 +342,10 @@
       if (e.key === "ArrowUp") { e.preventDefault(); setActive(Math.max(active - 1, -1)); }
       if (e.key === "Escape") closeSuggest();
     });
+    var pick = function (o) { if (o.meal) addMeal(o.meal); else addItem(o.item); };
     addForm.addEventListener("submit", function (e) {
       e.preventDefault();
-      addItem(active >= 0 ? shown[active] : addInput.value);
+      if (active >= 0) pick(shown[active]); else addItem(addInput.value);
     });
     build();
   }
