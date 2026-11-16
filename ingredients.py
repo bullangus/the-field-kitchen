@@ -223,6 +223,7 @@ INGREDIENTS = [
     (r"\bparsley\b", "Parsley", HERBS, False),
     (r"\bbasil\b", "Basil", HERBS, False),
     (r"\brosemary\b", "Rosemary", HERBS, False),
+    (r"\bchives\b", "Chives", HERBS, False),
     (r"\bthyme\b", "Thyme", HERBS, False),
     (r"\bsugar\b", "Sugar", PANTRY, True),
 ]

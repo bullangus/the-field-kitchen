@@ -1617,7 +1617,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "British",
 "category": "Potatoes",
 "url": "british/potatoes/baked-potato.html",
-"text": "4 large potatoes Olive oil spray Salt 30 g (2 tbsp) butter 1 clove garlic Grated cheese Mushrooms, sliced 1 clove garlic, crushed A knob of butter Streaky bacon, chopped Coleslaw Corn kernels Vegetarian",
+"text": "4 large potatoes Olive oil spray Salt 30 g (2 tbsp) butter 1 clove garlic Grated cheese Mushrooms, sliced 1 clove garlic, crushed A knob of butter Streaky bacon, chopped Coleslaw Fresh chives Spring onions Corn kernels Vegetarian",
 "meta": "Serves 4 · Cook 1 hr 45–50 min",
 "intro": "A baked potato with a crisp, salty skin and a fluffy middle is one of life's simple pleasures. These are baked in foil until soft, crisped with olive oil and salt, then quartered and piled high with whatever toppings you love.",
 "photo": "",
@@ -1748,6 +1748,34 @@ window.FIELD_KITCHEN_INDEX = [
 "a": "Fruit & veg",
 "s": false,
 "p": "\\bcoleslaw\\b",
+"q": null,
+"u": null
+}
+]
+},
+{
+"name": "Chives",
+"ingredients": [
+{
+"t": "Fresh chives",
+"n": "Chives",
+"a": "Herbs",
+"s": false,
+"p": "\\bchives\\b",
+"q": null,
+"u": null
+}
+]
+},
+{
+"name": "Spring onion",
+"ingredients": [
+{
+"t": "Spring onions",
+"n": "Spring onions",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bspring onions?\\b|\\bgreen onions?\\b|\\bscallions?\\b",
 "q": null,
 "u": null
 }
