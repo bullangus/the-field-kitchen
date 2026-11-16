@@ -75,7 +75,7 @@ body {
   font: 400 17px/1.6 "Source Serif 4", Georgia, serif;
 }
 a { color: inherit; }
-main { max-width: 42rem; margin: 0 auto; padding: 0 16px 6rem; }
+main { max-width: 42rem; margin: 0 auto; padding: 0 16px 3rem; }
 h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; line-height: 1.15; }
 
 /* Page-to-page transitions: browsers that support them cross-fade pages and glide
@@ -276,7 +276,7 @@ h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600
    the name, light/dark and the menu of cuisines. */
 :root { --tabbar: 0px; }
 .tabbar { display: none; }
-.cook-fab { display: none; }
+.pill.cook-fab { display: none; }  /* .pill.* so the later .pill display rule can't show it on desktop */
 @media (max-width: 760px) {
   :root { --tabbar: calc(3.9rem + env(safe-area-inset-bottom, 0px)); }
   body { padding-bottom: var(--tabbar); }
@@ -302,7 +302,7 @@ h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600
 }
 @media (max-width: 900px) {
   /* Recipe pages: "Start cooking" follows you once the header has scrolled away. */
-  .cook-fab:not([hidden]) {
+  .pill.cook-fab:not([hidden]) {
     display: inline-flex; position: fixed; right: 1rem; bottom: calc(var(--tabbar) + 0.9rem); z-index: 25;
     box-shadow: 0 8px 24px var(--shadow);
   }
@@ -1202,7 +1202,7 @@ html.cooking { overflow: hidden; }
 
 /* Footer: a signed sign-off on every page; the last page of the printed book */
 .site-footer {
-  margin-top: 5rem; padding: 3.5rem 16px 3rem; text-align: center;
+  margin-top: 2rem; padding: 3.5rem 16px 3rem; text-align: center;
   background: var(--grain), var(--note-bg);
   border-top: 2px dashed var(--rule);
 }
@@ -1216,7 +1216,7 @@ html.cooking { overflow: hidden; }
 .footer-meta a { text-decoration: none; color: var(--ink); }
 .footer-meta a:hover { color: var(--accent); }
 /* Everywhere but the home page and the printed book: one quiet line. */
-.site-footer.slim { margin-top: 4rem; padding: 1.25rem 16px; border-top-width: 1px; background: none; }
+.site-footer.slim { margin-top: 1rem; padding: 1.25rem 16px; border-top-width: 1px; background: none; }
 .site-footer.slim .footer-meta span { color: var(--accent); font-style: italic; font-variant: normal; letter-spacing: 0; }
 
 /* Print book: on screen, an intro and the pages as paper sheets */
