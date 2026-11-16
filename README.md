@@ -50,6 +50,7 @@
 - **Eggs:** [Egg Sando](recipes/Japanese/Eggs/egg-sando.md), [Ramen Eggs](recipes/Japanese/Eggs/ramen-egg.md)
 - **Pork:** [Tonkatsu](recipes/Japanese/Pork/tonkatsu.md)
 - **Sides:** [Shredded Cabbage](recipes/Japanese/Sides/shredded-cabbage.md)
+- **Sushi:** [Chicken Avocado Nigiri](recipes/Japanese/Sushi/chicken-avocado-nigiri.md)
 
 ### Mexican
 - **Beef:** [Carne Asada Tacos](recipes/Mexican/Beef/carne-asada-tacos.md), [Chilli Con Carne](recipes/Mexican/Beef/chilli-con-carne.md)
@@ -66,7 +67,7 @@
 - **Beef:** [Thai Beef Salad](recipes/Thai/Beef/thai-beef-salad.md)
 - **Chicken:** [Satay Chicken](recipes/Thai/Chicken/satay-chicken.md), [Yellow Curry](recipes/Thai/Chicken/yellow-curry.md)
 
-_49 recipes._
+_50 recipes._
 <!-- CONTENTS:END -->
 
 ## How it's organised
