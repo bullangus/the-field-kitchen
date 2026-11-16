@@ -58,8 +58,8 @@
   };
   var favs = stored("fk-favs", []);
   var shown = fill(tile.querySelector(".yours-favs"), favs, 5);
-  shown += fill(tile.querySelector(".yours-recent"), stored("fk-recent", []).filter(function (u) { return favs.indexOf(u) === -1; }), shown ? 3 : 5);
-  if (shown) { tile.hidden = false; tile.parentNode.classList.add("has-yours"); }
+  shown += fill(tile.querySelector(".yours-recent"), stored("fk-recent", []).filter(function (u) { return favs.indexOf(u) === -1; }), shown ? 3 : 6);
+  if (shown) { tile.hidden = false; tile.parentNode.classList.add(shown < 5 ? "yours-short" : "has-yours"); }
   }
 
   // ---- Cook tonight: a fresh hand of quick recipes on each visit, or on Shuffle ----
