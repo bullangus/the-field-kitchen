@@ -1440,7 +1440,7 @@ html.cooking { overflow: hidden; }
 .plan-mode button[aria-selected="true"] { background: var(--ink); color: var(--paper); }
 .plan-shared summary.plan-save { font-weight: 600; color: var(--accent); }
 .plan-save-parts { margin: 0.5rem 0 0; font-size: 0.88rem; color: var(--muted); }
-.basics-row { display: flex; gap: 0.75rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0.25rem 0 0.75rem; margin: 0 -16px; padding-inline: 16px; scrollbar-width: thin; }
+.basics-row { display: flex; gap: 0.75rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 16px; padding: 0.25rem 0 0.75rem; margin: 0 -16px; padding-inline: 16px; scrollbar-width: thin; }
 .basic-card { flex: none; width: 11.5rem; scroll-snap-align: start; display: flex; flex-direction: column; gap: 0.3rem; padding: 0.9rem 1rem; border-radius: 18px; background: var(--grain), var(--tone-bg, var(--t1-bg)); }
 .basic-card[hidden] { display: none; }
 .basic-card a { font-weight: 600; text-decoration: none; color: var(--ink); line-height: 1.25; }
