@@ -45,6 +45,7 @@ It takes care and time, with a fragrant paste and a gentle simmer, and every ste
 - 45 ml (3 tbsp) tamarind paste
 - ½ tsp MSG
 - Fresh coriander, to garnish
+- Steamed rice, to serve
 
 ## Method
 

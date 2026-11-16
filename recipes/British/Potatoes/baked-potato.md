@@ -25,4 +25,45 @@ It's a meal that's as easy or as indulgent as you want it to be. Melting garlic 
 3. Bake the potatoes in their foil for 1½ hours.
 4. Take them out of the oven and remove the foil. Spray them with olive oil and sprinkle with salt.
 5. Return them to the oven for 15–20 minutes.
-6. Take them out of the oven, quarter each potato and top with whatever you like: garlic butter, cheese, garlic mushrooms, bacon, coleslaw, corn and so on.
+6. Take them out of the oven, quarter each potato and pile on whatever toppings you like. Pick from the Topping Options and set them out so everyone can build their own.
+
+## Topping Options
+
+### Garlic butter
+
+- 30 g (2 tbsp) butter
+- 1 clove garlic
+
+1. Crush the garlic into the butter and melt it in the microwave. Spoon it over the hot potatoes.
+
+### Cheese
+
+- Grated cheese
+
+1. Scatter it over the hot potatoes so it melts.
+
+### Garlic mushrooms
+
+- Mushrooms, sliced
+- 1 clove garlic, crushed
+- A knob of butter
+
+1. Fry the mushrooms in the butter over medium-high heat until golden, adding the garlic for the last minute. Spoon over the potatoes.
+
+### Bacon
+
+- Streaky bacon, chopped
+
+1. Put the bacon in a cold frying pan, then turn the heat to medium. Fry, stirring now and then, until crisp, 6–8 minutes. Drain on paper towel.
+
+### Coleslaw
+
+- Coleslaw
+
+1. Spoon it onto the potatoes just before eating.
+
+### Corn
+
+- Corn kernels
+
+1. Warm the corn and spoon it over the potatoes.

@@ -1617,7 +1617,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "British",
 "category": "Potatoes",
 "url": "british/potatoes/baked-potato.html",
-"text": "4 large potatoes Olive oil spray Salt Vegetarian",
+"text": "4 large potatoes Olive oil spray Salt 30 g (2 tbsp) butter 1 clove garlic Grated cheese Mushrooms, sliced 1 clove garlic, crushed A knob of butter Streaky bacon, chopped Coleslaw Corn kernels Vegetarian",
 "meta": "Serves 4 · Cook 1 hr 45–50 min",
 "intro": "A baked potato with a crisp, salty skin and a fluffy middle is one of life's simple pleasures. These are baked in foil until soft, crisped with olive oil and salt, then quartered and piled high with whatever toppings you love.",
 "photo": "",
@@ -1655,7 +1655,119 @@ window.FIELD_KITCHEN_INDEX = [
 "u": null
 }
 ],
-"options": []
+"options": [
+{
+"name": "Garlic butter",
+"ingredients": [
+{
+"t": "30 g (2 tbsp) butter",
+"n": "Butter",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bbutter\\b",
+"q": 30.0,
+"u": "g"
+},
+{
+"t": "1 clove garlic",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 1.0,
+"u": "clove"
+}
+]
+},
+{
+"name": "Cheese",
+"ingredients": [
+{
+"t": "Grated cheese",
+"n": "Grated cheese",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bcheese\\b",
+"q": null,
+"u": null
+}
+]
+},
+{
+"name": "Garlic mushrooms",
+"ingredients": [
+{
+"t": "Mushrooms, sliced",
+"n": "Mushrooms",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bmushrooms?\\b",
+"q": null,
+"u": null
+},
+{
+"t": "1 clove garlic, crushed",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 1.0,
+"u": "clove"
+},
+{
+"t": "A knob of butter",
+"n": "Butter",
+"a": "Dairy & eggs",
+"s": false,
+"p": "\\bbutter\\b",
+"q": null,
+"u": null
+}
+]
+},
+{
+"name": "Bacon",
+"ingredients": [
+{
+"t": "Streaky bacon, chopped",
+"n": "Streaky bacon",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bbacon\\b",
+"q": null,
+"u": null
+}
+]
+},
+{
+"name": "Coleslaw",
+"ingredients": [
+{
+"t": "Coleslaw",
+"n": "Coleslaw",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bcoleslaw\\b",
+"q": null,
+"u": null
+}
+]
+},
+{
+"name": "Corn",
+"ingredients": [
+{
+"t": "Corn kernels",
+"n": "Corn kernels",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bcorn kernels\\b|\\bkernels\\b",
+"q": null,
+"u": null
+}
+]
+}
+]
 },
 {
 "title": "Duck Fat Potatoes",
@@ -5507,7 +5619,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "South African",
 "category": "Duck",
 "url": "south-african/duck/yvettes-duck-curry.html",
-"text": "45 ml (3 tbsp) oil 2 tbsp coriander seeds 2 tbsp cumin seeds 2 tbsp sesame seeds 1 tsp black mustard seeds 2 large onions, chopped Handful of curry leaves 3 tbsp chilli flakes 1 tsp garam masala 85 g (1 cup) desiccated coconut 150 g (1 cup) cashew nuts 1 tsp turmeric 4 duck breasts 45 ml (3 tbsp) sunflower oil 30 g (80 ml / ⅓ cup) gram (chickpea) flour Salt White pepper 750 ml (3 cups) water 250 ml (1 cup) orange juice 1 tbsp brown sugar 45 ml (3 tbsp) tamarind paste ½ tsp MSG Fresh coriander, to garnish Spicy",
+"text": "45 ml (3 tbsp) oil 2 tbsp coriander seeds 2 tbsp cumin seeds 2 tbsp sesame seeds 1 tsp black mustard seeds 2 large onions, chopped Handful of curry leaves 3 tbsp chilli flakes 1 tsp garam masala 85 g (1 cup) desiccated coconut 150 g (1 cup) cashew nuts 1 tsp turmeric 4 duck breasts 45 ml (3 tbsp) sunflower oil 30 g (80 ml / ⅓ cup) gram (chickpea) flour Salt White pepper 750 ml (3 cups) water 250 ml (1 cup) orange juice 1 tbsp brown sugar 45 ml (3 tbsp) tamarind paste ½ tsp MSG Fresh coriander, to garnish Steamed rice, to serve Spicy",
 "meta": "Serves 4",
 "intro": "A very special recipe from my aunt Yvette. A Durban duck curry with a nod to France in its orange sauce and a sour touch of tamarind, it's the curry we save for the meals that matter. Make the curry paste the day before, or at least before you start the duck.",
 "photo": "",
@@ -5724,6 +5836,15 @@ window.FIELD_KITCHEN_INDEX = [
 "p": "\\bcoriander\\b",
 "q": null,
 "u": null
+},
+{
+"t": "Steamed rice, to serve",
+"n": "Rice",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\brice\\b",
+"q": null,
+"u": null
 }
 ],
 "options": []
@@ -5833,15 +5954,15 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Spanish",
 "category": "Chicken",
 "url": "spanish/chicken/chicken-and-white-bean-stew.html",
-"text": "1 red onion 2 cloves garlic 1 bunch asparagus 1 chicken thigh Salt, to taste 1 tsp gochugaru (Korean chilli flakes) 1 tsp ground coriander 1 tsp ground cumin ½ tsp MSG 400 g (14 oz) can whole tomatoes 400 g (14 oz) can cannellini beans, drained 1 sprig rosemary 30 ml (2 tbsp) olive oil 1 small handful parsley leaves",
-"meta": "Serves 1 · Prep 5 min · Cook 15 min",
-"intro": "A warming one-pot stew for the nights you need something nourishing without the fuss. It's quick, cheap and written for one, so multiply it to feed more, or cook a big batch for the fridge or freezer.",
+"text": "1 red onion 2 cloves garlic 1 bunch asparagus 1 chicken thigh Salt, to taste 1 tsp gochugaru (Korean chilli flakes) 1 tsp ground coriander 1 tsp ground cumin ½ tsp MSG 400 g (14 oz) can whole tomatoes 400 g (14 oz) can cannellini beans, drained 1 sprig rosemary 30 ml (2 tbsp) olive oil 1 small handful parsley leaves Bread, warmed, to serve",
+"meta": "Serves 3 · Prep 5 min · Cook 15 min",
+"intro": "A warming one-pot stew for the nights you need something nourishing without the fuss. It's quick and cheap, feeds three, and doubles easily for a big batch for the fridge or freezer.",
 "photo": "",
 "tags": [
 "chicken",
 "quick"
 ],
-"serves": 1,
+"serves": 3,
 "ingredients": [
 {
 "t": "1 red onion",
@@ -5967,6 +6088,15 @@ window.FIELD_KITCHEN_INDEX = [
 "s": false,
 "p": "\\bparsley\\b",
 "q": 1.0,
+"u": null
+},
+{
+"t": "Bread, warmed, to serve",
+"n": "Bread",
+"a": "Bread, pasta & rice",
+"s": false,
+"p": "\\bbread\\b",
+"q": null,
 "u": null
 }
 ],

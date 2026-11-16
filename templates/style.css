@@ -824,8 +824,15 @@ li.done > .step-num { background: var(--accent); color: var(--paper); }
 .focusing .method-panel li.uses, .focusing .method-panel li.focus { background: var(--hover); }
 .focusing .ingredients-panel li.uses > .ing-text, .focusing .ingredients-panel li.focus > .ing-text { color: var(--accent); font-weight: 600; }
 .options { margin-top: 2.5rem; }
-.option { margin-top: 0.9rem; padding: 1.25rem 1.4rem 1.3rem; background: var(--grain), var(--card); border: 1px solid var(--rule); border-radius: 20px; }
-.method-panel .option h5 { font-size: 1.5rem; margin: 0 0 0.5rem; padding: 0; border: 0; }
+.options > h2 {
+  font-family: "Source Serif 4", Georgia, serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.12em; color: var(--accent); margin: 0 0 0.75rem;
+}
+.option-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); gap: 0.9rem; align-items: start; }
+.option { padding: 1.25rem 1.4rem 1.3rem; background: var(--grain), var(--card); border: 1px solid var(--rule); border-radius: 20px; }
+.option h5 { font: 600 1.5rem/1.15 "Cormorant Garamond", Georgia, serif; margin: 0 0 0.5rem; }
+.option ol { list-style: none; margin: 0; padding: 0; }
+.option ol li { display: flex; gap: 0.8rem; padding: 0.4rem 0; line-height: 1.5; }
 .option ul { list-style: none; margin: 0 0 0.6rem; padding: 0 0 0.6rem; border-bottom: 1px solid var(--hair); }
 .option ul li { display: flex; align-items: flex-start; gap: 0.6rem; padding: 0.3rem 0; font-size: 0.97rem; line-height: 1.45; }
 .option .ing-text { cursor: default; }

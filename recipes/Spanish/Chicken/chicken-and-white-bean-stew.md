@@ -2,14 +2,14 @@
 title: Chicken & White Bean Stew
 cuisine: Spanish
 category: Chicken
-serves: 1
+serves: 3
 time: Prep 5 min · Cook 15 min
 source: https://www.andy-cooks.com/blogs/recipes/chicken-white-bean-stew
 ---
 
-A warming one-pot stew for the nights you need something nourishing without the fuss. It's quick, cheap and written for one, so multiply it to feed more, or cook a big batch for the fridge or freezer.
+A warming one-pot stew for the nights you need something nourishing without the fuss. It's quick and cheap, feeds three, and doubles easily for a big batch for the fridge or freezer.
 
-Tender chicken, creamy beans and a rich tomato sauce with a gentle warmth from the spices. It's the kind of meal that feels nourishing and comforting without any fuss. Serve it in big bowls, with the parsley stirred through.
+Tender chicken, creamy beans and a rich tomato sauce with a gentle warmth from the spices. It's the kind of meal that feels nourishing and comforting without any fuss. Serve it in big bowls, with the parsley stirred through and warmed bread for mopping up every last bit of sauce.
 
 ## Ingredients
 
@@ -27,6 +27,7 @@ Tender chicken, creamy beans and a rich tomato sauce with a gentle warmth from t
 - 1 sprig rosemary
 - 30 ml (2 tbsp) olive oil
 - 1 small handful parsley leaves
+- Bread, warmed, to serve
 
 ## Method
 
@@ -37,7 +38,7 @@ Tender chicken, creamy beans and a rich tomato sauce with a gentle warmth from t
 5. Put a small saucier or saucepan over medium-high heat. Add the olive oil, onion and ½ tsp salt. Sweat the onion, stirring often, for 2–3 minutes, or until soft.
 6. Add the chicken and stir until lightly golden brown. Add the gochugaru, coriander, cumin, MSG, garlic and rosemary and stir to coat the chicken, then immediately add 30 ml (2 tbsp) water to deglaze the pan. Ground spices burn almost instantly on a hot pan and turn bitter.
 7. Add the tomatoes and break them up with a spatula, leaving a few larger chunks. Simmer for 2 minutes, then add the beans and asparagus and simmer for a further 4 minutes. Thin asparagus spears need only 1–2 minutes.
-8. Once the asparagus is cooked, taste and adjust the seasoning with salt if needed. Stir through some finely chopped parsley and serve.
+8. Once the asparagus is cooked, taste and adjust the seasoning with salt if needed. Stir through some finely chopped parsley and serve with warmed bread.
 
 ## Notes
 

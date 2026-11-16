@@ -950,7 +950,8 @@ def recipe_page_html(book, r, prev, nxt):
             f'<article class="option" data-option="{html.escape(name)}"><h5>{inline(name)}</h5>{render(md)}'
             f'<button type="button" class="pill pill-outline option-add" hidden>{svg_icon("plus")}Add to shopping list</button></article>'
             for name, md in options_of(parts["Topping Options"]))
-        options = f'<section class="options"><h2>Topping options</h2>{cards}</section>'
+        # Outside the Ingredients/Method tabs, so phones see the options whichever tab is open.
+        options = f'<section class="options"><h2>Topping options</h2><div class="option-cards">{cards}</div></section>'
     pager = []
     if prev:
         pager.append(f'<a class="prev" href="{root}{prev["url"]}"><span>Previous</span>{html.escape(prev["title"])}</a>')
@@ -989,9 +990,9 @@ def recipe_page_html(book, r, prev, nxt):
     <div class="method-panel">
       <h2>Method</h2>
       {render(parts.get("Method", ""))}
-      {options}
     </div>
   </div>
+  {options}
   {link_mentions(notes_panel(parts.get("Notes")), r, xref)}
   {related_html(r, root)}
   {source_html(r)}
