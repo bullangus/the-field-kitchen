@@ -24,7 +24,7 @@ import sys
 from datetime import date, datetime
 from pathlib import Path
 
-from ingredients import AISLES, BAKERY, DAIRY, DELI, MEAT, PRODUCE, GROCERIES, GROCERY_SUGGESTIONS, INGREDIENTS, NAMES, name_variants, parse_line
+from ingredients import AVOID, PACKS, AISLES, BAKERY, DAIRY, DELI, MEAT, PRODUCE, GROCERIES, GROCERY_SUGGESTIONS, INGREDIENTS, NAMES, name_variants, parse_line
 
 ROOT = Path(__file__).parent
 RECIPES = ROOT / "recipes"
@@ -75,6 +75,29 @@ PLAN_FRESH = (PRODUCE, DELI, MEAT, DAIRY, BAKERY)
 PLAN_FRESH_WEIGHT = 3
 PLAN_EVERYDAY = ("Garlic", "Brown onions")  # in nearly everything, so left out of a plan's headline
 PLAN_LUNCHES = 2  # dinners per week marked "cook extra" for lunches
+# Each plan takes the first name here it qualifies for that no earlier plan has taken:
+# (name, what to count, which values, at least how many). "cuisines" counts different
+# cuisines, "basic" counts basics and "any" always fits, so keep a few of those at the end.
+PLAN_NAMES = (
+    ("Turn Up the Heat", "tags", ("spicy",), 3),
+    ("Winner Winner Chicken Dinner", "category", ("Chicken",), 2),
+    ("Pasta La Vista", "category", ("Pasta",), 2),
+    ("Oodles of Noodles", "category", ("Noodles",), 2),
+    ("Where's the Beef?", "category", ("Beef",), 2),
+    ("This Little Piggy", "category", ("Pork",), 2),
+    ("Something Fishy", "category", ("Seafood",), 2),
+    ("Fakeaway Feast", "basic", (), 1),
+    ("Fast and Fabulous", "tags", ("quick",), 3),
+    ("Passport Please", "cuisines", (), 5),
+    ("Spice Route", "tags", ("spicy",), 2),
+    ("Around the World", "cuisines", (), 4),
+    ("The Crowd Pleasers", "any", (), 0),
+    ("Dinner's Sorted", "any", (), 0),
+    ("No-Stress Nights", "any", (), 0),
+    ("Happy Plates", "any", (), 0),
+    ("Clean Plate Club", "any", (), 0),
+    ("Five Nights of Yum", "any", (), 0),
+)
 KITCHEN_CARD_RECIPES = 3  # recipes shown on each home page cuisine card; the rest are a click away
 CARD_TAGS = 3  # style tags shown on each home page cuisine card before "+N"
 TONES = 6  # colour tones for cuisine cards and headers, .tone-1 to .tone-6 in style.css
@@ -550,7 +573,9 @@ def search_index(book, basics):
             "names": [[p, us, uk, lines_only] for p, us, uk, lines_only in NAMES],
             # The week plan rules, so "build my week" in the browser picks the same way the build does.
             "plan": {"days": list(PLAN_DAYS), "lunches": PLAN_LUNCHES, "maxSame": PLAN_MAX_SAME, "minCuisines": PLAN_MIN_CUISINES,
-                     "fresh": list(PLAN_FRESH), "freshWeight": PLAN_FRESH_WEIGHT, "everyday": list(PLAN_EVERYDAY)}}
+                     "fresh": list(PLAN_FRESH), "freshWeight": PLAN_FRESH_WEIGHT, "everyday": list(PLAN_EVERYDAY),
+                     "count": PLAN_COUNT, "names": [list(n) for n in PLAN_NAMES],
+                     "packs": [list(p) for p in PACKS], "avoid": [list(a) for a in AVOID]}}
     return ("window.FIELD_KITCHEN_INDEX = " + json.dumps(entries, ensure_ascii=False, indent=0) + ";\n"
             "window.FIELD_KITCHEN_SHOP = " + json.dumps(shop, ensure_ascii=False) + ";\n")
 
@@ -1261,8 +1286,10 @@ def week_plans(book, basics):
 
 def plans_html(book, basics):
     plans, weights = week_plans(book, basics)
-    cards = []
-    for i, plan in enumerate(plans, 1):
+    cards, taken = [], []
+    for plan in plans:
+        nickname = plan_name(plan, taken)
+        taken.append(nickname)
         lunches = lunch_picks(plan)
         uses = {}
         for r in plan:
@@ -1285,16 +1312,18 @@ def plans_html(book, basics):
         cards.append(f"""
     <article class="plan reveal" data-urls='{html.escape(urls)}' data-lunches='{html.escape(json.dumps([r["url"] for r in lunches]))}'>
       <header>
-        <p class="eyebrow">Week {i}</p>
-        <h2>Sharing {html.escape(lead)}</h2>
+        <p class="eyebrow">{len(plan)} dinners · {len({r["cuisine"] for r in plan})} cuisines</p>
+        <h2>{html.escape(nickname)}</h2>
+        <p class="plan-sharing">Sharing {html.escape(lead)}</p>
       </header>
       <ol class="plan-days">{days}</ol>
       {leftovers}
+      <p class="plan-save" hidden></p>
       <details class="plan-shared">
         <summary>{len(shared)} ingredients bought once, used more than once</summary>
         <ul>{chips}</ul>
       </details>
-      <button type="button" class="pill pill-solid plan-add" hidden>{svg_icon("plus")}Add the week to my list</button>
+      <button type="button" class="pill pill-solid plan-add" hidden>{svg_icon("plus")}Add these to my list</button>
     </article>""")
     basic_rows = "".join(
         f'<li data-url="{r["url"]}"><div><a href="{r["url"]}">{html.escape(r["title"])}</a>'
@@ -1304,7 +1333,7 @@ def plans_html(book, basics):
     basics_section = f"""
   <section class="plan-basics" id="{BASICS_ANCHOR}">
     <h2 class="plans-head">Basics</h2>
-    <p>Supermarket shortcuts for the nights you don't want to cook from scratch. They turn up in the weeks above too.</p>
+    <p>Supermarket shortcuts for the nights you don't want to cook from scratch. They turn up in the plans above too.</p>
     <div class="list-ideas"><ul>{basic_rows}</ul></div>
   </section>""" if basics else ""
     sizes = "".join(f'<button type="button" class="chip" data-people="{n}" aria-pressed="false">{n}</button>' for n in range(1, 7))
@@ -1312,14 +1341,28 @@ def plans_html(book, basics):
   <header class="page-hero">
     <p class="eyebrow">{svg_icon("calendar")}Week plans</p>
     <h1>Five dinners, one shop</h1>
-    <p>Ready-made weeks of weeknight dinners from the book, picked so they share ingredients (a bunch of spring onions or a tray of chicken thighs goes across several nights) while every night is different. Add a week and the shopping list combines it all.</p>
+    <p>Five easy weeknight dinners from the book, picked so they share ingredients (a bunch of spring onions or a tray of chicken thighs goes across several nights) while every night is different. Add a plan and the shopping list combines it all.</p>
     <div class="plan-people" hidden>
       <span>Cooking for</span><div role="group" aria-label="How many people">{sizes}</div>
       <label class="plan-extra"><input type="checkbox"> Cook extra for lunches</label>
+      <span class="plan-prices">Prices {NAMES_PICK}</span>
     </div>
+    <details class="plan-avoid" hidden>
+      <summary>Leave out <span class="plan-avoid-count"></span></summary>
+      <p>Allergies, dietary needs or just not a fan: plans and picks skip any dinner with these.</p>
+      <div class="plan-avoid-groups" role="group" aria-label="Leave out">{"".join(
+          f'<button type="button" class="chip" data-avoid="{html.escape(label)}" aria-pressed="false">{html.escape(label)}</button>'
+          for label, _ in AVOID)}</div>
+      <div class="plan-build-pick">
+        <label class="search-field">{svg_icon("search")}<input type="text" placeholder="Leave out an ingredient" aria-label="Leave out an ingredient" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="avoid-suggest"></label>
+        <ul class="list-suggest" id="avoid-suggest" role="listbox" hidden></ul>
+      </div>
+      <div class="plan-avoid-items"></div>
+      <p class="plan-avoid-note">Matched on ingredient names in the book, so always check the labels on jars and packets.</p>
+    </details>
   </header>
   <section class="plan-build" hidden>
-    <h2>Build your week</h2>
+    <h2>Build your own</h2>
     <p>Pick up to four dinners you're craving. The rest of the week is filled in with easy dinners that share their shopping.</p>
     <div class="plan-build-pick">
       <label class="search-field">{svg_icon("search")}<input type="text" placeholder="What are you craving?" aria-label="Find a dinner you're craving" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="crave-suggest"></label>
@@ -1329,11 +1372,30 @@ def plans_html(book, basics):
     <div class="plan-build-actions"><button type="button" class="pill pill-solid plan-fill" disabled>Fill my week</button></div>
     <div class="plan-result"></div>
   </section>
-  <h2 class="plans-head">Ready-made weeks</h2>
+  <h2 class="plans-head">Ready-made plans</h2>
+  <p class="plans-none" hidden>No ready-made plan fits everything you're leaving out. Try building your own above.</p>
   <div class="plans">{"".join(cards)}
   </div>{basics_section}
   <script src="{TOOLS_SCRIPT}" defer></script>"""
     return page(book, 0, f"Week plans · {TITLE}", content, current=PLANS_PAGE, main_class="wide")
+
+
+def plan_name(plan, taken=()):
+    """The first PLAN_NAMES name the plan fits that isn't taken (tools.js mirrors this)."""
+    for name, what, values, least in PLAN_NAMES:
+        if name in taken:
+            continue
+        if what == "cuisines":
+            count = len({r["cuisine"] for r in plan})
+        elif what == "basic":
+            count = sum(1 for r in plan if r.get("basic"))
+        elif what == "any":
+            count = 0
+        else:
+            count = sum(1 for r in plan if (set(r[what]) if what == "tags" else {r[what]}) & set(values))
+        if count >= least:
+            return name
+    return PLAN_NAMES[-1][0]
 
 
 def join_and(names):

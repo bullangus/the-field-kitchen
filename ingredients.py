@@ -422,3 +422,65 @@ def parse_line(line):
             if after:
                 item["u"] = after.group(1).lower()
     return item
+
+
+# Typical supermarket packs of the fresh food week plans share, for the savings estimate on
+# each plan: shopping name, pack size, how many pack units one recipe unit is ("" for a line
+# with no unit, also used for "to serve" lines with no amount), and the pack's usual price
+# in Australia (A$, Coles/Woolworths), the UK (£, Tesco/Sainsbury's) and the US ($). Only
+# fresh food counts: half a pack of parmesan goes off, half a bottle of soy sauce doesn't.
+# Loose produce bought one at a time (a lemon, a tomato) saves nothing, so isn't listed.
+PACKS = [
+    ("Bread", 20, {"": 1}, (3.80, 1.40, 3.50)),  # a sliced loaf
+    ("Naan bread", 4, {"": 1}, (3.50, 1.00, 3.00)),
+    ("Butter", 250, {"g": 1, "": 15}, (6.00, 2.20, 2.75)),
+    ("Thickened cream", 300, {"ml": 1, "": 30}, (3.00, 1.60, 3.50)),
+    ("Milk", 2000, {"ml": 1, "": 50}, (3.20, 1.50, 2.50)),
+    ("Grated cheese", 250, {"g": 1, "": 40}, (5.00, 2.50, 3.50)),
+    ("Mozzarella", 250, {"g": 1}, (5.00, 1.50, 4.00)),
+    ("Sour cream", 300, {"g": 1, "ml": 1, "": 60}, (3.00, 1.20, 2.50)),
+    ("Streaky bacon", 250, {"g": 1, "rashers": 25}, (6.00, 2.50, 5.50)),
+    ("Parmesan", 150, {"g": 1, "": 20}, (6.00, 3.00, 6.00)),
+    ("Pecorino", 150, {"g": 1, "": 20}, (7.00, 3.50, 7.00)),
+    ("Spring onions", 6, {"": 1, "bunch": 6}, (2.50, 0.65, 1.00)),  # a bunch
+    ("Garlic", 10, {"": 1, "clove": 1, "cloves": 1, "head": 10, "tsp": 1}, (1.50, 0.35, 0.60)),  # a bulb
+    ("Carrots", 7, {"": 1}, (2.00, 0.60, 1.50)),  # 1 kg bag
+    ("Brown onions", 6, {"": 1}, (3.00, 0.90, 2.50)),  # 1 kg bag
+    ("Coriander", 1, {"": 0.5, "bunch": 1}, (3.00, 0.80, 1.00)),
+    ("Parsley", 1, {"": 0.5, "bunch": 1}, (3.00, 0.80, 1.00)),
+    ("Mint", 1, {"": 0.5, "bunch": 1, "pack": 1}, (3.00, 0.80, 2.00)),
+    ("Fresh ginger", 100, {"g": 1, "cm": 5, "tsp": 5, "": 30}, (3.00, 0.60, 0.80)),
+    ("Fresh red chillies", 8, {"": 1, "tsp": 0.5}, (3.00, 0.70, 1.50)),  # a bag
+    ("Potatoes", 10, {"": 1, "g": 0.005}, (5.00, 1.60, 4.00)),  # 2 kg bag
+    ("Lettuce and cabbage", 1, {"": 1}, (3.00, 0.75, 2.00)),
+    ("Cherry tomatoes", 250, {"g": 1, "": 125}, (4.00, 1.20, 3.00)),  # a punnet
+    ("Baby spinach", 120, {"g": 1}, (3.50, 1.00, 3.00)),
+    ("Chicken thighs", 500, {"g": 1, "": 125}, (9.00, 3.50, 5.00)),
+    ("Beef mince", 500, {"g": 1}, (8.00, 3.50, 6.00)),
+    ("Beef steak", 500, {"g": 1}, (15.00, 7.00, 10.00)),
+    ("Pork mince", 500, {"g": 1}, (7.00, 3.00, 5.00)),
+    ("Beef dripping", 250, {"g": 1}, (3.50, 1.50, 5.00)),
+]
+
+# "Leave out" choices on the week plans page, matched (ignoring case) against each
+# ingredient's shopping name; "#tag" matches a recipe tag instead. Names only, so the page
+# tells readers to check labels: a jar's ingredients can't be seen from here.
+AVOID = (
+    ("Gluten", r"^(plain|self-raising|bread|tipo 00) flour$|\bbread\b|loaves|naan|shokupan|panko|spaghetti|fettuccine|"
+               r"risoni|cavatappi|fusilli|fileja|ravioli|lasagne|egg noodles|ramen|ramyun|wrappers|soy sauce|"
+               r"oyster sauce|golden curry|worcestershire|stock cubes|gravox|shaoxing|taco kit|jam rolls|tonkatsu sauce"),
+    ("Dairy", r"(?<!peanut )\bbutter\b|cream|(?<!coconut )milk|cheese|cheddar|mozzarella|parmesan|pecorino|paneer|"
+              r"yoghurt|naan|ravioli|caesar dressing|custard"),
+    ("Eggs", r"\beggs?\b|mayonnaise|egg noodles|ravioli|lasagne sheets|caesar dressing"),
+    ("Peanuts", r"peanut"),
+    ("Tree nuts", r"cashew|almond|walnut|pecan|pistachio|hazelnut|pesto"),
+    ("Sesame", r"sesame|tahini"),
+    ("Soy", r"\bsoy\b|golden curry|chilli crisp|tofu|miso"),
+    ("Fish", r"fish|snapper|salmon|worcestershire|caesar dressing|dashi|anchov"),
+    ("Shellfish", r"oyster sauce|prawn|shrimp|crab|mussel"),
+    ("Meat", r"chicken|beef|steak|pork|bacon|guanciale|nduja|\bham\b|kabana|sausage|lamb|duck|dripping"),
+    ("Pork", r"pork|bacon|guanciale|nduja|\bham\b|kabana|sausage"),
+    ("Beef", r"beef|steak"),
+    ("Alcohol", r"wine(?! vinegar)|sake|mirin|cointreau|marnier"),
+    ("Spicy food", "#spicy"),
+)
