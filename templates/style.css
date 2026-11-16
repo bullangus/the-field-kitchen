@@ -1255,9 +1255,7 @@ html.cooking { overflow: hidden; }
 .list-ideas .pill { flex: none; }
 
 /* Week plans page (tools.js) */
-.plan-people { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; margin-top: 0.5rem; color: var(--muted); }
 .household-who { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--ink); }
-.household-note { flex-basis: 100%; margin-top: -0.3rem; font-size: 0.82rem; font-style: italic; }
 .plans { display: grid; grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); gap: 1rem; align-items: start; }
 .plan { display: flex; flex-direction: column; gap: 0.9rem; padding: 1.4rem; background: var(--grain), var(--card); border: 1px solid var(--rule); border-radius: 20px; }
 .plan header .eyebrow { margin: 0 0 0.2rem; }
@@ -1286,12 +1284,8 @@ html.cooking { overflow: hidden; }
 .plan-extra input { width: 1.15rem; height: 1.15rem; accent-color: var(--accent); margin: 0; }
 .plan-days li > div { flex: 1; min-width: 0; }
 .plan-lunch { flex: none; align-self: center; font-size: 0.75rem; font-weight: 600; color: var(--accent); border: 1px solid var(--accent); border-radius: 999px; padding: 0.1rem 0.55rem; white-space: nowrap; }
-.plan-leftovers { display: flex; gap: 0.55rem; align-items: flex-start; margin: 0; font-size: 0.9rem; color: var(--muted); }
-.plan-leftovers svg { flex: none; width: 1.15rem; height: 1.15rem; margin-top: 0.1rem; color: var(--accent); }
 .plan-build { margin: 0 0 2.5rem; padding: 1.4rem; background: var(--grain), var(--card); border: 1px solid var(--rule); border-radius: 20px; }
-.plan-build > h2, .plans-head { font-size: 1.6rem; margin: 0 0 0.4rem; }
-.plans-head { margin-bottom: 1rem; }
-.plan-build > p { margin: 0 0 1rem; color: var(--muted); }
+.plans-head { font-size: 1.6rem; margin: 2.5rem 0 0.75rem; }
 .plan-build-pick { position: relative; max-width: 26rem; }
 .plan-build-pick .search-field, .plan-build-pick .search-field:focus-within { width: 100%; }
 .plan-build-pick .search-field svg { flex: none; width: 1.1rem; height: 1.1rem; }
@@ -1304,9 +1298,6 @@ html.cooking { overflow: hidden; }
 .plan-mine { background: var(--paper); }
 .plan-none { color: var(--muted); margin: 0; }
 .plan-sharing { margin: 0.25rem 0 0; color: var(--muted); font-style: italic; }
-.plan-save { margin: 0; padding: 0.55rem 0.8rem; border-radius: 12px; background: var(--hover); color: var(--ink); font-size: 0.9rem; }
-.plan-save small { display: block; margin-top: 0.2rem; color: var(--muted); font-size: 0.82rem; }
-.plan-tally { margin: 0.9rem 0 0; display: inline-block; padding: 0.45rem 0.9rem; border-radius: 999px; background: var(--hover); color: var(--accent); font-weight: 600; font-size: 0.92rem; }
 .plans-have { color: var(--muted); margin-top: -0.5rem; }
 .plan-price-note { color: var(--muted); font-size: 0.85rem; font-style: italic; margin-top: 1.5rem; max-width: 42rem; }
 .plan-prices { display: inline-flex; align-items: center; gap: 0.45rem; }
@@ -1318,12 +1309,41 @@ html.cooking { overflow: hidden; }
 .plan-avoid > p { margin: 0 0 0.7rem; color: var(--muted); font-size: 0.92rem; }
 .plan-avoid-groups, .plan-avoid-items { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.8rem; }
 .plan-avoid-items:empty { display: none; }
+.plan-setup { display: grid; gap: 0.75rem; padding: 1.1rem 1.2rem; margin: 0 0 1rem; background: var(--grain), var(--card); border: 1px solid var(--rule); border-radius: 20px; }
+.plan-setup[hidden], .plan-mode[hidden], .plan-ready[hidden] { display: none; }
+.setup-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.9rem; }
+.setup-label { color: var(--muted); }
+.plan-setup .household-who[hidden], .plan-setup .add-kids[hidden] { display: none; }
+.plan-extra { cursor: pointer; }
+.plan-diets .chip { white-space: nowrap; }
+.plan-diet-note { margin: -0.3rem 0 0; color: var(--muted); font-size: 0.85rem; font-style: italic; }
+.plan-avoid { display: grid; gap: 0.7rem; padding-top: 0.75rem; border-top: 1px solid var(--hair); }
+.plan-avoid[hidden] { display: none; }
+.plan-avoid .plan-avoid-groups, .plan-avoid .plan-build-pick, .plan-avoid .plan-avoid-items, .plan-avoid .plan-avoid-note { margin: 0; }
+.plan-tally { display: inline-block; margin: 0.4rem 0 0; padding: 0.35rem 0.85rem; border-radius: 999px; background: var(--hover); color: var(--accent); font-weight: 600; font-size: 0.9rem; }
+.plan-mode { display: flex; gap: 0.25rem; padding: 0.25rem; margin: 1.25rem 0 1rem; max-width: 26rem; border: 1px solid var(--rule); border-radius: 999px; background: var(--card); }
+.plan-mode button { flex: 1; min-height: 44px; font: inherit; font-weight: 600; color: var(--muted); background: none; border: 0; border-radius: 999px; cursor: pointer; }
+.plan-mode button[aria-selected="true"] { background: var(--ink); color: var(--paper); }
+.plan-shared summary.plan-save { font-weight: 600; color: var(--accent); }
+.plan-save-parts { margin: 0.5rem 0 0; font-size: 0.88rem; color: var(--muted); }
+.basics-row { display: flex; gap: 0.75rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0.25rem 0 0.75rem; margin: 0 -16px; padding-inline: 16px; scrollbar-width: thin; }
+.basic-card { flex: none; width: 11.5rem; scroll-snap-align: start; display: flex; flex-direction: column; gap: 0.3rem; padding: 0.9rem 1rem; border-radius: 18px; background: var(--grain), var(--tone-bg, var(--t1-bg)); }
+.basic-card[hidden] { display: none; }
+.basic-card a { font-weight: 600; text-decoration: none; color: var(--ink); line-height: 1.25; }
+.basic-card small { color: var(--tone-ink, var(--muted)); font-size: 0.8rem; }
+.basic-card .pill { margin-top: auto; align-self: flex-start; }
 .plan-active { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin: 0.7rem 0 0; color: var(--accent); font-weight: 600; }
 .plan-active[hidden] { display: none; }
 .plan-avoid-head { margin: 0 0 0.4rem; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); }
 .plan-tag { display: inline-block; margin-left: 0.4rem; padding: 0 0.5rem; border: 1px solid var(--rule); border-radius: 999px; font-size: 0.72rem; line-height: 1.5; color: var(--muted); vertical-align: 0.1em; }
 .plan-avoid .plan-build-pick { margin-bottom: 0.8rem; }
 .plan-avoid > .plan-avoid-note { font-size: 0.82rem; font-style: italic; margin-bottom: 1rem; }
+/* Phones: one row of diets, and the plans swipe sideways one at a time. */
+@media (max-width: 600px) {
+  .plan-diets { flex-wrap: nowrap; overflow-x: auto; margin: 0 -1.2rem; padding: 0.1rem 1.2rem; scrollbar-width: none; }
+  .plan-ready .plans { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 0.75rem; margin: 0 -16px; padding: 0 16px 0.5rem; scrollbar-width: none; }
+  .plan-ready .plan { flex: none; width: 88%; scroll-snap-align: center; }
+}
 @media (max-width: 600px) { .plan .pill, .plan-build-actions .pill { align-self: stretch; width: 100%; justify-content: center; } .plan-build { padding: 1.1rem; } }
 
 /* What can I cook? page (tools.js) */

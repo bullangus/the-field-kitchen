@@ -24,7 +24,7 @@ import sys
 from datetime import date, datetime
 from pathlib import Path
 
-from ingredients import AVOID, DIETS, SWAPS, FOOD_INFLATION, KEEPS, KEEPS_DEFAULT, PACKS, PRICES_CHECKED, AISLES, BAKERY, DAIRY, DELI, MEAT, PRODUCE, GROCERIES, GROCERY_SUGGESTIONS, INGREDIENTS, NAMES, name_variants, parse_line
+from ingredients import AVOID, DIETS, LUNCH_SAVING, SWAPS, FOOD_INFLATION, KEEPS, KEEPS_DEFAULT, PACKS, PRICES_CHECKED, AISLES, BAKERY, DAIRY, DELI, MEAT, PRODUCE, GROCERIES, GROCERY_SUGGESTIONS, INGREDIENTS, NAMES, name_variants, parse_line
 
 ROOT = Path(__file__).parent
 RECIPES = ROOT / "recipes"
@@ -596,7 +596,7 @@ def search_index(book, basics):
                      "packs": [list(p) for p in PACKS], "avoid": [list(a) for a in AVOID], "swaps": [[g, p, use, list(only[0]) if only else None] for g, p, use, *only in SWAPS],
                      "pricesChecked": PRICES_CHECKED, "inflation": list(FOOD_INFLATION),
                      "longMinutes": PLAN_LONG_MINUTES, "maxLong": PLAN_MAX_LONG, "maxFried": PLAN_MAX_FRIED,
-                     "maxWeekMinutes": PLAN_MAX_WEEK_MINUTES, "kidPortion": PLAN_KID_PORTION}}
+                     "maxWeekMinutes": PLAN_MAX_WEEK_MINUTES, "kidPortion": PLAN_KID_PORTION, "lunchSaving": list(LUNCH_SAVING)}}
     return ("window.FIELD_KITCHEN_INDEX = " + json.dumps(entries, ensure_ascii=False, indent=0) + ";\n"
             "window.FIELD_KITCHEN_SHOP = " + json.dumps(shop, ensure_ascii=False) + ";\n")
 
@@ -836,7 +836,6 @@ def world_map(book):
   <section class="atlas reveal" id="atlas" aria-label="Where our recipes come from">
     <div class="section-head">
       <h2>Our table, around the world</h2>
-      <p>Tap a pin to visit that kitchen.</p>
     </div>
     <div class="atlas-map">
       <svg viewBox="0 0 {data['width']} {data['height']}" role="img" aria-label="World map with a pin for each cuisine">
@@ -1095,7 +1094,7 @@ def recipe_page_html(book, r, prev, nxt):
                           '<button type="button" class="scale-down" aria-label="Fewer leftover portions" disabled>−</button>'
                           '<output aria-live="polite">0</output>'
                           '<button type="button" class="scale-up" aria-label="More leftover portions">+</button></div>'
-                          '<small>portions for later</small></div>')
+                          '</div>')
     facts = (f'<div class="fact fact-serves"><span>Serves</span>{serves_html}</div>{leftovers_html}'
              + "".join(f'<div class="fact"><span>{html.escape(label)}</span><strong>{html.escape(value)}</strong></div>'
                        for label, value in time_facts(r))
@@ -1149,9 +1148,8 @@ def recipe_page_html(book, r, prev, nxt):
   <div class="recipe-layout" data-tab="ingredients">
     <aside class="ingredients-panel" aria-label="Ingredients">
       <div class="panel-head"><h2>Ingredients</h2>{NAMES_PICK}</div>
-      <p class="scale-note" hidden>Amounts with a number are scaled and rounded. Amounts in the method, and things like "to taste" or "a handful", stay as written.</p>
+      <p class="scale-note" hidden>Scaled and rounded.</p>
       {render(parts.get("Ingredients", ""))}
-      <p class="panel-hint">Tick things off as you go. Tap an ingredient's name to see where it's used.</p>
     </aside>
     <div class="method-panel">
       <h2>Method</h2>
@@ -1173,7 +1171,7 @@ def list_html(book):
     content = f"""
   <header class="page-hero list-hero">
     <h1>Shopping list</h1>
-    <p class="list-summary">One list for everything you plan to cook.</p>
+    <p class="list-summary"></p>
     <div class="list-actions" hidden>
       <button type="button" class="pill pill-solid list-share">Share</button>
       <button type="button" class="pill pill-outline pill-icon list-print" aria-label="Print">{svg_icon("printer")}</button>
@@ -1189,7 +1187,7 @@ def list_html(book):
   </header>
   <form class="list-add" hidden>
     <div class="list-add-field">
-      <label class="search-field">{svg_icon("plus")}<input type="text" placeholder="Add an item or a meal, e.g. tacos" aria-label="Add an item or a meal to the list" autocomplete="off" enterkeyhint="done" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="list-suggest"><button type="submit" class="list-add-go">Add</button></label>
+      <label class="search-field">{svg_icon("plus")}<input type="text" placeholder="Add an item or meal" aria-label="Add an item or a meal to the list" autocomplete="off" enterkeyhint="done" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="list-suggest"><button type="submit" class="list-add-go">Add</button></label>
       <ul class="list-suggest" id="list-suggest" role="listbox" hidden></ul>
     </div>
   </form>
@@ -1198,14 +1196,12 @@ def list_html(book):
   <section class="list-empty" hidden>
     {svg_icon("basket")}
     <h2>Nothing on the list yet</h2>
-    <p>Open a recipe and choose "Add to shopping list". Everything you add is combined and sorted by aisle, ready to tick off at the shops.</p>
     <div class="hero-actions">
-      <a class="pill pill-solid" href="{HOME_PAGE}#kitchens">Browse the kitchens</a>
-      <a class="pill pill-outline" href="{COOK_PAGE}">{svg_icon("sparkle")}What can I cook?</a>
-      <a class="pill pill-outline" href="{PLANS_PAGE}">{svg_icon("calendar")}Plan a week</a>
+      <a class="pill pill-solid" href="{PLANS_PAGE}">{svg_icon("calendar")}Plan a week</a>
+      <a class="pill pill-outline" href="{HOME_PAGE}#kitchens">Browse recipes</a>
     </div>
     <div class="list-ideas" hidden>
-      <p class="eyebrow">Or start with one of these</p>
+      <p class="eyebrow">Ideas</p>
       <ul></ul>
     </div>
   </section>
@@ -1242,19 +1238,19 @@ def cook_html(book):
   <header class="page-hero">
     <p class="eyebrow">{svg_icon("sparkle")}What can I cook?</p>
     <h1>Cook with what you have</h1>
-    <p>Tap what's in your fridge and pantry. Salt, pepper, oil, sugar, water and MSG are assumed.</p>
+    <p>Salt, pepper and oil are assumed.</p>
     <div class="hero-actions"><button type="button" class="pill pill-outline pill-sm pantry-clear" hidden>Clear all</button></div>
   </header>
   <div class="cook-layout">
     <div class="pantry">
       <label class="search-field pantry-search" hidden>{svg_icon("search")}<input type="search" placeholder="Find an ingredient" aria-label="Find an ingredient" autocomplete="off"></label>
-      <p class="pantry-none" hidden>No ingredient by that name in the book yet.</p>
+      <p class="pantry-none" hidden>Not in the book yet.</p>
       {groups}
     </div>
     <section class="matches" id="matches" aria-live="polite">
       <h2>Best matches</h2>
       <div class="picks" hidden></div>
-      <p class="matches-empty">Pick a few ingredients to see what you can make.</p>
+      <p class="matches-empty">Pick a few ingredients.</p>
       <ol class="match-list"></ol>
     </section>
   </div>
@@ -1392,77 +1388,75 @@ def plans_html(book, basics):
             + (f'<span class="plan-lunch" title="{html.escape(r["leftovers"])}">+ lunch</span>' if r in lunches else "")
             + "</li>"
             for n, r in enumerate(plan, 1))
-        leftovers = (f'<p class="plan-leftovers">{svg_icon("box")}<span>For lunches, cook extra '
-                     f'{html.escape(join_and([r["title"] for r in lunches]))}: '
-                     f'{"it reheats" if len(lunches) == 1 else "they reheat"} well the next day.</span></p>' if lunches else "")
         chips = "".join(f'<li>{html.escape(n)} <b>×{uses[n]}</b></li>' for n in shared)
         urls = json.dumps([r["url"] for r in plan])
         cards.append(f"""
     <article class="plan reveal" data-urls='{html.escape(urls)}' data-lunches='{html.escape(json.dumps([r["url"] for r in lunches]))}'>
       <header>
-        <p class="eyebrow">{len(plan)} dinners · {short_time(sum(plan_minutes(r) for r in plan))} cooking</p>
+        <p class="eyebrow">{len(plan)} dinners · {short_time(sum(plan_minutes(r) for r in plan))}</p>
         <h2>{html.escape(nickname)}</h2>
         <p class="plan-sharing">Sharing {html.escape(lead)}</p>
       </header>
       <ol class="plan-days">{days}</ol>
-      {leftovers}
-      <p class="plan-save" hidden></p>
       <details class="plan-shared">
-        <summary>{len(shared)} ingredients bought once, used more than once</summary>
+        <summary class="plan-save">{len(shared)} shared ingredients</summary>
+        <p class="plan-save-parts" hidden></p>
         <ul>{chips}</ul>
       </details>
-      <button type="button" class="pill pill-solid plan-add" hidden>{svg_icon("plus")}Add these to my list</button>
+      <button type="button" class="pill pill-solid plan-add" hidden>{svg_icon("plus")}Add to my list</button>
     </article>""")
-    basic_rows = "".join(
-        f'<li data-url="{r["url"]}"><div><a href="{r["url"]}">{html.escape(r["title"])}</a>'
-        f'<span>{html.escape(intro(r))}</span></div>'
-        f'<button type="button" class="pill pill-outline pill-sm basic-add" hidden>{svg_icon("plus")}Add to list</button></li>'
+    basic_cards = "".join(
+        f'<article class="basic-card tone-{slug(r["cuisine"])}" data-url="{r["url"]}">'
+        f'<a href="{r["url"]}">{html.escape(r["title"])}</a>'
+        f'<small>{html.escape(r["cuisine"])} · {short_time(plan_minutes(r))}</small>'
+        f'<button type="button" class="pill pill-outline pill-sm basic-add" hidden>{svg_icon("plus")}Add</button></article>'
         for r in basics)
     basics_section = f"""
   <section class="plan-basics" id="{BASICS_ANCHOR}">
     <h2 class="plans-head">Basics</h2>
-    <p>Supermarket shortcuts for the nights you don't want to cook from scratch. They turn up in the plans above too.</p>
-    <div class="list-ideas"><ul>{basic_rows}</ul></div>
+    <div class="basics-row">{basic_cards}</div>
   </section>""" if basics else ""
+
     def counter(who, label):
-        return (f'<span class="household-who"><span class="scaler" data-who="{who}">'
+        return (f'<span class="household-who" data-for="{who}"><span class="scaler" data-who="{who}">'
                 f'<button type="button" class="scale-down" aria-label="Fewer {label}">−</button>'
                 f'<output aria-live="polite">0</output>'
                 f'<button type="button" class="scale-up" aria-label="More {label}">+</button></span> {label}</span>')
+    diet_chips = "".join(f'<button type="button" class="chip" data-diet="{html.escape(label)}" aria-pressed="false">{html.escape(label)}</button>'
+                         for label, _ in DIETS)
+    avoid_chips = "".join(f'<button type="button" class="chip" data-avoid="{html.escape(label)}" aria-pressed="false">{html.escape(label)}</button>'
+                          for label, _ in AVOID)
     content = f"""
   <header class="page-hero">
     <p class="eyebrow">{svg_icon("calendar")}Week plans</p>
     <h1>Five dinners, one shop</h1>
-    <p>Five easy weeknight dinners from the book, each on the table within an hour of getting home (most well under), picked so they share ingredients (a bunch of spring onions or a tray of chicken thighs goes across several nights) while every night is different. No set days: each plan lists its dinners in the order to cook them, with whatever goes off soonest first. Add a plan and the shopping list combines it all.</p>
-    <div class="plan-people" hidden>
-      <span>Cooking for</span>{counter("adults", "adults")}{counter("kids", "kids")}
-      <small class="household-note">Kids count as half a serving.</small>
-      <label class="plan-extra"><input type="checkbox"> Cook extra for lunches</label>
-      <span class="plan-prices">Prices {NAMES_PICK}</span>
-    </div>
     <p class="plan-tally" hidden></p>
-    <details class="plan-avoid" hidden>
-      <summary>Diet and leave out <span class="plan-avoid-count"></span></summary>
-      <p>Vegetarian or vegan, allergies, or just not a fan: plans and picks only use dinners that fit.</p>
-      <div class="plan-avoid-groups plan-diets" role="group" aria-label="Diet">{"".join(
-          f'<button type="button" class="chip" data-diet="{html.escape(label)}" aria-pressed="false">{html.escape(label)}</button>'
-          for label, _ in DIETS)}</div>
-      <p class="plan-avoid-note plan-diet-note" hidden>Kosher- and halal-style go by ingredients only: no pork or shellfish, and no meat with dairy, for kosher; no pork or alcohol for halal. Buy certified meat.</p>
-      <p class="plan-avoid-head">Leave out</p>
-      <div class="plan-avoid-groups" role="group" aria-label="Leave out">{"".join(
-          f'<button type="button" class="chip" data-avoid="{html.escape(label)}" aria-pressed="false">{html.escape(label)}</button>'
-          for label, _ in AVOID)}</div>
+  </header>
+  <section class="plan-setup" aria-label="Your household" hidden>
+    <div class="setup-row">
+      <span class="setup-label">Cooking for</span>{counter("adults", "adults")}{counter("kids", "kids")}
+      <button type="button" class="pill pill-outline pill-sm add-kids">{svg_icon("plus")}Kids</button>
+    </div>
+    <label class="setup-row plan-extra"><input type="checkbox" role="switch"> Cook extra for lunches</label>
+    <div class="setup-row plan-diets" role="group" aria-label="Diet">{diet_chips}
+      <button type="button" class="chip avoid-open" aria-expanded="false" aria-controls="plan-avoid">Leave out <span class="plan-avoid-count"></span></button>
+    </div>
+    <p class="plan-diet-note" hidden>Buy certified meat.</p>
+    <div class="plan-avoid" id="plan-avoid" hidden>
+      <div class="plan-avoid-groups" role="group" aria-label="Leave out">{avoid_chips}</div>
       <div class="plan-build-pick">
-        <label class="search-field">{svg_icon("search")}<input type="text" placeholder="Leave out an ingredient" aria-label="Leave out an ingredient" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="avoid-suggest"></label>
+        <label class="search-field">{svg_icon("search")}<input type="text" placeholder="Any ingredient" aria-label="Leave out an ingredient" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="avoid-suggest"></label>
         <ul class="list-suggest" id="avoid-suggest" role="listbox" hidden></ul>
       </div>
       <div class="plan-avoid-items"></div>
-      <p class="plan-avoid-note">Matched on ingredient names in the book, so always check the labels on jars and packets.</p>
-    </details>
-  </header>
+      <p class="plan-avoid-note">Check labels on jars and packets.</p>
+    </div>
+  </section>
+  <div class="plan-mode" role="tablist" aria-label="Plans" hidden>
+    <button type="button" role="tab" aria-selected="true" data-mode="ready">Ready-made</button>
+    <button type="button" role="tab" aria-selected="false" data-mode="build">Build your own</button>
+  </div>
   <section class="plan-build" hidden>
-    <h2>Build your own</h2>
-    <p>Pick up to four dinners you're craving. The rest of the week is filled in with easy dinners that share their shopping.</p>
     <div class="plan-build-pick">
       <label class="search-field">{svg_icon("search")}<input type="text" placeholder="What are you craving?" aria-label="Find a dinner you're craving" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="crave-suggest"></label>
       <ul class="list-suggest" id="crave-suggest" role="listbox" hidden></ul>
@@ -1471,12 +1465,13 @@ def plans_html(book, basics):
     <div class="plan-build-actions"><button type="button" class="pill pill-solid plan-fill" disabled>Fill my week</button></div>
     <div class="plan-result"></div>
   </section>
-  <h2 class="plans-head">Ready-made plans</h2>
-  <p class="plans-have" hidden></p>
-  <p class="plans-none" hidden>No ready-made plan fits everything you're leaving out. Try building your own above.</p>
-  <div class="plans">{"".join(cards)}
-  </div>
-  <p class="plan-price-note">Savings are estimates from typical supermarket pack prices, checked {html.escape(nice_date(PRICES_CHECKED))} and rising with food inflation since. They compare buying once with buying for each dinner on its own, and count what you've ticked as already in your kitchen on <a href="{COOK_PAGE}">What can I cook?</a></p>{basics_section}
+  <section class="plan-ready">
+    <p class="plans-have" hidden></p>
+    <p class="plans-none" hidden>No plan fits yet.</p>
+    <div class="plans">{"".join(cards)}
+    </div>
+  </section>{basics_section}
+  <p class="plan-price-note">Savings at typical supermarket prices, {html.escape(nice_date(PRICES_CHECKED))}. {NAMES_PICK}</p>
   <script src="{TOOLS_SCRIPT}" defer></script>"""
     return page(book, 0, f"Week plans · {TITLE}", content, current=PLANS_PAGE, main_class="wide")
 

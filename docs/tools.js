@@ -74,7 +74,7 @@
       var anything = picked.length > 0 || extras.length > 0;
       empty.hidden = anything;
       actions.hidden = !anything;
-      if (!anything) { summary.textContent = "One list for everything you plan to cook."; ideas(); return; }
+      if (!anything) { summary.textContent = ""; ideas(); return; }
 
       // Recipes on the list: one compact card, a row per recipe with its servings and toppings.
       if (picked.length) recipesBox.appendChild(el("h2", "", "For " + picked.length + " recipe" + (picked.length === 1 ? "" : "s")));
@@ -363,22 +363,22 @@
     var size = RULES.size || 5;
     // The household: adults and kids, a child counting as RULES.kidPortion of a serving.
     // An older single "people" count carries over as adults.
-    var household = stored("fk-household", { adults: stored("fk-people", 4), kids: 0 });
+    var household = stored("fk-household", { adults: stored("fk-people", 2), kids: 0 });
     var portionsOf = function (h) { return Math.max(1, h.adults + h.kids * (RULES.kidPortion || 0.5)); };
     var people = portionsOf(household);
     var householdLabel = function () {
       var part = function (n, one, many) { return n ? n + " " + (n === 1 ? one : many) : ""; };
       return [part(household.adults, "adult", "adults"), part(household.kids, "child", "kids")].filter(Boolean).join(" and ");
     };
-    var extra = stored("fk-lunches", false);
+    var extra = stored("fk-lunches", true);  // lunches from leftovers save the most, so on to start
     var avoid = stored("fk-avoid", { groups: [], items: [] });
     // What's ticked on "What can I cook?": already in the kitchen, so plans that use it cost less.
     var have = stored("fk-fridge", []);
-    var peopleBox = document.querySelector(".plan-people");
+    var peopleBox = document.querySelector(".plan-setup");
     var counters = [].slice.call(peopleBox.querySelectorAll("[data-who]"));
     var extraBox = peopleBox.querySelector(".plan-extra input");
     var serverCards = [].slice.call(plans.querySelectorAll(".plan"));
-    var boxIcon = plans.querySelector(".plan-leftovers svg"), plusIcon = plans.querySelector(".plan-add svg");
+    var plusIcon = plans.querySelector(".plan-add svg");
     var cards = [];
     var joinAnd = function (a) { return a.length === 1 ? a[0] : a.slice(0, -1).join(", ") + " and " + a[a.length - 1]; };
     var urlsOf = function (card, attr) { return JSON.parse(card.getAttribute(attr || "data-urls")); };
@@ -562,21 +562,24 @@
         var fresh = (RULES.fresh || []).indexOf(aisle[n]) !== -1;
         out[fresh ? "fresh" : "jars"] += (apart - together) * priceOf(p, c);
       }
-      out.total = out.fresh + out.jars + out.had;
+      // Each leftover portion is a lunch not bought.
+      var portions = urlsOf(card).reduce(function (t, u) { return t + leftoversFor(card, u); }, 0);
+      out.lunches = portions * ((RULES.lunchSaving || [])[c] || 0);
+      out.total = out.fresh + out.jars + out.had + out.lunches;
       return out;
     };
+    // The card's summary line is the saving; opening it shows where it comes from.
     var saveLine = function (card) {
-      var save = card.querySelector(".plan-save"), s = savingOf(card);
-      save.hidden = s.total < 1;
-      save.textContent = "";
-      save.appendChild(el("strong", "", "Saves about " + money(s.total)));
-      save.appendChild(document.createTextNode(" against buying for each dinner on its own"));
-      var parts = [];
-      if (s.fresh >= 1) parts.push(money(s.fresh) + " of fresh food shared");
-      if (s.jars >= 1) parts.push(money(s.jars) + " of jars and packets bought once");
-      if (s.had >= 1) parts.push(money(s.had) + " already in your kitchen (" + joinAnd(s.hadNames.map(function (n) { return n.toLowerCase(); })) + ")");
-      if (parts.length) save.appendChild(el("small", "", parts.join(" · ")));
-      if (window.FieldKitchenNames) FieldKitchenNames.swap(save, true);
+      var save = card.querySelector(".plan-save"), parts = card.querySelector(".plan-save-parts"), s = savingOf(card);
+      if (!save.hasAttribute("data-plain")) save.setAttribute("data-plain", save.textContent);
+      save.textContent = s.total >= 1 ? "Saves about " + money(s.total) : save.getAttribute("data-plain");
+      var bits = [];
+      if (s.lunches >= 1) bits.push(money(s.lunches) + " lunches");
+      if (s.fresh >= 1) bits.push(money(s.fresh) + " fresh food");
+      if (s.jars >= 1) bits.push(money(s.jars) + " jars and packets");
+      if (s.had >= 1) bits.push(money(s.had) + " already at home");
+      parts.textContent = bits.join(" · ");
+      parts.hidden = !bits.length;
     };
 
     // A running total of what the plans added to the list have saved, kept per browser.
@@ -587,9 +590,7 @@
       var total = saved.reduce(function (t, x) { return t + (x.amounts[country] || 0); }, 0);
       tally.hidden = total < 1;
       if (tally.hidden) return;
-      var since = new Date(saved[0].date);
-      tally.textContent = "Your plans have saved about " + money(total) + " since " + since.getDate() + " " +
-        since.toLocaleString("en-AU", { month: "short", year: "numeric" }) + " (" + saved.length + " plan" + (saved.length === 1 ? "" : "s") + ")";
+      tally.textContent = "Saved about " + money(total) + " so far";
     };
     var recordSaving = function (card) {
       var key = urlsOf(card).slice().sort().join(" ");
@@ -599,7 +600,15 @@
       syncTally();
     };
 
+    // Just adults to start; "+ Kids" brings in the kids counter, which goes again at 0.
+    var kidsSlot = peopleBox.querySelector('[data-for="kids"]'), addKids = peopleBox.querySelector(".add-kids");
+    addKids.addEventListener("click", function () {
+      household.kids = 1; people = portionsOf(household); store("fk-household", household);
+      syncPeople(); syncPlans(); syncBasics();
+    });
     var syncPeople = function () {
+      kidsSlot.hidden = !household.kids;
+      addKids.hidden = !!household.kids;
       counters.forEach(function (c) {
         var who = c.getAttribute("data-who"), n = household[who];
         c.querySelector("output").textContent = n;
@@ -618,7 +627,7 @@
         var b = card.querySelector(".plan-add");
         b.hidden = false;
         b.classList.toggle("added", all);
-        b.lastChild.textContent = all ? "On your list" : "Add these to my list";
+        b.lastChild.textContent = all ? "On your list" : "Add to my list";
         var view = card.querySelector(".plan-view");
         if (all && !view) {
           view = el("a", "pill pill-outline plan-view", "View list");
@@ -682,30 +691,21 @@
         ol.appendChild(li);
       });
       card.appendChild(ol);
-      if (lunches.length) {
-        var hint = el("p", "plan-leftovers");
-        if (boxIcon) hint.appendChild(boxIcon.cloneNode(true));
-        hint.appendChild(el("span", "", "For lunches, cook extra " + joinAnd(lunches.map(function (r) { return r.title; })) +
-          (lunches.length === 1 ? ": it reheats" : ": they reheat") + " well the next day."));
-        card.appendChild(hint);
-      }
-      card.appendChild(el("p", "plan-save"));
-      if (shared.length) {
-        var det = el("details", "plan-shared");
-        det.appendChild(el("summary", "", shared.length + " ingredients bought once, used more than once"));
-        var ul = el("ul");
-        shared.forEach(function (n) { var li = el("li", "", n + " "); li.appendChild(el("b", "", "×" + uses[n])); ul.appendChild(li); });
-        det.appendChild(ul); card.appendChild(det);
-      }
+      var det = el("details", "plan-shared");
+      det.appendChild(el("summary", "plan-save", shared.length + " shared ingredients"));
+      var parts = el("p", "plan-save-parts"); parts.hidden = true; det.appendChild(parts);
+      var ul = el("ul");
+      shared.forEach(function (n) { var li = el("li", "", n + " "); li.appendChild(el("b", "", "×" + uses[n])); ul.appendChild(li); });
+      det.appendChild(ul); card.appendChild(det);
       var add = el("button", "pill pill-solid plan-add"); add.type = "button"; add.hidden = true;
       if (plusIcon) add.appendChild(plusIcon.cloneNode(true));
-      add.appendChild(document.createTextNode("Add these to my list"));
+      add.appendChild(document.createTextNode("Add to my list"));
       card.appendChild(add);
       if (window.FieldKitchenNames) FieldKitchenNames.swap(card, true);
       return card;
     };
     var eyebrowOf = function (week) {
-      return week.length + " dinners · " + shortTime(week.reduce(function (t, r) { return t + r.minutes; }, 0)) + " cooking";
+      return week.length + " dinners · " + shortTime(week.reduce(function (t, r) { return t + r.minutes; }, 0));
     };
 
     // Ready-made plans: the build's, or reworked here around what's being left out.
@@ -717,8 +717,7 @@
       serverCards.forEach(function (c) { c.hidden = rework; });
       plansNone.hidden = true;
       plansHave.hidden = !have.length;
-      plansHave.textContent = have.length ? "Picked to use what's already in your kitchen (" + have.length +
-        " thing" + (have.length === 1 ? "" : "s") + " ticked on What can I cook?)." : "";
+      plansHave.textContent = have.length ? "Using what's in your kitchen." : "";
       if (!rework) return;
       var chosen = [], taken = [];
       rank([]).some(function (c) {
@@ -763,7 +762,7 @@
     serverCards.forEach(wire);
 
     // Basics: one tap puts a supermarket shortcut on the list at the household size.
-    var basicRows = [].slice.call(document.querySelectorAll(".plan-basics li"));
+    var basicRows = [].slice.call(document.querySelectorAll(".plan-basics [data-url]"));
     var syncBasics = function () {
       var list = stored("fk-list", []);
       basicRows.forEach(function (li) {
@@ -773,7 +772,7 @@
         var b = li.querySelector(".basic-add");
         b.hidden = false;
         b.classList.toggle("added", on);
-        b.lastChild.textContent = on ? "On your list" : "Add to list";
+        b.lastChild.textContent = on ? "Added" : "Add";
       });
     };
     basicRows.forEach(function (li) {
@@ -827,7 +826,16 @@
     var maxCravings = size - 1;
     var cravings = stored("fk-cravings", []).map(function (u) { return byUrl(u); }).filter(Boolean);
     var ranked = [], shown = [];
-    build.hidden = false;
+    // Ready-made or build your own: one at a time, ready-made first.
+    var ready = document.querySelector(".plan-ready"), modes = document.querySelector(".plan-mode");
+    modes.hidden = false;
+    [].forEach.call(modes.querySelectorAll("[data-mode]"), function (b) {
+      b.addEventListener("click", function () {
+        var building = b.getAttribute("data-mode") === "build";
+        build.hidden = !building; ready.hidden = building;
+        [].forEach.call(modes.querySelectorAll("[data-mode]"), function (x) { x.setAttribute("aria-selected", String(x === b)); });
+      });
+    });
     var drawCravings = function () {
       craveChips.textContent = "";
       cravings.forEach(function (r) {
@@ -886,26 +894,32 @@
     var avoidBox = document.querySelector(".plan-avoid");
     var avoidChips = [].slice.call(avoidBox.querySelectorAll("[data-avoid]"));
     var avoidItems = avoidBox.querySelector(".plan-avoid-items");
-    var avoidCount = avoidBox.querySelector(".plan-avoid-count");
+    var avoidCount = document.querySelector(".plan-avoid-count");
+    var avoidOpen = document.querySelector(".avoid-open");
+    avoidOpen.addEventListener("click", function () {
+      avoidBox.hidden = !avoidBox.hidden;
+      avoidOpen.setAttribute("aria-expanded", String(!avoidBox.hidden));
+    });
     var everyIngredient = {};
     index.forEach(function (r) { if (r.plan) r.ingredients.forEach(function (i) { if (i.n && !i.s) everyIngredient[i.n] = i.a; }); });
-    var dietChips = [].slice.call(avoidBox.querySelectorAll("[data-diet]"));
+    var dietChips = [].slice.call(document.querySelectorAll("[data-diet]"));
     if (avoid.diet === undefined) avoid.diet = null;
     var drawAvoid = function () {
       dietChips.forEach(function (c) { c.setAttribute("aria-pressed", String(c.getAttribute("data-diet") === avoid.diet)); });
-      avoidBox.querySelector(".plan-diet-note").hidden = !/-style$/.test(avoid.diet || "");
+      document.querySelector(".plan-diet-note").hidden = !/-style$/.test(avoid.diet || "");
       avoidChips.forEach(function (c) { c.setAttribute("aria-pressed", String(avoid.groups.indexOf(c.getAttribute("data-avoid")) !== -1)); });
       avoidItems.textContent = "";
       avoid.items.forEach(function (n) {
         avoidItems.appendChild(chip(n, n, function () { avoid.items = avoid.items.filter(function (x) { return x !== n; }); avoidChanged(); }));
       });
-      var n = (avoid.diet ? 1 : 0) + avoid.groups.length + avoid.items.length;
+      var n = avoid.groups.length + avoid.items.length;
       avoidCount.textContent = n ? "(" + n + ")" : "";
+      avoidOpen.setAttribute("aria-pressed", String(n > 0));
       if (window.FieldKitchenNames) FieldKitchenNames.swap(avoidItems, true);
     };
     // What's switched on, shown above the plans even with the panel closed, with a way out.
     var active = el("p", "plan-active"); active.hidden = true;
-    avoidBox.parentNode.insertBefore(active, avoidBox.nextSibling);
+    peopleBox.parentNode.insertBefore(active, peopleBox.nextSibling);
     var drawActive = function () {
       var on = (avoid.diet ? [avoid.diet.toLowerCase()] : [])
         .concat(avoid.groups.map(function (g) { return "no " + g.toLowerCase(); }))
@@ -947,7 +961,6 @@
       return Object.keys(everyIngredient).filter(function (n) { return avoid.items.indexOf(n) === -1; })
         .map(function (n) { return { label: n, hint: everyIngredient[n], value: n }; });
     }, function (n) { avoid.items.push(n); avoidChanged(); });
-    avoidBox.hidden = false;
     drawActive();
 
     drawAvoid();
@@ -1012,7 +1025,7 @@
       });
       matchList.textContent = "";
       jump.hidden = true;
-      if (!have.length) { none.hidden = false; none.textContent = "Pick a few ingredients to see what you can make."; return; }
+      if (!have.length) { none.hidden = false; none.textContent = "Pick a few ingredients."; return; }
       var results = index.map(function (r) {
         var need = [];
         r.ingredients.forEach(function (i) { if (i.n && !i.s && need.indexOf(i.n) === -1) need.push(i.n); });

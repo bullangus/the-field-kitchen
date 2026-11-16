@@ -461,6 +461,9 @@ def parse_line(line):
 # tomato) and tins used whole save nothing, so aren't listed. Prices drift up from
 # PRICES_CHECKED by FOOD_INFLATION a year (AU, UK, US) until they're checked again.
 PRICES_CHECKED = "2026-11-16"
+# A lunch from leftovers instead of a bought one, per portion: about A$15 / £6.50 / $14 to
+# buy, less about A$5 / £2 / $4 to cook (AU, UK, US).
+LUNCH_SAVING = (10, 4.5, 10)
 FOOD_INFLATION = (0.03, 0.035, 0.025)
 SPICE_JAR = (40, {"tsp": 2.5, "": 1}, (3.00, 1.00, 3.00))  # a 40 g jar of ground spice or dried herbs
 PACKS = [
