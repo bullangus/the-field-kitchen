@@ -60,15 +60,23 @@
       // Recipes on the list, each with its servings.
       picked.forEach(function (x) {
         var r = byUrl(x.url);
+        // A small card: the recipe and its servings on one line, any toppings as tags under it.
         var chip = el("div", "list-recipe");
+        var head = el("div", "list-recipe-head");
         var a = el("a", "", r.title); a.href = r.url;
-        var s = el("span", "", "Serves " + x.serves + (x.options || []).map(function (o) { return " + " + o; }).join(""));
+        head.appendChild(a);
+        head.appendChild(el("span", "", "Serves " + x.serves));
+        var s = el("div", "list-recipe-opts");
+        (x.options || []).forEach(function (o) { s.appendChild(el("span", "tag", o)); });
         var rm = el("button", "", "×"); rm.type = "button"; rm.setAttribute("aria-label", "Remove " + r.title);
         rm.addEventListener("click", function () {
           store("fk-list", stored("fk-list", []).filter(function (y) { return y.url !== x.url; }));
           build();
         });
-        chip.appendChild(a); chip.appendChild(s); chip.appendChild(rm);
+        var body = el("div", "list-recipe-body");
+        body.appendChild(head);
+        if (s.childNodes.length) body.appendChild(s);
+        chip.appendChild(body); chip.appendChild(rm);
         recipesBox.appendChild(chip);
       });
 
