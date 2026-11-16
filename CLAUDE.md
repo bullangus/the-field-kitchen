@@ -73,7 +73,8 @@ templates/recipe.md              the recipe format to copy
 templates/style.css              all styling: fonts, colour tokens (light + dark), screen and print
 templates/fonts/                 the two typefaces as woff2 (SIL OFL), served from the site itself
 templates/page.html, book.html   page shells (site pages; the one-page printable book)
-templates/icon.svg, icon-*.png   chef's hat: favicon, nav bar, and phone home-screen icons
+templates/icon.svg, icon-*.png   chef's hat: favicon, nav bar, and phone home-screen icons (icon-mono-*.png:
+                                 the hat alone on transparent, for Android themed icons)
 templates/world-dots.json        land dots for the home page map (Natural Earth via world-atlas)
 templates/site.js                every page: nav, light/dark, search, Ctrl/Cmd+K palette, filter
                                  chips, fade-up and self-drawing icons, card tilt, offline

@@ -38,6 +38,8 @@ COOK_PAGE = "cook.html"
 STYLESHEET = "style.css"
 ICON = "icon.svg"
 APP_ICONS = ("icon-192.png", "icon-512.png")
+# Just the hat on transparent: Android tints it for themed (Material You) home-screen icons.
+MONO_ICONS = ("icon-mono-192.png", "icon-mono-512.png")
 FONTS = "fonts"  # woff2 files in templates/fonts, named in style.css
 SITE_SCRIPT = "site.js"
 HOME_SCRIPT = "home.js"
@@ -1110,6 +1112,12 @@ def book_html(book):
                     .replace("{{FOOTER}}", footer_html(book, "", "colophon")))
 
 
+def icon_size(name):
+    """'icon-mono-192.png' -> '192x192'."""
+    n = re.search(r"(\d+)\.png$", name).group(1)
+    return f"{n}x{n}"
+
+
 def manifest():
     return json.dumps({
         "name": TITLE,
@@ -1120,8 +1128,13 @@ def manifest():
         "display": "standalone",
         "background_color": BACKGROUND_COLOR,
         "theme_color": THEME_COLOR,
-        "icons": [{"src": name, "sizes": name[5:-4] + "x" + name[5:-4], "type": "image/png", "purpose": "any"}
-                  for name in APP_ICONS] + [{"src": ICON, "sizes": "any", "type": "image/svg+xml"}],
+        # The full-colour icons double as maskable (the hat sits well inside the safe zone), and
+        # the monochrome ones let a themed launcher draw the hat light-on-dark like every other app.
+        "icons": [{"src": name, "sizes": icon_size(name), "type": "image/png", "purpose": purpose}
+                  for purpose in ("any", "maskable") for name in APP_ICONS]
+                 + [{"src": name, "sizes": icon_size(name), "type": "image/png", "purpose": "monochrome"}
+                    for name in MONO_ICONS]
+                 + [{"src": ICON, "sizes": "any", "type": "image/svg+xml"}],
     }, indent=2) + "\n"
 
 
@@ -1168,7 +1181,7 @@ def build_site(book):
             p.unlink()
     for asset in (STYLESHEET, ICON, SITE_SCRIPT, HOME_SCRIPT, RECIPE_SCRIPT, TOOLS_SCRIPT):
         write(asset, (TEMPLATES / asset).read_text(encoding="utf-8"))
-    for name in APP_ICONS:
+    for name in APP_ICONS + MONO_ICONS:
         shutil.copyfile(TEMPLATES / name, DOCS / name)
     shutil.copytree(TEMPLATES / FONTS, DOCS / FONTS)
     write(MANIFEST, manifest())
