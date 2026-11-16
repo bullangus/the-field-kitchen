@@ -2,7 +2,7 @@
 title: Shredded Cabbage
 cuisine: Japanese
 category: Sides
-tags: Vegetarian
+tags: Vegetarian, Vegan
 serves: 4
 time: Prep 10 min + 10 min resting
 source: https://www.justonecookbook.com/japanese-shredded-cabbage-salad/

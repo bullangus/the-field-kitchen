@@ -1233,7 +1233,7 @@ html.cooking { overflow: hidden; }
 .plan-days { list-style: none; margin: 0; padding: 0; }
 .plan-days li { display: flex; align-items: baseline; gap: 0.9rem; padding: 0.5rem 0; border-top: 1px solid var(--hair); }
 .plan-days li:first-child { border-top: 0; }
-.plan-day { flex: none; width: 2.4rem; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); }
+.plan-day { flex: none; width: 1.2rem; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); }
 .plan-days a { text-decoration: none; font-weight: 600; }
 .plan-days a:hover { color: var(--accent); }
 .plan-days small { display: block; color: var(--muted); font-size: 0.82rem; font-style: italic; }
@@ -1285,6 +1285,8 @@ html.cooking { overflow: hidden; }
 .plan-avoid > p { margin: 0 0 0.7rem; color: var(--muted); font-size: 0.92rem; }
 .plan-avoid-groups, .plan-avoid-items { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.8rem; }
 .plan-avoid-items:empty { display: none; }
+.plan-avoid-head { margin: 0 0 0.4rem; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); }
+.plan-tag { display: inline-block; margin-left: 0.4rem; padding: 0 0.5rem; border: 1px solid var(--rule); border-radius: 999px; font-size: 0.72rem; line-height: 1.5; color: var(--muted); vertical-align: 0.1em; }
 .plan-avoid .plan-build-pick { margin-bottom: 0.8rem; }
 .plan-avoid > .plan-avoid-note { font-size: 0.82rem; font-style: italic; margin-bottom: 1rem; }
 @media (max-width: 600px) { .plan .pill, .plan-build-actions .pill { align-self: stretch; width: 100%; justify-content: center; } .plan-build { padding: 1.1rem; } }

@@ -2,7 +2,7 @@
 title: Baked Potato
 cuisine: British
 category: Potatoes
-tags: Vegetarian
+tags: Vegetarian, Vegan
 serves: 4
 time: Cook 1 hr 45–50 min
 source: Family recipe

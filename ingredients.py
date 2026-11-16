@@ -59,6 +59,16 @@ INGREDIENTS = [
     (r"\btartare sauce\b", "Tartare sauce", SAUCES, False),
     (r"\bbean sprouts\b", "Bean sprouts", PRODUCE, False),
     (r"\bbok choy\b", "Bok choy", PRODUCE, False),
+    (r"\bfalafel\b", "Falafel", DAIRY, False),
+    (r"\bhummus\b", "Hummus", DAIRY, False),
+    (r"\bwraps?\b", "Wraps", BAKERY, False),
+    (r"\brefried beans\b", "Refried beans", WORLD, False),
+    (r"\bsalsa\b", "Salsa", WORLD, False),
+    (r"\bfrozen mixed vegetables\b", "Frozen mixed vegetables", FROZEN, False),
+    (r"\bvegie burger patties\b|\bveggie burger patties\b", "Frozen vegie burger patties", FROZEN, False),
+    (r"\bburger buns?\b", "Burger buns", BAKERY, False),
+    (r"\bcheese slices?\b", "Cheese slices", DAIRY, False),
+    (r"\bkorma\b", "Korma simmer sauce", WORLD, False),
     # Australian tomato sauce and ketchup are different products, so they shop separately.
     (r"\bketchup\b", "Ketchup", SAUCES, False),
     (r"\btomato sauce\b", "Tomato sauce", SAUCES, False),
@@ -320,6 +330,7 @@ NAMES = [
     (r"\beschallot(s?)\b", "shallot$1", "shallot$1", False),
     (r"\bcapsicum(s?)\b", "bell pepper$1", "pepper$1", False),
     (r"\b(oven|frozen) chips\b", "$1 fries", "$1 chips", True),
+    (r"\bvegie\b", "veggie", "veggie", False),
     (r"\bbok choy\b", "bok choy", "pak choi", False),
     (r"\bcaster sugar\b", "superfine sugar", "caster sugar", False),
     (r"\bicing sugar\b", "powdered sugar", "icing sugar", False),
@@ -528,3 +539,14 @@ AVOID = (
     ("Alcohol", r"wine(?! vinegar)|sake|mirin|cointreau|marnier"),
     ("Spicy food", "#spicy"),
 )
+
+# How many days the most perishable fresh food keeps once bought, so a plan's dinners are
+# listed in the order to cook them (soonest first) instead of on set days. Matched against
+# shopping names, first match wins; anything else (frozen, tins, hard veg) keeps a week.
+KEEPS = (
+    (r"^(salmon fillets|whole snapper|prawns|fish fillets)$|mince$|^bean sprouts$", 2),
+    (r"^chicken (thighs|breasts|wings)$|^whole chicken$|sausages$|schnitzels$|^hot roast chicken$", 3),
+    (r"steak|^pork loin|^duck breasts$|^(coriander|mint|parsley|basil|baby spinach|salad mix|cos lettuce|"
+     r"asparagus|bok choy|falafel|avocados)$", 4),
+)
+KEEPS_DEFAULT = 7

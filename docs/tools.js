@@ -359,7 +359,7 @@
   var plans = document.querySelector(".plans");
   if (plans) {
     var RULES = SHOP.plan || {};
-    var days = RULES.days || ["Mon", "Tue", "Wed", "Thu", "Fri"];
+    var size = RULES.size || 5;
     var people = stored("fk-people", 4);
     var extra = stored("fk-lunches", false);
     var avoid = stored("fk-avoid", { groups: [], items: [] });
@@ -378,14 +378,18 @@
     var avoidRules = (RULES.avoid || []).map(function (a) {
       return { label: a[0], tag: a[1].charAt(0) === "#" ? a[1].slice(1) : null, rx: a[1].charAt(0) === "#" ? null : new RegExp(a[1], "i") };
     });
+    // A diet (vegetarian, vegan) keeps only dinners tagged for it.
+    var DIETS = {};
+    (RULES.diets || []).forEach(function (d) { DIETS[d[0]] = d[1]; });
     var allowed = function (r) {
+      if (avoid.diet && !(DIETS[avoid.diet] || []).some(function (t) { return r.tags.indexOf(t) !== -1; })) return false;
       var rules = avoidRules.filter(function (a) { return avoid.groups.indexOf(a.label) !== -1; });
       if (rules.some(function (a) { return a.tag && r.tags.indexOf(a.tag) !== -1; })) return false;
       return !r.ingredients.some(function (i) {
         return i.n && (avoid.items.indexOf(i.n) !== -1 || rules.some(function (a) { return a.rx && a.rx.test(i.n); }));
       });
     };
-    var avoiding = function () { return avoid.groups.length + avoid.items.length > 0; };
+    var avoiding = function () { return !!avoid.diet || avoid.groups.length + avoid.items.length > 0; };
 
     // -- Scoring, as build.py's week_plans does it --
     var weightCache = {};
@@ -410,7 +414,8 @@
       var ok = ["category", "cuisine"].every(function (key) {
         var counts = {}, base = {};
         cravings.forEach(function (r) { base[r[key]] = (base[r[key]] || 0) + 1; });
-        week.forEach(function (r) { counts[r[key]] = (counts[r[key]] || 0) + 1; });
+        // Basics are all one "style"; their cuisines keep them varied.
+        week.forEach(function (r) { if (!(key === "category" && r.basic)) counts[r[key]] = (counts[r[key]] || 0) + 1; });
         return Object.keys(counts).every(function (k) { return counts[k] <= Math.max(RULES.maxSame, base[k] || 0); });
       });
       var cuisines = {}, own = {};
@@ -442,7 +447,7 @@
     var rank = function (cravings) {
       var pool = index.filter(function (r) { return r.plan && allowed(r) && cravings.indexOf(r) === -1; });
       var all = [];
-      combos(pool, days.length - cravings.length, 0, [], all);
+      combos(pool, size - cravings.length, 0, [], all);
       return all.map(function (f) { return { fill: f, week: cravings.concat(f) }; })
         .filter(function (c) { return varied(c.week, cravings); })
         .map(function (c) { c.score = score(c.week); return c; })
@@ -583,6 +588,7 @@
 
     // A plan card built here, laid out like the ones build.py writes.
     var makeCard = function (week, title, eyebrow, cravings) {
+      week = week.slice().sort(function (a, b) { return a.keeps - b.keeps || a.title.localeCompare(b.title); });
       var lunches = lunchPicks(week);
       var uses = {}, fresh = {};
       week.map(weightsOf).forEach(function (w) { for (var n in w) { uses[n] = (uses[n] || 0) + 1; if (w[n] > 1) fresh[n] = 1; } });
@@ -598,12 +604,15 @@
       head.appendChild(el("h2", "", title));
       if (lead.length) head.appendChild(el("p", "plan-sharing", "Sharing " + lead.map(function (n) { return n.toLowerCase(); }).join(", ")));
       card.appendChild(head);
+      // No set days: soonest to go off first, as build.py orders its plans (keeps_info).
       var ol = el("ol", "plan-days");
       week.forEach(function (r, i) {
         var li = el("li"); if (lunches.indexOf(r) !== -1) li.setAttribute("data-lunch", "");
-        li.appendChild(el("span", "plan-day", days[i]));
+        li.appendChild(el("span", "plan-day", String(i + 1)));
         var d = el("div"), a = el("a", "", r.title); a.href = r.url; d.appendChild(a);
-        d.appendChild(el("small", "", (r.basic ? "Basic · " : "") + r.cuisine + " · " + shortTime(r.minutes) + (cravings.indexOf(r) !== -1 ? " · your pick" : "")));
+        (r.labels || []).forEach(function (t) { d.appendChild(el("span", "plan-tag", t)); });
+        var soon = r.keeps > 3 ? "" : i + 1 <= r.keeps ? " · cook within " + r.keeps + " days" : " · freeze the " + r.keepsWhat + " on shop day";
+        d.appendChild(el("small", "", (r.basic ? "Basic · " : "") + r.cuisine + " · " + shortTime(r.minutes) + soon + (cravings.indexOf(r) !== -1 ? " · your pick" : "")));
         li.appendChild(d);
         if (lunches.indexOf(r) !== -1) li.appendChild(el("span", "plan-lunch", "+ lunch"));
         ol.appendChild(li);
@@ -664,7 +673,7 @@
         // Too few dinners left for a plan: say which ones still fit, so they're easy to find.
         var fit = index.filter(function (r) { return r.plan && allowed(r); });
         plansNone.textContent = fit.length ? "Only " + fit.length + " dinner" + (fit.length === 1 ? "" : "s") +
-          " in the book fit" + (fit.length === 1 ? "s" : "") + " everything you're leaving out, not enough for a plan of " + days.length + " yet: " : "Nothing in the book fits everything you're leaving out yet.";
+          " in the book fit" + (fit.length === 1 ? "s" : "") + " everything you're leaving out, not enough for a plan of " + size + " yet: " : "Nothing in the book fits everything you're leaving out yet.";
         fit.forEach(function (r, i) {
           var a = el("a", "", r.title); a.href = r.url;
           plansNone.appendChild(a);
@@ -743,7 +752,7 @@
     var craveChips = build.querySelector(".plan-cravings");
     var fill = build.querySelector(".plan-fill");
     var result = build.querySelector(".plan-result");
-    var maxCravings = days.length - 1;
+    var maxCravings = size - 1;
     var cravings = stored("fk-cravings", []).map(function (u) { return byUrl(u); }).filter(Boolean);
     var ranked = [], shown = [];
     build.hidden = false;
@@ -808,13 +817,16 @@
     var avoidCount = avoidBox.querySelector(".plan-avoid-count");
     var everyIngredient = {};
     index.forEach(function (r) { if (r.plan) r.ingredients.forEach(function (i) { if (i.n && !i.s) everyIngredient[i.n] = i.a; }); });
+    var dietChips = [].slice.call(avoidBox.querySelectorAll("[data-diet]"));
+    if (avoid.diet === undefined) avoid.diet = null;
     var drawAvoid = function () {
+      dietChips.forEach(function (c) { c.setAttribute("aria-pressed", String(c.getAttribute("data-diet") === avoid.diet)); });
       avoidChips.forEach(function (c) { c.setAttribute("aria-pressed", String(avoid.groups.indexOf(c.getAttribute("data-avoid")) !== -1)); });
       avoidItems.textContent = "";
       avoid.items.forEach(function (n) {
         avoidItems.appendChild(chip(n, n, function () { avoid.items = avoid.items.filter(function (x) { return x !== n; }); avoidChanged(); }));
       });
-      var n = avoid.groups.length + avoid.items.length;
+      var n = (avoid.diet ? 1 : 0) + avoid.groups.length + avoid.items.length;
       avoidCount.textContent = n ? "(" + n + ")" : "";
       if (window.FieldKitchenNames) FieldKitchenNames.swap(avoidItems, true);
     };
@@ -827,6 +839,13 @@
       syncBasics();
       syncPlans();
     };
+    dietChips.forEach(function (c) {
+      c.addEventListener("click", function () {
+        var label = c.getAttribute("data-diet");
+        avoid.diet = avoid.diet === label ? null : label;
+        avoidChanged();
+      });
+    });
     avoidChips.forEach(function (c) {
       c.addEventListener("click", function () {
         var label = c.getAttribute("data-avoid"), at = avoid.groups.indexOf(label);

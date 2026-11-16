@@ -2,6 +2,7 @@
 title: Fettuccine Alfredo
 cuisine: Italian
 category: Pasta
+tags: Vegetarian
 serves: 3
 time: Prep 5 min · Cook 13 min
 source: https://www.recipetineats.com/fettuccine-alfredo/

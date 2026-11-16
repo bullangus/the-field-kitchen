@@ -20,6 +20,11 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 40,
 "fried": false,
+"keeps": 7,
+"keepsWhat": "",
+"labels": [
+"Vegetarian"
+],
 "ingredients": [
 {
 "t": "200 g (1½ cups plus 1 tbsp) plain flour, spooned and levelled",
@@ -135,6 +140,12 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 115,
 "fried": true,
+"keeps": 3,
+"keepsWhat": "chicken wings",
+"labels": [
+"Party food",
+"Spicy"
+],
 "ingredients": [
 {
 "t": "65 g (½ cup) plain flour",
@@ -259,6 +270,11 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 75,
 "fried": false,
+"keeps": 7,
+"keepsWhat": "",
+"labels": [
+"Vegetarian"
+],
 "ingredients": [
 {
 "t": "450 g (1 lb) cavatappi (corkscrew pasta)",
@@ -418,6 +434,9 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 40,
 "fried": false,
+"keeps": 3,
+"keepsWhat": "chicken thighs",
+"labels": [],
 "ingredients": [
 {
 "t": "4 eggs, straight from the fridge",
@@ -560,6 +579,11 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 245,
 "fried": false,
+"keeps": 7,
+"keepsWhat": "",
+"labels": [
+"Christmas"
+],
 "ingredients": [
 {
 "t": "1 medium orange, thinly sliced into ¼ cm rings",
@@ -728,6 +752,11 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 50,
 "fried": false,
+"keeps": 2,
+"keepsWhat": "whole snapper",
+"labels": [
+"Barbecue"
+],
 "ingredients": [
 {
 "t": "1.5 kg whole snapper",
@@ -923,6 +952,9 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 15,
 "fried": false,
+"keeps": 2,
+"keepsWhat": "salmon fillets",
+"labels": [],
 "ingredients": [
 {
 "t": "2 salmon fillets",
@@ -1037,6 +1069,11 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 0,
 "fried": false,
+"keeps": 7,
+"keepsWhat": "",
+"labels": [
+"Christmas"
+],
 "ingredients": [
 {
 "t": "500 g spiral pasta (fusilli), or any shape you like",
@@ -1096,6 +1133,9 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 55,
 "fried": false,
+"keeps": 2,
+"keepsWhat": "beef mince",
+"labels": [],
 "ingredients": [
 {
 "t": "4 washed potatoes, peeled and chopped",
@@ -1282,6 +1322,11 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 95,
 "fried": false,
+"keeps": 3,
+"keepsWhat": "whole chicken",
+"labels": [
+"Sunday roast"
+],
 "ingredients": [
 {
 "t": "1 whole chicken, about 1.5–1.8 kg (free-range if you can)",
@@ -1370,6 +1415,11 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 0,
 "fried": false,
+"keeps": 7,
+"keepsWhat": "",
+"labels": [
+"Christmas"
+],
 "ingredients": [
 {
 "t": "Jam rolls (from Coles or Woolworths), sliced, enough to cover the base of the bowl",
@@ -1510,6 +1560,9 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 55,
 "fried": false,
+"keeps": 3,
+"keepsWhat": "pork sausages",
+"labels": [],
 "ingredients": [
 {
 "t": "700 g (1.4 lb) pork sausages (8 × 85 g / 3 oz), or other sausages",
@@ -1690,13 +1743,14 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "British",
 "category": "Potatoes",
 "url": "british/potatoes/baked-potato.html",
-"text": "4 large potatoes Olive oil spray Salt 30 g (2 tbsp) butter 1 clove garlic Grated cheese Mushrooms, sliced 1 clove garlic, crushed A knob of butter Streaky bacon, chopped Coleslaw Fresh chives Spring onions Corn kernels Vegetarian bacon streaky bacon scallion spring onion",
+"text": "4 large potatoes Olive oil spray Salt 30 g (2 tbsp) butter 1 clove garlic Grated cheese Mushrooms, sliced 1 clove garlic, crushed A knob of butter Streaky bacon, chopped Coleslaw Fresh chives Spring onions Corn kernels Vegetarian Vegan bacon streaky bacon scallion spring onion",
 "meta": "Serves 4 · Cook 1 hr 45–50 min",
 "intro": "A baked potato with a crisp, salty skin and a fluffy middle is one of life's simple pleasures. These are baked in foil until soft, crisped with olive oil and salt, then quartered and piled high with whatever toppings you love.",
 "photo": "",
 "tags": [
 "potatoes",
-"vegetarian"
+"vegetarian",
+"vegan"
 ],
 "serves": 4,
 "lunch": 1,
@@ -1705,6 +1759,12 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 110,
 "fried": false,
+"keeps": 7,
+"keepsWhat": "",
+"labels": [
+"Vegetarian",
+"Vegan"
+],
 "ingredients": [
 {
 "t": "4 large potatoes",
@@ -1897,6 +1957,12 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 90,
 "fried": false,
+"keeps": 7,
+"keepsWhat": "",
+"labels": [
+"Christmas",
+"Sunday roast"
+],
 "ingredients": [
 {
 "t": "1.75–2 kg (3.5–4 lb) medium to large potatoes, such as Sebago or Dutch cream",
@@ -1993,6 +2059,11 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 0,
 "fried": false,
+"keeps": 7,
+"keepsWhat": "",
+"labels": [
+"Sunday roast"
+],
 "ingredients": [
 {
 "t": "45 ml (3 tbsp) pan juices from the Roast Chicken",
@@ -2044,6 +2115,9 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 30,
 "fried": false,
+"keeps": 4,
+"keepsWhat": "beef steak",
+"labels": [],
 "ingredients": [
 {
 "t": "450 g (1 lb) flank steak, thinly sliced 3–6 mm (⅛–¼ inch) thick",
@@ -2221,6 +2295,11 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 0,
 "fried": true,
+"keeps": 3,
+"keepsWhat": "chicken thighs",
+"labels": [
+"Spicy"
+],
 "ingredients": [
 {
 "t": "2–4 chicken thighs",
@@ -2408,6 +2487,11 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 310,
 "fried": false,
+"keeps": 3,
+"keepsWhat": "chicken wings",
+"labels": [
+"Party food"
+],
 "ingredients": [
 {
 "t": "1 kg (2 lb) chicken wings",
@@ -2559,6 +2643,11 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 15,
 "fried": false,
+"keeps": 7,
+"keepsWhat": "",
+"labels": [
+"Spicy"
+],
 "ingredients": [
 {
 "t": "8 rashers thick-cut streaky bacon, cut into 2.5 cm (1 inch) pieces",
@@ -2719,6 +2808,11 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 10,
 "fried": false,
+"keeps": 7,
+"keepsWhat": "",
+"labels": [
+"Spicy"
+],
 "ingredients": [
 {
 "t": "1 packet Shin Ramyun noodles",
@@ -2805,6 +2899,9 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 35,
 "fried": false,
+"keeps": 2,
+"keepsWhat": "pork mince",
+"labels": [],
 "ingredients": [
 {
 "t": "450 g (1 lb) pork mince",
@@ -2983,6 +3080,11 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 5,
 "fried": false,
+"keeps": 7,
+"keepsWhat": "",
+"labels": [
+"Vegetarian"
+],
 "ingredients": [
 {
 "t": "250 g (1 cup) Greek yoghurt",
@@ -3044,6 +3146,11 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 20,
 "fried": false,
+"keeps": 4,
+"keepsWhat": "coriander",
+"labels": [
+"Vegetarian"
+],
 "ingredients": [
 {
 "t": "260 g (2 cups) self-raising flour, plus extra for dusting",
@@ -3114,6 +3221,11 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 10,
 "fried": false,
+"keeps": 4,
+"keepsWhat": "mint",
+"labels": [
+"Vegetarian"
+],
 "ingredients": [
 {
 "t": "250 g (1 cup) Greek yoghurt",
@@ -3186,13 +3298,14 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Italian",
 "category": "Breads",
 "url": "italian/breads/focaccia.html",
-"text": "7 g (1 sachet / ¼ oz) active dry yeast 680 g water (113 g / ½ cup lukewarm, plus 567 g / 2½ cups at room temperature) 780 g (6 cups) bread flour 36 g (2 tbsp) table salt 110 g (½ cup) extra-virgin olive oil, plus more for oiling your hands One topping (see Topping Options) 55 g (¼ cup) extra-virgin olive oil Fresh rosemary leaves Flaky salt 55 g (¼ cup) extra-virgin olive oil 6 cloves garlic, thinly sliced Flaky salt 55 g (¼ cup) extra-virgin olive oil 4 cloves garlic, finely chopped 1–2 tsp chilli flakes Flaky salt 60 ml (¼ cup) olive oil 1½ tbsp Sichuan peppercorns ½ tbsp black peppercorns ½ tbsp white peppercorns 2 large onions, halved and sliced into thin rings 60 ml (4 tbsp) vegetable oil ½ tbsp sugar, more to taste 30 ml (2 tbsp) soy sauce Vegetarian red pepper flakes chilli flakes",
+"text": "7 g (1 sachet / ¼ oz) active dry yeast 680 g water (113 g / ½ cup lukewarm, plus 567 g / 2½ cups at room temperature) 780 g (6 cups) bread flour 36 g (2 tbsp) table salt 110 g (½ cup) extra-virgin olive oil, plus more for oiling your hands One topping (see Topping Options) 55 g (¼ cup) extra-virgin olive oil Fresh rosemary leaves Flaky salt 55 g (¼ cup) extra-virgin olive oil 6 cloves garlic, thinly sliced Flaky salt 55 g (¼ cup) extra-virgin olive oil 4 cloves garlic, finely chopped 1–2 tsp chilli flakes Flaky salt 60 ml (¼ cup) olive oil 1½ tbsp Sichuan peppercorns ½ tbsp black peppercorns ½ tbsp white peppercorns 2 large onions, halved and sliced into thin rings 60 ml (4 tbsp) vegetable oil ½ tbsp sugar, more to taste 30 ml (2 tbsp) soy sauce Vegetarian Vegan red pepper flakes chilli flakes",
 "meta": "Serves 1 half-sheet pan · Prep 3 hr 45 min (mostly rising) · Cook 30 min",
 "intro": "Much loved and made more times than we can count, this is the bread that turns any meal into an occasion. Claire Saffitz's very wet, well-kneaded dough bakes in a half-sheet pan into a tall, airy crumb with a crisp, olive-oil base that's golden and dimpled on top. Pick a topping from the options after the method.",
 "photo": "",
 "tags": [
 "breads",
-"vegetarian"
+"vegetarian",
+"vegan"
 ],
 "serves": 1,
 "lunch": 2,
@@ -3201,6 +3314,12 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 255,
 "fried": false,
+"keeps": 7,
+"keepsWhat": "",
+"labels": [
+"Vegetarian",
+"Vegan"
+],
 "ingredients": [
 {
 "t": "7 g (1 sachet / ¼ oz) active dry yeast",
@@ -3463,6 +3582,11 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 30,
 "fried": false,
+"keeps": 7,
+"keepsWhat": "",
+"labels": [
+"Spicy"
+],
 "ingredients": [
 {
 "t": "Salt",
@@ -3559,6 +3683,9 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 20,
 "fried": false,
+"keeps": 7,
+"keepsWhat": "",
+"labels": [],
 "ingredients": [
 {
 "t": "Salt",
@@ -3631,12 +3758,13 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Italian",
 "category": "Pasta",
 "url": "italian/pasta/fettuccine-alfredo.html",
-"text": "250 g (8 oz) dried fettuccine 42 g (3 tbsp) unsalted butter 1 small eschallot, very finely minced 125 ml (½ cup) thickened or pure cream 60 g (¾ cup) freshly and finely grated Parmigiano Reggiano or parmesan ¼ tsp salt ½ tsp MSG A good grind of black pepper Extra Parmigiano Reggiano Fresh parsley (optional) shallot heavy cream double cream",
+"text": "250 g (8 oz) dried fettuccine 42 g (3 tbsp) unsalted butter 1 small eschallot, very finely minced 125 ml (½ cup) thickened or pure cream 60 g (¾ cup) freshly and finely grated Parmigiano Reggiano or parmesan ¼ tsp salt ½ tsp MSG A good grind of black pepper Extra Parmigiano Reggiano Fresh parsley (optional) Vegetarian shallot heavy cream double cream",
 "meta": "Serves 3 · Prep 5 min · Cook 13 min",
 "intro": "Rich, buttery and utterly comforting, the kind of pasta you eat curled up on the couch. Butter, cream and Parmigiano are tossed with the fettuccine so the sauce clings to every strand rather than pooling.",
 "photo": "",
 "tags": [
 "pasta",
+"vegetarian",
 "quick"
 ],
 "serves": 3,
@@ -3646,6 +3774,11 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 18,
 "fried": false,
+"keeps": 4,
+"keepsWhat": "parsley",
+"labels": [
+"Vegetarian"
+],
 "ingredients": [
 {
 "t": "250 g (8 oz) dried fettuccine",
@@ -3761,6 +3894,9 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 345,
 "fried": false,
+"keeps": 2,
+"keepsWhat": "pork mince",
+"labels": [],
 "ingredients": [
 {
 "t": "2 sticks celery",
@@ -4010,6 +4146,9 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 30,
 "fried": false,
+"keeps": 3,
+"keepsWhat": "chicken thighs",
+"labels": [],
 "ingredients": [
 {
 "t": "6 boneless, skinless chicken thighs",
@@ -4159,6 +4298,9 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 35,
 "fried": false,
+"keeps": 2,
+"keepsWhat": "beef mince",
+"labels": [],
 "ingredients": [
 {
 "t": "15 ml (1 tbsp) olive oil",
@@ -4267,6 +4409,12 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 3120,
 "fried": false,
+"keeps": 4,
+"keepsWhat": "parsley",
+"labels": [
+"Christmas",
+"Sunday roast"
+],
 "ingredients": [
 {
 "t": "1 pork belly, bone out, skin on, with the loin still attached (a belly without the loin also works; ask your butcher)",
@@ -4372,6 +4520,11 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 240,
 "fried": false,
+"keeps": 7,
+"keepsWhat": "",
+"labels": [
+"Vegetarian"
+],
 "ingredients": [
 {
 "t": "275 g water (see step 1 for its temperature)",
@@ -4485,6 +4638,9 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 35,
 "fried": true,
+"keeps": 3,
+"keepsWhat": "chicken thighs",
+"labels": [],
 "ingredients": [
 {
 "t": "400 g (14 oz) boneless, skin-on chicken thighs (or breasts)",
@@ -4689,6 +4845,11 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 60,
 "fried": true,
+"keeps": 3,
+"keepsWhat": "chicken thighs",
+"labels": [
+"Party food"
+],
 "ingredients": [
 {
 "t": "680 g (1½ lb) boneless, skin-on chicken thighs (4–6 pieces)",
@@ -4907,6 +5068,9 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 50,
 "fried": true,
+"keeps": 3,
+"keepsWhat": "chicken thighs",
+"labels": [],
 "ingredients": [
 {
 "t": "4 chicken thigh fillets or breasts (about 150 g each)",
@@ -5057,6 +5221,11 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 50,
 "fried": true,
+"keeps": 3,
+"keepsWhat": "chicken wings",
+"labels": [
+"Party food"
+],
 "ingredients": [
 {
 "t": "450 g (1 lb) chicken wings, flats and drumettes (this much sauce covers up to 900 g / 2 lb)",
@@ -5190,6 +5359,11 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 15,
 "fried": false,
+"keeps": 7,
+"keepsWhat": "",
+"labels": [
+"Vegetarian"
+],
 "ingredients": [
 {
 "t": "6 slices shokupan (Japanese milk bread)",
@@ -5295,6 +5469,9 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 612,
 "fried": false,
+"keeps": 7,
+"keepsWhat": "",
+"labels": [],
 "ingredients": [
 {
 "t": "4 eggs (about 55 g each), straight from the fridge",
@@ -5391,6 +5568,9 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 30,
 "fried": true,
+"keeps": 4,
+"keepsWhat": "pork loin steaks",
+"labels": [],
 "ingredients": [
 {
 "t": "4 pork loin steaks (about 150 g each), or chicken thigh fillets or breasts",
@@ -5508,13 +5688,14 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Japanese",
 "category": "Sides",
 "url": "japanese/sides/shredded-cabbage.html",
-"text": "¼ drum cabbage ½ tsp salt Vegetarian",
+"text": "¼ drum cabbage ½ tsp salt Vegetarian Vegan",
 "meta": "Serves 4 · Prep 10 min + 10 min resting",
 "intro": "The mound of fine, feathery cabbage that comes beside almost anything fried in Japan. A quarter of a drum cabbage, shaved on a mandoline, lightly salted and squeezed.",
 "photo": "",
 "tags": [
 "sides",
-"vegetarian"
+"vegetarian",
+"vegan"
 ],
 "serves": 4,
 "lunch": 2,
@@ -5523,6 +5704,12 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 20,
 "fried": false,
+"keeps": 7,
+"keepsWhat": "",
+"labels": [
+"Vegetarian",
+"Vegan"
+],
 "ingredients": [
 {
 "t": "¼ drum cabbage",
@@ -5564,6 +5751,9 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 0,
 "fried": true,
+"keeps": 3,
+"keepsWhat": "chicken breasts",
+"labels": [],
 "ingredients": [
 {
 "t": "300 g (2 rice-cooker cups / 360 ml) sushi rice, made into Sushi Rice",
@@ -5695,6 +5885,9 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 0,
 "fried": false,
+"keeps": 2,
+"keepsWhat": "salmon fillets",
+"labels": [],
 "ingredients": [
 {
 "t": "60 ml (¼ cup) soy sauce",
@@ -5772,6 +5965,9 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 0,
 "fried": false,
+"keeps": 2,
+"keepsWhat": "salmon fillets",
+"labels": [],
 "ingredients": [
 {
 "t": "300 g (2 rice-cooker cups / 360 ml) sushi rice, made into Sushi Rice",
@@ -5826,13 +6022,14 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Japanese",
 "category": "Sushi",
 "url": "japanese/sushi/sushi-rice.html",
-"text": "300 g (2 rice-cooker cups / 360 ml) sushi rice 60 ml (¼ cup) rice vinegar 15 ml (1 tbsp) mirin 1 tbsp sugar 1 tsp salt Vegetarian",
+"text": "300 g (2 rice-cooker cups / 360 ml) sushi rice 60 ml (¼ cup) rice vinegar 15 ml (1 tbsp) mirin 1 tbsp sugar 1 tsp salt Vegetarian Vegan",
 "meta": "Serves 2 (about 12 nigiri)",
 "intro": "The sharp, sweet smell of rice vinegar hitting hot rice, and the steam rising off the bowl as you fold. Short-grain rice seasoned with rice vinegar, mirin, sugar and salt: the base for all our sushi. Make it first and let it cool to room temperature before shaping.",
 "photo": "",
 "tags": [
 "sushi",
-"vegetarian"
+"vegetarian",
+"vegan"
 ],
 "serves": 2,
 "lunch": 0,
@@ -5841,6 +6038,12 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 0,
 "fried": false,
+"keeps": 7,
+"keepsWhat": "",
+"labels": [
+"Vegetarian",
+"Vegan"
+],
 "ingredients": [
 {
 "t": "300 g (2 rice-cooker cups / 360 ml) sushi rice",
@@ -5911,6 +6114,11 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 560,
 "fried": false,
+"keeps": 4,
+"keepsWhat": "beef steak",
+"labels": [
+"Party food"
+],
 "ingredients": [
 {
 "t": "1 kg flank or skirt steak",
@@ -6160,6 +6368,11 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 40,
 "fried": false,
+"keeps": 2,
+"keepsWhat": "beef mince",
+"labels": [
+"Spicy"
+],
 "ingredients": [
 {
 "t": "15 ml (1 tbsp) olive oil",
@@ -6364,6 +6577,11 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 55,
 "fried": false,
+"keeps": 3,
+"keepsWhat": "chicken thighs",
+"labels": [
+"Spicy"
+],
 "ingredients": [
 {
 "t": "120 ml (½ cup) canola or vegetable oil",
@@ -6542,6 +6760,11 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 0,
 "fried": false,
+"keeps": 4,
+"keepsWhat": "duck breasts",
+"labels": [
+"Spicy"
+],
 "ingredients": [
 {
 "t": "45 ml (3 tbsp) oil",
@@ -6783,6 +7006,11 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 25,
 "fried": false,
+"keeps": 7,
+"keepsWhat": "",
+"labels": [
+"Barbecue"
+],
 "ingredients": [
 {
 "t": "30 ml (2 tbsp) olive oil",
@@ -6888,6 +7116,9 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 20,
 "fried": false,
+"keeps": 3,
+"keepsWhat": "chicken thighs",
+"labels": [],
 "ingredients": [
 {
 "t": "1 red onion",
@@ -7048,6 +7279,11 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 25,
 "fried": false,
+"keeps": 4,
+"keepsWhat": "beef steak",
+"labels": [
+"Spicy"
+],
 "ingredients": [
 {
 "t": "½ tsp bird's eye or Thai chilli, deseeded and finely minced",
@@ -7234,6 +7470,11 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 0,
 "fried": false,
+"keeps": 3,
+"keepsWhat": "chicken thighs",
+"labels": [
+"Spicy"
+],
 "ingredients": [
 {
 "t": "2 chicken thigh fillets, cut into strips",
@@ -7320,6 +7561,9 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": false,
 "minutes": 40,
 "fried": false,
+"keeps": 3,
+"keepsWhat": "chicken thighs",
+"labels": [],
 "ingredients": [
 {
 "t": "15 ml (1 tbsp) oil, or thick coconut cream from the top of the can",
@@ -7451,6 +7695,90 @@ window.FIELD_KITCHEN_INDEX = [
 "options": []
 },
 {
+"title": "Bean Nachos",
+"cuisine": "Mexican",
+"category": "Basics",
+"url": "basics/bean-nachos.html",
+"text": "1 can (435 g) refried beans 1 jar (300 g) salsa 1 large bag (230 g) corn chips 200 g (2 cups) grated cheese 1 avocado, diced Sour cream, to serve Vegetarian",
+"meta": "Serves 4 · Prep 5 min · Cook 15 min",
+"intro": "A tray of corn chips under refried beans, salsa and melted cheese, finished with sour cream and avocado: everyone digs in from the middle.",
+"photo": "",
+"tags": [
+"basics",
+"vegetarian",
+"quick"
+],
+"serves": 4,
+"lunch": 0,
+"meal": true,
+"plan": true,
+"basic": true,
+"minutes": 20,
+"fried": false,
+"keeps": 4,
+"keepsWhat": "avocados",
+"labels": [
+"Vegetarian"
+],
+"ingredients": [
+{
+"t": "1 can (435 g) refried beans",
+"n": "Refried beans",
+"a": "International foods",
+"s": false,
+"p": "\\brefried beans\\b|\\bbeans\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "1 jar (300 g) salsa",
+"n": "Salsa",
+"a": "International foods",
+"s": false,
+"p": "\\bsalsa\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "1 large bag (230 g) corn chips",
+"n": "Corn chips",
+"a": "Snacks & sweets",
+"s": false,
+"p": "\\bcorn chips\\b|\\bchips\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "200 g (2 cups) grated cheese",
+"n": "Grated cheese",
+"a": "Dairy & fridge",
+"s": false,
+"p": "\\bcheese\\b",
+"q": 200.0,
+"u": "g"
+},
+{
+"t": "1 avocado, diced",
+"n": "Avocados",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bavocados?\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "Sour cream, to serve",
+"n": "Sour cream",
+"a": "Dairy & fridge",
+"s": false,
+"p": "\\bsour cream\\b|\\bsour\\b",
+"q": null,
+"u": null
+}
+],
+"options": []
+},
+{
 "title": "Butter Chicken",
 "cuisine": "Indian",
 "category": "Basics",
@@ -7470,6 +7798,9 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": true,
 "minutes": 25,
 "fried": false,
+"keeps": 3,
+"keepsWhat": "chicken thighs",
+"labels": [],
 "ingredients": [
 {
 "t": "280 g (1½ cups) basmati rice",
@@ -7539,6 +7870,9 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": true,
 "minutes": 15,
 "fried": false,
+"keeps": 4,
+"keepsWhat": "bok choy",
+"labels": [],
 "ingredients": [
 {
 "t": "2 bags (about 40) frozen dumplings",
@@ -7580,6 +7914,92 @@ window.FIELD_KITCHEN_INDEX = [
 "options": []
 },
 {
+"title": "Falafel Wraps",
+"cuisine": "Lebanese",
+"category": "Basics",
+"url": "basics/falafel-wraps.html",
+"text": "2 packets (about 20) falafel 8 wraps 1 tub (200 g) hummus ½ cos lettuce, shredded 2 medium tomatoes, diced 1 cucumber, sliced Vegetarian Vegan romaine lettuce cos lettuce",
+"meta": "Serves 4 · Prep 10 min · Cook 10 min",
+"intro": "Warm falafel, hummus and crunchy salad rolled up in soft wraps: a fresh, filling dinner that needs almost no cooking.",
+"photo": "",
+"tags": [
+"basics",
+"vegetarian",
+"vegan",
+"quick"
+],
+"serves": 4,
+"lunch": 1,
+"meal": true,
+"plan": true,
+"basic": true,
+"minutes": 20,
+"fried": false,
+"keeps": 4,
+"keepsWhat": "falafel",
+"labels": [
+"Vegetarian",
+"Vegan"
+],
+"ingredients": [
+{
+"t": "2 packets (about 20) falafel",
+"n": "Falafel",
+"a": "Dairy & fridge",
+"s": false,
+"p": "\\bfalafel\\b",
+"q": 2.0,
+"u": null
+},
+{
+"t": "8 wraps",
+"n": "Wraps",
+"a": "Bakery",
+"s": false,
+"p": "\\bwraps?\\b",
+"q": 8.0,
+"u": null
+},
+{
+"t": "1 tub (200 g) hummus",
+"n": "Hummus",
+"a": "Dairy & fridge",
+"s": false,
+"p": "\\bhummus\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "½ cos lettuce, shredded",
+"n": "Cos lettuce",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bcos\\b|\\bromaine lettuce\\b|\\bcos lettuce\\b",
+"q": 0.5,
+"u": null
+},
+{
+"t": "2 medium tomatoes, diced",
+"n": "Tomatoes",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bmedium tomato(es)?\\b|\\btomato(es)?\\b",
+"q": 2.0,
+"u": null
+},
+{
+"t": "1 cucumber, sliced",
+"n": "Cucumber",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bcucumber\\b",
+"q": 1.0,
+"u": null
+}
+],
+"options": []
+},
+{
 "title": "Fish and Chips",
 "cuisine": "Australian",
 "category": "Basics",
@@ -7599,6 +8019,9 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": true,
 "minutes": 25,
 "fried": false,
+"keeps": 7,
+"keepsWhat": "",
+"labels": [],
 "ingredients": [
 {
 "t": "8 frozen crumbed fish fillets",
@@ -7668,6 +8091,9 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": true,
 "minutes": 10,
 "fried": false,
+"keeps": 3,
+"keepsWhat": "hot roast chicken",
+"labels": [],
 "ingredients": [
 {
 "t": "1 hot roast chicken",
@@ -7729,6 +8155,11 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": true,
 "minutes": 25,
 "fried": false,
+"keeps": 2,
+"keepsWhat": "bean sprouts",
+"labels": [
+"Spicy"
+],
 "ingredients": [
 {
 "t": "1 jar (185 g) laksa paste",
@@ -7825,6 +8256,9 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": true,
 "minutes": 25,
 "fried": false,
+"keeps": 2,
+"keepsWhat": "beef mince",
+"labels": [],
 "ingredients": [
 {
 "t": "1 Old El Paso taco kit (shells, seasoning and salsa)",
@@ -7911,6 +8345,9 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": true,
 "minutes": 35,
 "fried": false,
+"keeps": 7,
+"keepsWhat": "",
+"labels": [],
 "ingredients": [
 {
 "t": "4 frozen meat pies",
@@ -7962,6 +8399,9 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": true,
 "minutes": 20,
 "fried": false,
+"keeps": 4,
+"keepsWhat": "salad mix",
+"labels": [],
 "ingredients": [
 {
 "t": "2 frozen pizzas",
@@ -8004,6 +8444,9 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": true,
 "minutes": 10,
 "fried": false,
+"keeps": 7,
+"keepsWhat": "",
+"labels": [],
 "ingredients": [
 {
 "t": "625 g fresh ravioli",
@@ -8055,6 +8498,9 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": true,
 "minutes": 25,
 "fried": false,
+"keeps": 3,
+"keepsWhat": "crumbed chicken schnitzels",
+"labels": [],
 "ingredients": [
 {
 "t": "4 crumbed chicken schnitzels",
@@ -8115,6 +8561,9 @@ window.FIELD_KITCHEN_INDEX = [
 "basic": true,
 "minutes": 20,
 "fried": false,
+"keeps": 3,
+"keepsWhat": "beef sausages",
+"labels": [],
 "ingredients": [
 {
 "t": "15 ml (1 tbsp) neutral oil",
@@ -8163,6 +8612,258 @@ window.FIELD_KITCHEN_INDEX = [
 }
 ],
 "options": []
+},
+{
+"title": "Vegie Burgers",
+"cuisine": "Australian",
+"category": "Basics",
+"url": "basics/vegie-burgers.html",
+"text": "4 frozen vegie burger patties 4 burger buns, split 4 cheese slices ¼ iceberg lettuce, shredded 2 medium tomatoes, sliced Tomato sauce, to serve Vegetarian veggie",
+"meta": "Serves 4 · Cook 15 min",
+"intro": "Frozen vegie patties in toasted buns with cheese, lettuce, tomato and sauce: burger night with nothing to chop but a tomato.",
+"photo": "",
+"tags": [
+"basics",
+"vegetarian",
+"quick"
+],
+"serves": 4,
+"lunch": 1,
+"meal": true,
+"plan": true,
+"basic": true,
+"minutes": 15,
+"fried": false,
+"keeps": 7,
+"keepsWhat": "",
+"labels": [
+"Vegetarian"
+],
+"ingredients": [
+{
+"t": "4 frozen vegie burger patties",
+"n": "Frozen vegie burger patties",
+"a": "Freezer",
+"s": false,
+"p": "\\bvegie burger patties\\b|\\bveggie burger patties\\b|\\bpatties\\b|\\bpatties\\b|\\bveggie\\b",
+"q": 4.0,
+"u": null
+},
+{
+"t": "4 burger buns, split",
+"n": "Burger buns",
+"a": "Bakery",
+"s": false,
+"p": "\\bburger buns?\\b|\\bbuns?\\b",
+"q": 4.0,
+"u": null
+},
+{
+"t": "4 cheese slices",
+"n": "Cheese slices",
+"a": "Dairy & fridge",
+"s": false,
+"p": "\\bcheese slices?\\b|\\bslices?\\b",
+"q": 4.0,
+"u": null
+},
+{
+"t": "¼ iceberg lettuce, shredded",
+"n": "Lettuce and cabbage",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\blettuce\\b|\\bcabbage\\b|\\bsalad greens\\b|\\bgreens\\b",
+"q": 0.25,
+"u": null
+},
+{
+"t": "2 medium tomatoes, sliced",
+"n": "Tomatoes",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bmedium tomato(es)?\\b|\\btomato(es)?\\b",
+"q": 2.0,
+"u": null
+},
+{
+"t": "Tomato sauce, to serve",
+"n": "Tomato sauce",
+"a": "Sauces, spreads & stock",
+"s": false,
+"p": "\\btomato sauce\\b",
+"q": null,
+"u": null
+}
+],
+"options": []
+},
+{
+"title": "Vegie Fried Rice",
+"cuisine": "Chinese",
+"category": "Basics",
+"url": "basics/vegie-fried-rice.html",
+"text": "280 g (1½ cups) jasmine rice 30 ml (2 tbsp) neutral oil 3 eggs, beaten 500 g frozen mixed vegetables 4 spring onions, sliced 45 ml (3 tbsp) soy sauce 5 ml (1 tsp) sesame oil Vegetarian scallion spring onion",
+"meta": "Serves 4 · Cook 25 min",
+"intro": "A bag of frozen vegies, eggs and a pot of rice tossed in a hot wok with soy sauce: quick, cheap and better than takeaway.",
+"photo": "",
+"tags": [
+"basics",
+"vegetarian",
+"quick"
+],
+"serves": 4,
+"lunch": 2,
+"meal": true,
+"plan": true,
+"basic": true,
+"minutes": 25,
+"fried": false,
+"keeps": 7,
+"keepsWhat": "",
+"labels": [
+"Vegetarian"
+],
+"ingredients": [
+{
+"t": "280 g (1½ cups) jasmine rice",
+"n": "Rice",
+"a": "Pasta, rice & noodles",
+"s": false,
+"p": "\\brice\\b",
+"q": 280.0,
+"u": "g"
+},
+{
+"t": "30 ml (2 tbsp) neutral oil",
+"n": "Neutral oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\boil\\b",
+"q": 30.0,
+"u": "ml"
+},
+{
+"t": "3 eggs, beaten",
+"n": "Eggs",
+"a": "Baking & eggs",
+"s": false,
+"p": "\\beggs?\\b",
+"q": 3.0,
+"u": null
+},
+{
+"t": "500 g frozen mixed vegetables",
+"n": "Frozen mixed vegetables",
+"a": "Freezer",
+"s": false,
+"p": "\\bfrozen mixed vegetables\\b|\\bvegetables\\b",
+"q": 500.0,
+"u": "g"
+},
+{
+"t": "4 spring onions, sliced",
+"n": "Spring onions",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bspring onions?\\b|\\bgreen onions?\\b|\\bscallions?\\b",
+"q": 4.0,
+"u": null
+},
+{
+"t": "45 ml (3 tbsp) soy sauce",
+"n": "Soy sauce",
+"a": "International foods",
+"s": false,
+"p": "\\bsoy sauce\\b|\\bsoy\\b",
+"q": 45.0,
+"u": "ml"
+},
+{
+"t": "5 ml (1 tsp) sesame oil",
+"n": "Sesame oil",
+"a": "International foods",
+"s": false,
+"p": "\\bsesame oil\\b",
+"q": 5.0,
+"u": "ml"
+}
+],
+"options": []
+},
+{
+"title": "Vegie Korma",
+"cuisine": "Indian",
+"category": "Basics",
+"url": "basics/vegie-korma.html",
+"text": "280 g (1½ cups) basmati rice 1 jar (485 g) korma simmer sauce 400 g tin chickpeas, rinsed and drained 500 g frozen mixed vegetables 4 plain naan breads Vegetarian",
+"meta": "Serves 4 · Cook 25 min",
+"intro": "A jar of korma sauce simmered with chickpeas and vegies, with rice and naan: a mild, creamy curry the whole table will eat.",
+"photo": "",
+"tags": [
+"basics",
+"vegetarian",
+"quick"
+],
+"serves": 4,
+"lunch": 2,
+"meal": true,
+"plan": true,
+"basic": true,
+"minutes": 25,
+"fried": false,
+"keeps": 7,
+"keepsWhat": "",
+"labels": [
+"Vegetarian"
+],
+"ingredients": [
+{
+"t": "280 g (1½ cups) basmati rice",
+"n": "Rice",
+"a": "Pasta, rice & noodles",
+"s": false,
+"p": "\\brice\\b",
+"q": 280.0,
+"u": "g"
+},
+{
+"t": "1 jar (485 g) korma simmer sauce",
+"n": "Korma simmer sauce",
+"a": "International foods",
+"s": false,
+"p": "\\bkorma\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "400 g tin chickpeas, rinsed and drained",
+"n": "Tinned chickpeas",
+"a": "Tins & jars",
+"s": false,
+"p": "\\bchickpeas\\b",
+"q": 400.0,
+"u": "g"
+},
+{
+"t": "500 g frozen mixed vegetables",
+"n": "Frozen mixed vegetables",
+"a": "Freezer",
+"s": false,
+"p": "\\bfrozen mixed vegetables\\b|\\bvegetables\\b",
+"q": 500.0,
+"u": "g"
+},
+{
+"t": "4 plain naan breads",
+"n": "Naan bread",
+"a": "Bakery",
+"s": false,
+"p": "\\bnaan\\b",
+"q": 4.0,
+"u": null
+}
+],
+"options": []
 }
 ];
-window.FIELD_KITCHEN_SHOP = {"aisles": ["Fruit & veg", "Bakery", "Deli", "Meat & seafood", "Pasta, rice & noodles", "International foods", "Herbs & spices", "Baking & eggs", "Sauces, spreads & stock", "Tins & jars", "Oils & vinegars", "Snacks & sweets", "Dairy & fridge", "Freezer", "Bottle shop", "Other"], "ingredients": [["\\bwater\\b", "Water", "Sauces, spreads & stock", true], ["\\bchicken bouillon\\b|\\bchicken stock powder\\b", "Chicken stock powder", "Sauces, spreads & stock", false], ["\\bchicken stock\\b", "Chicken stock", "Sauces, spreads & stock", false], ["\\bfish sauce\\b", "Fish sauce", "International foods", false], ["\\bsweet chilli sauce\\b", "Sweet chilli sauce", "Sauces, spreads & stock", false], ["\\bchilli crisp\\b", "Chilli crisp", "International foods", false], ["\\bsriracha\\b|\\bhot sauce\\b", "Hot sauce", "Sauces, spreads & stock", false], ["\\bdark soy\\b", "Dark soy sauce", "International foods", false], ["\\bsoy sauce\\b", "Soy sauce", "International foods", false], ["\\boyster sauce\\b", "Oyster sauce", "International foods", false], ["\\bbutter chicken\\b", "Butter chicken simmer sauce", "International foods", false], ["\\btaco kit\\b", "Taco kit", "International foods", false], ["\\bfresh pasta sauce\\b", "Fresh pasta sauce", "Dairy & fridge", false], ["\\bmutti\\b", "Mutti pasta sauce", "Pasta, rice & noodles", false], ["\\bravioli\\b|\\btortellini\\b", "Fresh ravioli", "Dairy & fridge", false], ["\\bhot roast chicken\\b", "Hot roast chicken", "Deli", false], ["\\bcoleslaw kit\\b", "Coleslaw kit", "Fruit & veg", false], ["\\bsalad mix\\b", "Salad mix", "Fruit & veg", false], ["\\bbread rolls?\\b", "Bread rolls", "Bakery", false], ["\\bcrumbed fish\\b|\\bfish fingers\\b", "Frozen crumbed fish", "Freezer", false], ["\\b(?:oven|frozen) chips\\b", "Frozen chips", "Freezer", false], ["\\bbeef sausages?\\b", "Beef sausages", "Meat & seafood", false], ["\\bmeat pies?\\b", "Frozen meat pies", "Freezer", false], ["\\bschnitzels?\\b", "Crumbed chicken schnitzels", "Meat & seafood", false], ["\\bfrozen dumplings\\b", "Frozen dumplings", "Freezer", false], ["\\bfrozen pizzas?\\b", "Frozen pizzas", "Freezer", false], ["\\blaksa paste\\b", "Laksa paste", "International foods", false], ["\\btartare sauce\\b", "Tartare sauce", "Sauces, spreads & stock", false], ["\\bbean sprouts\\b", "Bean sprouts", "Fruit & veg", false], ["\\bbok choy\\b", "Bok choy", "Fruit & veg", false], ["\\bketchup\\b", "Ketchup", "Sauces, spreads & stock", false], ["\\btomato sauce\\b", "Tomato sauce", "Sauces, spreads & stock", false], ["\\bpassata\\b", "Tomato passata", "Tins & jars", false], ["\\bsun-dried tomato(es)?\\b|\\bsun dried tomato(es)?\\b", "Sun-dried tomatoes", "Tins & jars", false], ["\\bcherry tomatoes\\b", "Cherry tomatoes", "Fruit & veg", false], ["\\btomato paste\\b", "Tomato paste", "Tins & jars", false], ["\\bchickpeas\\b", "Tinned chickpeas", "Tins & jars", false], ["\\bmedium tomato(es)?\\b", "Tomatoes", "Fruit & veg", false], ["\\btomato(es)?\\b", "Tinned tomatoes", "Tins & jars", false], ["\\bkidney beans\\b", "Red kidney beans", "Tins & jars", false], ["\\bcannellini\\b", "Cannellini beans", "Tins & jars", false], ["\\bstock cubes?\\b|\\bbouillon\\b", "Beef stock cubes", "Sauces, spreads & stock", false], ["\\bstrawberry jelly\\b", "Aeroplane strawberry jelly", "Baking & eggs", false], ["\\borange jelly\\b", "Aeroplane orange jelly", "Baking & eggs", false], ["\\bblancmange\\b", "Strawberry blancmange", "Baking & eggs", false], ["\\bgravox\\b|\\bgravy mix\\b", "Gravox Traditional Gravy Mix", "Sauces, spreads & stock", false], ["\\bcustard\\b", "Bird's custard powder", "Baking & eggs", false], ["\\bmandarin", "Tinned mandarins", "Tins & jars", false], ["\\bflake\\b", "Flake chocolate", "Snacks & sweets", false], ["\\bchocolate\\b", "Dark chocolate", "Baking & eggs", false], ["\\bvanilla\\b", "Vanilla extract", "Baking & eggs", false], ["\\bjam rolls?\\b", "Jam rolls", "Bakery", false], ["\\bsausages?\\b", "Pork sausages", "Meat & seafood", false], ["\\bdripping\\b", "Beef dripping", "Meat & seafood", false], ["\\bduck fat\\b|\\bgoose fat\\b", "Duck fat", "Meat & seafood", false], ["\\bcointreau\\b", "Cointreau", "Bottle shop", false], ["\\bgolden curry\\b|\\bcurry blocks?\\b", "Golden Curry blocks", "International foods", false], ["\\bsushi seasoning\\b", "Sushi seasoning", "International foods", false], ["\\bnori\\b", "Nori sheets", "International foods", false], ["\\btonkatsu sauce\\b", "Tonkatsu sauce", "International foods", false], ["\\bpickled ginger\\b", "Pickled ginger", "International foods", false], ["\\bwasabi\\b", "Wasabi", "International foods", false], ["\\bkarashi\\b|\\benglish mustard\\b|\\bjapanese mustard\\b", "Japanese or English mustard", "International foods", false], ["\\bpanko\\b", "Panko breadcrumbs", "International foods", false], ["\\bcaesar dressing\\b", "Caesar dressing", "Sauces, spreads & stock", false], ["\\bthousand island\\b", "Thousand island dressing", "Sauces, spreads & stock", false], ["\\bitalian seasoning\\b", "Italian seasoning", "Herbs & spices", false], ["\\bevaporated milk\\b", "Evaporated milk", "Tins & jars", false], ["\\bmilk powder\\b", "Skim milk powder", "Baking & eggs", false], ["\\bcoconut milk\\b|\\bcoconut cream\\b", "Coconut milk", "International foods", false], ["\\bred curry paste\\b", "Red curry paste", "International foods", false], ["\\bcurry paste\\b", "Yellow curry paste", "International foods", false], ["\\bcurry powder\\b", "Curry powder", "Herbs & spices", false], ["\\bpeanut butter\\b", "Peanut butter", "Sauces, spreads & stock", false], ["\\bpeanuts\\b", "Roasted peanuts", "Snacks & sweets", false], ["\\btamarind\\b", "Tamarind paste", "International foods", false], ["\\bworcestershire\\b", "Worcestershire sauce", "Sauces, spreads & stock", false], ["\\bchutney\\b", "Mrs Ball's chutney", "International foods", false], ["\\bhoney\\b", "Honey", "Sauces, spreads & stock", false], ["\\byuzu\\b", "Yuzu juice", "International foods", false], ["\\bmaple syrup\\b", "Maple syrup", "Sauces, spreads & stock", false], ["\\bmustard seeds\\b", "Black mustard seeds", "Herbs & spices", false], ["\\bdijon\\b|\\bmustard\\b", "Dijon mustard", "Sauces, spreads & stock", false], ["\\bkewpie\\b", "Kewpie mayonnaise", "International foods", false], ["\\bmayonnaise\\b", "Mayonnaise", "Sauces, spreads & stock", false], ["\\bdashi\\b", "Dashi powder", "International foods", false], ["\\bmsg\\b", "MSG", "International foods", true], ["\\bbicarb(onate)?\\b|\\bbaking soda\\b", "Bicarb soda", "Baking & eggs", false], ["\\bdesiccated coconut\\b", "Desiccated coconut", "Baking & eggs", false], ["\\bcashew", "Cashew nuts", "Baking & eggs", false], ["\\byeast\\b", "Dried yeast", "Baking & eggs", false], ["\\bolive oil\\b", "Olive oil", "Oils & vinegars", true], ["\\bsesame oil\\b", "Sesame oil", "International foods", false], ["\\bpeanut oil\\b", "Peanut oil", "Oils & vinegars", true], ["\\bsunflower oil\\b", "Sunflower oil", "Oils & vinegars", true], ["\\boil\\b", "Neutral oil", "Oils & vinegars", true], ["\\bbalsamic\\b", "Balsamic vinegar", "Oils & vinegars", false], ["\\brice vinegar\\b", "Rice vinegar", "International foods", false], ["\\bblack vinegar\\b|\\bblack chinese vinegar\\b", "Chinese black vinegar", "International foods", false], ["\\bvinegar\\b", "White wine vinegar", "Oils & vinegars", false], ["\\bgrand marnier\\b|\\borange liqueur\\b", "Grand Marnier", "Bottle shop", false], ["\\bsake\\b", "Cooking sake", "International foods", false], ["\\bshaoxing\\b|\\brice wine\\b", "Shaoxing wine", "International foods", false], ["\\bmirin\\b", "Mirin", "International foods", false], ["\\bred wine\\b", "Red wine", "Bottle shop", false], ["\\bsnapper\\b|\\bwhole fish\\b", "Whole snapper", "Meat & seafood", false], ["\\bsalmon\\b", "Salmon fillets", "Meat & seafood", false], ["\\bpork loin\\b", "Pork loin steaks", "Meat & seafood", false], ["\\bchicken wings\\b", "Chicken wings", "Meat & seafood", false], ["\\bchicken thighs?\\b", "Chicken thighs", "Meat & seafood", false], ["\\bchicken breasts?\\b", "Chicken breasts", "Meat & seafood", false], ["\\bwhole chicken\\b", "Whole chicken", "Meat & seafood", false], ["\\bduck\\b", "Duck breasts", "Meat & seafood", false], ["\\bleg ham\\b|\\bham\\b", "Leg ham", "Deli", false], ["\\bguanciale\\b", "Guanciale", "Deli", false], ["\\bbacon\\b", "Streaky bacon", "Deli", false], ["\\bkabana\\b", "Kabana", "Deli", false], ["\\bnduja\\b", "'Nduja", "Deli", false], ["\\bpork mince\\b", "Pork mince", "Meat & seafood", false], ["\\bbeef mince\\b", "Beef mince", "Meat & seafood", false], ["\\bpork belly\\b", "Pork belly with loin", "Meat & seafood", false], ["\\bflank\\b|\\bskirt\\b|\\bsteak\\b", "Beef steak", "Meat & seafood", false], ["\\bwonton\\b|\\bdumpling wrappers\\b", "Wonton or dumpling wrappers", "Dairy & fridge", false], ["\\bcorn chips\\b", "Corn chips", "Snacks & sweets", false], ["\\begg noodles\\b|\\blo mein\\b", "Egg noodles", "Pasta, rice & noodles", false], ["\\bvermicelli\\b", "Rice vermicelli", "Pasta, rice & noodles", false], ["\\blasagne sheets\\b", "Fresh lasagne sheets", "Dairy & fridge", false], ["\\bfettuccine\\b", "Dried fettuccine", "Pasta, rice & noodles", false], ["\\brisoni\\b|\\borzo\\b", "Risoni", "Pasta, rice & noodles", false], ["\\bfileja\\b", "Fileja pasta", "Pasta, rice & noodles", false], ["\\bfusilli\\b|\\bspiral pasta\\b", "Spiral pasta (fusilli)", "Pasta, rice & noodles", false], ["\\bspaghetti\\b|\\brigatoni\\b", "Spaghetti or rigatoni", "Pasta, rice & noodles", false], ["\\btortillas\\b", "Corn tortillas", "International foods", false], ["\\bsushi rice\\b", "Sushi rice", "International foods", false], ["\\brice\\b", "Rice", "Pasta, rice & noodles", false], ["\\bself-raising\\b", "Self-raising flour", "Baking & eggs", false], ["\\bshokupan\\b", "Shokupan (Japanese milk bread)", "Bakery", false], ["\\bcavatappi\\b", "Cavatappi pasta", "Pasta, rice & noodles", false], ["\\bshin ramyun\\b", "Shin Ramyun noodles", "International foods", false], ["\\binstant ramen\\b|\\bramen noodles\\b", "Instant ramen noodles", "Pasta, rice & noodles", false], ["\\bbread flour\\b", "Bread flour", "Baking & eggs", false], ["\\btipo 00\\b", "Tipo 00 flour", "Baking & eggs", false], ["\\bgram\\b|\\bchickpea\\b", "Gram (chickpea) flour", "International foods", false], ["\\bcornflour\\b|\\bcornstarch\\b|\\bpotato starch\\b", "Cornflour", "Baking & eggs", false], ["\\bflour\\b", "Plain flour", "Baking & eggs", false], ["\\bcob loa(f|ves)\\b|\\bcobs?\\b", "Small cob loaves", "Bakery", false], ["\\bnaan\\b", "Naan bread", "Bakery", false], ["\\bbread\\b", "Bread", "Bakery", false], ["\\beggs?\\b", "Eggs", "Baking & eggs", false], ["\\bbutter\\b", "Butter", "Dairy & fridge", false], ["\\bpotato(es)?\\b", "Potatoes", "Fruit & veg", false], ["\\bsour cream\\b", "Sour cream", "Dairy & fridge", false], ["\\bcream\\b", "Thickened cream", "Dairy & fridge", false], ["\\byoghurt\\b", "Greek yoghurt", "Dairy & fridge", false], ["\\bmilk\\b", "Milk", "Dairy & fridge", false], ["\\bmozzarella\\b", "Mozzarella", "Dairy & fridge", false], ["\\bcolby\\b", "Colby cheese", "Dairy & fridge", false], ["\\bcheddar\\b", "Cheddar", "Dairy & fridge", false], ["\\bpecorino\\b", "Pecorino", "Deli", false], ["\\bparmesan\\b|\\bparmigiano\\b", "Parmesan", "Deli", false], ["\\bpaneer\\b", "Paneer", "Dairy & fridge", false], ["\\bcheese\\b", "Grated cheese", "Dairy & fridge", false], ["\\bcoriander seeds\\b", "Coriander seeds", "Herbs & spices", false], ["\\bground coriander\\b", "Ground coriander", "Herbs & spices", false], ["\\bcumin\\b", "Cumin", "Herbs & spices", false], ["\\bdried sichuan red chillies\\b|\\bdried chillies\\b", "Dried red chillies", "International foods", false], ["\\bsichuan pepper|\\bsichuan red pepper", "Sichuan peppercorns", "International foods", false], ["\\bgarlic powder\\b", "Garlic powder", "Herbs & spices", false], ["\\bonion powder\\b", "Onion powder", "Herbs & spices", false], ["\\boregano\\b", "Dried oregano", "Herbs & spices", false], ["\\bsmoked paprika\\b", "Smoked paprika", "Herbs & spices", false], ["\\bpaprika\\b", "Paprika", "Herbs & spices", false], ["\\bgaram masala\\b", "Garam masala", "Herbs & spices", false], ["\\bturmeric\\b", "Turmeric", "Herbs & spices", false], ["\\bgochugaru\\b", "Gochugaru", "International foods", false], ["\\bchilli flakes\\b", "Chilli flakes", "Herbs & spices", false], ["\\bchilli powder\\b", "Chilli powder", "Herbs & spices", false], ["\\bcayenne\\b", "Cayenne pepper", "Herbs & spices", false], ["\\bshichimi\\b", "Shichimi togarashi", "International foods", false], ["\\bcinnamon\\b", "Cinnamon sticks", "Herbs & spices", false], ["\\bcardamom\\b", "Green cardamom pods", "Herbs & spices", false], ["\\ballspice\\b", "Ground allspice", "Herbs & spices", false], ["\\bnutmeg\\b", "Nutmeg", "Herbs & spices", false], ["\\bfennel\\b", "Fennel pollen or seeds", "Herbs & spices", false], ["\\bsesame seeds\\b", "Sesame seeds", "Herbs & spices", false], ["\\bsalt\\b", "Salt", "Herbs & spices", true], ["\\bpepper(corns)?\\b", "Pepper", "Herbs & spices", true], ["\\bspring onions?\\b|\\bgreen onions?\\b|\\bscallions?\\b", "Spring onions", "Fruit & veg", false], ["\\beschallot\\b|\\bshallot\\b", "Eschallot", "Fruit & veg", false], ["\\bred onion\\b", "Red onion", "Fruit & veg", false], ["\\bwhite onion\\b", "White onion", "Fruit & veg", false], ["\\bonions?\\b", "Brown onions", "Fruit & veg", false], ["\\bgarlic\\b", "Garlic", "Fruit & veg", false], ["\\bwhole cloves\\b|\\bcloves, whole\\b", "Whole cloves", "Herbs & spices", false], ["\\bginger\\b", "Fresh ginger", "Fruit & veg", false], ["\\blemongrass\\b", "Lemongrass", "Fruit & veg", false], ["\\bmakrut\\b|\\blime leaves\\b", "Makrut lime leaves", "Fruit & veg", false], ["\\blimes?\\b", "Limes", "Fruit & veg", false], ["\\blemons?\\b", "Lemons", "Fruit & veg", false], ["\\boranges?\\b", "Oranges", "Fruit & veg", false], ["\\bavocados?\\b", "Avocados", "Fruit & veg", false], ["\\bstrawberries\\b", "Strawberries", "Fruit & veg", false], ["\\bchillies\\b|\\bchilli\\b", "Fresh red chillies", "Fruit & veg", false], ["\\bjalape", "Jalapeño", "Fruit & veg", false], ["\\bcarrots?\\b", "Carrots", "Fruit & veg", false], ["\\bcelery\\b", "Celery", "Fruit & veg", false], ["\\bcucumber\\b", "Cucumber", "Fruit & veg", false], ["\\basparagus\\b", "Asparagus", "Fruit & veg", false], ["\\bpeas and corn\\b", "Frozen peas and corn", "Freezer", false], ["\\bfrozen peas\\b", "Frozen peas", "Freezer", false], ["\\bspinach\\b", "Baby spinach", "Fruit & veg", false], ["\\bcos\\b", "Cos lettuce", "Fruit & veg", false], ["\\bdrum cabbage\\b", "Drum cabbage", "Fruit & veg", false], ["\\bmushrooms?\\b", "Mushrooms", "Fruit & veg", false], ["\\bcoleslaw\\b", "Coleslaw", "Deli", false], ["\\bcorn kernels\\b", "Corn kernels", "Freezer", false], ["\\blettuce\\b|\\bcabbage\\b|\\bsalad greens\\b", "Lettuce and cabbage", "Fruit & veg", false], ["\\bcurry leaves\\b", "Curry leaves", "Fruit & veg", false], ["\\bcoriander\\b", "Coriander", "Fruit & veg", false], ["\\bmint\\b", "Mint", "Fruit & veg", false], ["\\bparsley\\b", "Parsley", "Fruit & veg", false], ["\\bbasil\\b", "Basil", "Fruit & veg", false], ["\\brosemary\\b", "Rosemary", "Fruit & veg", false], ["\\bchives\\b", "Chives", "Fruit & veg", false], ["\\bthyme\\b", "Thyme", "Fruit & veg", false], ["\\bsugar\\b", "Sugar", "Baking & eggs", true]], "groceries": [["\\bravioli\\b|\\btortellini\\b|\\bgnocchi\\b|\\bfresh pasta\\b|\\bpasta sauce\\b|\\bpesto\\b", "Dairy & fridge"], ["\\bbolognese\\b|\\bsalsa\\b|\\bjar\\b", "Tins & jars"], ["\\bsauce\\b|\\bketchup\\b|\\bjam\\b|\\bvegemite\\b|\\bnutella\\b|\\bspread\\b|\\bstock\\b|\\bgravy\\b", "Sauces, spreads & stock"], ["\\bpasta\\b|\\bpenne\\b|\\blasagne\\b|\\bnoodles?\\b|\\bcouscous\\b|\\bquinoa\\b", "Pasta, rice & noodles"], ["\\bcereal\\b|\\bweet-?bix\\b|\\boats\\b|\\bmuesli\\b|\\bcoffee\\b|\\btea\\b|\\bmilo\\b", "Snacks & sweets"], ["\\bchips\\b|\\bbiscuits?\\b|\\bcrackers?\\b|\\bchocolate\\b|\\blollies\\b|\\bnuts\\b|\\bpopcorn\\b", "Snacks & sweets"], ["\\bjuice\\b|\\bsoft drink\\b|\\bsoda\\b|\\bcordial\\b|\\bmineral water\\b|\\bsparkling\\b|\\bcoke\\b", "Snacks & sweets"], ["\\bbeer\\b|\\bwine\\b|\\bcider\\b|\\bgin\\b|\\bvodka\\b|\\bwhisk(e)?y\\b|\\brum\\b|\\bprosecco\\b", "Bottle shop"], ["\\bice cream\\b|\\bfrozen\\b|\\bice\\b|\\bpizza\\b|\\bchips\\b|\\bnuggets\\b", "Freezer"], ["\\byoghurt\\b|\\bcheese\\b|\\bmilk\\b|\\bcream\\b|\\bbutter\\b|\\bdips?\\b|\\bhummus\\b|\\btofu\\b", "Dairy & fridge"], ["\\bbread\\b|\\brolls?\\b|\\bwraps?\\b|\\bcrumpets?\\b|\\bmuffins?\\b|\\bbagels?\\b|\\bcroissants?\\b", "Bakery"], ["\\bham\\b|\\bsalami\\b|\\bprosciutto\\b|\\bolives?\\b|\\bpastrami\\b|\\bturkey slices\\b", "Deli"], ["\\bchicken\\b|\\bbeef\\b|\\bpork\\b|\\blamb\\b|\\bmince\\b|\\bsteak\\b|\\bsausages?\\b|\\bfish\\b|\\bprawns?\\b", "Meat & seafood"], ["\\bapples?\\b|\\bbananas?\\b|\\bgrapes\\b|\\bberries\\b|\\bsalad\\b|\\btomato(es)?\\b|\\bonions?\\b|\\bveg", "Fruit & veg"], ["\\bflour\\b|\\bsugar\\b|\\beggs?\\b|\\bbaking\\b|\\bcake\\b", "Baking & eggs"], ["\\btins?\\b|\\bcans?\\b|\\bbeans\\b|\\btuna\\b|\\bsoup\\b|\\bchickpeas\\b|\\blentils\\b", "Tins & jars"], ["\\bwrap\\b|\\bfoil\\b|\\bbaking paper\\b|\\bbags\\b|\\btoilet\\b|\\bpaper towel\\b|\\bliquid\\b|\\btissues\\b|\\btoothpaste\\b|\\bshampoo\\b|\\bsoap\\b|\\bbatteries\\b", "Other"]], "suggestions": ["Ravioli", "Tortellini", "Gnocchi", "Pasta sauce", "Pesto", "Salsa", "Jam", "Vegemite", "Nutella", "Penne", "Couscous", "Quinoa", "Cereal", "Weet-Bix", "Oats", "Muesli", "Coffee", "Tea", "Milo", "Chips", "Biscuits", "Crackers", "Chocolate", "Lollies", "Nuts", "Popcorn", "Juice", "Soft drink", "Mineral water", "Beer", "White wine", "Cider", "Ice cream", "Frozen pizza", "Frozen chips", "Ice", "Yoghurt", "Cheese slices", "Dip", "Hummus", "Tofu", "Bread rolls", "Wraps", "Crumpets", "English muffins", "Bagels", "Croissants", "Salami", "Prosciutto", "Olives", "Sliced ham", "Lamb", "Prawns", "Fish fillets", "Apples", "Bananas", "Grapes", "Berries", "Salad mix", "Tomatoes", "Tinned tuna", "Soup", "Chickpeas", "Lentils", "Baked beans", "Toilet paper", "Paper towel", "Dishwashing liquid", "Laundry liquid", "Bin bags", "Cling wrap", "Foil", "Baking paper", "Sandwich bags", "Tissues", "Toothpaste", "Shampoo", "Soap", "Batteries"], "names": [["\\bcornflour\\b", "cornstarch", "cornflour", false], ["\\bplain flour\\b", "all-purpose flour", "plain flour", false], ["\\bself-raising flour\\b", "self-rising flour", "self-raising flour", false], ["\\bspring onion(s?)\\b", "scallion$1", "spring onion$1", false], ["\\bbicarb soda\\b", "baking soda", "bicarbonate of soda", false], ["\\bthickened (?:or pure )?cream\\b", "heavy cream", "double cream", false], ["\\bbrown onion(s?)\\b", "yellow onion$1", "brown onion$1", false], ["\\beschallot(s?)\\b", "shallot$1", "shallot$1", false], ["\\bcapsicum(s?)\\b", "bell pepper$1", "pepper$1", false], ["\\b(oven|frozen) chips\\b", "$1 fries", "$1 chips", true], ["\\bbok choy\\b", "bok choy", "pak choi", false], ["\\bcaster sugar\\b", "superfine sugar", "caster sugar", false], ["\\bicing sugar\\b", "powdered sugar", "icing sugar", false], ["\\b(beef|pork|chicken) mince\\b", "ground $1", "$1 mince", false], ["\\bprawn(s?)\\b", "shrimp", "prawn$1", false], ["\\bcos lettuce\\b", "romaine lettuce", "cos lettuce", false], ["\\bstreaky bacon\\b", "bacon", "streaky bacon", false], ["\\bfresh coriander\\b|\\bcoriander (leaves|sprigs)\\b", "cilantro", "fresh coriander", false], ["\\bchilli flakes\\b", "red pepper flakes", "chilli flakes", false], ["\\bzucchini\\b", "zucchini", "courgette", false], ["\\beggplant(s?)\\b", "eggplant$1", "aubergine$1", false], ["\\brocket\\b", "arugula", "rocket", false], ["\\bbeetroot\\b", "beet", "beetroot", false], ["\\bcob loa(f|ves)\\b", "round loa$1", "cob loa$1", false], ["\\btinned\\b", "canned", "tinned", false]], "plan": {"days": ["Mon", "Tue", "Wed", "Thu", "Fri"], "lunches": 2, "maxSame": 2, "minCuisines": 3, "fresh": ["Fruit & veg", "Deli", "Meat & seafood", "Dairy & fridge", "Bakery"], "freshWeight": 3, "everyday": ["Garlic", "Brown onions"], "count": 6, "names": [["Turn Up the Heat", "tags", ["spicy"], 3], ["Winner Winner Chicken Dinner", "category", ["Chicken"], 2], ["Pasta La Vista", "category", ["Pasta"], 2], ["Oodles of Noodles", "category", ["Noodles"], 2], ["Where's the Beef?", "category", ["Beef"], 2], ["This Little Piggy", "category", ["Pork"], 2], ["Something Fishy", "category", ["Seafood"], 2], ["Fakeaway Feast", "basic", [], 1], ["Fast and Fabulous", "tags", ["quick"], 3], ["Passport Please", "cuisines", [], 5], ["Spice Route", "tags", ["spicy"], 2], ["Around the World", "cuisines", [], 4], ["The Crowd Pleasers", "any", [], 0], ["Dinner's Sorted", "any", [], 0], ["No-Stress Nights", "any", [], 0], ["Happy Plates", "any", [], 0], ["Clean Plate Club", "any", [], 0], ["Five Nights of Yum", "any", [], 0]], "packs": [["Bread", 20, {"": 1}, [3.8, 1.4, 3.5]], ["Naan bread", 4, {"": 1}, [3.5, 1.0, 3.0]], ["Butter", 250, {"g": 1, "": 15}, [6.0, 2.2, 2.75]], ["Thickened cream", 300, {"ml": 1, "": 30}, [3.0, 1.6, 3.5]], ["Milk", 2000, {"ml": 1, "": 50}, [3.2, 1.5, 2.5]], ["Grated cheese", 250, {"g": 1, "": 40}, [5.0, 2.5, 3.5]], ["Mozzarella", 250, {"g": 1}, [5.0, 1.5, 4.0]], ["Sour cream", 300, {"g": 1, "ml": 1, "": 60}, [3.0, 1.2, 2.5]], ["Streaky bacon", 250, {"g": 1, "rashers": 25}, [6.0, 2.5, 5.5]], ["Parmesan", 150, {"g": 1, "": 20}, [6.0, 3.0, 6.0]], ["Pecorino", 150, {"g": 1, "": 20}, [7.0, 3.5, 7.0]], ["Spring onions", 6, {"": 1, "bunch": 6}, [2.5, 0.65, 1.0]], ["Garlic", 10, {"": 1, "clove": 1, "cloves": 1, "head": 10, "tsp": 1}, [1.5, 0.35, 0.6]], ["Carrots", 7, {"": 1}, [2.0, 0.6, 1.5]], ["Brown onions", 6, {"": 1}, [3.0, 0.9, 2.5]], ["Coriander", 1, {"": 0.5, "bunch": 1}, [3.0, 0.8, 1.0]], ["Parsley", 1, {"": 0.5, "bunch": 1}, [3.0, 0.8, 1.0]], ["Mint", 1, {"": 0.5, "bunch": 1, "pack": 1}, [3.0, 0.8, 2.0]], ["Fresh ginger", 100, {"g": 1, "cm": 5, "tsp": 5, "": 30}, [3.0, 0.6, 0.8]], ["Fresh red chillies", 8, {"": 1, "tsp": 0.5}, [3.0, 0.7, 1.5]], ["Potatoes", 10, {"": 1, "g": 0.005}, [5.0, 1.6, 4.0]], ["Lettuce and cabbage", 1, {"": 1}, [3.0, 0.75, 2.0]], ["Cherry tomatoes", 250, {"g": 1, "": 125}, [4.0, 1.2, 3.0]], ["Baby spinach", 120, {"g": 1}, [3.5, 1.0, 3.0]], ["Chicken thighs", 500, {"g": 1, "": 125}, [9.0, 3.5, 5.0]], ["Beef mince", 500, {"g": 1}, [8.0, 3.5, 6.0]], ["Beef steak", 500, {"g": 1}, [15.0, 7.0, 10.0]], ["Pork mince", 500, {"g": 1}, [7.0, 3.0, 5.0]], ["Beef dripping", 250, {"g": 1}, [3.5, 1.5, 5.0]], ["Frozen peas", 1000, {"g": 1}, [3.0, 1.0, 2.0]], ["Eggs", 12, {"": 1}, [6.5, 3.0, 4.0]], ["Plain flour", 1000, {"g": 1, "tsp": 3, "": 30}, [1.5, 0.75, 1.5]], ["Cornflour", 300, {"g": 1, "tsp": 3, "": 10}, [2.0, 1.0, 2.0]], ["Rice", 1000, {"g": 1, "": 300}, [2.5, 1.2, 2.0]], ["Spaghetti or rigatoni", 500, {"g": 1}, [1.5, 0.8, 1.5]], ["Panko breadcrumbs", 200, {"g": 1}, [3.0, 1.5, 3.0]], ["Chicken stock", 1000, {"ml": 1, "": 250}, [3.0, 1.2, 2.5]], ["Soy sauce", 500, {"ml": 1, "tsp": 5, "": 15}, [4.0, 1.5, 3.0]], ["Fish sauce", 300, {"ml": 1, "tsp": 5}, [3.5, 1.5, 3.0]], ["Oyster sauce", 500, {"ml": 1, "tsp": 5}, [4.0, 1.5, 3.5]], ["Sesame oil", 150, {"ml": 1, "tsp": 5}, [4.5, 2.0, 4.0]], ["Shaoxing wine", 500, {"ml": 1, "tsp": 5}, [5.0, 2.5, 4.0]], ["Chilli crisp", 210, {"tsp": 5, "": 15}, [5.5, 3.0, 4.5]], ["Worcestershire sauce", 250, {"ml": 1, "tsp": 5}, [4.0, 1.5, 3.5]], ["Ketchup", 500, {"ml": 1, "tsp": 5}, [3.5, 1.8, 2.5]], ["Tomato sauce", 500, {"ml": 1, "tsp": 5, "": 30}, [3.0, 1.2, 2.5]], ["Sesame seeds", 100, {"tsp": 3, "": 10}, [3.0, 1.2, 3.0]], ["Paprika", 40, {"tsp": 2.5, "": 1}, [3.0, 1.0, 3.0]], ["Smoked paprika", 40, {"tsp": 2.5, "": 1}, [3.0, 1.0, 3.0]], ["Cayenne pepper", 40, {"tsp": 2.5, "": 1}, [3.0, 1.0, 3.0]], ["Italian seasoning", 40, {"tsp": 2.5, "": 1}, [3.0, 1.0, 3.0]], ["Dried oregano", 40, {"tsp": 2.5, "": 1}, [3.0, 1.0, 3.0]], ["Cumin", 40, {"tsp": 2.5, "": 1}, [3.0, 1.0, 3.0]], ["Curry powder", 40, {"tsp": 2.5, "": 1}, [3.0, 1.0, 3.0]], ["Garlic powder", 40, {"tsp": 2.5, "": 1}, [3.0, 1.0, 3.0]], ["Onion powder", 40, {"tsp": 2.5, "": 1}, [3.0, 1.0, 3.0]], ["Chilli flakes", 40, {"tsp": 2.5, "": 1}, [3.0, 1.0, 3.0]], ["Ground coriander", 40, {"tsp": 2.5, "": 1}, [3.0, 1.0, 3.0]]], "avoid": [["Gluten", "^(plain|self-raising|bread|tipo 00) flour$|\\bbread\\b|loaves|naan|shokupan|panko|spaghetti|fettuccine|risoni|cavatappi|fusilli|fileja|ravioli|lasagne|egg noodles|ramen|ramyun|wrappers|soy sauce|oyster sauce|golden curry|worcestershire|stock cubes|gravox|shaoxing|taco kit|jam rolls|tonkatsu sauce|crumbed|schnitzel|pies|dumplings|pizza"], ["Dairy", "(?<!peanut )\\bbutter\\b|cream|(?<!coconut )milk|cheese|cheddar|mozzarella|parmesan|pecorino|paneer|yoghurt|naan|ravioli|caesar dressing|custard|pizza"], ["Eggs", "\\beggs?\\b|mayonnaise|egg noodles|ravioli|lasagne sheets|caesar dressing|coleslaw|tartare|schnitzel"], ["Peanuts", "peanut"], ["Tree nuts", "cashew|almond|walnut|pecan|pistachio|hazelnut|pesto"], ["Sesame", "sesame|tahini"], ["Soy", "\\bsoy\\b|golden curry|chilli crisp|tofu|miso"], ["Fish", "fish|snapper|salmon|worcestershire|caesar dressing|dashi|anchov"], ["Shellfish", "oyster sauce|prawn|shrimp|crab|mussel|laksa paste"], ["Meat", "chicken|beef|steak|pork|bacon|guanciale|nduja|\\bham\\b|kabana|sausage|lamb|duck|dripping|meat pies|dumplings"], ["Pork", "pork|bacon|guanciale|nduja|\\bham\\b|kabana|(?<!beef )sausage|dumplings"], ["Beef", "beef|steak"], ["Alcohol", "wine(?! vinegar)|sake|mirin|cointreau|marnier"], ["Spicy food", "#spicy"]], "pricesChecked": "2026-11-16", "inflation": [0.03, 0.035, 0.025], "longMinutes": 45, "maxLong": 1, "maxFried": 1, "maxWeekMinutes": 180}};
+window.FIELD_KITCHEN_SHOP = {"aisles": ["Fruit & veg", "Bakery", "Deli", "Meat & seafood", "Pasta, rice & noodles", "International foods", "Herbs & spices", "Baking & eggs", "Sauces, spreads & stock", "Tins & jars", "Oils & vinegars", "Snacks & sweets", "Dairy & fridge", "Freezer", "Bottle shop", "Other"], "ingredients": [["\\bwater\\b", "Water", "Sauces, spreads & stock", true], ["\\bchicken bouillon\\b|\\bchicken stock powder\\b", "Chicken stock powder", "Sauces, spreads & stock", false], ["\\bchicken stock\\b", "Chicken stock", "Sauces, spreads & stock", false], ["\\bfish sauce\\b", "Fish sauce", "International foods", false], ["\\bsweet chilli sauce\\b", "Sweet chilli sauce", "Sauces, spreads & stock", false], ["\\bchilli crisp\\b", "Chilli crisp", "International foods", false], ["\\bsriracha\\b|\\bhot sauce\\b", "Hot sauce", "Sauces, spreads & stock", false], ["\\bdark soy\\b", "Dark soy sauce", "International foods", false], ["\\bsoy sauce\\b", "Soy sauce", "International foods", false], ["\\boyster sauce\\b", "Oyster sauce", "International foods", false], ["\\bbutter chicken\\b", "Butter chicken simmer sauce", "International foods", false], ["\\btaco kit\\b", "Taco kit", "International foods", false], ["\\bfresh pasta sauce\\b", "Fresh pasta sauce", "Dairy & fridge", false], ["\\bmutti\\b", "Mutti pasta sauce", "Pasta, rice & noodles", false], ["\\bravioli\\b|\\btortellini\\b", "Fresh ravioli", "Dairy & fridge", false], ["\\bhot roast chicken\\b", "Hot roast chicken", "Deli", false], ["\\bcoleslaw kit\\b", "Coleslaw kit", "Fruit & veg", false], ["\\bsalad mix\\b", "Salad mix", "Fruit & veg", false], ["\\bbread rolls?\\b", "Bread rolls", "Bakery", false], ["\\bcrumbed fish\\b|\\bfish fingers\\b", "Frozen crumbed fish", "Freezer", false], ["\\b(?:oven|frozen) chips\\b", "Frozen chips", "Freezer", false], ["\\bbeef sausages?\\b", "Beef sausages", "Meat & seafood", false], ["\\bmeat pies?\\b", "Frozen meat pies", "Freezer", false], ["\\bschnitzels?\\b", "Crumbed chicken schnitzels", "Meat & seafood", false], ["\\bfrozen dumplings\\b", "Frozen dumplings", "Freezer", false], ["\\bfrozen pizzas?\\b", "Frozen pizzas", "Freezer", false], ["\\blaksa paste\\b", "Laksa paste", "International foods", false], ["\\btartare sauce\\b", "Tartare sauce", "Sauces, spreads & stock", false], ["\\bbean sprouts\\b", "Bean sprouts", "Fruit & veg", false], ["\\bbok choy\\b", "Bok choy", "Fruit & veg", false], ["\\bfalafel\\b", "Falafel", "Dairy & fridge", false], ["\\bhummus\\b", "Hummus", "Dairy & fridge", false], ["\\bwraps?\\b", "Wraps", "Bakery", false], ["\\brefried beans\\b", "Refried beans", "International foods", false], ["\\bsalsa\\b", "Salsa", "International foods", false], ["\\bfrozen mixed vegetables\\b", "Frozen mixed vegetables", "Freezer", false], ["\\bvegie burger patties\\b|\\bveggie burger patties\\b", "Frozen vegie burger patties", "Freezer", false], ["\\bburger buns?\\b", "Burger buns", "Bakery", false], ["\\bcheese slices?\\b", "Cheese slices", "Dairy & fridge", false], ["\\bkorma\\b", "Korma simmer sauce", "International foods", false], ["\\bketchup\\b", "Ketchup", "Sauces, spreads & stock", false], ["\\btomato sauce\\b", "Tomato sauce", "Sauces, spreads & stock", false], ["\\bpassata\\b", "Tomato passata", "Tins & jars", false], ["\\bsun-dried tomato(es)?\\b|\\bsun dried tomato(es)?\\b", "Sun-dried tomatoes", "Tins & jars", false], ["\\bcherry tomatoes\\b", "Cherry tomatoes", "Fruit & veg", false], ["\\btomato paste\\b", "Tomato paste", "Tins & jars", false], ["\\bchickpeas\\b", "Tinned chickpeas", "Tins & jars", false], ["\\bmedium tomato(es)?\\b", "Tomatoes", "Fruit & veg", false], ["\\btomato(es)?\\b", "Tinned tomatoes", "Tins & jars", false], ["\\bkidney beans\\b", "Red kidney beans", "Tins & jars", false], ["\\bcannellini\\b", "Cannellini beans", "Tins & jars", false], ["\\bstock cubes?\\b|\\bbouillon\\b", "Beef stock cubes", "Sauces, spreads & stock", false], ["\\bstrawberry jelly\\b", "Aeroplane strawberry jelly", "Baking & eggs", false], ["\\borange jelly\\b", "Aeroplane orange jelly", "Baking & eggs", false], ["\\bblancmange\\b", "Strawberry blancmange", "Baking & eggs", false], ["\\bgravox\\b|\\bgravy mix\\b", "Gravox Traditional Gravy Mix", "Sauces, spreads & stock", false], ["\\bcustard\\b", "Bird's custard powder", "Baking & eggs", false], ["\\bmandarin", "Tinned mandarins", "Tins & jars", false], ["\\bflake\\b", "Flake chocolate", "Snacks & sweets", false], ["\\bchocolate\\b", "Dark chocolate", "Baking & eggs", false], ["\\bvanilla\\b", "Vanilla extract", "Baking & eggs", false], ["\\bjam rolls?\\b", "Jam rolls", "Bakery", false], ["\\bsausages?\\b", "Pork sausages", "Meat & seafood", false], ["\\bdripping\\b", "Beef dripping", "Meat & seafood", false], ["\\bduck fat\\b|\\bgoose fat\\b", "Duck fat", "Meat & seafood", false], ["\\bcointreau\\b", "Cointreau", "Bottle shop", false], ["\\bgolden curry\\b|\\bcurry blocks?\\b", "Golden Curry blocks", "International foods", false], ["\\bsushi seasoning\\b", "Sushi seasoning", "International foods", false], ["\\bnori\\b", "Nori sheets", "International foods", false], ["\\btonkatsu sauce\\b", "Tonkatsu sauce", "International foods", false], ["\\bpickled ginger\\b", "Pickled ginger", "International foods", false], ["\\bwasabi\\b", "Wasabi", "International foods", false], ["\\bkarashi\\b|\\benglish mustard\\b|\\bjapanese mustard\\b", "Japanese or English mustard", "International foods", false], ["\\bpanko\\b", "Panko breadcrumbs", "International foods", false], ["\\bcaesar dressing\\b", "Caesar dressing", "Sauces, spreads & stock", false], ["\\bthousand island\\b", "Thousand island dressing", "Sauces, spreads & stock", false], ["\\bitalian seasoning\\b", "Italian seasoning", "Herbs & spices", false], ["\\bevaporated milk\\b", "Evaporated milk", "Tins & jars", false], ["\\bmilk powder\\b", "Skim milk powder", "Baking & eggs", false], ["\\bcoconut milk\\b|\\bcoconut cream\\b", "Coconut milk", "International foods", false], ["\\bred curry paste\\b", "Red curry paste", "International foods", false], ["\\bcurry paste\\b", "Yellow curry paste", "International foods", false], ["\\bcurry powder\\b", "Curry powder", "Herbs & spices", false], ["\\bpeanut butter\\b", "Peanut butter", "Sauces, spreads & stock", false], ["\\bpeanuts\\b", "Roasted peanuts", "Snacks & sweets", false], ["\\btamarind\\b", "Tamarind paste", "International foods", false], ["\\bworcestershire\\b", "Worcestershire sauce", "Sauces, spreads & stock", false], ["\\bchutney\\b", "Mrs Ball's chutney", "International foods", false], ["\\bhoney\\b", "Honey", "Sauces, spreads & stock", false], ["\\byuzu\\b", "Yuzu juice", "International foods", false], ["\\bmaple syrup\\b", "Maple syrup", "Sauces, spreads & stock", false], ["\\bmustard seeds\\b", "Black mustard seeds", "Herbs & spices", false], ["\\bdijon\\b|\\bmustard\\b", "Dijon mustard", "Sauces, spreads & stock", false], ["\\bkewpie\\b", "Kewpie mayonnaise", "International foods", false], ["\\bmayonnaise\\b", "Mayonnaise", "Sauces, spreads & stock", false], ["\\bdashi\\b", "Dashi powder", "International foods", false], ["\\bmsg\\b", "MSG", "International foods", true], ["\\bbicarb(onate)?\\b|\\bbaking soda\\b", "Bicarb soda", "Baking & eggs", false], ["\\bdesiccated coconut\\b", "Desiccated coconut", "Baking & eggs", false], ["\\bcashew", "Cashew nuts", "Baking & eggs", false], ["\\byeast\\b", "Dried yeast", "Baking & eggs", false], ["\\bolive oil\\b", "Olive oil", "Oils & vinegars", true], ["\\bsesame oil\\b", "Sesame oil", "International foods", false], ["\\bpeanut oil\\b", "Peanut oil", "Oils & vinegars", true], ["\\bsunflower oil\\b", "Sunflower oil", "Oils & vinegars", true], ["\\boil\\b", "Neutral oil", "Oils & vinegars", true], ["\\bbalsamic\\b", "Balsamic vinegar", "Oils & vinegars", false], ["\\brice vinegar\\b", "Rice vinegar", "International foods", false], ["\\bblack vinegar\\b|\\bblack chinese vinegar\\b", "Chinese black vinegar", "International foods", false], ["\\bvinegar\\b", "White wine vinegar", "Oils & vinegars", false], ["\\bgrand marnier\\b|\\borange liqueur\\b", "Grand Marnier", "Bottle shop", false], ["\\bsake\\b", "Cooking sake", "International foods", false], ["\\bshaoxing\\b|\\brice wine\\b", "Shaoxing wine", "International foods", false], ["\\bmirin\\b", "Mirin", "International foods", false], ["\\bred wine\\b", "Red wine", "Bottle shop", false], ["\\bsnapper\\b|\\bwhole fish\\b", "Whole snapper", "Meat & seafood", false], ["\\bsalmon\\b", "Salmon fillets", "Meat & seafood", false], ["\\bpork loin\\b", "Pork loin steaks", "Meat & seafood", false], ["\\bchicken wings\\b", "Chicken wings", "Meat & seafood", false], ["\\bchicken thighs?\\b", "Chicken thighs", "Meat & seafood", false], ["\\bchicken breasts?\\b", "Chicken breasts", "Meat & seafood", false], ["\\bwhole chicken\\b", "Whole chicken", "Meat & seafood", false], ["\\bduck\\b", "Duck breasts", "Meat & seafood", false], ["\\bleg ham\\b|\\bham\\b", "Leg ham", "Deli", false], ["\\bguanciale\\b", "Guanciale", "Deli", false], ["\\bbacon\\b", "Streaky bacon", "Deli", false], ["\\bkabana\\b", "Kabana", "Deli", false], ["\\bnduja\\b", "'Nduja", "Deli", false], ["\\bpork mince\\b", "Pork mince", "Meat & seafood", false], ["\\bbeef mince\\b", "Beef mince", "Meat & seafood", false], ["\\bpork belly\\b", "Pork belly with loin", "Meat & seafood", false], ["\\bflank\\b|\\bskirt\\b|\\bsteak\\b", "Beef steak", "Meat & seafood", false], ["\\bwonton\\b|\\bdumpling wrappers\\b", "Wonton or dumpling wrappers", "Dairy & fridge", false], ["\\bcorn chips\\b", "Corn chips", "Snacks & sweets", false], ["\\begg noodles\\b|\\blo mein\\b", "Egg noodles", "Pasta, rice & noodles", false], ["\\bvermicelli\\b", "Rice vermicelli", "Pasta, rice & noodles", false], ["\\blasagne sheets\\b", "Fresh lasagne sheets", "Dairy & fridge", false], ["\\bfettuccine\\b", "Dried fettuccine", "Pasta, rice & noodles", false], ["\\brisoni\\b|\\borzo\\b", "Risoni", "Pasta, rice & noodles", false], ["\\bfileja\\b", "Fileja pasta", "Pasta, rice & noodles", false], ["\\bfusilli\\b|\\bspiral pasta\\b", "Spiral pasta (fusilli)", "Pasta, rice & noodles", false], ["\\bspaghetti\\b|\\brigatoni\\b", "Spaghetti or rigatoni", "Pasta, rice & noodles", false], ["\\btortillas\\b", "Corn tortillas", "International foods", false], ["\\bsushi rice\\b", "Sushi rice", "International foods", false], ["\\brice\\b", "Rice", "Pasta, rice & noodles", false], ["\\bself-raising\\b", "Self-raising flour", "Baking & eggs", false], ["\\bshokupan\\b", "Shokupan (Japanese milk bread)", "Bakery", false], ["\\bcavatappi\\b", "Cavatappi pasta", "Pasta, rice & noodles", false], ["\\bshin ramyun\\b", "Shin Ramyun noodles", "International foods", false], ["\\binstant ramen\\b|\\bramen noodles\\b", "Instant ramen noodles", "Pasta, rice & noodles", false], ["\\bbread flour\\b", "Bread flour", "Baking & eggs", false], ["\\btipo 00\\b", "Tipo 00 flour", "Baking & eggs", false], ["\\bgram\\b|\\bchickpea\\b", "Gram (chickpea) flour", "International foods", false], ["\\bcornflour\\b|\\bcornstarch\\b|\\bpotato starch\\b", "Cornflour", "Baking & eggs", false], ["\\bflour\\b", "Plain flour", "Baking & eggs", false], ["\\bcob loa(f|ves)\\b|\\bcobs?\\b", "Small cob loaves", "Bakery", false], ["\\bnaan\\b", "Naan bread", "Bakery", false], ["\\bbread\\b", "Bread", "Bakery", false], ["\\beggs?\\b", "Eggs", "Baking & eggs", false], ["\\bbutter\\b", "Butter", "Dairy & fridge", false], ["\\bpotato(es)?\\b", "Potatoes", "Fruit & veg", false], ["\\bsour cream\\b", "Sour cream", "Dairy & fridge", false], ["\\bcream\\b", "Thickened cream", "Dairy & fridge", false], ["\\byoghurt\\b", "Greek yoghurt", "Dairy & fridge", false], ["\\bmilk\\b", "Milk", "Dairy & fridge", false], ["\\bmozzarella\\b", "Mozzarella", "Dairy & fridge", false], ["\\bcolby\\b", "Colby cheese", "Dairy & fridge", false], ["\\bcheddar\\b", "Cheddar", "Dairy & fridge", false], ["\\bpecorino\\b", "Pecorino", "Deli", false], ["\\bparmesan\\b|\\bparmigiano\\b", "Parmesan", "Deli", false], ["\\bpaneer\\b", "Paneer", "Dairy & fridge", false], ["\\bcheese\\b", "Grated cheese", "Dairy & fridge", false], ["\\bcoriander seeds\\b", "Coriander seeds", "Herbs & spices", false], ["\\bground coriander\\b", "Ground coriander", "Herbs & spices", false], ["\\bcumin\\b", "Cumin", "Herbs & spices", false], ["\\bdried sichuan red chillies\\b|\\bdried chillies\\b", "Dried red chillies", "International foods", false], ["\\bsichuan pepper|\\bsichuan red pepper", "Sichuan peppercorns", "International foods", false], ["\\bgarlic powder\\b", "Garlic powder", "Herbs & spices", false], ["\\bonion powder\\b", "Onion powder", "Herbs & spices", false], ["\\boregano\\b", "Dried oregano", "Herbs & spices", false], ["\\bsmoked paprika\\b", "Smoked paprika", "Herbs & spices", false], ["\\bpaprika\\b", "Paprika", "Herbs & spices", false], ["\\bgaram masala\\b", "Garam masala", "Herbs & spices", false], ["\\bturmeric\\b", "Turmeric", "Herbs & spices", false], ["\\bgochugaru\\b", "Gochugaru", "International foods", false], ["\\bchilli flakes\\b", "Chilli flakes", "Herbs & spices", false], ["\\bchilli powder\\b", "Chilli powder", "Herbs & spices", false], ["\\bcayenne\\b", "Cayenne pepper", "Herbs & spices", false], ["\\bshichimi\\b", "Shichimi togarashi", "International foods", false], ["\\bcinnamon\\b", "Cinnamon sticks", "Herbs & spices", false], ["\\bcardamom\\b", "Green cardamom pods", "Herbs & spices", false], ["\\ballspice\\b", "Ground allspice", "Herbs & spices", false], ["\\bnutmeg\\b", "Nutmeg", "Herbs & spices", false], ["\\bfennel\\b", "Fennel pollen or seeds", "Herbs & spices", false], ["\\bsesame seeds\\b", "Sesame seeds", "Herbs & spices", false], ["\\bsalt\\b", "Salt", "Herbs & spices", true], ["\\bpepper(corns)?\\b", "Pepper", "Herbs & spices", true], ["\\bspring onions?\\b|\\bgreen onions?\\b|\\bscallions?\\b", "Spring onions", "Fruit & veg", false], ["\\beschallot\\b|\\bshallot\\b", "Eschallot", "Fruit & veg", false], ["\\bred onion\\b", "Red onion", "Fruit & veg", false], ["\\bwhite onion\\b", "White onion", "Fruit & veg", false], ["\\bonions?\\b", "Brown onions", "Fruit & veg", false], ["\\bgarlic\\b", "Garlic", "Fruit & veg", false], ["\\bwhole cloves\\b|\\bcloves, whole\\b", "Whole cloves", "Herbs & spices", false], ["\\bginger\\b", "Fresh ginger", "Fruit & veg", false], ["\\blemongrass\\b", "Lemongrass", "Fruit & veg", false], ["\\bmakrut\\b|\\blime leaves\\b", "Makrut lime leaves", "Fruit & veg", false], ["\\blimes?\\b", "Limes", "Fruit & veg", false], ["\\blemons?\\b", "Lemons", "Fruit & veg", false], ["\\boranges?\\b", "Oranges", "Fruit & veg", false], ["\\bavocados?\\b", "Avocados", "Fruit & veg", false], ["\\bstrawberries\\b", "Strawberries", "Fruit & veg", false], ["\\bchillies\\b|\\bchilli\\b", "Fresh red chillies", "Fruit & veg", false], ["\\bjalape", "Jalapeño", "Fruit & veg", false], ["\\bcarrots?\\b", "Carrots", "Fruit & veg", false], ["\\bcelery\\b", "Celery", "Fruit & veg", false], ["\\bcucumber\\b", "Cucumber", "Fruit & veg", false], ["\\basparagus\\b", "Asparagus", "Fruit & veg", false], ["\\bpeas and corn\\b", "Frozen peas and corn", "Freezer", false], ["\\bfrozen peas\\b", "Frozen peas", "Freezer", false], ["\\bspinach\\b", "Baby spinach", "Fruit & veg", false], ["\\bcos\\b", "Cos lettuce", "Fruit & veg", false], ["\\bdrum cabbage\\b", "Drum cabbage", "Fruit & veg", false], ["\\bmushrooms?\\b", "Mushrooms", "Fruit & veg", false], ["\\bcoleslaw\\b", "Coleslaw", "Deli", false], ["\\bcorn kernels\\b", "Corn kernels", "Freezer", false], ["\\blettuce\\b|\\bcabbage\\b|\\bsalad greens\\b", "Lettuce and cabbage", "Fruit & veg", false], ["\\bcurry leaves\\b", "Curry leaves", "Fruit & veg", false], ["\\bcoriander\\b", "Coriander", "Fruit & veg", false], ["\\bmint\\b", "Mint", "Fruit & veg", false], ["\\bparsley\\b", "Parsley", "Fruit & veg", false], ["\\bbasil\\b", "Basil", "Fruit & veg", false], ["\\brosemary\\b", "Rosemary", "Fruit & veg", false], ["\\bchives\\b", "Chives", "Fruit & veg", false], ["\\bthyme\\b", "Thyme", "Fruit & veg", false], ["\\bsugar\\b", "Sugar", "Baking & eggs", true]], "groceries": [["\\bravioli\\b|\\btortellini\\b|\\bgnocchi\\b|\\bfresh pasta\\b|\\bpasta sauce\\b|\\bpesto\\b", "Dairy & fridge"], ["\\bbolognese\\b|\\bsalsa\\b|\\bjar\\b", "Tins & jars"], ["\\bsauce\\b|\\bketchup\\b|\\bjam\\b|\\bvegemite\\b|\\bnutella\\b|\\bspread\\b|\\bstock\\b|\\bgravy\\b", "Sauces, spreads & stock"], ["\\bpasta\\b|\\bpenne\\b|\\blasagne\\b|\\bnoodles?\\b|\\bcouscous\\b|\\bquinoa\\b", "Pasta, rice & noodles"], ["\\bcereal\\b|\\bweet-?bix\\b|\\boats\\b|\\bmuesli\\b|\\bcoffee\\b|\\btea\\b|\\bmilo\\b", "Snacks & sweets"], ["\\bchips\\b|\\bbiscuits?\\b|\\bcrackers?\\b|\\bchocolate\\b|\\blollies\\b|\\bnuts\\b|\\bpopcorn\\b", "Snacks & sweets"], ["\\bjuice\\b|\\bsoft drink\\b|\\bsoda\\b|\\bcordial\\b|\\bmineral water\\b|\\bsparkling\\b|\\bcoke\\b", "Snacks & sweets"], ["\\bbeer\\b|\\bwine\\b|\\bcider\\b|\\bgin\\b|\\bvodka\\b|\\bwhisk(e)?y\\b|\\brum\\b|\\bprosecco\\b", "Bottle shop"], ["\\bice cream\\b|\\bfrozen\\b|\\bice\\b|\\bpizza\\b|\\bchips\\b|\\bnuggets\\b", "Freezer"], ["\\byoghurt\\b|\\bcheese\\b|\\bmilk\\b|\\bcream\\b|\\bbutter\\b|\\bdips?\\b|\\bhummus\\b|\\btofu\\b", "Dairy & fridge"], ["\\bbread\\b|\\brolls?\\b|\\bwraps?\\b|\\bcrumpets?\\b|\\bmuffins?\\b|\\bbagels?\\b|\\bcroissants?\\b", "Bakery"], ["\\bham\\b|\\bsalami\\b|\\bprosciutto\\b|\\bolives?\\b|\\bpastrami\\b|\\bturkey slices\\b", "Deli"], ["\\bchicken\\b|\\bbeef\\b|\\bpork\\b|\\blamb\\b|\\bmince\\b|\\bsteak\\b|\\bsausages?\\b|\\bfish\\b|\\bprawns?\\b", "Meat & seafood"], ["\\bapples?\\b|\\bbananas?\\b|\\bgrapes\\b|\\bberries\\b|\\bsalad\\b|\\btomato(es)?\\b|\\bonions?\\b|\\bveg", "Fruit & veg"], ["\\bflour\\b|\\bsugar\\b|\\beggs?\\b|\\bbaking\\b|\\bcake\\b", "Baking & eggs"], ["\\btins?\\b|\\bcans?\\b|\\bbeans\\b|\\btuna\\b|\\bsoup\\b|\\bchickpeas\\b|\\blentils\\b", "Tins & jars"], ["\\bwrap\\b|\\bfoil\\b|\\bbaking paper\\b|\\bbags\\b|\\btoilet\\b|\\bpaper towel\\b|\\bliquid\\b|\\btissues\\b|\\btoothpaste\\b|\\bshampoo\\b|\\bsoap\\b|\\bbatteries\\b", "Other"]], "suggestions": ["Ravioli", "Tortellini", "Gnocchi", "Pasta sauce", "Pesto", "Salsa", "Jam", "Vegemite", "Nutella", "Penne", "Couscous", "Quinoa", "Cereal", "Weet-Bix", "Oats", "Muesli", "Coffee", "Tea", "Milo", "Chips", "Biscuits", "Crackers", "Chocolate", "Lollies", "Nuts", "Popcorn", "Juice", "Soft drink", "Mineral water", "Beer", "White wine", "Cider", "Ice cream", "Frozen pizza", "Frozen chips", "Ice", "Yoghurt", "Cheese slices", "Dip", "Hummus", "Tofu", "Bread rolls", "Wraps", "Crumpets", "English muffins", "Bagels", "Croissants", "Salami", "Prosciutto", "Olives", "Sliced ham", "Lamb", "Prawns", "Fish fillets", "Apples", "Bananas", "Grapes", "Berries", "Salad mix", "Tomatoes", "Tinned tuna", "Soup", "Chickpeas", "Lentils", "Baked beans", "Toilet paper", "Paper towel", "Dishwashing liquid", "Laundry liquid", "Bin bags", "Cling wrap", "Foil", "Baking paper", "Sandwich bags", "Tissues", "Toothpaste", "Shampoo", "Soap", "Batteries"], "names": [["\\bcornflour\\b", "cornstarch", "cornflour", false], ["\\bplain flour\\b", "all-purpose flour", "plain flour", false], ["\\bself-raising flour\\b", "self-rising flour", "self-raising flour", false], ["\\bspring onion(s?)\\b", "scallion$1", "spring onion$1", false], ["\\bbicarb soda\\b", "baking soda", "bicarbonate of soda", false], ["\\bthickened (?:or pure )?cream\\b", "heavy cream", "double cream", false], ["\\bbrown onion(s?)\\b", "yellow onion$1", "brown onion$1", false], ["\\beschallot(s?)\\b", "shallot$1", "shallot$1", false], ["\\bcapsicum(s?)\\b", "bell pepper$1", "pepper$1", false], ["\\b(oven|frozen) chips\\b", "$1 fries", "$1 chips", true], ["\\bvegie\\b", "veggie", "veggie", false], ["\\bbok choy\\b", "bok choy", "pak choi", false], ["\\bcaster sugar\\b", "superfine sugar", "caster sugar", false], ["\\bicing sugar\\b", "powdered sugar", "icing sugar", false], ["\\b(beef|pork|chicken) mince\\b", "ground $1", "$1 mince", false], ["\\bprawn(s?)\\b", "shrimp", "prawn$1", false], ["\\bcos lettuce\\b", "romaine lettuce", "cos lettuce", false], ["\\bstreaky bacon\\b", "bacon", "streaky bacon", false], ["\\bfresh coriander\\b|\\bcoriander (leaves|sprigs)\\b", "cilantro", "fresh coriander", false], ["\\bchilli flakes\\b", "red pepper flakes", "chilli flakes", false], ["\\bzucchini\\b", "zucchini", "courgette", false], ["\\beggplant(s?)\\b", "eggplant$1", "aubergine$1", false], ["\\brocket\\b", "arugula", "rocket", false], ["\\bbeetroot\\b", "beet", "beetroot", false], ["\\bcob loa(f|ves)\\b", "round loa$1", "cob loa$1", false], ["\\btinned\\b", "canned", "tinned", false]], "plan": {"size": 5, "diets": [["Vegetarian", ["vegetarian", "vegan"]], ["Vegan", ["vegan"]]], "lunches": 2, "maxSame": 2, "minCuisines": 3, "fresh": ["Fruit & veg", "Deli", "Meat & seafood", "Dairy & fridge", "Bakery"], "freshWeight": 3, "everyday": ["Garlic", "Brown onions"], "count": 6, "names": [["Turn Up the Heat", "tags", ["spicy"], 3], ["Winner Winner Chicken Dinner", "category", ["Chicken"], 2], ["Pasta La Vista", "category", ["Pasta"], 2], ["Oodles of Noodles", "category", ["Noodles"], 2], ["Where's the Beef?", "category", ["Beef"], 2], ["This Little Piggy", "category", ["Pork"], 2], ["Something Fishy", "category", ["Seafood"], 2], ["Fakeaway Feast", "basic", [], 1], ["Fast and Fabulous", "tags", ["quick"], 3], ["Passport Please", "cuisines", [], 5], ["Spice Route", "tags", ["spicy"], 2], ["Around the World", "cuisines", [], 4], ["The Crowd Pleasers", "any", [], 0], ["Dinner's Sorted", "any", [], 0], ["No-Stress Nights", "any", [], 0], ["Happy Plates", "any", [], 0], ["Clean Plate Club", "any", [], 0], ["Five Nights of Yum", "any", [], 0]], "packs": [["Bread", 20, {"": 1}, [3.8, 1.4, 3.5]], ["Naan bread", 4, {"": 1}, [3.5, 1.0, 3.0]], ["Butter", 250, {"g": 1, "": 15}, [6.0, 2.2, 2.75]], ["Thickened cream", 300, {"ml": 1, "": 30}, [3.0, 1.6, 3.5]], ["Milk", 2000, {"ml": 1, "": 50}, [3.2, 1.5, 2.5]], ["Grated cheese", 250, {"g": 1, "": 40}, [5.0, 2.5, 3.5]], ["Mozzarella", 250, {"g": 1}, [5.0, 1.5, 4.0]], ["Sour cream", 300, {"g": 1, "ml": 1, "": 60}, [3.0, 1.2, 2.5]], ["Streaky bacon", 250, {"g": 1, "rashers": 25}, [6.0, 2.5, 5.5]], ["Parmesan", 150, {"g": 1, "": 20}, [6.0, 3.0, 6.0]], ["Pecorino", 150, {"g": 1, "": 20}, [7.0, 3.5, 7.0]], ["Spring onions", 6, {"": 1, "bunch": 6}, [2.5, 0.65, 1.0]], ["Garlic", 10, {"": 1, "clove": 1, "cloves": 1, "head": 10, "tsp": 1}, [1.5, 0.35, 0.6]], ["Carrots", 7, {"": 1}, [2.0, 0.6, 1.5]], ["Brown onions", 6, {"": 1}, [3.0, 0.9, 2.5]], ["Coriander", 1, {"": 0.5, "bunch": 1}, [3.0, 0.8, 1.0]], ["Parsley", 1, {"": 0.5, "bunch": 1}, [3.0, 0.8, 1.0]], ["Mint", 1, {"": 0.5, "bunch": 1, "pack": 1}, [3.0, 0.8, 2.0]], ["Fresh ginger", 100, {"g": 1, "cm": 5, "tsp": 5, "": 30}, [3.0, 0.6, 0.8]], ["Fresh red chillies", 8, {"": 1, "tsp": 0.5}, [3.0, 0.7, 1.5]], ["Potatoes", 10, {"": 1, "g": 0.005}, [5.0, 1.6, 4.0]], ["Lettuce and cabbage", 1, {"": 1}, [3.0, 0.75, 2.0]], ["Cherry tomatoes", 250, {"g": 1, "": 125}, [4.0, 1.2, 3.0]], ["Baby spinach", 120, {"g": 1}, [3.5, 1.0, 3.0]], ["Chicken thighs", 500, {"g": 1, "": 125}, [9.0, 3.5, 5.0]], ["Beef mince", 500, {"g": 1}, [8.0, 3.5, 6.0]], ["Beef steak", 500, {"g": 1}, [15.0, 7.0, 10.0]], ["Pork mince", 500, {"g": 1}, [7.0, 3.0, 5.0]], ["Beef dripping", 250, {"g": 1}, [3.5, 1.5, 5.0]], ["Frozen peas", 1000, {"g": 1}, [3.0, 1.0, 2.0]], ["Eggs", 12, {"": 1}, [6.5, 3.0, 4.0]], ["Plain flour", 1000, {"g": 1, "tsp": 3, "": 30}, [1.5, 0.75, 1.5]], ["Cornflour", 300, {"g": 1, "tsp": 3, "": 10}, [2.0, 1.0, 2.0]], ["Rice", 1000, {"g": 1, "": 300}, [2.5, 1.2, 2.0]], ["Spaghetti or rigatoni", 500, {"g": 1}, [1.5, 0.8, 1.5]], ["Panko breadcrumbs", 200, {"g": 1}, [3.0, 1.5, 3.0]], ["Chicken stock", 1000, {"ml": 1, "": 250}, [3.0, 1.2, 2.5]], ["Soy sauce", 500, {"ml": 1, "tsp": 5, "": 15}, [4.0, 1.5, 3.0]], ["Fish sauce", 300, {"ml": 1, "tsp": 5}, [3.5, 1.5, 3.0]], ["Oyster sauce", 500, {"ml": 1, "tsp": 5}, [4.0, 1.5, 3.5]], ["Sesame oil", 150, {"ml": 1, "tsp": 5}, [4.5, 2.0, 4.0]], ["Shaoxing wine", 500, {"ml": 1, "tsp": 5}, [5.0, 2.5, 4.0]], ["Chilli crisp", 210, {"tsp": 5, "": 15}, [5.5, 3.0, 4.5]], ["Worcestershire sauce", 250, {"ml": 1, "tsp": 5}, [4.0, 1.5, 3.5]], ["Ketchup", 500, {"ml": 1, "tsp": 5}, [3.5, 1.8, 2.5]], ["Tomato sauce", 500, {"ml": 1, "tsp": 5, "": 30}, [3.0, 1.2, 2.5]], ["Sesame seeds", 100, {"tsp": 3, "": 10}, [3.0, 1.2, 3.0]], ["Paprika", 40, {"tsp": 2.5, "": 1}, [3.0, 1.0, 3.0]], ["Smoked paprika", 40, {"tsp": 2.5, "": 1}, [3.0, 1.0, 3.0]], ["Cayenne pepper", 40, {"tsp": 2.5, "": 1}, [3.0, 1.0, 3.0]], ["Italian seasoning", 40, {"tsp": 2.5, "": 1}, [3.0, 1.0, 3.0]], ["Dried oregano", 40, {"tsp": 2.5, "": 1}, [3.0, 1.0, 3.0]], ["Cumin", 40, {"tsp": 2.5, "": 1}, [3.0, 1.0, 3.0]], ["Curry powder", 40, {"tsp": 2.5, "": 1}, [3.0, 1.0, 3.0]], ["Garlic powder", 40, {"tsp": 2.5, "": 1}, [3.0, 1.0, 3.0]], ["Onion powder", 40, {"tsp": 2.5, "": 1}, [3.0, 1.0, 3.0]], ["Chilli flakes", 40, {"tsp": 2.5, "": 1}, [3.0, 1.0, 3.0]], ["Ground coriander", 40, {"tsp": 2.5, "": 1}, [3.0, 1.0, 3.0]]], "avoid": [["Gluten", "^(plain|self-raising|bread|tipo 00) flour$|\\bbread\\b|loaves|naan|shokupan|panko|spaghetti|fettuccine|risoni|cavatappi|fusilli|fileja|ravioli|lasagne|egg noodles|ramen|ramyun|wrappers|soy sauce|oyster sauce|golden curry|worcestershire|stock cubes|gravox|shaoxing|taco kit|jam rolls|tonkatsu sauce|crumbed|schnitzel|pies|dumplings|pizza"], ["Dairy", "(?<!peanut )\\bbutter\\b|cream|(?<!coconut )milk|cheese|cheddar|mozzarella|parmesan|pecorino|paneer|yoghurt|naan|ravioli|caesar dressing|custard|pizza"], ["Eggs", "\\beggs?\\b|mayonnaise|egg noodles|ravioli|lasagne sheets|caesar dressing|coleslaw|tartare|schnitzel"], ["Peanuts", "peanut"], ["Tree nuts", "cashew|almond|walnut|pecan|pistachio|hazelnut|pesto"], ["Sesame", "sesame|tahini"], ["Soy", "\\bsoy\\b|golden curry|chilli crisp|tofu|miso"], ["Fish", "fish|snapper|salmon|worcestershire|caesar dressing|dashi|anchov"], ["Shellfish", "oyster sauce|prawn|shrimp|crab|mussel|laksa paste"], ["Meat", "chicken|beef|steak|pork|bacon|guanciale|nduja|\\bham\\b|kabana|sausage|lamb|duck|dripping|meat pies|dumplings"], ["Pork", "pork|bacon|guanciale|nduja|\\bham\\b|kabana|(?<!beef )sausage|dumplings"], ["Beef", "beef|steak"], ["Alcohol", "wine(?! vinegar)|sake|mirin|cointreau|marnier"], ["Spicy food", "#spicy"]], "pricesChecked": "2026-11-16", "inflation": [0.03, 0.035, 0.025], "longMinutes": 45, "maxLong": 1, "maxFried": 1, "maxWeekMinutes": 180}};

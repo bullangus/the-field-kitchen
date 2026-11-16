@@ -2,7 +2,7 @@
 title: Sushi Rice
 cuisine: Japanese
 category: Sushi
-tags: Vegetarian
+tags: Vegetarian, Vegan
 serves: 2 (about 12 nigiri)
 source: Our own
 goes with: Chicken Avocado Nigiri, Salmon Nigiri, Salmon Aburi

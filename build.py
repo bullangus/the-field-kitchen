@@ -24,7 +24,7 @@ import sys
 from datetime import date, datetime
 from pathlib import Path
 
-from ingredients import AVOID, FOOD_INFLATION, PACKS, PRICES_CHECKED, AISLES, BAKERY, DAIRY, DELI, MEAT, PRODUCE, GROCERIES, GROCERY_SUGGESTIONS, INGREDIENTS, NAMES, name_variants, parse_line
+from ingredients import AVOID, FOOD_INFLATION, KEEPS, KEEPS_DEFAULT, PACKS, PRICES_CHECKED, AISLES, BAKERY, DAIRY, DELI, MEAT, PRODUCE, GROCERIES, GROCERY_SUGGESTIONS, INGREDIENTS, NAMES, name_variants, parse_line
 
 ROOT = Path(__file__).parent
 RECIPES = ROOT / "recipes"
@@ -62,7 +62,9 @@ TONIGHT_COUNT = 3  # quick recipes on the home page's "Cook tonight" tile
 # Styles that aren't a meal on their own, so "Cook tonight" and its counter skip them.
 NOT_MEALS = ("Sides", "Desserts", "Breads", "Baking", "Eggs")
 # Week plans: ready-made sets of weeknight dinners that share ingredients (plans.html).
-PLAN_DAYS = ("Mon", "Tue", "Wed", "Thu", "Fri")
+PLAN_SIZE = 5  # dinners in a plan; listed in the order to cook them (KEEPS), not on set days
+# Diets on the plans page: a dinner fits when it carries one of these tags.
+PLAN_DIETS = (("Vegetarian", ("vegetarian", "vegan")), ("Vegan", ("vegan",)))
 PLAN_COUNT = 6
 PLAN_SKIP_STYLES = ("Sushi", "Duck")  # built from parts, or kept for a special meal
 # Plans are easy regular dinners: no special-occasion, party, barbecue or multi-day cooking.
@@ -186,7 +188,7 @@ CUISINE_STORIES = {
 }
 QUICK_CHIPS = (("quick", f"Under {QUICK_MINUTES} min"), ("make-ahead", "Make ahead"), ("project", "Weekend project"))
 # Hand-picked tags (a recipe's `tags:` line), in chip order. Others are allowed and sort after.
-TAG_ORDER = ("Christmas", "Sunday roast", "Barbecue", "Party food", "Vegetarian", "Spicy")
+TAG_ORDER = ("Christmas", "Sunday roast", "Barbecue", "Party food", "Vegetarian", "Vegan", "Spicy")
 # Content hash of each stylesheet and script written so far, filled in by write().
 ASSET_VERSIONS = {}
 # docs/ is fully generated, but these must survive a rebuild.
@@ -571,6 +573,7 @@ def search_index(book, basics):
                         "lunch": lunch_score(r), "meal": r["category"] not in NOT_MEALS, "plan": plannable(r),
                         "basic": bool(r.get("basic")),
                         "minutes": plan_minutes(r), "fried": deep_fried(r),
+                        "keeps": keeps_days(r), "keepsWhat": keeps_info(r)[1].lower(), "labels": r["labels"],
                         "ingredients": [parse_line(line) for line in bullets(parts.get("Ingredients"))],
                         "options": [{"name": name, "ingredients": [parse_line(line) for line in bullets(md)]}
                                     for name, md in options_of(parts.get("Topping Options"))]})
@@ -581,7 +584,7 @@ def search_index(book, basics):
             "suggestions": list(GROCERY_SUGGESTIONS),
             "names": [[p, us, uk, lines_only] for p, us, uk, lines_only in NAMES],
             # The week plan rules, so "build my week" in the browser picks the same way the build does.
-            "plan": {"days": list(PLAN_DAYS), "lunches": PLAN_LUNCHES, "maxSame": PLAN_MAX_SAME, "minCuisines": PLAN_MIN_CUISINES,
+            "plan": {"size": PLAN_SIZE, "diets": [[label, list(tags)] for label, tags in PLAN_DIETS], "lunches": PLAN_LUNCHES, "maxSame": PLAN_MAX_SAME, "minCuisines": PLAN_MIN_CUISINES,
                      "fresh": list(PLAN_FRESH), "freshWeight": PLAN_FRESH_WEIGHT, "everyday": list(PLAN_EVERYDAY),
                      "count": PLAN_COUNT, "names": [list(n) for n in PLAN_NAMES],
                      "packs": [list(p) for p in PACKS], "avoid": [list(a) for a in AVOID],
@@ -1254,6 +1257,39 @@ def plan_minutes(r):
     return round(minutes_in(r.get("time", "")))
 
 
+def keeps_info(r):
+    """(days, shopping name) for the most perishable thing a dinner needs (KEEPS), so plans
+    list the dinners soonest first."""
+    _, parts = sections(r["body"])
+    days, what = KEEPS_DEFAULT, ""
+    for line in bullets(parts.get("Ingredients")):
+        name = parse_line(line)["n"] or ""
+        for pattern, keep in KEEPS:
+            if re.search(pattern, name, re.I):
+                if keep < days:
+                    days, what = keep, name
+                break
+    return days, what
+
+
+def keeps_days(r):
+    return keeps_info(r)[0]
+
+
+def plan_note(r, place):
+    """The small line under a dinner in a plan: cuisine, time, and how soon to cook it. A
+    dinner further down the plan than its fresh food keeps says to freeze that on shop day."""
+    keep, what = keeps_info(r)
+    soon = ""
+    if keep <= 3:
+        soon = f" · cook within {keep} days" if place <= keep else f" · freeze the {what.lower()} on shop day"
+    return f'{"Basic · " if r.get("basic") else ""}{r["cuisine"]} · {short_time(plan_minutes(r))}{soon}'
+
+
+def plan_tags(r):
+    return "".join(f'<span class="plan-tag">{html.escape(t)}</span>' for t in r["labels"])
+
+
 def deep_fried(r):
     return bool(re.search(DEEP_FRIED, r["body"], re.I))
 
@@ -1264,7 +1300,7 @@ def short_time(minutes):
 
 
 def week_plans(book, basics):
-    """PLAN_COUNT sets of PLAN_DAYS weeknight dinners, each chosen to share as much shopping
+    """PLAN_COUNT sets of PLAN_SIZE weeknight dinners, each chosen to share as much shopping
     as it can (fresh food counting most) while staying varied: no more than PLAN_MAX_SAME
     from one style or cuisine, at least PLAN_MIN_CUISINES cuisines, and no two plans sharing
     more than one dinner. Every combination is scored, so the best plans are always found."""
@@ -1284,8 +1320,10 @@ def week_plans(book, basics):
         for key in ("category", "cuisine"):
             counts = {}
             for r, _ in combo:
+                if key == "category" and r.get("basic"):
+                    continue  # basics are all one "style"; their cuisines keep them varied
                 counts[r[key]] = counts.get(r[key], 0) + 1
-            if max(counts.values()) > PLAN_MAX_SAME:
+            if counts and max(counts.values()) > PLAN_MAX_SAME:
                 return False
         plan = [r for r, _ in combo]
         return (len({r["cuisine"] for r in plan}) >= PLAN_MIN_CUISINES
@@ -1301,13 +1339,13 @@ def week_plans(book, basics):
                 weight[name] = w
         return sum(weight[n] * (k - 1) for n, k in uses.items())
 
-    ranked = sorted((c for c in itertools.combinations(pool, len(PLAN_DAYS)) if varied(c)),
+    ranked = sorted((c for c in itertools.combinations(pool, PLAN_SIZE) if varied(c)),
                     key=lambda c: (-score(c), sorted(r["title"] for r, _ in c)))
     plans = []
     for combo in ranked:
         titles = {r["title"] for r, _ in combo}
         if all(len(titles & {r["title"] for r in p}) <= 1 for p in plans):
-            plans.append([r for r, _ in combo])
+            plans.append(sorted((r for r, _ in combo), key=lambda r: (keeps_days(r), r["title"])))
         if len(plans) == PLAN_COUNT:
             break
     return plans, {r["title"]: w for r, w in pool}
@@ -1328,11 +1366,11 @@ def plans_html(book, basics):
         fresh = [n for n in shared if weights_of(weights, plan, n) > 1 and n not in PLAN_EVERYDAY]
         lead = ", ".join(n.lower() for n in (fresh or shared)[:3])
         days = "".join(
-            f'<li{" data-lunch" if r in lunches else ""}><span class="plan-day">{day}</span><div><a href="{r["url"]}">{html.escape(r["title"])}</a>'
-            f'<small>{"Basic · " if r.get("basic") else ""}{html.escape(r["cuisine"])} · {short_time(plan_minutes(r))}</small></div>'
+            f'<li{" data-lunch" if r in lunches else ""}><span class="plan-day">{n}</span><div><a href="{r["url"]}">{html.escape(r["title"])}</a>'
+            f'{plan_tags(r)}<small>{html.escape(plan_note(r, n))}</small></div>'
             + (f'<span class="plan-lunch" title="{html.escape(r["leftovers"])}">+ lunch</span>' if r in lunches else "")
             + "</li>"
-            for day, r in zip(PLAN_DAYS, plan))
+            for n, r in enumerate(plan, 1))
         leftovers = (f'<p class="plan-leftovers">{svg_icon("box")}<span>For lunches, cook extra '
                      f'{html.escape(join_and([r["title"] for r in lunches]))}: '
                      f'{"it reheats" if len(lunches) == 1 else "they reheat"} well the next day.</span></p>' if lunches else "")
@@ -1370,7 +1408,7 @@ def plans_html(book, basics):
   <header class="page-hero">
     <p class="eyebrow">{svg_icon("calendar")}Week plans</p>
     <h1>Five dinners, one shop</h1>
-    <p>Five easy weeknight dinners from the book, each on the table within an hour of getting home (most well under), picked so they share ingredients (a bunch of spring onions or a tray of chicken thighs goes across several nights) while every night is different. Add a plan and the shopping list combines it all.</p>
+    <p>Five easy weeknight dinners from the book, each on the table within an hour of getting home (most well under), picked so they share ingredients (a bunch of spring onions or a tray of chicken thighs goes across several nights) while every night is different. No set days: each plan lists its dinners in the order to cook them, with whatever goes off soonest first. Add a plan and the shopping list combines it all.</p>
     <div class="plan-people" hidden>
       <span>Cooking for</span><div role="group" aria-label="How many people">{sizes}</div>
       <label class="plan-extra"><input type="checkbox"> Cook extra for lunches</label>
@@ -1378,8 +1416,12 @@ def plans_html(book, basics):
     </div>
     <p class="plan-tally" hidden></p>
     <details class="plan-avoid" hidden>
-      <summary>Leave out <span class="plan-avoid-count"></span></summary>
-      <p>Allergies, dietary needs or just not a fan: plans and picks skip any dinner with these.</p>
+      <summary>Diet and leave out <span class="plan-avoid-count"></span></summary>
+      <p>Vegetarian or vegan, allergies, or just not a fan: plans and picks only use dinners that fit.</p>
+      <div class="plan-avoid-groups plan-diets" role="group" aria-label="Diet">{"".join(
+          f'<button type="button" class="chip" data-diet="{html.escape(label)}" aria-pressed="false">{html.escape(label)}</button>'
+          for label, _ in PLAN_DIETS)}</div>
+      <p class="plan-avoid-head">Leave out</p>
       <div class="plan-avoid-groups" role="group" aria-label="Leave out">{"".join(
           f'<button type="button" class="chip" data-avoid="{html.escape(label)}" aria-pressed="false">{html.escape(label)}</button>'
           for label, _ in AVOID)}</div>
