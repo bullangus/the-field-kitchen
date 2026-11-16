@@ -311,7 +311,13 @@ h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600
 /* Wide pages (cuisine, recipe, list, cook) and shared headers */
 main.wide { max-width: 72rem; padding-top: 1.5rem; }
 .print-link { text-align: center; color: var(--muted); font-style: italic; margin-top: 3rem; }
-.page-hero { padding: 2.5rem 0 1rem; max-width: 42rem; }
+/* main.wide already has top padding, so the header itself starts flush. */
+.page-hero { padding: 0.75rem 0 1rem; max-width: 42rem; }
+@media (max-width: 600px) {
+  .page-hero { padding-top: 0; }
+  .page-hero h1 { font-size: 2.6rem; }
+  .page-hero .hero-actions { margin-top: 0.75rem; }
+}
 .page-hero h1 { font-size: clamp(2.4rem, 7vw, 3.6rem); margin: 0 0 0.5rem; line-height: 1; }
 .page-hero p { color: var(--muted); margin: 0 0 1rem; }
 .page-hero .eyebrow { display: inline-flex; align-items: center; gap: 0.4rem; }
