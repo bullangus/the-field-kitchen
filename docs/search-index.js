@@ -5206,7 +5206,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Japanese",
 "category": "Sushi",
 "url": "japanese/sushi/chicken-avocado-nigiri.html",
-"text": "300 g (2 rice-cooker cups / 360 ml) sushi rice 60 ml (¼ cup) bottled sushi seasoning 1 chicken breast 25 g (3 tbsp) plain flour ¼ tsp salt Pinch of pepper 1 egg, beaten 30 g (½ cup) panko breadcrumbs Neutral oil, for frying (2–3 cm deep in the pan) 1 avocado 1 nori sheet Tonkatsu sauce, to drizzle Kewpie mayonnaise, to drizzle all-purpose flour plain flour",
+"text": "300 g (2 rice-cooker cups / 360 ml) sushi rice 60 ml (¼ cup) rice vinegar 15 ml (1 tbsp) mirin 1 tbsp sugar 1 tsp salt 1 chicken breast 25 g (3 tbsp) plain flour ¼ tsp salt Pinch of pepper 1 egg, beaten 30 g (½ cup) panko breadcrumbs Neutral oil, for frying (2–3 cm deep in the pan) 1 avocado 1 nori sheet Tonkatsu sauce, to drizzle Kewpie mayonnaise, to drizzle all-purpose flour plain flour",
 "meta": "Serves 2",
 "intro": "Hot, crunchy katsu on cool sushi rice, held together with a band of nori and zigzagged with tonkatsu sauce and Kewpie. It's our take on the chicken nigiri that comes round on sushi trains all over Australia: crumbed chicken and avocado on hand-shaped rice. One chicken breast makes about 12 pieces.",
 "photo": "",
@@ -5225,13 +5225,40 @@ window.FIELD_KITCHEN_INDEX = [
 "u": "g"
 },
 {
-"t": "60 ml (¼ cup) bottled sushi seasoning",
-"n": "Sushi seasoning",
+"t": "60 ml (¼ cup) rice vinegar",
+"n": "Rice vinegar",
 "a": "International foods",
 "s": false,
-"p": "\\bsushi seasoning\\b|\\bseasoning\\b",
+"p": "\\brice vinegar\\b|\\bvinegar\\b",
 "q": 60.0,
 "u": "ml"
+},
+{
+"t": "15 ml (1 tbsp) mirin",
+"n": "Mirin",
+"a": "International foods",
+"s": false,
+"p": "\\bmirin\\b",
+"q": 15.0,
+"u": "ml"
+},
+{
+"t": "1 tbsp sugar",
+"n": "Sugar",
+"a": "Baking & eggs",
+"s": true,
+"p": "\\bsugar\\b",
+"q": 3.0,
+"u": "tsp"
+},
+{
+"t": "1 tsp salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": 1.0,
+"u": "tsp"
 },
 {
 "t": "1 chicken breast",

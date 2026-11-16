@@ -15,7 +15,10 @@ The trick is halving the breast through the middle and pounding it thin, so ever
 ### For the rice
 
 - 300 g (2 rice-cooker cups / 360 ml) sushi rice
-- 60 ml (¼ cup) bottled sushi seasoning
+- 60 ml (¼ cup) rice vinegar
+- 15 ml (1 tbsp) mirin
+- 1 tbsp sugar
+- 1 tsp salt
 
 ### For the chicken
 
@@ -37,7 +40,7 @@ The trick is halving the breast through the middle and pounding it thin, so ever
 ## Method
 
 1. Rinse the rice until the water runs almost clear, then cook it in a rice cooker or pot.
-2. While it's hot, tip the rice into a wide bowl and fold the sushi seasoning through with a rice paddle, using a cutting motion so the grains don't get mashed. Let it cool to room temperature.
+2. While the rice cooks, stir the rice vinegar, mirin, sugar and salt together until the sugar and salt dissolve. While the rice is hot, tip it into a wide bowl and fold the seasoning through with a rice paddle, using a cutting motion so the grains don't get mashed. Let it cool to room temperature.
 3. Slice the chicken breast in half horizontally into two thin fillets. Pound each between two sheets of baking paper with a meat mallet or rolling pin until it's an even thickness, about 1 cm.
 4. Mix the flour, salt and pepper in a shallow dish. Put the beaten egg and the panko in two more dishes.
 5. Coat each piece of chicken in the seasoned flour and shake off the excess, dip it in the egg, then press it firmly into the panko on both sides.
