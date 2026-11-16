@@ -48,7 +48,8 @@ It's a meal that's as easy or as indulgent as you want it to be. Melting garlic 
 - 1 clove garlic, crushed
 - A knob of butter
 
-1. Fry the mushrooms in the butter over medium-high heat until golden, adding the garlic for the last minute. Spoon over the potatoes.
+1. Put the mushrooms in a dry frying pan, with no butter or oil, over medium-high heat. Let them sweat and give up their liquid until it cooks off and they begin to caramelise.
+2. Add the butter and garlic and toss until the butter has melted and the garlic is fragrant. Spoon over the potatoes.
 
 ### Bacon
 
