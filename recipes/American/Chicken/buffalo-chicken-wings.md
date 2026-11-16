@@ -14,7 +14,7 @@ These are made for sharing in front of the footy or at a party, piled high on a 
 
 ## Ingredients
 
-- 65 g (½ cup) plain (all-purpose) flour
+- 65 g (½ cup) plain flour
 - ¼ tsp ground paprika
 - ¼ tsp cayenne pepper
 - ¼ tsp salt

@@ -20,7 +20,7 @@ Standing it upright in its parcel means it never needs turning, so it comes off 
 - 6 makrut lime leaves, torn
 - Salt and black pepper, to season
 - 2 tbsp toasted sesame seeds
-- Sliced spring onion (green onion), to serve
+- Sliced spring onion, to serve
 - Fresh coriander sprigs, to serve
 - Steamed jasmine rice, to serve
 - Lime wedges, to serve

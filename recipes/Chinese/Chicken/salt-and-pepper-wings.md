@@ -28,7 +28,7 @@ The double fry is what makes them shatter when you bite in, and the peppery salt
 
 ### For the batter
 
-- 130 g (1 cup) cornflour (cornstarch)
+- 130 g (1 cup) cornflour
 - 65 g (½ cup) plain flour
 - 375 ml (1½ cups) cold water
 

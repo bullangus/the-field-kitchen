@@ -15,7 +15,7 @@ The sweet and savoury glaze, the crunch of the double fry and the sprinkle of se
 ## Ingredients
 
 - 450 g (1 lb) chicken wings, flats and drumettes (this much sauce covers up to 900 g / 2 lb)
-- 35 g (¼ cup) potato starch or cornflour (cornstarch)
+- 35 g (¼ cup) potato starch or cornflour
 - 700 ml (3 cups) neutral oil, for deep-frying
 - Toasted white sesame seeds
 

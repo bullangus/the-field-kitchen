@@ -15,8 +15,8 @@ It's a dish that's all about doing a few simple things well: freshly grated Parm
 
 - 250 g (8 oz) dried fettuccine
 - 42 g (3 tbsp) unsalted butter
-- 1 small eschallot (French shallot), very finely minced
-- 125 ml (½ cup) thickened or pure cream (heavy cream)
+- 1 small eschallot, very finely minced
+- 125 ml (½ cup) thickened or pure cream
 - 60 g (¾ cup) freshly and finely grated Parmigiano Reggiano or parmesan
 - ¼ tsp salt
 - ½ tsp MSG

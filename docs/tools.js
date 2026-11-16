@@ -197,6 +197,7 @@
       summary.textContent = (toBuy.length ? toBuy.length + " to buy" : "Everything's in the trolley") +
         (got.length ? " · " + got.length + " in the trolley" : "");
       restore.hidden = !hiddenCount;
+      if (window.FieldKitchenNames) { FieldKitchenNames.swap(aislesBox, true); FieldKitchenNames.swap(recipesBox, true); }
       restore.textContent = "Show " + hiddenCount + " removed item" + (hiddenCount === 1 ? "" : "s");
     };
 
@@ -305,6 +306,7 @@
         li.addEventListener("pointerdown", function (e) { e.preventDefault(); addItem(n); });
         suggestBox.appendChild(li);
       });
+      if (window.FieldKitchenNames) FieldKitchenNames.swap(suggestBox, true);
       suggestBox.hidden = false;
       addInput.setAttribute("aria-expanded", "true");
       setActive(-1);
@@ -404,6 +406,7 @@
         li.appendChild(a); li.appendChild(where); li.appendChild(bar); li.appendChild(detail);
         matchList.appendChild(li);
       });
+      if (window.FieldKitchenNames) { FieldKitchenNames.swap(matchList, true); FieldKitchenNames.swap(picks, true); }
     };
     var toggle = function (name) {
       var i = have.indexOf(name);

@@ -275,6 +275,55 @@ GROCERY_SUGGESTIONS = (
     "Sandwich bags", "Tissues", "Toothpaste", "Shampoo", "Soap", "Batteries",
 )
 
+# Ingredient names that differ by country, for the Australia / UK / US switch on recipe pages
+# and the shopping list. The book is written in Australian names; (pattern, US, UK, lines_only).
+# "$1" carries a plural "s" through. lines_only entries swap only in ingredient lines, where the
+# meaning is certain ("tomato sauce" in a method could be the sauce itself, not ketchup).
+NAMES = [
+    (r"\bcornflour\b", "cornstarch", "cornflour", False),
+    (r"\bplain flour\b", "all-purpose flour", "plain flour", False),
+    (r"\bself-raising flour\b", "self-rising flour", "self-raising flour", False),
+    (r"\bspring onion(s?)\b", "scallion$1", "spring onion$1", False),
+    (r"\bbicarbonate of soda\b", "baking soda", "bicarbonate of soda", False),
+    (r"\bthickened (?:or pure )?cream\b", "heavy cream", "double cream", False),
+    (r"\bbrown onion(s?)\b", "yellow onion$1", "brown onion$1", False),
+    (r"\beschallot(s?)\b", "shallot$1", "shallot$1", False),
+    (r"\bcapsicum(s?)\b", "bell pepper$1", "pepper$1", False),
+    (r"\bcaster sugar\b", "superfine sugar", "caster sugar", False),
+    (r"\bicing sugar\b", "powdered sugar", "icing sugar", False),
+    (r"\b(beef|pork|chicken) mince\b", "ground $1", "$1 mince", False),
+    (r"\bprawn(s?)\b", "shrimp", "prawn$1", False),
+    (r"\bcos lettuce\b", "romaine lettuce", "cos lettuce", False),
+    (r"\bstreaky bacon\b", "bacon", "streaky bacon", False),
+    (r"\bfresh coriander\b|\bcoriander (leaves|sprigs)\b", "cilantro", "fresh coriander", False),
+    (r"\bchilli flakes\b", "red pepper flakes", "chilli flakes", False),
+    (r"\bzucchini\b", "zucchini", "courgette", False),
+    (r"\beggplant(s?)\b", "eggplant$1", "aubergine$1", False),
+    (r"\brocket\b", "arugula", "rocket", False),
+    (r"\bbeetroot\b", "beet", "beetroot", False),
+    (r"\btinned\b", "canned", "tinned", False),
+    (r"\btomato sauce\b", "ketchup", "ketchup", True),
+]
+
+
+def name_variants(line):
+    """Regex alternatives for the US and UK names of anything in this line, so method steps
+    written in either still link back to it."""
+    out = []
+    for pattern, us, uk, _ in NAMES:
+        m = re.search(pattern, line, re.I)
+        if not m:
+            continue
+        group = m.group(1) if m.groups() else None
+        for name in (us, uk):
+            # A plural "(s?)" stays optional; a captured word ("beef") is filled in.
+            fill = "s?" if group in ("", "s") else re.escape((group or "").lower())
+            alt = r"\b" + re.escape(name.lower()).replace(r"\$1", "$1").replace("$1", fill).replace(r"\ ", " ") + r"\b"
+            if alt not in out:
+                out.append(alt)
+    return out
+
+
 COMPILED = [(re.compile(p, re.I), p, name, aisle, staple) for p, name, aisle, staple in INGREDIENTS]
 
 FRACTIONS = {"½": 0.5, "¼": 0.25, "¾": 0.75, "⅓": 1 / 3, "⅔": 2 / 3, "⅛": 0.125}
@@ -332,6 +381,10 @@ def parse_line(line):
     for rx, pattern, name, aisle, staple in COMPILED:
         if rx.search(line):
             item.update(n=name, a=aisle, s=staple, p=highlight_pattern(pattern) if name else "")
+            if name:
+                extra = [v for v in name_variants(line) if v not in item["p"].split("|")]
+                if extra:
+                    item["p"] = "|".join([item["p"]] + extra)
             break
     else:
         # Unknown ingredient: shop for it by its own words, minus amounts and prep notes.

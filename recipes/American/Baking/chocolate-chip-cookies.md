@@ -16,7 +16,7 @@ There's a moment, somewhere between 8 and 10 minutes, when the edges are deep go
 
 - 200 g (1½ cups plus 1 tbsp) plain flour, spooned and levelled
 - 4 g (¾ tsp) table salt
-- 4 g (¾ tsp) bicarbonate of soda (baking soda)
+- 4 g (¾ tsp) bicarbonate of soda
 - 169 g (¾ cup) unsalted butter, divided: 113 g and 56 g
 - 200 g (1 cup, packed) dark brown sugar
 - 50 g (¼ cup) white sugar

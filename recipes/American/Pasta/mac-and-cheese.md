@@ -23,9 +23,9 @@ Grating your own cheese is the one job everyone wants to skip, and it's the one 
 - 1 tsp garlic powder, or to taste
 - 1 tsp smoked paprika, or to taste
 - 45 g (3 tbsp) butter
-- 24 g (3 tbsp) plain (all-purpose) flour
+- 24 g (3 tbsp) plain flour
 - 1 can (about 350 ml / 12 oz) evaporated milk (not condensed milk)
-- 480 ml (2 cups) thickened (heavy) cream
+- 480 ml (2 cups) thickened cream
 - 1 good spoonful Dijon mustard
 - A splash of milk, if the sauce is too thick
 - Sliced spring onions, chives or parsley, to garnish

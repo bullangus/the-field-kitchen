@@ -19,8 +19,8 @@ The secret is in the tenderising: a little bicarb and a short rest make the beef
 - 30 ml (2 tbsp) water
 - 2 tsp Shaoxing rice wine
 - ½ tsp table salt
-- ¼ tsp bicarbonate of soda (baking soda)
-- 16 g (2 tbsp) cornflour (cornstarch)
+- ¼ tsp bicarbonate of soda
+- 16 g (2 tbsp) cornflour
 - 15 ml (1 tbsp) neutral oil
 
 ### For the sauce
@@ -34,8 +34,8 @@ The secret is in the tenderising: a little bicarb and a short rest make the beef
 ### For the rest of the dish
 
 - 1 tbsp minced garlic (about 2 cloves)
-- ½ large brown (yellow) onion, sliced
-- 1 bunch spring onions (green onions), cut into 5 cm (2 inch) pieces, white and green parts separated
+- ½ large brown onion, sliced
+- 1 bunch spring onions, cut into 5 cm (2 inch) pieces, white and green parts separated
 - 30 g (1 oz) medium-thickness rice vermicelli (optional; use more or less to preference)
 - Oil, as needed for cooking
 

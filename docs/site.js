@@ -16,6 +16,57 @@
     try { var v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; } catch (e) { return fallback; }
   }
 
+  // ---- Ingredient names: Australia / UK / US ----
+  // The book is written in Australian names. A reader can pick UK or US names; ingredient
+  // lines and the shopping list swap every listed name, prose swaps only the unambiguous ones.
+  // Runs before recipe.js and tools.js, so what they read and build is already swapped.
+  var NAMES = ((window.FIELD_KITCHEN_SHOP || {}).names || []).map(function (n) {
+    return { rx: new RegExp(n[0], "gi"), us: n[1], uk: n[2], linesOnly: n[3] };
+  });
+  var namesPref = stored("fk-names", "au");
+  function swapNames(root, lines) {
+    if (namesPref === "au" || !root || !NAMES.length) return;
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (n) { return n.parentNode.closest("input, textarea, script, .names-pick") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT; }
+    });
+    var nodes = [], node;
+    while ((node = walker.nextNode())) nodes.push(node);
+    nodes.forEach(function (t) {
+      var text = t.nodeValue;
+      NAMES.forEach(function (n) {
+        if (n.linesOnly && !lines) return;
+        text = text.replace(n.rx, function (match) {
+          var groups = [].slice.call(arguments, 1, -2);
+          var out = (namesPref === "us" ? n.us : n.uk).replace("$1", (groups[0] || "").toLowerCase());
+          return match.charAt(0) === match.charAt(0).toUpperCase() ? out.charAt(0).toUpperCase() + out.slice(1) : out;
+        });
+      });
+      if (text !== t.nodeValue) t.nodeValue = text;
+    });
+  }
+  window.FieldKitchenNames = { swap: swapNames, pref: namesPref };
+  (function () {
+    var page = document.querySelector(".recipe-page");
+    if (page) {
+      [].forEach.call(page.querySelectorAll(".ingredients-panel, .option ul"), function (el) { swapNames(el, true); });
+      [].forEach.call(page.querySelectorAll(".hero-intro, .hero-story, .method-panel, .option ol, .option > p, .notes-panel"), function (el) { swapNames(el, false); });
+    }
+    [].forEach.call(document.querySelectorAll(".pantry"), function (el) { swapNames(el, true); });
+  })();
+  // The switch itself: changing it reloads, so every list, link and amount is rebuilt in the new names.
+  [].forEach.call(document.querySelectorAll(".names-pick"), function (pick) {
+    pick.hidden = false;
+    [].forEach.call(pick.querySelectorAll("[data-names]"), function (b) {
+      b.setAttribute("aria-checked", String(b.getAttribute("data-names") === namesPref));
+      b.addEventListener("click", function () {
+        var v = b.getAttribute("data-names");
+        if (v === namesPref) return;
+        try { localStorage.setItem("fk-names", JSON.stringify(v)); } catch (e) { /* this visit only */ }
+        location.reload();
+      });
+    });
+  });
+
   // ---- Menus ----
   var menuToggle = nav.querySelector(".menu-toggle");
   var cuisineMenu = nav.querySelector(".cuisine-menu");

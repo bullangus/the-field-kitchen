@@ -28,8 +28,8 @@ The best moment is pulling it from the oven, the cheese bubbling and golden at t
 - 2 medium carrots, diced
 - 2 cloves garlic, pressed or minced
 - 1 tsp Italian seasoning
-- 16 g (2 tbsp) plain (all-purpose) flour
-- 30 ml (2 tbsp) tomato sauce (ketchup) or tomato paste
+- 16 g (2 tbsp) plain flour
+- 30 ml (2 tbsp) tomato sauce or tomato paste
 - 360 ml (1½ cups) chicken stock
 - 5 ml (1 tsp) Worcestershire sauce
 - 70 g (½ cup) frozen peas and corn

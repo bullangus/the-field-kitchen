@@ -23,7 +23,7 @@ import sys
 from datetime import date, datetime
 from pathlib import Path
 
-from ingredients import AISLES, GROCERIES, GROCERY_SUGGESTIONS, INGREDIENTS, parse_line
+from ingredients import AISLES, GROCERIES, GROCERY_SUGGESTIONS, INGREDIENTS, NAMES, name_variants, parse_line
 
 ROOT = Path(__file__).parent
 RECIPES = ROOT / "recipes"
@@ -480,7 +480,9 @@ def search_index(book):
         lines = bullets(parts.get("Ingredients")) + bullets(parts.get("Topping Options"))
         serves = re.match(r"\d+", r["serves"])
         entries.append({"title": r["title"], "cuisine": r["cuisine"], "category": r["category"],
-                        "url": r["url"], "text": " ".join(lines + r["labels"]),
+                        # Search finds a recipe by its US and UK ingredient names too ("cilantro").
+                        "url": r["url"], "text": " ".join(lines + r["labels"] + [re.sub(r"\\b|\\|s\?", "", v).replace("?", "")
+                                                                                for line in lines for v in name_variants(line)]),
                         "meta": html.unescape(meta_line(r)), "intro": intro(r),
                         "photo": r.get("photo", ""), "tags": r["tags"],
                         "serves": int(serves.group()) if serves else 1,
@@ -491,7 +493,8 @@ def search_index(book):
     shop = {"aisles": list(AISLES),
             "ingredients": [[p, name, aisle, staple] for p, name, aisle, staple in INGREDIENTS if name],
             "groceries": [[p, aisle] for p, aisle in GROCERIES],
-            "suggestions": list(GROCERY_SUGGESTIONS)}
+            "suggestions": list(GROCERY_SUGGESTIONS),
+            "names": [[p, us, uk, lines_only] for p, us, uk, lines_only in NAMES]}
     return ("window.FIELD_KITCHEN_INDEX = " + json.dumps(entries, ensure_ascii=False, indent=0) + ";\n"
             "window.FIELD_KITCHEN_SHOP = " + json.dumps(shop, ensure_ascii=False) + ";\n")
 
@@ -926,6 +929,13 @@ def notes_panel(md):
     return "".join(out)
 
 
+# Australia / UK / US ingredient names (site.js swaps them; the book is written in Australian).
+NAMES_PICK = ('<div class="names-pick" role="radiogroup" aria-label="Ingredient names" hidden>'
+              + "".join(f'<button type="button" role="radio" aria-checked="false" data-names="{code}" title="{title} names">'
+                        f'{code.upper()}</button>' for code, title in (("au", "Australian"), ("uk", "UK"), ("us", "US")))
+              + "</div>")
+
+
 def recipe_page_html(book, r, prev, nxt):
     root = "../../"
 
@@ -992,7 +1002,7 @@ def recipe_page_html(book, r, prev, nxt):
   </div>
   <div class="recipe-layout" data-tab="ingredients">
     <aside class="ingredients-panel" aria-label="Ingredients">
-      <h2>Ingredients</h2>
+      <div class="panel-head"><h2>Ingredients</h2>{NAMES_PICK}</div>
       <p class="scale-note" hidden>Amounts with a number are scaled and rounded. Amounts in the method, and things like "to taste" or "a handful", stay as written.</p>
       {render(parts.get("Ingredients", ""))}
       <p class="panel-hint">Tick things off as you go. Tap an ingredient's name to see where it's used.</p>
@@ -1024,6 +1034,7 @@ def list_html(book):
         <button type="button" class="pill pill-outline pill-icon list-more-toggle" aria-expanded="false" aria-haspopup="menu" aria-label="More">{svg_icon("dots")}</button>
         <ul class="list-more-menu" role="menu" hidden>
           <li><button type="button" class="list-restore" role="menuitem" hidden>Show removed items</button></li>
+          <li class="list-more-names">Ingredient names {NAMES_PICK}</li>
           <li><button type="button" class="list-clear" role="menuitem">Clear list</button></li>
         </ul>
       </div>
