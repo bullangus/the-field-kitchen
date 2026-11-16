@@ -19,7 +19,7 @@ The secret is in the tenderising: a little bicarb and a short rest make the beef
 - 30 ml (2 tbsp) water
 - 2 tsp Shaoxing rice wine
 - ½ tsp table salt
-- ¼ tsp bicarbonate of soda
+- ¼ tsp bicarb soda
 - 16 g (2 tbsp) cornflour
 - 15 ml (1 tbsp) neutral oil
 
@@ -41,7 +41,7 @@ The secret is in the tenderising: a little bicarb and a short rest make the beef
 
 ## Method
 
-1. In a mixing bowl, combine the beef, water, 2 tsp Shaoxing wine, salt and bicarbonate of soda. Mix vigorously until the beef absorbs most of the liquid.
+1. In a mixing bowl, combine the beef, water, 2 tsp Shaoxing wine, salt and bicarb soda. Mix vigorously until the beef absorbs most of the liquid.
 2. Add the cornflour and mix until the beef is well coated, then add the 1 tbsp oil and mix until evenly distributed.
 3. Set aside to marinate for 10–15 minutes while you prepare the rest of the ingredients, or marinate in the fridge overnight.
 4. For the optional noodle nest, heat 2.5–5 cm (1–2 inches) of oil in a wok or pan to about 175°C (350°F). It's ready when the tip of a wooden chopstick or skewer sizzles rapidly in it.
