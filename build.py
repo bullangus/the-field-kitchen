@@ -890,10 +890,10 @@ def home_html(book):
       </div>
     </section>"""
 
-    added = sorted(recipes, key=lambda r: r["added"], reverse=True)[:RECENT_COUNT]
+    added = sorted(recipes, key=lambda r: r["entry"], reverse=True)[:RECENT_COUNT]  # newest entries first
     recent = "".join(
-        f'<li><a href="{r["url"]}">{html.escape(r["title"])}</a>'
-        f'<span>{html.escape(r["cuisine"])} · {nice_date(r["added"])}</span></li>'
+        f'<li><b class="entry-tag">Nº {r["entry"]}</b><a href="{r["url"]}">{html.escape(r["title"])}</a>'
+        f'<span>{nice_date(r["added"])}</span></li>'
         for r in added
     )
 
