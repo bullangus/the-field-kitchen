@@ -5470,6 +5470,104 @@ window.FIELD_KITCHEN_INDEX = [
 "options": []
 },
 {
+"title": "Salmon Nigiri",
+"cuisine": "Japanese",
+"category": "Sushi",
+"url": "japanese/sushi/salmon-nigiri.html",
+"text": "300 g (2 rice-cooker cups / 360 ml) sushi rice 60 ml (¼ cup) rice vinegar 15 ml (1 tbsp) mirin 1 tbsp sugar 1 tsp salt 200 g sashimi-grade salmon fillet, skin and bones removed Wasabi Soy sauce, to serve Pickled ginger, to serve",
+"meta": "Serves 2",
+"intro": "Soft, glossy slices of salmon draped over little mounds of seasoned rice, with a hidden dab of wasabi in between. The simplest sushi there is, and the one that shows off good fish. Buy sashimi-grade salmon on the day you make it.",
+"photo": "",
+"tags": [
+"sushi"
+],
+"serves": 2,
+"ingredients": [
+{
+"t": "300 g (2 rice-cooker cups / 360 ml) sushi rice",
+"n": "Sushi rice",
+"a": "International foods",
+"s": false,
+"p": "\\bsushi rice\\b|\\brice\\b",
+"q": 300.0,
+"u": "g"
+},
+{
+"t": "60 ml (¼ cup) rice vinegar",
+"n": "Rice vinegar",
+"a": "International foods",
+"s": false,
+"p": "\\brice vinegar\\b|\\bvinegar\\b",
+"q": 60.0,
+"u": "ml"
+},
+{
+"t": "15 ml (1 tbsp) mirin",
+"n": "Mirin",
+"a": "International foods",
+"s": false,
+"p": "\\bmirin\\b",
+"q": 15.0,
+"u": "ml"
+},
+{
+"t": "1 tbsp sugar",
+"n": "Sugar",
+"a": "Baking & eggs",
+"s": true,
+"p": "\\bsugar\\b",
+"q": 3.0,
+"u": "tsp"
+},
+{
+"t": "1 tsp salt",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": 1.0,
+"u": "tsp"
+},
+{
+"t": "200 g sashimi-grade salmon fillet, skin and bones removed",
+"n": "Salmon fillets",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bsalmon\\b",
+"q": 200.0,
+"u": "g"
+},
+{
+"t": "Wasabi",
+"n": "Wasabi",
+"a": "International foods",
+"s": false,
+"p": "\\bwasabi\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Soy sauce, to serve",
+"n": "Soy sauce",
+"a": "International foods",
+"s": false,
+"p": "\\bsoy sauce\\b|\\bsoy\\b",
+"q": null,
+"u": null
+},
+{
+"t": "Pickled ginger, to serve",
+"n": "Pickled ginger",
+"a": "International foods",
+"s": false,
+"p": "\\bpickled ginger\\b|\\bginger\\b",
+"q": null,
+"u": null
+}
+],
+"options": []
+},
+{
 "title": "Carne Asada Tacos",
 "cuisine": "Mexican",
 "category": "Beef",

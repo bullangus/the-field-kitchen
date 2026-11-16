@@ -12,7 +12,7 @@
 <meta name="theme-color" content="#8a3b24">
 <!-- Before first paint: mark that JS is here (so the menus start closed) and apply a saved light/dark choice. -->
 <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("fk-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
-<script src="search-index.js?v=152435dbfc" defer></script>
+<script src="search-index.js?v=1a45e03431" defer></script>
 <script src="site.js?v=c34876002e" defer></script>
 </head>
 <body>
@@ -22,7 +22,7 @@
     <div class="menu" id="site-menu">
       <div class="cuisine-menu">
         <button type="button" class="nav-button cuisine-toggle" aria-expanded="false" aria-controls="cuisine-list">Cuisines<svg class="chevron" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
-        <ul class="cuisine-list" id="cuisine-list"><li><a href="american/index.html">American<small>4</small></a></li><li><a href="australian/index.html">Australian<small>4</small></a></li><li><a href="british/index.html">British<small>7</small></a></li><li><a href="chinese/index.html">Chinese<small>6</small></a></li><li><a href="greek/index.html">Greek<small>1</small></a></li><li><a href="indian/index.html">Indian<small>2</small></a></li><li><a href="italian/index.html">Italian<small>7</small></a></li><li><a href="japanese/index.html">Japanese<small>11</small></a></li><li><a href="mexican/index.html">Mexican<small>2</small></a></li><li><a href="south-african/index.html">South African<small>3</small></a></li><li><a href="spanish/index.html">Spanish<small>1</small></a></li><li><a href="thai/index.html">Thai<small>3</small></a></li></ul>
+        <ul class="cuisine-list" id="cuisine-list"><li><a href="american/index.html">American<small>4</small></a></li><li><a href="australian/index.html">Australian<small>4</small></a></li><li><a href="british/index.html">British<small>7</small></a></li><li><a href="chinese/index.html">Chinese<small>6</small></a></li><li><a href="greek/index.html">Greek<small>1</small></a></li><li><a href="indian/index.html">Indian<small>2</small></a></li><li><a href="italian/index.html">Italian<small>7</small></a></li><li><a href="japanese/index.html">Japanese<small>12</small></a></li><li><a href="mexican/index.html">Mexican<small>2</small></a></li><li><a href="south-african/index.html">South African<small>3</small></a></li><li><a href="spanish/index.html">Spanish<small>1</small></a></li><li><a href="thai/index.html">Thai<small>3</small></a></li></ul>
       </div>
       <a class="nav-button" href="cook.html"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/></svg>What can I cook?</a>
       <a class="nav-button print" href="book.html" aria-current="page"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6"/><rect x="6" y="14" width="12" height="7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/></svg>Print</a>
@@ -173,6 +173,7 @@
 <li class="toc-category"><span>Sushi</span><ul>
 <li><a href="#japanese-sushi-chicken-avocado-nigiri">Chicken Avocado Nigiri</a></li>
 <li><a href="#japanese-sushi-salmon-aburi">Salmon Aburi</a></li>
+<li><a href="#japanese-sushi-salmon-nigiri">Salmon Nigiri</a></li>
 </ul></li>
 </ul></li>
 <li class="toc-cuisine"><a href="#mexican">Mexican</a><ul>
@@ -1722,7 +1723,7 @@
 <p class="category-list">Eggs: Egg Sando, Ramen Eggs</p>
 <p class="category-list">Pork: Tonkatsu</p>
 <p class="category-list">Sides: Shredded Cabbage</p>
-<p class="category-list">Sushi: Chicken Avocado Nigiri, Salmon Aburi</p>
+<p class="category-list">Sushi: Chicken Avocado Nigiri, Salmon Aburi, Salmon Nigiri</p>
 </section>
 
 <article class="recipe" id="japanese-breads-shokupan">
@@ -2233,7 +2234,7 @@
 <li>Lay a slice of avocado on each mound, then a strip of chicken. Wrap a strip of nori around the middle of each piece, rice, avocado and chicken together, and tuck the ends underneath (a dab of water helps them stick).</li>
 <li>Drizzle with tonkatsu sauce and Kewpie mayonnaise and serve straight away.</li>
 </ol>
-  <p class="goes-with">Goes well with <a href="#japanese-sushi-salmon-aburi">Salmon Aburi</a></p>
+  <p class="goes-with">Goes well with <a href="#japanese-sushi-salmon-aburi">Salmon Aburi</a>, <a href="#japanese-sushi-salmon-nigiri">Salmon Nigiri</a></p>
   <p class="source">Our own, inspired by the sushi trains of Australia</p>
 </article>
 
@@ -2280,7 +2281,43 @@
 <li>Sear the tops with a kitchen blowtorch until the Kewpie blisters and browns and the salmon just starts to cook.</li>
 <li>Drizzle with the tare and serve straight away.</li>
 </ol>
-  <p class="goes-with">Goes well with <a href="#japanese-sushi-chicken-avocado-nigiri">Chicken Avocado Nigiri</a></p>
+  <p class="goes-with">Goes well with <a href="#japanese-sushi-chicken-avocado-nigiri">Chicken Avocado Nigiri</a>, <a href="#japanese-sushi-salmon-nigiri">Salmon Nigiri</a></p>
+  <p class="source">Our own</p>
+</article>
+
+<article class="recipe" id="japanese-sushi-salmon-nigiri">
+  
+  <p class="kicker">Japanese · Sushi</p>
+  <h3>Salmon Nigiri</h3>
+  <p class="meta">Serves 2</p>
+  <p>Soft, glossy slices of salmon draped over little mounds of seasoned rice, with a hidden dab of wasabi in between. The simplest sushi there is, and the one that shows off good fish. Buy sashimi-grade salmon on the day you make it.</p>
+<p>The joy is in its simplicity: a firm press of rice, a clean slice of fish, and nothing to hide behind. Dip the salmon side lightly in soy sauce, never the rice, and clear the palate with pickled ginger between pieces. It sits beautifully on a platter beside Salmon Aburi and Chicken Avocado Nigiri.</p>
+<h4 class="part part-ingredients">Ingredients</h4>
+<h5>For the rice</h5>
+<ul>
+<li>300 g (2 rice-cooker cups / 360 ml) sushi rice</li>
+<li>60 ml (¼ cup) rice vinegar</li>
+<li>15 ml (1 tbsp) mirin</li>
+<li>1 tbsp sugar</li>
+<li>1 tsp salt</li>
+</ul>
+<h5>To assemble</h5>
+<ul>
+<li>200 g sashimi-grade salmon fillet, skin and bones removed</li>
+<li>Wasabi</li>
+<li>Soy sauce, to serve</li>
+<li>Pickled ginger, to serve</li>
+</ul>
+<h4 class="part part-method">Method</h4>
+<ol>
+<li>Rinse the rice until the water runs almost clear, then cook it in a rice cooker or pot.</li>
+<li>While the rice cooks, stir the rice vinegar, mirin, sugar and salt together until the sugar and salt dissolve. While the rice is hot, tip it into a wide bowl and fold the seasoning through with a rice paddle, using a cutting motion so the grains don't get mashed. Let it cool to room temperature.</li>
+<li>With a sharp knife, slice the salmon across the grain into about 12 slices, about 5 mm thick.</li>
+<li>With wet hands, shape the rice into about 12 firm oblong mounds.</li>
+<li>Dab a little wasabi on the underside of each slice of salmon, lay it over a mound of rice and press gently so it hugs the rice.</li>
+<li>Serve with soy sauce for dipping and pickled ginger on the side.</li>
+</ol>
+  <p class="goes-with">Goes well with <a href="#japanese-sushi-salmon-aburi">Salmon Aburi</a>, <a href="#japanese-sushi-chicken-avocado-nigiri">Chicken Avocado Nigiri</a></p>
   <p class="source">Our own</p>
 </article>
 <section class="cuisine" id="mexican"><h2>Mexican</h2>
@@ -2763,7 +2800,7 @@
     <p class="footer-sign">Collected, cooked and written down by <span>Angus Field</span></p>
     <p class="footer-story">Every recipe here has been made at our table, tweaked a little and argued over a lot. This book is meant to be cooked from: splattered, scribbled in and handed down, like the recipe tins and dog-eared cards that came before it.</p>
     <div class="ornament">· · ·</div>
-    <p class="footer-meta"><a href="index.html">The Field Kitchen</a> · Est. 2026 · 51 recipes and counting</p>
+    <p class="footer-meta"><a href="index.html">The Field Kitchen</a> · Est. 2026 · 52 recipes and counting</p>
   </div>
 </footer>
 </body>
