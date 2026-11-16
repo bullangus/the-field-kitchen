@@ -164,6 +164,15 @@ The home page ends with a signed footer (by Angus Field, `AUTHOR` in build.py), 
 
 ---
 
+## Field journal theme
+
+The site looks like a field journal, kept light so it never gets in the way:
+- **Typewriter labels** (`--typewriter` in style.css) for eyebrows, panel and style headings, fact labels and entry numbers. Titles and reading text stay in the two serif faces.
+- **Taped-in pages**: the home masthead, cuisine headers and recipe headers sit on dot-grid paper (in the cuisine's colour on cuisine and recipe pages) with a strip of washi tape across the top edge (`--tape`). Tape hangs off the edge, never over text or buttons.
+- **Margin rules**: a thin red margin line on the masthead and the notes panel.
+- **Stamp, entry numbers and pencil**: the inked stamp round the chef's hat, "Entry Nº" on each recipe, and the pencil underline under "Field".
+Use these sparingly on anything new: one or two touches per page, and none on controls, which stay plain and clear.
+
 ## Cuisine colours
 
 Each cuisine has its own soft colour that suits it (tomato red for American, jade for Chinese, sakura pink for Japanese, saffron for Spanish…), used on its home page tile, map pin, cuisine page and recipe headers. They are `--c-<cuisine>-bg` and `--c-<cuisine>-ink` tokens on `:root` in style.css (with dark versions in both dark blocks) and a `.tone-<cuisine>` class at the end of the screen styles. A new cuisine falls back to terracotta until it has one: pick a hue no other cuisine is close to, keep the background pale and the ink dark enough for 4.5:1 contrast on it, and check light and dark.
