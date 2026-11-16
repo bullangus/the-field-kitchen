@@ -378,29 +378,53 @@
     var avoidRules = (RULES.avoid || []).map(function (a) {
       return { label: a[0], tag: a[1].charAt(0) === "#" ? a[1].slice(1) : null, rx: a[1].charAt(0) === "#" ? null : new RegExp(a[1], "i") };
     });
-    // A diet keeps only the dinners that fit it (DIETS in ingredients.py): tagged for it,
-    // with none of its ruled-out ingredients, and never meat with dairy where that applies.
+    // A diet keeps only the dinners that fit it (DIETS in ingredients.py): tagged for it, and
+    // never meat with dairy where that applies; its leave-out groups apply like picked ones.
     var DIETS = {};
     (RULES.diets || []).forEach(function (d) {
-      DIETS[d[0]] = { tags: d[1].tags, none: d[1].none && new RegExp(d[1].none, "i"),
-        apart: d[1].apart && d[1].apart.map(function (p) { return new RegExp(p, "i"); }) };
+      DIETS[d[0]] = { tags: d[1].tags, groups: d[1].groups || [],
+        apart: d[1].apart && { a: new RegExp(d[1].apart[0], "i"), b: new RegExp(d[1].apart[1], "i"), swapWith: d[1].apart[2] } };
     });
-    var fitsDiet = function (r) {
-      var d = DIETS[avoid.diet]; if (!d) return true;
+    // Swaps keep a dinner in when everything it has from a left-out group can be swapped.
+    var SWAPS = (RULES.swaps || []).map(function (x) { return { group: x[0], rx: new RegExp(x[1], "i"), use: x[2], only: x[3] }; });
+    var swapFor = function (group, name, r) {
+      return SWAPS.filter(function (x) { return x.group === group && x.rx.test(name) && (!x.only || x.only.indexOf(r.title) !== -1); })[0];
+    };
+    var checks = {};
+    // { ok, swaps: ["tamari (gluten-free soy sauce) instead of soy sauce", ...] } for a dinner.
+    var check = function (r) {
+      var key = r.url;
+      if (checks[key]) return checks[key];
+      var out = { ok: true, swaps: [] };
+      var d = DIETS[avoid.diet];
       var names = r.ingredients.map(function (i) { return i.n || ""; }).filter(Boolean);
-      var has = function (rx) { return names.some(function (n) { return rx.test(n); }); };
-      if (d.tags && !d.tags.some(function (t) { return r.tags.indexOf(t) !== -1; })) return false;
-      if (d.none && has(d.none)) return false;
-      return !(d.apart && d.apart.every(has));
-    };
-    var allowed = function (r) {
-      if (!fitsDiet(r)) return false;
-      var rules = avoidRules.filter(function (a) { return avoid.groups.indexOf(a.label) !== -1; });
-      if (rules.some(function (a) { return a.tag && r.tags.indexOf(a.tag) !== -1; })) return false;
-      return !r.ingredients.some(function (i) {
-        return i.n && (avoid.items.indexOf(i.n) !== -1 || rules.some(function (a) { return a.rx && a.rx.test(i.n); }));
+      if (d && d.tags && !d.tags.some(function (t) { return r.tags.indexOf(t) !== -1; })) out.ok = false;
+      var addSwap = function (swap, n) {
+        // Keep the capital on names like Worcestershire and Caesar; lowercase the rest.
+        var name = /^(Worcestershire|Caesar|Golden|Shin|Mutti|Old El Paso)/.test(n) ? n : n.toLowerCase();
+        var text = swap.use ? swap.use + " for the " + name : "leave out the " + name;
+        if (out.swaps.indexOf(text) === -1) out.swaps.push(text);
+      };
+      // Meat with dairy: fine once every dairy ingredient can be swapped out.
+      if (d && d.apart && names.some(function (n) { return d.apart.a.test(n); })) {
+        names.filter(function (n) { return d.apart.b.test(n); }).forEach(function (n) {
+          var swap = swapFor(d.apart.swapWith, n, r);
+          if (swap) addSwap(swap, n); else out.ok = false;
+        });
+      }
+      var groups = avoid.groups.concat(d ? d.groups : []);
+      avoidRules.filter(function (a) { return groups.indexOf(a.label) !== -1; }).forEach(function (a) {
+        if (a.tag) { if (r.tags.indexOf(a.tag) !== -1) out.ok = false; return; }
+        names.forEach(function (n) {
+          if (!a.rx.test(n)) return;
+          var swap = swapFor(a.label, n, r);
+          if (swap) addSwap(swap, n); else out.ok = false;
+        });
       });
+      if (names.some(function (n) { return avoid.items.indexOf(n) !== -1; })) out.ok = false;
+      return (checks[key] = out);
     };
+    var allowed = function (r) { return check(r).ok; };
     var avoiding = function () { return !!avoid.diet || avoid.groups.length + avoid.items.length > 0; };
 
     // -- Scoring, as build.py's week_plans does it --
@@ -625,6 +649,8 @@
         (r.labels || []).forEach(function (t) { d.appendChild(el("span", "plan-tag", t)); });
         var soon = r.keeps > 3 ? "" : i + 1 <= r.keeps ? " · cook within " + r.keeps + " days" : " · freeze the " + r.keepsWhat + " on shop day";
         d.appendChild(el("small", "", (r.basic ? "Basic · " : "") + r.cuisine + " · " + shortTime(r.minutes) + soon + (cravings.indexOf(r) !== -1 ? " · your pick" : "")));
+        var swaps = avoiding() ? check(r).swaps : [];
+        if (swaps.length) d.appendChild(el("small", "plan-swap", "Swap: " + swaps.join("; ")));
         li.appendChild(d);
         if (lunches.indexOf(r) !== -1) li.appendChild(el("span", "plan-lunch", "+ lunch"));
         ol.appendChild(li);
@@ -845,6 +871,7 @@
     };
     var avoidChanged = function () {
       store("fk-avoid", avoid);
+      checks = {};
       drawAvoid();
       cravings = cravings.filter(allowed);
       changed();

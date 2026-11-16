@@ -24,7 +24,7 @@ import sys
 from datetime import date, datetime
 from pathlib import Path
 
-from ingredients import AVOID, DIETS, FOOD_INFLATION, KEEPS, KEEPS_DEFAULT, PACKS, PRICES_CHECKED, AISLES, BAKERY, DAIRY, DELI, MEAT, PRODUCE, GROCERIES, GROCERY_SUGGESTIONS, INGREDIENTS, NAMES, name_variants, parse_line
+from ingredients import AVOID, DIETS, SWAPS, FOOD_INFLATION, KEEPS, KEEPS_DEFAULT, PACKS, PRICES_CHECKED, AISLES, BAKERY, DAIRY, DELI, MEAT, PRODUCE, GROCERIES, GROCERY_SUGGESTIONS, INGREDIENTS, NAMES, name_variants, parse_line
 
 ROOT = Path(__file__).parent
 RECIPES = ROOT / "recipes"
@@ -585,7 +585,7 @@ def search_index(book, basics):
             "plan": {"size": PLAN_SIZE, "diets": [[label, rule] for label, rule in DIETS], "lunches": PLAN_LUNCHES, "maxSame": PLAN_MAX_SAME, "minCuisines": PLAN_MIN_CUISINES,
                      "fresh": list(PLAN_FRESH), "freshWeight": PLAN_FRESH_WEIGHT, "everyday": list(PLAN_EVERYDAY),
                      "count": PLAN_COUNT, "names": [list(n) for n in PLAN_NAMES],
-                     "packs": [list(p) for p in PACKS], "avoid": [list(a) for a in AVOID],
+                     "packs": [list(p) for p in PACKS], "avoid": [list(a) for a in AVOID], "swaps": [[g, p, use, list(only[0]) if only else None] for g, p, use, *only in SWAPS],
                      "pricesChecked": PRICES_CHECKED, "inflation": list(FOOD_INFLATION),
                      "longMinutes": PLAN_LONG_MINUTES, "maxLong": PLAN_MAX_LONG, "maxFried": PLAN_MAX_FRIED,
                      "maxWeekMinutes": PLAN_MAX_WEEK_MINUTES}}

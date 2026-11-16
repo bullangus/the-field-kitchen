@@ -121,7 +121,12 @@ docs/                            GENERATED, wiped and rebuilt each run (.nojekyl
                                    days", or "freeze the … on shop day" when it falls later than that.
                                    Diets (DIETS in ingredients.py: Vegetarian and Vegan by tag;
                                    Pescatarian, Kosher-style and Halal-style by ingredient name) keep
-                                   only the dinners that fit.
+                                   only the dinners that fit. SWAPS (ingredients.py) keeps a dinner in
+                                   when what's left out can be substituted ("Swap: tamari for the soy
+                                   sauce" on its card); a dish built on it has no swap and drops out.
+                                   When adding an ingredient, check it against AVOID (jars by what they
+                                   usually contain: curry paste has shrimp, oyster sauce wheat and soy)
+                                   and add a swap if a simple one works.
                                    Each plan gets a fun name from PLAN_NAMES (never "Week 1"), and a
                                    savings line against buying for each dinner on its own: fresh food
                                    shared, jars and packets bought once, and what's ticked on "What can

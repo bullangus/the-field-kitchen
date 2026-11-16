@@ -1240,6 +1240,7 @@ html.cooking { overflow: hidden; }
 .plan-days a { text-decoration: none; font-weight: 600; }
 .plan-days a:hover { color: var(--accent); }
 .plan-days small { display: block; color: var(--muted); font-size: 0.82rem; font-style: italic; }
+.plan-days small.plan-swap { font-style: normal; color: var(--accent); }
 .plan-shared summary { cursor: pointer; color: var(--muted); font-size: 0.9rem; }
 .plan-shared summary:hover { color: var(--accent); }
 .plan-shared ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.6rem 0 0; padding: 0; }

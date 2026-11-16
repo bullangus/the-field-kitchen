@@ -516,45 +516,110 @@ PACKS = [
                                        "Cumin", "Curry powder", "Garlic powder", "Onion powder", "Chilli flakes",
                                        "Ground coriander")]
 
-# "Leave out" choices on the week plans page, matched (ignoring case) against each
-# ingredient's shopping name; "#tag" matches a recipe tag instead. Names only, so the page
-# tells readers to check labels: a jar's ingredients can't be seen from here.
-MEAT_RX = r"chicken|beef|ramyun|steak|pork|bacon|guanciale|nduja|\bham\b|kabana|sausage|lamb|duck|dripping|meat pies|dumplings"
-PORK_RX = r"pork|bacon|guanciale|nduja|\bham\b|kabana|(?<!beef )sausage|dumplings"
-SHELLFISH_RX = r"oyster sauce|prawn|shrimp|crab|mussel|laksa paste"
+# Patterns shared by the leave-out groups and the diets below.
+MEAT_RX = (r"chicken stock|chicken|beef|steak|pork|bacon|guanciale|nduja|\bham\b|kabana|sausage|lamb|duck|dripping|"
+           r"meat pies|dumplings|ramyun|jelly|gelatine")
+PORK_RX = r"pork|bacon|guanciale|nduja|\bham\b|kabana|(?<!beef )sausage|dumplings|jelly|gelatine"
+SHELLFISH_RX = r"oyster sauce|prawn|shrimp|crab|mussel|laksa paste|curry paste"
 DAIRY_RX = (r"(?<!peanut )\bbutter\b|cream|(?<!coconut )milk|cheese|cheddar|mozzarella|parmesan|pecorino|paneer|"
-            r"yoghurt|naan|ravioli|caesar dressing|custard|pizza|korma")
+            r"yoghurt|naan|ravioli|caesar dressing|custard|pizza|korma|flake chocolate")
 ALCOHOL_RX = r"wine(?! vinegar)|sake|mirin|cointreau|marnier"
+# "Leave out" choices on the week plans page, matched (ignoring case) against each
+# ingredient's shopping name; "#tag" matches a recipe tag instead. Jars and packets are
+# matched on what they usually contain (curry paste on shrimp paste, oyster sauce on wheat
+# and soy), so the page also tells readers to check labels.
 AVOID = (
     ("Gluten", r"^(plain|self-raising|bread|tipo 00) flour$|\bbread\b|loaves|naan|shokupan|panko|spaghetti|fettuccine|"
                r"risoni|cavatappi|fusilli|fileja|ravioli|lasagne|egg noodles|ramen|ramyun|wrappers|soy sauce|"
-               r"oyster sauce|golden curry|worcestershire|stock cubes|gravox|shaoxing|taco kit|jam rolls|tonkatsu sauce|"
-               r"crumbed|schnitzel|pies|dumplings|pizza|wraps|burger buns"),
+               r"oyster sauce|golden curry|worcestershire|stock cubes|stock powder|gravox|shaoxing|taco kit|jam rolls|"
+               r"tonkatsu sauce|black vinegar|crumbed|schnitzel|pies|dumplings|pizza|wraps|burger buns|vegie burger"),
     ("Dairy", DAIRY_RX),
-    ("Eggs", r"\beggs?\b|mayonnaise|egg noodles|ravioli|lasagne sheets|caesar dressing|coleslaw|tartare|schnitzel"),
+    ("Eggs", r"\beggs?\b|mayonnaise|egg noodles|ravioli|lasagne sheets|caesar dressing|coleslaw|tartare|schnitzel|"
+             r"wonton|thousand island"),
     ("Peanuts", r"peanut"),
     ("Tree nuts", r"cashew|almond|walnut|pecan|pistachio|hazelnut|pesto"),
-    ("Sesame", r"sesame|tahini|hummus|falafel"),
-    ("Soy", r"\bsoy\b|golden curry|chilli crisp|tofu|miso"),
+    ("Sesame", r"sesame|tahini|hummus|falafel|shichimi"),
+    ("Soy", r"\bsoy\b|golden curry|chilli crisp|tofu|miso|oyster sauce|ramyun|dumplings|vegie burger"),
     ("Fish", r"fish|snapper|salmon|worcestershire|caesar dressing|dashi|anchov"),
     ("Shellfish", SHELLFISH_RX),
     ("Meat", MEAT_RX),
     ("Pork", PORK_RX),
-    ("Beef", r"beef|steak"),
+    ("Beef", r"beef|ramyun|meat pies"),
     ("Alcohol", ALCOHOL_RX),
     ("Spicy food", "#spicy"),
 )
 
-# Diets on the week plans page. "tags": a dinner must carry one of these tags; "none": none
-# of its ingredients may match; "apart": it mustn't have ingredients matching both (meat
-# with dairy). Kosher- and halal-style can only go by ingredients, not how the meat was
-# slaughtered or certified, so the page says to buy certified meat.
+# Swaps that keep a dinner in a plan when something in it is left out: (leave-out group,
+# shopping name pattern, what to use instead, and optionally the only dinners it works in).
+# A dinner stays if every ingredient it has from a left-out group has a swap, and the plan
+# card says which swaps to make; an empty "instead" means just leave it out. A dish built on the ingredient (eggs in carbonara, chicken
+# in a curry) has no swap, so it drops out instead.
+SWAPS = (
+    ("Gluten", r"^(dark )?soy sauce$", "tamari (gluten-free soy sauce)"),
+    ("Gluten", r"spaghetti|fettuccine|fusilli|cavatappi|fileja", "gluten-free pasta"),
+    ("Gluten", r"^plain flour$", "gluten-free plain flour"),
+    ("Gluten", r"panko", "gluten-free breadcrumbs"),
+    ("Gluten", r"^bread$|bread rolls|burger buns|^wraps$", "gluten-free bread, rolls or wraps"),
+    ("Gluten", r"oyster sauce", "gluten-free oyster sauce"),
+    ("Gluten", r"worcestershire", "gluten-free Worcestershire sauce"),
+    ("Gluten", r"stock cubes|stock powder", "gluten-free stock"),
+    ("Gluten", r"egg noodles", "rice noodles"),
+    ("Gluten", r"shaoxing", "dry sherry"),
+    ("Gluten", r"black vinegar", "rice vinegar"),
+    ("Gluten", r"crumbed fish", "gluten-free crumbed fish"),
+    ("Gluten", r"frozen pizzas", "gluten-free frozen pizzas"),
+    ("Gluten", r"naan", "extra rice (skip the naan)"),
+    ("Dairy", r"^butter$", "olive oil or dairy-free spread"),
+    ("Dairy", r"thickened cream", "dairy-free cooking cream"),
+    ("Dairy", r"^milk$", "oat milk"),
+    ("Dairy", r"parmesan|pecorino|grated cheese|cheese slices|mozzarella", "dairy-free cheese"),
+    ("Dairy", r"sour cream|greek yoghurt", "coconut yoghurt"),
+    ("Dairy", r"caesar dressing", "a dairy-free Caesar dressing"),
+    ("Dairy", r"naan", "extra rice (skip the naan)"),
+    ("Eggs", r"mayonnaise|tartare", "egg-free mayonnaise or tartare"),
+    ("Eggs", r"egg noodles", "rice noodles"),
+    ("Eggs", r"coleslaw", "coleslaw with an egg-free dressing"),
+    ("Eggs", r"^eggs$", "", ("Caesar Salad", "Chilli Oil Noodles", "Vegie Fried Rice")),
+    ("Eggs", r"caesar dressing", "an egg-free Caesar dressing"),
+    ("Peanuts", r"peanut oil", "neutral oil"),
+    ("Peanuts", r"roasted peanuts", ""),
+    ("Sesame", r"sesame seeds", ""),
+    ("Sesame", r"sesame oil", "neutral oil"),
+    ("Soy", r"^(dark )?soy sauce$", "coconut aminos"),
+    ("Soy", r"chilli crisp", "a soy-free chilli oil (check the label)"),
+    ("Soy", r"oyster sauce", "a soy-free oyster sauce (check the label)"),
+    ("Fish", r"fish sauce", "vegan fish sauce"),
+    ("Fish", r"worcestershire", "vegan Worcestershire sauce"),
+    ("Fish", r"caesar dressing", "an anchovy-free Caesar dressing"),
+    ("Fish", r"dashi", "mushroom stock powder"),
+    ("Shellfish", r"oyster sauce", "vegetarian stir-fry sauce"),
+    ("Shellfish", r"curry paste", "a shrimp-free curry paste (check the label)"),
+    ("Meat", r"chicken stock|beef stock", "vegetable stock"),
+    ("Pork", r"pork mince", "chicken mince"),
+    ("Pork", r"pork loin steaks", "chicken thigh fillets"),
+    ("Pork", r"streaky bacon|guanciale", "beef or turkey bacon"),
+    ("Pork", r"pork sausages", "beef or chicken sausages"),
+    ("Pork", r"frozen dumplings", "chicken or vegetable dumplings"),
+    ("Beef", r"beef stock", "vegetable stock"),
+    ("Beef", r"beef mince", "lamb or chicken mince"),
+    ("Beef", r"beef dripping", "neutral oil"),
+    ("Beef", r"beef sausages", "chicken or pork sausages"),
+    ("Beef", r"meat pies", "chicken pies"),
+    ("Alcohol", r"shaoxing|cooking sake|red wine", "the same amount of stock"),
+    ("Alcohol", r"mirin", "rice vinegar with a pinch of sugar"),
+)
+
+# Diets on the week plans page. "tags": a dinner must carry one of these tags; "groups":
+# the leave-out groups it applies (with their swaps); "apart": no dinner with ingredients
+# matching both of the first two patterns (meat with dairy) unless the second can all be
+# swapped using the group named third. Kosher- and halal-style can only go by ingredients, not
+# how the meat was slaughtered or certified, so the page says to buy certified meat.
 DIETS = (
     ("Vegetarian", {"tags": ["vegetarian", "vegan"]}),
     ("Vegan", {"tags": ["vegan"]}),
-    ("Pescatarian", {"none": MEAT_RX + r"|stock|gelatine|jelly|gravox"}),
-    ("Kosher-style", {"none": PORK_RX + "|" + SHELLFISH_RX, "apart": [MEAT_RX + r"|chicken stock|stock cubes", DAIRY_RX]}),
-    ("Halal-style", {"none": PORK_RX + "|" + ALCOHOL_RX}),
+    ("Pescatarian", {"groups": ["Meat"]}),
+    ("Kosher-style", {"groups": ["Pork", "Shellfish"], "apart": [MEAT_RX + r"|stock cubes", DAIRY_RX, "Dairy"]}),
+    ("Halal-style", {"groups": ["Pork", "Alcohol"]}),
 )
 
 # How many days the most perishable fresh food keeps once bought, so a plan's dinners are
