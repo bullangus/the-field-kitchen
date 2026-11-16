@@ -500,7 +500,7 @@ main.home { max-width: 72rem; padding-top: 1.5rem; }
     var(--grain), radial-gradient(var(--dot) 1.1px, transparent 1.3px) 0 0 / 18px 18px, var(--card); }
 /* Washi tape, shared by every page that's "taped into the journal": the home masthead and
    the cuisine and recipe headers. */
-.masthead::before, .recipe-hero::before, .cuisine-hero::before, .plan-setup::before {
+.masthead::before, .masthead::after, .recipe-hero::before, .cuisine-hero::before, .plan-setup::before {
   content: ""; position: absolute; z-index: 2; width: 7.5rem; height: 1.9rem; pointer-events: none;
   /* Translucent paper with a faint weave, torn ends, and a soft shadow lifting it off the page. */
   background:
@@ -512,6 +512,11 @@ main.home { max-width: 72rem; padding-top: 1.5rem; }
 }
 .masthead::before { top: -0.85rem; left: 1.75rem; transform: rotate(-4deg); }
 .plan-setup { position: relative; }
+.masthead::after { bottom: -0.85rem; right: 2.25rem; transform: rotate(3deg); }
+/* Room under the masthead so its bottom tape hangs in clear space, not on the tile below:
+   a wider row gap side by side, extra margin once the tiles stack. */
+.bento { row-gap: 2rem; }
+@media (max-width: 900px) { .bento { row-gap: 1rem; } .masthead { margin-bottom: 1.25rem; } }
 .recipe-hero::before, .cuisine-hero::before, .plan-setup::before { top: -0.8rem; left: 1.75rem; width: 6.5rem; height: 1.7rem; transform: rotate(-3deg); }
 /* Headers on dot-grid paper in their cuisine's colour. */
 .cuisine-hero { overflow: visible;
