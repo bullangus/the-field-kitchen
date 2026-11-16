@@ -846,11 +846,22 @@ def world_map(book):
   </section>"""
 
 
+def masthead_title():
+    """The title stacked a word to a line, its middle word in italic: The / *Field* / Kitchen."""
+    words = TITLE.split()
+    if len(words) < 3:
+        return html.escape(TITLE)
+    first, middle, last = words[0], " ".join(words[1:-1]), words[-1]
+    return f'<span>{html.escape(first)}</span><em>{html.escape(middle)}</em><span>{html.escape(last)}</span>'
+
+
 def home_html(book):
     recipes = all_recipes(book)
     count, cuisines = len(recipes), len(book)
     quick = [r for r in recipes if "quick" in r["tags"] and r["category"] not in NOT_MEALS]
     hat = icon_inline().replace("<svg ", '<svg class="hat" ', 1)
+    # The masthead's moving band: every cuisine, in its own colour.
+    marquee = "".join(f'<span class="tone-{slug(c)}"><i></i>{html.escape(c)}</span>' for c in book)
 
     def plural(n, word):
         return f"{n} {word}{'' if n == 1 else 's'}"
@@ -937,17 +948,21 @@ def home_html(book):
 
     content = f"""
   <div class="bento">
-    <header class="tile tile-hero reveal">
-      {hat}
-      <h1>{TITLE}</h1>
-      <p class="hero-sub">{SUBTITLE}</p>
+    <header class="tile tile-hero masthead reveal">
+      <div class="seal" aria-hidden="true">
+        <svg class="seal-ring" viewBox="0 0 120 120"><defs><path id="seal-path" d="M60,60 m-47,0 a47,47 0 1,1 94,0 a47,47 0 1,1 -94,0"/></defs><text><textPath href="#seal-path" textLength="290" lengthAdjust="spacing">{html.escape(SUBTITLE)} · Est. {ESTABLISHED} ·</textPath></text></svg>
+        {hat}
+      </div>
+      <h1 class="masthead-title">{masthead_title()}</h1>
+      <p class="sr-only">{SUBTITLE}</p>
+      <div class="marquee" aria-hidden="true"><div class="marquee-track">{marquee}{marquee}</div></div>
       <ul class="stats">
         <li><a href="#kitchens"><strong>{count}</strong> {'recipe' if count == 1 else 'recipes'}</a></li>
         <li><a href="#atlas"><strong>{cuisines}</strong> {'cuisine' if cuisines == 1 else 'cuisines'}</a></li>
         <li><a href="{HOME_PAGE}?filter=quick#kitchens"><strong>{len(quick)}</strong> {"quick dinner" if len(quick) == 1 else "quick dinners"}</a></li>
       </ul>
       <div class="tile-actions">
-        <a class="pill pill-solid" href="#kitchens">Browse the kitchens</a>
+        <a class="pill pill-solid" href="{PLANS_PAGE}">{svg_icon("calendar")}Plan your week</a>
         <a class="pill pill-outline" href="{COOK_PAGE}">{svg_icon("sparkle")}What can I cook?</a>
       </div>
     </header>{feature}
@@ -1418,10 +1433,11 @@ def plans_html(book, basics):
   </section>""" if basics else ""
 
     def counter(who, label):
-        return (f'<span class="household-who" data-for="{who}"><span class="scaler" data-who="{who}">'
-                f'<button type="button" class="scale-down" aria-label="Fewer {label}">−</button>'
+        return (f'<div class="household-who" data-for="{who}"><span class="who-label">{label}</span>'
+                f'<span class="stepper" data-who="{who}">'
+                f'<button type="button" class="scale-down" aria-label="Fewer {label.lower()}">−</button>'
                 f'<output aria-live="polite">0</output>'
-                f'<button type="button" class="scale-up" aria-label="More {label}">+</button></span> {label}</span>')
+                f'<button type="button" class="scale-up" aria-label="More {label.lower()}">+</button></span></div>')
     diet_chips = "".join(f'<button type="button" class="chip" data-diet="{html.escape(label)}" aria-pressed="false">{html.escape(label)}</button>'
                          for label, _ in DIETS)
     avoid_chips = "".join(f'<button type="button" class="chip" data-avoid="{html.escape(label)}" aria-pressed="false">{html.escape(label)}</button>'
@@ -1433,11 +1449,8 @@ def plans_html(book, basics):
     <p class="plan-tally" hidden></p>
   </header>
   <section class="plan-setup" aria-label="Your household" hidden>
-    <div class="setup-row">
-      <span class="setup-label">Cooking for</span>{counter("adults", "adults")}{counter("kids", "kids")}
-      <button type="button" class="pill pill-outline pill-sm add-kids">{svg_icon("plus")}Kids</button>
-    </div>
-    <label class="setup-row plan-extra"><input type="checkbox" role="switch"> Cook extra for lunches</label>
+    <div class="household" role="group" aria-label="Cooking for">{counter("adults", "Adults")}{counter("kids", "Kids")}</div>
+    <label class="plan-extra"><span>Cook extra for lunches</span><input type="checkbox" role="switch"></label>
     <div class="setup-row plan-diets" role="group" aria-label="Diet">{diet_chips}
       <button type="button" class="chip avoid-open" aria-expanded="false" aria-controls="plan-avoid">Leave out <span class="plan-avoid-count"></span></button>
     </div>

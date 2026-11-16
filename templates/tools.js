@@ -600,15 +600,7 @@
       syncTally();
     };
 
-    // Just adults to start; "+ Kids" brings in the kids counter, which goes again at 0.
-    var kidsSlot = peopleBox.querySelector('[data-for="kids"]'), addKids = peopleBox.querySelector(".add-kids");
-    addKids.addEventListener("click", function () {
-      household.kids = 1; people = portionsOf(household); store("fk-household", household);
-      syncPeople(); syncPlans(); syncBasics();
-    });
     var syncPeople = function () {
-      kidsSlot.hidden = !household.kids;
-      addKids.hidden = !!household.kids;
       counters.forEach(function (c) {
         var who = c.getAttribute("data-who"), n = household[who];
         c.querySelector("output").textContent = n;

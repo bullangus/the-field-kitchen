@@ -194,7 +194,7 @@ h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600
 
 /* Pill-shaped buttons and links */
 .nav-button {
-  font: inherit; font-size: 0.95rem; color: var(--ink); cursor: pointer;
+  font: inherit; font-size: 0.95rem; color: var(--ink); cursor: pointer; white-space: nowrap;
   display: inline-flex; align-items: center; gap: 0.4rem;
   background: transparent; border: 0; border-radius: 999px; padding: 0.45rem 0.85rem;
   transition: background 0.15s ease, color 0.15s ease;
@@ -269,7 +269,8 @@ h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600
 .search-results span { display: block; font-variant: small-caps; letter-spacing: 0.05em; color: var(--muted); font-size: 0.85rem; }
 .search-empty { padding: 0.5rem 0.75rem; color: var(--muted); font-style: italic; }
 
-@media (max-width: 760px) {
+/* The full menu needs about 1100px; below that it folds behind the menu button. */
+@media (max-width: 1100px) {
   .js .menu-toggle { display: inline-flex; }
   .js .search-toggle:not([hidden]) { display: inline-flex; }
   .js .menu {
@@ -476,7 +477,28 @@ main.home { max-width: 72rem; padding-top: 1.5rem; }
     var(--card);
   padding: 2.5rem;
 }
-.tile-hero .hat { width: 3rem; height: 3rem; color: var(--accent); margin-bottom: 1rem; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+/* Home masthead: the title stacked like a magazine cover, a turning seal, cuisines sliding by. */
+.masthead { position: relative; overflow: hidden; }
+.masthead-title { display: flex; flex-direction: column; font-size: clamp(3.6rem, 15vw, 7rem); line-height: 0.86; letter-spacing: -0.02em; margin: 0; }
+.masthead-title em { color: var(--accent); padding-left: 0.55em; font-weight: 500; }
+.masthead .hero-sub { margin: 1rem 0 0; font-size: 1.05rem; }
+.seal { position: absolute; top: 1.25rem; right: 1.25rem; width: clamp(6.5rem, 22vw, 9rem); aspect-ratio: 1; }
+.seal-ring { width: 100%; height: 100%; overflow: visible; fill: var(--muted); font-size: 9.6px; font-weight: 600; letter-spacing: 2.1px; text-transform: uppercase; }
+.seal .hat { position: absolute; inset: 31%; width: 38%; height: 38%; margin: 0; color: var(--accent); }
+.marquee { overflow: hidden; margin: 1.4rem -2.5rem 1.2rem; padding: 0.7rem 0; border-block: 1px solid var(--hair);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); }
+.marquee-track { display: flex; gap: 1.6rem; width: max-content; font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 1.35rem; white-space: nowrap; }
+.marquee-track span { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--ink); }
+.marquee-track i { width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--tone-ink); }
+.masthead .stats { margin-bottom: 1.25rem; }
+.masthead .stats strong { font-size: 1.7rem; }
+@media (prefers-reduced-motion: no-preference) {
+  .seal-ring { animation: fk-spin 28s linear infinite; }
+  .marquee-track { animation: fk-marquee 38s linear infinite; }
+}
+@keyframes fk-spin { to { transform: rotate(360deg); } }
+@keyframes fk-marquee { to { transform: translateX(-50%); } }
 .tile-hero h1 { font-size: clamp(3rem, 7vw, 5.5rem); line-height: 0.95; margin: 0; letter-spacing: -0.01em; }
 .hero-sub { font-style: italic; color: var(--muted); font-size: 1.2rem; margin: 0.75rem 0 1.5rem; }
 .stats { list-style: none; margin: 0 0 1.75rem; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; }
@@ -651,7 +673,7 @@ button:focus-visible, a:focus-visible, [role="tab"]:focus-visible { outline: 2px
   background: var(--tone-ink); color: var(--paper); font-size: 0.8rem; font-weight: 600; padding: 0 0.45rem;
 }
 .tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.6rem 0 0.9rem; padding-right: 4rem; }
-.kitchen .tags { flex-wrap: nowrap; overflow: hidden; }
+.kitchen .tags { flex-wrap: nowrap; overflow: hidden; padding-right: 5.5rem; }  /* clear of the cuisine icon */
 .tag-more { border-style: dashed; }
 /* Tags are links (or, on cards, filter buttons): a quiet fill on hover shows they can be pressed. */
 a.tag, .tag[data-filter-tag] { text-decoration: none; cursor: pointer; transition: background 0.15s ease, color 0.15s ease; }
@@ -734,6 +756,8 @@ a.tag:hover, a.tag:focus-visible, .tag[data-filter-tag]:hover, .tag[data-filter-
 }
 @media (max-width: 520px) {
   .tile, .tile-hero { padding: 1.4rem; border-radius: 16px; }
+  .marquee { margin-inline: -1.4rem; }
+  .seal { top: 1rem; right: 1rem; }
   .feature-photo { margin: -1.4rem -1.4rem 1.1rem; }
 }
 
@@ -1280,8 +1304,6 @@ html.cooking { overflow: hidden; }
 .plan-basics > p { color: var(--muted); margin: 0 0 0.5rem; }
 .plan-basics .list-ideas { margin-top: 0; padding-top: 0; border-top: 0; }
 .plan-add + .plan-view { margin-top: -0.4rem; }
-.plan-extra { display: inline-flex; align-items: center; gap: 0.45rem; min-height: 44px; cursor: pointer; color: var(--ink); }
-.plan-extra input { width: 1.15rem; height: 1.15rem; accent-color: var(--accent); margin: 0; }
 .plan-days li > div { flex: 1; min-width: 0; }
 .plan-lunch { flex: none; align-self: center; font-size: 0.75rem; font-weight: 600; color: var(--accent); border: 1px solid var(--accent); border-radius: 999px; padding: 0.1rem 0.55rem; white-space: nowrap; }
 .plan-build { margin: 0 0 2.5rem; padding: 1.4rem; background: var(--grain), var(--card); border: 1px solid var(--rule); border-radius: 20px; }
@@ -1312,9 +1334,21 @@ html.cooking { overflow: hidden; }
 .plan-setup { display: grid; gap: 0.75rem; padding: 1.1rem 1.2rem; margin: 0 0 1rem; background: var(--grain), var(--card); border: 1px solid var(--rule); border-radius: 20px; }
 .plan-setup[hidden], .plan-mode[hidden], .plan-ready[hidden] { display: none; }
 .setup-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.9rem; }
-.setup-label { color: var(--muted); }
-.plan-setup .household-who[hidden], .plan-setup .add-kids[hidden] { display: none; }
-.plan-extra { cursor: pointer; }
+/* Household: two matching tiles, a label over a stepper. */
+.household { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+.household-who { display: flex; flex-direction: column; gap: 0.35rem; padding: 0.7rem 0.8rem; border-radius: 14px; background: var(--paper); border: 1px solid var(--hair); }
+.who-label { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); }
+.stepper { display: flex; align-items: center; justify-content: space-between; }
+.stepper output { font-variant-numeric: lining-nums; font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.8rem; line-height: 1; color: var(--ink); min-width: 1.5rem; text-align: center; }
+.stepper button { width: 44px; height: 44px; font: inherit; font-size: 1.2rem; line-height: 1; color: var(--ink); background: var(--hover); border: 0; border-radius: 999px; cursor: pointer; }
+.stepper button:disabled { opacity: 0.35; cursor: default; }
+/* Lunches: a switch, not a checkbox. */
+.plan-extra { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 44px; cursor: pointer; color: var(--ink); }
+.plan-extra input { appearance: none; -webkit-appearance: none; flex: none; position: relative; width: 3rem; height: 1.75rem; margin: 0; border-radius: 999px; background: var(--rule); cursor: pointer; transition: background 0.2s ease; }
+.plan-extra input::after { content: ""; position: absolute; top: 3px; left: 3px; width: calc(1.75rem - 6px); height: calc(1.75rem - 6px); border-radius: 50%; background: var(--paper); box-shadow: 0 1px 3px var(--shadow); transition: transform 0.2s ease; }
+.plan-extra input:checked { background: var(--accent); }
+.plan-extra input:checked::after { transform: translateX(1.25rem); }
+.plan-extra input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .plan-diets .chip { white-space: nowrap; }
 .plan-diet-note { margin: -0.3rem 0 0; color: var(--muted); font-size: 0.85rem; font-style: italic; }
 .plan-avoid { display: grid; gap: 0.7rem; padding-top: 0.75rem; border-top: 1px solid var(--hair); }
