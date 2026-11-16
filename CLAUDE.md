@@ -111,7 +111,11 @@ docs/                            GENERATED, wiped and rebuilt each run (.nojekyl
                                    rest with the same rules, using FIELD_KITCHEN_SHOP.plan. Plans
                                    only use easy regular dinners (plannable() in build.py): no sides,
                                    sushi or duck, nothing tagged Christmas, Party food, Sunday roast or Barbecue,
-                                   no day-before start, and a time line of PLAN_MAX_MINUTES or less.
+                                   no day-before start, and a time line of PLAN_MAX_MINUTES or less (a
+                                   recipe with no time line stays out, so give every dinner one). They
+                                   are cooked after work, so a plan has at most PLAN_MAX_LONG dinner
+                                   over PLAN_LONG_MINUTES, at most PLAN_MAX_FRIED deep-fried one, and
+                                   PLAN_MAX_WEEK_MINUTES in all; cards show each night's time.
                                    Each plan gets a fun name from PLAN_NAMES (never "Week 1"), and a
                                    savings line against buying for each dinner on its own: fresh food
                                    shared, jars and packets bought once, and what's ticked on "What can

@@ -67,7 +67,15 @@ PLAN_COUNT = 6
 PLAN_SKIP_STYLES = ("Sushi", "Duck")  # built from parts, or kept for a special meal
 # Plans are easy regular dinners: no special-occasion, party, barbecue or multi-day cooking.
 PLAN_SKIP_TAGS = ("project", "christmas", "party-food", "sunday-roast", "barbecue")
+# Plans are cooked after work, so effort is capped: every dinner has a known time of an hour
+# or less, at most one runs past PLAN_LONG_MINUTES, at most one is deep-fried, and the five
+# nights add up to no more than PLAN_MAX_WEEK_MINUTES at the stove.
 PLAN_MAX_MINUTES = 60  # the whole time line, waiting included
+PLAN_LONG_MINUTES = 45
+PLAN_MAX_LONG = 1
+PLAN_MAX_FRIED = 1
+PLAN_MAX_WEEK_MINUTES = 180
+DEEP_FRIED = r"deep-?fr|for (?:deep-)?frying"  # in the recipe text
 PLAN_MAX_SAME = 2  # at most this many dinners from one style, or from one cuisine, in a week
 PLAN_MIN_CUISINES = 3
 # Sharing fresh food (bought in packs, goes off) saves more than sharing a jar that lasts.
@@ -562,6 +570,7 @@ def search_index(book, basics):
                         "serves": int(serves.group()) if serves else 1,
                         "lunch": lunch_score(r), "meal": r["category"] not in NOT_MEALS, "plan": plannable(r),
                         "basic": bool(r.get("basic")),
+                        "minutes": plan_minutes(r), "fried": deep_fried(r),
                         "ingredients": [parse_line(line) for line in bullets(parts.get("Ingredients"))],
                         "options": [{"name": name, "ingredients": [parse_line(line) for line in bullets(md)]}
                                     for name, md in options_of(parts.get("Topping Options"))]})
@@ -576,7 +585,9 @@ def search_index(book, basics):
                      "fresh": list(PLAN_FRESH), "freshWeight": PLAN_FRESH_WEIGHT, "everyday": list(PLAN_EVERYDAY),
                      "count": PLAN_COUNT, "names": [list(n) for n in PLAN_NAMES],
                      "packs": [list(p) for p in PACKS], "avoid": [list(a) for a in AVOID],
-                     "pricesChecked": PRICES_CHECKED, "inflation": list(FOOD_INFLATION)}}
+                     "pricesChecked": PRICES_CHECKED, "inflation": list(FOOD_INFLATION),
+                     "longMinutes": PLAN_LONG_MINUTES, "maxLong": PLAN_MAX_LONG, "maxFried": PLAN_MAX_FRIED,
+                     "maxWeekMinutes": PLAN_MAX_WEEK_MINUTES}}
     return ("window.FIELD_KITCHEN_INDEX = " + json.dumps(entries, ensure_ascii=False, indent=0) + ";\n"
             "window.FIELD_KITCHEN_SHOP = " + json.dumps(shop, ensure_ascii=False) + ";\n")
 
@@ -1231,12 +1242,25 @@ def cook_html(book):
 def plannable(r):
     """An easy weeknight dinner the plans can suggest: a basic, or a recipe that isn't a side,
     a special occasion or a day-before start, and takes PLAN_MAX_MINUTES or less."""
-    if r.get("basic"):
-        return True
     time = r.get("time", "").lower()
-    return (r["category"] not in NOT_MEALS + PLAN_SKIP_STYLES
-            and not set(r["tags"]) & set(PLAN_SKIP_TAGS)
-            and "day" not in time and minutes_in(time) <= PLAN_MAX_MINUTES)
+    if not plan_minutes(r) or "day" in time or plan_minutes(r) > PLAN_MAX_MINUTES:
+        return False  # no time given means the effort is unknown, so it stays out
+    return r.get("basic") or (r["category"] not in NOT_MEALS + PLAN_SKIP_STYLES
+                               and not set(r["tags"]) & set(PLAN_SKIP_TAGS))
+
+
+def plan_minutes(r):
+    """Total minutes on the time line (waiting included), or 0 if it gives none."""
+    return round(minutes_in(r.get("time", "")))
+
+
+def deep_fried(r):
+    return bool(re.search(DEEP_FRIED, r["body"], re.I))
+
+
+def short_time(minutes):
+    hours, mins = divmod(minutes, 60)
+    return " ".join(filter(None, [f"{hours} hr" if hours else "", f"{mins} min" if mins else ""]))
 
 
 def week_plans(book, basics):
@@ -1263,7 +1287,11 @@ def week_plans(book, basics):
                 counts[r[key]] = counts.get(r[key], 0) + 1
             if max(counts.values()) > PLAN_MAX_SAME:
                 return False
-        return len({r["cuisine"] for r, _ in combo}) >= PLAN_MIN_CUISINES
+        plan = [r for r, _ in combo]
+        return (len({r["cuisine"] for r in plan}) >= PLAN_MIN_CUISINES
+                and sum(plan_minutes(r) > PLAN_LONG_MINUTES for r in plan) <= PLAN_MAX_LONG
+                and sum(deep_fried(r) for r in plan) <= PLAN_MAX_FRIED
+                and sum(plan_minutes(r) for r in plan) <= PLAN_MAX_WEEK_MINUTES)
 
     def score(combo):
         uses, weight = {}, {}
@@ -1301,7 +1329,7 @@ def plans_html(book, basics):
         lead = ", ".join(n.lower() for n in (fresh or shared)[:3])
         days = "".join(
             f'<li{" data-lunch" if r in lunches else ""}><span class="plan-day">{day}</span><div><a href="{r["url"]}">{html.escape(r["title"])}</a>'
-            f'<small>{"Basic · " if r.get("basic") else ""}{html.escape(r["cuisine"])} · {html.escape(r.get("time") or "Serves " + r["serves"])}</small></div>'
+            f'<small>{"Basic · " if r.get("basic") else ""}{html.escape(r["cuisine"])} · {short_time(plan_minutes(r))}</small></div>'
             + (f'<span class="plan-lunch" title="{html.escape(r["leftovers"])}">+ lunch</span>' if r in lunches else "")
             + "</li>"
             for day, r in zip(PLAN_DAYS, plan))
@@ -1313,7 +1341,7 @@ def plans_html(book, basics):
         cards.append(f"""
     <article class="plan reveal" data-urls='{html.escape(urls)}' data-lunches='{html.escape(json.dumps([r["url"] for r in lunches]))}'>
       <header>
-        <p class="eyebrow">{len(plan)} dinners · {len({r["cuisine"] for r in plan})} cuisines</p>
+        <p class="eyebrow">{len(plan)} dinners · {short_time(sum(plan_minutes(r) for r in plan))} cooking</p>
         <h2>{html.escape(nickname)}</h2>
         <p class="plan-sharing">Sharing {html.escape(lead)}</p>
       </header>
@@ -1342,7 +1370,7 @@ def plans_html(book, basics):
   <header class="page-hero">
     <p class="eyebrow">{svg_icon("calendar")}Week plans</p>
     <h1>Five dinners, one shop</h1>
-    <p>Five easy weeknight dinners from the book, picked so they share ingredients (a bunch of spring onions or a tray of chicken thighs goes across several nights) while every night is different. Add a plan and the shopping list combines it all.</p>
+    <p>Five easy weeknight dinners from the book, each on the table within an hour of getting home (most well under), picked so they share ingredients (a bunch of spring onions or a tray of chicken thighs goes across several nights) while every night is different. Add a plan and the shopping list combines it all.</p>
     <div class="plan-people" hidden>
       <span>Cooking for</span><div role="group" aria-label="How many people">{sizes}</div>
       <label class="plan-extra"><input type="checkbox"> Cook extra for lunches</label>

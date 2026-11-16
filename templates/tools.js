@@ -394,7 +394,22 @@
       week.forEach(function (r) { cuisines[r.cuisine] = 1; });
       cravings.forEach(function (r) { own[r.cuisine] = 1; });
       var reach = Object.keys(own).length + week.length - cravings.length;
-      return ok && Object.keys(cuisines).length >= Math.min(RULES.minCuisines, reach);
+      // Effort after work: a craving may go past a limit, but the dinners filled in can't add to it.
+      var over = function (list, test) { return list.filter(test).length; };
+      var long = function (r) { return r.minutes > RULES.longMinutes; };
+      var fried = function (r) { return r.fried; };
+      var minutes = function (list) { return list.reduce(function (t, r) { return t + r.minutes; }, 0); };
+      var fillers = week.filter(function (r) { return cravings.indexOf(r) === -1; });
+      return ok && Object.keys(cuisines).length >= Math.min(RULES.minCuisines, reach)
+        && over(week, long) <= Math.max(RULES.maxLong, over(cravings, long))
+        && over(week, fried) <= Math.max(RULES.maxFried, over(cravings, fried))
+        // Heavy cravings leave quick fill-ins: 20 minutes a night on average once over the limit.
+        && minutes(week) <= Math.max(RULES.maxWeekMinutes, minutes(cravings) + QUICK_FILL * fillers.length);
+    };
+    var QUICK_FILL = 20;
+    var shortTime = function (m) {
+      var h = Math.floor(m / 60), n = m % 60;
+      return [h ? h + " hr" : "", n ? n + " min" : ""].filter(Boolean).join(" ");
     };
     var combos = function (pool, k, from, acc, out) {
       if (acc.length === k) { out.push(acc.slice()); return; }
@@ -565,7 +580,7 @@
         var li = el("li"); if (lunches.indexOf(r) !== -1) li.setAttribute("data-lunch", "");
         li.appendChild(el("span", "plan-day", days[i]));
         var d = el("div"), a = el("a", "", r.title); a.href = r.url; d.appendChild(a);
-        d.appendChild(el("small", "", r.cuisine + " · " + (cravings.indexOf(r) !== -1 ? "your pick" : r.basic ? "Basic" : r.category)));
+        d.appendChild(el("small", "", (r.basic ? "Basic · " : "") + r.cuisine + " · " + shortTime(r.minutes) + (cravings.indexOf(r) !== -1 ? " · your pick" : "")));
         li.appendChild(d);
         if (lunches.indexOf(r) !== -1) li.appendChild(el("span", "plan-lunch", "+ lunch"));
         ol.appendChild(li);
@@ -594,8 +609,7 @@
       return card;
     };
     var eyebrowOf = function (week) {
-      var n = Object.keys(week.reduce(function (o, r) { o[r.cuisine] = 1; return o; }, {})).length;
-      return week.length + " dinners · " + n + " cuisine" + (n === 1 ? "" : "s");
+      return week.length + " dinners · " + shortTime(week.reduce(function (t, r) { return t + r.minutes; }, 0)) + " cooking";
     };
 
     // Ready-made plans: the build's, or reworked here around what's being left out.
