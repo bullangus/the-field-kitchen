@@ -417,7 +417,20 @@
       });
       empty.hidden = shown > 0;
     }
-    buttons[0].click();  // apply "All", including any per-card limit
+    // Open with a filter already picked when the link asks for one (a recipe's tag: ?filter=spicy).
+    var wanted = (location.search.match(/[?&]filter=([\w-]+)/) || [])[1];
+    var start = wanted && buttons.filter(function (x) { return x.getAttribute("data-filter") === wanted; })[0];
+    (start || buttons[0]).click();  // apply it (or "All"), including any per-card limit
+    // Tags on cards pick their filter here, without following the card's own link.
+    [].forEach.call(scope.querySelectorAll("[data-filter-tag]"), function (t) {
+      var pick = function (e) {
+        e.preventDefault(); e.stopPropagation();
+        var chip = buttons.filter(function (x) { return x.getAttribute("data-filter") === t.getAttribute("data-filter-tag"); })[0];
+        if (chip) { chip.click(); chips.scrollIntoView({ behavior: calm ? "auto" : "smooth", block: "center" }); }
+      };
+      t.addEventListener("click", pick);
+      t.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") pick(e); });
+    });
     ready = true;
   });
 

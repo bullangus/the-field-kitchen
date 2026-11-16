@@ -363,6 +363,20 @@ def quick_tag_labels(r):
     return r["labels"] + [label for key, label in QUICK_CHIPS if key in r["tags"]]
 
 
+def tag_links(r, root):
+    """A recipe's tags as links to the home page with that filter already picked."""
+    pairs = [(slug(t), t) for t in r["labels"]] + [(k, label) for k, label in QUICK_CHIPS if k in r["tags"]]
+    return "".join(f'<a class="tag" href="{root}{HOME_PAGE}?filter={k}#kitchens">{html.escape(t)}</a>' for k, t in pairs)
+
+
+def tag_buttons(r):
+    """Tags on a recipe card (itself a link, so no links inside): pressing one picks that
+    filter on the same page (site.js)."""
+    pairs = [(slug(t), t) for t in r["labels"]] + [(k, label) for k, label in QUICK_CHIPS if k in r["tags"]]
+    return "".join(f'<span class="tag" data-filter-tag="{k}" role="button" tabindex="0">{html.escape(t)}</span>'
+                   for k, t in pairs)
+
+
 def time_facts(r):
     """[(label, value)] from the time line: 'Prep 15 min · Cook 30 min' -> Prep / Cook tiles."""
     facts = []
@@ -808,10 +822,11 @@ def home_html(book):
         n = sum(len(rs) for rs in cats.values())
         # At most three style tags, so every card's tags fit on one line.
         names = list(cats)
-        tags = "".join(f'<span class="tag">{html.escape(c)}</span>' for c in names[:CARD_TAGS])
+        tags = "".join(f'<a class="tag" href="{cuisine_url(cuisine)}#{slug(c)}">{html.escape(c)}</a>' for c in names[:CARD_TAGS])
         if len(names) > CARD_TAGS:
             hidden = ", ".join(names[CARD_TAGS:])
-            tags += f'<span class="tag tag-more" title="{html.escape(hidden)}">+{len(names) - CARD_TAGS}</span>'
+            tags += (f'<a class="tag tag-more" href="{cuisine_url(cuisine)}" title="{html.escape(hidden)}">'
+                     f'+{len(names) - CARD_TAGS}</a>')
         items = "".join(
             f'<li data-tags="{" ".join(r["tags"])}">'
             + (f'<img class="thumb" src="{r["photo"]}" alt="" loading="lazy">' if r.get("photo") else "")
@@ -869,7 +884,7 @@ def home_html(book):
 def recipe_card(r, href):
     photo = f'<img class="card-photo" src="../{r["photo"]}" alt="" loading="lazy">' if r.get("photo") else ""
     facts = "".join(f'<span><b>{html.escape(label)}</b> {html.escape(value)}</span>' for label, value in time_facts(r))
-    tags = "".join(f'<span class="tag">{html.escape(t)}</span>' for t in quick_tag_labels(r))
+    tags = tag_buttons(r)
     return f"""
       <a class="recipe-card reveal" href="{href}" data-tags="{" ".join(r["tags"])}" data-tilt>
         {photo}
@@ -887,12 +902,12 @@ def cuisine_html(book, cuisine):
     n = len(recipes)
     groups = "".join(
         # Small styles sit side by side (data-n drives the column span) instead of each taking a row.
-        f'<section class="style-group filter-group" data-n="{min(len(rs), 3)}"><h2>{html.escape(category)}</h2><div class="recipe-cards">'
+        f'<section class="style-group filter-group" id="{slug(category)}" data-n="{min(len(rs), 3)}"><h2>{html.escape(category)}</h2><div class="recipe-cards">'
         + "".join(recipe_card(r, r["url"].split("/", 1)[1]) for r in rs)
         + "</div></section>"
         for category, rs in cats.items()
     )
-    styles = "".join(f'<span class="tag">{html.escape(c)}</span>' for c in cats)
+    styles = "".join(f'<a class="tag" href="#{slug(c)}">{html.escape(c)}</a>' for c in cats)
     content = f"""
   <header class="cuisine-hero tone-{tone} reveal">
     {cuisine_art(cuisine, "hero-art")}
@@ -960,7 +975,7 @@ def recipe_page_html(book, r, prev, nxt):
              + "".join(f'<div class="fact"><span>{html.escape(label)}</span><strong>{html.escape(value)}</strong></div>'
                        for label, value in time_facts(r))
              + (f'<div class="fact fact-total"><span>Total</span><strong>{total_time(r)}</strong></div>' if total_time(r) else ""))
-    tags = "".join(f'<span class="tag">{html.escape(t)}</span>' for t in quick_tag_labels(r))
+    tags = tag_links(r, root)
     photo = (f'<figure class="hero-photo"><img src="{root}{r["photo"]}" alt="{html.escape(r["title"])}"></figure>'
              if r.get("photo") else "")
     options = ""

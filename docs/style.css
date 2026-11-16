@@ -621,6 +621,14 @@ button:focus-visible, a:focus-visible, [role="tab"]:focus-visible { outline: 2px
 .tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.6rem 0 0.9rem; padding-right: 4rem; }
 .kitchen .tags { flex-wrap: nowrap; overflow: hidden; }
 .tag-more { border-style: dashed; }
+/* Tags are links (or, on cards, filter buttons): a quiet fill on hover shows they can be pressed. */
+a.tag, .tag[data-filter-tag] { text-decoration: none; cursor: pointer; transition: background 0.15s ease, color 0.15s ease; }
+a.tag:hover, a.tag:focus-visible, .tag[data-filter-tag]:hover, .tag[data-filter-tag]:focus-visible {
+  background: var(--tone-ink, var(--accent)); border-color: var(--tone-ink, var(--accent)); color: var(--paper);
+}
+.recipe-card .tag[data-filter-tag]:hover { background: var(--accent); border-color: var(--accent); }
+.style-group { scroll-margin-top: 5rem; }
+@media (pointer: coarse) { a.tag, .tag[data-filter-tag] { padding: 0.3rem 0.75rem; } }
 .tag {
   font-size: 0.78rem; letter-spacing: 0.04em; color: var(--tone-ink);
   border: 1px solid currentColor; border-radius: 999px; padding: 0.05rem 0.6rem;
