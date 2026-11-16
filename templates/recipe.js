@@ -479,6 +479,102 @@
     return { amount: amount, name: name };
   }
 
+  // ---- How much? Ingredient names in the method show their amount ----
+  // The first mention of each ingredient a step uses becomes a quiet link: hover (or tap on
+  // a phone) for a bubble with the amount from the ingredients list, scaled with servings.
+  var pop = document.createElement("div");
+  pop.className = "ing-pop";
+  pop.setAttribute("role", "tooltip");
+  pop.id = "ing-pop";
+  pop.hidden = true;
+  document.body.appendChild(pop);
+  var popFor = null, popScroll = 0;
+  function showPop(ref) {
+    var li = ingredients[parseInt(ref.getAttribute("data-ing"), 10)];
+    var text = li.querySelector(".ing-text").textContent;
+    var part = amountAndName(text);
+    pop.textContent = "";
+    var line = document.createElement("span");
+    if (part.amount) {
+      var b = document.createElement("b");
+      b.textContent = part.amount;
+      line.appendChild(b);
+      line.appendChild(document.createTextNode(" " + text.slice(text.indexOf(part.amount) + part.amount.length).trim()));
+    } else {
+      line.textContent = text;
+    }
+    pop.appendChild(line);
+    var group = li.getAttribute("data-group");
+    if (group) {
+      var small = document.createElement("small");
+      small.textContent = group.charAt(0).toUpperCase() + group.slice(1);
+      pop.appendChild(small);
+    }
+    pop.hidden = false;
+    var r = ref.getBoundingClientRect(), w = pop.offsetWidth, h = pop.offsetHeight;
+    var left = Math.max(8, Math.min(window.innerWidth - w - 8, r.left + r.width / 2 - w / 2));
+    var above = r.top - h - 8 > 70;
+    pop.style.left = left + window.scrollX + "px";
+    pop.style.top = (above ? r.top - h - 8 : r.bottom + 8) + window.scrollY + "px";
+    pop.classList.toggle("below", !above);
+    if (popFor && popFor !== ref) popFor.setAttribute("aria-expanded", "false");
+    popFor = ref;
+    popScroll = window.scrollY;
+    ref.setAttribute("aria-expanded", "true");
+  }
+  function hidePop() {
+    pop.hidden = true;
+    if (popFor) popFor.setAttribute("aria-expanded", "false");
+    popFor = null;
+  }
+  function wrapFirst(container, rx, index) {
+    var walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (n) { return n.parentNode.closest(".ing-ref") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT; }
+    });
+    var node;
+    while ((node = walker.nextNode())) {
+      var m = new RegExp(rx.source, "i").exec(node.nodeValue);
+      if (!m) continue;
+      var hit = node.splitText(m.index);
+      hit.splitText(m[0].length);
+      var ref = document.createElement("button");
+      ref.type = "button";
+      ref.className = "ing-ref";
+      ref.setAttribute("data-ing", index);
+      ref.setAttribute("aria-describedby", "ing-pop");
+      ref.setAttribute("aria-expanded", "false");
+      hit.parentNode.replaceChild(ref, hit);
+      ref.appendChild(hit);
+      return;
+    }
+  }
+  steps.forEach(function (s) {
+    ingredientsForStep(s).forEach(function (li) { wrapFirst(s.text, patternOf(li), ingredients.indexOf(li)); });
+  });
+  var hoverable = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  [].forEach.call(methodPanel.querySelectorAll(".ing-ref"), function (ref) {
+    if (hoverable) {
+      ref.addEventListener("mouseenter", function () { showPop(ref); });
+      ref.addEventListener("mouseleave", hidePop);
+    }
+    // A tap focuses the button before it clicks, so note whether it was already open first.
+    var wasOpen = false;
+    ref.addEventListener("pointerdown", function () { wasOpen = popFor === ref; });
+    ref.addEventListener("focus", function () { showPop(ref); });
+    ref.addEventListener("blur", hidePop);
+    ref.addEventListener("click", function (e) {
+      e.stopPropagation();  // a tap shows the amount; it doesn't highlight the whole step
+      if (wasOpen && !hoverable) hidePop(); else showPop(ref);
+      wasOpen = false;
+    });
+  });
+  document.addEventListener("click", function (e) { if (popFor && !e.target.closest(".ing-ref")) hidePop(); });
+  // Close once the reader has properly scrolled on, not on the nudge a tap can cause.
+  window.addEventListener("scroll", function () {
+    if (popFor && Math.abs(window.scrollY - popScroll) > 60) hidePop();
+  }, { passive: true });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") hidePop(); });
+
   // ---- Step-by-step cooking view ----
   // Line icons in the same style as the rest of the site (see NAV_ICONS in build.py).
   var ICONS = {
