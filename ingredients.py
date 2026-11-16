@@ -70,6 +70,7 @@ INGREDIENTS = [
     (r"\bnori\b", "Nori sheets", WORLD, False),
     (r"\btonkatsu sauce\b", "Tonkatsu sauce", WORLD, False),
     (r"\bpickled ginger\b", "Pickled ginger", WORLD, False),
+    (r"\bwasabi\b", "Wasabi", WORLD, False),
     (r"\bkarashi\b|\benglish mustard\b|\bjapanese mustard\b", "Japanese or English mustard", WORLD, False),
     (r"\bpanko\b", "Panko breadcrumbs", WORLD, False),
     (r"\bcaesar dressing\b", "Caesar dressing", SAUCES, False),
