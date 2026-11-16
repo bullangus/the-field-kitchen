@@ -76,17 +76,16 @@
       actions.hidden = !anything;
       if (!anything) { summary.textContent = "One list for everything you plan to cook."; ideas(); return; }
 
-      // Recipes on the list, each with its servings.
+      // Recipes on the list: one compact card, a row per recipe with its servings and toppings.
+      if (picked.length) recipesBox.appendChild(el("h2", "", "For " + picked.length + " recipe" + (picked.length === 1 ? "" : "s")));
       picked.forEach(function (x) {
         var r = byUrl(x.url);
-        // A small card: the recipe and its servings on one line, any toppings as tags under it.
         var chip = el("div", "list-recipe");
         var head = el("div", "list-recipe-head");
         var a = el("a", "", r.title); a.href = r.url;
         head.appendChild(a);
         head.appendChild(el("span", "", "Serves " + x.serves));
-        var s = el("div", "list-recipe-opts");
-        (x.options || []).forEach(function (o) { s.appendChild(el("span", "tag", o)); });
+        var s = el("div", "list-recipe-opts", (x.options || []).length ? "+ " + x.options.join(", ") : "");
         var rm = el("button", "", "×"); rm.type = "button"; rm.setAttribute("aria-label", "Remove " + r.title);
         rm.addEventListener("click", function () {
           store("fk-list", stored("fk-list", []).filter(function (y) { return y.url !== x.url; }));
@@ -94,7 +93,7 @@
         });
         var body = el("div", "list-recipe-body");
         body.appendChild(head);
-        if (s.childNodes.length) body.appendChild(s);
+        if (s.textContent) body.appendChild(s);
         chip.appendChild(body); chip.appendChild(rm);
         recipesBox.appendChild(chip);
       });
@@ -195,11 +194,10 @@
         lines.push((checked[it.name] ? "✓ " : "▢ ") + it.name + (amounts.length ? ": " + amounts.join(" + ") : ""));
       });
       var hiddenCount = Object.keys(items).length - all.length;
-      summary.textContent = (toBuy.length ? toBuy.length + " still to buy" : "Everything's in the trolley") +
-        (got.length ? ", " + got.length + " in the trolley" : "") +
-        (picked.length ? ", for " + picked.length + " recipe" + (picked.length === 1 ? "" : "s") : "") + "." +
-        (hiddenCount ? " " + hiddenCount + " removed." : "");
+      summary.textContent = (toBuy.length ? toBuy.length + " to buy" : "Everything's in the trolley") +
+        (got.length ? " · " + got.length + " in the trolley" : "");
       restore.hidden = !hiddenCount;
+      restore.textContent = "Show " + hiddenCount + " removed item" + (hiddenCount === 1 ? "" : "s");
     };
 
     // Empty list: offer a few recipes to start from (favourites first, then a random pick).
@@ -227,40 +225,102 @@
       box.hidden = !pool.length;
     };
 
+    // The rarely used actions live behind "…".
+    var more = document.querySelector(".list-more");
+    var moreToggle = more.querySelector(".list-more-toggle"), moreMenu = more.querySelector(".list-more-menu");
+    var setMore = function (open) { moreMenu.hidden = !open; moreToggle.setAttribute("aria-expanded", String(open)); };
+    moreToggle.addEventListener("click", function () { setMore(moreMenu.hidden); });
+    document.addEventListener("click", function (e) { if (!more.contains(e.target)) setMore(false); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") setMore(false); });
     var restore = document.querySelector(".list-restore");
-    restore.addEventListener("click", function () { store("fk-list-removed", {}); build(); });
+    restore.addEventListener("click", function () { setMore(false); store("fk-list-removed", {}); build(); });
     document.querySelector(".list-clear").addEventListener("click", function () {
+      setMore(false);
+      if (!window.confirm("Clear the whole shopping list?")) return;
       store("fk-list", []); store("fk-list-checked", {}); store("fk-list-removed", {}); store("fk-list-extra", []); build();
     });
-    // Add anything else to the list: it's sorted into its section as you add it.
+    // Add anything else to the list: it's sorted into its section as you add it, with
+    // suggestions as you type (what you've added before, every ingredient in the book, and
+    // everyday groceries).
     var addForm = document.querySelector(".list-add");
     var addInput = addForm.querySelector("input");
+    var suggestBox = addForm.querySelector(".list-suggest");
     addForm.hidden = false;
-    addForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var text = addInput.value.trim();
+    var known = [];
+    (function () {
+      var seen = {};
+      SHOP.ingredients.forEach(function (r) { if (!r[3] && !seen[r[1]]) { seen[r[1]] = 1; known.push(r[1]); } });
+      (SHOP.suggestions || []).forEach(function (n) { if (!seen[n]) { seen[n] = 1; known.push(n); } });
+    })();
+    var addItem = function (text) {
+      text = text.trim();
       if (!text) return;
       var extras = stored("fk-list-extra", []);
       var name = sortItem(text).name;
       if (!extras.some(function (x) { return sortItem(x).name === name; })) extras.push(text);
       store("fk-list-extra", extras);
+      // Remember it, most recent first, so it's suggested first next time.
+      var history = stored("fk-list-history", []).filter(function (h) { return h.toLowerCase() !== text.toLowerCase(); });
+      history.unshift(text.charAt(0).toUpperCase() + text.slice(1));
+      store("fk-list-history", history.slice(0, 30));
       // Adding something back undoes an earlier "remove" of it.
       var removed = stored("fk-list-removed", {}); delete removed[name]; store("fk-list-removed", removed);
       addInput.value = "";
+      closeSuggest();
       build();
       addInput.focus();
+    };
+    var active = -1, shown = [];
+    var closeSuggest = function () {
+      suggestBox.hidden = true; suggestBox.textContent = ""; shown = []; active = -1;
+      addInput.setAttribute("aria-expanded", "false"); addInput.removeAttribute("aria-activedescendant");
+    };
+    var setActive = function (i) {
+      active = i;
+      [].forEach.call(suggestBox.children, function (li, k) { li.setAttribute("aria-selected", String(k === i)); });
+      if (i >= 0) addInput.setAttribute("aria-activedescendant", "suggest-" + i); else addInput.removeAttribute("aria-activedescendant");
+    };
+    var suggest = function () {
+      var q = addInput.value.trim().toLowerCase();
+      var onList = {};
+      stored("fk-list-extra", []).forEach(function (x) { onList[sortItem(x).name.toLowerCase()] = 1; });
+      var history = stored("fk-list-history", []);
+      var pool = history.concat(known.filter(function (n) {
+        return !history.some(function (h) { return h.toLowerCase() === n.toLowerCase(); });
+      })).filter(function (n) { return !onList[sortItem(n).name.toLowerCase()]; });
+      // Empty box: just what you've added before. Typing: names starting with it, then containing it.
+      shown = !q ? history.filter(function (n) { return !onList[sortItem(n).name.toLowerCase()]; }).slice(0, 6)
+        : pool.filter(function (n) { return n.toLowerCase().indexOf(q) === 0; })
+            .concat(pool.filter(function (n) { var i = n.toLowerCase().indexOf(q); return i > 0; })).slice(0, 6);
+      suggestBox.textContent = "";
+      if (!shown.length) { closeSuggest(); return; }
+      shown.forEach(function (n, i) {
+        var li = el("li");
+        li.id = "suggest-" + i;
+        li.setAttribute("role", "option");
+        li.setAttribute("aria-selected", "false");
+        li.appendChild(el("span", "", n));
+        li.appendChild(el("small", "", sortItem(n).aisle));
+        // pointerdown, so the tap lands before the box loses focus.
+        li.addEventListener("pointerdown", function (e) { e.preventDefault(); addItem(n); });
+        suggestBox.appendChild(li);
+      });
+      suggestBox.hidden = false;
+      addInput.setAttribute("aria-expanded", "true");
+      setActive(-1);
+    };
+    addInput.addEventListener("input", suggest);
+    addInput.addEventListener("focus", suggest);
+    addInput.addEventListener("blur", function () { setTimeout(closeSuggest, 100); });
+    addInput.addEventListener("keydown", function (e) {
+      if (suggestBox.hidden) return;
+      if (e.key === "ArrowDown") { e.preventDefault(); setActive(Math.min(active + 1, shown.length - 1)); }
+      if (e.key === "ArrowUp") { e.preventDefault(); setActive(Math.max(active - 1, -1)); }
+      if (e.key === "Escape") closeSuggest();
     });
-    document.querySelector(".list-print").addEventListener("click", function () { window.print(); });
-    var share = document.querySelector(".list-share");
-    share.addEventListener("click", function () {
-      var text = "Shopping list\n\n" + lines.join("\n");
-      if (navigator.share) { navigator.share({ title: "Shopping list", text: text }).catch(function () {}); return; }
-      if (navigator.clipboard) {
-        navigator.clipboard.writeText(text).then(function () {
-          share.textContent = "Copied!";
-          setTimeout(function () { share.textContent = "Share or copy"; }, 2000);
-        });
-      }
+    addForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      addItem(active >= 0 ? shown[active] : addInput.value);
     });
     build();
   }

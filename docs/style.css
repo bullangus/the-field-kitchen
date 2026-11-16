@@ -1080,28 +1080,63 @@ html.cooking { overflow: hidden; }
   display: grid; place-items: center; line-height: 1;
 }
 .list-count[hidden] { display: none; }
-.list-recipes { display: grid; grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr)); gap: 0.6rem; margin: 0 0 1.5rem; align-items: start; }
 /* Add anything else to the list (tools.js). */
-.list-add { display: flex; gap: 0.5rem; max-width: 40rem; margin: 0 0 1.25rem; }
+/* Shopping list header: title, a one-line count, and one row of actions. */
+.list-hero { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 0.35rem 1rem; padding-bottom: 1rem; }
+.list-hero h1 { grid-column: 1 / -1; margin: 0; }
+.list-hero .list-summary { grid-column: 1; grid-row: 2; margin: 0; }
+.list-actions { grid-column: 2; grid-row: 2; display: flex; align-items: center; gap: 0.4rem; }
+.list-actions[hidden] { display: none; }
+.list-actions .pill { padding: 0.5rem 1rem; }
+.list-actions .list-print, .list-actions .list-more-toggle { padding: 0.5rem 0.7rem; }
+.list-more { position: relative; }
+.list-more-menu {
+  position: absolute; top: calc(100% + 0.4rem); right: 0; z-index: 25; min-width: 13rem; list-style: none; margin: 0; padding: 0.35rem;
+  background: var(--paper); border: 1px solid var(--rule); border-radius: 12px; box-shadow: 0 12px 32px var(--shadow);
+}
+.list-more-menu[hidden], .list-more-menu [hidden] { display: none; }
+.list-more-menu button {
+  width: 100%; text-align: left; font: inherit; font-size: 0.95rem; cursor: pointer; color: var(--ink);
+  background: none; border: 0; border-radius: 8px; padding: 0.6rem 0.75rem;
+}
+.list-more-menu button:hover, .list-more-menu button:focus-visible { background: var(--hover); color: var(--accent); outline: none; }
+.list-more-menu .list-clear { color: var(--accent); }
+.list-add { display: flex; gap: 0.5rem; max-width: 40rem; margin: 0 0 1rem; }
 .list-add[hidden] { display: none; }
 .list-add .search-field { flex: 1; width: auto; }
 .list-add .search-field:focus-within { width: auto; }
 .list-add svg { flex: none; width: 1.05rem; height: 1.05rem; color: var(--muted); }
 .list-add input { flex: 1; min-width: 0; font: inherit; color: var(--ink); background: transparent; border: 0; padding: 0.6rem 0; outline: none; }
-.list-add .pill { flex: none; }
+.list-add-go {
+  flex: none; margin-right: -0.4rem; font: inherit; font-size: 0.88rem; font-weight: 600; cursor: pointer;
+  color: var(--paper); background: var(--accent); border: 0; border-radius: 999px; padding: 0.4rem 0.9rem;
+}
+.list-add-go:hover { background: var(--accent-dark); }
+.list-add-field { position: relative; flex: 1; min-width: 0; display: flex; }
+.list-suggest {
+  position: absolute; top: calc(100% + 0.4rem); left: 0; right: 0; z-index: 25; list-style: none; margin: 0; padding: 0.35rem;
+  background: var(--paper); border: 1px solid var(--rule); border-radius: 14px; box-shadow: 0 12px 32px var(--shadow);
+}
+.list-suggest[hidden] { display: none; }
+.list-suggest li {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; cursor: pointer;
+  padding: 0.6rem 0.75rem; border-radius: 10px;
+}
+.list-suggest li:hover, .list-suggest li[aria-selected="true"] { background: var(--hover); color: var(--accent); }
+.list-suggest small { color: var(--muted); font-size: 0.8rem; white-space: nowrap; }
 /* Empty until something is on the list; then they take no space at all. */
 .list-recipes:empty, .list-aisles:empty { display: none; }
-.list-recipe {
-  display: flex; align-items: flex-start; gap: 0.5rem; padding: 0.75rem 0.6rem 0.75rem 1.1rem;
-  background: var(--grain), var(--card); border: 1px solid var(--rule); border-radius: 16px;
-}
+/* The recipes on the list: one compact card, a row each. */
+.list-recipes { max-width: 40rem; margin: 0 0 1.25rem; padding: 0.4rem 0.5rem 0.4rem 1.1rem; background: var(--grain), var(--card); border: 1px solid var(--rule); border-radius: 16px; }
+.list-recipes h2 { font-family: "Source Serif 4", Georgia, serif; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin: 0.5rem 0 0.1rem; }
+.list-recipe { display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0; border-top: 1px solid var(--hair); }
+.list-recipes h2 + .list-recipe { border-top: 0; }
 .list-recipe-body { flex: 1; min-width: 0; }
 .list-recipe-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 0.6rem; }
-.list-recipe a { text-decoration: none; font: 600 1.3rem/1.2 "Cormorant Garamond", Georgia, serif; }
+.list-recipe a { text-decoration: none; font-weight: 600; }
 .list-recipe a:hover { color: var(--accent); }
 .list-recipe-head span { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
-.list-recipe-opts { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.45rem; }
-.list-recipe-opts .tag { color: var(--accent); }
+.list-recipe-opts { color: var(--muted); font-size: 0.82rem; font-style: italic; line-height: 1.35; }
 .list-recipe button {
   flex: none; font: inherit; cursor: pointer; border: 0; width: 2rem; height: 2rem; border-radius: 999px;
   background: none; color: var(--muted); font-size: 1.1rem; line-height: 1;
@@ -1253,7 +1288,7 @@ html.cooking { overflow: hidden; }
   }
   @page { margin: 18mm 16mm 20mm; }
   .site-nav, .pager, .print-link, .print-intro, .search, .read-progress, .recipe-tabs, .hero-actions,
-  .timer-tray, .cook-view, .palette, .hero-art, .panel-hint, .scale-note, .chips, .list-actions, .tabbar, .cook-fab { display: none !important; }
+  .timer-tray, .cook-view, .palette, .hero-art, .panel-hint, .scale-note, .chips, .list-actions, .list-add, .tabbar, .cook-fab { display: none !important; }
   /* Only the printed book keeps the footer, as a colophon on its own last page. */
   .site-footer { display: none; }
   .site-footer.colophon { display: block; break-before: page; background: none; border: 0; margin: 0; padding-top: 90mm; }

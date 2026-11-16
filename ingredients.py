@@ -250,7 +250,23 @@ GROCERIES = [
     (r"\bapples?\b|\bbananas?\b|\bgrapes\b|\bberries\b|\bsalad\b|\btomato(es)?\b|\bonions?\b|\bveg", PRODUCE),
     (r"\bflour\b|\bsugar\b|\beggs?\b|\bbaking\b|\bcake\b", BAKING),
     (r"\btins?\b|\bcans?\b|\bbeans\b|\btuna\b|\bsoup\b|\bchickpeas\b|\blentils\b", TINS),
+    (r"\bwrap\b|\bfoil\b|\bbaking paper\b|\bbags\b|\btoilet\b|\bpaper towel\b|\bliquid\b|\btissues\b|"
+     r"\btoothpaste\b|\bshampoo\b|\bsoap\b|\bbatteries\b", OTHER),
 ]
+
+# Everyday items suggested as you type on the shopping list, alongside every ingredient above.
+GROCERY_SUGGESTIONS = (
+    "Ravioli", "Tortellini", "Gnocchi", "Pasta sauce", "Pesto", "Salsa", "Jam", "Vegemite", "Nutella",
+    "Penne", "Couscous", "Quinoa", "Cereal", "Weet-Bix", "Oats", "Muesli", "Coffee", "Tea", "Milo",
+    "Chips", "Biscuits", "Crackers", "Chocolate", "Lollies", "Nuts", "Popcorn", "Juice", "Soft drink",
+    "Mineral water", "Beer", "White wine", "Cider", "Ice cream", "Frozen pizza", "Frozen chips", "Ice",
+    "Yoghurt", "Cheese slices", "Dip", "Hummus", "Tofu", "Bread rolls", "Wraps", "Crumpets",
+    "English muffins", "Bagels", "Croissants", "Salami", "Prosciutto", "Olives", "Sliced ham", "Lamb",
+    "Prawns", "Fish fillets", "Apples", "Bananas", "Grapes", "Berries", "Salad mix", "Tomatoes",
+    "Tinned tuna", "Soup", "Chickpeas", "Lentils", "Baked beans", "Toilet paper", "Paper towel",
+    "Dishwashing liquid", "Laundry liquid", "Bin bags", "Cling wrap", "Foil", "Baking paper",
+    "Sandwich bags", "Tissues", "Toothpaste", "Shampoo", "Soap", "Batteries",
+)
 
 COMPILED = [(re.compile(p, re.I), p, name, aisle, staple) for p, name, aisle, staple in INGREDIENTS]
 
@@ -325,4 +341,9 @@ def parse_line(line):
             item["q"], item["u"] = amount * factor, base
         else:
             item["q"], item["u"] = amount, unit or None
+        # "5 garlic cloves" names its count after the ingredient: same unit as "5 cloves garlic".
+        if not unit:
+            after = re.match(rf"^\S+(?:\s*[–-]\s*\S+)?\s+\w+\s+({'|'.join(COUNTS)})\b", line, re.I)
+            if after:
+                item["u"] = after.group(1).lower()
     return item

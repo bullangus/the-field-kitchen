@@ -23,7 +23,7 @@ import sys
 from datetime import date, datetime
 from pathlib import Path
 
-from ingredients import AISLES, GROCERIES, INGREDIENTS, parse_line
+from ingredients import AISLES, GROCERIES, GROCERY_SUGGESTIONS, INGREDIENTS, parse_line
 
 ROOT = Path(__file__).parent
 RECIPES = ROOT / "recipes"
@@ -86,6 +86,7 @@ NAV_ICONS = {
     "play": '<path d="M7 4.5v15l12.5-7.5z"/>',
     "plus": '<path d="M12 5v14M5 12h14"/>',
     "heart": '<path d="M12 20.5s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.9a4.3 4.3 0 0 1 7.5 2.6c0 5.4-7.5 10-7.5 10z"/>',
+    "dots": '<circle cx="5" cy="12" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="19" cy="12" r="1.2"/>',
     "home": '<path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9.5h4.5V15h3v4.5H18V10"/>',
 }
 # Cuisine icons (24x24 outline paths) from Tabler Icons v3.19.0, MIT licence,
@@ -489,7 +490,8 @@ def search_index(book):
     # The shopping list sorts items typed straight onto it with the same rules as recipe lines.
     shop = {"aisles": list(AISLES),
             "ingredients": [[p, name, aisle, staple] for p, name, aisle, staple in INGREDIENTS if name],
-            "groceries": [[p, aisle] for p, aisle in GROCERIES]}
+            "groceries": [[p, aisle] for p, aisle in GROCERIES],
+            "suggestions": list(GROCERY_SUGGESTIONS)}
     return ("window.FIELD_KITCHEN_INDEX = " + json.dumps(entries, ensure_ascii=False, indent=0) + ";\n"
             "window.FIELD_KITCHEN_SHOP = " + json.dumps(shop, ensure_ascii=False) + ";\n")
 
@@ -1012,20 +1014,26 @@ def recipe_page_html(book, r, prev, nxt):
 
 def list_html(book):
     content = f"""
-  <header class="page-hero">
-    <p class="eyebrow">Shopping list</p>
+  <header class="page-hero list-hero">
     <h1>Shopping list</h1>
     <p class="list-summary">One list for everything you plan to cook.</p>
-    <div class="hero-actions list-actions" hidden>
-      <button type="button" class="pill pill-solid list-share">Share or copy</button>
-      <button type="button" class="pill pill-outline list-print">{svg_icon("printer")}Print</button>
-      <button type="button" class="pill pill-outline list-restore" hidden>Show removed items</button>
-      <button type="button" class="pill pill-outline list-clear">Clear list</button>
+    <div class="list-actions" hidden>
+      <button type="button" class="pill pill-solid list-share">Share</button>
+      <button type="button" class="pill pill-outline list-print" aria-label="Print">{svg_icon("printer")}</button>
+      <div class="list-more">
+        <button type="button" class="pill pill-outline list-more-toggle" aria-expanded="false" aria-haspopup="menu" aria-label="More">{svg_icon("dots")}</button>
+        <ul class="list-more-menu" role="menu" hidden>
+          <li><button type="button" class="list-restore" role="menuitem" hidden>Show removed items</button></li>
+          <li><button type="button" class="list-clear" role="menuitem">Clear list</button></li>
+        </ul>
+      </div>
     </div>
   </header>
   <form class="list-add" hidden>
-    <label class="search-field">{svg_icon("plus")}<input type="text" placeholder="Add something else, e.g. ravioli" aria-label="Add an item to the list" autocomplete="off" enterkeyhint="done"></label>
-    <button type="submit" class="pill pill-solid">Add</button>
+    <div class="list-add-field">
+      <label class="search-field">{svg_icon("plus")}<input type="text" placeholder="Add an item, e.g. ravioli" aria-label="Add an item to the list" autocomplete="off" enterkeyhint="done" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="list-suggest"><button type="submit" class="list-add-go">Add</button></label>
+      <ul class="list-suggest" id="list-suggest" role="listbox" hidden></ul>
+    </div>
   </form>
   <div class="list-recipes"></div>
   <div class="list-aisles"></div>
