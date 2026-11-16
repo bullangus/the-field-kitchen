@@ -494,13 +494,13 @@ main.home { max-width: 72rem; padding-top: 1.5rem; }
 /* Home masthead: the title stacked like a magazine cover, a turning seal, cuisines sliding by. */
 /* The masthead as a journal page taped into the book: dot-grid paper, a red margin rule,
    and two strips of washi tape across its edges (visible overflow lets them hang off). */
-.masthead { --margin-rule: 1.6rem; position: relative; overflow: visible; isolation: isolate;
+.masthead { --margin-rule: 1.6rem; --pad: 2.5rem; position: relative; overflow: visible; isolation: isolate;
   background:
     linear-gradient(90deg, transparent var(--margin-rule), color-mix(in srgb, var(--accent) 38%, transparent) var(--margin-rule) calc(var(--margin-rule) + 1px), transparent calc(var(--margin-rule) + 1px)),
     var(--grain), radial-gradient(var(--dot) 1.1px, transparent 1.3px) 0 0 / 18px 18px, var(--card); }
 /* Washi tape, shared by every page that's "taped into the journal": the home masthead and
    the cuisine and recipe headers. */
-.masthead::before, .masthead::after, .recipe-hero::before, .cuisine-hero::before, .plan-setup::before {
+.masthead::before, .recipe-hero::before, .cuisine-hero::before, .plan-setup::before {
   content: ""; position: absolute; z-index: 2; width: 7.5rem; height: 1.9rem; pointer-events: none;
   /* Translucent paper with a faint weave, torn ends, and a soft shadow lifting it off the page. */
   background:
@@ -511,7 +511,6 @@ main.home { max-width: 72rem; padding-top: 1.5rem; }
   filter: drop-shadow(0 1px 1.5px rgba(60, 40, 20, 0.18));
 }
 .masthead::before { top: -0.85rem; left: 1.75rem; transform: rotate(-4deg); }
-.masthead::after { bottom: -0.85rem; right: 2.25rem; transform: rotate(3deg); }
 .plan-setup { position: relative; }
 .recipe-hero::before, .cuisine-hero::before, .plan-setup::before { top: -0.8rem; left: 1.75rem; width: 6.5rem; height: 1.7rem; transform: rotate(-3deg); }
 /* Headers on dot-grid paper in their cuisine's colour. */
@@ -533,7 +532,7 @@ main.home { max-width: 72rem; padding-top: 1.5rem; }
   font-family: var(--typewriter); font-size: 9.2px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; }
 .seal-line { fill: none; stroke: var(--accent); stroke-width: 1.3; }
 .seal .hat { position: absolute; inset: 31%; width: 38%; height: 38%; margin: 0; color: var(--accent); }
-.marquee { overflow: hidden; margin: 1.25rem -2.5rem; padding: 0.55rem 0; border-block: 1px solid var(--hair);
+.marquee { overflow: hidden; margin: 1.25rem calc(0px - var(--pad, 2.5rem)) 1.25rem calc(var(--margin-rule, 0px) + 1px - var(--pad, 2.5rem)); padding: 0.55rem 0; border-block: 1px solid var(--hair);
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); }
 .marquee-track { display: flex; gap: 1.6rem; width: max-content; font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 1.35rem; white-space: nowrap; }
 .marquee-track span { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--ink); }
@@ -715,7 +714,9 @@ button:focus-visible, a:focus-visible, [role="tab"]:focus-visible { outline: 2px
 .kitchen ul { min-height: 0; }
 .kitchen {
   --tone-bg: var(--t1-bg); --tone-ink: var(--t1-ink);
-  background: var(--grain), var(--tone-bg); border-radius: 20px; padding: 1.5rem 1.5rem 1.25rem;
+  /* Dot-grid paper in the cuisine's colour, like the cuisine and recipe headers. */
+  background: var(--grain), radial-gradient(color-mix(in srgb, var(--tone-ink) 16%, transparent) 1.1px, transparent 1.3px) 0 0 / 18px 18px, var(--tone-bg);
+  border-radius: 20px; padding: 1.5rem 1.5rem 1.25rem;
   display: flex; flex-direction: column; position: relative; overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -732,7 +733,7 @@ button:focus-visible, a:focus-visible, [role="tab"]:focus-visible { outline: 2px
 .kitchen h3 a { text-decoration: none; }
 .kitchen-count {
   min-width: 1.75rem; height: 1.75rem; border-radius: 999px; display: inline-grid; place-items: center;
-  background: var(--tone-ink); color: var(--paper); font-size: 0.8rem; font-weight: 600; padding: 0 0.45rem;
+  background: var(--tone-ink); color: var(--paper); font-family: var(--typewriter); font-size: 0.8rem; font-weight: 700; padding: 0 0.45rem;
 }
 .tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.6rem 0 0.9rem; padding-right: 4rem; }
 /* One row of whole tags across the card: any that don't fit wrap to a hidden second row
@@ -773,7 +774,7 @@ a.tag:hover, a.tag:focus-visible, .tag[data-filter-tag]:hover, .tag[data-filter-
   .kitchens:not(.filtered) .kitchen header { padding-right: 0; flex-direction: column-reverse; align-items: flex-start; gap: 0.15rem; }
   .kitchens:not(.filtered) .kitchen h3 { font-size: 1.45rem; line-height: 1.05; }
   .kitchens:not(.filtered) .kitchen h3 a::after { content: ""; position: absolute; inset: 0; }
-  .kitchens:not(.filtered) .kitchen-count { display: block; min-width: 0; height: auto; padding: 0; background: none; color: var(--tone-ink); font-size: 0.78rem; letter-spacing: 0.04em; }
+  .kitchens:not(.filtered) .kitchen-count { display: block; min-width: 0; height: auto; padding: 0; background: none; color: var(--tone-ink); font-family: var(--typewriter); font-size: 0.74rem; font-weight: 700; letter-spacing: 0; white-space: nowrap; }
   .kitchens:not(.filtered) .kitchen-count::after { content: " recipes"; }
   .kitchens:not(.filtered) .kitchen-count[data-n="1"]::after { content: " recipe"; }
   .kitchens:not(.filtered) .kitchen-art { width: 3.1rem; height: 3.1rem; top: 0.55rem; right: 0.55rem; opacity: 0.45; }
@@ -821,8 +822,7 @@ a.tag:hover, a.tag:focus-visible, .tag[data-filter-tag]:hover, .tag[data-filter-
 @media (max-width: 520px) {
   .tile, .tile-hero { padding: 1.4rem; border-radius: 16px; }
   .tile-feature { padding-right: 2.9rem; }  /* room for the elastic band */
-  .marquee { margin-inline: -1.4rem; }
-  .masthead { --margin-rule: 0.75rem; }
+  .masthead { --margin-rule: 0.75rem; --pad: 1.4rem; }
   .seal { top: 1rem; right: 1rem; }
   .feature-photo { margin: -1.4rem -1.4rem 1.1rem; }
 }
@@ -897,7 +897,7 @@ a.tag:hover, a.tag:focus-visible, .tag[data-filter-tag]:hover, .tag[data-filter-
 .hero-photo img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 18px; }
 .facts { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0.75rem; }
 .fact {
-  display: flex; flex-direction: column; justify-content: center; gap: 0.15rem; min-height: 4rem;
+  display: flex; flex-direction: column; justify-content: flex-start; gap: 0.15rem; min-height: 4rem;
   background: var(--card); border-radius: 14px; padding: 0.55rem 0.95rem; max-width: 22rem;
 }
 .fact > span { font-family: var(--typewriter); font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--tone-ink); }
