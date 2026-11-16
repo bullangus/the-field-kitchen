@@ -520,6 +520,7 @@ def nav_html(book, root, current=None):
       </form>
     </div>
     <a class="nav-button list-link" href="{root}{LIST_PAGE}"{here(LIST_PAGE)} aria-label="Shopping list">{svg_icon("basket")}<span class="list-count" hidden>0</span></a>
+    <button type="button" class="nav-button search-toggle" aria-label="Search recipes" hidden>{svg_icon("search")}</button>
     <button type="button" class="nav-button theme-toggle" aria-label="Switch between light and dark">{svg_icon("moon", "moon")}{svg_icon("sun", "sun")}</button>
     <button type="button" class="nav-button menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Menu">{svg_icon("menu")}</button>
   </div>
