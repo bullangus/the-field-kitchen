@@ -30,12 +30,22 @@
   --feature-a: #8a3b24;
   --feature-b: #6e2d1a;
   --on-accent: #fbf8f3;
+  /* Each cuisine's colour (.tone-<cuisine> below); --t1 is the fallback for a new one. */
   --t1-bg: #f6e3da; --t1-ink: #8a3b24;
-  --t2-bg: #e9ebdc; --t2-ink: #56662a;
-  --t3-bg: #f6ebd0; --t3-ink: #866212;
-  --t4-bg: #e5e9ee; --t4-ink: #3e5469;
-  --t5-bg: #f0e1e7; --t5-ink: #7a3b5a;
-  --t6-bg: #e1ece6; --t6-ink: #3b6a55;
+  --c-american-bg: #f7dfda; --c-american-ink: #a3352a;
+  --c-australian-bg: #f6e4d2; --c-australian-ink: #8e4c1c;
+  --c-british-bg: #e1e6ef; --c-british-ink: #334a6e;
+  --c-chinese-bg: #dbede4; --c-chinese-ink: #2b6a50;
+  --c-greek-bg: #dbe9f5; --c-greek-ink: #23649a;
+  --c-indian-bg: #fae7c9; --c-indian-ink: #8a5208;
+  --c-italian-bg: #e6eed6; --c-italian-ink: #4b6420;
+  --c-japanese-bg: #f7e1e9; --c-japanese-ink: #9b3b60;
+  --c-mexican-bg: #d6eeee; --c-mexican-ink: #136b70;
+  --c-south-african-bg: #ece3d9; --c-south-african-ink: #6e4a30;
+  --c-spanish-bg: #f7efc9; --c-spanish-ink: #725a00;
+  --c-thai-bg: #ece2f2; --c-thai-ink: #6c4590;
+  --c-lebanese-bg: #f2dfe2; --c-lebanese-ink: #87344a;
+  --c-malaysian-bg: #e0efd9; --c-malaysian-ink: #3d6b2c;
   --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .27 0 0 0 0 .2 0 0 0 .1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   color-scheme: light;
 }
@@ -46,9 +56,21 @@
     --note-bg: #2a221c; --nav-bg: rgba(25, 21, 18, 0.82); --hover: rgba(224, 137, 106, 0.12);
     --ring: rgba(224, 137, 106, 0.22); --shadow: rgba(0, 0, 0, 0.45);
     --glow-1: rgba(224, 137, 106, 0.10); --glow-2: rgba(214, 170, 90, 0.08);
-    --t1-bg: #33221c; --t1-ink: #eb9a7c; --t2-bg: #2a2d1f; --t2-ink: #b5c47a;
-    --t3-bg: #33291a; --t3-ink: #e2bd62; --t4-bg: #222a33; --t4-ink: #9db6cf;
-    --t5-bg: #31212a; --t5-ink: #dc9cbb; --t6-bg: #1f2c26; --t6-ink: #8fc8ad;
+    --t1-bg: #33221c; --t1-ink: #eb9a7c;
+    --c-american-bg: #321d1b; --c-american-ink: #e89992;
+    --c-australian-bg: #32241b; --c-australian-ink: #e8b692;
+    --c-british-bg: #1b2432; --c-british-ink: #9eb6dc;
+    --c-chinese-bg: #1b3228; --c-chinese-ink: #9adfc3;
+    --c-greek-bg: #1b2732; --c-greek-ink: #92c1e8;
+    --c-indian-bg: #32281b; --c-indian-ink: #e8c392;
+    --c-italian-bg: #29321b; --c-italian-ink: #c7e594;
+    --c-japanese-bg: #321b24; --c-japanese-ink: #e198b4;
+    --c-mexican-bg: #1b3032; --c-mexican-ink: #92e3e8;
+    --c-south-african-bg: #32241b; --c-south-african-ink: #ddb79c;
+    --c-spanish-bg: #322d1b; --c-spanish-ink: #e8d692;
+    --c-thai-bg: #271b32; --c-thai-ink: #be9fdb;
+    --c-lebanese-bg: #321b21; --c-lebanese-ink: #e199ac;
+    --c-malaysian-bg: #21321b; --c-malaysian-ink: #addf9a;
     --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .95 0 0 0 0 .9 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     color-scheme: dark;
   }
@@ -59,9 +81,21 @@
   --note-bg: #2a221c; --nav-bg: rgba(25, 21, 18, 0.82); --hover: rgba(224, 137, 106, 0.12);
   --ring: rgba(224, 137, 106, 0.22); --shadow: rgba(0, 0, 0, 0.45);
   --glow-1: rgba(224, 137, 106, 0.10); --glow-2: rgba(214, 170, 90, 0.08);
-  --t1-bg: #33221c; --t1-ink: #eb9a7c; --t2-bg: #2a2d1f; --t2-ink: #b5c47a;
-  --t3-bg: #33291a; --t3-ink: #e2bd62; --t4-bg: #222a33; --t4-ink: #9db6cf;
-  --t5-bg: #31212a; --t5-ink: #dc9cbb; --t6-bg: #1f2c26; --t6-ink: #8fc8ad;
+  --t1-bg: #33221c; --t1-ink: #eb9a7c;
+  --c-american-bg: #321d1b; --c-american-ink: #e89992;
+  --c-australian-bg: #32241b; --c-australian-ink: #e8b692;
+  --c-british-bg: #1b2432; --c-british-ink: #9eb6dc;
+  --c-chinese-bg: #1b3228; --c-chinese-ink: #9adfc3;
+  --c-greek-bg: #1b2732; --c-greek-ink: #92c1e8;
+  --c-indian-bg: #32281b; --c-indian-ink: #e8c392;
+  --c-italian-bg: #29321b; --c-italian-ink: #c7e594;
+  --c-japanese-bg: #321b24; --c-japanese-ink: #e198b4;
+  --c-mexican-bg: #1b3032; --c-mexican-ink: #92e3e8;
+  --c-south-african-bg: #32241b; --c-south-african-ink: #ddb79c;
+  --c-spanish-bg: #322d1b; --c-spanish-ink: #e8d692;
+  --c-thai-bg: #271b32; --c-thai-ink: #be9fdb;
+  --c-lebanese-bg: #321b21; --c-lebanese-ink: #e199ac;
+  --c-malaysian-bg: #21321b; --c-malaysian-ink: #addf9a;
   --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .95 0 0 0 0 .9 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   color-scheme: dark;
 }
@@ -603,11 +637,6 @@ button:focus-visible, a:focus-visible, [role="tab"]:focus-visible { outline: 2px
 }
 .kitchen:hover { transform: translateY(-3px); box-shadow: 0 14px 30px var(--hair); }
 .kitchen[hidden] { display: none; }
-.tone-2 { --tone-bg: var(--t2-bg); --tone-ink: var(--t2-ink); }
-.tone-3 { --tone-bg: var(--t3-bg); --tone-ink: var(--t3-ink); }
-.tone-4 { --tone-bg: var(--t4-bg); --tone-ink: var(--t4-ink); }
-.tone-5 { --tone-bg: var(--t5-bg); --tone-ink: var(--t5-ink); }
-.tone-6 { --tone-bg: var(--t6-bg); --tone-ink: var(--t6-ink); }
 .kitchen-art {
   position: absolute; top: 0.6rem; right: 0.6rem; width: 5.5rem; height: 5.5rem;
   color: var(--tone-ink); opacity: 0.32; pointer-events: none;
@@ -1399,6 +1428,22 @@ html.cooking { overflow: hidden; }
   .book-pages .kicker, .book-pages .recipe h4, .book-pages .toc-category > span { color: #8a3b24; }
   .book-pages .meta, .book-pages .cover p, .book-pages .category-list, .book-pages .source { color: #7a6f64; }
 }
+
+/* Cuisine colours: after every rule that sets the --t1 fallback, so they win. */
+.tone-american { --tone-bg: var(--c-american-bg); --tone-ink: var(--c-american-ink); }
+.tone-australian { --tone-bg: var(--c-australian-bg); --tone-ink: var(--c-australian-ink); }
+.tone-british { --tone-bg: var(--c-british-bg); --tone-ink: var(--c-british-ink); }
+.tone-chinese { --tone-bg: var(--c-chinese-bg); --tone-ink: var(--c-chinese-ink); }
+.tone-greek { --tone-bg: var(--c-greek-bg); --tone-ink: var(--c-greek-ink); }
+.tone-indian { --tone-bg: var(--c-indian-bg); --tone-ink: var(--c-indian-ink); }
+.tone-italian { --tone-bg: var(--c-italian-bg); --tone-ink: var(--c-italian-ink); }
+.tone-japanese { --tone-bg: var(--c-japanese-bg); --tone-ink: var(--c-japanese-ink); }
+.tone-mexican { --tone-bg: var(--c-mexican-bg); --tone-ink: var(--c-mexican-ink); }
+.tone-south-african { --tone-bg: var(--c-south-african-bg); --tone-ink: var(--c-south-african-ink); }
+.tone-spanish { --tone-bg: var(--c-spanish-bg); --tone-ink: var(--c-spanish-ink); }
+.tone-thai { --tone-bg: var(--c-thai-bg); --tone-ink: var(--c-thai-ink); }
+.tone-lebanese { --tone-bg: var(--c-lebanese-bg); --tone-ink: var(--c-lebanese-ink); }
+.tone-malaysian { --tone-bg: var(--c-malaysian-bg); --tone-ink: var(--c-malaysian-ink); }
 
 @media print {
   :root, :root[data-theme="dark"] {

@@ -159,6 +159,10 @@ The home page ends with a signed footer (by Angus Field, `AUTHOR` in build.py), 
 
 ---
 
+## Cuisine colours
+
+Each cuisine has its own soft colour that suits it (tomato red for American, jade for Chinese, sakura pink for Japanese, saffron for Spanish…), used on its home page tile, map pin, cuisine page and recipe headers. They are `--c-<cuisine>-bg` and `--c-<cuisine>-ink` tokens on `:root` in style.css (with dark versions in both dark blocks) and a `.tone-<cuisine>` class at the end of the screen styles. A new cuisine falls back to terracotta until it has one: pick a hue no other cuisine is close to, keep the background pale and the ink dark enough for 4.5:1 contrast on it, and check light and dark.
+
 ## Cuisine icons
 
 Each cuisine has one line icon in `CUISINE_ART` in build.py. It shows on the home page tiles and cards, the cuisine page header and every recipe header, from about 50 px up to 190 px, in light and dark. A new cuisine falls back to the knife and fork until it has its own. When adding or redrawing one:

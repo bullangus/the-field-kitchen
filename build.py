@@ -108,7 +108,6 @@ PLAN_NAMES = (
 )
 KITCHEN_CARD_RECIPES = 3  # recipes shown on each home page cuisine card; the rest are a click away
 CARD_TAGS = 3  # style tags shown on each home page cuisine card before "+N"
-TONES = 6  # colour tones for cuisine cards and headers, .tone-1 to .tone-6 in style.css
 QUICK_MINUTES = 30
 PROJECT_MINUTES = 150  # hands-on time
 MAKE_AHEAD_MINUTES = 240  # waiting time (marinating, curing...) that means starting ahead
@@ -328,23 +327,22 @@ def load():
         for rs in cats.values():
             rs.sort(key=lambda r: r["title"].lower())
     book = {c: dict(sorted(cats.items())) for c, cats in sorted(book.items())}
-    for i, cuisine in enumerate(book):
+    for cuisine in book:
         for rs in book[cuisine].values():
             for r in rs:
-                r["tone"] = i % TONES + 1
+                r["tone"] = slug(cuisine)  # .tone-<cuisine> in style.css
     return book
 
 
 def load_basics(book):
     """The basics, as recipe-like entries at basics/<name>.html, coloured like their cuisine."""
-    tones = {c: rs[0]["tone"] for c, cats in book.items() for rs in list(cats.values())[:1]}
     basics = []
     for path in sorted(BASICS.glob("*.md")) if BASICS.exists() else []:
         if path.name.startswith("_"):
             continue
         r = parse(path)
         r.update(basic=True, url=f"basics/{path.stem}.html", added=date_added(r), related=[],
-                 tone=tones.get(r["cuisine"], 1))
+                 tone=slug(r["cuisine"]))
         r["tags"] = recipe_tags(r)
         basics.append(r)
     return sorted(basics, key=lambda r: r["title"].lower())
@@ -817,7 +815,7 @@ def world_map(book):
         # Label to the right ("start"), left ("end") or centred above the pin ("above").
         dx, dy, anchor = {"start": (4.5, 1.4, "start"), "end": (-4.5, 1.4, "end"), "above": (0, -4.5, "middle")}[side]
         pins.append(
-            f'<a class="pin tone-{i % TONES + 1}" href="{cuisine_url(cuisine)}" '
+            f'<a class="pin tone-{slug(cuisine)}" href="{cuisine_url(cuisine)}" '
             f'aria-label="{html.escape(cuisine)}: {n} recipe{"s" if n != 1 else ""}">'
             # A wider see-through circle, so a fingertip doesn't have to land on the dot itself.
             f'<circle class="pin-hit" cx="{x:g}" cy="{y:g}" r="6"/>'
@@ -917,7 +915,7 @@ def home_html(book):
             for rs in cats.values() for r in rs
         )
         cards.append(f"""
-      <article class="kitchen filter-group tone-{i % TONES + 1} reveal" data-limit="{KITCHEN_CARD_RECIPES}" data-tilt>
+      <article class="kitchen filter-group tone-{slug(cuisine)} reveal" data-limit="{KITCHEN_CARD_RECIPES}" data-tilt>
         {cuisine_art(cuisine, "kitchen-art")}
         <header>
           <h3><a href="{cuisine_url(cuisine)}"{vt_name("c", cuisine)}>{html.escape(cuisine)}</a></h3>
