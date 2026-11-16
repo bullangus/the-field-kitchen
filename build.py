@@ -28,6 +28,10 @@ from ingredients import AISLES, BAKERY, DAIRY, DELI, MEAT, PRODUCE, GROCERIES, G
 
 ROOT = Path(__file__).parent
 RECIPES = ROOT / "recipes"
+# Supermarket shortcuts (a jar of butter chicken sauce, a taco kit): on the site and in week
+# plans, but not recipes, so not in the printed book or on the cuisine pages.
+BASICS = ROOT / "basics"
+BASICS_ANCHOR = "basics"  # the Basics section of the week plans page
 PHOTOS = ROOT / "photos"
 README = ROOT / "README.md"
 TEMPLATES = ROOT / "templates"
@@ -61,14 +65,16 @@ NOT_MEALS = ("Sides", "Desserts", "Breads", "Baking", "Eggs")
 PLAN_DAYS = ("Mon", "Tue", "Wed", "Thu", "Fri")
 PLAN_COUNT = 6
 PLAN_SKIP_STYLES = ("Sushi", "Duck")  # built from parts, or kept for a special meal
-PLAN_SKIP_TAGS = ("project", "christmas", "party-food")
+# Plans are easy regular dinners: no special-occasion, party or multi-day cooking.
+PLAN_SKIP_TAGS = ("project", "christmas", "party-food", "sunday-roast")
+PLAN_MAX_MINUTES = 60  # the whole time line, waiting included
 PLAN_MAX_SAME = 2  # at most this many dinners from one style, or from one cuisine, in a week
 PLAN_MIN_CUISINES = 3
 # Sharing fresh food (bought in packs, goes off) saves more than sharing a jar that lasts.
 PLAN_FRESH = (PRODUCE, DELI, MEAT, DAIRY, BAKERY)
 PLAN_FRESH_WEIGHT = 3
-PLAN_EVERYDAY = ("Garlic", "Brown onions")
-PLAN_LUNCHES = 2  # dinners per week marked "cook extra" for lunches  # in nearly everything, so left out of a plan's headline
+PLAN_EVERYDAY = ("Garlic", "Brown onions")  # in nearly everything, so left out of a plan's headline
+PLAN_LUNCHES = 2  # dinners per week marked "cook extra" for lunches
 KITCHEN_CARD_RECIPES = 3  # recipes shown on each home page cuisine card; the rest are a click away
 CARD_TAGS = 3  # style tags shown on each home page cuisine card before "+N"
 TONES = 6  # colour tones for cuisine cards and headers, .tone-1 to .tone-6 in style.css
@@ -298,6 +304,21 @@ def load():
     return book
 
 
+def load_basics(book):
+    """The basics, as recipe-like entries at basics/<name>.html, coloured like their cuisine."""
+    tones = {c: rs[0]["tone"] for c, cats in book.items() for rs in list(cats.values())[:1]}
+    basics = []
+    for path in sorted(BASICS.glob("*.md")) if BASICS.exists() else []:
+        if path.name.startswith("_"):
+            continue
+        r = parse(path)
+        r.update(basic=True, url=f"basics/{path.stem}.html", added=date_added(r), related=[],
+                 tone=tones.get(r["cuisine"], 1))
+        r["tags"] = recipe_tags(r)
+        basics.append(r)
+    return sorted(basics, key=lambda r: r["title"].lower())
+
+
 def link_related(recipes):
     """Resolve each recipe's optional `goes with:` titles into r["related"]. The link runs
     both ways, so listing it on one recipe is enough. An unknown title stops the build."""
@@ -501,10 +522,10 @@ def intro_html(intro_md, r, xref):
     return link_mentions(lead + story, r, xref)
 
 
-def search_index(book):
+def search_index(book, basics):
     """Every recipe's details for search, the home page, shopping list and "What can I cook?"."""
     entries = []
-    for r in all_recipes(book):
+    for r in all_recipes(book) + basics:
         _, parts = sections(r["body"])
         # Search covers topping options too, so searching a topping finds its recipe.
         lines = bullets(parts.get("Ingredients")) + bullets(parts.get("Topping Options"))
@@ -517,6 +538,7 @@ def search_index(book):
                         "photo": r.get("photo", ""), "tags": r["tags"],
                         "serves": int(serves.group()) if serves else 1,
                         "lunch": lunch_score(r), "meal": r["category"] not in NOT_MEALS, "plan": plannable(r),
+                        "basic": bool(r.get("basic")),
                         "ingredients": [parse_line(line) for line in bullets(parts.get("Ingredients"))],
                         "options": [{"name": name, "ingredients": [parse_line(line) for line in bullets(md)]}
                                     for name, md in options_of(parts.get("Topping Options"))]})
@@ -996,7 +1018,11 @@ NAMES_PICK = ('<div class="names-pick" role="radiogroup" aria-label="Ingredient 
 
 
 def recipe_page_html(book, r, prev, nxt):
-    root = "../../"
+    depth = r["url"].count("/")
+    root = "../" * depth
+    # A basic's kicker leads back to the Basics list on the week plans page, not a cuisine page.
+    kicker = (f'<a href="{root}{PLANS_PAGE}#{BASICS_ANCHOR}">Basics</a> · {html.escape(r["cuisine"])}' if r.get("basic") else
+              f'<a href="{root}{cuisine_url(r["cuisine"])}">{html.escape(r["cuisine"])}</a> · {html.escape(r["category"])}')
 
     def xref(other):
         return root + other["url"]
@@ -1041,7 +1067,7 @@ def recipe_page_html(book, r, prev, nxt):
   <header class="recipe-hero tone-{r['tone']}{' has-photo' if photo else ''}">
     {cuisine_art(r["cuisine"], "hero-art")}
     <div class="hero-text">
-      <p class="kicker"><a href="{root}{cuisine_url(r['cuisine'])}">{html.escape(r['cuisine'])}</a> · {html.escape(r['category'])}</p>
+      <p class="kicker">{kicker}</p>
       <h1{vt_name("r", r["url"][:-5])}>{html.escape(r['title'])}</h1>
       {intro_html(intro_md, r, xref)}
       <div class="facts">{facts}</div>
@@ -1078,7 +1104,8 @@ def recipe_page_html(book, r, prev, nxt):
 </article>
 <nav class="pager" aria-label="More recipes">{"".join(pager)}</nav>
 <script src="{root}{RECIPE_SCRIPT}" defer></script>"""
-    return page(book, 2, f"{r['title']} · {TITLE}", content, current=r["cuisine"], main_class="wide")
+    return page(book, depth, f"{r['title']} · {TITLE}", content,
+                current=PLANS_PAGE if r.get("basic") else r["cuisine"], main_class="wide")
 
 
 def list_html(book):
@@ -1176,18 +1203,23 @@ def cook_html(book):
 
 
 def plannable(r):
-    """A weeknight dinner the plans can suggest on their own."""
+    """An easy weeknight dinner the plans can suggest: a basic, or a recipe that isn't a side,
+    a special occasion or a day-before start, and takes PLAN_MAX_MINUTES or less."""
+    if r.get("basic"):
+        return True
+    time = r.get("time", "").lower()
     return (r["category"] not in NOT_MEALS + PLAN_SKIP_STYLES
-            and not set(r["tags"]) & set(PLAN_SKIP_TAGS))
+            and not set(r["tags"]) & set(PLAN_SKIP_TAGS)
+            and "day" not in time and minutes_in(time) <= PLAN_MAX_MINUTES)
 
 
-def week_plans(book):
+def week_plans(book, basics):
     """PLAN_COUNT sets of PLAN_DAYS weeknight dinners, each chosen to share as much shopping
     as it can (fresh food counting most) while staying varied: no more than PLAN_MAX_SAME
     from one style or cuisine, at least PLAN_MIN_CUISINES cuisines, and no two plans sharing
     more than one dinner. Every combination is scored, so the best plans are always found."""
     pool = []
-    for r in all_recipes(book):
+    for r in all_recipes(book) + basics:
         if not plannable(r):
             continue
         _, parts = sections(r["body"])
@@ -1227,8 +1259,8 @@ def week_plans(book):
     return plans, {r["title"]: w for r, w in pool}
 
 
-def plans_html(book):
-    plans, weights = week_plans(book)
+def plans_html(book, basics):
+    plans, weights = week_plans(book, basics)
     cards = []
     for i, plan in enumerate(plans, 1):
         lunches = lunch_picks(plan)
@@ -1241,7 +1273,7 @@ def plans_html(book):
         lead = ", ".join(n.lower() for n in (fresh or shared)[:3])
         days = "".join(
             f'<li{" data-lunch" if r in lunches else ""}><span class="plan-day">{day}</span><div><a href="{r["url"]}">{html.escape(r["title"])}</a>'
-            f'<small>{html.escape(r["cuisine"])} · {html.escape(r.get("time") or "Serves " + r["serves"])}</small></div>'
+            f'<small>{"Basic · " if r.get("basic") else ""}{html.escape(r["cuisine"])} · {html.escape(r.get("time") or "Serves " + r["serves"])}</small></div>'
             + (f'<span class="plan-lunch" title="{html.escape(r["leftovers"])}">+ lunch</span>' if r in lunches else "")
             + "</li>"
             for day, r in zip(PLAN_DAYS, plan))
@@ -1264,6 +1296,17 @@ def plans_html(book):
       </details>
       <button type="button" class="pill pill-solid plan-add" hidden>{svg_icon("plus")}Add the week to my list</button>
     </article>""")
+    basic_rows = "".join(
+        f'<li data-url="{r["url"]}"><div><a href="{r["url"]}">{html.escape(r["title"])}</a>'
+        f'<span>{html.escape(intro(r))}</span></div>'
+        f'<button type="button" class="pill pill-outline pill-sm basic-add" hidden>{svg_icon("plus")}Add to list</button></li>'
+        for r in basics)
+    basics_section = f"""
+  <section class="plan-basics" id="{BASICS_ANCHOR}">
+    <h2 class="plans-head">Basics</h2>
+    <p>Supermarket shortcuts for the nights you don't want to cook from scratch. They turn up in the weeks above too.</p>
+    <div class="list-ideas"><ul>{basic_rows}</ul></div>
+  </section>""" if basics else ""
     sizes = "".join(f'<button type="button" class="chip" data-people="{n}" aria-pressed="false">{n}</button>' for n in range(1, 7))
     content = f"""
   <header class="page-hero">
@@ -1277,7 +1320,7 @@ def plans_html(book):
   </header>
   <section class="plan-build" hidden>
     <h2>Build your week</h2>
-    <p>Pick up to four dinners you're craving. The rest of the week is filled in with dinners that share their shopping.</p>
+    <p>Pick up to four dinners you're craving. The rest of the week is filled in with easy dinners that share their shopping.</p>
     <div class="plan-build-pick">
       <label class="search-field">{svg_icon("search")}<input type="text" placeholder="What are you craving?" aria-label="Find a dinner you're craving" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="crave-suggest"></label>
       <ul class="list-suggest" id="crave-suggest" role="listbox" hidden></ul>
@@ -1288,7 +1331,7 @@ def plans_html(book):
   </section>
   <h2 class="plans-head">Ready-made weeks</h2>
   <div class="plans">{"".join(cards)}
-  </div>
+  </div>{basics_section}
   <script src="{TOOLS_SCRIPT}" defer></script>"""
     return page(book, 0, f"Week plans · {TITLE}", content, current=PLANS_PAGE, main_class="wide")
 
@@ -1384,7 +1427,7 @@ def write(rel, text):
     path.write_text(text, encoding="utf-8", newline="\n")
 
 
-def build_site(book):
+def build_site(book, basics):
     # Clear old output so renamed or moved recipes don't leave stale pages behind.
     for p in DOCS.iterdir():
         if p.name in KEEP_IN_DOCS:
@@ -1399,11 +1442,11 @@ def build_site(book):
         shutil.copyfile(TEMPLATES / name, DOCS / name)
     shutil.copytree(TEMPLATES / FONTS, DOCS / FONTS)
     write(MANIFEST, manifest())
-    write(SEARCH_INDEX, search_index(book))
+    write(SEARCH_INDEX, search_index(book, basics))
     write(HOME_PAGE, home_html(book))
     write(LIST_PAGE, list_html(book))
     write(COOK_PAGE, cook_html(book))
-    write(PLANS_PAGE, plans_html(book))
+    write(PLANS_PAGE, plans_html(book, basics))
     write(BOOK_PAGE, book_html(book))
     for cuisine in book:
         write(cuisine_url(cuisine), cuisine_html(book, cuisine))
@@ -1415,6 +1458,9 @@ def build_site(book):
         if r.get("photo"):
             (DOCS / "photos").mkdir(exist_ok=True)
             shutil.copyfile(r["photo_source"], DOCS / r["photo"])
+    for i, r in enumerate(basics):
+        write(r["url"], recipe_page_html(book, r, basics[i - 1] if i > 0 else None,
+                                         basics[i + 1] if i + 1 < len(basics) else None))
     # Last, so its file list and version cover everything above.
     write(SERVICE_WORKER, service_worker())
 
@@ -1423,9 +1469,11 @@ def main():
     book = load()
     update_readme(book)
     DOCS.mkdir(exist_ok=True)
-    build_site(book)
+    basics = load_basics(book)
+    build_site(book, basics)
     photos = sum(1 for r in all_recipes(book) if r.get("photo"))
-    print(f"Built {len(all_recipes(book))} recipe(s) across {len(book)} cuisine(s), {photos} with photos.")
+    print(f"Built {len(all_recipes(book))} recipe(s) across {len(book)} cuisine(s), {photos} with photos, "
+          f"and {len(basics)} basic(s).")
 
 
 if __name__ == "__main__":

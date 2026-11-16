@@ -37,6 +37,13 @@ INGREDIENTS = [
     (r"\bdark soy\b", "Dark soy sauce", WORLD, False),
     (r"\bsoy sauce\b", "Soy sauce", WORLD, False),
     (r"\boyster sauce\b", "Oyster sauce", WORLD, False),
+    # Ready-made sauces and kits for the basics (basics/), before "butter" and "tomato".
+    (r"\bbutter chicken\b", "Butter chicken simmer sauce", WORLD, False),
+    (r"\btaco kit\b", "Taco kit", WORLD, False),
+    # Fresh sauce sits in the fridge beside the fresh pasta; Mutti jars are in the pasta aisle.
+    (r"\bfresh pasta sauce\b", "Fresh pasta sauce", DAIRY, False),
+    (r"\bmutti\b", "Mutti pasta sauce", PASTA, False),
+    (r"\bravioli\b|\btortellini\b", "Fresh ravioli", DAIRY, False),
     # Australian tomato sauce and ketchup are different products, so they shop separately.
     (r"\bketchup\b", "Ketchup", SAUCES, False),
     (r"\btomato sauce\b", "Tomato sauce", SAUCES, False),
@@ -160,6 +167,7 @@ INGREDIENTS = [
     (r"\bcornflour\b|\bcornstarch\b|\bpotato starch\b", "Cornflour", BAKING, False),
     (r"\bflour\b", "Plain flour", BAKING, False),
     (r"\bcob loa(f|ves)\b|\bcobs?\b", "Small cob loaves", BAKERY, False),
+    (r"\bnaan\b", "Naan bread", BAKERY, False),
     (r"\bbread\b", "Bread", BAKERY, False),
     # Dairy and eggs.
     (r"\beggs?\b", "Eggs", BAKING, False),

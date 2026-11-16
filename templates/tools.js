@@ -374,6 +374,7 @@
         urls.forEach(function (u) { list.push({ url: u, serves: servesFor(card, u) }); });
         store("fk-list", list);
         syncPlans();
+        syncBasics();
       });
     };
     sizeChips.forEach(function (c) {
@@ -383,6 +384,30 @@
     peopleBox.hidden = false;
     syncPeople();
     [].forEach.call(plans.querySelectorAll(".plan"), wire);
+
+    // Basics: one tap puts a supermarket shortcut on the list at the household size.
+    var basicRows = [].slice.call(document.querySelectorAll(".plan-basics li"));
+    var syncBasics = function () {
+      var list = stored("fk-list", []);
+      basicRows.forEach(function (li) {
+        var on = list.some(function (x) { return x.url === li.getAttribute("data-url"); });
+        var b = li.querySelector(".basic-add");
+        b.hidden = false;
+        b.classList.toggle("added", on);
+        b.lastChild.textContent = on ? "On your list" : "Add to list";
+      });
+    };
+    basicRows.forEach(function (li) {
+      li.querySelector(".basic-add").addEventListener("click", function () {
+        var url = li.getAttribute("data-url");
+        var list = stored("fk-list", []).filter(function (x) { return x.url !== url; });
+        list.push({ url: url, serves: people });
+        store("fk-list", list);
+        syncBasics();
+        syncPlans();
+      });
+    });
+    syncBasics();
 
     // -- Scoring, as build.py's week_plans does it --
     var weightsOf = function (r) {
@@ -455,7 +480,7 @@
     var closeCrave = function () { craveBox.hidden = true; craveBox.textContent = ""; craveInput.setAttribute("aria-expanded", "false"); };
     var suggestCraves = function () {
       var q = craveInput.value.trim().toLowerCase();
-      var hits = index.filter(function (r) { return r.meal && cravings.indexOf(r) === -1 && (!q || r.title.toLowerCase().indexOf(q) !== -1); })
+      var hits = index.filter(function (r) { return r.plan && cravings.indexOf(r) === -1 && (!q || r.title.toLowerCase().indexOf(q) !== -1); })
         .sort(function (a, b) { return (a.title.toLowerCase().indexOf(q) - b.title.toLowerCase().indexOf(q)) || a.title.localeCompare(b.title); })
         .slice(0, 6);
       craveBox.textContent = "";
@@ -463,7 +488,7 @@
       hits.forEach(function (r) {
         var li = el("li"); li.setAttribute("role", "option");
         li.appendChild(el("span", "", r.title));
-        li.appendChild(el("small", "", r.cuisine + " · " + r.category));
+        li.appendChild(el("small", "", r.basic ? "Basic · " + r.cuisine : r.cuisine + " · " + r.category));
         li.addEventListener("pointerdown", function (e) {
           e.preventDefault(); cravings.push(r); craveInput.value = ""; closeCrave(); changed();
           if (cravings.length < maxCravings) craveInput.focus();
@@ -494,7 +519,7 @@
         var li = el("li"); if (lunches.indexOf(r) !== -1) li.setAttribute("data-lunch", "");
         li.appendChild(el("span", "plan-day", days[i]));
         var d = el("div"), a = el("a", "", r.title); a.href = r.url; d.appendChild(a);
-        d.appendChild(el("small", "", r.cuisine + " · " + (cravings.indexOf(r) !== -1 ? "your pick" : r.category)));
+        d.appendChild(el("small", "", r.cuisine + " · " + (cravings.indexOf(r) !== -1 ? "your pick" : r.basic ? "Basic" : r.category)));
         li.appendChild(d);
         if (lunches.indexOf(r) !== -1) li.appendChild(el("span", "plan-lunch", "+ lunch"));
         ol.appendChild(li);

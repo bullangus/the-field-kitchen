@@ -3,7 +3,7 @@
 // out quick recipes; "Your kitchen" lists this reader's favourites and recently
 // opened recipes. (Filter chips and fade-up live in site.js.)
 (function () {
-  var index = window.FIELD_KITCHEN_INDEX || [];
+  var index = (window.FIELD_KITCHEN_INDEX || []).filter(function (r) { return !r.basic; });  // recipes only, not basics
   var tile = document.querySelector(".tile-feature");
   if (!tile || index.length < 2) return;
   var links = tile.querySelectorAll("h2 a, .tile-actions a");
@@ -33,7 +33,7 @@
   show();
 })();
 (function () {
-  var index = window.FIELD_KITCHEN_INDEX || [];
+  var index = (window.FIELD_KITCHEN_INDEX || []).filter(function (r) { return !r.basic; });  // recipes only, not basics
   function stored(key, fallback) {
     try { var v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; } catch (e) { return fallback; }
   }

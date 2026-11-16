@@ -1243,8 +1243,11 @@ html.cooking { overflow: hidden; }
 .plan-shared li { font-size: 0.85rem; border: 1px solid var(--rule); border-radius: 999px; padding: 0.15rem 0.65rem; background: var(--paper); }
 .plan-shared b { color: var(--accent); font-weight: 600; }
 .plan .pill { align-self: flex-start; }
-.plan-add.added { background: var(--card); color: var(--accent); border-color: var(--accent); }
-.plan-add.added svg { display: none; }
+.plan-add.added, .basic-add.added { background: var(--card); color: var(--accent); border-color: var(--accent); }
+.plan-add.added svg, .basic-add.added svg { display: none; }
+.plan-basics { margin-top: 2.5rem; }
+.plan-basics > p { color: var(--muted); margin: 0 0 0.5rem; }
+.plan-basics .list-ideas { margin-top: 0; padding-top: 0; border-top: 0; }
 .plan-add + .plan-view { margin-top: -0.4rem; }
 .plan-extra { display: inline-flex; align-items: center; gap: 0.45rem; min-height: 44px; cursor: pointer; color: var(--ink); }
 .plan-extra input { width: 1.15rem; height: 1.15rem; accent-color: var(--accent); margin: 0; }

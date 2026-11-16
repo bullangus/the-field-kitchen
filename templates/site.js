@@ -186,7 +186,7 @@
     return [
       { label: "What can I cook?", hint: "Pick what's in the fridge", go: function () { location.href = root + "cook.html"; } },
       { label: "Shopping list", hint: stored("fk-list", []).length + " recipes", go: function () { location.href = root + "list.html"; } },
-      { label: "Surprise me", hint: "A random recipe", go: function () { location.href = root + index[Math.floor(Math.random() * index.length)].url; } },
+      { label: "Surprise me", hint: "A random recipe", go: function () { var rs = index.filter(function (r) { return !r.basic; }); location.href = root + rs[Math.floor(Math.random() * rs.length)].url; } },
       { label: "Switch light / dark", hint: "Theme", go: toggleTheme },
       { label: "Print the book", hint: "Every recipe, laid out for paper", go: function () { location.href = root + "book.html"; } },
       { label: "Home", hint: "The Field Kitchen", go: function () { location.href = root + "index.html"; } }
