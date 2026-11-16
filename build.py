@@ -23,7 +23,7 @@ import sys
 from datetime import date, datetime
 from pathlib import Path
 
-from ingredients import AISLES, parse_line
+from ingredients import AISLES, GROCERIES, INGREDIENTS, parse_line
 
 ROOT = Path(__file__).parent
 RECIPES = ROOT / "recipes"
@@ -486,7 +486,12 @@ def search_index(book):
                         "ingredients": [parse_line(line) for line in bullets(parts.get("Ingredients"))],
                         "options": [{"name": name, "ingredients": [parse_line(line) for line in bullets(md)]}
                                     for name, md in options_of(parts.get("Topping Options"))]})
-    return "window.FIELD_KITCHEN_INDEX = " + json.dumps(entries, ensure_ascii=False, indent=0) + ";\n"
+    # The shopping list sorts items typed straight onto it with the same rules as recipe lines.
+    shop = {"aisles": list(AISLES),
+            "ingredients": [[p, name, aisle, staple] for p, name, aisle, staple in INGREDIENTS if name],
+            "groceries": [[p, aisle] for p, aisle in GROCERIES]}
+    return ("window.FIELD_KITCHEN_INDEX = " + json.dumps(entries, ensure_ascii=False, indent=0) + ";\n"
+            "window.FIELD_KITCHEN_SHOP = " + json.dumps(shop, ensure_ascii=False) + ";\n")
 
 
 def svg_icon(name, css=""):
@@ -1018,6 +1023,10 @@ def list_html(book):
       <button type="button" class="pill pill-outline list-clear">Clear list</button>
     </div>
   </header>
+  <form class="list-add" hidden>
+    <label class="search-field">{svg_icon("plus")}<input type="text" placeholder="Add something else, e.g. ravioli" aria-label="Add an item to the list" autocomplete="off" enterkeyhint="done"></label>
+    <button type="submit" class="pill pill-solid">Add</button>
+  </form>
   <div class="list-recipes"></div>
   <div class="list-aisles"></div>
   <section class="list-empty" hidden>

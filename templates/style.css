@@ -1081,6 +1081,14 @@ html.cooking { overflow: hidden; }
 }
 .list-count[hidden] { display: none; }
 .list-recipes { display: grid; grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr)); gap: 0.6rem; margin: 0 0 1.5rem; align-items: start; }
+/* Add anything else to the list (tools.js). */
+.list-add { display: flex; gap: 0.5rem; max-width: 40rem; margin: 0 0 1.25rem; }
+.list-add[hidden] { display: none; }
+.list-add .search-field { flex: 1; width: auto; }
+.list-add .search-field:focus-within { width: auto; }
+.list-add svg { flex: none; width: 1.05rem; height: 1.05rem; color: var(--muted); }
+.list-add input { flex: 1; min-width: 0; font: inherit; color: var(--ink); background: transparent; border: 0; padding: 0.6rem 0; outline: none; }
+.list-add .pill { flex: none; }
 /* Empty until something is on the list; then they take no space at all. */
 .list-recipes:empty, .list-aisles:empty { display: none; }
 .list-recipe {

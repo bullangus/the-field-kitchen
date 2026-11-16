@@ -3,8 +3,25 @@
 // amount and unit. Lists and pantry picks are kept in this browser only.
 (function () {
   var index = window.FIELD_KITCHEN_INDEX || [];
-  var AISLES = ["Fruit & veg", "Herbs", "Meat & seafood", "Dairy & eggs", "Bread, pasta & rice",
-                "Pantry & sauces", "Herbs & spices", "Oils & vinegars", "Wine & spirits", "Other"];
+  // Supermarket sections in walking order, and the rules that sort a typed item into one
+  // (from ingredients.py, via search-index.js).
+  var SHOP = window.FIELD_KITCHEN_SHOP || { aisles: ["Other"], ingredients: [], groceries: [] };
+  var AISLES = SHOP.aisles;
+  var RULES = SHOP.ingredients.map(function (r) { return [new RegExp(r[0], "i"), r[1], r[2], r[3]]; });
+  var HINTS = SHOP.groceries.map(function (r) { return [new RegExp(r[0], "i"), r[1]]; });
+  // "garlic" -> the recipes' own Garlic, so it merges with them; "ravioli" -> Dairy & fridge;
+  // anything unknown -> Other, under the name as typed.
+  function sortItem(text) {
+    var name = text.trim().replace(/\s+/g, " ");
+    name = name.charAt(0).toUpperCase() + name.slice(1);
+    for (var i = 0; i < RULES.length; i++) {
+      if (RULES[i][0].test(name)) return { name: RULES[i][1], aisle: RULES[i][2], staple: RULES[i][3] };
+    }
+    for (var j = 0; j < HINTS.length; j++) {
+      if (HINTS[j][0].test(name)) return { name: name, aisle: HINTS[j][1], staple: false };
+    }
+    return { name: name, aisle: AISLES[AISLES.length - 1], staple: false };
+  }
   var GLYPHS = [[0.125, "⅛"], [0.25, "¼"], [1 / 3, "⅓"], [0.5, "½"], [2 / 3, "⅔"], [0.75, "¾"]];
 
   function stored(key, fallback) {
@@ -51,11 +68,13 @@
 
     var build = function () {
       var picked = stored("fk-list", []).filter(function (x) { return byUrl(x.url); });
+      var extras = stored("fk-list-extra", []);
       var checked = stored("fk-list-checked", {});
       recipesBox.textContent = ""; aislesBox.textContent = ""; lines = [];
-      empty.hidden = picked.length > 0;
-      actions.hidden = !picked.length;
-      if (!picked.length) { summary.textContent = "One list for everything you plan to cook."; ideas(); return; }
+      var anything = picked.length > 0 || extras.length > 0;
+      empty.hidden = anything;
+      actions.hidden = !anything;
+      if (!anything) { summary.textContent = "One list for everything you plan to cook."; ideas(); return; }
 
       // Recipes on the list, each with its servings.
       picked.forEach(function (x) {
@@ -101,6 +120,15 @@
           if (it.from.indexOf(r.title) === -1) it.from.push(r.title);
         });
       });
+      // Things typed straight onto the list join the same sections (and merge with a recipe's
+      // line of the same name, so "garlic" doesn't appear twice).
+      extras.forEach(function (x) {
+        var sorted = sortItem(x);
+        var it = items[sorted.name] || (items[sorted.name] = { name: sorted.name, aisle: sorted.aisle, staple: sorted.staple, units: {}, some: false, from: [] });
+        it.extra = true;
+        it.some = it.some || !Object.keys(it.units).length;
+        if (it.from.indexOf("Added by you") === -1) it.from.push("Added by you");
+      });
       // Items removed from the list (already in the cupboard, or not wanted) stay hidden
       // until the list is cleared; ticked items drop into "In the trolley" at the bottom.
       var removed = stored("fk-list-removed", {});
@@ -119,6 +147,12 @@
         build();
       };
       var remove = function (name) {
+        // A typed item is simply deleted; a recipe's item is hidden until "Show removed items".
+        var kept = stored("fk-list-extra", []).filter(function (x) { return sortItem(x).name !== name; });
+        if (kept.length !== stored("fk-list-extra", []).length) {
+          store("fk-list-extra", kept);
+          if (!items[name].from.some(function (f) { return f !== "Added by you"; })) { build(); return; }
+        }
         var r = stored("fk-list-removed", {});
         r[name] = true;
         store("fk-list-removed", r);
@@ -141,7 +175,9 @@
           var body = el("div");
           body.appendChild(el("strong", "", it.name));
           if (amounts.length) body.appendChild(el("span", "amount", amounts.join(" + ")));
-          body.appendChild(el("small", "", "For " + it.from.join(", ")));
+          var recipes = it.from.filter(function (f) { return f !== "Added by you"; });
+          body.appendChild(el("small", "", (recipes.length ? "For " + recipes.join(", ") : "") +
+            (it.extra ? (recipes.length ? " · added by you" : "Added by you") : "")));
           var rm = el("button", "list-remove", "×"); rm.type = "button";
           rm.setAttribute("aria-label", "Remove " + it.name + " from the list");
           rm.title = "Remove from the list";
@@ -160,7 +196,8 @@
       });
       var hiddenCount = Object.keys(items).length - all.length;
       summary.textContent = (toBuy.length ? toBuy.length + " still to buy" : "Everything's in the trolley") +
-        (got.length ? ", " + got.length + " in the trolley" : "") + ", for " + picked.length + " recipe" + (picked.length === 1 ? "" : "s") + "." +
+        (got.length ? ", " + got.length + " in the trolley" : "") +
+        (picked.length ? ", for " + picked.length + " recipe" + (picked.length === 1 ? "" : "s") : "") + "." +
         (hiddenCount ? " " + hiddenCount + " removed." : "");
       restore.hidden = !hiddenCount;
     };
@@ -193,7 +230,25 @@
     var restore = document.querySelector(".list-restore");
     restore.addEventListener("click", function () { store("fk-list-removed", {}); build(); });
     document.querySelector(".list-clear").addEventListener("click", function () {
-      store("fk-list", []); store("fk-list-checked", {}); store("fk-list-removed", {}); build();
+      store("fk-list", []); store("fk-list-checked", {}); store("fk-list-removed", {}); store("fk-list-extra", []); build();
+    });
+    // Add anything else to the list: it's sorted into its section as you add it.
+    var addForm = document.querySelector(".list-add");
+    var addInput = addForm.querySelector("input");
+    addForm.hidden = false;
+    addForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var text = addInput.value.trim();
+      if (!text) return;
+      var extras = stored("fk-list-extra", []);
+      var name = sortItem(text).name;
+      if (!extras.some(function (x) { return sortItem(x).name === name; })) extras.push(text);
+      store("fk-list-extra", extras);
+      // Adding something back undoes an earlier "remove" of it.
+      var removed = stored("fk-list-removed", {}); delete removed[name]; store("fk-list-removed", removed);
+      addInput.value = "";
+      build();
+      addInput.focus();
     });
     document.querySelector(".list-print").addEventListener("click", function () { window.print(); });
     var share = document.querySelector(".list-share");

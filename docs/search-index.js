@@ -18,7 +18,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "200 g (1½ cups plus 1 tbsp) plain flour, spooned and levelled",
 "n": "Plain flour",
-"a": "Bread, pasta & rice",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bflour\\b",
 "q": 200.0,
@@ -36,7 +36,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "4 g (¾ tsp) bicarbonate of soda (baking soda)",
 "n": "Bicarbonate of soda",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bbicarbonate\\b|\\bbaking soda\\b|\\bsoda\\b",
 "q": 4.0,
@@ -45,7 +45,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "169 g (¾ cup) unsalted butter, divided: 113 g and 56 g",
 "n": "Butter",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bbutter\\b",
 "q": 169.0,
@@ -54,7 +54,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "200 g (1 cup, packed) dark brown sugar",
 "n": "Sugar",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": true,
 "p": "\\bsugar\\b",
 "q": 200.0,
@@ -63,7 +63,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "50 g (¼ cup) white sugar",
 "n": "Sugar",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": true,
 "p": "\\bsugar\\b",
 "q": 50.0,
@@ -72,7 +72,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "1 large egg",
 "n": "Eggs",
-"a": "Dairy & eggs",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\beggs?\\b",
 "q": 1.0,
@@ -81,7 +81,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "2 large egg yolks",
 "n": "Eggs",
-"a": "Dairy & eggs",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\beggs?\\b",
 "q": 2.0,
@@ -90,7 +90,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "2 tsp vanilla extract",
 "n": "Vanilla extract",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bvanilla\\b",
 "q": 2.0,
@@ -99,7 +99,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "170 g (6 oz) dark chocolate (60–70% cocoa), coarsely chopped, or dark chocolate chips",
 "n": "Dark chocolate",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bchocolate\\b",
 "q": 170.0,
@@ -127,7 +127,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "65 g (½ cup) plain (all-purpose) flour",
 "n": "Plain flour",
-"a": "Bread, pasta & rice",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bflour\\b",
 "q": 65.0,
@@ -181,7 +181,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "57 g (¼ cup) butter",
 "n": "Butter",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bbutter\\b",
 "q": 57.0,
@@ -190,7 +190,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "60 ml (¼ cup) hot sauce",
 "n": "Hot sauce",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": false,
 "p": "\\bsriracha\\b|\\bhot sauce\\b|\\bhot\\b",
 "q": 60.0,
@@ -217,7 +217,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp MSG",
 "n": "MSG",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
@@ -244,7 +244,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "450 g (1 lb) cavatappi (corkscrew pasta)",
 "n": "Cavatappi pasta",
-"a": "Bread, pasta & rice",
+"a": "Pasta, rice & noodles",
 "s": false,
 "p": "\\bcavatappi\\b",
 "q": 450.0,
@@ -253,7 +253,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "450 g (1 lb) mozzarella",
 "n": "Mozzarella",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bmozzarella\\b",
 "q": 450.0,
@@ -262,7 +262,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "450 g (1 lb) Colby cheese",
 "n": "Colby cheese",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bcolby\\b",
 "q": 450.0,
@@ -271,7 +271,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "225 g (8 oz) cheddar",
 "n": "Cheddar",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bcheddar\\b",
 "q": 225.0,
@@ -316,7 +316,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "45 g (3 tbsp) butter",
 "n": "Butter",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bbutter\\b",
 "q": 45.0,
@@ -325,7 +325,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "24 g (3 tbsp) plain (all-purpose) flour",
 "n": "Plain flour",
-"a": "Bread, pasta & rice",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bflour\\b",
 "q": 24.0,
@@ -334,7 +334,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "1 can (about 350 ml / 12 oz) evaporated milk (not condensed milk)",
 "n": "Evaporated milk",
-"a": "Pantry & sauces",
+"a": "Tins & jars",
 "s": false,
 "p": "\\bevaporated milk\\b|\\bmilk\\b",
 "q": 1.0,
@@ -343,7 +343,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "480 ml (2 cups) thickened (heavy) cream",
 "n": "Thickened cream",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bcream\\b",
 "q": 480.0,
@@ -352,7 +352,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "1 good spoonful Dijon mustard",
 "n": "Dijon mustard",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": false,
 "p": "\\bdijon\\b|\\bmustard\\b",
 "q": 1.0,
@@ -361,7 +361,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "A splash of milk, if the sauce is too thick",
 "n": "Milk",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bmilk\\b",
 "q": null,
@@ -397,7 +397,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "4 eggs, straight from the fridge",
 "n": "Eggs",
-"a": "Dairy & eggs",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\beggs?\\b",
 "q": 4.0,
@@ -406,7 +406,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "3 slices bread (any kind)",
 "n": "Bread",
-"a": "Bread, pasta & rice",
+"a": "Bakery",
 "s": false,
 "p": "\\bbread\\b",
 "q": 3.0,
@@ -415,7 +415,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "30 g (2 tbsp) butter, melted",
 "n": "Butter",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bbutter\\b",
 "q": 30.0,
@@ -442,7 +442,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "200 g streaky bacon",
 "n": "Streaky bacon",
-"a": "Meat & seafood",
+"a": "Deli",
 "s": false,
 "p": "\\bbacon\\b",
 "q": 200.0,
@@ -478,7 +478,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp MSG",
 "n": "MSG",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
@@ -496,7 +496,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "125 ml (½ cup) Caesar dressing (Beerenberg is our favourite)",
 "n": "Caesar dressing",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": false,
 "p": "\\bcaesar dressing\\b|\\bdressing\\b",
 "q": 125.0,
@@ -505,7 +505,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "40 g parmesan, for grating over",
 "n": "Parmesan",
-"a": "Dairy & eggs",
+"a": "Deli",
 "s": false,
 "p": "\\bparmesan\\b|\\bparmigiano\\b",
 "q": 40.0,
@@ -542,7 +542,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "250 ml (1 cup) maple syrup",
 "n": "Maple syrup",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": false,
 "p": "\\bmaple syrup\\b",
 "q": 250.0,
@@ -560,7 +560,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "125 g (½ cup) Dijon mustard",
 "n": "Dijon mustard",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": false,
 "p": "\\bdijon\\b|\\bmustard\\b",
 "q": 125.0,
@@ -578,7 +578,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "110 g (½ cup) caster sugar",
 "n": "Sugar",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": true,
 "p": "\\bsugar\\b",
 "q": 110.0,
@@ -587,7 +587,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "125 ml (½ cup) Grand Marnier or similar orange liqueur",
 "n": "Grand Marnier",
-"a": "Wine & spirits",
+"a": "Bottle shop",
 "s": false,
 "p": "\\bgrand marnier\\b|\\borange liqueur\\b|\\bmarnier\\b|\\bliqueur\\b",
 "q": 125.0,
@@ -632,7 +632,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "1 half leg ham",
 "n": "Leg ham",
-"a": "Meat & seafood",
+"a": "Deli",
 "s": false,
 "p": "\\bleg ham\\b|\\bham\\b",
 "q": 1.0,
@@ -758,7 +758,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Fresh coriander sprigs, to serve",
 "n": "Coriander",
-"a": "Herbs",
+"a": "Fruit & veg",
 "s": false,
 "p": "\\bcoriander\\b",
 "q": null,
@@ -767,7 +767,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Steamed jasmine rice, to serve",
 "n": "Rice",
-"a": "Bread, pasta & rice",
+"a": "Pasta, rice & noodles",
 "s": false,
 "p": "\\brice\\b",
 "q": null,
@@ -785,7 +785,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "125 ml (½ cup) sweet chilli sauce",
 "n": "Sweet chilli sauce",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": false,
 "p": "\\bsweet chilli sauce\\b",
 "q": 125.0,
@@ -803,7 +803,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "1 tsp caster sugar",
 "n": "Sugar",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": true,
 "p": "\\bsugar\\b",
 "q": 1.0,
@@ -812,7 +812,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "80 ml (⅓ cup) light soy sauce",
 "n": "Soy sauce",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bsoy sauce\\b|\\bsoy\\b",
 "q": 80.0,
@@ -830,7 +830,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "1½ tbsp fish sauce",
 "n": "Fish sauce",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bfish sauce\\b",
 "q": 4.5,
@@ -848,7 +848,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "2 tbsp chopped fresh coriander",
 "n": "Coriander",
-"a": "Herbs",
+"a": "Fruit & veg",
 "s": false,
 "p": "\\bcoriander\\b",
 "q": 6.0,
@@ -857,7 +857,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp MSG",
 "n": "MSG",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
@@ -893,7 +893,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "16 g (2 tbsp) cornflour (cornstarch)",
 "n": "Cornflour",
-"a": "Bread, pasta & rice",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bcornflour\\b|\\bcornstarch\\b|\\bpotato starch\\b|\\bstarch\\b",
 "q": 16.0,
@@ -902,7 +902,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Steamed rice and vegetables such as broccolini, to serve",
 "n": "Rice",
-"a": "Bread, pasta & rice",
+"a": "Pasta, rice & noodles",
 "s": false,
 "p": "\\brice\\b",
 "q": null,
@@ -911,7 +911,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "75 ml (5 tbsp) honey",
 "n": "Honey",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": false,
 "p": "\\bhoney\\b",
 "q": 75.0,
@@ -920,7 +920,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "45 ml (3 tbsp) soy sauce",
 "n": "Soy sauce",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bsoy sauce\\b|\\bsoy\\b",
 "q": 45.0,
@@ -929,7 +929,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "30 ml (2 tbsp) oyster sauce",
 "n": "Oyster sauce",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\boyster sauce\\b",
 "q": 30.0,
@@ -938,7 +938,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "15 ml (1 tbsp) sesame oil",
 "n": "Sesame oil",
-"a": "Oils & vinegars",
+"a": "International foods",
 "s": false,
 "p": "\\bsesame oil\\b",
 "q": 15.0,
@@ -992,7 +992,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "500 g spiral pasta (fusilli), or any shape you like",
 "n": "Spiral pasta (fusilli)",
-"a": "Bread, pasta & rice",
+"a": "Pasta, rice & noodles",
 "s": false,
 "p": "\\bfusilli\\b|\\bspiral pasta\\b|\\bpasta\\b",
 "q": 500.0,
@@ -1001,7 +1001,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "2 kabana sticks",
 "n": "Kabana",
-"a": "Meat & seafood",
+"a": "Deli",
 "s": false,
 "p": "\\bkabana\\b",
 "q": 2.0,
@@ -1010,7 +1010,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "220 ml (⅔ of a 330 ml bottle) thousand island dressing",
 "n": "Thousand island dressing",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": false,
 "p": "\\bthousand island\\b|\\bisland\\b",
 "q": 220.0,
@@ -1063,7 +1063,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "56 g (¼ cup) butter, cut into chunks",
 "n": "Butter",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bbutter\\b",
 "q": 56.0,
@@ -1072,7 +1072,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "30 ml (2 tbsp) milk or cream",
 "n": "Thickened cream",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bcream\\b",
 "q": 30.0,
@@ -1135,7 +1135,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "16 g (2 tbsp) plain (all-purpose) flour",
 "n": "Plain flour",
-"a": "Bread, pasta & rice",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bflour\\b",
 "q": 16.0,
@@ -1144,7 +1144,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "30 ml (2 tbsp) tomato sauce (ketchup) or tomato paste",
 "n": "Tomato sauce",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": false,
 "p": "\\btomato sauce\\b|\\bketchup\\b",
 "q": 30.0,
@@ -1153,7 +1153,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "360 ml (1½ cups) chicken stock",
 "n": "Chicken stock",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": false,
 "p": "\\bchicken stock\\b|\\bchicken\\b",
 "q": 360.0,
@@ -1162,7 +1162,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "5 ml (1 tsp) Worcestershire sauce",
 "n": "Worcestershire sauce",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": false,
 "p": "\\bworcestershire\\b",
 "q": 5.0,
@@ -1171,7 +1171,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "70 g (½ cup) frozen peas and corn",
 "n": "Frozen peas and corn",
-"a": "Fruit & veg",
+"a": "Freezer",
 "s": false,
 "p": "\\bpeas and corn\\b|\\bcorn\\b",
 "q": 70.0,
@@ -1180,7 +1180,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "MSG, to taste",
 "n": "MSG",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": true,
 "p": "\\bmsg\\b",
 "q": null,
@@ -1189,7 +1189,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "A handful of grated mozzarella",
 "n": "Mozzarella",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bmozzarella\\b",
 "q": null,
@@ -1198,7 +1198,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "A handful of finely grated Parmesan",
 "n": "Parmesan",
-"a": "Dairy & eggs",
+"a": "Deli",
 "s": false,
 "p": "\\bparmesan\\b|\\bparmigiano\\b",
 "q": null,
@@ -1234,7 +1234,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "150 g (5.3 oz) unsalted butter, at room temperature",
 "n": "Butter",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bbutter\\b",
 "q": 150.0,
@@ -1270,7 +1270,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Small bunch thyme, leaves picked and chopped",
 "n": "Thyme",
-"a": "Herbs",
+"a": "Fruit & veg",
 "s": false,
 "p": "\\bthyme\\b",
 "q": null,
@@ -1279,7 +1279,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp MSG",
 "n": "MSG",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
@@ -1307,7 +1307,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Jam rolls (from Coles or Woolworths), sliced, enough to cover the base of the bowl",
 "n": "Jam rolls",
-"a": "Bread, pasta & rice",
+"a": "Bakery",
 "s": false,
 "p": "\\bjam rolls?\\b|\\brolls?\\b",
 "q": null,
@@ -1325,7 +1325,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "1 small wineglass Cointreau",
 "n": "Cointreau",
-"a": "Wine & spirits",
+"a": "Bottle shop",
 "s": false,
 "p": "\\bcointreau\\b",
 "q": 1.0,
@@ -1334,7 +1334,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "1 packet (85 g) Aeroplane strawberry jelly",
 "n": "Aeroplane strawberry jelly",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bstrawberry jelly\\b|\\bjelly\\b",
 "q": 1.0,
@@ -1343,7 +1343,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "1.1 litres (2 UK pints) milk",
 "n": "Milk",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bmilk\\b",
 "q": 1.1,
@@ -1352,7 +1352,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "4 tsp caster sugar",
 "n": "Sugar",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": true,
 "p": "\\bsugar\\b",
 "q": 4.0,
@@ -1361,7 +1361,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "35 g sachet strawberry blancmange",
 "n": "Strawberry blancmange",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bblancmange\\b",
 "q": 35.0,
@@ -1370,7 +1370,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "450 g tin mandarin segments",
 "n": "Tinned mandarins",
-"a": "Pantry & sauces",
+"a": "Tins & jars",
 "s": false,
 "p": "\\bmandarin",
 "q": 450.0,
@@ -1379,7 +1379,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "1 packet (85 g) Aeroplane orange jelly",
 "n": "Aeroplane orange jelly",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\borange jelly\\b|\\bjelly\\b",
 "q": 1.0,
@@ -1388,7 +1388,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Bird's custard powder, enough to make 600 ml custard",
 "n": "Bird's custard powder",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bcustard\\b",
 "q": null,
@@ -1397,7 +1397,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "300 ml thickened cream (double cream)",
 "n": "Thickened cream",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bcream\\b",
 "q": 300.0,
@@ -1406,7 +1406,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Flake chocolate, to finish",
 "n": "Flake chocolate",
-"a": "Pantry & sauces",
+"a": "Snacks & sweets",
 "s": false,
 "p": "\\bflake\\b",
 "q": null,
@@ -1450,7 +1450,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "10 g (2 tsp) beef dripping, or canola or vegetable oil, for browning",
 "n": "Beef dripping",
-"a": "Oils & vinegars",
+"a": "Meat & seafood",
 "s": false,
 "p": "\\bdripping\\b",
 "q": 10.0,
@@ -1459,7 +1459,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "50 g (¼ cup) beef dripping, or canola or vegetable oil, for the pan",
 "n": "Beef dripping",
-"a": "Oils & vinegars",
+"a": "Meat & seafood",
 "s": false,
 "p": "\\bdripping\\b",
 "q": 50.0,
@@ -1468,7 +1468,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "250 ml (1 cup) eggs, lightly whisked (4–5 large eggs; measure them)",
 "n": "Eggs",
-"a": "Dairy & eggs",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\beggs?\\b",
 "q": 250.0,
@@ -1477,7 +1477,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "130 g (1 cup) plain flour",
 "n": "Plain flour",
-"a": "Bread, pasta & rice",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bflour\\b",
 "q": 130.0,
@@ -1486,7 +1486,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "185 ml (¾ cup) full-fat milk",
 "n": "Milk",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bmilk\\b",
 "q": 185.0,
@@ -1495,7 +1495,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "60 ml (¼ cup) water",
 "n": "Water",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": true,
 "p": "\\bwater\\b",
 "q": 60.0,
@@ -1504,7 +1504,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "1 tbsp full-fat mayonnaise",
 "n": "Mayonnaise",
-"a": "Dairy & eggs",
+"a": "Sauces, spreads & stock",
 "s": false,
 "p": "\\bmayonnaise\\b",
 "q": 3.0,
@@ -1531,7 +1531,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "30 g (2 tbsp) beef dripping or unsalted butter",
 "n": "Beef dripping",
-"a": "Oils & vinegars",
+"a": "Meat & seafood",
 "s": false,
 "p": "\\bdripping\\b",
 "q": 30.0,
@@ -1558,7 +1558,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "3 tbsp plain flour",
 "n": "Plain flour",
-"a": "Bread, pasta & rice",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bflour\\b",
 "q": 9.0,
@@ -1576,7 +1576,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp Worcestershire sauce",
 "n": "Worcestershire sauce",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": false,
 "p": "\\bworcestershire\\b",
 "q": 0.5,
@@ -1603,7 +1603,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp MSG",
 "n": "MSG",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
@@ -1662,7 +1662,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "30 g (2 tbsp) butter",
 "n": "Butter",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bbutter\\b",
 "q": 30.0,
@@ -1685,7 +1685,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Grated cheese",
 "n": "Grated cheese",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bcheese\\b",
 "q": null,
@@ -1717,7 +1717,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "A knob of butter",
 "n": "Butter",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bbutter\\b",
 "q": null,
@@ -1731,7 +1731,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Streaky bacon, chopped",
 "n": "Streaky bacon",
-"a": "Meat & seafood",
+"a": "Deli",
 "s": false,
 "p": "\\bbacon\\b",
 "q": null,
@@ -1759,7 +1759,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Fresh chives",
 "n": "Chives",
-"a": "Herbs",
+"a": "Fruit & veg",
 "s": false,
 "p": "\\bchives\\b",
 "q": null,
@@ -1787,7 +1787,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Corn kernels",
 "n": "Corn kernels",
-"a": "Fruit & veg",
+"a": "Freezer",
 "s": false,
 "p": "\\bcorn kernels\\b|\\bkernels\\b",
 "q": null,
@@ -1825,7 +1825,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Chicken stock, enough to cover the potatoes",
 "n": "Chicken stock",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": false,
 "p": "\\bchicken stock\\b|\\bchicken\\b",
 "q": null,
@@ -1852,7 +1852,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp MSG",
 "n": "MSG",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
@@ -1861,7 +1861,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "200 g (7 oz) duck fat (or goose fat)",
 "n": "Duck fat",
-"a": "Oils & vinegars",
+"a": "Meat & seafood",
 "s": false,
 "p": "\\bduck fat\\b|\\bgoose fat\\b|\\bfat\\b|\\bfat\\b",
 "q": 200.0,
@@ -1870,7 +1870,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "2 tsp rosemary, roughly chopped",
 "n": "Rosemary",
-"a": "Herbs",
+"a": "Fruit & veg",
 "s": false,
 "p": "\\brosemary\\b",
 "q": 2.0,
@@ -1915,7 +1915,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "1½ tbsp Gravox Traditional Gravy Mix",
 "n": "Gravox Traditional Gravy Mix",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": false,
 "p": "\\bgravox\\b|\\bgravy mix\\b|\\bmix\\b",
 "q": 4.5,
@@ -1924,7 +1924,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "185 ml (¾ cup) water",
 "n": "Water",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": true,
 "p": "\\bwater\\b",
 "q": 185.0,
@@ -1960,7 +1960,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "30 ml (2 tbsp) water",
 "n": "Water",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": true,
 "p": "\\bwater\\b",
 "q": 30.0,
@@ -1969,7 +1969,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "2 tsp Shaoxing rice wine",
 "n": "Shaoxing wine",
-"a": "Wine & spirits",
+"a": "International foods",
 "s": false,
 "p": "\\bshaoxing\\b|\\brice wine\\b",
 "q": 2.0,
@@ -1987,7 +1987,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "¼ tsp bicarbonate of soda (baking soda)",
 "n": "Bicarbonate of soda",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bbicarbonate\\b|\\bbaking soda\\b|\\bsoda\\b",
 "q": 0.25,
@@ -1996,7 +1996,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "16 g (2 tbsp) cornflour (cornstarch)",
 "n": "Cornflour",
-"a": "Bread, pasta & rice",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bcornflour\\b|\\bcornstarch\\b|\\bpotato starch\\b|\\bstarch\\b",
 "q": 16.0,
@@ -2023,7 +2023,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "15 ml (1 tbsp) Shaoxing rice wine",
 "n": "Shaoxing wine",
-"a": "Wine & spirits",
+"a": "International foods",
 "s": false,
 "p": "\\bshaoxing\\b|\\brice wine\\b",
 "q": 15.0,
@@ -2032,7 +2032,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "38 g (3 tbsp) white sugar",
 "n": "Sugar",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": true,
 "p": "\\bsugar\\b",
 "q": 38.0,
@@ -2041,7 +2041,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "30 ml (2 tbsp) regular soy sauce",
 "n": "Soy sauce",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bsoy sauce\\b|\\bsoy\\b",
 "q": 30.0,
@@ -2050,7 +2050,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp MSG",
 "n": "MSG",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
@@ -2086,7 +2086,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "30 g (1 oz) medium-thickness rice vermicelli (optional; use more or less to preference)",
 "n": "Rice vermicelli",
-"a": "Bread, pasta & rice",
+"a": "Pasta, rice & noodles",
 "s": false,
 "p": "\\bvermicelli\\b",
 "q": 30.0,
@@ -2149,7 +2149,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "30 ml (2 tbsp) Shaoxing wine",
 "n": "Shaoxing wine",
-"a": "Wine & spirits",
+"a": "International foods",
 "s": false,
 "p": "\\bshaoxing\\b|\\brice wine\\b",
 "q": 30.0,
@@ -2158,7 +2158,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "15 ml (1 tbsp) soy sauce",
 "n": "Soy sauce",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bsoy sauce\\b|\\bsoy\\b",
 "q": 15.0,
@@ -2167,7 +2167,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Cornflour (cornstarch), enough to coat the chicken",
 "n": "Cornflour",
-"a": "Bread, pasta & rice",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bcornflour\\b|\\bcornstarch\\b|\\bpotato starch\\b|\\bstarch\\b",
 "q": null,
@@ -2185,7 +2185,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "3 cups dried Sichuan red chillies",
 "n": "Dried red chillies",
-"a": "Herbs & spices",
+"a": "International foods",
 "s": false,
 "p": "\\bdried sichuan red chillies\\b|\\bdried chillies\\b|\\bchillies\\b|\\bchillies\\b",
 "q": 3.0,
@@ -2194,7 +2194,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "2 tbsp Sichuan red peppercorns",
 "n": "Sichuan peppercorns",
-"a": "Herbs & spices",
+"a": "International foods",
 "s": false,
 "p": "\\bsichuan pepper|\\bsichuan red pepper|\\bsichuan\\b|\\bsichuan\\b",
 "q": 6.0,
@@ -2257,7 +2257,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "2 tsp sugar",
 "n": "Sugar",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": true,
 "p": "\\bsugar\\b",
 "q": 2.0,
@@ -2266,7 +2266,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "1 tsp MSG",
 "n": "MSG",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": true,
 "p": "\\bmsg\\b",
 "q": 1.0,
@@ -2330,7 +2330,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "1 tsp Sichuan peppercorns",
 "n": "Sichuan peppercorns",
-"a": "Herbs & spices",
+"a": "International foods",
 "s": false,
 "p": "\\bsichuan pepper|\\bsichuan red pepper|\\bsichuan\\b|\\bsichuan\\b",
 "q": 1.0,
@@ -2357,7 +2357,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp MSG",
 "n": "MSG",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
@@ -2384,7 +2384,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Coconut sriracha or any hot sauce, to serve",
 "n": "Hot sauce",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": false,
 "p": "\\bsriracha\\b|\\bhot sauce\\b|\\bhot\\b",
 "q": null,
@@ -2402,7 +2402,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "130 g (1 cup) cornflour (cornstarch)",
 "n": "Cornflour",
-"a": "Bread, pasta & rice",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bcornflour\\b|\\bcornstarch\\b|\\bpotato starch\\b|\\bstarch\\b",
 "q": 130.0,
@@ -2411,7 +2411,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "65 g (½ cup) plain flour",
 "n": "Plain flour",
-"a": "Bread, pasta & rice",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bflour\\b",
 "q": 65.0,
@@ -2420,7 +2420,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "375 ml (1½ cups) cold water",
 "n": "Water",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": true,
 "p": "\\bwater\\b",
 "q": 375.0,
@@ -2448,7 +2448,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "8 rashers thick-cut streaky bacon, cut into 2.5 cm (1 inch) pieces",
 "n": "Streaky bacon",
-"a": "Meat & seafood",
+"a": "Deli",
 "s": false,
 "p": "\\bbacon\\b",
 "q": 8.0,
@@ -2475,7 +2475,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "1–2 tbsp chilli crisp",
 "n": "Chilli crisp",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bchilli crisp\\b|\\bchilli\\b",
 "q": 6.0,
@@ -2484,7 +2484,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "15 ml (1 tbsp) soy sauce",
 "n": "Soy sauce",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bsoy sauce\\b|\\bsoy\\b",
 "q": 15.0,
@@ -2493,7 +2493,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "15 ml (1 tbsp) oyster sauce",
 "n": "Oyster sauce",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\boyster sauce\\b",
 "q": 15.0,
@@ -2502,7 +2502,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "15 ml (1 tbsp) dark soy sauce",
 "n": "Dark soy sauce",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bdark soy\\b|\\bsoy\\b",
 "q": 15.0,
@@ -2511,7 +2511,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "1 tsp sesame oil",
 "n": "Sesame oil",
-"a": "Oils & vinegars",
+"a": "International foods",
 "s": false,
 "p": "\\bsesame oil\\b",
 "q": 1.0,
@@ -2520,7 +2520,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp sugar",
 "n": "Sugar",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": true,
 "p": "\\bsugar\\b",
 "q": 0.5,
@@ -2529,7 +2529,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp MSG",
 "n": "MSG",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
@@ -2538,7 +2538,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "180 ml (¾ cup) chicken stock for fresh egg noodles, or 240–480 ml (1–2 cups) for dried",
 "n": "Chicken stock",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": false,
 "p": "\\bchicken stock\\b|\\bchicken\\b",
 "q": 180.0,
@@ -2547,7 +2547,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "225 g (8 oz) fresh thin egg noodles (from the fridge section), or dried egg noodles (nests)",
 "n": "Egg noodles",
-"a": "Bread, pasta & rice",
+"a": "Pasta, rice & noodles",
 "s": false,
 "p": "\\begg noodles\\b|\\blo mein\\b|\\bmein\\b",
 "q": 225.0,
@@ -2574,7 +2574,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Extra chilli crisp, for drizzling",
 "n": "Chilli crisp",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bchilli crisp\\b|\\bchilli\\b",
 "q": null,
@@ -2602,7 +2602,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "1 packet Shin Ramyun noodles",
 "n": "Shin Ramyun noodles",
-"a": "Bread, pasta & rice",
+"a": "International foods",
 "s": false,
 "p": "\\bshin ramyun\\b|\\bramyun\\b",
 "q": 1.0,
@@ -2629,7 +2629,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "1 egg",
 "n": "Eggs",
-"a": "Dairy & eggs",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\beggs?\\b",
 "q": 1.0,
@@ -2647,7 +2647,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "15 ml (1 tbsp) soy sauce",
 "n": "Soy sauce",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bsoy sauce\\b|\\bsoy\\b",
 "q": 15.0,
@@ -2656,7 +2656,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "15 ml (1 tbsp) Chinese black vinegar",
 "n": "Chinese black vinegar",
-"a": "Oils & vinegars",
+"a": "International foods",
 "s": false,
 "p": "\\bblack vinegar\\b|\\bblack chinese vinegar\\b|\\bvinegar\\b|\\bvinegar\\b",
 "q": 15.0,
@@ -2718,7 +2718,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "45 ml (3 tbsp) soy sauce or tamari",
 "n": "Soy sauce",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bsoy sauce\\b|\\bsoy\\b",
 "q": 45.0,
@@ -2727,7 +2727,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "1 tsp toasted sesame oil",
 "n": "Sesame oil",
-"a": "Oils & vinegars",
+"a": "International foods",
 "s": false,
 "p": "\\bsesame oil\\b",
 "q": 1.0,
@@ -2736,7 +2736,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "1–2 tsp chilli crisp, to taste",
 "n": "Chilli crisp",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bchilli crisp\\b|\\bchilli\\b",
 "q": 2.0,
@@ -2745,7 +2745,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "A splash of rice vinegar",
 "n": "Rice vinegar",
-"a": "Oils & vinegars",
+"a": "International foods",
 "s": false,
 "p": "\\brice vinegar\\b|\\bvinegar\\b",
 "q": null,
@@ -2763,7 +2763,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp MSG",
 "n": "MSG",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
@@ -2772,7 +2772,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "45–60 ml (3–4 tbsp) chicken stock per ramekin",
 "n": "Chicken stock",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": false,
 "p": "\\bchicken stock\\b|\\bchicken\\b",
 "q": 60.0,
@@ -2781,7 +2781,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Wonton or dumpling wrappers",
 "n": "Wonton or dumpling wrappers",
-"a": "Bread, pasta & rice",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bwonton\\b|\\bdumpling wrappers\\b|\\bwrappers\\b",
 "q": null,
@@ -2790,7 +2790,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "A small bowl of water, for dipping the wrappers",
 "n": "Water",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": true,
 "p": "\\bwater\\b",
 "q": null,
@@ -2799,7 +2799,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Extra soy sauce or tamari",
 "n": "Soy sauce",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bsoy sauce\\b|\\bsoy\\b",
 "q": null,
@@ -2808,7 +2808,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Extra chilli crisp",
 "n": "Chilli crisp",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bchilli crisp\\b|\\bchilli\\b",
 "q": null,
@@ -2854,7 +2854,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "250 g (1 cup) Greek yoghurt",
 "n": "Greek yoghurt",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\byoghurt\\b",
 "q": 250.0,
@@ -2909,7 +2909,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "260 g (2 cups) self-raising flour, plus extra for dusting",
 "n": "Self-raising flour",
-"a": "Bread, pasta & rice",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bself-raising\\b",
 "q": 260.0,
@@ -2918,7 +2918,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "200 g (¾ cup) Greek yoghurt",
 "n": "Greek yoghurt",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\byoghurt\\b",
 "q": 200.0,
@@ -2936,7 +2936,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Butter, for serving",
 "n": "Butter",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bbutter\\b",
 "q": null,
@@ -2945,7 +2945,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Fresh coriander, to sprinkle",
 "n": "Coriander",
-"a": "Herbs",
+"a": "Fruit & veg",
 "s": false,
 "p": "\\bcoriander\\b",
 "q": null,
@@ -2973,7 +2973,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "250 g (1 cup) Greek yoghurt",
 "n": "Greek yoghurt",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\byoghurt\\b",
 "q": 250.0,
@@ -3000,7 +3000,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "¼ small pack (UK size) mint, leaves chopped",
 "n": "Mint",
-"a": "Herbs",
+"a": "Fruit & veg",
 "s": false,
 "p": "\\bmint\\b",
 "q": 0.25,
@@ -3054,7 +3054,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "7 g (1 sachet / ¼ oz) active dry yeast",
 "n": "Dried yeast",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\byeast\\b",
 "q": 7.0,
@@ -3063,7 +3063,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "680 g water (113 g / ½ cup lukewarm, plus 567 g / 2½ cups at room temperature)",
 "n": "Water",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": true,
 "p": "\\bwater\\b",
 "q": 680.0,
@@ -3072,7 +3072,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "780 g (6 cups) bread flour",
 "n": "Bread flour",
-"a": "Bread, pasta & rice",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bbread flour\\b",
 "q": 780.0,
@@ -3122,7 +3122,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Fresh rosemary leaves",
 "n": "Rosemary",
-"a": "Herbs",
+"a": "Fruit & veg",
 "s": false,
 "p": "\\brosemary\\b",
 "q": null,
@@ -3227,7 +3227,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "1½ tbsp Sichuan peppercorns",
 "n": "Sichuan peppercorns",
-"a": "Herbs & spices",
+"a": "International foods",
 "s": false,
 "p": "\\bsichuan pepper|\\bsichuan red pepper|\\bsichuan\\b|\\bsichuan\\b",
 "q": 4.5,
@@ -3272,7 +3272,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tbsp sugar, more to taste",
 "n": "Sugar",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": true,
 "p": "\\bsugar\\b",
 "q": 1.5,
@@ -3281,7 +3281,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "30 ml (2 tbsp) soy sauce",
 "n": "Soy sauce",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bsoy sauce\\b|\\bsoy\\b",
 "q": 30.0,
@@ -3337,7 +3337,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "400 g (14 oz) tin whole peeled tomatoes",
 "n": "Tinned tomatoes",
-"a": "Pantry & sauces",
+"a": "Tins & jars",
 "s": false,
 "p": "\\btomato(es)?\\b",
 "q": 400.0,
@@ -3346,7 +3346,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "200 g (7 oz) 'nduja, or to taste (more or less to adjust the heat)",
 "n": "'Nduja",
-"a": "Meat & seafood",
+"a": "Deli",
 "s": false,
 "p": "\\bnduja\\b",
 "q": 200.0,
@@ -3355,7 +3355,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp MSG",
 "n": "MSG",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
@@ -3364,7 +3364,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "340 g (12 oz) fileja pasta (or rigatoni or bucatini)",
 "n": "Fileja pasta",
-"a": "Bread, pasta & rice",
+"a": "Pasta, rice & noodles",
 "s": false,
 "p": "\\bfileja\\b",
 "q": 340.0,
@@ -3373,7 +3373,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Grated Pecorino Romano, to serve",
 "n": "Pecorino",
-"a": "Dairy & eggs",
+"a": "Deli",
 "s": false,
 "p": "\\bpecorino\\b",
 "q": null,
@@ -3409,7 +3409,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "340 g (12 oz) rigatoni or spaghetti",
 "n": "Spaghetti or rigatoni",
-"a": "Bread, pasta & rice",
+"a": "Pasta, rice & noodles",
 "s": false,
 "p": "\\bspaghetti\\b|\\brigatoni\\b",
 "q": 340.0,
@@ -3418,7 +3418,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "125 g (4½ oz) guanciale (or pancetta or bacon if you must)",
 "n": "Guanciale",
-"a": "Meat & seafood",
+"a": "Deli",
 "s": false,
 "p": "\\bguanciale\\b",
 "q": 125.0,
@@ -3427,7 +3427,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "4 large eggs",
 "n": "Eggs",
-"a": "Dairy & eggs",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\beggs?\\b",
 "q": 4.0,
@@ -3436,7 +3436,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "55 g (2 oz) grated pecorino, plus extra to serve",
 "n": "Pecorino",
-"a": "Dairy & eggs",
+"a": "Deli",
 "s": false,
 "p": "\\bpecorino\\b",
 "q": 55.0,
@@ -3445,7 +3445,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp MSG",
 "n": "MSG",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
@@ -3481,7 +3481,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "250 g (8 oz) dried fettuccine",
 "n": "Dried fettuccine",
-"a": "Bread, pasta & rice",
+"a": "Pasta, rice & noodles",
 "s": false,
 "p": "\\bfettuccine\\b",
 "q": 250.0,
@@ -3490,7 +3490,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "42 g (3 tbsp) unsalted butter",
 "n": "Butter",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bbutter\\b",
 "q": 42.0,
@@ -3508,7 +3508,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "125 ml (½ cup) thickened or pure cream (heavy cream)",
 "n": "Thickened cream",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bcream\\b",
 "q": 125.0,
@@ -3517,7 +3517,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "60 g (¾ cup) freshly and finely grated Parmigiano Reggiano or parmesan",
 "n": "Parmesan",
-"a": "Dairy & eggs",
+"a": "Deli",
 "s": false,
 "p": "\\bparmesan\\b|\\bparmigiano\\b",
 "q": 60.0,
@@ -3535,7 +3535,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp MSG",
 "n": "MSG",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
@@ -3553,7 +3553,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Extra Parmigiano Reggiano",
 "n": "Parmesan",
-"a": "Dairy & eggs",
+"a": "Deli",
 "s": false,
 "p": "\\bparmesan\\b|\\bparmigiano\\b",
 "q": null,
@@ -3562,7 +3562,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Fresh parsley (optional)",
 "n": "Parsley",
-"a": "Herbs",
+"a": "Fruit & veg",
 "s": false,
 "p": "\\bparsley\\b",
 "q": null,
@@ -3653,7 +3653,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "250 ml (1 cup) red wine, something bold like a Sangiovese or shiraz",
 "n": "Red wine",
-"a": "Wine & spirits",
+"a": "Bottle shop",
 "s": false,
 "p": "\\bred wine\\b",
 "q": 250.0,
@@ -3662,7 +3662,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "700 g tomato passata",
 "n": "Tomato passata",
-"a": "Pantry & sauces",
+"a": "Tins & jars",
 "s": false,
 "p": "\\bpassata\\b",
 "q": 700.0,
@@ -3671,7 +3671,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "100 ml milk",
 "n": "Milk",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bmilk\\b",
 "q": 100.0,
@@ -3689,7 +3689,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp MSG",
 "n": "MSG",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
@@ -3698,7 +3698,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "100 g Parmesan, grated, plus the rind",
 "n": "Parmesan",
-"a": "Dairy & eggs",
+"a": "Deli",
 "s": false,
 "p": "\\bparmesan\\b|\\bparmigiano\\b",
 "q": 100.0,
@@ -3707,7 +3707,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "350 g mozzarella, grated",
 "n": "Mozzarella",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bmozzarella\\b",
 "q": 350.0,
@@ -3716,7 +3716,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Small bunch basil",
 "n": "Basil",
-"a": "Herbs",
+"a": "Fruit & veg",
 "s": false,
 "p": "\\bbasil\\b",
 "q": null,
@@ -3734,7 +3734,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "3 eggs",
 "n": "Eggs",
-"a": "Dairy & eggs",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\beggs?\\b",
 "q": 3.0,
@@ -3743,7 +3743,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "320 g Tipo 00 flour, plus extra for dusting",
 "n": "Tipo 00 flour",
-"a": "Bread, pasta & rice",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\btipo 00\\b|\\b00\\b",
 "q": 320.0,
@@ -3761,7 +3761,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Or store-bought fresh lasagne sheets instead (we use Latina)",
 "n": "Fresh lasagne sheets",
-"a": "Bread, pasta & rice",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\blasagne sheets\\b|\\blasagne\\b",
 "q": null,
@@ -3770,7 +3770,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "50 g butter",
 "n": "Butter",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bbutter\\b",
 "q": 50.0,
@@ -3779,7 +3779,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "50 g plain flour",
 "n": "Plain flour",
-"a": "Bread, pasta & rice",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bflour\\b",
 "q": 50.0,
@@ -3788,7 +3788,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "600 ml milk",
 "n": "Milk",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bmilk\\b",
 "q": 600.0,
@@ -3869,7 +3869,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "280 g jar sliced sun-dried tomatoes",
 "n": "Sun-dried tomatoes",
-"a": "Pantry & sauces",
+"a": "Tins & jars",
 "s": false,
 "p": "\\bsun-dried tomato(es)?\\b|\\bsun dried tomato(es)?\\b|\\btomato(es)?\\b|\\btomato(es)?\\b",
 "q": 280.0,
@@ -3887,7 +3887,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Small bunch fresh thyme",
 "n": "Thyme",
-"a": "Herbs",
+"a": "Fruit & veg",
 "s": false,
 "p": "\\bthyme\\b",
 "q": null,
@@ -3905,7 +3905,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "900 ml chicken stock",
 "n": "Chicken stock",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": false,
 "p": "\\bchicken stock\\b|\\bchicken\\b",
 "q": 900.0,
@@ -3914,7 +3914,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "300 g risoni",
 "n": "Risoni",
-"a": "Bread, pasta & rice",
+"a": "Pasta, rice & noodles",
 "s": false,
 "p": "\\brisoni\\b|\\borzo\\b",
 "q": 300.0,
@@ -3923,7 +3923,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "200 ml cream",
 "n": "Thickened cream",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bcream\\b",
 "q": 200.0,
@@ -3932,7 +3932,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "60 g finely grated Parmesan",
 "n": "Parmesan",
-"a": "Dairy & eggs",
+"a": "Deli",
 "s": false,
 "p": "\\bparmesan\\b|\\bparmigiano\\b",
 "q": 60.0,
@@ -3989,7 +3989,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "4 large sprigs rosemary",
 "n": "Rosemary",
-"a": "Herbs",
+"a": "Fruit & veg",
 "s": false,
 "p": "\\brosemary\\b",
 "q": 4.0,
@@ -4016,7 +4016,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "1 bunch flat-leaf parsley",
 "n": "Parsley",
-"a": "Herbs",
+"a": "Fruit & veg",
 "s": false,
 "p": "\\bparsley\\b",
 "q": 1.0,
@@ -4052,7 +4052,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp MSG",
 "n": "MSG",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
@@ -4079,7 +4079,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "275 g water (see step 1 for its temperature)",
 "n": "Water",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": true,
 "p": "\\bwater\\b",
 "q": 275.0,
@@ -4088,7 +4088,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "22 g sugar",
 "n": "Sugar",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": true,
 "p": "\\bsugar\\b",
 "q": 22.0,
@@ -4097,7 +4097,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "11 g honey",
 "n": "Honey",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": false,
 "p": "\\bhoney\\b",
 "q": 11.0,
@@ -4106,7 +4106,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "8 g instant yeast",
 "n": "Dried yeast",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\byeast\\b",
 "q": 8.0,
@@ -4115,7 +4115,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "385 g bread flour, plus about 2 tsp for dusting",
 "n": "Bread flour",
-"a": "Bread, pasta & rice",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bbread flour\\b",
 "q": 385.0,
@@ -4133,7 +4133,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "22 g skim milk powder",
 "n": "Skim milk powder",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bmilk powder\\b|\\bmilk\\b",
 "q": 22.0,
@@ -4142,7 +4142,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "28 g unsalted butter, cut into small cubes",
 "n": "Butter",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bbutter\\b",
 "q": 28.0,
@@ -4160,7 +4160,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "10 g unsalted butter, at room temperature, for greasing the loaf pan",
 "n": "Butter",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bbutter\\b",
 "q": 10.0,
@@ -4204,7 +4204,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "30 g (¼ cup) plain (all-purpose) flour",
 "n": "Plain flour",
-"a": "Bread, pasta & rice",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bflour\\b",
 "q": 30.0,
@@ -4213,7 +4213,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "1 egg",
 "n": "Eggs",
-"a": "Dairy & eggs",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\beggs?\\b",
 "q": 1.0,
@@ -4249,7 +4249,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Hot cooked short-grain rice for 2–3, about 210 g per serving",
 "n": "Rice",
-"a": "Bread, pasta & rice",
+"a": "Pasta, rice & noodles",
 "s": false,
 "p": "\\brice\\b",
 "q": null,
@@ -4258,7 +4258,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "30 ml (2 tbsp) soy sauce",
 "n": "Soy sauce",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bsoy sauce\\b|\\bsoy\\b",
 "q": 30.0,
@@ -4276,7 +4276,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "25 g (2 tbsp) sugar",
 "n": "Sugar",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": true,
 "p": "\\bsugar\\b",
 "q": 25.0,
@@ -4285,7 +4285,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "15 ml (1 tbsp) mirin",
 "n": "Mirin",
-"a": "Wine & spirits",
+"a": "International foods",
 "s": false,
 "p": "\\bmirin\\b",
 "q": 15.0,
@@ -4294,7 +4294,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp MSG",
 "n": "MSG",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
@@ -4303,7 +4303,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "2 eggs",
 "n": "Eggs",
-"a": "Dairy & eggs",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\beggs?\\b",
 "q": 2.0,
@@ -4330,7 +4330,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "55 g (4 tbsp) Japanese Kewpie mayonnaise",
 "n": "Kewpie mayonnaise",
-"a": "Dairy & eggs",
+"a": "International foods",
 "s": false,
 "p": "\\bkewpie\\b",
 "q": 55.0,
@@ -4348,7 +4348,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tbsp tomato sauce (ketchup)",
 "n": "Tomato sauce",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": false,
 "p": "\\btomato sauce\\b|\\bketchup\\b",
 "q": 1.5,
@@ -4429,7 +4429,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½–1 tbsp soy sauce",
 "n": "Soy sauce",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bsoy sauce\\b|\\bsoy\\b",
 "q": 3.0,
@@ -4438,7 +4438,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tbsp sake (or dry sherry or Chinese rice wine, or leave it out)",
 "n": "Cooking sake",
-"a": "Wine & spirits",
+"a": "International foods",
 "s": false,
 "p": "\\bsake\\b",
 "q": 1.5,
@@ -4447,7 +4447,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp toasted sesame oil",
 "n": "Sesame oil",
-"a": "Oils & vinegars",
+"a": "International foods",
 "s": false,
 "p": "\\bsesame oil\\b",
 "q": 0.5,
@@ -4456,7 +4456,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp MSG",
 "n": "MSG",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
@@ -4474,7 +4474,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Potato starch or cornflour (cornstarch), enough to coat the chicken",
 "n": "Cornflour",
-"a": "Bread, pasta & rice",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bcornflour\\b|\\bcornstarch\\b|\\bpotato starch\\b|\\bstarch\\b",
 "q": null,
@@ -4483,7 +4483,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Plain (all-purpose) flour, enough to coat the chicken",
 "n": "Plain flour",
-"a": "Bread, pasta & rice",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bflour\\b",
 "q": null,
@@ -4501,7 +4501,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Japanese Kewpie mayonnaise",
 "n": "Kewpie mayonnaise",
-"a": "Dairy & eggs",
+"a": "International foods",
 "s": false,
 "p": "\\bkewpie\\b",
 "q": null,
@@ -4510,7 +4510,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Shichimi togarashi (Japanese seven spice)",
 "n": "Shichimi togarashi",
-"a": "Herbs & spices",
+"a": "International foods",
 "s": false,
 "p": "\\bshichimi\\b",
 "q": null,
@@ -4533,7 +4533,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp chicken bouillon powder",
 "n": "Chicken stock powder",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": false,
 "p": "\\bchicken bouillon\\b|\\bchicken stock powder\\b|\\bbouillon\\b|\\bchicken\\b",
 "q": 0.5,
@@ -4542,7 +4542,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "A drizzle of honey (or sugar)",
 "n": "Honey",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": false,
 "p": "\\bhoney\\b",
 "q": null,
@@ -4551,7 +4551,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "30 ml (2 tbsp) sesame oil",
 "n": "Sesame oil",
-"a": "Oils & vinegars",
+"a": "International foods",
 "s": false,
 "p": "\\bsesame oil\\b",
 "q": 30.0,
@@ -4569,7 +4569,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "A splash of yuzu juice (or fresh lemon juice)",
 "n": "Yuzu juice",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\byuzu\\b",
 "q": null,
@@ -4605,7 +4605,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "50 g (⅓ cup) plain flour",
 "n": "Plain flour",
-"a": "Bread, pasta & rice",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bflour\\b",
 "q": 50.0,
@@ -4632,7 +4632,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "2 eggs, beaten",
 "n": "Eggs",
-"a": "Dairy & eggs",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\beggs?\\b",
 "q": 2.0,
@@ -4641,7 +4641,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "60 g (1 cup) panko breadcrumbs",
 "n": "Panko breadcrumbs",
-"a": "Bread, pasta & rice",
+"a": "International foods",
 "s": false,
 "p": "\\bpanko\\b",
 "q": 60.0,
@@ -4659,7 +4659,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "100 g Golden Curry blocks (about half a 220 g box)",
 "n": "Golden Curry blocks",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bgolden curry\\b|\\bcurry blocks?\\b|\\bcurry\\b|\\bblocks?\\b",
 "q": 100.0,
@@ -4668,7 +4668,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "625 ml (2½ cups) boiling water: 250 ml (1 cup) to start, then 375 ml (1½ cups)",
 "n": "Water",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": true,
 "p": "\\bwater\\b",
 "q": 625.0,
@@ -4677,7 +4677,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp MSG",
 "n": "MSG",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
@@ -4704,7 +4704,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Steamed short-grain rice",
 "n": "Rice",
-"a": "Bread, pasta & rice",
+"a": "Pasta, rice & noodles",
 "s": false,
 "p": "\\brice\\b",
 "q": null,
@@ -4713,7 +4713,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Grated cheese (optional)",
 "n": "Grated cheese",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bcheese\\b",
 "q": null,
@@ -4749,7 +4749,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "35 g (¼ cup) potato starch or cornflour (cornstarch)",
 "n": "Cornflour",
-"a": "Bread, pasta & rice",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bcornflour\\b|\\bcornstarch\\b|\\bpotato starch\\b|\\bstarch\\b",
 "q": 35.0,
@@ -4776,7 +4776,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "240 ml (1 cup) mirin",
 "n": "Mirin",
-"a": "Wine & spirits",
+"a": "International foods",
 "s": false,
 "p": "\\bmirin\\b",
 "q": 240.0,
@@ -4785,7 +4785,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "120 ml (½ cup) soy sauce",
 "n": "Soy sauce",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bsoy sauce\\b|\\bsoy\\b",
 "q": 120.0,
@@ -4794,7 +4794,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "45 ml (3 tbsp) sake",
 "n": "Cooking sake",
-"a": "Wine & spirits",
+"a": "International foods",
 "s": false,
 "p": "\\bsake\\b",
 "q": 45.0,
@@ -4803,7 +4803,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "65 g (⅓ cup) sugar",
 "n": "Sugar",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": true,
 "p": "\\bsugar\\b",
 "q": 65.0,
@@ -4839,7 +4839,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp MSG",
 "n": "MSG",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
@@ -4867,7 +4867,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "6 slices shokupan (Japanese milk bread)",
 "n": "Shokupan (Japanese milk bread)",
-"a": "Bread, pasta & rice",
+"a": "Bakery",
 "s": false,
 "p": "\\bshokupan\\b",
 "q": 6.0,
@@ -4876,7 +4876,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Spreadable butter",
 "n": "Butter",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bbutter\\b",
 "q": null,
@@ -4894,7 +4894,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "5 large eggs",
 "n": "Eggs",
-"a": "Dairy & eggs",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\beggs?\\b",
 "q": 5.0,
@@ -4903,7 +4903,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "45 ml (3 tbsp) Kewpie mayonnaise",
 "n": "Kewpie mayonnaise",
-"a": "Dairy & eggs",
+"a": "International foods",
 "s": false,
 "p": "\\bkewpie\\b",
 "q": 45.0,
@@ -4912,7 +4912,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "15 ml (1 tbsp) milk",
 "n": "Milk",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bmilk\\b",
 "q": 15.0,
@@ -4939,7 +4939,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp sugar",
 "n": "Sugar",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": true,
 "p": "\\bsugar\\b",
 "q": 0.5,
@@ -4966,7 +4966,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "4 eggs (about 55 g each), straight from the fridge",
 "n": "Eggs",
-"a": "Dairy & eggs",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\beggs?\\b",
 "q": 4.0,
@@ -4975,7 +4975,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "60 ml (4 tbsp) soy sauce",
 "n": "Soy sauce",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bsoy sauce\\b|\\bsoy\\b",
 "q": 60.0,
@@ -4984,7 +4984,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "60 ml (4 tbsp) mirin",
 "n": "Mirin",
-"a": "Wine & spirits",
+"a": "International foods",
 "s": false,
 "p": "\\bmirin\\b",
 "q": 60.0,
@@ -4993,7 +4993,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "30 ml (2 tbsp) water",
 "n": "Water",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": true,
 "p": "\\bwater\\b",
 "q": 30.0,
@@ -5002,7 +5002,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "12 g (1 tbsp) sugar",
 "n": "Sugar",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": true,
 "p": "\\bsugar\\b",
 "q": 12.0,
@@ -5011,7 +5011,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "15 ml (1 tbsp) cooking sake",
 "n": "Cooking sake",
-"a": "Wine & spirits",
+"a": "International foods",
 "s": false,
 "p": "\\bsake\\b",
 "q": 15.0,
@@ -5020,7 +5020,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "5 g dashi powder (optional)",
 "n": "Dashi powder",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bdashi\\b",
 "q": 5.0,
@@ -5029,7 +5029,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp MSG",
 "n": "MSG",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
@@ -5065,7 +5065,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "50 g (⅓ cup) plain flour",
 "n": "Plain flour",
-"a": "Bread, pasta & rice",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bflour\\b",
 "q": 50.0,
@@ -5092,7 +5092,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "2 eggs, beaten",
 "n": "Eggs",
-"a": "Dairy & eggs",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\beggs?\\b",
 "q": 2.0,
@@ -5101,7 +5101,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "60 g (1 cup) panko breadcrumbs",
 "n": "Panko breadcrumbs",
-"a": "Bread, pasta & rice",
+"a": "International foods",
 "s": false,
 "p": "\\bpanko\\b",
 "q": 60.0,
@@ -5119,7 +5119,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Steamed short-grain rice",
 "n": "Rice",
-"a": "Bread, pasta & rice",
+"a": "Pasta, rice & noodles",
 "s": false,
 "p": "\\brice\\b",
 "q": null,
@@ -5128,7 +5128,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Japanese (karashi) or English mustard",
 "n": "Japanese or English mustard",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bkarashi\\b|\\benglish mustard\\b|\\bjapanese mustard\\b|\\bmustard\\b|\\bmustard\\b",
 "q": null,
@@ -5137,7 +5137,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Pickled ginger",
 "n": "Pickled ginger",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bpickled ginger\\b|\\bginger\\b",
 "q": null,
@@ -5146,7 +5146,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Tonkatsu sauce",
 "n": "Tonkatsu sauce",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\btonkatsu sauce\\b|\\btonkatsu\\b",
 "q": null,
@@ -5273,7 +5273,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Small handful coriander, chopped",
 "n": "Coriander",
-"a": "Herbs",
+"a": "Fruit & veg",
 "s": false,
 "p": "\\bcoriander\\b",
 "q": null,
@@ -5309,7 +5309,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp MSG",
 "n": "MSG",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
@@ -5372,7 +5372,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "200 g paneer",
 "n": "Paneer",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bpaneer\\b",
 "q": 200.0,
@@ -5426,7 +5426,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "12 small corn tortillas",
 "n": "Corn tortillas",
-"a": "Bread, pasta & rice",
+"a": "International foods",
 "s": false,
 "p": "\\btortillas\\b",
 "q": 12.0,
@@ -5498,7 +5498,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "3 tbsp tomato paste",
 "n": "Tomato paste",
-"a": "Pantry & sauces",
+"a": "Tins & jars",
 "s": false,
 "p": "\\btomato paste\\b",
 "q": 9.0,
@@ -5507,7 +5507,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "800 g (28 oz) can crushed tomatoes",
 "n": "Tinned tomatoes",
-"a": "Pantry & sauces",
+"a": "Tins & jars",
 "s": false,
 "p": "\\btomato(es)?\\b",
 "q": 800.0,
@@ -5516,7 +5516,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "420 g (14 oz) can red kidney beans, drained (or other beans)",
 "n": "Red kidney beans",
-"a": "Pantry & sauces",
+"a": "Tins & jars",
 "s": false,
 "p": "\\bkidney beans\\b|\\bbeans\\b",
 "q": 420.0,
@@ -5525,7 +5525,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "2 beef stock cubes, crumbled",
 "n": "Beef stock cubes",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": false,
 "p": "\\bstock cubes?\\b|\\bbouillon\\b|\\bcubes?\\b",
 "q": 2.0,
@@ -5534,7 +5534,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "1½ tsp sugar",
 "n": "Sugar",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": true,
 "p": "\\bsugar\\b",
 "q": 1.5,
@@ -5543,7 +5543,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "125–375 ml (½–1½ cups) water",
 "n": "Water",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": true,
 "p": "\\bwater\\b",
 "q": 375.0,
@@ -5615,7 +5615,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp MSG",
 "n": "MSG",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
@@ -5624,7 +5624,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Rice, corn chips or tortillas",
 "n": "Corn chips",
-"a": "Bread, pasta & rice",
+"a": "Snacks & sweets",
 "s": false,
 "p": "\\bcorn chips\\b|\\bchips\\b",
 "q": null,
@@ -5633,7 +5633,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Sour cream, yoghurt, grated cheese and coriander",
 "n": "Sour cream",
-"a": "Dairy & eggs",
+"a": "Dairy & fridge",
 "s": false,
 "p": "\\bsour cream\\b|\\bsour\\b",
 "q": null,
@@ -5715,7 +5715,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Handful of curry leaves",
 "n": "Curry leaves",
-"a": "Herbs",
+"a": "Fruit & veg",
 "s": false,
 "p": "\\bcurry leaves\\b",
 "q": null,
@@ -5742,7 +5742,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "85 g (1 cup) desiccated coconut",
 "n": "Desiccated coconut",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bdesiccated coconut\\b|\\bcoconut\\b",
 "q": 85.0,
@@ -5751,7 +5751,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "150 g (1 cup) cashew nuts",
 "n": "Cashew nuts",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": false,
 "p": "\\bcashew",
 "q": 150.0,
@@ -5787,7 +5787,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "30 g (80 ml / ⅓ cup) gram (chickpea) flour",
 "n": "Gram (chickpea) flour",
-"a": "Bread, pasta & rice",
+"a": "International foods",
 "s": false,
 "p": "\\bgram\\b|\\bchickpea\\b",
 "q": 30.0,
@@ -5814,7 +5814,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "750 ml (3 cups) water",
 "n": "Water",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": true,
 "p": "\\bwater\\b",
 "q": 750.0,
@@ -5832,7 +5832,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "1 tbsp brown sugar",
 "n": "Sugar",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": true,
 "p": "\\bsugar\\b",
 "q": 3.0,
@@ -5841,7 +5841,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "45 ml (3 tbsp) tamarind paste",
 "n": "Tamarind paste",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\btamarind\\b",
 "q": 45.0,
@@ -5850,7 +5850,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp MSG",
 "n": "MSG",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
@@ -5859,7 +5859,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Fresh coriander, to garnish",
 "n": "Coriander",
-"a": "Herbs",
+"a": "Fruit & veg",
 "s": false,
 "p": "\\bcoriander\\b",
 "q": null,
@@ -5868,7 +5868,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Steamed rice, to serve",
 "n": "Rice",
-"a": "Bread, pasta & rice",
+"a": "Pasta, rice & noodles",
 "s": false,
 "p": "\\brice\\b",
 "q": null,
@@ -5914,7 +5914,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "2 tins diced tomatoes (or 8 fresh tomatoes, diced)",
 "n": "Tinned tomatoes",
-"a": "Pantry & sauces",
+"a": "Tins & jars",
 "s": false,
 "p": "\\btomato(es)?\\b",
 "q": 2.0,
@@ -5923,7 +5923,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "30 ml (2 tbsp) Mrs Ball's chutney",
 "n": "Mrs Ball's chutney",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bchutney\\b",
 "q": 30.0,
@@ -5941,7 +5941,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "15 ml (1 tbsp) Worcestershire sauce",
 "n": "Worcestershire sauce",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": false,
 "p": "\\bworcestershire\\b",
 "q": 15.0,
@@ -5950,7 +5950,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp MSG",
 "n": "MSG",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
@@ -5968,7 +5968,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "12 g (1 tbsp) sugar (optional), to help the caramelising",
 "n": "Sugar",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": true,
 "p": "\\bsugar\\b",
 "q": 12.0,
@@ -6040,7 +6040,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "1 tsp gochugaru (Korean chilli flakes)",
 "n": "Gochugaru",
-"a": "Herbs & spices",
+"a": "International foods",
 "s": false,
 "p": "\\bgochugaru\\b",
 "q": 1.0,
@@ -6067,7 +6067,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp MSG",
 "n": "MSG",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
@@ -6076,7 +6076,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "400 g (14 oz) can whole tomatoes",
 "n": "Tinned tomatoes",
-"a": "Pantry & sauces",
+"a": "Tins & jars",
 "s": false,
 "p": "\\btomato(es)?\\b",
 "q": 400.0,
@@ -6085,7 +6085,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "400 g (14 oz) can cannellini beans, drained",
 "n": "Cannellini beans",
-"a": "Pantry & sauces",
+"a": "Tins & jars",
 "s": false,
 "p": "\\bcannellini\\b",
 "q": 400.0,
@@ -6094,7 +6094,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "1 sprig rosemary",
 "n": "Rosemary",
-"a": "Herbs",
+"a": "Fruit & veg",
 "s": false,
 "p": "\\brosemary\\b",
 "q": 1.0,
@@ -6112,7 +6112,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "1 small handful parsley leaves",
 "n": "Parsley",
-"a": "Herbs",
+"a": "Fruit & veg",
 "s": false,
 "p": "\\bparsley\\b",
 "q": 1.0,
@@ -6121,7 +6121,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Bread, warmed, to serve",
 "n": "Bread",
-"a": "Bread, pasta & rice",
+"a": "Bakery",
 "s": false,
 "p": "\\bbread\\b",
 "q": null,
@@ -6167,7 +6167,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "2¼ tsp white sugar",
 "n": "Sugar",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": true,
 "p": "\\bsugar\\b",
 "q": 2.25,
@@ -6176,7 +6176,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "30 ml (2 tbsp) fish sauce",
 "n": "Fish sauce",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bfish sauce\\b",
 "q": 30.0,
@@ -6212,7 +6212,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp MSG",
 "n": "MSG",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
@@ -6284,7 +6284,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "¼ cup mint leaves, lightly packed",
 "n": "Mint",
-"a": "Herbs",
+"a": "Fruit & veg",
 "s": false,
 "p": "\\bmint\\b",
 "q": 0.25,
@@ -6293,7 +6293,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "35 g (¼ cup) roasted unsalted peanuts, finely chopped",
 "n": "Roasted peanuts",
-"a": "Pantry & sauces",
+"a": "Snacks & sweets",
 "s": false,
 "p": "\\bpeanuts\\b",
 "q": 35.0,
@@ -6302,7 +6302,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Extra mint leaves, to garnish",
 "n": "Mint",
-"a": "Herbs",
+"a": "Fruit & veg",
 "s": false,
 "p": "\\bmint\\b",
 "q": null,
@@ -6338,7 +6338,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "400 ml can coconut milk",
 "n": "Coconut milk",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bcoconut milk\\b|\\bcoconut cream\\b|\\bmilk\\b|\\bcoconut\\b",
 "q": 400.0,
@@ -6347,7 +6347,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "95 g (6 tbsp) peanut butter",
 "n": "Peanut butter",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": false,
 "p": "\\bpeanut butter\\b|\\bbutter\\b",
 "q": 95.0,
@@ -6356,7 +6356,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "3–4 tbsp Thai red curry paste",
 "n": "Red curry paste",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bred curry paste\\b",
 "q": 12.0,
@@ -6383,7 +6383,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Steamed rice, to serve",
 "n": "Rice",
-"a": "Bread, pasta & rice",
+"a": "Pasta, rice & noodles",
 "s": false,
 "p": "\\brice\\b",
 "q": null,
@@ -6409,7 +6409,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "15 ml (1 tbsp) oil, or thick coconut cream from the top of the can",
 "n": "Coconut milk",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bcoconut milk\\b|\\bcoconut cream\\b|\\bmilk\\b|\\bcoconut\\b",
 "q": 15.0,
@@ -6418,7 +6418,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "4–5 tbsp yellow curry paste (a good authentic brand, or homemade)",
 "n": "Yellow curry paste",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bcurry paste\\b",
 "q": 15.0,
@@ -6445,7 +6445,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "400 ml (14 oz) can full-fat coconut milk",
 "n": "Coconut milk",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bcoconut milk\\b|\\bcoconut cream\\b|\\bmilk\\b|\\bcoconut\\b",
 "q": 400.0,
@@ -6454,7 +6454,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "A splash of chicken stock or water",
 "n": "Water",
-"a": "Pantry & sauces",
+"a": "Sauces, spreads & stock",
 "s": true,
 "p": "\\bwater\\b",
 "q": null,
@@ -6490,7 +6490,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "30 ml (2 tbsp) fish sauce",
 "n": "Fish sauce",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": false,
 "p": "\\bfish sauce\\b",
 "q": 30.0,
@@ -6499,7 +6499,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "½ tsp MSG",
 "n": "MSG",
-"a": "Pantry & sauces",
+"a": "International foods",
 "s": true,
 "p": "\\bmsg\\b",
 "q": 0.5,
@@ -6508,7 +6508,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "1–2½ tbsp palm sugar or brown sugar",
 "n": "Sugar",
-"a": "Pantry & sauces",
+"a": "Baking & eggs",
 "s": true,
 "p": "\\bsugar\\b",
 "q": 7.5,
@@ -6526,7 +6526,7 @@ window.FIELD_KITCHEN_INDEX = [
 {
 "t": "Steamed jasmine rice, to serve",
 "n": "Rice",
-"a": "Bread, pasta & rice",
+"a": "Pasta, rice & noodles",
 "s": false,
 "p": "\\brice\\b",
 "q": null,
@@ -6536,3 +6536,4 @@ window.FIELD_KITCHEN_INDEX = [
 "options": []
 }
 ];
+window.FIELD_KITCHEN_SHOP = {"aisles": ["Fruit & veg", "Bakery", "Deli", "Meat & seafood", "Pasta, rice & noodles", "International foods", "Herbs & spices", "Baking & eggs", "Sauces, spreads & stock", "Tins & jars", "Oils & vinegars", "Snacks & sweets", "Dairy & fridge", "Freezer", "Bottle shop", "Other"], "ingredients": [["\\bwater\\b", "Water", "Sauces, spreads & stock", true], ["\\bchicken bouillon\\b|\\bchicken stock powder\\b", "Chicken stock powder", "Sauces, spreads & stock", false], ["\\bchicken stock\\b", "Chicken stock", "Sauces, spreads & stock", false], ["\\bfish sauce\\b", "Fish sauce", "International foods", false], ["\\bsweet chilli sauce\\b", "Sweet chilli sauce", "Sauces, spreads & stock", false], ["\\bchilli crisp\\b", "Chilli crisp", "International foods", false], ["\\bsriracha\\b|\\bhot sauce\\b", "Hot sauce", "Sauces, spreads & stock", false], ["\\bdark soy\\b", "Dark soy sauce", "International foods", false], ["\\bsoy sauce\\b", "Soy sauce", "International foods", false], ["\\boyster sauce\\b", "Oyster sauce", "International foods", false], ["\\btomato sauce\\b|\\bketchup\\b", "Tomato sauce", "Sauces, spreads & stock", false], ["\\bpassata\\b", "Tomato passata", "Tins & jars", false], ["\\bsun-dried tomato(es)?\\b|\\bsun dried tomato(es)?\\b", "Sun-dried tomatoes", "Tins & jars", false], ["\\bcherry tomatoes\\b", "Cherry tomatoes", "Fruit & veg", false], ["\\btomato paste\\b", "Tomato paste", "Tins & jars", false], ["\\btomato(es)?\\b", "Tinned tomatoes", "Tins & jars", false], ["\\bkidney beans\\b", "Red kidney beans", "Tins & jars", false], ["\\bcannellini\\b", "Cannellini beans", "Tins & jars", false], ["\\bstock cubes?\\b|\\bbouillon\\b", "Beef stock cubes", "Sauces, spreads & stock", false], ["\\bstrawberry jelly\\b", "Aeroplane strawberry jelly", "Baking & eggs", false], ["\\borange jelly\\b", "Aeroplane orange jelly", "Baking & eggs", false], ["\\bblancmange\\b", "Strawberry blancmange", "Baking & eggs", false], ["\\bgravox\\b|\\bgravy mix\\b", "Gravox Traditional Gravy Mix", "Sauces, spreads & stock", false], ["\\bcustard\\b", "Bird's custard powder", "Baking & eggs", false], ["\\bmandarin", "Tinned mandarins", "Tins & jars", false], ["\\bflake\\b", "Flake chocolate", "Snacks & sweets", false], ["\\bchocolate\\b", "Dark chocolate", "Baking & eggs", false], ["\\bvanilla\\b", "Vanilla extract", "Baking & eggs", false], ["\\bjam rolls?\\b", "Jam rolls", "Bakery", false], ["\\bsausages?\\b", "Pork sausages", "Meat & seafood", false], ["\\bdripping\\b", "Beef dripping", "Meat & seafood", false], ["\\bduck fat\\b|\\bgoose fat\\b", "Duck fat", "Meat & seafood", false], ["\\bcointreau\\b", "Cointreau", "Bottle shop", false], ["\\bgolden curry\\b|\\bcurry blocks?\\b", "Golden Curry blocks", "International foods", false], ["\\btonkatsu sauce\\b", "Tonkatsu sauce", "International foods", false], ["\\bpickled ginger\\b", "Pickled ginger", "International foods", false], ["\\bkarashi\\b|\\benglish mustard\\b|\\bjapanese mustard\\b", "Japanese or English mustard", "International foods", false], ["\\bpanko\\b", "Panko breadcrumbs", "International foods", false], ["\\bcaesar dressing\\b", "Caesar dressing", "Sauces, spreads & stock", false], ["\\bthousand island\\b", "Thousand island dressing", "Sauces, spreads & stock", false], ["\\bitalian seasoning\\b", "Italian seasoning", "Herbs & spices", false], ["\\bevaporated milk\\b", "Evaporated milk", "Tins & jars", false], ["\\bmilk powder\\b", "Skim milk powder", "Baking & eggs", false], ["\\bcoconut milk\\b|\\bcoconut cream\\b", "Coconut milk", "International foods", false], ["\\bred curry paste\\b", "Red curry paste", "International foods", false], ["\\bcurry paste\\b", "Yellow curry paste", "International foods", false], ["\\bcurry powder\\b", "Curry powder", "Herbs & spices", false], ["\\bpeanut butter\\b", "Peanut butter", "Sauces, spreads & stock", false], ["\\bpeanuts\\b", "Roasted peanuts", "Snacks & sweets", false], ["\\btamarind\\b", "Tamarind paste", "International foods", false], ["\\bworcestershire\\b", "Worcestershire sauce", "Sauces, spreads & stock", false], ["\\bchutney\\b", "Mrs Ball's chutney", "International foods", false], ["\\bhoney\\b", "Honey", "Sauces, spreads & stock", false], ["\\byuzu\\b", "Yuzu juice", "International foods", false], ["\\bmaple syrup\\b", "Maple syrup", "Sauces, spreads & stock", false], ["\\bmustard seeds\\b", "Black mustard seeds", "Herbs & spices", false], ["\\bdijon\\b|\\bmustard\\b", "Dijon mustard", "Sauces, spreads & stock", false], ["\\bkewpie\\b", "Kewpie mayonnaise", "International foods", false], ["\\bmayonnaise\\b", "Mayonnaise", "Sauces, spreads & stock", false], ["\\bdashi\\b", "Dashi powder", "International foods", false], ["\\bmsg\\b", "MSG", "International foods", true], ["\\bbicarbonate\\b|\\bbaking soda\\b", "Bicarbonate of soda", "Baking & eggs", false], ["\\bdesiccated coconut\\b", "Desiccated coconut", "Baking & eggs", false], ["\\bcashew", "Cashew nuts", "Baking & eggs", false], ["\\byeast\\b", "Dried yeast", "Baking & eggs", false], ["\\bolive oil\\b", "Olive oil", "Oils & vinegars", true], ["\\bsesame oil\\b", "Sesame oil", "International foods", false], ["\\bpeanut oil\\b", "Peanut oil", "Oils & vinegars", true], ["\\bsunflower oil\\b", "Sunflower oil", "Oils & vinegars", true], ["\\boil\\b", "Neutral oil", "Oils & vinegars", true], ["\\bbalsamic\\b", "Balsamic vinegar", "Oils & vinegars", false], ["\\brice vinegar\\b", "Rice vinegar", "International foods", false], ["\\bblack vinegar\\b|\\bblack chinese vinegar\\b", "Chinese black vinegar", "International foods", false], ["\\bvinegar\\b", "White wine vinegar", "Oils & vinegars", false], ["\\bgrand marnier\\b|\\borange liqueur\\b", "Grand Marnier", "Bottle shop", false], ["\\bsake\\b", "Cooking sake", "International foods", false], ["\\bshaoxing\\b|\\brice wine\\b", "Shaoxing wine", "International foods", false], ["\\bmirin\\b", "Mirin", "International foods", false], ["\\bred wine\\b", "Red wine", "Bottle shop", false], ["\\bsnapper\\b|\\bwhole fish\\b", "Whole snapper", "Meat & seafood", false], ["\\bsalmon\\b", "Salmon fillets", "Meat & seafood", false], ["\\bpork loin\\b", "Pork loin steaks", "Meat & seafood", false], ["\\bchicken wings\\b", "Chicken wings", "Meat & seafood", false], ["\\bchicken thighs?\\b", "Chicken thighs", "Meat & seafood", false], ["\\bwhole chicken\\b", "Whole chicken", "Meat & seafood", false], ["\\bduck\\b", "Duck breasts", "Meat & seafood", false], ["\\bleg ham\\b|\\bham\\b", "Leg ham", "Deli", false], ["\\bguanciale\\b", "Guanciale", "Deli", false], ["\\bbacon\\b", "Streaky bacon", "Deli", false], ["\\bkabana\\b", "Kabana", "Deli", false], ["\\bnduja\\b", "'Nduja", "Deli", false], ["\\bpork mince\\b", "Pork mince", "Meat & seafood", false], ["\\bbeef mince\\b", "Beef mince", "Meat & seafood", false], ["\\bpork belly\\b", "Pork belly with loin", "Meat & seafood", false], ["\\bflank\\b|\\bskirt\\b|\\bsteak\\b", "Beef steak", "Meat & seafood", false], ["\\bwonton\\b|\\bdumpling wrappers\\b", "Wonton or dumpling wrappers", "Dairy & fridge", false], ["\\bcorn chips\\b", "Corn chips", "Snacks & sweets", false], ["\\begg noodles\\b|\\blo mein\\b", "Egg noodles", "Pasta, rice & noodles", false], ["\\bvermicelli\\b", "Rice vermicelli", "Pasta, rice & noodles", false], ["\\blasagne sheets\\b", "Fresh lasagne sheets", "Dairy & fridge", false], ["\\bfettuccine\\b", "Dried fettuccine", "Pasta, rice & noodles", false], ["\\brisoni\\b|\\borzo\\b", "Risoni", "Pasta, rice & noodles", false], ["\\bfileja\\b", "Fileja pasta", "Pasta, rice & noodles", false], ["\\bfusilli\\b|\\bspiral pasta\\b", "Spiral pasta (fusilli)", "Pasta, rice & noodles", false], ["\\bspaghetti\\b|\\brigatoni\\b", "Spaghetti or rigatoni", "Pasta, rice & noodles", false], ["\\btortillas\\b", "Corn tortillas", "International foods", false], ["\\brice\\b", "Rice", "Pasta, rice & noodles", false], ["\\bself-raising\\b", "Self-raising flour", "Baking & eggs", false], ["\\bshokupan\\b", "Shokupan (Japanese milk bread)", "Bakery", false], ["\\bcavatappi\\b", "Cavatappi pasta", "Pasta, rice & noodles", false], ["\\bshin ramyun\\b", "Shin Ramyun noodles", "International foods", false], ["\\binstant ramen\\b|\\bramen noodles\\b", "Instant ramen noodles", "Pasta, rice & noodles", false], ["\\bbread flour\\b", "Bread flour", "Baking & eggs", false], ["\\btipo 00\\b", "Tipo 00 flour", "Baking & eggs", false], ["\\bgram\\b|\\bchickpea\\b", "Gram (chickpea) flour", "International foods", false], ["\\bcornflour\\b|\\bcornstarch\\b|\\bpotato starch\\b", "Cornflour", "Baking & eggs", false], ["\\bflour\\b", "Plain flour", "Baking & eggs", false], ["\\bbread\\b", "Bread", "Bakery", false], ["\\beggs?\\b", "Eggs", "Baking & eggs", false], ["\\bbutter\\b", "Butter", "Dairy & fridge", false], ["\\bpotato(es)?\\b", "Potatoes", "Fruit & veg", false], ["\\bsour cream\\b", "Sour cream", "Dairy & fridge", false], ["\\bcream\\b", "Thickened cream", "Dairy & fridge", false], ["\\byoghurt\\b", "Greek yoghurt", "Dairy & fridge", false], ["\\bmilk\\b", "Milk", "Dairy & fridge", false], ["\\bmozzarella\\b", "Mozzarella", "Dairy & fridge", false], ["\\bcolby\\b", "Colby cheese", "Dairy & fridge", false], ["\\bcheddar\\b", "Cheddar", "Dairy & fridge", false], ["\\bpecorino\\b", "Pecorino", "Deli", false], ["\\bparmesan\\b|\\bparmigiano\\b", "Parmesan", "Deli", false], ["\\bpaneer\\b", "Paneer", "Dairy & fridge", false], ["\\bcheese\\b", "Grated cheese", "Dairy & fridge", false], ["\\bcoriander seeds\\b", "Coriander seeds", "Herbs & spices", false], ["\\bground coriander\\b", "Ground coriander", "Herbs & spices", false], ["\\bcumin\\b", "Cumin", "Herbs & spices", false], ["\\bdried sichuan red chillies\\b|\\bdried chillies\\b", "Dried red chillies", "International foods", false], ["\\bsichuan pepper|\\bsichuan red pepper", "Sichuan peppercorns", "International foods", false], ["\\bgarlic powder\\b", "Garlic powder", "Herbs & spices", false], ["\\bonion powder\\b", "Onion powder", "Herbs & spices", false], ["\\boregano\\b", "Dried oregano", "Herbs & spices", false], ["\\bsmoked paprika\\b", "Smoked paprika", "Herbs & spices", false], ["\\bpaprika\\b", "Paprika", "Herbs & spices", false], ["\\bgaram masala\\b", "Garam masala", "Herbs & spices", false], ["\\bturmeric\\b", "Turmeric", "Herbs & spices", false], ["\\bgochugaru\\b", "Gochugaru", "International foods", false], ["\\bchilli flakes\\b", "Chilli flakes", "Herbs & spices", false], ["\\bchilli powder\\b", "Chilli powder", "Herbs & spices", false], ["\\bcayenne\\b", "Cayenne pepper", "Herbs & spices", false], ["\\bshichimi\\b", "Shichimi togarashi", "International foods", false], ["\\ballspice\\b", "Ground allspice", "Herbs & spices", false], ["\\bnutmeg\\b", "Nutmeg", "Herbs & spices", false], ["\\bfennel\\b", "Fennel pollen or seeds", "Herbs & spices", false], ["\\bsesame seeds\\b", "Sesame seeds", "Herbs & spices", false], ["\\bsalt\\b", "Salt", "Herbs & spices", true], ["\\bpepper(corns)?\\b", "Pepper", "Herbs & spices", true], ["\\bspring onions?\\b|\\bgreen onions?\\b|\\bscallions?\\b", "Spring onions", "Fruit & veg", false], ["\\beschallot\\b|\\bshallot\\b", "Eschallot", "Fruit & veg", false], ["\\bred onion\\b", "Red onion", "Fruit & veg", false], ["\\bwhite onion\\b", "White onion", "Fruit & veg", false], ["\\bonions?\\b", "Brown onions", "Fruit & veg", false], ["\\bgarlic\\b", "Garlic", "Fruit & veg", false], ["\\bwhole cloves\\b|\\bcloves, whole\\b", "Whole cloves", "Herbs & spices", false], ["\\bginger\\b", "Fresh ginger", "Fruit & veg", false], ["\\blemongrass\\b", "Lemongrass", "Fruit & veg", false], ["\\bmakrut\\b|\\blime leaves\\b", "Makrut lime leaves", "Fruit & veg", false], ["\\blimes?\\b", "Limes", "Fruit & veg", false], ["\\blemons?\\b", "Lemons", "Fruit & veg", false], ["\\boranges?\\b", "Oranges", "Fruit & veg", false], ["\\bavocados?\\b", "Avocados", "Fruit & veg", false], ["\\bstrawberries\\b", "Strawberries", "Fruit & veg", false], ["\\bchillies\\b|\\bchilli\\b", "Fresh red chillies", "Fruit & veg", false], ["\\bjalape", "Jalapeño", "Fruit & veg", false], ["\\bcarrots?\\b", "Carrots", "Fruit & veg", false], ["\\bcelery\\b", "Celery", "Fruit & veg", false], ["\\bcucumber\\b", "Cucumber", "Fruit & veg", false], ["\\basparagus\\b", "Asparagus", "Fruit & veg", false], ["\\bpeas and corn\\b", "Frozen peas and corn", "Freezer", false], ["\\bfrozen peas\\b", "Frozen peas", "Freezer", false], ["\\bspinach\\b", "Baby spinach", "Fruit & veg", false], ["\\bcos\\b", "Cos lettuce", "Fruit & veg", false], ["\\bdrum cabbage\\b", "Drum cabbage", "Fruit & veg", false], ["\\bmushrooms?\\b", "Mushrooms", "Fruit & veg", false], ["\\bcoleslaw\\b", "Coleslaw", "Fruit & veg", false], ["\\bcorn kernels\\b", "Corn kernels", "Freezer", false], ["\\blettuce\\b|\\bcabbage\\b|\\bsalad greens\\b", "Lettuce and cabbage", "Fruit & veg", false], ["\\bcurry leaves\\b", "Curry leaves", "Fruit & veg", false], ["\\bcoriander\\b", "Coriander", "Fruit & veg", false], ["\\bmint\\b", "Mint", "Fruit & veg", false], ["\\bparsley\\b", "Parsley", "Fruit & veg", false], ["\\bbasil\\b", "Basil", "Fruit & veg", false], ["\\brosemary\\b", "Rosemary", "Fruit & veg", false], ["\\bchives\\b", "Chives", "Fruit & veg", false], ["\\bthyme\\b", "Thyme", "Fruit & veg", false], ["\\bsugar\\b", "Sugar", "Baking & eggs", true]], "groceries": [["\\bravioli\\b|\\btortellini\\b|\\bgnocchi\\b|\\bfresh pasta\\b", "Dairy & fridge"], ["\\bpasta sauce\\b|\\bpesto\\b|\\bbolognese\\b|\\bsalsa\\b|\\bjar\\b", "Tins & jars"], ["\\bsauce\\b|\\bketchup\\b|\\bjam\\b|\\bvegemite\\b|\\bnutella\\b|\\bspread\\b|\\bstock\\b|\\bgravy\\b", "Sauces, spreads & stock"], ["\\bpasta\\b|\\bpenne\\b|\\blasagne\\b|\\bnoodles?\\b|\\bcouscous\\b|\\bquinoa\\b", "Pasta, rice & noodles"], ["\\bcereal\\b|\\bweet-?bix\\b|\\boats\\b|\\bmuesli\\b|\\bcoffee\\b|\\btea\\b|\\bmilo\\b", "Snacks & sweets"], ["\\bchips\\b|\\bbiscuits?\\b|\\bcrackers?\\b|\\bchocolate\\b|\\blollies\\b|\\bnuts\\b|\\bpopcorn\\b", "Snacks & sweets"], ["\\bjuice\\b|\\bsoft drink\\b|\\bsoda\\b|\\bcordial\\b|\\bmineral water\\b|\\bsparkling\\b|\\bcoke\\b", "Snacks & sweets"], ["\\bbeer\\b|\\bwine\\b|\\bcider\\b|\\bgin\\b|\\bvodka\\b|\\bwhisk(e)?y\\b|\\brum\\b|\\bprosecco\\b", "Bottle shop"], ["\\bice cream\\b|\\bfrozen\\b|\\bice\\b|\\bpizza\\b|\\bchips\\b|\\bnuggets\\b", "Freezer"], ["\\byoghurt\\b|\\bcheese\\b|\\bmilk\\b|\\bcream\\b|\\bbutter\\b|\\bdips?\\b|\\bhummus\\b|\\btofu\\b", "Dairy & fridge"], ["\\bbread\\b|\\brolls?\\b|\\bwraps?\\b|\\bcrumpets?\\b|\\bmuffins?\\b|\\bbagels?\\b|\\bcroissants?\\b", "Bakery"], ["\\bham\\b|\\bsalami\\b|\\bprosciutto\\b|\\bolives?\\b|\\bpastrami\\b|\\bturkey slices\\b", "Deli"], ["\\bchicken\\b|\\bbeef\\b|\\bpork\\b|\\blamb\\b|\\bmince\\b|\\bsteak\\b|\\bsausages?\\b|\\bfish\\b|\\bprawns?\\b", "Meat & seafood"], ["\\bapples?\\b|\\bbananas?\\b|\\bgrapes\\b|\\bberries\\b|\\bsalad\\b|\\btomato(es)?\\b|\\bonions?\\b|\\bveg", "Fruit & veg"], ["\\bflour\\b|\\bsugar\\b|\\beggs?\\b|\\bbaking\\b|\\bcake\\b", "Baking & eggs"], ["\\btins?\\b|\\bcans?\\b|\\bbeans\\b|\\btuna\\b|\\bsoup\\b|\\bchickpeas\\b|\\blentils\\b", "Tins & jars"]]};
