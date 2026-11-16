@@ -1011,6 +1011,7 @@ def list_html(book):
     <div class="hero-actions list-actions" hidden>
       <button type="button" class="pill pill-solid list-share">Share or copy</button>
       <button type="button" class="pill pill-outline list-print">{svg_icon("printer")}Print</button>
+      <button type="button" class="pill pill-outline list-restore" hidden>Show removed items</button>
       <button type="button" class="pill pill-outline list-clear">Clear list</button>
     </div>
   </header>

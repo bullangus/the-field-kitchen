@@ -93,48 +93,68 @@
           if (it.from.indexOf(r.title) === -1) it.from.push(r.title);
         });
       });
-      var all = Object.keys(items).map(function (k) { return items[k]; });
+      // Items removed from the list (already in the cupboard, or not wanted) stay hidden
+      // until the list is cleared; ticked items drop into "In the trolley" at the bottom.
+      var removed = stored("fk-list-removed", {});
+      var all = Object.keys(items).map(function (k) { return items[k]; }).filter(function (it) { return !removed[it.name]; });
+      var toBuy = all.filter(function (it) { return !checked[it.name]; });
+      var got = all.filter(function (it) { return checked[it.name]; });
       var groups = AISLES.map(function (a) {
-        return { name: a, items: all.filter(function (it) { return it.aisle === a && !it.staple; }) };
+        return { name: a, items: toBuy.filter(function (it) { return it.aisle === a && !it.staple; }) };
       });
-      groups.push({ name: "Pantry staples: check you have", items: all.filter(function (it) { return it.staple; }) });
-      var count = 0;
+      groups.push({ name: "Pantry staples: check you have", items: toBuy.filter(function (it) { return it.staple; }) });
+      groups.push({ name: "In the trolley", items: got, done: true });
+      var setChecked = function (name, on) {
+        var c = stored("fk-list-checked", {});
+        if (on) c[name] = true; else delete c[name];
+        store("fk-list-checked", c);
+        build();
+      };
+      var remove = function (name) {
+        var r = stored("fk-list-removed", {});
+        r[name] = true;
+        store("fk-list-removed", r);
+        build();
+      };
       groups.forEach(function (g) {
         if (!g.items.length) return;
         g.items.sort(function (a, b) { return a.name.localeCompare(b.name); });
-        var section = el("section", "aisle");
-        section.appendChild(el("h2", "", g.name));
+        var section = el("section", "aisle" + (g.done ? " aisle-done" : ""));
+        section.appendChild(el("h2", "", g.done ? g.name + " (" + g.items.length + ")" : g.name));
         var ul = el("ul");
         g.items.forEach(function (it) {
           var amounts = Object.keys(it.units).map(function (u) { return amount(it.units[u], u); });
           if (it.some && amounts.length) amounts.push("plus some");
-          var text = it.name + (amounts.length ? ": " + amounts.join(" + ") : "");
-          lines.push((checked[it.name] ? "✓ " : "▢ ") + text);
-          var li = el("li", checked[it.name] ? "done" : "");
+          var on = !!checked[it.name];
+          var li = el("li", on ? "done" : "");
           var tick = el("button", "tick"); tick.type = "button";
-          tick.setAttribute("aria-pressed", String(!!checked[it.name]));
-          tick.setAttribute("aria-label", "Got " + it.name);
+          tick.setAttribute("aria-pressed", String(on));
+          tick.setAttribute("aria-label", (on ? "Put back: " : "Got ") + it.name);
           var body = el("div");
-          var name = el("strong", "", it.name);
-          body.appendChild(name);
+          body.appendChild(el("strong", "", it.name));
           if (amounts.length) body.appendChild(el("span", "amount", amounts.join(" + ")));
           body.appendChild(el("small", "", "For " + it.from.join(", ")));
-          tick.addEventListener("click", function () {
-            var c = stored("fk-list-checked", {});
-            if (c[it.name]) delete c[it.name]; else c[it.name] = true;
-            store("fk-list-checked", c);
-            li.classList.toggle("done");
-            tick.setAttribute("aria-pressed", String(!!c[it.name]));
-          });
-          li.appendChild(tick); li.appendChild(body);
+          var rm = el("button", "list-remove", "×"); rm.type = "button";
+          rm.setAttribute("aria-label", "Remove " + it.name + " from the list");
+          rm.title = "Remove from the list";
+          tick.addEventListener("click", function () { setChecked(it.name, !on); });
+          rm.addEventListener("click", function () { remove(it.name); });
+          li.appendChild(tick); li.appendChild(body); li.appendChild(rm);
           ul.appendChild(li);
-          count++;
         });
         section.appendChild(ul);
         aislesBox.appendChild(section);
       });
-      summary.textContent = count + " things to buy for " + picked.length + " recipe" + (picked.length === 1 ? "" : "s") +
-        ". Tick them off as you shop.";
+      // Shared or copied lists: still to buy first, then what's already in the trolley.
+      toBuy.concat(got).forEach(function (it) {
+        var amounts = Object.keys(it.units).map(function (u) { return amount(it.units[u], u); });
+        lines.push((checked[it.name] ? "✓ " : "▢ ") + it.name + (amounts.length ? ": " + amounts.join(" + ") : ""));
+      });
+      var hiddenCount = Object.keys(items).length - all.length;
+      summary.textContent = (toBuy.length ? toBuy.length + " still to buy" : "Everything's in the trolley") +
+        (got.length ? ", " + got.length + " in the trolley" : "") + ", for " + picked.length + " recipe" + (picked.length === 1 ? "" : "s") + "." +
+        (hiddenCount ? " " + hiddenCount + " removed." : "");
+      restore.hidden = !hiddenCount;
     };
 
     // Empty list: offer a few recipes to start from (favourites first, then a random pick).
@@ -162,8 +182,10 @@
       box.hidden = !pool.length;
     };
 
+    var restore = document.querySelector(".list-restore");
+    restore.addEventListener("click", function () { store("fk-list-removed", {}); build(); });
     document.querySelector(".list-clear").addEventListener("click", function () {
-      store("fk-list", []); store("fk-list-checked", {}); build();
+      store("fk-list", []); store("fk-list-checked", {}); store("fk-list-removed", {}); build();
     });
     document.querySelector(".list-print").addEventListener("click", function () { window.print(); });
     var share = document.querySelector(".list-share");

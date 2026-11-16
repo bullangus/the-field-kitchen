@@ -1086,7 +1086,18 @@ html.cooking { overflow: hidden; }
 .aisle li > div { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 0.5rem; }
 .aisle .amount { color: var(--accent); }
 .aisle small { flex-basis: 100%; color: var(--muted); font-size: 0.8rem; font-style: italic; }
+.aisle li > div { flex: 1; min-width: 0; }
 .aisle li.done strong, .aisle li.done .amount { opacity: 0.45; text-decoration: line-through; }
+.list-remove {
+  flex: none; align-self: center; width: 2rem; height: 2rem; border: 0; border-radius: 999px; cursor: pointer;
+  font: inherit; font-size: 1.15rem; line-height: 1; color: var(--muted); background: none;
+}
+.list-remove:hover, .list-remove:focus-visible { background: var(--hover); color: var(--accent); }
+.list-restore[hidden] { display: none; }
+/* Ticked items gather in their own card at the end, quieter than the rest. */
+.aisle-done { background: var(--grain), var(--note-bg); border-style: dashed; }
+.aisle-done h2 { color: var(--muted); }
+.aisle-done small { display: none; }
 .list-empty {
   max-width: 40rem; margin: 0.5rem 0 0; padding: 2rem; text-align: left;
   background: var(--grain), var(--card); border: 1px solid var(--rule); border-radius: 20px;
@@ -1152,6 +1163,7 @@ html.cooking { overflow: hidden; }
   .style-list button { padding: 0.7rem 0.85rem; }
   .scaler button { width: 2.5rem; height: 2.5rem; font-size: 1.25rem; }
   .ingredients-panel li, .aisle li { padding: 0.55rem 0; }
+  .list-remove { width: 2.6rem; height: 2.6rem; }
   /* The tick box stays small to look at; its tappable area is the full 44px. */
   .tick::before { content: ""; position: absolute; inset: -0.75rem; }
   .step-num { width: 2.6rem; height: 2.6rem; }
@@ -1231,6 +1243,7 @@ html.cooking { overflow: hidden; }
   .recipe-layout.tabbed .ingredients-panel, .recipe-layout.tabbed .method-panel { display: block !important; }
   .notes-panel, .aisle { background: none; }
   .tick { border-color: #999; }
+  .list-remove, .aisle-done { display: none !important; }
   .ing-ref { text-decoration: none; }
   .ing-pop { display: none !important; }
 }
