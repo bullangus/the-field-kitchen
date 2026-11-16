@@ -869,6 +869,7 @@ li.done > .step-num { background: var(--accent); color: var(--paper); }
 .option ul li { display: flex; align-items: flex-start; gap: 0.6rem; padding: 0.3rem 0; font-size: 0.97rem; line-height: 1.45; }
 .option .ing-text { cursor: default; }
 .option .ing-text:hover { color: inherit; }
+.option > p { margin: 0.5rem 0 0; font-size: 0.9rem; font-style: italic; color: var(--muted); }
 .option-add { margin-top: 0.6rem; font-size: 0.88rem; padding: 0.4rem 0.95rem; }
 .option-add[hidden] { display: none; }
 
