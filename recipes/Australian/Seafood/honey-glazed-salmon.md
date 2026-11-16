@@ -14,7 +14,7 @@ It's the dinner for the nights when there's not much time but you still want som
 ## Ingredients
 
 - 2 salmon fillets
-- 16 g (2 tbsp) cornflour (cornstarch)
+- 16 g (2 tbsp) cornflour
 - Steamed rice and vegetables such as broccolini, to serve
 
 ### For the sauce

@@ -621,6 +621,14 @@ button:focus-visible, a:focus-visible, [role="tab"]:focus-visible { outline: 2px
 .tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.6rem 0 0.9rem; padding-right: 4rem; }
 .kitchen .tags { flex-wrap: nowrap; overflow: hidden; }
 .tag-more { border-style: dashed; }
+/* Tags are links (or, on cards, filter buttons): a quiet fill on hover shows they can be pressed. */
+a.tag, .tag[data-filter-tag] { text-decoration: none; cursor: pointer; transition: background 0.15s ease, color 0.15s ease; }
+a.tag:hover, a.tag:focus-visible, .tag[data-filter-tag]:hover, .tag[data-filter-tag]:focus-visible {
+  background: var(--tone-ink, var(--accent)); border-color: var(--tone-ink, var(--accent)); color: var(--paper);
+}
+.recipe-card .tag[data-filter-tag]:hover { background: var(--accent); border-color: var(--accent); }
+.style-group { scroll-margin-top: 5rem; }
+@media (pointer: coarse) { a.tag, .tag[data-filter-tag] { padding: 0.3rem 0.75rem; } }
 .tag {
   font-size: 0.78rem; letter-spacing: 0.04em; color: var(--tone-ink);
   border: 1px solid currentColor; border-radius: 999px; padding: 0.05rem 0.6rem;
@@ -791,6 +799,20 @@ button:focus-visible, a:focus-visible, [role="tab"]:focus-visible { outline: 2px
   background: var(--grain), var(--card); border: 1px solid var(--rule); border-radius: 20px; padding: 1.4rem 1.3rem;
   scrollbar-width: thin;
 }
+/* Ingredients heading with the Australia / UK / US names switch beside it. */
+.panel-head { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin: 0 0 0.75rem; }
+.panel-head h2 { margin: 0 !important; }
+.names-pick { display: inline-flex; padding: 2px; border: 1px solid var(--rule); border-radius: 999px; background: var(--paper); }
+.names-pick button {
+  font: inherit; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; cursor: pointer; color: var(--muted);
+  background: none; border: 0; border-radius: 999px; min-width: 2.2rem; padding: 0.25rem 0.5rem;
+}
+.names-pick button:hover { color: var(--accent); }
+.names-pick button[aria-checked="true"] { background: var(--ink); color: var(--paper); }
+@media (pointer: coarse) { .names-pick button { min-width: 2.75rem; min-height: 2.25rem; font-size: 0.78rem; } }
+.list-more-menu .names-pick button { width: auto; padding: 0.25rem 0.5rem; font-size: 0.72rem; color: var(--muted); }
+.list-more-menu .names-pick button[aria-checked="true"] { color: var(--paper); }
+.list-more-names { white-space: nowrap; display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; padding: 0.45rem 0.4rem 0.45rem 0.75rem; font-size: 0.9rem; color: var(--muted); }
 .ingredients-panel h2, .method-panel h2, .options h2, .notes-panel h2 {
   font-family: "Source Serif 4", Georgia, serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
   letter-spacing: 0.12em; color: var(--accent); margin: 0 0 0.75rem;
@@ -1308,7 +1330,7 @@ html.cooking { overflow: hidden; }
   }
   @page { margin: 18mm 16mm 20mm; }
   .site-nav, .pager, .print-link, .print-intro, .search, .read-progress, .recipe-tabs, .hero-actions,
-  .timer-tray, .cook-view, .palette, .hero-art, .panel-hint, .scale-note, .chips, .list-actions, .list-add, .tabbar, .cook-fab { display: none !important; }
+  .timer-tray, .cook-view, .palette, .hero-art, .panel-hint, .scale-note, .chips, .list-actions, .list-add, .tabbar, .cook-fab, .names-pick { display: none !important; }
   /* Only the printed book keeps the footer, as a colophon on its own last page. */
   .site-footer { display: none; }
   .site-footer.colophon { display: block; break-before: page; background: none; border: 0; margin: 0; padding-top: 90mm; }

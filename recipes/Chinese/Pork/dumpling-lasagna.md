@@ -14,7 +14,7 @@ It's the comfort of dumplings without an afternoon of folding. Each little ramek
 ## Ingredients
 
 - 450 g (1 lb) pork mince
-- 4 spring onions (scallions), thinly sliced, whites and greens
+- 4 spring onions, thinly sliced, whites and greens
 - 3 cloves garlic, grated
 - 1 tbsp grated fresh ginger
 - 45 ml (3 tbsp) soy sauce or tamari

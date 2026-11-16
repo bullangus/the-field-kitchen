@@ -19,8 +19,8 @@ The secret is in the tenderising: a little bicarb and a short rest make the beef
 - 30 ml (2 tbsp) water
 - 2 tsp Shaoxing rice wine
 - ½ tsp table salt
-- ¼ tsp bicarbonate of soda (baking soda)
-- 16 g (2 tbsp) cornflour (cornstarch)
+- ¼ tsp bicarb soda
+- 16 g (2 tbsp) cornflour
 - 15 ml (1 tbsp) neutral oil
 
 ### For the sauce
@@ -34,14 +34,14 @@ The secret is in the tenderising: a little bicarb and a short rest make the beef
 ### For the rest of the dish
 
 - 1 tbsp minced garlic (about 2 cloves)
-- ½ large brown (yellow) onion, sliced
-- 1 bunch spring onions (green onions), cut into 5 cm (2 inch) pieces, white and green parts separated
+- ½ large brown onion, sliced
+- 1 bunch spring onions, cut into 5 cm (2 inch) pieces, white and green parts separated
 - 30 g (1 oz) medium-thickness rice vermicelli (optional; use more or less to preference)
 - Oil, as needed for cooking
 
 ## Method
 
-1. In a mixing bowl, combine the beef, water, 2 tsp Shaoxing wine, salt and bicarbonate of soda. Mix vigorously until the beef absorbs most of the liquid.
+1. In a mixing bowl, combine the beef, water, 2 tsp Shaoxing wine, salt and bicarb soda. Mix vigorously until the beef absorbs most of the liquid.
 2. Add the cornflour and mix until the beef is well coated, then add the 1 tbsp oil and mix until evenly distributed.
 3. Set aside to marinate for 10–15 minutes while you prepare the rest of the ingredients, or marinate in the fridge overnight.
 4. For the optional noodle nest, heat 2.5–5 cm (1–2 inches) of oil in a wok or pan to about 175°C (350°F). It's ready when the tip of a wooden chopstick or skewer sizzles rapidly in it.

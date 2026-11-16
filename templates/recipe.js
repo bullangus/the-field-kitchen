@@ -689,6 +689,7 @@
       uses.appendChild(chip);
     });
     uses.hidden = !uses.childNodes.length;
+    if (window.FieldKitchenNames) FieldKitchenNames.swap(view.querySelector(".cv-body"), false);
     var timerBox = view.querySelector(".cv-timers");
     timerBox.textContent = "";
     durations(s.text.textContent).forEach(function (d) {

@@ -23,7 +23,7 @@ Every layer has its job, and the anticipation of watching each one set is half t
 - 450 g tin mandarin segments
 - 1 packet (85 g) Aeroplane orange jelly
 - Bird's custard powder, enough to make 600 ml custard
-- 300 ml thickened cream (double cream)
+- 300 ml thickened cream
 - Flake chocolate, to finish
 - 1 orange
 

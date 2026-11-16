@@ -35,7 +35,7 @@ It's the bowl you make for yourself late at night or on a lazy weekend when only
 
 ### To finish
 
-- Spring onions (scallions), thinly sliced
+- Spring onions, thinly sliced
 - Toasted sesame seeds
 - Extra chilli crisp, for drizzling
 

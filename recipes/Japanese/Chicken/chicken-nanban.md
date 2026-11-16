@@ -15,7 +15,7 @@ I first discovered chicken nanban in Australia, but it was in Japan that I fell 
 
 - 400 g (14 oz) boneless, skin-on chicken thighs (or breasts)
 - Salt and black pepper, to season
-- 30 g (¼ cup) plain (all-purpose) flour
+- 30 g (¼ cup) plain flour
 - 1 egg
 - High-heat oil for frying, such as grapeseed, avocado or vegetable oil
 - Lettuce and shredded cabbage (or salad greens), to serve
@@ -33,11 +33,11 @@ I first discovered chicken nanban in Australia, but it was in Japan that I fell 
 ### For the tartar sauce
 
 - 2 eggs
-- ¼ brown (yellow) onion
-- 1 spring onion (green onion)
+- ¼ brown onion
+- 1 spring onion
 - 55 g (4 tbsp) Japanese Kewpie mayonnaise
 - 1 tsp lemon juice
-- ½ tbsp tomato sauce (ketchup)
+- ½ tbsp ketchup
 - Salt and black pepper, to taste
 
 ## Method

@@ -16,7 +16,7 @@ There's a moment, somewhere between 8 and 10 minutes, when the edges are deep go
 
 - 200 g (1½ cups plus 1 tbsp) plain flour, spooned and levelled
 - 4 g (¾ tsp) table salt
-- 4 g (¾ tsp) bicarbonate of soda (baking soda)
+- 4 g (¾ tsp) bicarb soda
 - 169 g (¾ cup) unsalted butter, divided: 113 g and 56 g
 - 200 g (1 cup, packed) dark brown sugar
 - 50 g (¼ cup) white sugar
@@ -27,7 +27,7 @@ There's a moment, somewhere between 8 and 10 minutes, when the edges are deep go
 
 ## Method
 
-1. Put racks in the upper and lower thirds of the oven and preheat to 190°C (170°C fan / 375°F / gas 5). Whisk the flour, salt and bicarbonate of soda in a small bowl and set aside.
+1. Put racks in the upper and lower thirds of the oven and preheat to 190°C (170°C fan / 375°F / gas 5). Whisk the flour, salt and bicarb soda in a small bowl and set aside.
 2. Cook the 113 g butter in a large saucepan over medium heat, swirling often and scraping the bottom with a heatproof spatula, until it foams and then browns, about 4 minutes. Scrape the butter and any brown bits into a large heatproof bowl and let it cool for 1 minute.
 3. Cut the remaining 56 g butter into small pieces and add to the brown butter. It should melt but not foam and sizzle, so test with one piece before adding the rest.
 4. Once the butter has melted, add both sugars and whisk, breaking up any clumps, until no lumps remain. Add the egg and egg yolks and whisk until the sugar dissolves and the mixture is smooth, about 30 seconds. Whisk in the vanilla.

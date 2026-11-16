@@ -20,7 +20,7 @@ It's a gentle, comforting curry, with tender chicken, soft potato and sweet carr
 - 400 ml (14 oz) can full-fat coconut milk
 - A splash of chicken stock or water
 - 3 Dutch cream, Désirée or Warba potatoes, peeled and cubed
-- 1 brown (yellow) onion, cut into wedges
+- 1 brown onion, cut into wedges
 - 2 carrots, sliced
 - 30 ml (2 tbsp) fish sauce
 - ½ tsp MSG

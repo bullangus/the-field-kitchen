@@ -30,8 +30,8 @@ They're best eaten straight from the rack, while they're still crackling and hot
 ### For deep-frying
 
 - 700–950 ml (3–4 cups) neutral oil
-- Potato starch or cornflour (cornstarch), enough to coat the chicken
-- Plain (all-purpose) flour, enough to coat the chicken
+- Potato starch or cornflour, enough to coat the chicken
+- Plain flour, enough to coat the chicken
 
 ### For serving (optional)
 
@@ -57,7 +57,7 @@ They're best eaten straight from the rack, while they're still crackling and hot
 
 ### Shio negi
 
-- 1 bunch spring onions (scallions), finely sliced
+- 1 bunch spring onions, finely sliced
 - ½ tsp chicken bouillon powder
 - A drizzle of honey (or sugar)
 - 30 ml (2 tbsp) sesame oil

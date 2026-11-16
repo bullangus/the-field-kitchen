@@ -20,7 +20,7 @@ The chillies are there for their smoky warmth and fragrance as much as their hea
 - 2 cloves garlic
 - 30 ml (2 tbsp) Shaoxing wine
 - 15 ml (1 tbsp) soy sauce
-- Cornflour (cornstarch), enough to coat the chicken
+- Cornflour, enough to coat the chicken
 - Neutral oil, for deep-frying
 
 ### For the wok
@@ -29,7 +29,7 @@ The chillies are there for their smoky warmth and fragrance as much as their hea
 - 2 tbsp Sichuan red peppercorns
 - 4 cloves garlic, minced
 - 2.5 cm (1 inch) piece fresh ginger, minced
-- 3 spring onions (scallions), chopped
+- 3 spring onions, chopped
 - A splash of neutral oil
 
 ### For the seasoning
