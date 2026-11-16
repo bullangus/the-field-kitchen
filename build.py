@@ -15,6 +15,7 @@ Standard library only (plus ingredients.py beside it). Run:  python build.py
 
 import hashlib
 import html
+import itertools
 import json
 import re
 import shutil
@@ -23,7 +24,7 @@ import sys
 from datetime import date, datetime
 from pathlib import Path
 
-from ingredients import AISLES, GROCERIES, GROCERY_SUGGESTIONS, INGREDIENTS, NAMES, name_variants, parse_line
+from ingredients import AISLES, BAKERY, DAIRY, DELI, MEAT, PRODUCE, GROCERIES, GROCERY_SUGGESTIONS, INGREDIENTS, NAMES, name_variants, parse_line
 
 ROOT = Path(__file__).parent
 RECIPES = ROOT / "recipes"
@@ -35,6 +36,7 @@ HOME_PAGE = "index.html"
 BOOK_PAGE = "book.html"
 LIST_PAGE = "list.html"
 COOK_PAGE = "cook.html"
+PLANS_PAGE = "plans.html"
 STYLESHEET = "style.css"
 ICON = "icon.svg"
 APP_ICONS = ("icon-192.png", "icon-512.png")
@@ -55,6 +57,17 @@ RECENT_COUNT = 5
 TONIGHT_COUNT = 3  # quick recipes on the home page's "Cook tonight" tile
 # Styles that aren't a meal on their own, so "Cook tonight" and its counter skip them.
 NOT_MEALS = ("Sides", "Desserts", "Breads", "Baking", "Eggs")
+# Week plans: ready-made sets of weeknight dinners that share ingredients (plans.html).
+PLAN_DAYS = ("Mon", "Tue", "Wed", "Thu", "Fri")
+PLAN_COUNT = 6
+PLAN_SKIP_STYLES = ("Sushi", "Duck")  # built from parts, or kept for a special meal
+PLAN_SKIP_TAGS = ("project", "christmas", "party-food")
+PLAN_MAX_SAME = 2  # at most this many dinners from one style, or from one cuisine, in a week
+PLAN_MIN_CUISINES = 3
+# Sharing fresh food (bought in packs, goes off) saves more than sharing a jar that lasts.
+PLAN_FRESH = (PRODUCE, DELI, MEAT, DAIRY, BAKERY)
+PLAN_FRESH_WEIGHT = 3
+PLAN_EVERYDAY = ("Garlic", "Brown onions")  # in nearly everything, so left out of a plan's headline
 KITCHEN_CARD_RECIPES = 3  # recipes shown on each home page cuisine card; the rest are a click away
 CARD_TAGS = 3  # style tags shown on each home page cuisine card before "+N"
 TONES = 6  # colour tones for cuisine cards and headers, .tone-1 to .tone-6 in style.css
@@ -85,6 +98,7 @@ NAV_ICONS = {
                 '<path d="M19 15l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/>'),
     "play": '<path d="M7 4.5v15l12.5-7.5z"/>',
     "plus": '<path d="M12 5v14M5 12h14"/>',
+    "calendar": '<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/>',
     "heart": '<path d="M12 20.5s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.9a4.3 4.3 0 0 1 7.5 2.6c0 5.4-7.5 10-7.5 10z"/>',
     "dots": '<circle cx="5" cy="12" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="19" cy="12" r="1.2"/>',
     "home": '<path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9.5h4.5V15h3v4.5H18V10"/>',
@@ -539,6 +553,7 @@ def nav_html(book, root, current=None):
         <ul class="cuisine-list" id="cuisine-list">{"".join(links)}</ul>
       </div>
       <a class="nav-button" href="{root}{COOK_PAGE}"{here(COOK_PAGE)}>{svg_icon("sparkle")}What can I cook?</a>
+      <a class="nav-button" href="{root}{PLANS_PAGE}"{here(PLANS_PAGE)}>{svg_icon("calendar")}Week plans</a>
       <a class="nav-button print" href="{root}{BOOK_PAGE}"{here(BOOK_PAGE)}>{svg_icon("printer")}Print</a>
       <form class="search" role="search">
         <label class="search-field">{svg_icon("search")}<input type="search" placeholder="Search recipes" aria-label="Search recipes or ingredients" autocomplete="off"><kbd title="Ctrl or ⌘ K opens the command palette">/</kbd></label>
@@ -1070,6 +1085,7 @@ def list_html(book):
     <div class="hero-actions">
       <a class="pill pill-solid" href="{HOME_PAGE}#kitchens">Browse the kitchens</a>
       <a class="pill pill-outline" href="{COOK_PAGE}">{svg_icon("sparkle")}What can I cook?</a>
+      <a class="pill pill-outline" href="{PLANS_PAGE}">{svg_icon("calendar")}Plan a week</a>
     </div>
     <div class="list-ideas" hidden>
       <p class="eyebrow">Or start with one of these</p>
@@ -1128,6 +1144,100 @@ def cook_html(book):
   <a class="pill pill-solid matches-jump" href="#matches" hidden></a>
   <script src="{TOOLS_SCRIPT}" defer></script>"""
     return page(book, 0, f"What can I cook? · {TITLE}", content, current=COOK_PAGE, main_class="wide")
+
+
+def week_plans(book):
+    """PLAN_COUNT sets of PLAN_DAYS weeknight dinners, each chosen to share as much shopping
+    as it can (fresh food counting most) while staying varied: no more than PLAN_MAX_SAME
+    from one style or cuisine, at least PLAN_MIN_CUISINES cuisines, and no two plans sharing
+    more than one dinner. Every combination is scored, so the best plans are always found."""
+    pool = []
+    for r in all_recipes(book):
+        if r["category"] in NOT_MEALS + PLAN_SKIP_STYLES or set(r["tags"]) & set(PLAN_SKIP_TAGS):
+            continue
+        _, parts = sections(r["body"])
+        weights = {}
+        for line in bullets(parts.get("Ingredients")):
+            item = parse_line(line)
+            if item["n"] and not item["s"]:
+                weights[item["n"]] = PLAN_FRESH_WEIGHT if item["a"] in PLAN_FRESH else 1
+        pool.append((r, weights))
+
+    def varied(combo):
+        for key in ("category", "cuisine"):
+            counts = {}
+            for r, _ in combo:
+                counts[r[key]] = counts.get(r[key], 0) + 1
+            if max(counts.values()) > PLAN_MAX_SAME:
+                return False
+        return len({r["cuisine"] for r, _ in combo}) >= PLAN_MIN_CUISINES
+
+    def score(combo):
+        uses, weight = {}, {}
+        for _, weights in combo:
+            for name, w in weights.items():
+                uses[name] = uses.get(name, 0) + 1
+                weight[name] = w
+        return sum(weight[n] * (k - 1) for n, k in uses.items())
+
+    ranked = sorted((c for c in itertools.combinations(pool, len(PLAN_DAYS)) if varied(c)),
+                    key=lambda c: (-score(c), sorted(r["title"] for r, _ in c)))
+    plans = []
+    for combo in ranked:
+        titles = {r["title"] for r, _ in combo}
+        if all(len(titles & {r["title"] for r in p}) <= 1 for p in plans):
+            plans.append([r for r, _ in combo])
+        if len(plans) == PLAN_COUNT:
+            break
+    return plans, {r["title"]: w for r, w in pool}
+
+
+def plans_html(book):
+    plans, weights = week_plans(book)
+    cards = []
+    for i, plan in enumerate(plans, 1):
+        uses = {}
+        for r in plan:
+            for name in weights[r["title"]]:
+                uses[name] = uses.get(name, 0) + 1
+        shared = sorted((n for n, k in uses.items() if k > 1), key=lambda n: (-uses[n], -weights_of(weights, plan, n), n))
+        fresh = [n for n in shared if weights_of(weights, plan, n) > 1 and n not in PLAN_EVERYDAY]
+        lead = ", ".join(n.lower() for n in (fresh or shared)[:3])
+        days = "".join(
+            f'<li><span class="plan-day">{day}</span><div><a href="{r["url"]}">{html.escape(r["title"])}</a>'
+            f'<small>{html.escape(r["cuisine"])} · {html.escape(r.get("time") or "Serves " + r["serves"])}</small></div></li>'
+            for day, r in zip(PLAN_DAYS, plan))
+        chips = "".join(f'<li>{html.escape(n)} <b>×{uses[n]}</b></li>' for n in shared)
+        urls = json.dumps([r["url"] for r in plan])
+        cards.append(f"""
+    <article class="plan reveal" data-urls='{html.escape(urls)}'>
+      <header>
+        <p class="eyebrow">Week {i}</p>
+        <h2>Sharing {html.escape(lead)}</h2>
+      </header>
+      <ol class="plan-days">{days}</ol>
+      <details class="plan-shared">
+        <summary>{len(shared)} ingredients bought once, used more than once</summary>
+        <ul>{chips}</ul>
+      </details>
+      <button type="button" class="pill pill-solid plan-add" hidden>{svg_icon("plus")}Add the week to my list</button>
+    </article>""")
+    sizes = "".join(f'<button type="button" class="chip" data-people="{n}" aria-pressed="false">{n}</button>' for n in range(1, 7))
+    content = f"""
+  <header class="page-hero">
+    <p class="eyebrow">{svg_icon("calendar")}Week plans</p>
+    <h1>Five dinners, one shop</h1>
+    <p>Ready-made weeks of weeknight dinners from the book, picked so they share ingredients (a bunch of spring onions or a tray of chicken thighs goes across several nights) while every night is different. Add a week and the shopping list combines it all.</p>
+    <div class="plan-people" hidden><span>Cooking for</span><div role="group" aria-label="How many people">{sizes}</div></div>
+  </header>
+  <div class="plans">{"".join(cards)}
+  </div>
+  <script src="{TOOLS_SCRIPT}" defer></script>"""
+    return page(book, 0, f"Week plans · {TITLE}", content, current=PLANS_PAGE, main_class="wide")
+
+
+def weights_of(weights, plan, name):
+    return max(weights[r["title"]].get(name, 0) for r in plan)
 
 
 def book_html(book):
@@ -1232,6 +1342,7 @@ def build_site(book):
     write(HOME_PAGE, home_html(book))
     write(LIST_PAGE, list_html(book))
     write(COOK_PAGE, cook_html(book))
+    write(PLANS_PAGE, plans_html(book))
     write(BOOK_PAGE, book_html(book))
     for cuisine in book:
         write(cuisine_url(cuisine), cuisine_html(book, cuisine))

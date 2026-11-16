@@ -1219,6 +1219,32 @@ html.cooking { overflow: hidden; }
 .list-ideas span { display: block; color: var(--muted); font-size: 0.85rem; }
 .list-ideas .pill { flex: none; }
 
+/* Week plans page (tools.js) */
+.plan-people { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; margin-top: 0.5rem; color: var(--muted); }
+.plan-people > div { display: flex; gap: 0.3rem; }
+.plan-people .chip { min-width: 2.5rem; justify-content: center; }
+.plans { display: grid; grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); gap: 1rem; align-items: start; }
+.plan { display: flex; flex-direction: column; gap: 0.9rem; padding: 1.4rem; background: var(--grain), var(--card); border: 1px solid var(--rule); border-radius: 20px; }
+.plan header .eyebrow { margin: 0 0 0.2rem; }
+.plan h2 { font-size: 1.5rem; margin: 0; line-height: 1.15; }
+.plan-days { list-style: none; margin: 0; padding: 0; }
+.plan-days li { display: flex; align-items: baseline; gap: 0.9rem; padding: 0.5rem 0; border-top: 1px solid var(--hair); }
+.plan-days li:first-child { border-top: 0; }
+.plan-day { flex: none; width: 2.4rem; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); }
+.plan-days a { text-decoration: none; font-weight: 600; }
+.plan-days a:hover { color: var(--accent); }
+.plan-days small { display: block; color: var(--muted); font-size: 0.82rem; font-style: italic; }
+.plan-shared summary { cursor: pointer; color: var(--muted); font-size: 0.9rem; }
+.plan-shared summary:hover { color: var(--accent); }
+.plan-shared ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.6rem 0 0; padding: 0; }
+.plan-shared li { font-size: 0.85rem; border: 1px solid var(--rule); border-radius: 999px; padding: 0.15rem 0.65rem; background: var(--paper); }
+.plan-shared b { color: var(--accent); font-weight: 600; }
+.plan .pill { align-self: flex-start; }
+.plan-add.added { background: var(--card); color: var(--accent); border-color: var(--accent); }
+.plan-add.added svg { display: none; }
+.plan-add + .plan-view { margin-top: -0.4rem; }
+@media (max-width: 600px) { .plan .pill { align-self: stretch; } }
+
 /* What can I cook? page (tools.js) */
 .cook-layout { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 2rem; align-items: start; }
 .pantry-group { border: 0; margin: 0 0 1.25rem; padding: 0; }

@@ -327,6 +327,51 @@
     build();
   }
 
+  // ---- Week plans: add a whole week to the shopping list, scaled to the household ----
+  var plans = document.querySelector(".plans");
+  if (plans) {
+    var people = stored("fk-people", 4);
+    var peopleBox = document.querySelector(".plan-people");
+    var sizeChips = [].slice.call(peopleBox.querySelectorAll("[data-people]"));
+    var syncPeople = function () {
+      sizeChips.forEach(function (c) { c.setAttribute("aria-pressed", String(+c.getAttribute("data-people") === people)); });
+    };
+    sizeChips.forEach(function (c) {
+      c.addEventListener("click", function () { people = +c.getAttribute("data-people"); store("fk-people", people); syncPeople(); syncPlans(); });
+    });
+    peopleBox.hidden = false;
+    syncPeople();
+    var planCards = [].slice.call(plans.querySelectorAll(".plan"));
+    var syncPlans = function () {
+      var list = stored("fk-list", []);
+      planCards.forEach(function (card) {
+        var urls = JSON.parse(card.getAttribute("data-urls"));
+        var all = urls.every(function (u) { return list.some(function (x) { return x.url === u && x.serves === people; }); });
+        var b = card.querySelector(".plan-add");
+        b.hidden = false;
+        b.classList.toggle("added", all);
+        b.lastChild.textContent = all ? "On your list" : "Add the week to my list";
+        var view = card.querySelector(".plan-view");
+        if (all && !view) {
+          view = el("a", "pill pill-outline plan-view", "View list");
+          view.href = "list.html";
+          b.parentNode.insertBefore(view, b.nextSibling);
+        } else if (!all && view) view.remove();
+      });
+    };
+    planCards.forEach(function (card) {
+      card.querySelector(".plan-add").addEventListener("click", function () {
+        // Each dinner goes on at the household's size; one already there is updated, not doubled.
+        var urls = JSON.parse(card.getAttribute("data-urls"));
+        var list = stored("fk-list", []).filter(function (x) { return urls.indexOf(x.url) === -1; });
+        urls.forEach(function (u) { list.push({ url: u, serves: people }); });
+        store("fk-list", list);
+        syncPlans();
+      });
+    });
+    syncPlans();
+  }
+
   // ---- What can I cook? ----
   var pantry = document.querySelector(".pantry");
   if (pantry) {
