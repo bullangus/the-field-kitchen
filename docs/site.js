@@ -6,7 +6,7 @@
   var MAX_RESULTS = 8;
   var nav = document.querySelector(".site-nav");
   if (!nav) return;
-  // Menus only collapse once JS is here to open them again (see style.css).
+  // The page head marks <html class="js"> before first paint, so the menus start closed.
   nav.classList.add("js");
   var root = nav.getAttribute("data-root") || "";
   var index = window.FIELD_KITCHEN_INDEX || [];

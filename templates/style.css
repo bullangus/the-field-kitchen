@@ -241,7 +241,7 @@ h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600
     border-bottom: 1px solid var(--rule); box-shadow: 0 12px 24px var(--shadow);
     display: none;
   }
-  .site-nav.js.menu-open .menu { display: flex; }
+  .site-nav.menu-open .menu { display: flex; }
   .search { order: -1; margin: 0 0 0.5rem; }
   .search-field, .search-field:focus-within { width: 100%; }
   .search kbd { display: none; }
@@ -253,7 +253,7 @@ h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600
   }
   .nav-button.print { justify-content: flex-start; }
   /* Without JS the menu can't open, so keep it as a wrapping row. */
-  .site-nav:not(.js) .inner { height: auto; flex-wrap: wrap; padding: 0.6rem 16px; }
+  html:not(.js) .site-nav .inner { height: auto; flex-wrap: wrap; padding: 0.6rem 16px; }
 }
 
 /* Small motion that answers a touch: buttons press in, ticks and hearts pop, and the

@@ -10,8 +10,8 @@
 <link rel="apple-touch-icon" href="icon-192.png">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#8a3b24">
-<!-- Apply a saved light/dark choice before first paint so the page doesn't flash. -->
-<script>try{var t=localStorage.getItem("fk-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<!-- Before first paint: mark that JS is here (so the menus start closed) and apply a saved light/dark choice. -->
+<script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("fk-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <script src="search-index.js" defer></script>
 <script src="site.js" defer></script>
 </head>
