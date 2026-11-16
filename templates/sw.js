@@ -26,8 +26,10 @@ self.addEventListener("activate", function (event) {
 self.addEventListener("fetch", function (event) {
   var request = event.request;
   if (request.method !== "GET" || new URL(request.url).origin !== self.location.origin) return;
+  // "no-cache" checks with the server every time (a quick "not modified" when nothing has
+  // changed), so a new build shows at once instead of after the browser's 10-minute cache.
   event.respondWith(
-    fetch(request).then(function (response) {
+    fetch(request, { cache: "no-cache" }).then(function (response) {
       if (response.ok) {
         var copy = response.clone();
         caches.open(CACHE).then(function (cache) { cache.put(request, copy); });

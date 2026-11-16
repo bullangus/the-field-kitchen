@@ -84,7 +84,8 @@
         var head = el("div", "list-recipe-head");
         var a = el("a", "", r.title); a.href = r.url;
         head.appendChild(a);
-        head.appendChild(el("span", "", "Serves " + x.serves + (x.leftovers ? " + " + x.leftovers + " leftover" + (x.leftovers === 1 ? "" : "s") : "")));
+        var leftover = x.leftovers ? " + " + x.leftovers + " leftover" + (x.leftovers === 1 ? "" : "s") : "";
+        head.appendChild(el("span", "", (x.household ? "For " + x.household : "Serves " + x.serves) + leftover));
         var s = el("div", "list-recipe-opts", (x.options || []).length ? "+ " + x.options.join(", ") : "");
         var rm = el("button", "", "×"); rm.type = "button"; rm.setAttribute("aria-label", "Remove " + r.title);
         rm.addEventListener("click", function () {
@@ -360,13 +361,21 @@
   if (plans) {
     var RULES = SHOP.plan || {};
     var size = RULES.size || 5;
-    var people = stored("fk-people", 4);
+    // The household: adults and kids, a child counting as RULES.kidPortion of a serving.
+    // An older single "people" count carries over as adults.
+    var household = stored("fk-household", { adults: stored("fk-people", 4), kids: 0 });
+    var portionsOf = function (h) { return Math.max(1, h.adults + h.kids * (RULES.kidPortion || 0.5)); };
+    var people = portionsOf(household);
+    var householdLabel = function () {
+      var part = function (n, one, many) { return n ? n + " " + (n === 1 ? one : many) : ""; };
+      return [part(household.adults, "adult", "adults"), part(household.kids, "child", "kids")].filter(Boolean).join(" and ");
+    };
     var extra = stored("fk-lunches", false);
     var avoid = stored("fk-avoid", { groups: [], items: [] });
     // What's ticked on "What can I cook?": already in the kitchen, so plans that use it cost less.
     var have = stored("fk-fridge", []);
     var peopleBox = document.querySelector(".plan-people");
-    var sizeChips = [].slice.call(peopleBox.querySelectorAll("[data-people]"));
+    var counters = [].slice.call(peopleBox.querySelectorAll("[data-who]"));
     var extraBox = peopleBox.querySelector(".plan-extra input");
     var serverCards = [].slice.call(plans.querySelectorAll(".plan"));
     var boxIcon = plans.querySelector(".plan-leftovers svg"), plusIcon = plans.querySelector(".plan-add svg");
@@ -591,7 +600,12 @@
     };
 
     var syncPeople = function () {
-      sizeChips.forEach(function (c) { c.setAttribute("aria-pressed", String(+c.getAttribute("data-people") === people)); });
+      counters.forEach(function (c) {
+        var who = c.getAttribute("data-who"), n = household[who];
+        c.querySelector("output").textContent = n;
+        c.querySelector(".scale-down").disabled = n <= (who === "adults" ? 1 : 0);
+        c.querySelector(".scale-up").disabled = n >= 8;
+      });
       extraBox.checked = extra;
     };
     var syncPlans = function () {
@@ -620,7 +634,7 @@
         // Each dinner goes on at its size; one already on the list is updated, not doubled.
         var urls = urlsOf(card);
         var list = stored("fk-list", []).filter(function (x) { return urls.indexOf(x.url) === -1; });
-        urls.forEach(function (u) { list.push({ url: u, serves: people, leftovers: leftoversFor(card, u) }); });
+        urls.forEach(function (u) { list.push({ url: u, serves: people, leftovers: leftoversFor(card, u), household: householdLabel() }); });
         store("fk-list", list);
         recordSaving(card);
         syncPlans();
@@ -732,8 +746,16 @@
       }
     };
 
-    sizeChips.forEach(function (c) {
-      c.addEventListener("click", function () { people = +c.getAttribute("data-people"); store("fk-people", people); syncPeople(); syncPlans(); });
+    counters.forEach(function (c) {
+      var who = c.getAttribute("data-who");
+      var change = function (by) {
+        household[who] = Math.min(8, Math.max(who === "adults" ? 1 : 0, household[who] + by));
+        people = portionsOf(household);
+        store("fk-household", household);
+        syncPeople(); syncPlans(); syncBasics();
+      };
+      c.querySelector(".scale-down").addEventListener("click", function () { change(-1); });
+      c.querySelector(".scale-up").addEventListener("click", function () { change(1); });
     });
     extraBox.addEventListener("change", function () { extra = extraBox.checked; store("fk-lunches", extra); syncPlans(); });
     peopleBox.hidden = false;
@@ -758,7 +780,7 @@
       li.querySelector(".basic-add").addEventListener("click", function () {
         var url = li.getAttribute("data-url");
         var list = stored("fk-list", []).filter(function (x) { return x.url !== url; });
-        list.push({ url: url, serves: people });
+        list.push({ url: url, serves: people, household: householdLabel() });
         store("fk-list", list);
         syncBasics();
         syncPlans();

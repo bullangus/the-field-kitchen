@@ -2,7 +2,7 @@
 // every file in docs/, so the whole book is saved on first visit. Pages are
 // fetched fresh when online (so new recipes show up) and fall back to the saved
 // copy when offline; a new build changes VERSION and replaces the old copy.
-var VERSION = "1d2b17f9112f";
+var VERSION = "7f5b8971b178";
 var CACHE = "field-kitchen-" + VERSION;
 var FILES = [
   "./",
@@ -133,8 +133,10 @@ self.addEventListener("activate", function (event) {
 self.addEventListener("fetch", function (event) {
   var request = event.request;
   if (request.method !== "GET" || new URL(request.url).origin !== self.location.origin) return;
+  // "no-cache" checks with the server every time (a quick "not modified" when nothing has
+  // changed), so a new build shows at once instead of after the browser's 10-minute cache.
   event.respondWith(
-    fetch(request).then(function (response) {
+    fetch(request, { cache: "no-cache" }).then(function (response) {
       if (response.ok) {
         var copy = response.clone();
         caches.open(CACHE).then(function (cache) { cache.put(request, copy); });

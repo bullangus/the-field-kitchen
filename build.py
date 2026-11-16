@@ -83,6 +83,7 @@ PLAN_FRESH = (PRODUCE, DELI, MEAT, DAIRY, BAKERY)
 PLAN_FRESH_WEIGHT = 3
 PLAN_EVERYDAY = ("Garlic", "Brown onions")  # in nearly everything, so left out of a plan's headline
 PLAN_LUNCHES = 2  # dinners per week marked "cook extra" for lunches
+PLAN_KID_PORTION = 0.5  # a child's serving, against an adult's 1, when sizing plans
 # Each plan takes the first name here it qualifies for that no earlier plan has taken:
 # (name, what to count, which values, at least how many). "cuisines" counts different
 # cuisines, "basic" counts basics and "any" always fits, so keep a few of those at the end.
@@ -595,7 +596,7 @@ def search_index(book, basics):
                      "packs": [list(p) for p in PACKS], "avoid": [list(a) for a in AVOID], "swaps": [[g, p, use, list(only[0]) if only else None] for g, p, use, *only in SWAPS],
                      "pricesChecked": PRICES_CHECKED, "inflation": list(FOOD_INFLATION),
                      "longMinutes": PLAN_LONG_MINUTES, "maxLong": PLAN_MAX_LONG, "maxFried": PLAN_MAX_FRIED,
-                     "maxWeekMinutes": PLAN_MAX_WEEK_MINUTES}}
+                     "maxWeekMinutes": PLAN_MAX_WEEK_MINUTES, "kidPortion": PLAN_KID_PORTION}}
     return ("window.FIELD_KITCHEN_INDEX = " + json.dumps(entries, ensure_ascii=False, indent=0) + ";\n"
             "window.FIELD_KITCHEN_SHOP = " + json.dumps(shop, ensure_ascii=False) + ";\n")
 
@@ -1423,14 +1424,19 @@ def plans_html(book, basics):
     <p>Supermarket shortcuts for the nights you don't want to cook from scratch. They turn up in the plans above too.</p>
     <div class="list-ideas"><ul>{basic_rows}</ul></div>
   </section>""" if basics else ""
-    sizes = "".join(f'<button type="button" class="chip" data-people="{n}" aria-pressed="false">{n}</button>' for n in range(1, 7))
+    def counter(who, label):
+        return (f'<span class="household-who"><span class="scaler" data-who="{who}">'
+                f'<button type="button" class="scale-down" aria-label="Fewer {label}">−</button>'
+                f'<output aria-live="polite">0</output>'
+                f'<button type="button" class="scale-up" aria-label="More {label}">+</button></span> {label}</span>')
     content = f"""
   <header class="page-hero">
     <p class="eyebrow">{svg_icon("calendar")}Week plans</p>
     <h1>Five dinners, one shop</h1>
     <p>Five easy weeknight dinners from the book, each on the table within an hour of getting home (most well under), picked so they share ingredients (a bunch of spring onions or a tray of chicken thighs goes across several nights) while every night is different. No set days: each plan lists its dinners in the order to cook them, with whatever goes off soonest first. Add a plan and the shopping list combines it all.</p>
     <div class="plan-people" hidden>
-      <span>Cooking for</span><div role="group" aria-label="How many people">{sizes}</div>
+      <span>Cooking for</span>{counter("adults", "adults")}{counter("kids", "kids")}
+      <small class="household-note">Kids count as half a serving.</small>
       <label class="plan-extra"><input type="checkbox"> Cook extra for lunches</label>
       <span class="plan-prices">Prices {NAMES_PICK}</span>
     </div>

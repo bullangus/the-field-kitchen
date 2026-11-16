@@ -1256,8 +1256,8 @@ html.cooking { overflow: hidden; }
 
 /* Week plans page (tools.js) */
 .plan-people { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; margin-top: 0.5rem; color: var(--muted); }
-.plan-people > div { display: flex; gap: 0.3rem; }
-.plan-people .chip { min-width: 2.5rem; justify-content: center; }
+.household-who { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--ink); }
+.household-note { flex-basis: 100%; margin-top: -0.3rem; font-size: 0.82rem; font-style: italic; }
 .plans { display: grid; grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); gap: 1rem; align-items: start; }
 .plan { display: flex; flex-direction: column; gap: 0.9rem; padding: 1.4rem; background: var(--grain), var(--card); border: 1px solid var(--rule); border-radius: 20px; }
 .plan header .eyebrow { margin: 0 0 0.2rem; }
