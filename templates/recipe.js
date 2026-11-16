@@ -239,17 +239,24 @@
     out = out.replace(/(^|[^\d.])((?:[2-9]|\d{2,})[½¼¾⅓⅔⅛]?|1[½¼¾⅓⅔⅛]) cup\b/g, "$1$2 cups");
     return { text: out, changed: changed };
   }
-  var scaler = page.querySelector(".scaler");
+  // Amounts scale to servings plus leftover portions (lunches, another dinner), counted
+  // separately so the list can say "Serves 2 + 2 leftovers".
+  var scaler = page.querySelector(".scaler:not(.leftovers-scaler)");
+  var keeper = page.querySelector(".leftovers-scaler");
   var base = scaler ? parseInt(scaler.getAttribute("data-base"), 10) : 1;
-  var serves = base;
+  var serves = base, leftovers = 0;
   if (scaler) {
     var output = scaler.querySelector("output");
     var down = scaler.querySelector(".scale-down");
     var note = ingredientsPanel.querySelector(".scale-note");
     var apply = function () {
-      var ratio = serves / base;
+      var ratio = (serves + leftovers) / base;
       output.textContent = serves;
       down.disabled = serves <= 1;
+      if (keeper) {
+        keeper.querySelector("output").textContent = leftovers;
+        keeper.querySelector(".scale-down").disabled = leftovers <= 0;
+      }
       note.hidden = ratio === 1;
       ingredients.concat(optionIngredients).forEach(function (li) {
         var original = li.getAttribute("data-original");
@@ -262,6 +269,10 @@
     };
     down.addEventListener("click", function () { if (serves > 1) { serves--; apply(); } });
     scaler.querySelector(".scale-up").addEventListener("click", function () { serves++; apply(); });
+    if (keeper) {
+      keeper.querySelector(".scale-down").addEventListener("click", function () { if (leftovers > 0) { leftovers--; apply(); } });
+      keeper.querySelector(".scale-up").addEventListener("click", function () { leftovers++; apply(); });
+    }
   }
 
   // ---- Phone: Ingredients / Method switch ----
@@ -306,7 +317,7 @@
     };
     addButton.addEventListener("click", function () {
       var items = stored("fk-list", []).filter(function (x) { return x.url !== url; });
-      if (!addButton.classList.contains("added")) items.push({ url: url, serves: serves });
+      if (!addButton.classList.contains("added")) items.push({ url: url, serves: serves, leftovers: leftovers });
       saveList(items);
     });
     optionButtons.forEach(function (b) {
@@ -315,7 +326,7 @@
         var name = b.parentNode.getAttribute("data-option");
         var items = stored("fk-list", []);
         var mine = items.filter(function (x) { return x.url === url; })[0];
-        if (!mine) { mine = { url: url, serves: serves }; items.push(mine); }
+        if (!mine) { mine = { url: url, serves: serves, leftovers: leftovers }; items.push(mine); }
         var picked = mine.options || [];
         var i = picked.indexOf(name);
         if (i === -1) picked.push(name); else picked.splice(i, 1);

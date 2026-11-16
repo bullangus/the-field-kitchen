@@ -292,8 +292,6 @@
   var searchToggle = nav.querySelector(".search-toggle");
   if (searchToggle) { searchToggle.hidden = false; searchToggle.addEventListener("click", openPalette); }
   // The phone bottom bar's Search opens the same palette.
-  var tabSearch = document.querySelector(".tab-search");
-  if (tabSearch) { tabSearch.hidden = false; tabSearch.addEventListener("click", openPalette); }
 
   // ---- Keyboard ----
   document.addEventListener("keydown", function (e) {

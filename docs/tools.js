@@ -84,7 +84,7 @@
         var head = el("div", "list-recipe-head");
         var a = el("a", "", r.title); a.href = r.url;
         head.appendChild(a);
-        head.appendChild(el("span", "", "Serves " + x.serves));
+        head.appendChild(el("span", "", "Serves " + x.serves + (x.leftovers ? " + " + x.leftovers + " leftover" + (x.leftovers === 1 ? "" : "s") : "")));
         var s = el("div", "list-recipe-opts", (x.options || []).length ? "+ " + x.options.join(", ") : "");
         var rm = el("button", "", "×"); rm.type = "button"; rm.setAttribute("aria-label", "Remove " + r.title);
         rm.addEventListener("click", function () {
@@ -101,7 +101,7 @@
       // Merge every ingredient line by shopping name, then by unit.
       var items = {};
       picked.forEach(function (x) {
-        var r = byUrl(x.url), ratio = x.serves / (r.serves || 1);
+        var r = byUrl(x.url), ratio = (x.serves + (x.leftovers || 0)) / (r.serves || 1);
         // The recipe's own lines, plus those of any topping options picked on its page.
         var wanted = r.ingredients.slice();
         (r.options || []).forEach(function (o) {
@@ -391,7 +391,7 @@
       return SWAPS.filter(function (x) { return x.group === group && x.rx.test(name) && (!x.only || x.only.indexOf(r.title) !== -1); })[0];
     };
     var checks = {};
-    // { ok, swaps: ["tamari (gluten-free soy sauce) instead of soy sauce", ...] } for a dinner.
+    // { ok, swaps: [{ why: "no gluten", text: "tamari (gluten-free soy sauce) for the soy sauce" }] }.
     var check = function (r) {
       var key = r.url;
       if (checks[key]) return checks[key];
@@ -399,26 +399,30 @@
       var d = DIETS[avoid.diet];
       var names = r.ingredients.map(function (i) { return i.n || ""; }).filter(Boolean);
       if (d && d.tags && !d.tags.some(function (t) { return r.tags.indexOf(t) !== -1; })) out.ok = false;
-      var addSwap = function (swap, n) {
+      var addSwap = function (swap, n, why) {
         // Keep the capital on names like Worcestershire and Caesar; lowercase the rest.
         var name = /^(Worcestershire|Caesar|Golden|Shin|Mutti|Old El Paso)/.test(n) ? n : n.toLowerCase();
         var text = swap.use ? swap.use + " for the " + name : "leave out the " + name;
-        if (out.swaps.indexOf(text) === -1) out.swaps.push(text);
+        if (!out.swaps.some(function (x) { return x.text === text; })) out.swaps.push({ why: why, text: text });
       };
       // Meat with dairy: fine once every dairy ingredient can be swapped out.
       if (d && d.apart && names.some(function (n) { return d.apart.a.test(n); })) {
         names.filter(function (n) { return d.apart.b.test(n); }).forEach(function (n) {
           var swap = swapFor(d.apart.swapWith, n, r);
-          if (swap) addSwap(swap, n); else out.ok = false;
+          if (swap) addSwap(swap, n, avoid.diet.toLowerCase()); else out.ok = false;
         });
       }
       var groups = avoid.groups.concat(d ? d.groups : []);
+      // Why a swap is needed: "no gluten" for a picked group, else the diet that brings it in.
+      var whyFor = function (label) {
+        return avoid.groups.indexOf(label) !== -1 ? "no " + label.toLowerCase() : avoid.diet.toLowerCase();
+      };
       avoidRules.filter(function (a) { return groups.indexOf(a.label) !== -1; }).forEach(function (a) {
         if (a.tag) { if (r.tags.indexOf(a.tag) !== -1) out.ok = false; return; }
         names.forEach(function (n) {
           if (!a.rx.test(n)) return;
           var swap = swapFor(a.label, n, r);
-          if (swap) addSwap(swap, n); else out.ok = false;
+          if (swap) addSwap(swap, n, whyFor(a.label)); else out.ok = false;
         });
       });
       if (names.some(function (n) { return avoid.items.indexOf(n) !== -1; })) out.ok = false;
@@ -519,10 +523,11 @@
     var years = Math.max(0, (Date.now() - new Date(RULES.pricesChecked || Date.now())) / 31557600000);
     var priceOf = function (p, c) { return p.price[c] * Math.pow(1 + ((RULES.inflation || [])[c] || 0), years); };
     var money = function (v, c) { return ((c == null ? country : c) === 1 ? "£" : "$") + Math.round(v); };
-    // Lunch dinners go on at double the household; the rest at the household.
-    var servesFor = function (card, url) {
-      return extra && urlsOf(card, "data-lunches").indexOf(url) !== -1 ? people * 2 : people;
+    // Lunch dinners go on with a leftover portion for each person; the rest just for dinner.
+    var leftoversFor = function (card, url) {
+      return extra && urlsOf(card, "data-lunches").indexOf(url) !== -1 ? people : 0;
     };
+    var servesFor = function (card, url) { return people + leftoversFor(card, url); };
     var savingOf = function (card, c) {
       if (c == null) c = country;
       var uses = {}, aisle = {}, out = { fresh: 0, jars: 0, had: 0, hadNames: [] };
@@ -593,7 +598,9 @@
       var list = stored("fk-list", []);
       cards.forEach(function (card) {
         var urls = urlsOf(card);
-        var all = urls.every(function (u) { return list.some(function (x) { return x.url === u && x.serves === servesFor(card, u); }); });
+        var all = urls.every(function (u) {
+          return list.some(function (x) { return x.url === u && x.serves === people && (x.leftovers || 0) === leftoversFor(card, u); });
+        });
         var b = card.querySelector(".plan-add");
         b.hidden = false;
         b.classList.toggle("added", all);
@@ -613,7 +620,7 @@
         // Each dinner goes on at its size; one already on the list is updated, not doubled.
         var urls = urlsOf(card);
         var list = stored("fk-list", []).filter(function (x) { return urls.indexOf(x.url) === -1; });
-        urls.forEach(function (u) { list.push({ url: u, serves: servesFor(card, u) }); });
+        urls.forEach(function (u) { list.push({ url: u, serves: people, leftovers: leftoversFor(card, u) }); });
         store("fk-list", list);
         recordSaving(card);
         syncPlans();
@@ -649,8 +656,13 @@
         (r.labels || []).forEach(function (t) { d.appendChild(el("span", "plan-tag", t)); });
         var soon = r.keeps > 3 ? "" : i + 1 <= r.keeps ? " · cook within " + r.keeps + " days" : " · freeze the " + r.keepsWhat + " on shop day";
         d.appendChild(el("small", "", (r.basic ? "Basic · " : "") + r.cuisine + " · " + shortTime(r.minutes) + soon + (cravings.indexOf(r) !== -1 ? " · your pick" : "")));
-        var swaps = avoiding() ? check(r).swaps : [];
-        if (swaps.length) d.appendChild(el("small", "plan-swap", "Swap: " + swaps.join("; ")));
+        // One line per reason, so it's clear which requirement each swap is for.
+        var swaps = avoiding() ? check(r).swaps : [], whys = [];
+        swaps.forEach(function (x) { if (whys.indexOf(x.why) === -1) whys.push(x.why); });
+        whys.forEach(function (why) {
+          var texts = swaps.filter(function (x) { return x.why === why; }).map(function (x) { return x.text; });
+          d.appendChild(el("small", "plan-swap", "For " + why + ": " + texts.join("; ")));
+        });
         li.appendChild(d);
         if (lunches.indexOf(r) !== -1) li.appendChild(el("span", "plan-lunch", "+ lunch"));
         ol.appendChild(li);
@@ -869,9 +881,25 @@
       avoidCount.textContent = n ? "(" + n + ")" : "";
       if (window.FieldKitchenNames) FieldKitchenNames.swap(avoidItems, true);
     };
+    // What's switched on, shown above the plans even with the panel closed, with a way out.
+    var active = el("p", "plan-active"); active.hidden = true;
+    avoidBox.parentNode.insertBefore(active, avoidBox.nextSibling);
+    var drawActive = function () {
+      var on = (avoid.diet ? [avoid.diet.toLowerCase()] : [])
+        .concat(avoid.groups.map(function (g) { return "no " + g.toLowerCase(); }))
+        .concat(avoid.items.map(function (n) { return "no " + n.toLowerCase(); }));
+      active.hidden = !on.length;
+      active.textContent = "";
+      if (!on.length) return;
+      active.appendChild(el("span", "", "Plans for " + joinAnd(on) + ". "));
+      var clear = el("button", "pill pill-outline pill-sm", "Clear"); clear.type = "button";
+      clear.addEventListener("click", function () { avoid = { diet: null, groups: [], items: [] }; avoidChanged(); });
+      active.appendChild(clear);
+    };
     var avoidChanged = function () {
       store("fk-avoid", avoid);
       checks = {};
+      drawActive();
       drawAvoid();
       cravings = cravings.filter(allowed);
       changed();
@@ -898,7 +926,7 @@
         .map(function (n) { return { label: n, hint: everyIngredient[n], value: n }; });
     }, function (n) { avoid.items.push(n); avoidChanged(); });
     avoidBox.hidden = false;
-    if (avoiding()) avoidBox.open = true;
+    drawActive();
 
     drawAvoid();
     cravings = cravings.filter(allowed);

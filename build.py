@@ -279,6 +279,15 @@ def bullets(md):
     return re.findall(r"^- (.*)", md or "", re.M)
 
 
+SPICY_SECTION, SPICY_NAME = "Make It Spicy", "Make it spicy"
+
+
+def extra_options(parts):
+    """Every optional card a recipe has: its topping options, then "Make it spicy"."""
+    spicy = [(SPICY_NAME, parts[SPICY_SECTION])] if parts.get(SPICY_SECTION) else []
+    return options_of(parts.get("Topping Options")) + spicy
+
+
 def options_of(md):
     """[(name, markdown)] for each '### Option' in a Topping Options section."""
     chunks = re.split(r"^### (.+)$", md or "", flags=re.M)
@@ -557,7 +566,7 @@ def search_index(book, basics):
     for r in all_recipes(book) + basics:
         _, parts = sections(r["body"])
         # Search covers topping options too, so searching a topping finds its recipe.
-        lines = bullets(parts.get("Ingredients")) + bullets(parts.get("Topping Options"))
+        lines = bullets(parts.get("Ingredients")) + bullets(parts.get("Topping Options")) + bullets(parts.get(SPICY_SECTION))
         serves = re.match(r"\d+", r["serves"])
         entries.append({"title": r["title"], "cuisine": r["cuisine"], "category": r["category"],
                         # Search finds a recipe by its US and UK ingredient names too ("cilantro").
@@ -572,7 +581,7 @@ def search_index(book, basics):
                         "keeps": keeps_days(r), "keepsWhat": keeps_info(r)[1].lower(), "labels": r["labels"],
                         "ingredients": [parse_line(line) for line in bullets(parts.get("Ingredients"))],
                         "options": [{"name": name, "ingredients": [parse_line(line) for line in bullets(md)]}
-                                    for name, md in options_of(parts.get("Topping Options"))]})
+                                    for name, md in extra_options(parts)]})
     # The shopping list sorts items typed straight onto it with the same rules as recipe lines.
     shop = {"aisles": list(AISLES),
             "ingredients": [[p, name, aisle, staple] for p, name, aisle, staple in INGREDIENTS if name],
@@ -632,7 +641,7 @@ def nav_html(book, root, current=None):
 </nav>
 <nav class="tabbar" aria-label="Quick links">
   <a href="{root}index.html"{here(HOME_PAGE)}>{svg_icon("home")}<span>Home</span></a>
-  <button type="button" class="tab-search" hidden>{svg_icon("search")}<span>Search</span></button>
+  <a href="{root}{PLANS_PAGE}"{here(PLANS_PAGE)}>{svg_icon("calendar")}<span>Plans</span></a>
   <a href="{root}{COOK_PAGE}"{here(COOK_PAGE)}>{svg_icon("sparkle")}<span>Cook</span></a>
   <a href="{root}{LIST_PAGE}"{here(LIST_PAGE)}>{svg_icon("basket")}<span>List</span><span class="list-count" hidden>0</span></a>
 </nav>"""
@@ -1077,7 +1086,16 @@ def recipe_page_html(book, r, prev, nxt):
                        + (f'<small>{html.escape(rest)}</small>' if rest else ""))
     else:
         serves_html = f'<strong>{html.escape(r["serves"])}</strong>'
-    facts = (f'<div class="fact fact-serves"><span>Serves</span>{serves_html}</div>'
+    # Portions to keep for lunches or another dinner, on top of the servings eaten now.
+    leftovers_html = ""
+    if serves and keeps(r):
+        leftovers_html = ('<div class="fact fact-serves fact-leftovers"><span>Leftovers</span>'
+                          '<div class="scaler leftovers-scaler" data-base="0">'
+                          '<button type="button" class="scale-down" aria-label="Fewer leftover portions" disabled>−</button>'
+                          '<output aria-live="polite">0</output>'
+                          '<button type="button" class="scale-up" aria-label="More leftover portions">+</button></div>'
+                          '<small>portions for later</small></div>')
+    facts = (f'<div class="fact fact-serves"><span>Serves</span>{serves_html}</div>{leftovers_html}'
              + "".join(f'<div class="fact"><span>{html.escape(label)}</span><strong>{html.escape(value)}</strong></div>'
                        for label, value in time_facts(r))
              + (f'<div class="fact fact-total"><span>Total</span><strong>{total_time(r)}</strong></div>' if total_time(r) else ""))
@@ -1093,6 +1111,12 @@ def recipe_page_html(book, r, prev, nxt):
             for name, md in options_of(parts["Topping Options"]))
         # Outside the Ingredients/Method tabs, so phones see the options whichever tab is open.
         options = f'<section class="options"><h2>Topping options</h2><div class="option-cards">{cards}</div></section>'
+    if parts.get(SPICY_SECTION):
+        # An optional extra kick: a card like a topping option, with its own add-to-list.
+        options += (f'<section class="options options-spicy"><h2>{SPICY_NAME}</h2><div class="option-cards">'
+                    f'<article class="option" data-option="{SPICY_NAME}">{render(parts[SPICY_SECTION])}'
+                    f'<button type="button" class="pill pill-outline pill-sm option-add" hidden>{svg_icon("plus")}Add to shopping list</button>'
+                    f'</article></div></section>')
     pager = []
     if prev:
         pager.append(f'<a class="prev" href="{root}{prev["url"]}"><span>Previous</span>{html.escape(prev["title"])}</a>')

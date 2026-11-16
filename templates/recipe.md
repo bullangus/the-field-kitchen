@@ -27,6 +27,12 @@ One or two lines of introduction, if useful.
 1. Each step is a numbered item.
 2. Oven temperatures as 180°C (160°C fan / 350°F / gas 4).
 
+## Make It Spicy
+
+- Hot sauce, to taste
+
+1. Optional: how to add heat, if the dish suits it.
+
 ## Notes
 
 - 2026-11-02: What changed after cooking it, and why.
