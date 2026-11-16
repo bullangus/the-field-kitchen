@@ -37,7 +37,9 @@ INGREDIENTS = [
     (r"\bdark soy\b", "Dark soy sauce", WORLD, False),
     (r"\bsoy sauce\b", "Soy sauce", WORLD, False),
     (r"\boyster sauce\b", "Oyster sauce", WORLD, False),
-    (r"\btomato sauce\b|\bketchup\b", "Tomato sauce", SAUCES, False),
+    # Australian tomato sauce and ketchup are different products, so they shop separately.
+    (r"\bketchup\b", "Ketchup", SAUCES, False),
+    (r"\btomato sauce\b", "Tomato sauce", SAUCES, False),
     (r"\bpassata\b", "Tomato passata", TINS, False),
     (r"\bsun-dried tomato(es)?\b|\bsun dried tomato(es)?\b", "Sun-dried tomatoes", TINS, False),
     (r"\bcherry tomatoes\b", "Cherry tomatoes", PRODUCE, False),
@@ -278,7 +280,7 @@ GROCERY_SUGGESTIONS = (
 # Ingredient names that differ by country, for the Australia / UK / US switch on recipe pages
 # and the shopping list. The book is written in Australian names; (pattern, US, UK, lines_only).
 # "$1" carries a plural "s" through. lines_only entries swap only in ingredient lines, where the
-# meaning is certain ("tomato sauce" in a method could be the sauce itself, not ketchup).
+# meaning is certain (a word that names one thing in a list but something else in prose).
 NAMES = [
     (r"\bcornflour\b", "cornstarch", "cornflour", False),
     (r"\bplain flour\b", "all-purpose flour", "plain flour", False),
@@ -302,7 +304,6 @@ NAMES = [
     (r"\brocket\b", "arugula", "rocket", False),
     (r"\bbeetroot\b", "beet", "beetroot", False),
     (r"\btinned\b", "canned", "tinned", False),
-    (r"\btomato sauce\b", "ketchup", "ketchup", True),
 ]
 
 

@@ -29,7 +29,7 @@ The best moment is pulling it from the oven, the cheese bubbling and golden at t
 - 2 cloves garlic, pressed or minced
 - 1 tsp Italian seasoning
 - 16 g (2 tbsp) plain flour
-- 30 ml (2 tbsp) tomato sauce or tomato paste
+- 30 ml (2 tbsp) ketchup or tomato paste
 - 360 ml (1½ cups) chicken stock
 - 5 ml (1 tsp) Worcestershire sauce
 - 70 g (½ cup) frozen peas and corn
@@ -47,7 +47,7 @@ The best moment is pulling it from the oven, the cheese bubbling and golden at t
 3. While the potatoes cook, heat the olive oil in a 25 cm (10 inch) ovenproof frying pan over medium-high heat. Add the beef and ¼ tsp salt. Cook, breaking the meat into crumbles as you go, until well browned. Transfer the beef to a bowl with a slotted spoon and set aside.
 4. Spoon off and discard all but a couple of teaspoons of fat from the pan. Turn the heat to medium, add the onion and carrots and cook until the onion begins to soften, about 5 minutes.
 5. Add the garlic and Italian seasoning and cook for 30 seconds.
-6. Stir in the flour and tomato sauce or paste and cook for 1 minute. Stir in the stock and Worcestershire sauce. Bring to a simmer and cook, stirring occasionally, for 3–6 minutes, until thickened.
+6. Stir in the flour and ketchup or tomato paste and cook for 1 minute. Stir in the stock and Worcestershire sauce. Bring to a simmer and cook, stirring occasionally, for 3–6 minutes, until thickened.
 7. Take the pan off the heat and season with salt, pepper and MSG to taste. Stir in the beef and the frozen peas and corn.
 8. Add the butter to the potatoes and mash until smooth. Stir in the milk or cream and season with salt and pepper to taste.
 9. Spoon the mash over the filling in the pan and spread it out evenly.

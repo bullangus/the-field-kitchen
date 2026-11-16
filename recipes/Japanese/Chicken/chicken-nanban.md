@@ -37,7 +37,7 @@ I first discovered chicken nanban in Australia, but it was in Japan that I fell 
 - 1 spring onion
 - 55 g (4 tbsp) Japanese Kewpie mayonnaise
 - 1 tsp lemon juice
-- ½ tbsp tomato sauce
+- ½ tbsp ketchup
 - Salt and black pepper, to taste
 
 ## Method
