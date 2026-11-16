@@ -41,7 +41,7 @@
 
 ### Italian
 - **Breads:** [Focaccia](recipes/Italian/Breads/focaccia.md)
-- **Pasta:** ['Nduja Pasta](recipes/Italian/Pasta/nduja-pasta.md), [Carbonara](recipes/Italian/Pasta/carbonara.md), [Fettuccine Alfredo](recipes/Italian/Pasta/fettuccine-alfredo.md), [Lasagne](recipes/Italian/Pasta/lasagne.md), [Marry Me Chicken Risoni](recipes/Italian/Pasta/marry-me-chicken-risoni.md)
+- **Pasta:** ['Nduja Pasta](recipes/Italian/Pasta/nduja-pasta.md), [Carbonara](recipes/Italian/Pasta/carbonara.md), [Fettuccine Alfredo](recipes/Italian/Pasta/fettuccine-alfredo.md), [Lasagne](recipes/Italian/Pasta/lasagne.md), [Marry Me Chicken Risoni](recipes/Italian/Pasta/marry-me-chicken-risoni.md), [Spag Bol](recipes/Italian/Pasta/spag-bol.md)
 - **Pork:** [Porchetta](recipes/Italian/Pork/crispy-porchetta.md)
 
 ### Japanese
@@ -67,7 +67,7 @@
 - **Beef:** [Thai Beef Salad](recipes/Thai/Beef/thai-beef-salad.md)
 - **Chicken:** [Satay Chicken](recipes/Thai/Chicken/satay-chicken.md), [Yellow Curry](recipes/Thai/Chicken/yellow-curry.md)
 
-_53 recipes._
+_54 recipes._
 <!-- CONTENTS:END -->
 
 ## How it's organised

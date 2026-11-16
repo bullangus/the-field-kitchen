@@ -4081,6 +4081,108 @@ window.FIELD_KITCHEN_INDEX = [
 "options": []
 },
 {
+"title": "Spag Bol",
+"cuisine": "Italian",
+"category": "Pasta",
+"url": "italian/pasta/spag-bol.html",
+"text": "15 ml (1 tbsp) olive oil 1 brown onion, finely chopped 2 garlic cloves, crushed 500 g beef mince 800 g (2 × 400 g jars) Mutti pasta sauce, such as Basilico ½ tsp MSG Table salt and pepper, to taste 400 g spaghetti Grated parmesan, to serve yellow onion brown onion ground beef beef mince",
+"meta": "Serves 4 · Prep 5 min · Cook 30 min",
+"intro": "Onion and garlic softening in the pan, then the hiss of mince hitting the heat: the sound of a weeknight sorted. This is spag bol the easy way, with beef mince simmered in two jars of Mutti pasta sauce and tossed through spaghetti.",
+"photo": "",
+"tags": [
+"pasta"
+],
+"serves": 4,
+"lunch": 2,
+"meal": true,
+"plan": true,
+"basic": false,
+"ingredients": [
+{
+"t": "15 ml (1 tbsp) olive oil",
+"n": "Olive oil",
+"a": "Oils & vinegars",
+"s": true,
+"p": "\\bolive oil\\b",
+"q": 15.0,
+"u": "ml"
+},
+{
+"t": "1 brown onion, finely chopped",
+"n": "Brown onions",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bonions?\\b|\\byellow onions?\\b|\\bbrown onions?\\b",
+"q": 1.0,
+"u": null
+},
+{
+"t": "2 garlic cloves, crushed",
+"n": "Garlic",
+"a": "Fruit & veg",
+"s": false,
+"p": "\\bgarlic\\b",
+"q": 2.0,
+"u": "cloves"
+},
+{
+"t": "500 g beef mince",
+"n": "Beef mince",
+"a": "Meat & seafood",
+"s": false,
+"p": "\\bbeef mince\\b|\\bbeef\\b|\\bground beef\\b",
+"q": 500.0,
+"u": "g"
+},
+{
+"t": "800 g (2 × 400 g jars) Mutti pasta sauce, such as Basilico",
+"n": "Mutti pasta sauce",
+"a": "Pasta, rice & noodles",
+"s": false,
+"p": "\\bmutti\\b",
+"q": 800.0,
+"u": "g"
+},
+{
+"t": "½ tsp MSG",
+"n": "MSG",
+"a": "International foods",
+"s": true,
+"p": "\\bmsg\\b",
+"q": 0.5,
+"u": "tsp"
+},
+{
+"t": "Table salt and pepper, to taste",
+"n": "Salt",
+"a": "Herbs & spices",
+"s": true,
+"p": "\\bsalt\\b",
+"q": null,
+"u": null
+},
+{
+"t": "400 g spaghetti",
+"n": "Spaghetti or rigatoni",
+"a": "Pasta, rice & noodles",
+"s": false,
+"p": "\\bspaghetti\\b|\\brigatoni\\b",
+"q": 400.0,
+"u": "g"
+},
+{
+"t": "Grated parmesan, to serve",
+"n": "Parmesan",
+"a": "Deli",
+"s": false,
+"p": "\\bparmesan\\b|\\bparmigiano\\b",
+"q": null,
+"u": null
+}
+],
+"options": []
+},
+{
 "title": "Porchetta",
 "cuisine": "Italian",
 "category": "Pork",
