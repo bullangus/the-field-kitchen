@@ -94,14 +94,16 @@ templates/recipe.js              recipe pages: tick-offs, ingredient highlightin
 templates/tools.js               shopping list and "What can I cook?" pages
 templates/sw.js                  offline cache; build.py fills in the file list and version
 docs/                            GENERATED, wiped and rebuilt each run (.nojekyll kept):
-  index.html                       home: a magazine-cover masthead (the title stacked a word to a
-                                   line with the middle word in italic, a slowly turning seal round
+  index.html                       home: a field journal masthead (dot-grid paper, washi tape, a
+                                   typewriter "Field journal" label, the title stacked a word to a line
+                                   with "Field" in italic over a pencil underline, an inked stamp round
                                    the chef's hat, and every cuisine sliding past in its colour), bento tiles, world map, filter chips, a card per cuisine
                                    (at most 3 recipes each; compact two-column tiles on phones
                                    until a filter is picked)
   <cuisine>/index.html             coloured header with the cuisine icon, recipe cards by style
                                    (styles with one or two recipes share a row)
-  <cuisine>/<style>/<recipe>.html  coloured header with fact tiles (serves, prep, cook, total);
+  <cuisine>/<style>/<recipe>.html  coloured header with its journal entry number (in the order
+                                   recipes were added), fact tiles (serves, prep, cook, total);
                                    ingredients pinned beside the method (tabs on phones); topping
                                    option cards; notes panel; previous/next
   list.html, cook.html             shopping list; "What can I cook?"

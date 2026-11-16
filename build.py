@@ -332,6 +332,9 @@ def load():
         recipes.append(r)
         book.setdefault(r["cuisine"], {}).setdefault(r["category"], []).append(r)
     find_photos(recipes)
+    # Journal entry numbers, in the order recipes were added to the book.
+    for n, r in enumerate(sorted(recipes, key=lambda r: (r["added"], r["title"])), 1):
+        r["entry"] = n
     link_related(recipes)
     for cats in book.values():
         for rs in cats.values():
@@ -835,7 +838,7 @@ def world_map(book):
     return f"""
   <section class="atlas reveal" id="atlas" aria-label="Where our recipes come from">
     <div class="section-head">
-      <h2>Our table, around the world</h2>
+      <h2>Field map</h2>
     </div>
     <div class="atlas-map">
       <svg viewBox="0 0 {data['width']} {data['height']}" role="img" aria-label="World map with a pin for each cuisine">
@@ -852,7 +855,10 @@ def masthead_title():
     if len(words) < 3:
         return html.escape(TITLE)
     first, middle, last = words[0], " ".join(words[1:-1]), words[-1]
-    return f'<span>{html.escape(first)}</span><em>{html.escape(middle)}</em><span>{html.escape(last)}</span>'
+    # A pencil stroke under the middle word, drawn in once (style.css).
+    underline = ('<svg class="scribble" viewBox="0 0 200 24" aria-hidden="true" preserveAspectRatio="none">'
+                 '<path pathLength="1" d="M3 15 C 40 7, 85 5, 122 10 S 178 19, 197 8"/></svg>')
+    return f'<span>{html.escape(first)}</span><em>{html.escape(middle)}{underline}</em><span>{html.escape(last)}</span>'
 
 
 def home_html(book):
@@ -950,9 +956,10 @@ def home_html(book):
   <div class="bento">
     <header class="tile tile-hero masthead reveal">
       <div class="seal" aria-hidden="true">
-        <svg class="seal-ring" viewBox="0 0 120 120"><defs><path id="seal-path" d="M60,60 m-47,0 a47,47 0 1,1 94,0 a47,47 0 1,1 -94,0"/></defs><text><textPath href="#seal-path" textLength="290" lengthAdjust="spacing">{html.escape(SUBTITLE)} · Est. {ESTABLISHED} ·</textPath></text></svg>
+        <svg class="seal-ring" viewBox="0 0 120 120"><defs><path id="seal-path" d="M60,60 m-47,0 a47,47 0 1,1 94,0 a47,47 0 1,1 -94,0"/></defs><circle class="seal-line" cx="60" cy="60" r="58"/><circle class="seal-line" cx="60" cy="60" r="36"/><text><textPath href="#seal-path" textLength="290" lengthAdjust="spacing">{html.escape(SUBTITLE)} · Est. {ESTABLISHED} ·</textPath></text></svg>
         {hat}
       </div>
+      <p class="field-label">Field journal · Vol. I</p>
       <h1 class="masthead-title">{masthead_title()}</h1>
       <p class="sr-only">{SUBTITLE}</p>
       <div class="marquee" aria-hidden="true"><div class="marquee-track">{marquee}{marquee}</div></div>
@@ -967,7 +974,7 @@ def home_html(book):
       </div>
     </header>{feature}
     <section class="tile tile-recent reveal">
-      <p class="eyebrow">Recently added</p>
+      <p class="eyebrow">Latest entries</p>
       <ul>{recent}</ul>
     </section>{tonight}
   </div>
@@ -1142,7 +1149,7 @@ def recipe_page_html(book, r, prev, nxt):
   <header class="recipe-hero tone-{r['tone']}{' has-photo' if photo else ''}">
     {cuisine_art(r["cuisine"], "hero-art")}
     <div class="hero-text">
-      <p class="kicker">{kicker}</p>
+      <p class="kicker">{kicker}</p>{f'<p class="entry-no">Entry Nº {r["entry"]}</p>' if r.get("entry") else ""}
       <h1{vt_name("r", r["url"][:-5])}>{html.escape(r['title'])}</h1>
       {intro_html(intro_md, r, xref)}
       <div class="facts">{facts}</div>
