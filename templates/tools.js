@@ -212,7 +212,7 @@
         a.href = r.url;
         text.appendChild(a);
         text.appendChild(el("span", "", r.cuisine + " · " + r.category));
-        var add = el("button", "pill pill-outline", "+ Add");
+        var add = el("button", "pill pill-outline pill-sm", "+ Add");
         add.type = "button";
         add.setAttribute("aria-label", "Add " + r.title + " to the shopping list");
         add.addEventListener("click", function () {
@@ -365,6 +365,7 @@
 
     var rank = function () {
       store("fk-fridge", have);
+      document.querySelector(".pantry-clear").hidden = !have.length;  // nothing to clear yet
       chips.forEach(function (c) { c.setAttribute("aria-pressed", String(have.indexOf(c.getAttribute("data-ingredient")) !== -1)); });
       show();
       picks.textContent = "";

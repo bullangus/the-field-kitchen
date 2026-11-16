@@ -152,6 +152,7 @@ To print: open `docs/book.html` (or "Print the book" on the site), Print, Save a
 - **No magic values.** Paths, title and subtitle live as constants at the top of `build.py`.
 - **Escape everything rendered.** Recipe text goes through `html.escape` before it reaches the page. Keep it that way for any new field.
 - **Fail loudly.** A malformed recipe stops the build with the file name and the problem. Never skip it silently.
+- **Buttons use the one pill system** in style.css: `pill` plus `pill-solid` for the single main action in a place (at most one per group), `pill-outline` for the rest, `pill-sm` for secondary actions inside a card, and `pill-icon` (with an `aria-label`) for icon-only buttons. Every pill is 44px tall, and `pill-sm` grows to 44px on touch screens, as do chips and icon controls. Hide things with the `hidden` attribute, which always wins. Don't give a button one-off padding or font sizes.
 - **Presentation values live in one place.** Colours are tokens on `:root` in `templates/style.css`. Print rules live in its `@media print` block.
 - **Relative links only.** The site is served from `/the-field-kitchen/`, so pages link with `../` prefixes, never root-absolute paths.
 

@@ -790,7 +790,7 @@ def home_html(book):
           <p class="eyebrow">Cook tonight</p>
           <h2>On the table in under {QUICK_MINUTES} minutes</h2>
         </div>
-        <button type="button" class="pill pill-outline tonight-shuffle" hidden>Shuffle</button>
+        <button type="button" class="pill pill-outline pill-sm tonight-shuffle" hidden>Shuffle</button>
       </div>
       <ul class="tonight-list" data-count="{TONIGHT_COUNT}" data-skip="{html.escape(",".join(NOT_MEALS))}">{picks}</ul>
     </section>
@@ -958,7 +958,7 @@ def recipe_page_html(book, r, prev, nxt):
         # Each option is its own card: tick-offs, scaling and "add to shopping list" like the main recipe.
         cards = "".join(
             f'<article class="option" data-option="{html.escape(name)}"><h5>{inline(name)}</h5>{render(md)}'
-            f'<button type="button" class="pill pill-outline option-add" hidden>{svg_icon("plus")}Add to shopping list</button></article>'
+            f'<button type="button" class="pill pill-outline pill-sm option-add" hidden>{svg_icon("plus")}Add to shopping list</button></article>'
             for name, md in options_of(parts["Topping Options"]))
         # Outside the Ingredients/Method tabs, so phones see the options whichever tab is open.
         options = f'<section class="options"><h2>Topping options</h2><div class="option-cards">{cards}</div></section>'
@@ -981,7 +981,7 @@ def recipe_page_html(book, r, prev, nxt):
       <div class="hero-actions">
         <button type="button" class="pill pill-solid start-cooking" hidden>{svg_icon("play")}Start cooking</button>
         <button type="button" class="pill pill-outline add-to-list" hidden>{svg_icon("plus")}Add to shopping list</button>
-        <button type="button" class="pill pill-outline fav-toggle" aria-pressed="false" aria-label="Add to favourites" hidden>{svg_icon("heart")}</button>
+        <button type="button" class="pill pill-outline pill-icon fav-toggle" aria-pressed="false" aria-label="Add to favourites" hidden>{svg_icon("heart")}</button>
       </div>
     </div>
     {photo}
@@ -1019,9 +1019,9 @@ def list_html(book):
     <p class="list-summary">One list for everything you plan to cook.</p>
     <div class="list-actions" hidden>
       <button type="button" class="pill pill-solid list-share">Share</button>
-      <button type="button" class="pill pill-outline list-print" aria-label="Print">{svg_icon("printer")}</button>
+      <button type="button" class="pill pill-outline pill-icon list-print" aria-label="Print">{svg_icon("printer")}</button>
       <div class="list-more">
-        <button type="button" class="pill pill-outline list-more-toggle" aria-expanded="false" aria-haspopup="menu" aria-label="More">{svg_icon("dots")}</button>
+        <button type="button" class="pill pill-outline pill-icon list-more-toggle" aria-expanded="false" aria-haspopup="menu" aria-label="More">{svg_icon("dots")}</button>
         <ul class="list-more-menu" role="menu" hidden>
           <li><button type="button" class="list-restore" role="menuitem" hidden>Show removed items</button></li>
           <li><button type="button" class="list-clear" role="menuitem">Clear list</button></li>
@@ -1084,7 +1084,7 @@ def cook_html(book):
     <p class="eyebrow">{svg_icon("sparkle")}What can I cook?</p>
     <h1>Cook with what you have</h1>
     <p>Tap what's in your fridge and pantry. Salt, pepper, oil, sugar, water and MSG are assumed.</p>
-    <div class="hero-actions"><button type="button" class="pill pill-outline pantry-clear">Clear</button></div>
+    <div class="hero-actions"><button type="button" class="pill pill-outline pill-sm pantry-clear" hidden>Clear all</button></div>
   </header>
   <div class="cook-layout">
     <div class="pantry">

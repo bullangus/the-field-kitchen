@@ -67,6 +67,8 @@
 }
 
 * { box-sizing: border-box; }
+/* "hidden" always wins, whatever display a class gives the element (a pill, a chip...). */
+[hidden] { display: none !important; }
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
@@ -168,6 +170,8 @@ h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600
 .nav-button:focus-visible, .site-nav a:focus-visible, .pill:focus-visible, .chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .nav-button .chevron { transition: transform 0.2s ease; width: 0.95rem; height: 0.95rem; }
 .nav-button[aria-expanded="true"] .chevron { transform: rotate(180deg); }
+/* Icon-only bar buttons: a 44px square, icon centred. */
+.menu-toggle, .theme-toggle, .search-toggle, .list-link { min-width: 2.75rem; min-height: 2.75rem; justify-content: center; }
 .menu-toggle { display: none; padding: 0.5rem; }
 .menu-toggle svg { width: 1.4rem; height: 1.4rem; }
 .theme-toggle { padding: 0.5rem; }
@@ -447,11 +451,21 @@ main.home { max-width: 72rem; padding-top: 1.5rem; }
 .tile-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: auto; }
 .tile-hero .tile-actions { margin-top: 0; }
 
+/* Buttons: one system. Every pill is the same height (44px, a comfortable fingertip), with
+   its label centred. Solid = the one main action in a place; outline = the others; small =
+   secondary actions inside a card; icon = a square pill with just an icon and an aria-label. */
 .pill {
-  font: inherit; font-size: 0.95rem; cursor: pointer; text-decoration: none;
-  display: inline-flex; align-items: center; gap: 0.45rem; border-radius: 999px; padding: 0.55rem 1.2rem;
-  border: 1px solid transparent; transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+  font: inherit; font-size: 0.95rem; line-height: 1.2; cursor: pointer; text-decoration: none; white-space: nowrap;
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem;
+  min-height: 2.75rem; border-radius: 999px; padding: 0.5rem 1.2rem;
+  border: 1px solid transparent; transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
 }
+.pill-sm { min-height: 2.25rem; padding: 0.35rem 0.95rem; font-size: 0.88rem; }
+.pill-icon { width: 2.75rem; padding: 0; }
+.pill-icon.pill-sm { width: 2.25rem; }
+.pill:disabled, .pill[aria-disabled="true"] { opacity: 0.4; cursor: default; transform: none; }
+/* One clear focus ring for anything you can press, whatever its own styling. */
+button:focus-visible, a:focus-visible, [role="tab"]:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .pill svg { width: 1.05rem; height: 1.05rem; }
 .pill:hover { transform: translateY(-1px); }
 .pill-solid { background: var(--accent); color: var(--paper); }
@@ -486,7 +500,7 @@ main.home { max-width: 72rem; padding-top: 1.5rem; }
 .tile-tonight { background: var(--grain), var(--note-bg); border-color: transparent; }
 .tonight-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
 .tonight-head h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); margin: 0; line-height: 1.1; }
-.tonight-shuffle { flex: none; font-size: 0.88rem; padding: 0.4rem 1rem; }
+.tonight-shuffle { flex: none; }
 .tonight-shuffle[hidden] { display: none; }
 .tonight-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 0.75rem; }
 .tonight-list a {
@@ -510,7 +524,6 @@ main.home { max-width: 72rem; padding-top: 1.5rem; }
 .tile-yours li span { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
 
 /* Favourites (kept in this browser): a heart on the recipe, and a mark wherever it's listed. */
-.fav-toggle { padding: 0.55rem 0.7rem; }
 .fav-toggle[hidden], .cooked[hidden] { display: none; }
 .fav-toggle[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); }
 .fav-toggle[aria-pressed="true"] svg { fill: currentColor; }
@@ -870,7 +883,7 @@ li.done > .step-num { background: var(--accent); color: var(--paper); }
 .option .ing-text { cursor: default; }
 .option .ing-text:hover { color: inherit; }
 .option > p { margin: 0.5rem 0 0; font-size: 0.9rem; font-style: italic; color: var(--muted); }
-.option-add { margin-top: 0.6rem; font-size: 0.88rem; padding: 0.4rem 0.95rem; }
+.option-add { margin-top: 0.6rem; }
 .option-add[hidden] { display: none; }
 
 .notes-panel { margin-top: 3rem; padding: 1.75rem; border-radius: 20px; background: var(--grain), var(--note-bg); }
@@ -931,7 +944,7 @@ li.done > .step-num { background: var(--accent); color: var(--paper); }
   }
   .recipe-tabs button {
     flex: 1; font: inherit; font-size: 0.95rem; cursor: pointer; border: 0; border-radius: 999px;
-    padding: 0.5rem; background: transparent; color: var(--muted);
+    min-height: 2.5rem; padding: 0.5rem; background: transparent; color: var(--muted);
   }
   .recipe-tabs button[aria-selected="true"] { background: var(--ink); color: var(--paper); }
   .recipe-layout.tabbed[data-tab="ingredients"] .method-panel,
@@ -952,7 +965,7 @@ li.done > .step-num { background: var(--accent); color: var(--paper); }
   .fact strong { font-size: 0.93rem; }
   .recipe-hero .hero-actions { flex-wrap: nowrap; gap: 0.45rem; margin-top: 0.9rem; }
   .recipe-hero .hero-actions .pill { flex: 1 1 0; justify-content: center; white-space: nowrap; padding-inline: 0.5rem; }
-  .recipe-hero .hero-actions .fav-toggle { flex: 0 0 auto; padding-inline: 0.8rem; }
+  .recipe-hero .hero-actions .fav-toggle { flex: 0 0 auto; }
 }
 
 /* Step-by-step cooking view (recipe.js) */
@@ -1081,14 +1094,16 @@ html.cooking { overflow: hidden; }
 }
 .list-count[hidden] { display: none; }
 /* Add anything else to the list (tools.js). */
+@media (max-width: 600px) {
+  .tile-hero .tile-actions, .list-empty .hero-actions { display: grid; grid-template-columns: 1fr; gap: 0.5rem; }
+  .tile-hero .tile-actions .pill, .list-empty .hero-actions .pill { width: 100%; }
+}
 /* Shopping list header: title, a one-line count, and one row of actions. */
 .list-hero { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 0.35rem 1rem; padding-bottom: 1rem; }
 .list-hero h1 { grid-column: 1 / -1; margin: 0; }
 .list-hero .list-summary { grid-column: 1; grid-row: 2; margin: 0; }
 .list-actions { grid-column: 2; grid-row: 2; display: flex; align-items: center; gap: 0.4rem; }
 .list-actions[hidden] { display: none; }
-.list-actions .pill { padding: 0.5rem 1rem; }
-.list-actions .list-print, .list-actions .list-more-toggle { padding: 0.5rem 0.7rem; }
 .list-more { position: relative; }
 .list-more-menu {
   position: absolute; top: calc(100% + 0.4rem); right: 0; z-index: 25; min-width: 13rem; list-style: none; margin: 0; padding: 0.35rem;
@@ -1180,7 +1195,7 @@ html.cooking { overflow: hidden; }
 .list-ideas li:first-child { border-top: 0; }
 .list-ideas a { text-decoration: none; font-weight: 600; }
 .list-ideas span { display: block; color: var(--muted); font-size: 0.85rem; }
-.list-ideas .pill { flex: none; font-size: 0.88rem; padding: 0.4rem 0.95rem; }
+.list-ideas .pill { flex: none; }
 
 /* What can I cook? page (tools.js) */
 .cook-layout { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 2rem; align-items: start; }
@@ -1225,19 +1240,24 @@ html.cooking { overflow: hidden; }
 
 /* Touch screens: controls a fingertip can hit (about 44px), without growing them for a mouse. */
 @media (pointer: coarse) {
-  .chip, .style-toggle, .pantry-more { min-height: 2.6rem; padding: 0.5rem 0.95rem; font-size: 0.92rem; }
+  .chip, .style-toggle, .pantry-more { min-height: 2.75rem; padding: 0.5rem 0.95rem; font-size: 0.92rem; }
+  .recipe-tabs button { min-height: 2.75rem; }
+  .list-add .search-field { padding-right: 0.3rem; }
+  .list-add input { padding: 0.45rem 0; }
   .chip-track { gap: 0.4rem; }
   .pantry-group .chip, .pantry-more { margin: 0 0.4rem 0.5rem 0; }
   .style-list button { padding: 0.7rem 0.85rem; }
-  .scaler button { width: 2.5rem; height: 2.5rem; font-size: 1.25rem; }
+  .scaler button { font-size: 1.25rem; }
   .ingredients-panel li, .aisle li { padding: 0.55rem 0; }
-  .list-remove { width: 2.6rem; height: 2.6rem; }
   /* The tick box stays small to look at; its tappable area is the full 44px. */
   .tick::before { content: ""; position: absolute; inset: -0.75rem; }
-  .step-num { width: 2.6rem; height: 2.6rem; }
   .cuisine-list a { padding: 0.7rem 0.75rem; }
-  .list-recipe button { width: 2.4rem; height: 2.4rem; }
-  .pill { padding: 0.7rem 1.25rem; }
+  .pill-sm { min-height: 2.75rem; padding: 0.5rem 1.05rem; font-size: 0.92rem; }
+  .pill-icon.pill-sm { width: 2.75rem; }
+  .scaler button { width: 2.75rem; height: 2.75rem; }
+  .list-remove, .list-recipe button, .step-num { width: 2.75rem; height: 2.75rem; }
+  .story-toggle { min-height: 2.75rem; }
+  .list-add-go { min-height: 2.75rem; padding: 0.4rem 1.1rem; margin: 0.2rem 0; }
   .cv-voice, .cv-read { padding: 0.6rem 1rem; }
   .cv-close { width: 2.75rem; height: 2.75rem; }
   .timer button { min-width: 2.6rem; height: 2.6rem; }
