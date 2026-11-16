@@ -6,6 +6,7 @@ serves: 4
 time: Prep 20 min · Cook 30 min
 source: Family recipe
 goes with: Tonkatsu
+leftovers: The curry sauce keeps in the fridge for up to 3 days; reheat it gently in a pan. Keep the cutlets separately and re-crisp them in the air fryer at 180°C for 5–6 minutes.
 ---
 
 A big, warming plate of comfort for a rainy night. Crisp crumbed chicken with rice and a rich, glossy Japanese curry sauce made from Golden Curry blocks. The cutlets are made exactly as for Tonkatsu.

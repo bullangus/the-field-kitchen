@@ -5,6 +5,7 @@ category: Chicken
 serves: 3
 time: Prep 5 min · Cook 15 min
 source: https://www.andy-cooks.com/blogs/recipes/chicken-white-bean-stew
+leftovers: Keeps in an airtight container in the fridge for up to 3 days, or the freezer for up to 3 months. Reheat gently in a pan with a splash of water.
 ---
 
 A warming one-pot stew for the nights you need something nourishing without the fuss. It's quick and cheap, feeds three, and doubles easily for a big batch for the fridge or freezer.
@@ -45,5 +46,4 @@ Tender chicken, creamy beans and a rich tomato sauce with a gentle warmth from t
 - Out of season, swap the asparagus for green beans, frozen peas or diced zucchini.
 - Whole tinned tomatoes are better quality than pre-crushed, but crushed work if that's what you have.
 - When doubling it, use a wider pan so the chicken browns rather than steams.
-- Keeps in an airtight container in the fridge for up to 3 days, or the freezer for up to 3 months. Reheat gently in a pan with a splash of water.
 - 2026-11-05: No gochugaru? Swap it for about 3 parts paprika to 1 part cayenne pepper, so ¾ tsp paprika and ¼ tsp cayenne in place of the 1 tsp gochugaru.

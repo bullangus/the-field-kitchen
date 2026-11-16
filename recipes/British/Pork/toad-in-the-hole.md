@@ -5,6 +5,7 @@ category: Pork
 serves: 4
 time: Prep 15 min · Cook 40 min
 source: https://www.recipetineats.com/toad-in-the-hole/
+leftovers: Keeps in the fridge for up to 3 days, though the pudding softens. Re-crisp at 180°C for about 7 minutes.
 ---
 
 Pure comfort: sausages baked into a tall, golden Yorkshire pudding that puffs up around them in the oven, served with a jug of onion gravy. A spoonful of mayonnaise in the batter is the secret to a pudding that rises higher and collapses less.
@@ -64,4 +65,3 @@ Keep the oven door shut while it cooks and resist the urge to peek: the batter n
 - Beef dripping is the traditional fat for its flavour and high smoke point; duck fat, goose fat or lard also work. Otherwise use oil for the batter and sausages and butter for the gravy.
 - The same batter makes 12 Yorkshire puddings: 1 tsp dripping heated in each hole, baked for 17 minutes.
 - For a darker gravy, add ½ tsp dark soy sauce.
-- Leftovers keep for 3 days, though the pudding softens. Re-crisp at 180°C for about 7 minutes.

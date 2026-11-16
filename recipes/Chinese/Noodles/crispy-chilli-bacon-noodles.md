@@ -6,6 +6,7 @@ tags: Spicy
 serves: 2
 time: Cook 15 min
 source: https://www.cheffatty.com/recipes/crispy-chili-bacon-noodles
+leftovers: Best eaten fresh. Leftovers keep in the fridge for a day; loosen them with a splash of stock in a hot pan.
 ---
 
 A bowl of noodles for when you need something deeply satisfying, fast. Bacon is rendered slowly until crisp, chilli crisp blooms in the fat, and the noodles are tossed through it all until every strand is glossy and spicy.

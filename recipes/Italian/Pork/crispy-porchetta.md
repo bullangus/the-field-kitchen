@@ -6,6 +6,7 @@ tags: Christmas, Sunday roast
 serves: 12
 time: Prep the day before (24–48 hr drying in the fridge) · Cook about 4 hr
 source: https://www.andy-cooks.com/blogs/recipes/crispy-porchetta
+leftovers: Carve only what you need and keep the rest of the roll whole so it doesn't dry out. It keeps in an airtight container in the fridge for up to 3 days. Reheat slices at 180°C for 10–15 minutes, or eat it cold, thinly sliced in a bread roll.
 ---
 
 A showstopper for Christmas and big Sunday lunches, carved at the table to the sound of crackling. Pork belly is rolled around the loin with a herb, garlic and fennel filling. Start a day or two ahead: the skin needs to dry out in the fridge to crackle.
@@ -40,4 +41,3 @@ Lifting it from the fridge after a day or two of drying, the skin taut and ready
 ## Notes
 
 - If the crackling hasn't puffed everywhere, return it to a 220°C oven for 5–10 minutes, or use a kitchen blowtorch on the stubborn spots.
-- Carve only what you need and keep the rest of the roll whole so it doesn't dry out. Keeps in an airtight container in the fridge for up to 3 days. Reheat slices at 180°C for 10–15 minutes, or eat it cold, thinly sliced in a bread roll.

@@ -7,6 +7,7 @@ serves: 3
 time: Prep 5 min · Cook 10 min
 source: https://feedthepudge.com/japanese-7-eleven-egg-sando-dupe/
 goes with: Shokupan
+leftovers: Best eaten the day it's made. Wrapped tightly, it keeps in the fridge until the next day for lunch.
 ---
 
 The humble Japanese convenience-store sandwich that's somehow better than it has any right to be. Creamy Kewpie egg salad is mounded into soft, crustless Shokupan and cut on the diagonal.

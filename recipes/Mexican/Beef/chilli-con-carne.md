@@ -6,6 +6,7 @@ tags: Spicy
 serves: 5–6
 time: Prep 10 min · Cook 30 min
 source: https://www.recipetineats.com/chilli-con-carne/
+leftovers: Keeps in the fridge for up to 3 days and is even better the next day, or freeze portions for up to 3 months. Reheat in a pan or the microwave until hot through.
 ---
 
 A big, warming pot that tastes even better the next day. A rich, properly spiced beef and bean chilli from RecipeTin Eats, quick enough for a weeknight and even better slow-cooked.
@@ -57,5 +58,4 @@ It's a big pot of comfort that simmers away and fills the house with spice. It's
 - Spiciness: 1 tsp cayenne gives a warm hum, 1½ tsp a nice tingle, 2 tsp medium heat. Start with less and add more at the end.
 - Instead of the stock cubes and water, you can use 750 ml (3 cups) beef stock (full salt). Cook it long enough to reduce, then check the salt.
 - Slow cooker: follow the steps up to adding the remaining ingredients, using only 60 ml (¼ cup) water, then cook on low for 6–8 hours.
-- Even better the next day, and it freezes well.
 - More toppings: sliced spring onions, diced red onion, pico de gallo, avocado, sliced jalapeño or other chillies.

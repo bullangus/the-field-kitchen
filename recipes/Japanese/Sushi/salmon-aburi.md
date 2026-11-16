@@ -5,6 +5,7 @@ category: Sushi
 serves: 2
 source: Our own
 goes with: Chicken Avocado Nigiri
+leftovers: Best eaten straight away: sushi rice hardens in the fridge, so make only what you'll eat.
 ---
 
 The hiss of the blowtorch, the Kewpie blistering and browning, and that smoky, toasty smell. Salmon nigiri piped with Kewpie, seared until golden, then glossed with a sweet soy and mirin tare. You'll need a kitchen blowtorch, and sashimi-grade salmon bought on the day.

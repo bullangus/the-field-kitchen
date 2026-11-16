@@ -5,6 +5,7 @@ category: Pasta
 serves: 4
 time: Prep 10 min · Cook 20 min
 source: https://www.andy-cooks.com/blogs/recipes/marry-me-chicken-risoni
+leftovers: Keeps in the fridge for up to 3 days. The risoni soaks up the sauce, so reheat it with a splash of stock or water, in a pan or the microwave.
 ---
 
 One pan, one bowl each, and a lot of happy silence at the table. Seared chicken thigh in a creamy sun-dried tomato and Parmesan sauce, with the risoni cooked straight in the pan so it soaks up every bit of flavour.

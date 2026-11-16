@@ -6,6 +6,7 @@ tags: Vegetarian
 serves: 4
 time: Cook 1 hr 45–50 min
 source: Family recipe
+leftovers: Keeps in the fridge, without toppings, for up to 3 days. Reheat in a 200°C oven or the air fryer for 10–15 minutes so the skin crisps again.
 ---
 
 A baked potato with a crisp, salty skin and a fluffy middle is one of life's simple pleasures. These are baked in foil until soft, crisped with olive oil and salt, then quartered and piled high with whatever toppings you love.

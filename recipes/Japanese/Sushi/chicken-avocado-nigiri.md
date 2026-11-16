@@ -4,6 +4,7 @@ cuisine: Japanese
 category: Sushi
 serves: 2
 source: Our own, inspired by the sushi trains of Australia
+leftovers: Best eaten straight away: sushi rice hardens in the fridge, so make only what you'll eat.
 ---
 
 Hot, crunchy katsu on cool sushi rice, held together with a band of nori and zigzagged with tonkatsu sauce and Kewpie. It's our take on the chicken nigiri that comes round on sushi trains all over Australia: crumbed chicken and avocado on hand-shaped rice. One chicken breast makes about 12 pieces.

@@ -6,6 +6,7 @@ tags: Vegetarian
 serves: 2 (about 12 nigiri)
 source: Our own
 goes with: Chicken Avocado Nigiri, Salmon Nigiri, Salmon Aburi
+leftovers: Best used the day it's made: it hardens in the fridge.
 ---
 
 The sharp, sweet smell of rice vinegar hitting hot rice, and the steam rising off the bowl as you fold. Short-grain rice seasoned with rice vinegar, mirin, sugar and salt: the base for all our sushi. Make it first and let it cool to room temperature before shaping.

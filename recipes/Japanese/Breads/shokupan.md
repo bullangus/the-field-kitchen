@@ -6,6 +6,7 @@ tags: Vegetarian
 serves: 1 loaf (about 10 slices)
 time: Prep 1 hr + 2 hr 30 min rising · Cook 30 min
 source: https://www.justonecookbook.com/japanese-milk-bread-shokupan/
+leftovers: Keeps in a plastic bag in a cool place for 1–2 days; don't refrigerate it, which dries it out. For longer, slice and freeze for up to a month.
 ---
 
 There's nothing quite like the first slice of a homemade shokupan: soft, pillowy, faintly sweet and impossibly light. Baked in a lidded 1.5 kin shokupan loaf pan (20 × 12 × 12.5 cm) for a flat top, or without the lid for a rounded one. It's the bread for the Egg Sando.
@@ -82,4 +83,3 @@ It's a project, with a lot of kneading and waiting, but the reward is a loaf so 
 - A warm place is 30–35°C. A turned-off oven with a bowl of boiling water inside, or a microwave with a cup of just-boiled water, both work.
 - The kneading times suit a 5-quart KitchenAid Artisan. With other mixers, follow the steps until the dough passes the windowpane test.
 - Don't wash the loaf pan: wipe it with dry paper towel. If you must rinse it, dry it straight away and season it again.
-- Keeps in a plastic bag in a cool place for 1–2 days; don't refrigerate, which dries it out. For longer, slice and freeze for up to a month.

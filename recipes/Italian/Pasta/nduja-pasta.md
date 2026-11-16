@@ -6,6 +6,7 @@ tags: Spicy
 serves: 3–4
 time: Cook 20–30 min
 source: https://pastagrammar.com/blogs/recipes/pasta-with-nduja-recipe-the-best-spicy-pasta-you-ll-ever-try
+leftovers: Keeps in the fridge for up to 3 days. Reheat in a pan with a splash of water, or in the microwave.
 ---
 
 A little jar of 'nduja brings all the fire of Calabria to a weeknight. Tomatoes simmer gently before the soft, spicy pork spread melts through at the end, turning the sauce a deep, smoky red.

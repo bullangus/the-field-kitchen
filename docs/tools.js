@@ -327,26 +327,32 @@
     build();
   }
 
-  // ---- Week plans: add a whole week to the shopping list, scaled to the household ----
+  // ---- Week plans ----
+  // Ready-made weeks come from the build; "Build your week" fills the nights around the
+  // dinners you're craving with the same rules (FIELD_KITCHEN_SHOP.plan). Any week goes on
+  // the shopping list at the household size, with extra of its lunch dinners if asked.
   var plans = document.querySelector(".plans");
   if (plans) {
+    var RULES = SHOP.plan || {};
     var people = stored("fk-people", 4);
+    var extra = stored("fk-lunches", false);
     var peopleBox = document.querySelector(".plan-people");
     var sizeChips = [].slice.call(peopleBox.querySelectorAll("[data-people]"));
+    var extraBox = peopleBox.querySelector(".plan-extra input");
+    var cards = [];
     var syncPeople = function () {
       sizeChips.forEach(function (c) { c.setAttribute("aria-pressed", String(+c.getAttribute("data-people") === people)); });
+      extraBox.checked = extra;
     };
-    sizeChips.forEach(function (c) {
-      c.addEventListener("click", function () { people = +c.getAttribute("data-people"); store("fk-people", people); syncPeople(); syncPlans(); });
-    });
-    peopleBox.hidden = false;
-    syncPeople();
-    var planCards = [].slice.call(plans.querySelectorAll(".plan"));
+    // Lunch dinners go on at double the household; the rest at the household.
+    var servesFor = function (card, url) {
+      return extra && JSON.parse(card.getAttribute("data-lunches")).indexOf(url) !== -1 ? people * 2 : people;
+    };
     var syncPlans = function () {
       var list = stored("fk-list", []);
-      planCards.forEach(function (card) {
+      cards.forEach(function (card) {
         var urls = JSON.parse(card.getAttribute("data-urls"));
-        var all = urls.every(function (u) { return list.some(function (x) { return x.url === u && x.serves === people; }); });
+        var all = urls.every(function (u) { return list.some(function (x) { return x.url === u && x.serves === servesFor(card, u); }); });
         var b = card.querySelector(".plan-add");
         b.hidden = false;
         b.classList.toggle("added", all);
@@ -359,16 +365,195 @@
         } else if (!all && view) view.remove();
       });
     };
-    planCards.forEach(function (card) {
+    var wire = function (card) {
+      cards.push(card);
       card.querySelector(".plan-add").addEventListener("click", function () {
-        // Each dinner goes on at the household's size; one already there is updated, not doubled.
+        // Each dinner goes on at its size; one already on the list is updated, not doubled.
         var urls = JSON.parse(card.getAttribute("data-urls"));
         var list = stored("fk-list", []).filter(function (x) { return urls.indexOf(x.url) === -1; });
-        urls.forEach(function (u) { list.push({ url: u, serves: people }); });
+        urls.forEach(function (u) { list.push({ url: u, serves: servesFor(card, u) }); });
         store("fk-list", list);
         syncPlans();
       });
+    };
+    sizeChips.forEach(function (c) {
+      c.addEventListener("click", function () { people = +c.getAttribute("data-people"); store("fk-people", people); syncPeople(); syncPlans(); });
     });
+    extraBox.addEventListener("change", function () { extra = extraBox.checked; store("fk-lunches", extra); syncPlans(); });
+    peopleBox.hidden = false;
+    syncPeople();
+    [].forEach.call(plans.querySelectorAll(".plan"), wire);
+
+    // -- Scoring, as build.py's week_plans does it --
+    var weightsOf = function (r) {
+      var w = {};
+      r.ingredients.forEach(function (i) {
+        if (i.n && !i.s) w[i.n] = (RULES.fresh || []).indexOf(i.a) !== -1 ? RULES.freshWeight : 1;
+      });
+      return w;
+    };
+    var score = function (week) {
+      var uses = {}, weight = {};
+      week.forEach(function (r) { var w = weightsOf(r); Object.keys(w).forEach(function (n) { uses[n] = (uses[n] || 0) + 1; weight[n] = w[n]; }); });
+      return Object.keys(uses).reduce(function (t, n) { return t + weight[n] * (uses[n] - 1); }, 0);
+    };
+    // Cravings may break the variety rules themselves; the fill just mustn't make it worse.
+    var varied = function (week, cravings) {
+      var ok = ["category", "cuisine"].every(function (key) {
+        var counts = {}, base = {};
+        cravings.forEach(function (r) { base[r[key]] = (base[r[key]] || 0) + 1; });
+        week.forEach(function (r) { counts[r[key]] = (counts[r[key]] || 0) + 1; });
+        return Object.keys(counts).every(function (k) { return counts[k] <= Math.max(RULES.maxSame, base[k] || 0); });
+      });
+      var cuisines = {}, own = {};
+      week.forEach(function (r) { cuisines[r.cuisine] = 1; });
+      cravings.forEach(function (r) { own[r.cuisine] = 1; });
+      var reach = Object.keys(own).length + week.length - cravings.length;
+      return ok && Object.keys(cuisines).length >= Math.min(RULES.minCuisines, reach);
+    };
+    var combos = function (pool, k, from, acc, out) {
+      if (acc.length === k) { out.push(acc.slice()); return; }
+      for (var i = from; i < pool.length; i++) { acc.push(pool[i]); combos(pool, k, i + 1, acc, out); acc.pop(); }
+    };
+    var lunchPicks = function (week) {
+      var ranked = week.filter(function (r) { return r.lunch; }).sort(function (a, b) { return b.lunch - a.lunch; });
+      var best = ranked.filter(function (r) { return r.lunch === 2; }).slice(0, RULES.lunches);
+      return best.length ? best : ranked.slice(0, 1);
+    };
+    var joinAnd = function (a) { return a.length === 1 ? a[0] : a.slice(0, -1).join(", ") + " and " + a[a.length - 1]; };
+
+    // -- Build your week --
+    var build = document.querySelector(".plan-build");
+    var craveInput = build.querySelector("input");
+    var craveBox = build.querySelector(".list-suggest");
+    var craveChips = build.querySelector(".plan-cravings");
+    var fill = build.querySelector(".plan-fill");
+    var result = build.querySelector(".plan-result");
+    var days = RULES.days || ["Mon", "Tue", "Wed", "Thu", "Fri"];
+    var maxCravings = days.length - 1;
+    var cravings = stored("fk-cravings", []).map(function (u) { return byUrl(u); }).filter(Boolean);
+    var ranked = [], shown = [];
+    var boxIcon = plans.querySelector(".plan-leftovers svg"), plusIcon = plans.querySelector(".plan-add svg");
+    build.hidden = false;
+    var drawCravings = function () {
+      craveChips.textContent = "";
+      cravings.forEach(function (r) {
+        var b = el("button", "chip", r.title + " ×");
+        b.type = "button"; b.setAttribute("aria-pressed", "true"); b.setAttribute("aria-label", "Remove " + r.title);
+        b.addEventListener("click", function () { cravings = cravings.filter(function (x) { return x !== r; }); changed(); });
+        craveChips.appendChild(b);
+      });
+      fill.disabled = !cravings.length;
+      craveInput.disabled = cravings.length >= maxCravings;
+      craveInput.placeholder = cravings.length >= maxCravings ? "That's " + maxCravings + " picked" : "What are you craving?";
+    };
+    var changed = function () {
+      store("fk-cravings", cravings.map(function (r) { return r.url; }));
+      result.textContent = ""; ranked = []; shown = [];
+      drawCravings();
+    };
+    var closeCrave = function () { craveBox.hidden = true; craveBox.textContent = ""; craveInput.setAttribute("aria-expanded", "false"); };
+    var suggestCraves = function () {
+      var q = craveInput.value.trim().toLowerCase();
+      var hits = index.filter(function (r) { return r.meal && cravings.indexOf(r) === -1 && (!q || r.title.toLowerCase().indexOf(q) !== -1); })
+        .sort(function (a, b) { return (a.title.toLowerCase().indexOf(q) - b.title.toLowerCase().indexOf(q)) || a.title.localeCompare(b.title); })
+        .slice(0, 6);
+      craveBox.textContent = "";
+      if (!hits.length) { closeCrave(); return; }
+      hits.forEach(function (r) {
+        var li = el("li"); li.setAttribute("role", "option");
+        li.appendChild(el("span", "", r.title));
+        li.appendChild(el("small", "", r.cuisine + " · " + r.category));
+        li.addEventListener("pointerdown", function (e) {
+          e.preventDefault(); cravings.push(r); craveInput.value = ""; closeCrave(); changed();
+          if (cravings.length < maxCravings) craveInput.focus();
+        });
+        craveBox.appendChild(li);
+      });
+      craveBox.hidden = false; craveInput.setAttribute("aria-expanded", "true");
+    };
+    craveInput.addEventListener("input", suggestCraves);
+    craveInput.addEventListener("focus", suggestCraves);
+    craveInput.addEventListener("blur", function () { setTimeout(closeCrave, 100); });
+    var draw = function (week) {
+      var lunches = lunchPicks(week);
+      var weights = week.map(weightsOf), uses = {}, fresh = {};
+      weights.forEach(function (w) { Object.keys(w).forEach(function (n) { uses[n] = (uses[n] || 0) + 1; if (w[n] > 1) fresh[n] = 1; }); });
+      var shared = Object.keys(uses).filter(function (n) { return uses[n] > 1; })
+        .sort(function (a, b) { return uses[b] - uses[a] || (fresh[b] || 0) - (fresh[a] || 0) || a.localeCompare(b); });
+      var lead = shared.filter(function (n) { return fresh[n] && (RULES.everyday || []).indexOf(n) === -1; }).slice(0, 3);
+      var card = el("article", "plan plan-mine");
+      card.setAttribute("data-urls", JSON.stringify(week.map(function (r) { return r.url; })));
+      card.setAttribute("data-lunches", JSON.stringify(lunches.map(function (r) { return r.url; })));
+      var head = el("header");
+      head.appendChild(el("p", "eyebrow", "Your week"));
+      head.appendChild(el("h2", "", lead.length ? "Sharing " + lead.map(function (n) { return n.toLowerCase(); }).join(", ") : "Your week"));
+      card.appendChild(head);
+      var ol = el("ol", "plan-days");
+      week.forEach(function (r, i) {
+        var li = el("li"); if (lunches.indexOf(r) !== -1) li.setAttribute("data-lunch", "");
+        li.appendChild(el("span", "plan-day", days[i]));
+        var d = el("div"), a = el("a", "", r.title); a.href = r.url; d.appendChild(a);
+        d.appendChild(el("small", "", r.cuisine + " · " + (cravings.indexOf(r) !== -1 ? "your pick" : r.category)));
+        li.appendChild(d);
+        if (lunches.indexOf(r) !== -1) li.appendChild(el("span", "plan-lunch", "+ lunch"));
+        ol.appendChild(li);
+      });
+      card.appendChild(ol);
+      if (lunches.length) {
+        var hint = el("p", "plan-leftovers");
+        if (boxIcon) hint.appendChild(boxIcon.cloneNode(true));
+        hint.appendChild(el("span", "", "For lunches, cook extra " + joinAnd(lunches.map(function (r) { return r.title; })) +
+          (lunches.length === 1 ? ": it reheats" : ": they reheat") + " well the next day."));
+        card.appendChild(hint);
+      }
+      if (shared.length) {
+        var det = el("details", "plan-shared");
+        det.appendChild(el("summary", "", shared.length + " ingredients bought once, used more than once"));
+        var ul = el("ul");
+        shared.forEach(function (n) { var li = el("li", "", n + " "); li.appendChild(el("b", "", "×" + uses[n])); ul.appendChild(li); });
+        det.appendChild(ul); card.appendChild(det);
+      }
+      var add = el("button", "pill pill-solid plan-add"); add.type = "button"; add.hidden = true;
+      if (plusIcon) add.appendChild(plusIcon.cloneNode(true));
+      add.appendChild(document.createTextNode("Add the week to my list"));
+      card.appendChild(add);
+      var again = el("button", "pill pill-outline plan-again", "Try another mix"); again.type = "button";
+      again.addEventListener("click", next);
+      card.appendChild(again);
+      result.textContent = "";
+      result.appendChild(card);
+      cards = cards.filter(function (c) { return !c.classList.contains("plan-mine"); });
+      wire(card);
+      if (window.FieldKitchenNames) FieldKitchenNames.swap(card, true);
+      syncPlans();
+    };
+    // "Try another mix" shows the next best fill that changes at least two of its dinners
+    // from every fill shown so far (or one, when only one night is left to fill).
+    var next = function () {
+      var overlap = function (x, y) { return x.fill.filter(function (r) { return y.fill.indexOf(r) !== -1; }).length; };
+      var pick = ranked.filter(function (c) {
+        return shown.indexOf(c) === -1 && shown.every(function (s) { return overlap(c, s) <= Math.max(0, c.fill.length - 2); });
+      })[0];
+      if (!pick) { shown = []; pick = ranked[0]; }
+      if (!pick) { result.textContent = ""; result.appendChild(el("p", "plan-none", "Nothing in the book fits around those picks. Try swapping one.")); return; }
+      shown.push(pick);
+      draw(pick.week);
+    };
+    fill.addEventListener("click", function () {
+      var pool = index.filter(function (r) { return r.plan && cravings.indexOf(r) === -1; });
+      var k = days.length - cravings.length, all = [];
+      combos(pool, k, 0, [], all);
+      ranked = all.map(function (f) { return { fill: f, week: cravings.concat(f) }; })
+        .filter(function (c) { return varied(c.week, cravings); })
+        .map(function (c) { c.score = score(c.week); return c; })
+        .sort(function (a, b) { return b.score - a.score; })
+        .slice(0, 60);
+      shown = [];
+      next();
+      result.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    });
+    drawCravings();
     syncPlans();
   }
 

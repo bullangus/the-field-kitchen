@@ -67,7 +67,8 @@ PLAN_MIN_CUISINES = 3
 # Sharing fresh food (bought in packs, goes off) saves more than sharing a jar that lasts.
 PLAN_FRESH = (PRODUCE, DELI, MEAT, DAIRY, BAKERY)
 PLAN_FRESH_WEIGHT = 3
-PLAN_EVERYDAY = ("Garlic", "Brown onions")  # in nearly everything, so left out of a plan's headline
+PLAN_EVERYDAY = ("Garlic", "Brown onions")
+PLAN_LUNCHES = 2  # dinners per week marked "cook extra" for lunches  # in nearly everything, so left out of a plan's headline
 KITCHEN_CARD_RECIPES = 3  # recipes shown on each home page cuisine card; the rest are a click away
 CARD_TAGS = 3  # style tags shown on each home page cuisine card before "+N"
 TONES = 6  # colour tones for cuisine cards and headers, .tone-1 to .tone-6 in style.css
@@ -98,6 +99,7 @@ NAV_ICONS = {
                 '<path d="M19 15l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/>'),
     "play": '<path d="M7 4.5v15l12.5-7.5z"/>',
     "plus": '<path d="M12 5v14M5 12h14"/>',
+    "box": '<path d="M4 8h16v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/><path d="M3 5h18v3H3zM10 12h4"/>',
     "calendar": '<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/>',
     "heart": '<path d="M12 20.5s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.9a4.3 4.3 0 0 1 7.5 2.6c0 5.4-7.5 10-7.5 10z"/>',
     "dots": '<circle cx="5" cy="12" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="19" cy="12" r="1.2"/>',
@@ -514,6 +516,7 @@ def search_index(book):
                         "meta": html.unescape(meta_line(r)), "intro": intro(r),
                         "photo": r.get("photo", ""), "tags": r["tags"],
                         "serves": int(serves.group()) if serves else 1,
+                        "lunch": lunch_score(r), "meal": r["category"] not in NOT_MEALS, "plan": plannable(r),
                         "ingredients": [parse_line(line) for line in bullets(parts.get("Ingredients"))],
                         "options": [{"name": name, "ingredients": [parse_line(line) for line in bullets(md)]}
                                     for name, md in options_of(parts.get("Topping Options"))]})
@@ -522,7 +525,10 @@ def search_index(book):
             "ingredients": [[p, name, aisle, staple] for p, name, aisle, staple in INGREDIENTS if name],
             "groceries": [[p, aisle] for p, aisle in GROCERIES],
             "suggestions": list(GROCERY_SUGGESTIONS),
-            "names": [[p, us, uk, lines_only] for p, us, uk, lines_only in NAMES]}
+            "names": [[p, us, uk, lines_only] for p, us, uk, lines_only in NAMES],
+            # The week plan rules, so "build my week" in the browser picks the same way the build does.
+            "plan": {"days": list(PLAN_DAYS), "lunches": PLAN_LUNCHES, "maxSame": PLAN_MAX_SAME, "minCuisines": PLAN_MIN_CUISINES,
+                     "fresh": list(PLAN_FRESH), "freshWeight": PLAN_FRESH_WEIGHT, "everyday": list(PLAN_EVERYDAY)}}
     return ("window.FIELD_KITCHEN_INDEX = " + json.dumps(entries, ensure_ascii=False, indent=0) + ";\n"
             "window.FIELD_KITCHEN_SHOP = " + json.dumps(shop, ensure_ascii=False) + ";\n")
 
@@ -617,6 +623,7 @@ def recipe_html(r, root="", anchor=None):
   <h3>{html.escape(r['title'])}</h3>
   <p class="meta">{meta_line(r)}</p>
   {render(r['body'])}
+  {f'<p class="book-leftovers"><b>Leftovers:</b> {inline(r["leftovers"])}</p>' if r.get("leftovers") else ""}
   {goes_with_line(r)}
   {source_html(r)}
 </article>"""
@@ -939,8 +946,28 @@ def cuisine_html(book, cuisine):
     return page(book, 1, f"{cuisine} · {TITLE}", content, current=cuisine, main_class="wide")
 
 
-def notes_panel(md):
-    """The Notes section as two groups: undated tips, and our dated changes."""
+def keeps(r):
+    """Whether a recipe's leftovers make a good lunch or second dinner (its `leftovers:`
+    line doesn't start "Best eaten" / "Best used")."""
+    return bool(r.get("leftovers")) and not re.match(r"best (eaten|used)", r["leftovers"], re.I)
+
+
+def lunch_score(r):
+    """How well a dinner works as next-day lunch: 2 reheats easily (stews, curries, bakes),
+    1 keeps but needs re-crisping, 0 is best eaten fresh."""
+    if not keeps(r):
+        return 0
+    return 1 if re.search(r"air fryer|re-crisp|crisp", r["leftovers"], re.I) else 2
+
+
+def lunch_picks(plan):
+    """Up to PLAN_LUNCHES dinners in a week worth cooking extra of, easiest to reheat first."""
+    ranked = sorted((r for r in plan if lunch_score(r)), key=lambda r: -lunch_score(r))
+    return [r for r in ranked if lunch_score(r) == 2][:PLAN_LUNCHES] or ranked[:1]
+
+
+def notes_panel(md, leftovers=""):
+    """The Notes section as up to three groups: leftovers, undated tips, our dated changes."""
     tips, changes = [], []
     for line in bullets(md):
         m = re.match(r"(\d{4}-\d{2}-\d{2}): (.+)", line)
@@ -948,9 +975,11 @@ def notes_panel(md):
             changes.append(f'<li><time datetime="{m.group(1)}">{nice_date(m.group(1))}</time><p>{inline(m.group(2))}</p></li>')
         else:
             tips.append(f"<li>{inline(line)}</li>")
-    if not tips and not changes:
+    if not tips and not changes and not leftovers:
         return ""
     out = ['<section class="notes-panel reveal"><h2>From our kitchen</h2><div class="notes-columns">']
+    if leftovers:
+        out.append(f'<div class="leftovers"><h3>{svg_icon("box")}Leftovers</h3><p>{inline(leftovers)}</p></div>')
     if tips:
         out.append(f'<div><h3>Good to know</h3><ul class="tips">{"".join(tips)}</ul></div>')
     if changes:
@@ -1043,7 +1072,7 @@ def recipe_page_html(book, r, prev, nxt):
     </div>
   </div>
   {options}
-  {link_mentions(notes_panel(parts.get("Notes")), r, xref)}
+  {link_mentions(notes_panel(parts.get("Notes"), r.get("leftovers", "")), r, xref)}
   {related_html(r, root)}
   {source_html(r)}
 </article>
@@ -1146,6 +1175,12 @@ def cook_html(book):
     return page(book, 0, f"What can I cook? · {TITLE}", content, current=COOK_PAGE, main_class="wide")
 
 
+def plannable(r):
+    """A weeknight dinner the plans can suggest on their own."""
+    return (r["category"] not in NOT_MEALS + PLAN_SKIP_STYLES
+            and not set(r["tags"]) & set(PLAN_SKIP_TAGS))
+
+
 def week_plans(book):
     """PLAN_COUNT sets of PLAN_DAYS weeknight dinners, each chosen to share as much shopping
     as it can (fresh food counting most) while staying varied: no more than PLAN_MAX_SAME
@@ -1153,7 +1188,7 @@ def week_plans(book):
     more than one dinner. Every combination is scored, so the best plans are always found."""
     pool = []
     for r in all_recipes(book):
-        if r["category"] in NOT_MEALS + PLAN_SKIP_STYLES or set(r["tags"]) & set(PLAN_SKIP_TAGS):
+        if not plannable(r):
             continue
         _, parts = sections(r["body"])
         weights = {}
@@ -1196,6 +1231,7 @@ def plans_html(book):
     plans, weights = week_plans(book)
     cards = []
     for i, plan in enumerate(plans, 1):
+        lunches = lunch_picks(plan)
         uses = {}
         for r in plan:
             for name in weights[r["title"]]:
@@ -1204,18 +1240,24 @@ def plans_html(book):
         fresh = [n for n in shared if weights_of(weights, plan, n) > 1 and n not in PLAN_EVERYDAY]
         lead = ", ".join(n.lower() for n in (fresh or shared)[:3])
         days = "".join(
-            f'<li><span class="plan-day">{day}</span><div><a href="{r["url"]}">{html.escape(r["title"])}</a>'
-            f'<small>{html.escape(r["cuisine"])} · {html.escape(r.get("time") or "Serves " + r["serves"])}</small></div></li>'
+            f'<li{" data-lunch" if r in lunches else ""}><span class="plan-day">{day}</span><div><a href="{r["url"]}">{html.escape(r["title"])}</a>'
+            f'<small>{html.escape(r["cuisine"])} · {html.escape(r.get("time") or "Serves " + r["serves"])}</small></div>'
+            + (f'<span class="plan-lunch" title="{html.escape(r["leftovers"])}">+ lunch</span>' if r in lunches else "")
+            + "</li>"
             for day, r in zip(PLAN_DAYS, plan))
+        leftovers = (f'<p class="plan-leftovers">{svg_icon("box")}<span>For lunches, cook extra '
+                     f'{html.escape(join_and([r["title"] for r in lunches]))}: '
+                     f'{"it reheats" if len(lunches) == 1 else "they reheat"} well the next day.</span></p>' if lunches else "")
         chips = "".join(f'<li>{html.escape(n)} <b>×{uses[n]}</b></li>' for n in shared)
         urls = json.dumps([r["url"] for r in plan])
         cards.append(f"""
-    <article class="plan reveal" data-urls='{html.escape(urls)}'>
+    <article class="plan reveal" data-urls='{html.escape(urls)}' data-lunches='{html.escape(json.dumps([r["url"] for r in lunches]))}'>
       <header>
         <p class="eyebrow">Week {i}</p>
         <h2>Sharing {html.escape(lead)}</h2>
       </header>
       <ol class="plan-days">{days}</ol>
+      {leftovers}
       <details class="plan-shared">
         <summary>{len(shared)} ingredients bought once, used more than once</summary>
         <ul>{chips}</ul>
@@ -1228,12 +1270,31 @@ def plans_html(book):
     <p class="eyebrow">{svg_icon("calendar")}Week plans</p>
     <h1>Five dinners, one shop</h1>
     <p>Ready-made weeks of weeknight dinners from the book, picked so they share ingredients (a bunch of spring onions or a tray of chicken thighs goes across several nights) while every night is different. Add a week and the shopping list combines it all.</p>
-    <div class="plan-people" hidden><span>Cooking for</span><div role="group" aria-label="How many people">{sizes}</div></div>
+    <div class="plan-people" hidden>
+      <span>Cooking for</span><div role="group" aria-label="How many people">{sizes}</div>
+      <label class="plan-extra"><input type="checkbox"> Cook extra for lunches</label>
+    </div>
   </header>
+  <section class="plan-build" hidden>
+    <h2>Build your week</h2>
+    <p>Pick up to four dinners you're craving. The rest of the week is filled in with dinners that share their shopping.</p>
+    <div class="plan-build-pick">
+      <label class="search-field">{svg_icon("search")}<input type="text" placeholder="What are you craving?" aria-label="Find a dinner you're craving" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="crave-suggest"></label>
+      <ul class="list-suggest" id="crave-suggest" role="listbox" hidden></ul>
+    </div>
+    <div class="plan-cravings"></div>
+    <div class="plan-build-actions"><button type="button" class="pill pill-solid plan-fill" disabled>Fill my week</button></div>
+    <div class="plan-result"></div>
+  </section>
+  <h2 class="plans-head">Ready-made weeks</h2>
   <div class="plans">{"".join(cards)}
   </div>
   <script src="{TOOLS_SCRIPT}" defer></script>"""
     return page(book, 0, f"Week plans · {TITLE}", content, current=PLANS_PAGE, main_class="wide")
+
+
+def join_and(names):
+    return names[0] if len(names) == 1 else ", ".join(names[:-1]) + " and " + names[-1]
 
 
 def weights_of(weights, plan, name):

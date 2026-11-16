@@ -5,6 +5,7 @@ category: Seafood
 serves: 2
 time: Ready in 15 min
 source: Family recipe
+leftovers: Keeps in the fridge for up to 2 days. Reheat gently, covered, in the microwave on medium, or flake it cold over rice.
 ---
 
 Fifteen minutes from fridge to table, and it tastes like far more effort. Pan-fried salmon is turned in a sticky honey, soy, garlic and ginger glaze until it shines. Serve it over rice with greens on the side.

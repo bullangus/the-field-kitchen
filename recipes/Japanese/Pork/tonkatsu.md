@@ -5,6 +5,7 @@ category: Pork
 serves: 4
 time: Prep 15 min · Cook 15 min
 source: Family recipe
+leftovers: Keeps in the fridge for up to 2 days. Re-crisp in the air fryer at 180°C for 5–6 minutes, or in a 200°C oven; the microwave makes the crumb soggy.
 ---
 
 The crunch as the knife goes through is half the pleasure. Crumbed and fried pork (or chicken) cutlets, crisp outside and juicy inside, served with rice, a dab of mustard, pickled ginger and tonkatsu sauce.

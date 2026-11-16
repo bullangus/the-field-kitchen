@@ -6,6 +6,7 @@ tags: Party food
 serves: 4
 time: Prep 20 min · Cook 30 min
 source: https://www.justonecookbook.com/nagoya-style-fried-chicken-wings/
+leftovers: Keep in an airtight container in the fridge for 3–4 days, or in the freezer for a month. Reheat in the air fryer at 180°C for 5–6 minutes. Leftover sauce keeps in a jar in the fridge for up to a month.
 ---
 
 Sticky, sweet and savoury, these are the wings you'll lick your fingers clean of. Double-fried and glazed in a soy, mirin and ginger sauce, then finished with a shower of sesame seeds. The sauce keeps in the fridge for a month.
@@ -38,8 +39,3 @@ The sweet and savoury glaze, the crunch of the double fry and the sprinkle of se
 4. Heat the oil in a heavy-based pot over medium heat to 160°C (320°F). Fry the wings until about 80% cooked, 8–10 minutes. Drain on a wire rack or paper towel for 3–5 minutes.
 5. Raise the oil to 180°C (350°F) and fry the wings a second time until golden brown and crisp, 3–5 minutes.
 6. Toss the wings in the sauce with tongs, or plate them and pour the sauce over. Sprinkle with sesame seeds and serve straight away.
-
-## Notes
-
-- Leftover sauce keeps in a jar in the fridge for up to a month.
-- Leftover wings keep in an airtight container in the fridge for 3–4 days, or in the freezer for a month.

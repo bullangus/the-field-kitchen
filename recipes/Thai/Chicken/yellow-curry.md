@@ -5,6 +5,7 @@ category: Chicken
 serves: 4
 time: Prep 15 min · Cook 25 min
 source: Family recipe
+leftovers: Keeps in the fridge for up to 3 days. Reheat gently in a pan until hot through. The potato goes grainy if frozen, so keep it in the fridge.
 ---
 
 Golden, gentle and fragrant, the curry that fills the kitchen with coconut and spice. Mild enough for everyone at the table, with chicken, potato and carrot. Serve over steamed jasmine rice.

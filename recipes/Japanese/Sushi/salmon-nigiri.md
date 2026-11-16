@@ -5,6 +5,7 @@ category: Sushi
 serves: 2
 source: Our own
 goes with: Salmon Aburi, Chicken Avocado Nigiri
+leftovers: Best eaten straight away: sushi rice hardens in the fridge, so make only what you'll eat.
 ---
 
 Soft, glossy slices of salmon draped over little mounds of seasoned rice, with a hidden dab of wasabi in between. The simplest sushi there is, and the one that shows off good fish. Buy sashimi-grade salmon on the day you make it.

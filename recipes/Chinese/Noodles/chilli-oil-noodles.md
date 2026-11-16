@@ -6,6 +6,7 @@ tags: Spicy
 serves: 1
 time: Prep 5 min · Cook 5 min
 source: https://www.andy-cooks.com/blogs/recipes/packet-ramen-chilli-oil-noodles
+leftovers: Best eaten straight away: the noodles soak up the oil and go soft.
 ---
 
 A packet of instant noodles turned into a late-night treat you'll crave. Smoking-hot oil is poured over the Shin Ramyun seasoning and garlic with a satisfying sizzle, then soy, black vinegar and a crispy fried egg finish it. It has to be Shin Ramyun, because its seasoning makes the chilli oil.

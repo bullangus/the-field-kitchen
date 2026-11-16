@@ -6,6 +6,7 @@ tags: Party food, Spicy
 serves: 5 (10 wings)
 time: Prep 10 min + 1–1½ hr chilling · Cook 15 min
 source: https://www.allrecipes.com/recipe/24087/restaurant-style-buffalo-chicken-wings/
+leftovers: Keep in the fridge for up to 3 days. Reheat in the air fryer at 180°C for 5–6 minutes, or in a hot oven, so the skin crisps up again.
 ---
 
 Sticky fingers, a pile of napkins and someone always reaching for just one more. The wings are floured, chilled and fried until they crackle, then tossed in the classic butter and hot sauce mix.

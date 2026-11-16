@@ -7,6 +7,7 @@ serves: 8
 time: Prep 20 min · Cook 3 hr 45 min
 source: Coles Christmas recipe card
 goes with: Nan's Christmas Pasta Salad, Duck Fat Potatoes, Trifle
+leftovers: Keep it in a ham bag (or a clean pillowcase rinsed in water with a splash of vinegar) in the fridge, rinsing the bag every few days, for up to 2 weeks. Serve cold, or warm slices gently in a pan.
 ---
 
 Christmas isn't Christmas without this ham, and it is always made. It's the one that converted my husband from a cold ham person to a baked ham one the very first time he tried it. Glazed with maple, orange and Grand Marnier, with candied orange slices pressed over the top and a glossy sauce from the pan juices, it fills the house with the smell of the holidays.

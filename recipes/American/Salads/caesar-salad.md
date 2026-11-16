@@ -5,6 +5,7 @@ category: Salads
 serves: 4
 time: Prep 20 min · Cook 20 min
 source: Family recipe
+leftovers: Best eaten fresh: once dressed, the lettuce wilts and the croutons go soft. Undressed chicken, bacon and eggs keep in the fridge for up to 2 days for a lunch salad.
 ---
 
 A salad that eats like a proper meal. Crisp cos, salty bacon, shredded chicken thigh, jammy eggs and garlic-butter croutons, tossed in Beerenberg Caesar dressing and buried under parmesan. The eggs and croutons can be made ahead, so it comes together in minutes when everyone's hungry.

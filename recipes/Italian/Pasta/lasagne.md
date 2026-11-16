@@ -5,6 +5,7 @@ category: Pasta
 serves: 8
 time: Prep 2 hr · Cook 3 hr 45 min
 source: https://www.andy-cooks.com/blogs/recipes/lasagne
+leftovers: Keeps in the fridge for up to 3 days, or freezes well, baked or unbaked (thaw overnight in the fridge first). Reheat portions covered at 180°C for 15 minutes.
 ---
 
 A lasagne worth every minute it takes, the dish for when the whole family is coming over. A slow pork and beef ragu, creamy béchamel and plenty of bubbling cheese. Make the ragu the day before if you can: it deepens overnight and spreads the work out.
@@ -75,4 +76,4 @@ It's a labour of love, but there's nothing quite like carrying a bubbling lasagn
 
 - No Parmesan rind? Stir an extra 20 g grated Parmesan into the ragu towards the end.
 - Dried lasagne sheets also work: use about 250 g, either soaked in warm water for 5 minutes or the no-boil kind, and keep the layers slightly wetter.
-- Make ahead: assemble, cover and refrigerate for up to 24 hours, adding 10–15 minutes to the covered bake time from cold. Freezes well, baked or unbaked; thaw overnight in the fridge first. Keeps in the fridge for up to 3 days; reheat portions covered at 180°C for 15 minutes.
+- Make ahead: assemble, cover and refrigerate for up to 24 hours, adding 10–15 minutes to the covered bake time from cold.

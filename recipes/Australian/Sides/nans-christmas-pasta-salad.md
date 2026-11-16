@@ -5,6 +5,7 @@ category: Sides
 tags: Christmas
 serves: 4–6
 source: Family recipe
+leftovers: Keeps in the fridge for up to 3 days. Serve cold or at room temperature.
 ---
 
 My husband's Nan's pasta salad, the side we have every Christmas. Spirals of pasta, kabana and plenty of thousand island dressing, simple and impossible to stop picking at. Serve it warm or cool.

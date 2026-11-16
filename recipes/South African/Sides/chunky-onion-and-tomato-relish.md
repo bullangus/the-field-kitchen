@@ -6,6 +6,7 @@ tags: Barbecue
 serves: 6
 time: Prep 5 min · Cook 20 min
 source: https://www.ozbraai.com.au/recipes/chunky-onion-and-tomato-relish/
+leftovers: Keeps in a jar in the fridge for up to a week. Serve cold or warm.
 ---
 
 A taste of the braai: smoky fire, good company and this relish spooned over everything. A simple, full-flavoured South African tomato and onion relish for pap, boerewors rolls, meatballs or even pasta.

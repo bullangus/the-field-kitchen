@@ -5,6 +5,7 @@ category: Beef
 serves: 3
 time: Prep 15 min · Cook 15 min
 source: https://twoplaidaprons.com/restaurant-style-mongolian-beef/
+leftovers: Keeps in the fridge for up to 3 days. Reheat in a hot wok or the microwave. The fried noodles go soft, so keep them separate.
 ---
 
 Better than the takeaway, and on the table almost as quickly. Silky slices of beef in a glossy, sweet soy glaze with spring onions, served restaurant-style over an optional nest of crackling fried rice vermicelli.

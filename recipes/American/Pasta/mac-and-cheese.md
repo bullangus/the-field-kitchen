@@ -6,6 +6,7 @@ tags: Vegetarian
 serves: 8–10
 time: Prep 15 min · Cook 1 hr
 source: https://www.tiktok.com/@tinekeyounger/video/7568236205008030990
+leftovers: Keeps, covered, in the fridge for up to 4 days. Reheat portions in the microwave, or covered in a low oven.
 ---
 
 The dish people hover over at the holiday table, waiting for the first spoon to break through the crust. Three cheeses melted into a sauce of evaporated milk and cream, layered with more cheese and baked until the top is golden and crackling and the middle pulls into long, stretchy strings.
@@ -51,4 +52,3 @@ Grating your own cheese is the one job everyone wants to skip, and it's the one 
 
 - Colby is in the supermarket cheese fridge next to the cheddar.
 - To make ahead, assemble it up to 3 days before, cover tightly and keep it in the fridge. Bake covered with foil for about 30 minutes, then uncover and bake until heated through before grilling the top.
-- Leftovers keep, covered, in the fridge for up to 4 days. Reheat in the microwave or covered in a low oven.

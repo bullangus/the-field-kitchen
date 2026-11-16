@@ -6,6 +6,7 @@ tags: Vegetarian
 serves: 6 naan
 time: Prep 10 min · Cook 10 min
 source: https://cooksimply.co.uk/simple-naan-bread-recipe-no-yeast/
+leftovers: Keeps wrapped for a day, or frozen for up to a month. Reheat wrapped in foil in a hot oven for about 10 minutes.
 ---
 
 Warm, blistered naan straight from the pan, brushed with butter and torn at the table. The dough is just two ingredients and cooks in a dry pan, so it's easy enough for any curry night, including Yvette's Duck Curry.

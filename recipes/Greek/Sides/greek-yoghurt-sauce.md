@@ -6,6 +6,7 @@ tags: Vegetarian
 serves: 4
 time: Prep 5 min
 source: Family recipe
+leftovers: Keeps in the fridge for up to 3 days. Stir before serving.
 ---
 
 A cool, bright spoonful that lifts whatever it sits beside. Our simple, tangy yoghurt sauce is just yoghurt, lemon, salt and pepper, mixed to taste.

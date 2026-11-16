@@ -6,6 +6,7 @@ tags: Vegetarian
 serves: 16 cookies
 time: Prep 20 min · Cook 20 min
 source: https://www.bonappetit.com/recipe/bas-best-chocolate-chip-cookies
+leftovers: Baked cookies keep in an airtight container at room temperature for 3 days.
 ---
 
 The smell of browning butter is the first sign these are on the way, and nobody stays out of the kitchen for long after that. Bon Appétit's best: dark brown sugar for deep toffee flavour, crisp edges, chewy middles and puddles of dark chocolate. Keep a tray of dough balls in the freezer and warm cookies are only ever a few minutes away.
@@ -38,4 +39,3 @@ There's a moment, somewhere between 8 and 10 minutes, when the edges are deep go
 ## Notes
 
 - Make ahead: freeze the portioned dough balls on trays, then bag them; they keep 3 months. Bake from frozen, adding 1–2 minutes.
-- Baked cookies keep 3 days in an airtight container at room temperature.

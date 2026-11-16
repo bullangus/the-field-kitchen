@@ -5,6 +5,7 @@ category: Chicken
 tags: Spicy
 serves: 2–4
 source: https://www.tiktok.com/@chefzealand/video/7694443456416042271
+leftovers: Keeps in the fridge for up to 3 days. Reheat in the air fryer at 180°C for 5 minutes, or toss in a hot wok, to bring back the crunch.
 ---
 
 A mountain of red chillies that looks fierce and tastes addictive. Crisp, double-fried chicken is tossed through toasted dried chillies and tingling Sichuan pepper. It's not as spicy as it looks, and it disappears fast.

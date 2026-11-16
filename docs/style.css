@@ -911,6 +911,9 @@ li.done > .step-num { background: var(--accent); color: var(--paper); }
 .notes-panel { margin-top: 3rem; padding: 1.75rem; border-radius: 20px; background: var(--grain), var(--note-bg); }
 .notes-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1.25rem 2.5rem; }
 .notes-panel h3 { font-size: 1.4rem; margin: 0 0 0.6rem; }
+.notes-panel .leftovers p { margin: 0; line-height: 1.55; }
+.notes-panel h3 svg { width: 1.1rem; height: 1.1rem; margin-right: 0.35rem; vertical-align: -0.1em; color: var(--accent); }
+.book-leftovers { font-size: 0.93rem; margin-top: 1rem; }
 .tips { margin: 0; padding-left: 1.1rem; }
 .tips li { margin: 0 0 0.6rem; line-height: 1.5; }
 .changes { list-style: none; margin: 0; padding: 0 0 0 1.1rem; border-left: 2px solid var(--rule); }
@@ -1243,7 +1246,28 @@ html.cooking { overflow: hidden; }
 .plan-add.added { background: var(--card); color: var(--accent); border-color: var(--accent); }
 .plan-add.added svg { display: none; }
 .plan-add + .plan-view { margin-top: -0.4rem; }
-@media (max-width: 600px) { .plan .pill { align-self: stretch; } }
+.plan-extra { display: inline-flex; align-items: center; gap: 0.45rem; min-height: 44px; cursor: pointer; color: var(--ink); }
+.plan-extra input { width: 1.15rem; height: 1.15rem; accent-color: var(--accent); margin: 0; }
+.plan-days li > div { flex: 1; min-width: 0; }
+.plan-lunch { flex: none; align-self: center; font-size: 0.75rem; font-weight: 600; color: var(--accent); border: 1px solid var(--accent); border-radius: 999px; padding: 0.1rem 0.55rem; white-space: nowrap; }
+.plan-leftovers { display: flex; gap: 0.55rem; align-items: flex-start; margin: 0; font-size: 0.9rem; color: var(--muted); }
+.plan-leftovers svg { flex: none; width: 1.15rem; height: 1.15rem; margin-top: 0.1rem; color: var(--accent); }
+.plan-build { margin: 0 0 2.5rem; padding: 1.4rem; background: var(--grain), var(--card); border: 1px solid var(--rule); border-radius: 20px; }
+.plan-build > h2, .plans-head { font-size: 1.6rem; margin: 0 0 0.4rem; }
+.plans-head { margin-bottom: 1rem; }
+.plan-build > p { margin: 0 0 1rem; color: var(--muted); }
+.plan-build-pick { position: relative; max-width: 26rem; }
+.plan-build-pick .search-field, .plan-build-pick .search-field:focus-within { width: 100%; }
+.plan-build-pick .search-field svg { flex: none; width: 1.1rem; height: 1.1rem; }
+.plan-build-pick input { flex: 1; min-width: 0; min-height: 44px; font: inherit; color: var(--ink); background: transparent; border: 0; padding: 0.5rem 0; outline: none; }
+.plan-build-pick input:disabled { cursor: default; }
+.plan-cravings { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.8rem 0; }
+.plan-cravings:empty { display: none; }
+.plan-build-actions { margin: 0.8rem 0 0; }
+.plan-result:not(:empty) { margin-top: 1.2rem; max-width: 34rem; }
+.plan-mine { background: var(--paper); }
+.plan-none { color: var(--muted); margin: 0; }
+@media (max-width: 600px) { .plan .pill, .plan-build-actions .pill { align-self: stretch; width: 100%; justify-content: center; } .plan-build { padding: 1.1rem; } }
 
 /* What can I cook? page (tools.js) */
 .cook-layout { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 2rem; align-items: start; }

@@ -5,6 +5,7 @@ category: Desserts
 tags: Christmas
 serves: 12
 source: https://www.express.co.uk/life-style/food/1830491/Jamie-Oliver-recipe-trifle
+leftovers: Keeps, covered, in the fridge for up to 2 days; the sponge softens as it sits.
 ---
 
 Our family classic, and the dessert everyone waits for at Christmas. Based on Jamie Oliver's retro trifle, it's layer upon layer of jam roll, strawberries and Cointreau, strawberry jelly, blancmange, mandarins, orange jelly, custard and cream. It needs time for each layer to set, so make it the day before.

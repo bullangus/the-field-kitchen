@@ -6,6 +6,7 @@ tags: Vegetarian
 serves: 6–8
 time: Prep 10 min
 source: https://www.bbcgoodfood.com/recipes/raita
+leftovers: Best eaten fresh. It keeps in the fridge for a day, though the cucumber turns it watery.
 ---
 
 The cool, fresh counterpoint every curry needs. Yoghurt, cucumber and mint, with ginger and a little garam masala for warmth. We serve it with Yvette's Duck Curry.

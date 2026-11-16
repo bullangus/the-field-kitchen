@@ -6,6 +6,7 @@ tags: Vegetarian
 serves: 1 half-sheet pan
 time: Prep 3 hr 45 min (mostly rising) · Cook 30 min
 source: https://www.thecookingworld.com/recipes/claire-saffitz-focaccia-recipe
+leftovers: Keeps wrapped at room temperature for 2 days, or frozen for up to a month. Refresh in a 200°C oven for 5–8 minutes.
 ---
 
 Much loved and made more times than we can count, this is the bread that turns any meal into an occasion. Claire Saffitz's very wet, well-kneaded dough bakes in a half-sheet pan into a tall, airy crumb with a crisp, olive-oil base that's golden and dimpled on top. Pick a topping from the options after the method.

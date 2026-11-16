@@ -7,6 +7,7 @@ serves: 4
 time: Prep 15 min · Cook 40 min
 source: https://www.africanbites.com/bunny-chow/
 goes with: Onion & Tomato Relish
+leftovers: The curry keeps in the fridge for up to 3 days. Reheat it in a pan until hot through and serve it in a fresh loaf, or in a bowl with bread.
 ---
 
 The cinnamon and cardamom go into the hot oil with the onions, the curry leaves crackle, and the whole kitchen smells like Durban. Bunny chow is South Africa's great street food: a chicken, potato and chickpea curry ladled into a hollowed-out loaf of bread. It's on the table in under an hour.

@@ -5,6 +5,7 @@ category: Chicken
 serves: 3
 time: Prep 20 min · Cook 15 min
 source: https://aaronandclaire.com/chicken-nanban-fried-chicken-with-tartar-sauce/
+leftovers: Keeps in the fridge for up to 2 days, with the tartar sauce kept separately. Reheat the chicken in the air fryer at 180°C for 5 minutes.
 ---
 
 Crisp, tangy and creamy all in one bite. Egg-coated fried chicken is soaked in a sweet and sour nanban sauce, then topped with a generous spoonful of rich tartar sauce.

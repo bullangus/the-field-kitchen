@@ -5,6 +5,7 @@ category: Pasta
 serves: 3
 time: Prep 5 min · Cook 13 min
 source: https://www.recipetineats.com/fettuccine-alfredo/
+leftovers: Best eaten straight away, as the sauce thickens and splits as it cools. If you must, reheat gently in a pan with a splash of milk.
 ---
 
 Rich, buttery and utterly comforting, the kind of pasta you eat curled up on the couch. Butter, cream and Parmigiano are tossed with the fettuccine so the sauce clings to every strand rather than pooling.

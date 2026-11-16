@@ -6,6 +6,7 @@ tags: Party food
 serves: 4
 time: Prep 15 min + 30 min marinating · Cook 15 min
 source: https://www.justonecookbook.com/karaage/
+leftovers: Let it cool completely. It keeps in an airtight container in the fridge for up to 3 days, or bagged in the freezer for 2–3 months. Reheat from frozen in the air fryer at 180°C (350°F) for 7 minutes, shaking the basket halfway through.
 ---
 
 Golden, crackling pieces of chicken that rarely make it from the rack to the plate. Marinated in ginger, garlic and soy, then fried twice for a light, crisp crust and a juicy middle.
@@ -66,8 +67,3 @@ They're best eaten straight from the rack, while they're still crackling and hot
 
 1. Mix everything together cold.
 2. Pile it directly over the plain fried karaage.
-
-## Notes
-
-- Let leftovers cool completely. They keep in an airtight container in the fridge for up to 3 days, or bagged in the freezer for 2–3 months.
-- To reheat from frozen, air-fry at 180°C (350°F) for 7 minutes, shaking the basket halfway through.

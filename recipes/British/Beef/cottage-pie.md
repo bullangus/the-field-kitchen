@@ -5,6 +5,7 @@ category: Beef
 serves: 4
 time: Prep 10 min · Cook 45 min
 source: https://bakingmischief.com/cottage-pie/
+leftovers: Keeps in the fridge for up to 3 days, or freeze portions for up to 3 months. Reheat covered in a 180°C oven for 20–25 minutes, or in the microwave, until hot all the way through.
 ---
 
 The kind of dinner that makes a cold night feel cosy. A rich beef, carrot, pea and corn filling under buttery mash, finished with a blanket of melted mozzarella and Parmesan, all made and baked in one ovenproof pan.

@@ -7,6 +7,7 @@ serves: 4
 time: Prep 20 min · Cook about 1 hr 15 min
 source: https://www.andy-cooks.com/blogs/recipes/classic-roast-chicken
 goes with: Duck Fat Potatoes
+leftovers: The meat keeps in an airtight container in the fridge for up to 3 days, for sandwiches, salads and lunches. Eat it cold, or reheat it covered with a splash of stock so it doesn't dry out.
 ---
 
 A Sunday roast chicken brings everyone to the table without being called. Lemon, garlic and thyme butter is pushed under the skin, then the bird is trussed and roasted to temperature for crackling-crisp skin and breast meat that's still juicy. Save the pan juices for the gravy.
@@ -41,4 +42,4 @@ There's something about a whole roast chicken on the table that makes a meal fee
 - For gravy, make the Gravy with the resting juices and Gravox.
 - Pan sauce: after resting, stand the chicken up over the tray so the juices in the cavity drain out. Combine with the pan drippings and deglaze the tray with some shallots, stock and butter. A splash of sherry vinegar and some thyme or rosemary finish it.
 - Vegetables can roast in the same tray: toss halved potatoes, carrots and onions in olive oil and salt and add them about 20 minutes after the chicken goes in.
-- Leftover meat keeps in an airtight container in the fridge for up to 3 days. Simmer the carcass for 2 hours with an onion, carrot, celery stalk and a few peppercorns, covered with water, for stock.
+- Simmer the carcass for 2 hours with an onion, carrot, celery stalk and a few peppercorns, covered with water, for stock.

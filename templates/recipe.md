@@ -6,6 +6,7 @@ tags: Christmas, Vegetarian
 serves: 4
 time: Prep 15 min · Cook 30 min
 source: https://example.com/original-recipe
+leftovers: Keeps in the fridge for up to 3 days. Reheat gently in a pan until hot through.
 goes with: Another Recipe Title, A Third One
 ---
 

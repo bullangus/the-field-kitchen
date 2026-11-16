@@ -6,6 +6,7 @@ tags: Party food
 serves: 4
 time: Prep 10 min + at least 4 hr curing · Cook about 1 hr
 source: https://www.marionskitchen.com/crispy-salt-and-pepper-wings/
+leftovers: Keep in the fridge for up to 3 days. Reheat in the air fryer at 180°C for 5–6 minutes so they crisp again.
 ---
 
 The wings that vanish first from any platter. They're double-fried for extra crunch and seasoned with three kinds of peppercorn for a warm, tingling heat, though just one type of peppercorn works fine too.

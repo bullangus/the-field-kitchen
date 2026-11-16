@@ -5,6 +5,7 @@ category: Pork
 serves: 2–3
 time: Prep 10 min · Cook 25 min
 source: https://heresyourbite.substack.com/p/dumpling-lasagna
+leftovers: Keeps, covered, in the fridge for up to 3 days. Reheat in the steamer for about 10 minutes, or covered in the microwave, until hot through.
 ---
 
 All the joy of pork and spring onion dumplings with none of the folding. Wonton wrappers and filling are layered in ramekins and steamed until glossy and juicy, ready to be drizzled with soy and chilli and eaten straight from the dish.

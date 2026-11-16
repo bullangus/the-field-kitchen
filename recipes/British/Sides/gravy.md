@@ -6,6 +6,7 @@ tags: Sunday roast
 serves: 4
 source: Gravox Traditional Gravy Mix packet
 goes with: Roast Chicken, Duck Fat Potatoes
+leftovers: Keeps in the fridge for up to 3 days. Reheat in a small pan, whisking, with a splash of water if it has thickened.
 ---
 
 No roast is finished until the gravy jug goes round. This one is made in minutes from the Roast Chicken's pan juices, thickened with Gravox. Makes about 1 cup.

@@ -6,6 +6,7 @@ tags: Party food
 serves: 4
 time: Prep 20 min + 2–8 hr marinating · Cook about 1 hr
 source: Our own, loosely based on Isabel Eats' carne asada tacos
+leftovers: The cooked steak keeps in the fridge for up to 3 days; warm it quickly in a hot pan so it doesn't overcook. Keep the toppings separately: the guacamole browns within a day.
 ---
 
 Taco night, with everyone building their own and the table covered in bowls. Citrus-marinated steak, reverse-seared so the outside chars without burning, sliced thin and piled into charred corn tortillas with cumin guacamole, salted paneer "queso fresco" and a quick lime onion. Start the marinade a few hours ahead.

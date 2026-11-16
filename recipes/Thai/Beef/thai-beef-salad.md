@@ -6,6 +6,7 @@ tags: Spicy
 serves: 2
 time: Prep 20 min · Cook 5 min
 source: https://www.recipetineats.com/thai-beef-salad-2/
+leftovers: Best eaten fresh. Keep any leftover sliced beef and the dressing separately in the fridge for a day, for a lunch salad.
 ---
 
 Fresh, fiery and full of life. Seared steak sliced thin and tossed with crisp salad, mint and peanuts in a hot, sour, salty and sweet dressing. Adapted by RecipeTin Eats from the Spice I Am cookbook.

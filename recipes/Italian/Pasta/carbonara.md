@@ -5,6 +5,7 @@ category: Pasta
 serves: 3–4
 time: Cook 20 min
 source: https://pastagrammar.com/blogs/recipes/spaghetti-alla-carbonara-authentic-italian-carbonara-pasta-recipe
+leftovers: Best eaten straight away: reheated, the egg sauce scrambles and turns grainy.
 ---
 
 Just a handful of ingredients that turn into something magical in the hot pan. The Roman way: egg yolks, pecorino, crisp guanciale and plenty of black pepper, tossed into a silky sauce. No cream.

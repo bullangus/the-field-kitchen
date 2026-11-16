@@ -7,6 +7,7 @@ serves: 4
 time: Prep 10 min + 10 min resting
 source: https://www.justonecookbook.com/japanese-shredded-cabbage-salad/
 goes with: Tonkatsu, Chicken Nanban
+leftovers: Keeps in the fridge for up to 3 days in a container lined with a damp, well-wrung paper towel, with another on top.
 ---
 
 The mound of fine, feathery cabbage that comes beside almost anything fried in Japan. A quarter of a drum cabbage, shaved on a mandoline, lightly salted and squeezed.
@@ -26,7 +27,3 @@ It's the quiet side that makes a plate of tonkatsu feel complete: cool, crisp an
 4. Drain well and spin dry in a salad spinner.
 5. Toss the cabbage with the salt and leave it for 10 minutes to soften slightly.
 6. Squeeze out the excess water with your hands, then fluff the shreds apart and pile them beside the Tonkatsu.
-
-## Notes
-
-- Keeps in the fridge for up to 3 days in a container lined with a damp, well-wrung paper towel, with another on top.
