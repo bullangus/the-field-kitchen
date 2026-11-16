@@ -714,7 +714,7 @@ window.FIELD_KITCHEN_INDEX = [
 "serves": 4,
 "lunch": 0,
 "meal": true,
-"plan": true,
+"plan": false,
 "basic": false,
 "ingredients": [
 {

@@ -65,8 +65,8 @@ NOT_MEALS = ("Sides", "Desserts", "Breads", "Baking", "Eggs")
 PLAN_DAYS = ("Mon", "Tue", "Wed", "Thu", "Fri")
 PLAN_COUNT = 6
 PLAN_SKIP_STYLES = ("Sushi", "Duck")  # built from parts, or kept for a special meal
-# Plans are easy regular dinners: no special-occasion, party or multi-day cooking.
-PLAN_SKIP_TAGS = ("project", "christmas", "party-food", "sunday-roast")
+# Plans are easy regular dinners: no special-occasion, party, barbecue or multi-day cooking.
+PLAN_SKIP_TAGS = ("project", "christmas", "party-food", "sunday-roast", "barbecue")
 PLAN_MAX_MINUTES = 60  # the whole time line, waiting included
 PLAN_MAX_SAME = 2  # at most this many dinners from one style, or from one cuisine, in a week
 PLAN_MIN_CUISINES = 3
