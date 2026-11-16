@@ -31,3 +31,7 @@ It's the dinner nobody argues about. Mutti's sauce is just good Italian tomatoes
 3. Pour in the pasta sauce, stir in the MSG and simmer gently for 15–20 minutes, stirring now and then, until thick. Season with salt and pepper.
 4. Meanwhile, cook the spaghetti in a large pot of well-salted boiling water until al dente, following the packet. Drain.
 5. Toss the spaghetti through the sauce, or spoon the sauce over the top, and finish with parmesan.
+
+## Notes
+
+- For a soffritto, finely dice 1 carrot and 1 celery stalk and cook them with the onion for 8–10 minutes, until soft and sweet, before adding the garlic.
