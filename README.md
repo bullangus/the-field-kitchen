@@ -55,6 +55,7 @@
 - **Beef:** [Carne Asada Tacos](recipes/Mexican/Beef/carne-asada-tacos.md), [Chilli Con Carne](recipes/Mexican/Beef/chilli-con-carne.md)
 
 ### South African
+- **Chicken:** [Bunny Chow](recipes/South African/Chicken/bunny-chow.md)
 - **Duck:** [Yvette's Duck Curry](recipes/South African/Duck/yvettes-duck-curry.md)
 - **Sides:** [Onion & Tomato Relish](recipes/South African/Sides/chunky-onion-and-tomato-relish.md)
 
@@ -65,7 +66,7 @@
 - **Beef:** [Thai Beef Salad](recipes/Thai/Beef/thai-beef-salad.md)
 - **Chicken:** [Satay Chicken](recipes/Thai/Chicken/satay-chicken.md), [Yellow Curry](recipes/Thai/Chicken/yellow-curry.md)
 
-_48 recipes._
+_49 recipes._
 <!-- CONTENTS:END -->
 
 ## How it's organised

@@ -42,6 +42,9 @@ INGREDIENTS = [
     (r"\bsun-dried tomato(es)?\b|\bsun dried tomato(es)?\b", "Sun-dried tomatoes", TINS, False),
     (r"\bcherry tomatoes\b", "Cherry tomatoes", PRODUCE, False),
     (r"\btomato paste\b", "Tomato paste", TINS, False),
+    (r"\bchickpeas\b", "Tinned chickpeas", TINS, False),
+    # Fresh, unlike the tinned tomatoes below.
+    (r"\bmedium tomato(es)?\b", "Tomatoes", PRODUCE, False),
     (r"\btomato(es)?\b", "Tinned tomatoes", TINS, False),
     (r"\bkidney beans\b", "Red kidney beans", TINS, False),
     (r"\bcannellini\b", "Cannellini beans", TINS, False),
@@ -149,6 +152,7 @@ INGREDIENTS = [
     (r"\bgram\b|\bchickpea\b", "Gram (chickpea) flour", WORLD, False),
     (r"\bcornflour\b|\bcornstarch\b|\bpotato starch\b", "Cornflour", BAKING, False),
     (r"\bflour\b", "Plain flour", BAKING, False),
+    (r"\bcob loa(f|ves)\b|\bcobs?\b", "Small cob loaves", BAKERY, False),
     (r"\bbread\b", "Bread", BAKERY, False),
     # Dairy and eggs.
     (r"\beggs?\b", "Eggs", BAKING, False),
@@ -184,6 +188,8 @@ INGREDIENTS = [
     (r"\bchilli powder\b", "Chilli powder", SPICES, False),
     (r"\bcayenne\b", "Cayenne pepper", SPICES, False),
     (r"\bshichimi\b", "Shichimi togarashi", WORLD, False),
+    (r"\bcinnamon\b", "Cinnamon sticks", SPICES, False),
+    (r"\bcardamom\b", "Green cardamom pods", SPICES, False),
     (r"\ballspice\b", "Ground allspice", SPICES, False),
     (r"\bnutmeg\b", "Nutmeg", SPICES, False),
     (r"\bfennel\b", "Fennel pollen or seeds", SPICES, False),
