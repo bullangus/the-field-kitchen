@@ -1215,6 +1215,10 @@ def list_html(book):
   </form>
   <div class="list-recipes"></div>
   <div class="list-aisles"></div>
+  <section class="list-cook" hidden>
+    <p class="eyebrow">Cook with what you're buying</p>
+    <ul></ul>
+  </section>
   <section class="list-empty" hidden>
     {svg_icon("basket")}
     <h2>Nothing on the list yet</h2>

@@ -9,13 +9,19 @@
   var AISLES = SHOP.aisles;
   var RULES = SHOP.ingredients.map(function (r) { return [new RegExp(r[0], "i"), r[1], r[2], r[3]]; });
   var HINTS = SHOP.groceries.map(function (r) { return [new RegExp(r[0], "i"), r[1]]; });
-  // "garlic" -> the recipes' own Garlic, so it merges with them; "ravioli" -> Dairy & fridge;
-  // anything unknown -> Other, under the name as typed.
+  // "garlic" -> the recipes' own Garlic, so it merges with them; "garlic butter" is its own
+  // thing, kept as typed in butter's aisle; "ravioli" -> Dairy & fridge; anything unknown ->
+  // Other, under the name as typed.
+  var FILLER = /\b(\d+(\.\d+)?|kg|g|ml|l|x|pack|packs|bag|bags|bunch|some|fresh|large|small|of|a|an)\b/gi;
   function sortItem(text) {
     var name = text.trim().replace(/\s+/g, " ");
     name = name.charAt(0).toUpperCase() + name.slice(1);
     for (var i = 0; i < RULES.length; i++) {
-      if (RULES[i][0].test(name)) return { name: RULES[i][1], aisle: RULES[i][2], staple: RULES[i][3] };
+      var rx = RULES[i][0];
+      if (!rx.test(name)) continue;
+      var rest = name.replace(new RegExp(rx.source, "gi"), "").replace(/\d+(\.\d+)?/g, " ").replace(FILLER, "").replace(/[^a-z]/gi, "");
+      if (!rest) return { name: RULES[i][1], aisle: RULES[i][2], staple: RULES[i][3] };
+      return { name: name, aisle: RULES[i][2], staple: false };
     }
     for (var j = 0; j < HINTS.length; j++) {
       if (HINTS[j][0].test(name)) return { name: name, aisle: HINTS[j][1], staple: false };
@@ -74,7 +80,7 @@
       var anything = picked.length > 0 || extras.length > 0;
       empty.hidden = anything;
       actions.hidden = !anything;
-      if (!anything) { summary.textContent = ""; ideas(); return; }
+      if (!anything) { summary.textContent = ""; cookBox.hidden = true; ideas(); return; }
 
       // Recipes on the list: one compact card, a row per recipe with its servings and toppings.
       if (picked.length) recipesBox.appendChild(el("h2", "", "For " + picked.length + " recipe" + (picked.length === 1 ? "" : "s")));
@@ -200,6 +206,45 @@
       restore.hidden = !hiddenCount;
       if (window.FieldKitchenNames) { FieldKitchenNames.swap(aislesBox, true); FieldKitchenNames.swap(recipesBox, true); }
       restore.textContent = "Show " + hiddenCount + " removed item" + (hiddenCount === 1 ? "" : "s");
+      suggestRecipes(all, picked);
+    };
+
+    // Recipes that use the most of what's already on the list, and need the least else.
+    var cookBox = document.querySelector(".list-cook");
+    var suggestRecipes = function (all, picked) {
+      var buying = {};
+      all.forEach(function (it) { if (!it.staple) buying[it.name] = 1; });
+      var onList = picked.map(function (x) { return x.url; });
+      var ranked = index.filter(function (r) { return r.plan && onList.indexOf(r.url) === -1; }).map(function (r) {
+        var names = {};
+        r.ingredients.forEach(function (i) { if (i.n && !i.s) names[i.n] = 1; });
+        var uses = Object.keys(names).filter(function (n) { return buying[n]; });
+        return { r: r, uses: uses, need: Object.keys(names).length - uses.length };
+      }).filter(function (x) { return x.uses.length >= 2; })
+        .sort(function (a, b) { return b.uses.length - a.uses.length || a.need - b.need || a.r.title.localeCompare(b.r.title); })
+        .slice(0, 3);
+      var ul = cookBox.querySelector("ul");
+      ul.textContent = "";
+      cookBox.hidden = !ranked.length;
+      ranked.forEach(function (x) {
+        var li = el("li"), text = el("div"), a = el("a", "", x.r.title);
+        a.href = x.r.url;
+        text.appendChild(a);
+        var shown = x.uses.slice(0, 3).map(function (n) { return n.toLowerCase(); });
+        if (x.uses.length > 3) shown.push(x.uses.length - 3 + " more");
+        var list = shown.length > 1 ? shown.slice(0, -1).join(", ") + " and " + shown[shown.length - 1] : shown[0];
+        text.appendChild(el("span", "", "Uses " + list + (x.need ? " · " + x.need + " more to buy" : " · nothing else to buy")));
+        var add = el("button", "pill pill-outline pill-sm", "+ Add");
+        add.type = "button";
+        add.setAttribute("aria-label", "Add " + x.r.title + " to the shopping list");
+        add.addEventListener("click", function () {
+          store("fk-list", stored("fk-list", []).concat([{ url: x.r.url, serves: x.r.serves }]));
+          build();
+        });
+        li.appendChild(text); li.appendChild(add);
+        ul.appendChild(li);
+      });
+      if (window.FieldKitchenNames) FieldKitchenNames.swap(cookBox, true);
     };
 
     // Empty list: offer a few recipes to start from (favourites first, then a random pick).
