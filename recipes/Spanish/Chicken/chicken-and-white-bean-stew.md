@@ -23,8 +23,8 @@ Tender chicken, creamy beans and a rich tomato sauce with a gentle warmth from t
 - 1 tsp ground coriander
 - 1 tsp ground cumin
 - ½ tsp MSG
-- ⅛ tsp chicken stock powder
-- 30 ml (2 tbsp) hot water
+- 1 tsp chicken stock powder
+- 250 ml (1 cup) hot water
 - 400 g (14 oz) can whole tomatoes
 - 400 g (14 oz) can cannellini beans, drained
 - 1 sprig rosemary
