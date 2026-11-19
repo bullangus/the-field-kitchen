@@ -7116,7 +7116,7 @@ window.FIELD_KITCHEN_INDEX = [
 "cuisine": "Spanish",
 "category": "Chicken",
 "url": "spanish/chicken/chicken-and-white-bean-stew.html",
-"text": "1 red onion 2 cloves garlic 1 bunch asparagus 1 chicken thigh Salt, to taste 1 tsp gochugaru (Korean chilli flakes) 1 tsp ground coriander 1 tsp ground cumin ½ tsp MSG 400 g (14 oz) can whole tomatoes 400 g (14 oz) can cannellini beans, drained 1 sprig rosemary 30 ml (2 tbsp) olive oil 1 small handful parsley leaves Bread, warmed, to serve Under 30 min red pepper flakes chilli flakes",
+"text": "1 red onion 2 cloves garlic 1 bunch asparagus 1 chicken thigh Salt, to taste 1 tsp gochugaru (Korean chilli flakes) 1 tsp ground coriander 1 tsp ground cumin ½ tsp MSG ⅛ tsp chicken stock powder 30 ml (2 tbsp) hot water 400 g (14 oz) can whole tomatoes 400 g (14 oz) can cannellini beans, drained 1 sprig rosemary 30 ml (2 tbsp) olive oil 1 small handful parsley leaves Bread, warmed, to serve Under 30 min red pepper flakes chilli flakes",
 "meta": "Serves 3 · Prep 5 min · Cook 15 min",
 "intro": "A warming one-pot stew for the nights you need something nourishing without the fuss. It's quick and cheap, feeds three, and doubles easily for a big batch for the fridge or freezer.",
 "photo": "",
@@ -7215,6 +7215,24 @@ window.FIELD_KITCHEN_INDEX = [
 "p": "\\bmsg\\b",
 "q": 0.5,
 "u": "tsp"
+},
+{
+"t": "⅛ tsp chicken stock powder",
+"n": "Chicken stock powder",
+"a": "Sauces, spreads & stock",
+"s": false,
+"p": "\\bchicken bouillon\\b|\\bchicken stock powder\\b|\\bbouillon\\b|\\bchicken\\b",
+"q": 0.125,
+"u": "tsp"
+},
+{
+"t": "30 ml (2 tbsp) hot water",
+"n": "Water",
+"a": "Sauces, spreads & stock",
+"s": true,
+"p": "\\bwater\\b",
+"q": 30.0,
+"u": "ml"
 },
 {
 "t": "400 g (14 oz) can whole tomatoes",

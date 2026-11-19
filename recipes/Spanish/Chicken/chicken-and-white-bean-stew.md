@@ -23,6 +23,8 @@ Tender chicken, creamy beans and a rich tomato sauce with a gentle warmth from t
 - 1 tsp ground coriander
 - 1 tsp ground cumin
 - ½ tsp MSG
+- ⅛ tsp chicken stock powder
+- 30 ml (2 tbsp) hot water
 - 400 g (14 oz) can whole tomatoes
 - 400 g (14 oz) can cannellini beans, drained
 - 1 sprig rosemary
@@ -35,9 +37,9 @@ Tender chicken, creamy beans and a rich tomato sauce with a gentle warmth from t
 1. Peel and finely slice the red onion.
 2. Crush and roughly chop the garlic. Pick the rosemary leaves off the stem and finely chop.
 3. Slice the asparagus into 2 cm (¾ inch) pieces, working from the tip down. When the stalk starts to sound woody under the knife, stop and discard the tough base.
-4. Dice the chicken into small, bite-sized pieces.
+4. Dice the chicken into small, bite-sized pieces. Stir the chicken stock powder into the hot water until dissolved.
 5. Put a small saucier or saucepan over medium-high heat. Add the olive oil, onion and ½ tsp salt. Sweat the onion, stirring often, for 2–3 minutes, or until soft.
-6. Add the chicken and stir until lightly golden brown. Add the gochugaru, coriander, cumin, MSG, garlic and rosemary and stir to coat the chicken, then immediately add 30 ml (2 tbsp) water to deglaze the pan. Ground spices burn almost instantly on a hot pan and turn bitter.
+6. Add the chicken and stir until lightly golden brown. Add the gochugaru, coriander, cumin, MSG, garlic and rosemary and stir to coat the chicken, then immediately add the chicken stock to deglaze the pan (plain water works if you have no stock powder). Ground spices burn almost instantly on a hot pan and turn bitter.
 7. Add the tomatoes and break them up with a spatula, leaving a few larger chunks. Simmer for 2 minutes, then add the beans and asparagus and simmer for a further 4 minutes. Thin asparagus spears need only 1–2 minutes.
 8. Once the asparagus is cooked, taste and adjust the seasoning with salt if needed. Stir through some finely chopped parsley and serve with warmed bread.
 
